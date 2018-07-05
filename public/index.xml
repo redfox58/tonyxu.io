@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tony (Yihan) Xu 徐毅涵</title>
-    <link>https://tonyxu-io/</link>
+    <link>https://tonyxu.io/</link>
     <description>Recent content on Tony (Yihan) Xu 徐毅涵</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Wed, 04 Jul 2018 17:04:09 -0700</lastBuildDate>
     
-	<atom:link href="https://tonyxu-io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://tonyxu.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Projects</title>
-      <link>https://tonyxu-io/pages/projects/</link>
+      <link>https://tonyxu.io/pages/projects/</link>
       <pubDate>Wed, 04 Jul 2018 17:04:09 -0700</pubDate>
       
-      <guid>https://tonyxu-io/pages/projects/</guid>
+      <guid>https://tonyxu.io/pages/projects/</guid>
       <description>Moxtra Chrome Extension for Gmail: Used Javascript, React, REST API, Node.js, Gulp to build Chrome extension applications that embed Moxtra chat/meeting capabilities into Gmail and Calendar. Moxtra Chrome Extension for Google Calendar: Used Javascript, React, REST API to build Chrome extension applications that embed Moxtra meeting scheduling capabilities into Google Calendar. Moxtra Outlook Add-in: Cooporated with Microsoft Office API, Javascript, and Moxtra REST API to build mailbox and appointment calendar integrations to allow users to collaborate with Moxtra contacts.</description>
     </item>
     
     <item>
       <title>REST API 设计面试</title>
-      <link>https://tonyxu-io/posts/rest-api-%E8%AE%BE%E8%AE%A1%E9%9D%A2%E8%AF%95/</link>
+      <link>https://tonyxu.io/posts/rest-api-%E8%AE%BE%E8%AE%A1%E9%9D%A2%E8%AF%95/</link>
       <pubDate>Tue, 03 Jul 2018 22:00:00 +0000</pubDate>
       
-      <guid>https://tonyxu-io/posts/rest-api-%E8%AE%BE%E8%AE%A1%E9%9D%A2%E8%AF%95/</guid>
+      <guid>https://tonyxu.io/posts/rest-api-%E8%AE%BE%E8%AE%A1%E9%9D%A2%E8%AF%95/</guid>
       <description>Below is my own preparation for REST API interview. Hope it&amp;rsquo;s helpful for you if you are looking for job that focus a lot on REST API design capability.
 Principle  Self-describing Simple Safe  Clarification  (WHO) Identify users  Internal or External Roles (Developer, Admin, Customer, Support&amp;hellip;)  (HOW) Identify scenario, use cases (WHAT) What functionality or resource will be exposed by API Clarify and confirm above and continue to API design  Note:</description>
     </item>
     
     <item>
       <title>提升工作中解决问题的能力</title>
-      <link>https://tonyxu-io/posts/%E6%8F%90%E5%8D%87%E5%B7%A5%E4%BD%9C%E4%B8%AD%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E7%9A%84%E8%83%BD%E5%8A%9B/</link>
+      <link>https://tonyxu.io/posts/%E6%8F%90%E5%8D%87%E5%B7%A5%E4%BD%9C%E4%B8%AD%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E7%9A%84%E8%83%BD%E5%8A%9B/</link>
       <pubDate>Tue, 03 Jul 2018 16:00:00 +0000</pubDate>
       
-      <guid>https://tonyxu-io/posts/%E6%8F%90%E5%8D%87%E5%B7%A5%E4%BD%9C%E4%B8%AD%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E7%9A%84%E8%83%BD%E5%8A%9B/</guid>
+      <guid>https://tonyxu.io/posts/%E6%8F%90%E5%8D%87%E5%B7%A5%E4%BD%9C%E4%B8%AD%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E7%9A%84%E8%83%BD%E5%8A%9B/</guid>
       <description>解决问题是工作中最必不可少的能力，因此需要思考:
  自己是否有在解决问题这个方面的能力有欠缺 如何才能提升这个能力  回想过去两年在Moxtra的工作经历，自己作为一个Solutions Engineer, 根本职能就是为客户解决问题。问题的模式无非是:
  我有A需求，你们有没有B解决方案实现这个需求  大部分情况下我会评估如下几个方面然后回答：
@@ -46,10 +46,10 @@ Principle  Self-describing Simple Safe  Clarification  (WHO) Identify users  Int
     
     <item>
       <title>写在开头</title>
-      <link>https://tonyxu-io/posts/%E5%86%99%E5%9C%A8%E5%BC%80%E5%A4%B4/</link>
+      <link>https://tonyxu.io/posts/%E5%86%99%E5%9C%A8%E5%BC%80%E5%A4%B4/</link>
       <pubDate>Mon, 02 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://tonyxu-io/posts/%E5%86%99%E5%9C%A8%E5%BC%80%E5%A4%B4/</guid>
+      <guid>https://tonyxu.io/posts/%E5%86%99%E5%9C%A8%E5%BC%80%E5%A4%B4/</guid>
       <description>这不是第一次想写博客了，但之前的每一次都不了了之。 这次希望可以坚持下去，给自己的成长留下一些印记。</description>
     </item>
     

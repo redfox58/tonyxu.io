@@ -2,48 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Tony (Yihan) Xu 徐毅涵</title>
-    <link>https://tonyxu-io/tags/</link>
+    <link>https://tonyxu.io/tags/</link>
     <description>Recent content in Tags on Tony (Yihan) Xu 徐毅涵</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Tue, 03 Jul 2018 22:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://tonyxu-io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://tonyxu.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Rest Api</title>
-      <link>https://tonyxu-io/tags/rest-api/</link>
+      <link>https://tonyxu.io/tags/rest-api/</link>
       <pubDate>Tue, 03 Jul 2018 22:00:00 +0000</pubDate>
       
-      <guid>https://tonyxu-io/tags/rest-api/</guid>
+      <guid>https://tonyxu.io/tags/rest-api/</guid>
       <description></description>
     </item>
     
     <item>
       <title>日常</title>
-      <link>https://tonyxu-io/tags/%E6%97%A5%E5%B8%B8/</link>
+      <link>https://tonyxu.io/tags/%E6%97%A5%E5%B8%B8/</link>
       <pubDate>Mon, 02 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://tonyxu-io/tags/%E6%97%A5%E5%B8%B8/</guid>
+      <guid>https://tonyxu.io/tags/%E6%97%A5%E5%B8%B8/</guid>
       <description></description>
     </item>
     
     <item>
       <title>解决问题</title>
-      <link>https://tonyxu-io/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/</link>
+      <link>https://tonyxu.io/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/</link>
       <pubDate>Tue, 03 Jul 2018 16:00:00 +0000</pubDate>
       
-      <guid>https://tonyxu-io/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/</guid>
+      <guid>https://tonyxu.io/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/</guid>
       <description></description>
     </item>
     
     <item>
       <title>面试</title>
-      <link>https://tonyxu-io/tags/%E9%9D%A2%E8%AF%95/</link>
+      <link>https://tonyxu.io/tags/%E9%9D%A2%E8%AF%95/</link>
       <pubDate>Tue, 03 Jul 2018 22:00:00 +0000</pubDate>
       
-      <guid>https://tonyxu-io/tags/%E9%9D%A2%E8%AF%95/</guid>
+      <guid>https://tonyxu.io/tags/%E9%9D%A2%E8%AF%95/</guid>
       <description></description>
     </item>
     
