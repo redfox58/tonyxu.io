@@ -17,8 +17,9 @@
       <pubDate>Tue, 03 Jul 2018 22:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/posts/rest-api-%E8%AE%BE%E8%AE%A1%E9%9D%A2%E8%AF%95/</guid>
-      <description>Below is my own preparation for REST API interview. Hope it&amp;rsquo;s helpful for you if you are looking for job that focus a lot on REST API design capability.
-Principle  Self-describing Simple Safe  Clarification  (WHO) Identify users  Internal or External Roles (Developer, Admin, Customer, Support&amp;hellip;)  (HOW) Identify scenario, use cases (WHAT) What functionality or resource will be exposed by API Clarify and confirm above and continue to API design  Note:</description>
+      <description>下面是我在面试LinkedIn的过程中给自己总结的REST API设计方法和注意要点。希望对也在准备这方面面试的同学有帮助。
+Principle  Self-describing Simple Safe  Clarification  (WHO) Identify users  Internal or External Roles (Developer, Admin, Customer, Support&amp;hellip;)  (HOW) Identify scenario, use cases (WHAT) What functionality or resource will be exposed by API Clarify and confirm above and continue to API design  Note:
+ Don&amp;rsquo;t guess Don&amp;rsquo;t make things up  Design Flow  Determine what types of resources an API provides Determine the relationships between resources Decide the resource name schemes based on types and relationships Decide the resource schemas Attach minimum set of methods to resources  API Design Design how to expose the functionality and resource</description>
     </item>
     
   </channel>

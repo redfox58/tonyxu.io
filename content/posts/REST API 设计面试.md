@@ -6,7 +6,7 @@ categories: [工作]
 tags: [面试,rest-api]
 ---
 
-Below is my own preparation for REST API interview. Hope it's helpful for you if you are looking for job that focus a lot on REST API design capability.
+下面是我在面试LinkedIn的过程中给自己总结的REST API设计方法和注意要点。希望对也在准备这方面面试的同学有帮助。
 
 ## Principle
 
