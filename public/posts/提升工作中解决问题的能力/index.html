@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Tony Xu">
+<meta name="description" content="解决问题是工作中最必不可少的能力，因此需要思考:
+ 自己是否有在解决问题这个方面的能力有欠缺 如何才能提升这个能力  回想过去两年在Moxtra的工作经历，自己作为一个Solutions Engineer, 根本职能就是为客户解决问题。问题的模式无非是:
+ 我有A需求，你们有没有B解决方案实现这个需求  大部分情况下我会评估如下几个方面然后回答：
+ 我们是否有现成的解决方案 如果需要做支持，是否符合我们的产品定位和路线图 对公司营收影响大不大  如果其中任何一条不满足要求，我可能会直接拒绝这个需求。这么做看起来没什么问题，避免了公司产品为了第三方做太多不必要的妥协。但是仔细想，我作为Solution Engineer，在这当中可以做更多的事情。
+比如:
+ 深入了解需求场景，确定是不是真的只有*需求A*才能解决问题 探索是否有其他解决方案可以作为work around  一定要带着解决问题的思维模式进行思考，而不是简单的做Yes/No判断，最后把不能解决问题的责任推给其他人/事。">
+
+<meta property="og:title" content="提升工作中解决问题的能力" />
+<meta property="og:description" content="解决问题是工作中最必不可少的能力，因此需要思考:
+ 自己是否有在解决问题这个方面的能力有欠缺 如何才能提升这个能力  回想过去两年在Moxtra的工作经历，自己作为一个Solutions Engineer, 根本职能就是为客户解决问题。问题的模式无非是:
+ 我有A需求，你们有没有B解决方案实现这个需求  大部分情况下我会评估如下几个方面然后回答：
+ 我们是否有现成的解决方案 如果需要做支持，是否符合我们的产品定位和路线图 对公司营收影响大不大  如果其中任何一条不满足要求，我可能会直接拒绝这个需求。这么做看起来没什么问题，避免了公司产品为了第三方做太多不必要的妥协。但是仔细想，我作为Solution Engineer，在这当中可以做更多的事情。
+比如:
+ 深入了解需求场景，确定是不是真的只有*需求A*才能解决问题 探索是否有其他解决方案可以作为work around  一定要带着解决问题的思维模式进行思考，而不是简单的做Yes/No判断，最后把不能解决问题的责任推给其他人/事。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tonyxu-io/posts/%E6%8F%90%E5%8D%87%E5%B7%A5%E4%BD%9C%E4%B8%AD%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E7%9A%84%E8%83%BD%E5%8A%9B/" />
+
+
+
+<meta property="article:published_time" content="2018-07-03T16:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2018-07-03T16:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+
+<title>
+
+
+     提升工作中解决问题的能力 
+
+</title>
+<link rel="canonical" href="https://tonyxu-io/posts/%E6%8F%90%E5%8D%87%E5%B7%A5%E4%BD%9C%E4%B8%AD%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E7%9A%84%E8%83%BD%E5%8A%9B/">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+<script src="https://unpkg.com/ionicons@4.2.4/dist/ionicons.js"></script>
+
+ 
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b3c5e4a234a223e"></script>
+
+
+
+    
+    <link rel="stylesheet" href="https://tonyxu-io/css/reset.css?t=2018-07-05%2010%3a39%3a22.676066916%20-0700%20PDT%20m%3d%2b0.044600871">
+    <link rel="stylesheet" href="https://tonyxu-io/css/pygments.css?t=2018-07-05%2010%3a39%3a22.676066916%20-0700%20PDT%20m%3d%2b0.044600871">
+    <link rel="stylesheet" href="https://tonyxu-io/css/main.css?t=2018-07-05%2010%3a39%3a22.676066916%20-0700%20PDT%20m%3d%2b0.044600871">
+    
+        <link rel="stylesheet" href="https://tonyxu-io/css/override.css?t=2018-07-05%2010%3a39%3a22.676066916%20-0700%20PDT%20m%3d%2b0.044600871">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://tonyxu-io/img/favicon.ico"
+
+>
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="en">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                
+                    
+                
+                
+                <a href="https://tonyxu-io/"><img class="avatar" src="https://tonyxu-io/img/profile.png" srcset="https://tonyxu-io/img/profile.png 1x,https://tonyxu-io/img/profile-2x.png 2x,https://tonyxu-io/img/profile-3x.png 3x,https://tonyxu-io/img/profile-4x.png 4x"></a>
+            
+            <a href="https://tonyxu-io/"><div class="name">Tony Xu</div></a>
+              <h3 class="self-intro"><ion-icon name="logo-linkedin" class="linkedin-icon"></ion-icon> LinkedIn Engineer <br>LOVES TO <ion-icon name="code"></ion-icon> BUILD, <ion-icon name="git-merge"></ion-icon> SHIP, <ion-icon name="rocket"></ion-icon> LAUNCH</h3>
+            <nav>
+                <ul>
+                    
+                        <li class="nav-posts"><a href="https://tonyxu-io/posts/"><span>Posts</span></a></li>
+                    
+                        <li class="nav-projects"><a href="https://tonyxu-io/pages/projects"><span>Projects</span></a></li>
+                    
+                        <li class="nav-resume"><a href="https://tonyxu-io/files/yihan-xu-resume.pdf"><span>Resume</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="//github.com/tonyxu-io" target="_blank" rel="noopener"><ion-icon name="logo-github"></ion-icon></a>
+        
+
+        
+
+        
+
+	
+
+        
+
+        
+
+        
+            <a href="//linkedin.com/in/tonyxu93" target="_blank" rel="noopener"><ion-icon name="logo-linkedin"></ion-icon></a>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+            <a href="mailto:me@tonyxu.io"><ion-icon name="mail"></ion-icon></a>
+        
+
+        
+
+        
+        </div>
+        <div id="google_translate_element"></div><script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({pageLanguage: 'zh-CN', includedLanguages: 'en,zh-CN', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL, gaTrack: true, gaId: 'UA-577792-7'}, 'google_translate_element');
+            }
+            </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    提升工作中解决问题的能力
+
+</div>
+
+                    <div class="initials"><a href="https://tonyxu-io">ad</a></div>
+                </div>
+                 
+<div class="addthis_inline_share_toolbox"></div>
+                <div class="meta">
+                    
+                    <div class="date" title='Tue Jul 3 2018 16:00:00 UTC'>Jul 3, 2018</div>
+                    
+                    
+		    <div class="reading-time"><div class="middot"></div>One minute read</div>
+                    
+                </div>
+            </div>
+            <div class="markdown">
+                <p><strong>解决问题</strong>是工作中最必不可少的能力，因此需要思考:</p>
+
+<ul>
+<li>自己是否有在<strong>解决问题</strong>这个方面的能力有欠缺</li>
+<li>如何才能提升这个能力</li>
+</ul>
+
+<p>回想过去两年在<a href="https://www.moxtra.com">Moxtra</a>的工作经历，自己作为一个<em>Solutions Engineer</em>, 根本职能就是为客户解决问题。问题的模式无非是:</p>
+
+<ul>
+<li>我有A需求，你们有没有B解决方案实现这个需求</li>
+</ul>
+
+<p>大部分情况下我会评估如下几个方面然后回答：</p>
+
+<ul>
+<li>我们是否有现成的解决方案</li>
+<li>如果需要做支持，是否符合我们的产品定位和路线图</li>
+<li>对公司营收影响大不大</li>
+</ul>
+
+<p>如果其中任何一条不满足要求，我可能会直接拒绝这个需求。这么做看起来没什么问题，避免了公司产品为了第三方做太多不必要的妥协。但是仔细想，我作为Solution Engineer，在这当中可以做更多的事情。</p>
+
+<p>比如:</p>
+
+<ul>
+<li>深入了解需求场景，确定是不是真的只有*需求A*才能解决问题</li>
+<li>探索是否有其他解决方案可以作为<em>work around</em></li>
+</ul>
+
+<p>一定要带着解决问题的思维模式进行思考，而不是简单的做Yes/No判断，最后把不能解决问题的责任推给其他人/事。</p>
+
+                <br>
+                
+                  <div class="tags">
+                    <strong>Tags:</strong>
+                  
+                    <a class="tag" href="https://tonyxu-io/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98">解决问题</a>
+                  
+                  </div>
+                  <br />
+                
+                <p class="back-to-posts"><a href="https://tonyxu-io/posts"><ion-icon name="return-left"></ion-icon> Back to posts</a></p>
+            </div>
+            <br>
+            <div class="disqus">
+                <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tonyxu-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-577792-7', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+  
+
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+
+
+</body>
+</html>
+

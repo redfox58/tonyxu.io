@@ -1,0 +1,38 @@
+.linkedin-icon {
+    color: #0077B5;
+}
+ion-icon {
+    margin-bottom: -2px;
+}
+
+section.main .content .page-heading {
+    font-size: 32px;
+}
+
+.at-resp-share-element.at-mobile .at-share-btn {
+    background-color: #8e8b8b !important;
+}
+
+.tags {
+    padding-left: 10px;
+}
+
+.tags .tag{
+    background-color: #ccc;
+    color: #fff;
+    display: inline-block;
+    line-height: 1.5em;
+    padding: 0.3em 0.6em 0.3em 0.6em;
+    vertical-align: 20%;
+    font-size: 0.5em;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 0.25em;
+    -moz-border-radius: 0.25em;
+    -webkit-border-radius: 0.25em;
+    }
+
+#google_translate_element {
+    margin-left:auto; margin-right:0;
+}

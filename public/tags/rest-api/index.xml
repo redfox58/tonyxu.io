@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rest Api on Tony (Yihan) Xu 徐毅涵</title>
+    <link>https://tonyxu-io/tags/rest-api/</link>
+    <description>Recent content in Rest Api on Tony (Yihan) Xu 徐毅涵</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 03 Jul 2018 22:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://tonyxu-io/tags/rest-api/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>REST API 设计面试</title>
+      <link>https://tonyxu-io/posts/rest-api-%E8%AE%BE%E8%AE%A1%E9%9D%A2%E8%AF%95/</link>
+      <pubDate>Tue, 03 Jul 2018 22:00:00 +0000</pubDate>
+      
+      <guid>https://tonyxu-io/posts/rest-api-%E8%AE%BE%E8%AE%A1%E9%9D%A2%E8%AF%95/</guid>
+      <description>Below is my own preparation for REST API interview. Hope it&amp;rsquo;s helpful for you if you are looking for job that focus a lot on REST API design capability.
+Principle  Self-describing Simple Safe  Clarification  (WHO) Identify users  Internal or External Roles (Developer, Admin, Customer, Support&amp;hellip;)  (HOW) Identify scenario, use cases (WHAT) What functionality or resource will be exposed by API Clarify and confirm above and continue to API design  Note:</description>
+    </item>
+    
+  </channel>
+</rss>

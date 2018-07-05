@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Tony Xu">
+<meta name="description" content="Below is my own preparation for REST API interview. Hope it&rsquo;s helpful for you if you are looking for job that focus a lot on REST API design capability.
+Principle  Self-describing Simple Safe  Clarification  (WHO) Identify users  Internal or External Roles (Developer, Admin, Customer, Support&hellip;)  (HOW) Identify scenario, use cases (WHAT) What functionality or resource will be exposed by API Clarify and confirm above and continue to API design  Note:">
+
+<meta property="og:title" content="REST API 设计面试" />
+<meta property="og:description" content="Below is my own preparation for REST API interview. Hope it&rsquo;s helpful for you if you are looking for job that focus a lot on REST API design capability.
+Principle  Self-describing Simple Safe  Clarification  (WHO) Identify users  Internal or External Roles (Developer, Admin, Customer, Support&hellip;)  (HOW) Identify scenario, use cases (WHAT) What functionality or resource will be exposed by API Clarify and confirm above and continue to API design  Note:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tonyxu-io/posts/rest-api-%E8%AE%BE%E8%AE%A1%E9%9D%A2%E8%AF%95/" />
+
+
+
+<meta property="article:published_time" content="2018-07-03T22:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2018-07-03T22:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+
+<title>
+
+
+     REST API 设计面试 
+
+</title>
+<link rel="canonical" href="https://tonyxu-io/posts/rest-api-%E8%AE%BE%E8%AE%A1%E9%9D%A2%E8%AF%95/">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+<script src="https://unpkg.com/ionicons@4.2.4/dist/ionicons.js"></script>
+
+ 
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b3c5e4a234a223e"></script>
+
+
+
+    
+    <link rel="stylesheet" href="https://tonyxu-io/css/reset.css?t=2018-07-05%2010%3a39%3a22.67606516%20-0700%20PDT%20m%3d%2b0.044599115">
+    <link rel="stylesheet" href="https://tonyxu-io/css/pygments.css?t=2018-07-05%2010%3a39%3a22.67606516%20-0700%20PDT%20m%3d%2b0.044599115">
+    <link rel="stylesheet" href="https://tonyxu-io/css/main.css?t=2018-07-05%2010%3a39%3a22.67606516%20-0700%20PDT%20m%3d%2b0.044599115">
+    
+        <link rel="stylesheet" href="https://tonyxu-io/css/override.css?t=2018-07-05%2010%3a39%3a22.67606516%20-0700%20PDT%20m%3d%2b0.044599115">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://tonyxu-io/img/favicon.ico"
+
+>
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="en">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                
+                    
+                
+                
+                <a href="https://tonyxu-io/"><img class="avatar" src="https://tonyxu-io/img/profile.png" srcset="https://tonyxu-io/img/profile.png 1x,https://tonyxu-io/img/profile-2x.png 2x,https://tonyxu-io/img/profile-3x.png 3x,https://tonyxu-io/img/profile-4x.png 4x"></a>
+            
+            <a href="https://tonyxu-io/"><div class="name">Tony Xu</div></a>
+              <h3 class="self-intro"><ion-icon name="logo-linkedin" class="linkedin-icon"></ion-icon> LinkedIn Engineer <br>LOVES TO <ion-icon name="code"></ion-icon> BUILD, <ion-icon name="git-merge"></ion-icon> SHIP, <ion-icon name="rocket"></ion-icon> LAUNCH</h3>
+            <nav>
+                <ul>
+                    
+                        <li class="nav-posts"><a href="https://tonyxu-io/posts/"><span>Posts</span></a></li>
+                    
+                        <li class="nav-projects"><a href="https://tonyxu-io/pages/projects"><span>Projects</span></a></li>
+                    
+                        <li class="nav-resume"><a href="https://tonyxu-io/files/yihan-xu-resume.pdf"><span>Resume</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="//github.com/tonyxu-io" target="_blank" rel="noopener"><ion-icon name="logo-github"></ion-icon></a>
+        
+
+        
+
+        
+
+	
+
+        
+
+        
+
+        
+            <a href="//linkedin.com/in/tonyxu93" target="_blank" rel="noopener"><ion-icon name="logo-linkedin"></ion-icon></a>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+            <a href="mailto:me@tonyxu.io"><ion-icon name="mail"></ion-icon></a>
+        
+
+        
+
+        
+        </div>
+        <div id="google_translate_element"></div><script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({pageLanguage: 'zh-CN', includedLanguages: 'en,zh-CN', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL, gaTrack: true, gaId: 'UA-577792-7'}, 'google_translate_element');
+            }
+            </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    REST API 设计面试
+
+</div>
+
+                    <div class="initials"><a href="https://tonyxu-io">ad</a></div>
+                </div>
+                 
+<div class="addthis_inline_share_toolbox"></div>
+                <div class="meta">
+                    
+                    <div class="date" title='Tue Jul 3 2018 22:00:00 UTC'>Jul 3, 2018</div>
+                    
+                    
+		    <div class="reading-time"><div class="middot"></div>3 minutes read</div>
+                    
+                </div>
+            </div>
+            <div class="markdown">
+                
+
+<p>Below is my own preparation for REST API interview. Hope it&rsquo;s helpful for you if you are looking for job that focus a lot on REST API design capability.</p>
+
+<h2 id="principle">Principle</h2>
+
+<ul>
+<li>Self-describing</li>
+<li>Simple</li>
+<li>Safe</li>
+</ul>
+
+<h2 id="clarification">Clarification</h2>
+
+<ul>
+<li>(<strong>WHO</strong>) Identify users
+
+<ul>
+<li>Internal or External</li>
+<li>Roles (Developer, Admin, Customer, Support&hellip;)</li>
+</ul></li>
+<li>(<strong>HOW</strong>) Identify scenario, use cases</li>
+<li>(<strong>WHAT</strong>) What functionality or resource will be exposed by API</li>
+<li><strong>Clarify and confirm above and continue to API design</strong></li>
+</ul>
+
+<p>Note:</p>
+
+<ul>
+<li>Don&rsquo;t guess</li>
+<li>Don&rsquo;t make things up</li>
+</ul>
+
+<h2 id="design-flow">Design Flow</h2>
+
+<ul>
+<li>Determine what types of resources an API provides</li>
+<li>Determine the relationships between resources</li>
+<li>Decide the resource name schemes based on types and relationships</li>
+<li>Decide the resource schemas</li>
+<li>Attach minimum set of methods to resources</li>
+</ul>
+
+<h2 id="api-design">API Design</h2>
+
+<p>Design how to expose the functionality and resource</p>
+
+<ul>
+<li><p>End point</p>
+
+<ul>
+<li>https://<code>api_domain</code>/<code>version</code>/<code>collection</code>/</li>
+<li>https://<code>api_domain</code>/<code>version</code>/<code>collection</code>/<code>resource</code>/</li>
+<li>Use Noun rather than Verbs</li>
+<li>Can respond information such as API version list of top level collections, list of singleton resources</li>
+</ul></li>
+
+<li><p>Method</p>
+
+<ul>
+<li>GET/POST/PATCH/PUT/DELETE</li>
+</ul></li>
+
+<li><p>Request Header</p>
+
+<ul>
+<li>Authorization: Bearer <code>access_token</code></li>
+<li>Accept: To request for response in a specified content-type</li>
+<li>Content-Type: Content type for the request body</li>
+</ul></li>
+
+<li><p>Request Parameters</p>
+
+<ul>
+<li>Filtering: type=news,photo&amp;days=sunday</li>
+<li>Sorting: sort=create_time,-creator</li>
+<li>Paging: offset=100&amp;limit=100</li>
+<li>Search/Query: q=AI</li>
+<li>Access Token: access_token=</li>
+</ul></li>
+
+<li><p>Response Status Codes</p>
+
+<ul>
+<li>Standard HTTP status codes should be used</li>
+</ul></li>
+
+<li><p>Response Header</p>
+
+<ul>
+<li>Content-Type</li>
+<li>ETag</li>
+</ul></li>
+
+<li><p>Response Body (in JSON format)</p></li>
+
+<li><p>Error Handling</p></li>
+</ul>
+
+<h2 id="examples">Examples</h2>
+
+<h3 id="resource-model-examples">Resource Model Examples</h3>
+
+<ul>
+<li>API service: <code>gmail.googleapis.com</code></li>
+<li>A collection of users: <code>users/*</code>. Each user has the following resources.
+
+<ul>
+<li>A collection of messages: <code>users/*/messages/*</code>.</li>
+<li>A collection of threads: <code>users/*/threads/*</code>.</li>
+<li>A collection of labels: <code>users/*/labels/*</code>.</li>
+<li>A collection of change history: <code>users/*/history/*</code>.</li>
+<li>A resource representing the user profile: <code>users/*/profile</code>.</li>
+<li>A resource representing user settings: <code>users/*/settings</code>.</li>
+</ul></li>
+</ul>
+
+<h3 id="response">Response</h3>
+
+<h4 id="success-response">Success Response</h4>
+
+<pre><code class="language-json">{
+    &quot;data&quot;: {
+        &quot;id&quot;: &quot;lwj2lk3jlk2&quot;,
+        &quot;title&quot;: &quot;Hello World&quot;
+    }
+}
+</code></pre>
+
+<pre><code class="language-json">{
+    &quot;pagination&quot;: {
+        &quot;offset&quot;: 100,
+        &quot;limit&quot;: 10,
+        &quot;total&quot;: 3464
+    },
+    &quot;data&quot;: {
+		//...
+    }
+}
+</code></pre>
+
+<h4 id="error-response">Error Response</h4>
+
+<pre><code class="language-json">{
+    &quot;error&quot;: {
+ 		&quot;code&quot;: &quot;ERROR_CODE&quot;, // &quot;INVALID-REQUEST&quot;
+        &quot;message&quot;: &quot;longer error description&quot;, 
+        &quot;link&quot;: &quot;An documentation url for error details and solutions&quot;       
+    }
+}
+</code></pre>
+
+<p>Error Message Examples</p>
+
+<table>
+<thead>
+<tr>
+<th>HTTP</th>
+<th>RPC</th>
+<th>Example Error Message</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>400</td>
+<td><code>INVALID_ARGUMENT</code></td>
+<td>Request field x.y.z is xxx, expected one of [yyy, zzz].</td>
+</tr>
+
+<tr>
+<td>400</td>
+<td><code>FAILED_PRECONDITION</code></td>
+<td>Resource xxx is a non-empty directory, so it cannot be deleted.</td>
+</tr>
+
+<tr>
+<td>400</td>
+<td><code>OUT_OF_RANGE</code></td>
+<td>Parameter &lsquo;age&rsquo; is out of range [0, 125].</td>
+</tr>
+
+<tr>
+<td>401</td>
+<td><code>UNAUTHENTICATED</code></td>
+<td>Invalid authentication credentials.</td>
+</tr>
+
+<tr>
+<td>403</td>
+<td><code>PERMISSION_DENIED</code></td>
+<td>Permission &lsquo;xxx&rsquo; denied on file &lsquo;yyy&rsquo;.</td>
+</tr>
+
+<tr>
+<td>404</td>
+<td><code>NOT_FOUND</code></td>
+<td>Resource &lsquo;xxx&rsquo; not found.</td>
+</tr>
+
+<tr>
+<td>409</td>
+<td><code>ABORTED</code></td>
+<td>Couldn’t acquire lock on resource ‘xxx’.</td>
+</tr>
+
+<tr>
+<td>409</td>
+<td><code>ALREADY_EXISTS</code></td>
+<td>Resource &lsquo;xxx&rsquo; already exists.</td>
+</tr>
+
+<tr>
+<td>429</td>
+<td><code>RESOURCE_EXHAUSTED</code></td>
+<td>Quota limit &lsquo;xxx&rsquo; exceeded.</td>
+</tr>
+
+<tr>
+<td>499</td>
+<td><code>CANCELLED</code></td>
+<td>Request cancelled by the client.</td>
+</tr>
+
+<tr>
+<td>500</td>
+<td><code>DATA_LOSS</code></td>
+<td>See note.</td>
+</tr>
+
+<tr>
+<td>500</td>
+<td><code>UNKNOWN</code></td>
+<td>See note.</td>
+</tr>
+
+<tr>
+<td>500</td>
+<td><code>INTERNAL</code></td>
+<td>See note.</td>
+</tr>
+
+<tr>
+<td>501</td>
+<td><code>NOT_IMPLEMENTED</code></td>
+<td>Method &lsquo;xxx&rsquo; not implemented.</td>
+</tr>
+
+<tr>
+<td>503</td>
+<td><code>UNAVAILABLE</code></td>
+<td>See note.</td>
+</tr>
+
+<tr>
+<td>504</td>
+<td><code>DEADLINE_EXCEEDED</code></td>
+<td>See note.</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="what-else">What else</h2>
+
+<ul>
+<li>Security
+
+<ul>
+<li>HTTPS: HTTPS everywhere</li>
+<li>Access Control
+
+<ul>
+<li>Authentication</li>
+<li>JWT</li>
+<li>API Key</li>
+</ul></li>
+<li>User Role</li>
+<li>Input Validation
+
+<ul>
+<li>Length, Range, Format, Type</li>
+<li>Define request size limit</li>
+</ul></li>
+<li>CORS
+
+<ul>
+<li>Support CORS headers for all public facing APIs and allow origin of <code>*</code></li>
+</ul></li>
+</ul></li>
+<li>Pagination</li>
+<li>Monitoring
+
+<ul>
+<li><code>/heath</code>: <code>200 OK</code> or <code>503 Service Unavailable</code>, for load balancers and service discovery solutions</li>
+<li><code>/version</code>: Version</li>
+<li><code>/status</code>: <code>200 OK</code> or <code>500 Internal Server Error</code></li>
+<li><code>/metrics</code>: Uptime in seconds, average response time, number of 500 errors</li>
+</ul></li>
+</ul>
+
+                <br>
+                
+                  <div class="tags">
+                    <strong>Tags:</strong>
+                  
+                    <a class="tag" href="https://tonyxu-io/tags/%E9%9D%A2%E8%AF%95">面试</a>
+                  
+                    <a class="tag" href="https://tonyxu-io/tags/rest-api">rest-api</a>
+                  
+                  </div>
+                  <br />
+                
+                <p class="back-to-posts"><a href="https://tonyxu-io/posts"><ion-icon name="return-left"></ion-icon> Back to posts</a></p>
+            </div>
+            <br>
+            <div class="disqus">
+                <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tonyxu-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-577792-7', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+  
+
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+
+
+</body>
+</html>
+
