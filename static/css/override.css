@@ -2,6 +2,10 @@
   width: 1em;
   margin-bottom: -2px;
 }
+
+.blue {
+  color: #0077B5;
+}
 section.main .content .page-heading {
   font-size: 32px;
 }

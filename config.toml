@@ -29,10 +29,10 @@ identifier             = "projects"
 url                    = "/pages/projects"
 
 [[menu.main]]
-name                   = "Resume"
+name                   = "Profile"
 weight                 = -100
-identifier             = "resume"
-url                    = "/files/yihan-xu-resume.pdf"
+identifier             = "profile"
+url                    = "https://linkedin.com/in/tonyxu93"
 
 [params]
 include_rss            = false                          # include RSS <link> tag in <head> and show RSS icon
@@ -46,7 +46,7 @@ description            = "Tony Xu - 徐毅涵"
 email                  = "me@tonyxu.io"
 extracssfiles          = [ "/css/override.css" ]       # In your `static` directory, add/remove files as necessary.
 faviconfile            = "img/profile/favicon.ico"
-safariIconFile          = "img/profile/apple-touch-icon"
+safariIconFile          = "img/profile/apple-touch-icon.png"
 github                 = "//github.com/tonyxu-io"
 # instagram              = "//instagram.com/you"
 # px500                  = "//500px.com/username"
