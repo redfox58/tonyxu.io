@@ -9,6 +9,9 @@
 section.main .content .page-heading {
   font-size: 32px;
 }
+.at-style-responsive .at-share-btn {
+  background-color: #ccc !important;
+}
 .at-resp-share-element.at-mobile .at-share-btn {
   background-color: #ccc !important;
 }
