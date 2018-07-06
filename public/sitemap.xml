@@ -63,25 +63,25 @@
   </url>
   
   <url>
-    <loc>https://tonyxu.io/tags/%E5%B7%A5%E4%BD%9C/</loc>
-    <lastmod>2018-07-04T14:05:42-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://tonyxu.io/categories/%E5%B7%A5%E4%BD%9C/</loc>
     <lastmod>2018-07-04T14:05:42-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tonyxu.io/tags/%E6%97%A5%E5%B8%B8/</loc>
-    <lastmod>2018-07-02T00:00:00+00:00</lastmod>
+    <loc>https://tonyxu.io/tags/%E5%B7%A5%E4%BD%9C/</loc>
+    <lastmod>2018-07-04T14:05:42-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tonyxu.io/categories/%E6%97%A5%E5%B8%B8/</loc>
+    <lastmod>2018-07-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tonyxu.io/tags/%E6%97%A5%E5%B8%B8/</loc>
     <lastmod>2018-07-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
