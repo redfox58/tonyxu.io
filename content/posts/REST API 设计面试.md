@@ -14,14 +14,14 @@ tags: [面试,rest-api]
 - Simple
 - Safe
 
-## Clarification
+## Preparation
 
-* (**WHO**) Identify users
-	* Internal or External
-	* Roles (Developer, Admin, Customer, Support...)
-* (**HOW**) Identify scenario, use cases
-* (**WHAT**) What functionality or resource will be exposed by API
-* **Clarify and confirm above and continue to API design** 
+- (**WHO**) Identify users
+    - Internal or External
+    - Roles (Developer, Admin, Customer, Support...)
+- (**HOW**) Identify scenario, use cases
+- (**WHAT**) What functionality or resource will be exposed by API
+- **Clarify and confirm above and continue to API design**
 
 Note:
 
@@ -42,37 +42,39 @@ Design how to expose the functionality and resource
 
 - End point
 
-	- https://`api_domain`/`version`/`collection`/
-	- https://`api_domain`/`version`/`collection`/`resource`/
-	- Use Noun rather than Verbs
-	- Can respond information such as API version list of top level collections, list of singleton resources
+    - https://`api_domain`/`version`/`collection`/
+    - https://`api_domain`/`version`/`collection`/`resource`/
+    - Use `Noun` rather than `Verbs`
+    - Can respond information such as API version list of top level collections, list of singleton resources
 
 - Method
 
-	- GET/POST/PATCH/PUT/DELETE
+    - `GET`/`POST`/`PATCH`/`PUT`/`DELETE`
 
 - Request Header
 
-	- Authorization: Bearer `access_token`
-	- Accept: To request for response in a specified content-type
-	- Content-Type: Content type for the request body
+    - `Authorization`: Bearer `access_token`
+    - `Accept`: To request for response in a specified content-type
+    - `Content-Type`: Content type for the request body
+    - ...
 
 - Request Parameters
 
-	- Filtering: type=news,photo&days=sunday
-	- Sorting: sort=create_time,-creator
-	- Paging: offset=100&limit=100
-	- Search/Query: q=AI
-	- Access Token: access_token=
+    - Filtering: `type`=news,photo&`days`=sunday
+    - Sorting: `sort`=create_time,-creator
+    - Paging: `offset`=100&`limit`=100
+    - Search/Query: `q`=AI
+    - Access Token: `access_token`=
 
 - Response Status Codes
 
-	- Standard HTTP status codes should be used
+    - Standard HTTP status codes should be used
 
 - Response Header
 
-	- Content-Type
-	- ETag
+    - `Content-Type`
+    - `ETag`
+    - ...
 
 - Response Body (in JSON format)
 
@@ -84,12 +86,12 @@ Design how to expose the functionality and resource
 
 - API service: `gmail.googleapis.com`
 - A collection of users: `users/*`. Each user has the following resources.
-	- A collection of messages: `users/*/messages/*`.
-	- A collection of threads: `users/*/threads/*`.
-	- A collection of labels: `users/*/labels/*`.
-	- A collection of change history: `users/*/history/*`.
-	- A resource representing the user profile: `users/*/profile`.
-	- A resource representing user settings: `users/*/settings`.
+    - A collection of messages: `users/*/messages/*`.
+    - A collection of threads: `users/*/threads/*`.
+    - A collection of labels: `users/*/labels/*`.
+    - A collection of change history: `users/*/history/*`.
+    - A resource representing the user profile: `users/*/profile`.
+    - A resource representing user settings: `users/*/settings`.
 
 ### Response
 
@@ -112,7 +114,7 @@ Design how to expose the functionality and resource
         "total": 3464
     },
     "data": {
-		//...
+        //...
     }
 }
 ```
@@ -122,9 +124,9 @@ Design how to expose the functionality and resource
 ```json
 {
     "error": {
- 		"code": "ERROR_CODE", // "INVALID-REQUEST"
-        "message": "longer error description", 
-        "link": "An documentation url for error details and solutions"       
+         "code": "ERROR_CODE", // "INVALID-REQUEST"
+        "message": "longer error description",
+        "link": "An documentation url for error details and solutions"
     }
 }
 ```
@@ -150,24 +152,23 @@ Error Message Examples
 | 503  | `UNAVAILABLE`         | See note.                                                    |
 | 504  | `DEADLINE_EXCEEDED`   | See note.                                                    |
 
-
 ## What else
 
 - Security
-	- HTTPS: HTTPS everywhere
-	- Access Control
-		- Authentication
-		- JWT
-		- API Key
-	- User Role
-	- Input Validation
-		- Length, Range, Format, Type
-		- Define request size limit
-	- CORS
-		- Support CORS headers for all public facing APIs and allow origin of `*`
+    - HTTPS: HTTPS everywhere
+    - Access Control
+        - Authentication
+        - JWT
+        - API Key
+    - User Role
+    - Input Validation
+        - Length, Range, Format, Type
+        - Define request size limit
+    - CORS
+        - Support CORS headers for all public facing APIs and allow origin of `*`
 - Pagination
 - Monitoring
-	- `/heath`: `200 OK` or `503 Service Unavailable`, for load balancers and service discovery solutions
-	- `/version`: Version
-	- `/status`: `200 OK` or `500 Internal Server Error`
-	- `/metrics`: Uptime in seconds, average response time, number of 500 errors
+    - `/heath`: `200 OK` or `503 Service Unavailable`, for load balancers and service discovery solutions
+    - `/version`: Version
+    - `/status`: `200 OK` or `500 Internal Server Error`
+    - `/metrics`: Uptime in seconds, average response time, number of 500 errors
