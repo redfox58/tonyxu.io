@@ -18,6 +18,11 @@ section.main .content .page-heading {
 .at-resp-share-element .at-share-btn:focus, .at-resp-share-element .at-share-btn:hover {
   background-color: #0077B5 !important;
 }
+
+.tags {
+  display: none;
+}
+@media (min-width:400px){
 .tags {
   padding-left: 10px;
   display: inline;
@@ -40,6 +45,7 @@ section.main .content .page-heading {
 .tags .tag:hover {
   background-color: #0077B5;
 }
+}
 .icon.return {
   margin: 0 !important;
 }
@@ -50,4 +56,8 @@ section.main .content .page-heading {
 
 section.header nav ul a:hover {
   color: #0077B5;
+}
+
+.addthis_inline_share_toolbox {
+  margin: auto 10px auto auto;
 }

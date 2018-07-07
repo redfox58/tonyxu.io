@@ -76,8 +76,8 @@ section.main .content .front-matter .page-heading{margin-bottom:0;}
 section.main .content .front-matter .meta{color:#666;display:-webkit-flex;display:-moz-flex;display:-ms-flexbox;display:-ms-flex;display:flex;margin-bottom:32px;}
 section.main .content .front-matter .date,
 section.main .content .front-matter .word-count,
-section.main .content .front-matter .reading-time .middot{display:none;}
-section.main .content .front-matter .middot{font-size:6px;margin:0 6px;display:inline;vertical-align:middle;}
+/* section.main .content .front-matter .reading-time .middot{display:none;} */
+section.main .content .front-matter .middot{font-size:14px;margin:0 6px;display:inline;vertical-align:middle;}
 section.main .content .front-matter .middot:before{content:"•";}
 @media (min-width:600px){section.main .content .front-matter .date,
 section.main .content .front-matter .word-count,

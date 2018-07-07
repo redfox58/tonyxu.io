@@ -8,7 +8,7 @@
                     {{ partial "page-heading" . }}
                     <div class="initials"><a href="{{ .Site.BaseURL }}">{{ .Site.Params.Initials }}</a></div>
                 </div>
-                {{ partial "share.html" . }}
+                
                 <div class="meta">
                     {{ if and .Site.Params.dateformfull .Site.Params.dateform }}
                     <div class="date" title='{{ .Date.Format .Site.Params.dateformfull }}'>{{ .Date.Format .Site.Params.dateform }}</div>
@@ -26,6 +26,7 @@
                     {{ if not .Site.Params.noshowreadtime }}
                     <div class="reading-time"><div class="middot"></div>{{ i18n "readingTime" .ReadingTime }}</div>
                     {{ end }}
+                    {{ partial "share.html" . }}
                 </div>
             </div>
             <div class="markdown">
