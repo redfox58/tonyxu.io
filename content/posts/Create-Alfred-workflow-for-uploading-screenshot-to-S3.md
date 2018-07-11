@@ -63,21 +63,14 @@ def capture():
     atexit.register(lambda x: os.remove(x) if os.path.exists(x) else None, file_path)
     save = call(['./pngpaste', file_path])
     if save == 1:
+        # Quit job if no image found in clipboard
+        print "No image found in clipboard"
         sys.exit()
     return file_path, file_name
 
 def main(wf):
     import boto3
-    if sys.argv.__len__() == 1:
-        file_path, file_name = capture()
-    else:
-        file_path = expanduser(sys.argv[-1])
-        if not exists(file_path):
-            file_path, file_name = capture()
-        else:
-            if imghdr.what(file_path) not in ['jpeg', 'jpg', 'png']:
-                sys.exit('file type error')
-            file_name = basename(file_path)
+    file_path, file_name = capture()
     bucket_name = os.getenv('bucket_name')
     region_name = os.getenv('region_name')
     s3 = boto3.client(
@@ -151,7 +144,9 @@ Make sure the user can read/write to S3 bucket.
 
 Congratulations You made it! Give it a try!
 
-------
+## Follow-up
+
+Now you may think of adding support for the workflow to be able to upload any image from local. As you are getting familiar with Alfred workflow development, feel free to give it a try!
 
 Download in Github:
 
