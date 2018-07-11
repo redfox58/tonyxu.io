@@ -72,14 +72,13 @@ def main(wf):
     import boto3
     file_path, file_name = capture()
     bucket_name = os.getenv('bucket_name')
-    region_name = os.getenv('region_name')
     s3 = boto3.client(
         's3',
         aws_access_key_id=os.getenv('access_key'),
         aws_secret_access_key=os.getenv('secret_key')
     )
     s3.upload_file(file_path, bucket_name, file_name, ExtraArgs={'ContentType': "image/png"})
-    output = "https://s3-%s.amazonaws.com/%s/%s" %(region_name, bucket_name, file_name)
+    output = "%s/%s" %(os.getenv('bucket_uri'), file_name)
     print (output,end='')
 
 if __name__ == '__main__':
@@ -125,14 +124,17 @@ Please note that pngpaste is a command line tool and you should copy the binary 
 
 In the script, we used below variables that we want to make it configurable instead of hard coded:
 
-- access_key
-- access_secret
-- bucket_name
-- region_name
+- access_key: S3 access key
+
+- secret_key: S3 access secret
+
+- bucket_name: S3 bucket name. e.g. `my-bucket-name`
+
+- bucket_uri: S3 bucket URI without trailing slash. e.g. `https://s3-us-west-1.amazonaws.com/my-bucket-name`
 
 Add and config above environment variables into workflow environment variables settings like below
 
-![](https://s3-us-west-1.amazonaws.com/tonyxu-img/2018_07_08_21_25_05.png)
+![](https://s3-us-west-1.amazonaws.com/tonyxu-img/2018_07_10_20_55_19.png)
 
 Follow instructions here to create access key and secret if you don't have it already:
 
