@@ -2,6 +2,8 @@
 title: "利用Telegram和Flask打造私人通知服务器"
 date: 2018-07-12T20:55:38-07:00
 draft: false
+categories: [技术]
+tags: [Telegram,Flask,通知]
 ---
 
 假如有如下这么几个场景:
