@@ -1,0 +1,22 @@
+ion-icon {
+    margin-bottom: -6px;
+}
+
+.blue {
+    color: #0077B5
+}
+
+.green {
+    color: #4caf50
+}
+
+.red {
+    color: #f44336
+}
+
+.inline-image {
+    border: none !important;
+    box-shadow: none !important;
+    margin:0 !important;
+    height: 30px !important;
+}
