@@ -33,13 +33,13 @@ I joined a start-up, Moxtra, as a solution engineer after graduation from Mizzou
 
 It's said that when you clearly know what you want, you will be more likely to get good result. My goal is really simple, I want to build great product and work in great company. It's deep in my mind ever since my childhood. This goal drives me all the way to the United States, to the silicon valley, and most recently LinkedIn. It's really magical.
 
-To be honest, working in companies like Facebook/Google/LinkedIn has always been my goal. With that in mind, I become more proactive toward work subjects and gradually acquires skills that later proves to be essential in helping me get a job from those companies.
+To be honest, working in companies like Facebook/Google/LinkedIn has always been my goal. With that in mind, I become more proactive toward work subjects and gradually acquired skills that later proves to be critical in helping me get a job from those companies.
 
 ## Part 3: Keep moving
 
-Changing job every couple years used to look bad on resume, but it's not anymore, so don't worry about it. If you don't change job every couple years, it means that you are totally dependent on your current job, and never got a chance to develop the skill of getting a better job quickly. In the tech sector, very few people last in a job more than three or five years. You have to be prepared, mentally, financially, and skill wise to keep changing jobs every couple years.
+Changing job every couple years used to look bad on resume, but it's not anymore, so don't worry about it. Stick to a job for a long time means that you are totally dependent on that job, and never got a chance to develop the skill of getting a better job quickly. In the tech sector, very few people last in a job more than three or five years. You have to be prepared, mentally, financially, and skill wise to keep changing jobs every couple years.
 
-There are lot's of reason one should move forward, when you feel you are repeating yourself everyday, or the work you are doing doesn't make you feel confident in finding next job. Most important reason, you can easily get 30% to 50% salary promotion after you change job. If you want to make more money, you should think about it.
+There are also other reasons you should move forward, when you feel you are repeating yourself everyday, or the work you are doing doesn't make you feel confident in finding next job. Most important reason, you can easily get 30% to 50% salary promotion after you change job. If you want to make more money, you should think about it.
 
 ## Part 4: Career evolving
 
