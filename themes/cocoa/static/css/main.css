@@ -138,13 +138,13 @@ section.main .content .markdown a code:hover{text-decoration:underline;}
 section.main .content .markdown p{font-size:1rem;margin-top:0;margin-bottom:1em;}
 section.main .content .markdown ul,
 section.main .content .markdown ol,
-section.main .content .markdown dl{margin-top:1rem;margin-bottom:2rem;}
+section.main .content .markdown dl{margin-top:0rem;margin-bottom:0rem;}
 section.main .content .markdown dt{font-weight:bold;}
 section.main .content .markdown dd{margin-bottom:.5rem;}
-section.main .content .markdown ul{margin-bottom:1.25rem;}
+section.main .content .markdown ul{margin-bottom:0rem;margin-top:0.5rem;}
 section.main .content .markdown ul li{list-style-type:disc;}
 section.main .content .markdown ol li{list-style-type:decimal;}
-section.main .content .markdown li{list-style-position:outside;margin-left:1em;}
+section.main .content .markdown li{list-style-position:outside;margin-left:1em;margin-bottom:0.5em;}
 section.main .content .markdown em{font-style:italic;}
 section.main .content .markdown strong{font-weight:700;}
 section.main .content .markdown hr{position:relative;margin:1.75rem 0;border:0;border-top:1px solid #808080;border-top:1px solid #999999;}
