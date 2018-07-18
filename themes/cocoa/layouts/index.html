@@ -17,8 +17,10 @@
                     {{ end }}
                     {{ if gt $totalpostscount $latestpostscount }}
                         {{ range where .Site.Menus.main "Identifier" "posts" }}
+                            
                             <li class="post-item no-bullet">
-                                <a id="see-more" {{ printf "href=%q " .URL | safeHTMLAttr }}><span>See more&hellip;</span></a>
+                                    <span class="meta"></span>
+                                <a id="see-more" {{ printf "href=%q " .URL | safeHTMLAttr }}><span>MORE<ion-icon name="arrow-dropright"  class="icon"></ion-icon></span></a>
                             </li>
                         {{ end }}
                     {{ end }}
