@@ -16,6 +16,8 @@ tags: [Telegram,Flask,通知]
 
 实现一个Flask app，接收REST API的GET或者POST请求，根据不同需要拼装消息文本并发送到某个app (如Telegram, Slack等)。这个Flask app可以跑在Google App Engine (免费)， 并绑定自己的域名。
 
+<!--more-->
+
 下面我就介绍一下大概的步骤：
 
 1. 根据 Google App Engine 创建一个基本的Flask app
