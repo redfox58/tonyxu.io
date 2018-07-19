@@ -12,6 +12,7 @@ disqusShortname = "tonyxu-io"
   themeColor = "theme-base-10"
   googleAnalytics     = "UA-577792-7"
   description            = "A LinkedIn engineer, loves to build, ship, and launch."
+  postsDir = "posts"
 
 [permalinks]
   post = "posts/:title/"
@@ -25,7 +26,7 @@ disqusShortname = "tonyxu-io"
     url                    = "/pages/projects"
 
     [[menu.main]]
-    name                   = "Profile"
+    name                   = 'Profile'
     weight                 = -100
     identifier             = "profile"
     url                    = "https://linkedin.com/in/tonyxu93"
