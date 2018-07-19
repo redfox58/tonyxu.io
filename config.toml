@@ -2,6 +2,7 @@ baseURL = "/"
 footnoteReturnLinkContents = "↩"
 title = "Tony Xu 徐毅涵"
 theme = "hyde"
+disqusShortname = "tonyxu-io"
 
 [params]
   AuthorName = "Tony Xu"
@@ -9,7 +10,6 @@ theme = "hyde"
   SidebarRecentLimit = 5
   Subtitle = "Hugo is Absurdly Fast!"
   themeColor = "theme-base-10"
-  disqusShortname = "tonyxu-io"
   googleAnalytics     = "UA-577792-7"
   description            = "A LinkedIn engineer, loves to build, ship, and launch."
 
