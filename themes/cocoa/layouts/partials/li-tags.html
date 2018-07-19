@@ -1,7 +1,0 @@
-{{ if .Params.categories }}
-    <div class="tags">
-    {{range .Params.categories}}
-    <a class="tag" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
-    {{end}}
-    </div>
-{{end}}
