@@ -15,7 +15,7 @@ disqusShortname = "tonyxu-io"
   postsDir = "posts"
 
 [permalinks]
-  post = "posts/:title/"
+  posts = "/posts/:title/"
 
 [menu]
 
@@ -29,7 +29,7 @@ disqusShortname = "tonyxu-io"
     name                   = "Projects"
     weight                 = -140
     identifier             = "projects"
-    url                    = "/pages/projects"
+    url                    = "/projects"
 
     [[menu.main]]
     name                   = 'Profile'
