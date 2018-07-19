@@ -20,13 +20,25 @@ disqusShortname = "tonyxu-io"
 [menu]
 
     [[menu.main]]
+    name                   = "Posts"
+    weight                 = -150
+    identifier             = "posts"
+    url                    = "/posts"
+
+    [[menu.main]]
     name                   = "Projects"
-    weight                 = -110
+    weight                 = -140
     identifier             = "projects"
     url                    = "/pages/projects"
 
     [[menu.main]]
     name                   = 'Profile'
-    weight                 = -100
+    weight                 = -130
     identifier             = "profile"
     url                    = "https://linkedin.com/in/tonyxu93"
+
+    [[menu.main]]
+    name                   = 'Email'
+    weight                 = -120
+    identifier             = "email"
+    url                    = "mailto:me@tonyxu.io"
