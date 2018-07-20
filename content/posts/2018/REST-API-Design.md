@@ -7,7 +7,9 @@ tags: [interview,rest-api]
 aliases: [/posts/rest-api-设计面试/]
 ---
 
-Below is my own preparation scripts for REST API interview. Hopefully it's helpful for others as well.
+REST API has become a very popular concept for designing back-end service interface. Most platforms provide REST API as unified interface for web/native applications. If you are going to interview for a job that will require REST API knowledge, you are encouraged to be well prepared for it. Below is my own summary for REST API interview. Hopefully it's helpful for you as well.
+
+<!--more-->
 
 ## Principle
 
