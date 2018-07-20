@@ -8,6 +8,8 @@ tags: [Alfred,S3]
 
 As Markdown markup language gets more and more popular, most people have a need to quickly generate a public url for screenshot/image in clipboard. Today I created an Alfred workflow that helps you upload images/screenshot in clipboard.
 
+<!--more-->
+
 ## Demo
 
 ![](https://s3-us-west-1.amazonaws.com/tonyxu-img/2018-07-08+21_33_30.gif)
