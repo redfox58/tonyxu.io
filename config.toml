@@ -21,25 +21,36 @@ disqusShortname = "tonyxu-io"
 [menu]
 
     [[menu.main]]
+    name                   = "Home"
+    weight                 = -160
+    identifier             = "home"
+    url                    = "/"
+    pre                    = "<i class='fas fa-fw fa-home menu-icon'></i>"
+
+    [[menu.main]]
     name                   = "Posts"
     weight                 = -150
     identifier             = "posts"
     url                    = "/posts"
+    pre                    = "<i class='fas fa-fw fa-pen-nib menu-icon'></i>"
 
     [[menu.main]]
     name                   = "Projects"
     weight                 = -140
     identifier             = "projects"
     url                    = "/projects"
+    pre                    = "<i class='fas fa-fw fa-plug menu-icon'></i>"
 
     [[menu.main]]
     name                   = 'Profile'
     weight                 = -130
     identifier             = "profile"
     url                    = "https://linkedin.com/in/tonyxu93"
+    pre                    = "<i class='fab fa-fw fa-linkedin menu-icon'></i>"
 
     [[menu.main]]
     name                   = 'Email'
     weight                 = -120
     identifier             = "email"
     url                    = "mailto:me@tonyxu.io"
+    pre                    = "<i class='fas fa-fw fa-envelope menu-icon'></i>"
