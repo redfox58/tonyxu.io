@@ -2,6 +2,7 @@
 title: "Projects"
 date: 2018-07-04T17:04:09-07:00
 draft: false
+disableComments: true
 ---
 
 - [Moxtra Chrome Extension for Gmail](https://chrome.google.com/webstore/detail/moxtra-for-gmail/nilmkkfaijpljlpkpmpibckakhdfefgj): Used Javascript, React, REST API, Node.js, Gulp to build Chrome extension applications that embed Moxtra chat/meeting capabilities into Gmail and Calendar.
