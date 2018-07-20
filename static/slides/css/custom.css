@@ -28,4 +28,23 @@ ion-icon {
     height: 2em;
     padding-left: 4em;
     color: #CCC;
+    z-index: 1;
+    font-family: "Source Sans Pro", Helvetica, sans-serif
+}
+
+.topbar a {
+    color:#0073b1;      /* unvisited link */
+    text-decoration: none;
+}
+
+.topbar a:visited {
+    color:#0073b1;  /* visited link */
+}
+
+.topbar a:hover {
+    color:#0073b1;  /* mouse over link */
+}
+
+.topbar a:active {
+    color:#0073b1;  /* selected link */
 }
