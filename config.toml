@@ -3,6 +3,7 @@ footnoteReturnLinkContents = "↩"
 title = "Tony Xu 徐毅涵"
 theme = "hyde"
 disqusShortname = "tonyxu-io"
+googleAnalytics     = "UA-577792-7"
 
 [params]
   AuthorName = "Tony Xu"
@@ -10,7 +11,6 @@ disqusShortname = "tonyxu-io"
   SidebarRecentLimit = 5
   Subtitle = "Hugo is Absurdly Fast!"
   themeColor = "theme-base-10"
-  googleAnalytics     = "UA-577792-7"
   description            = "A LinkedIn engineer, loves to build, ship, and launch."
   postsDir = "posts"
   cover = "favicons/favicon-200.png"
