@@ -10,3 +10,5 @@ disableComments: true
 - [Moxtra Outlook Add-in](https://store.office.com/en-us/app.aspx?assetid=WA104380433): Cooporated with Microsoft Office API, Javascript, and Moxtra REST API to build mailbox and appointment calendar integrations to allow users to collaborate with Moxtra contacts.
 - [Moxtra Trello Power-up](http://moxtra.com/resource/trello_moxtra_power_up/): Integrate Moxtra features into Trello board using Javascript and REST APIs, providing users capability to collaborate with Moxtra users from within Trello.
 - [iTongue](https://itunes.apple.com/us/app/itongue/id998044356): Redesign iTongue 1.0 architecture and experience from ground up and improves general useability and user experience.
+
+[Find out more on my GitHub...](https://github.com/tonyxu-io)
