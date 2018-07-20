@@ -5,8 +5,10 @@
   {{ .Content }}
 </div>
 
-{{ if .Site.DisqusShortname -}}
-<h2>Comments</h2>
-{{ template "_internal/disqus.html" . }}
-{{- end }}
+
+{{ if (not (eq .Site.DisqusShortname "")) | and (not .Params.disableComments) }}
+  <h2>Comments</h2>
+  {{ template "_internal/disqus.html" . }}
+{{ end }}
+
 {{- end }}
