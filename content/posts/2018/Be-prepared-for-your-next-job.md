@@ -1,7 +1,7 @@
 ---
 title: "Be prepared for your next job"
-date: 2018-07-06T16:13:22-07:00
-draft: true
+date: 2018-07-21T16:13:22-07:00
+draft: false
 categories: [Career]
 tags: [Career]
 ---
@@ -26,14 +26,14 @@ I will not talk about:
 
 ## Part 1: My experience changing job
 
-I joined a start-up, Moxtra, as a solution engineer after graduation from Mizzou. Some of you might know I joined LinkedIn last month. When I look back and think about how I managed to do that, I summarize those into two key concepts that I had in mind:
+I joined a start-up, Moxtra, as a software engineer after graduation from University of Missouri. Some of you might know I joined LinkedIn last month. When I look back and think about how I managed to do that, I summarize those into two key concepts that I had in mind:
 
 1. Always have a goal in mind
 2. Keep moving
 
 ## Part 2: Always have a goal in mind
 
-It's said that when you clearly know what you want, you will be more likely to get good result. My goal is really simple, I want to build great product and work in great company. It's deep in my mind ever since my childhood. This goal drives me all the way to the United States, to the silicon valley, and most recently LinkedIn. It's really magical.
+It's said that when you clearly know what you want, you will be more likely to get good result. My goal is really simple, I want to build great product and work in great company. It's deep in my mind ever since my childhood. This goal drives me all the way to the United States, to the silicon valley.
 
 To be honest, working in companies like Facebook/Google/LinkedIn has always been my goal. With that in mind, I become more proactive toward work subjects and gradually acquired skills that later proves to be critical in helping me get a job from those companies.
 
@@ -58,7 +58,7 @@ There is one more topic I want to talk about, which is career evolving. People h
   - Demonstrate management skill in project, business, product, users, people
   - The more you can manage, the better chance you will land in project manager
 
-If I'm lucky enough to get over above challenge, I'll probably be looking at director positions or starting my own business. Who knows? So, think about how your career might evolve and prepare for that.
+If I'm lucky enough to get over above challenges, I'll probably be looking at director positions or starting my own business. Who knows? So, think about how your career might evolve and prepare for that.
 
 
 
