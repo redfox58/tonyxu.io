@@ -50,11 +50,11 @@ tags: [FontAwesome,优化]
 
 ### 使用IcoMoon
 
-![](https://s3-us-west-1.amazonaws.com/tonyxu-img/2018_07_22_20_32_41.png)
+![](https://s3-us-west-1.amazonaws.com/tonyxu-img/2018_07_22_22_15_58.png)
 
 ### 使用FontAwesome默认方法
 
-![](https://s3-us-west-1.amazonaws.com/tonyxu-img/2018_07_22_20_33_16.png)
+![](https://s3-us-west-1.amazonaws.com/tonyxu-img/2018_07_22_22_05_23.png)
 
 ### 对比总结
 
