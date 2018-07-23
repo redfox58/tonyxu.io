@@ -30,11 +30,19 @@ tags: [FontAwesome,优化]
 
 1. 访问[IcoMoon主页](https://icomoon.io/app/#/select)选择所有你需要使用的图标并点击生成字体(Generate Font)
    ![](https://s3-us-west-1.amazonaws.com/tonyxu-img/2018_07_22_20_13_05.png)
+
 2. 下载资源文件
    ![](https://s3-us-west-1.amazonaws.com/tonyxu-img/2018_07_22_20_14_27.png)
+
 3. 把资源文件中的`style.css`文件和`fonts`文件夹复制到你的网站资源文件夹并在HTML页面的`<head></head>`区域引用`style.css`文件(之前引用的FontAwesome相关资源可以移除了)
 
-完成！现在你的网站不再需要加载完整的FontAwesome资源文件，而只是加载你使用的图标资源
+4. Mouse over Glyph and click on "Get Code"
+   ![](https://s3-us-west-1.amazonaws.com/tonyxu-img/2018_07_22_21_11_31.png)
+
+5. Copy the icon code and paste to where you need show the icon
+   ![](https://s3-us-west-1.amazonaws.com/tonyxu-img/2018_07_22_21_13_09.png)
+
+完成！现在你的网站不再需要加载完整的FontAwesome资源文件，而只是加载你使用的图标资源。
 
 ## 对比
 
