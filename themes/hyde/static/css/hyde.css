@@ -275,4 +275,7 @@ li {
 .menu-icon {
   color: #FFFFFF;
   margin-right: 0.4rem;
+  text-align: center;
+  width: 0.8em;
+  display: inline-block;
 }
