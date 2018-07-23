@@ -4,6 +4,7 @@ title = "Tony Xu 徐毅涵"
 theme = "hyde"
 disqusShortname = "tonyxu-io"
 googleAnalytics     = "UA-577792-7"
+pygmentsCodeFences = true
 
 [params]
   AuthorName = "Tony Xu"
@@ -25,32 +26,32 @@ googleAnalytics     = "UA-577792-7"
     weight                 = -160
     identifier             = "home"
     url                    = "/"
-    pre                    = "<i class='fas fa-fw fa-home menu-icon'></i>"
+    pre                    = '<span class="icon-home menu-icon"></span>'
 
     [[menu.main]]
     name                   = "Posts"
     weight                 = -150
     identifier             = "posts"
     url                    = "/posts"
-    pre                    = "<i class='fas fa-fw fa-pen-nib menu-icon'></i>"
+    pre                    = '<span class="icon-pencil menu-icon"></span>'
 
     [[menu.main]]
     name                   = "Projects"
     weight                 = -140
     identifier             = "projects"
     url                    = "/projects"
-    pre                    = "<i class='fas fa-fw fa-plug menu-icon'></i>"
+    pre                    = '<span class="icon-plug menu-icon"></span>'
 
     [[menu.main]]
     name                   = 'Profile'
     weight                 = -130
     identifier             = "profile"
     url                    = "https://linkedin.com/in/tonyxu93"
-    pre                    = "<i class='fab fa-fw fa-linkedin menu-icon'></i>"
+    pre                    = '<span class="icon-linkedin-square menu-icon"></span>'
 
     [[menu.main]]
     name                   = 'Email'
     weight                 = -120
     identifier             = "email"
     url                    = "mailto:me@tonyxu.io"
-    pre                    = "<i class='fas fa-fw fa-envelope menu-icon'></i>"
+    pre                    = '<span class="icon-paper-plane menu-icon"></span>'
