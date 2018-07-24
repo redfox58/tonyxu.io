@@ -5,6 +5,7 @@ theme = "hyde"
 disqusShortname = "tonyxu-io"
 googleAnalytics     = "UA-577792-7"
 pygmentsCodeFences = true
+pygmentsStyle = "tango"
 
 [params]
   AuthorName = "Tony Xu"
