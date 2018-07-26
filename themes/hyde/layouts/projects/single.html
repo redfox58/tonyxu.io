@@ -1,0 +1,32 @@
+{{ define "main" -}}
+    <h1>Projects</h1>
+    <div>
+        <h2>Products</h2>
+        {{ range .Site.Data.project }}
+                <h3><a href="{{ .url }}" target="_blank">{{ .name }}</a></h3>
+                <p>{{ .description}}</p>
+        {{ end }}
+    </div>
+    <div>
+        <h2>Repositories</h2>
+        {{ $urlPre := "https://api.github.com" }}
+        {{ $repos := getJSON $urlPre "/users/tonyxu-io/repos?type=owner&per_page=100" }}
+        {{ range $repos }}
+            {{ if not .private }}
+                <h3><a href="{{ .html_url }}" target="_blank">{{ .name }}</a></h3>
+                <p>{{ .description}}</p>
+                <div><span>{{.language}}</span> &middot; <span>{{dateFormat "Mon, Jan 2, 2006" .updated_at}}</span></div>
+            {{ end }}
+        {{ end }}
+    </div>
+    <div>
+        <h2>Gists</h2>
+        {{ $urlPre := "https://api.github.com" }}
+        {{ $gists := getJSON $urlPre "/users/tonyxu-io/gists" }}
+        {{ range $gists }}
+            {{ if .public }}
+                <h3><a href="{{ .html_url }}" target="_blank">{{ .description }}</a></h3>
+            {{ end }}
+        {{ end }}
+    </div>
+{{- end }}
