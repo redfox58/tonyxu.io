@@ -122,13 +122,13 @@ a.sidebar-nav-item:focus {
  */
 
 .content {
-  padding-top:    4rem;
-  padding-bottom: 4rem;
+  padding-top:    1rem;
+  padding-bottom: 1rem;
 }
 
 @media (min-width: 48em) {
   .content {
-    max-width: 50rem;
+    /* max-width: 50rem; */
     margin-left: 20rem;
     margin-right: 2rem;
   }
@@ -136,8 +136,9 @@ a.sidebar-nav-item:focus {
 
 @media (min-width: 64em) {
   .content {
-    margin-left: 22rem;
-    margin-right: 4rem;
+    margin-left: 18rem;
+    margin-right: 0rem;
+    padding: 4rem;
   }
 }
 
@@ -278,4 +279,10 @@ li {
   text-align: center;
   width: 0.8em;
   display: inline-block;
+}
+.gist td {
+  border:none !important;
+}
+body {
+  background-color: #f1f1f1;
 }

@@ -256,7 +256,7 @@ tbody tr:nth-child(odd) th {
  */
 
 .container {
-  max-width: 38rem;
+  /* max-width: 38rem; */
   padding-left:  1rem;
   padding-right: 1rem;
   margin-left:  auto;
@@ -300,7 +300,10 @@ tbody tr:nth-child(odd) th {
 
 .page,
 .post {
-  margin-bottom: 4em;
+  margin-bottom: 2em;
+  background-color: #FFF;
+  padding: 2em;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12)
 }
 
 /* Blog post or page title */
