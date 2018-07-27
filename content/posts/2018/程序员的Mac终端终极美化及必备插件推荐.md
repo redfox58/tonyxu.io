@@ -121,3 +121,40 @@ plugins=(
 ```shell
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 ```
+
+## 我自己的`~/.zshrc`配置
+
+```sh
+# Path to your oh-my-zsh installation.
+export ZSH=/Users/tonxu/.oh-my-zsh
+
+# theme
+ZSH_THEME="robbyrussell"
+
+# plugins
+plugins=(
+  git
+  extract
+  zsh-syntax-highlighting
+)
+
+source $ZSH/oh-my-zsh.sh
+
+# set language
+export LANG=en_US.UTF-8
+
+# default editor
+export EDITOR='vi'
+
+# ssh key path
+export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# load autojump plugin
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/tonxu/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/tonxu/google-cloud-sdk/path.zsh.inc'; fi
+
+# load auto-suggestions plugin
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+```
