@@ -1,10 +1,9 @@
 {{ define "main" -}}
-<h1>{{ .Title }}</h1>
-<ul class="posts">
-{{ range .Data.Pages -}}
-  <li>
-    <span><a href="{{ .Permalink }}">{{ .Title }}</a> <time class="pull-right post-list">{{ .Date.Format "Mon, Jan 2, 2006" }}</time></span>
-  </li>
-{{- end }}
-</ul>
+    <div class="post">
+        <h1>{{ .Title }}</h1>
+        {{ range .Pages }}
+        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+        <span class="meta">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
+        {{ end }}
+    </div>
 {{- end }}
