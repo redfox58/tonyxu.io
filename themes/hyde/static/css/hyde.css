@@ -286,3 +286,19 @@ li {
 body {
   background-color: #f6f6f6;
 }
+
+.breadcrumbs {
+  text-align: right;
+}
+
+.breadcrumb {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  display: inline-block;
+  font-weight: 100;
+  letter-spacing: 0.1rem;
+}
+
+.breadcrumb:hover {
+  color: #0073b1;
+}
