@@ -1,12 +1,25 @@
 {{ define "main" -}}
-<div class="post">
+
+<div class="breadcrumbs">
+    <a href="#products"><h3 class="breadcrumb">PRODUCTS</h3></a>
+    
+    &middot;
+       
+    <a href="#open-source"><h3 class="breadcrumb">OPEN SOURCE</h3></a>
+    
+    &middot;
+       
+    <a href="#gists"><h3 class="breadcrumb">GISTS</h3></a>
+</div>
+
+<div  id="products" class="post">
     <h2>Products</h2>
     {{ range .Site.Data.project }}
             <h3><a href="{{ .url }}" target="_blank">{{ .name }}</a></h3>
             <p>{{ .description}}</p>
     {{ end }}
 </div>
-<div class="post">
+<div id="open-source" class="post">
     <h2>Open Source</h2>
     {{ $urlPre := "https://api.github.com" }}
     {{ $repos := getJSON $urlPre "/users/tonyxu-io/repos?type=owner&sort=updated" }}
@@ -14,18 +27,18 @@
         {{ if not .private }}
             <h3><a href="{{ .html_url }}" target="_blank">{{ .name }}</a></h3>
             <p>{{ .description}}</p>
-            <div><span>{{.language}}</span> &middot; <span>{{dateFormat "Mon, Jan 2, 2006" .updated_at}}</span></div>
+            <div class="post-date"><span>{{.language}}</span> &middot; <span>{{dateFormat "Mon, Jan 2, 2006" .updated_at}}</span></div>
         {{ end }}
     {{ end }}
 </div>
-<div class="post">
-    <h2>Gists</h2>
+<div id="gists" class="post">
+    <h2 >Gists</h2>
     {{ $urlPre := "https://api.github.com" }}
     {{ $gists := getJSON $urlPre "/users/tonyxu-io/gists" }}
     {{ range $gists }}
         {{ if .public }}
             <h3><a href="{{ .html_url }}" target="_blank">{{ .description }}</a></h3>
-            <p>{{dateFormat "Mon, Jan 2, 2006" .updated_at}}</p>
+            <p class="post-date">{{dateFormat "Mon, Jan 2, 2006" .updated_at}}</p>
         {{ end }}
     {{ end }}
 </div>
