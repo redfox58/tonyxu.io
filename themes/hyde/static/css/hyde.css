@@ -56,7 +56,6 @@ html {
 
 .sidebar {
   text-align: center;
-  padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
   background-color: #202020;
 }
@@ -77,6 +76,9 @@ html {
 }
 
 /* About section */
+.sidebar-about {
+  padding-top: 1rem;
+}
 .sidebar-about h1 {
   color: #fff;
   margin-top: 0;
@@ -87,6 +89,7 @@ html {
 .sidebar-nav {
   padding-left: 0;
   list-style: none;
+  padding-bottom: 1rem;
 }
 .sidebar-nav-item {
   display: block;
@@ -104,13 +107,14 @@ a.sidebar-nav-item:focus {
  * Add the `sidebar-sticky` class to the sidebar's container to affix it the
  * contents to the bottom of the sidebar in tablets and up.
  */
+.sidebar-sticky {
+  bottom: 2rem;
+}
 
 @media (min-width: 48em) {
   .sidebar-sticky {
     position: absolute;
-    right:  1rem;
     bottom: 1rem;
-    left:   1rem;
   }
 }
 
@@ -167,101 +171,10 @@ a.sidebar-nav-item:focus {
   }
 }
 
-
-
-/*
- * Themes
- *
- * As of v1.1, Hyde includes optional themes to color the sidebar and links
- * within blog posts. To use, add the class of your choosing to the `body`.
- */
-
-/* Base16 (http://chriskempson.github.io/base16/#default) */
-
-/* Red */
-.theme-base-08 .sidebar {
-  background-color: #ac4142;
-}
-.theme-base-08 .content a,
-.theme-base-08 .related-posts li a:hover {
-  color: #ac4142;
-}
-
-/* Orange */
-.theme-base-09 .sidebar {
-  background-color: #d28445;
-}
-.theme-base-09 .content a,
-.theme-base-09 .related-posts li a:hover {
-  color: #d28445;
-}
-
-/* Yellow */
-.theme-base-0a .sidebar {
-  background-color: #f4bf75;
-}
-.theme-base-0a .content a,
-.theme-base-0a .related-posts li a:hover {
-  color: #f4bf75;
-}
-
-/* Green */
-.theme-base-0b .sidebar {
-  background-color: #90a959;
-}
-.theme-base-0b .content a,
-.theme-base-0b .related-posts li a:hover {
-  color: #90a959;
-}
-
-/* Cyan */
-.theme-base-0c .sidebar {
-  background-color: #75b5aa;
-}
-.theme-base-0c .content a,
-.theme-base-0c .related-posts li a:hover {
-  color: #75b5aa;
-}
-
-/* Blue */
-.theme-base-0d .sidebar {
-  background-color: #6a9fb5;
-}
-.theme-base-0d .content a,
-.theme-base-0d .related-posts li a:hover {
-  color: #6a9fb5;
-}
-
-/* Magenta */
-.theme-base-0e .sidebar {
-  background-color: #aa759f;
-}
-.theme-base-0e .content a,
-.theme-base-0e .related-posts li a:hover {
-  color: #aa759f;
-}
-
-/* Brown */
-.theme-base-0f .sidebar {
-  background-color: #8f5536;
-}
-.theme-base-0f .content a,
-.theme-base-0f .related-posts li a:hover {
-  color: #8f5536;
-}
-
-/* Brown */
-.theme-base-0f .sidebar {
-  background-color: #8f5536;
-}
-.theme-base-0f .content a,
-.theme-base-0f .related-posts li a:hover {
-  color: #8f5536;
-}
-
-/* Tony */
 .theme-base-10 .sidebar {
-  background-color: #283e4a;
+  color: #333;
+  background-color: #FFF;
+  box-shadow: 2px 0 11px rgba(0,0,0,0.04)
 }
 .theme-base-10 .content a,
 .theme-base-10 .related-posts li a:hover {
@@ -269,12 +182,34 @@ a.sidebar-nav-item:focus {
 }
 .sidebar-about h1 {
   font-size: 1.5rem;
+  color: #333;
 }
+.sidebar .sidebar-about a:hover {
+  background-color: transparent;
+}
+.sidebar a {
+  color: #333;
+  display: inline-block;
+  width: 100%;
+  padding: 0rem 2rem;
+  font-weight: 500;
+  font-size: 14px;
+}
+@media (min-width: 48em){
+  .sidebar a {
+    padding: 0.5rem 2rem;
+  }
+}
+.sidebar a:hover {
+  background-color: #f6f7fb;
+  text-decoration: none;
+}
+
 li {
   margin-bottom: 0.5rem;
 }
 .menu-icon {
-  color: #FFFFFF;
+  color: #444;
   margin-right: 0.4rem;
   text-align: center;
   width: 0.8em;
@@ -284,7 +219,7 @@ li {
   border:none !important;
 }
 body {
-  background-color: #f6f6f6;
+  background-color: #E3F2FD;
 }
 
 .breadcrumbs {
@@ -301,4 +236,9 @@ body {
 
 .breadcrumb:hover {
   color: #0073b1;
+}
+
+.lead {
+  padding: 0.5rem 2rem;
+  font-weight: 400;
 }
