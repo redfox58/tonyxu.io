@@ -13,7 +13,7 @@ pygmentsStyle = "tango"
   SidebarRecentLimit = 5
   Subtitle = "Hugo is Absurdly Fast!"
   themeColor = "theme-base-10"
-  description            = "A LinkedIn engineer, loves to build, ship, and launch."
+  description            = "A LinkedIn software engineer, loves to build, ship, launch."
   postsDir = "posts"
   cover = "favicons/favicon-200.png"
 

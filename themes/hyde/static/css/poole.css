@@ -304,7 +304,8 @@ tbody tr:nth-child(odd) th {
   margin-bottom: 2em;
   background-color: #FFF;
   padding: 2em;
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12)
+  box-shadow: 0 1px 3px rgba(26,26,26,.1);
+  border-radius: 2px;
 }
 
 /* Blog post or page title */
@@ -323,7 +324,7 @@ tbody tr:nth-child(odd) th {
   display: block;
   margin-top: -.5rem;
   margin-bottom: 1rem;
-  color: #9a9a9a;
+  color: #8590a6;
 }
 
 /* Related posts */

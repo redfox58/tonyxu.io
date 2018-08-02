@@ -188,12 +188,12 @@ a.sidebar-nav-item:focus {
   background-color: transparent;
 }
 .sidebar a {
-  color: #333;
+  color: #444;
   display: inline-block;
   width: 100%;
   padding: 0rem 2rem;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 15px;
 }
 @media (min-width: 48em){
   .sidebar a {
@@ -210,7 +210,7 @@ li {
 }
 .menu-icon {
   color: #444;
-  margin-right: 0.4rem;
+  margin-right: 0.8rem;
   text-align: center;
   width: 0.8em;
   display: inline-block;
@@ -241,4 +241,10 @@ body {
 .lead {
   padding: 0.5rem 2rem;
   font-weight: 400;
+  color: #8590a6;
+}
+
+.read-more-icon {
+  font-size: 1.6rem;
+  vertical-align: middle;
 }
