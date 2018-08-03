@@ -23,14 +23,20 @@
   {{- end }}
 
   <script async>
-  fetch('https://api.tonyxu.io/view/my-blog?page=' + window.location.href)
+  fetch('//api.ipify.org?format=json')
+  .then(function(response) {
+    return response.json();
+  })
+  .then((ip) => {
+    return fetch(`/api/viewEvent?page=${window.location.href}&ip=${ip.ip}`)
+  })
   </script>
 
   <!-- CSS -->
-  <link type="text/css" rel="stylesheet" href="{{ .Site.BaseURL }}css/print.css" media="print">
-  <link type="text/css" rel="stylesheet" href="{{ .Site.BaseURL }}css/poole.css">
-  <link type="text/css" rel="stylesheet" href="{{ .Site.BaseURL }}css/syntax.css">
-  <link type="text/css" rel="stylesheet" href="{{ .Site.BaseURL }}css/hyde.css">
+  <link type="text/css" rel="stylesheet" href="/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="/css/hyde.css">
   {{ partial "head_fonts.html" . }}
 
   <!-- FAVICONS -->
