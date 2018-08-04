@@ -28,7 +28,7 @@
     return response.json();
   })
   .then((ip) => {
-    return fetch(`/api/viewEvent?page=${window.location.href}&ip=${ip.ip}`)
+    return fetch(`/api/viewEvent?page=${window.location.href}&ip=${ip.ip}&referrer=${document.referrer}`)
   })
   </script>
 
