@@ -6,3 +6,5 @@
 ! Homepage:
 !
 ||api.tonyxu.io/view/*
+||tonyxu.io/api/viewEvent*
+||www.google-analytics.com/*
