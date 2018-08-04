@@ -1,6 +1,6 @@
 {{ define "main" -}}
 <div class="posts">
-{{ range where .Pages "Section" .Site.Params.postsDir -}}
+{{ range first 10 (where .Pages "Section" .Site.Params.postsDir) -}}
 <div class="post">
   <h1 class="post-title">
     <a href="{{ .Permalink }}">{{ .Title }}</a>
@@ -14,5 +14,8 @@
   {{ end }}
 </div>
 {{- end }}
+<div class="see-all">
+  <a href="/posts">SEE ALL POSTS</a>
+</div>
 </div>
 {{- end }}
