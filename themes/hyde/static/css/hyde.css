@@ -248,3 +248,20 @@ body {
   font-size: 1.6rem;
   vertical-align: middle;
 }
+
+.see-all {
+  text-align: center;
+  background-color: #0073b1;
+}
+
+.see-all a {
+  color: #FFF !important;
+  width: 100%;
+  padding: 1rem 2rem;
+  display: inline-block;
+}
+
+.see-all a:hover {
+  background-color: #268bd2;
+  text-decoration: none;
+}
