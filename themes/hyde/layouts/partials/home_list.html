@@ -1,7 +1,5 @@
-{{ define "main" -}}
 <div class="posts">
-    <h1>{{ .Title }}</h1>
-    {{ range where .Pages "Section" .Site.Params.postsDir -}}
+    {{ range first 10 (where .Pages "Section" .Site.Params.postsDir) -}}
     <div class="post">
         <h1 class="post-title">
             <a href="{{ .Permalink }}">{{ .Title }}</a>
@@ -9,10 +7,12 @@
         <span class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
         {{ .Summary }} {{ if .Truncated }}
         <div class="read-more-link">
-            <a href="{{ .RelPermalink }}">Read more »</a>
+            <a href="{{ .RelPermalink }}">{{i18n "read-more"}} »</a>
         </div>
         {{ end }}
     </div>
     {{- end }}
+    <div class="see-all">
+        <a href={{"/posts" | absLangURL}}>{{i18n "see-all"}}</a>
+    </div>
 </div>
-{{- end }}

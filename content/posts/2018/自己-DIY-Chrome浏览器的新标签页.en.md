@@ -4,6 +4,8 @@ date: 2018-08-03T20:26:08-07:00
 draft: false
 categories: [技术]
 tags: [Chrome,定制]
+slug: "diy-your-chrome-new-tab-page"
+aliases: [/posts/自己-diy-chrome浏览器的新标签页/]
 ---
 
 有没有想过改造Chrome的默认新标签页? 如果有，我相信你肯定尝试过去Chrome应用商店下载一些拓展来定制新标签页。如果你觉得无论是默认，还是第三方提供的新标签页都无法满足你的需求，我建议你跟着我尝试自己制作一款Chrome拓展来定制你的新标签页。

@@ -6,6 +6,56 @@ disqusShortname = "tonyxu-io"
 googleAnalytics     = "UA-577792-7"
 pygmentsCodeFences = true
 pygmentsStyle = "tango"
+defaultContentLanguage = "en"
+
+[blackfriday]
+   plainIDAnchors = true
+   hrefTargetBlank = true
+
+[languages]
+  [languages.en]
+    LanguageName = "English"
+
+  [languages.zh]
+    LanguageName = "简体中文"
+    title = "Tony Xu 徐毅涵"
+    weight = 2
+    [languages.zh.params]
+      description = "LinkedIn领英软件工程师，热爱编程和生活"
+    [[languages.zh.menu.main]]
+    name                   = "主页"
+    weight                 = 11
+    identifier             = "home"
+    url                    = "/"
+    pre                    = "<span class=\"icon-home menu-icon\"></span>"
+
+    [[languages.zh.menu.main]]
+    name                   = "文章"
+    weight                 = 21
+    identifier             = "posts"
+    url                    = "/posts"
+    pre                    = "<span class=\"icon-pencil menu-icon\"></span>"
+
+    [[languages.zh.menu.main]]
+    name                   = "项目"
+    weight                 = 31
+    identifier             = "projects"
+    url                    = "/projects"
+    pre                    = "<span class=\"icon-plug menu-icon\"></span>"
+
+    [[languages.zh.menu.main]]
+    name                   = "资料"
+    weight                 = 41
+    identifier             = "profile"
+    url                    = "https://linkedin.com/in/tonyxu93"
+    pre                    = "<span class=\"icon-linkedin-square menu-icon\"></span>"
+
+    [[languages.zh.menu.main]]
+    name                   = "邮箱"
+    weight                 = 51
+    identifier             = "email"
+    url                    = "mailto:me@tonyxu.io"
+    pre                    = "<span class=\"icon-paper-plane menu-icon\"></span>"
 
 [params]
   AuthorName = "Tony Xu"
@@ -18,41 +68,41 @@ pygmentsStyle = "tango"
   cover = "favicons/favicon-200.png"
 
 [permalinks]
-  posts = "/posts/:title/"
+  posts = "/posts/:year/:slug/"
 
 [menu]
 
     [[menu.main]]
     name                   = "Home"
-    weight                 = -160
+    weight                 = 10
     identifier             = "home"
     url                    = "/"
-    pre                    = '<span class="icon-home menu-icon"></span>'
+    pre                    = "<span class=\"icon-home menu-icon\"></span>"
 
     [[menu.main]]
     name                   = "Posts"
-    weight                 = -150
+    weight                 = 20
     identifier             = "posts"
     url                    = "/posts"
-    pre                    = '<span class="icon-pencil menu-icon"></span>'
+    pre                    = "<span class=\"icon-pencil menu-icon\"></span>"
 
     [[menu.main]]
     name                   = "Projects"
-    weight                 = -140
+    weight                 = 30
     identifier             = "projects"
     url                    = "/projects"
-    pre                    = '<span class="icon-plug menu-icon"></span>'
+    pre                    = "<span class=\"icon-plug menu-icon\"></span>"
 
     [[menu.main]]
-    name                   = 'Profile'
-    weight                 = -130
+    name                   = "Profile"
+    weight                 = 40
     identifier             = "profile"
     url                    = "https://linkedin.com/in/tonyxu93"
-    pre                    = '<span class="icon-linkedin-square menu-icon"></span>'
+    pre                    = "<span class=\"icon-linkedin-square menu-icon\"></span>"
 
     [[menu.main]]
-    name                   = 'Email'
-    weight                 = -120
+    name                   = "Email"
+    weight                 = 50
     identifier             = "email"
     url                    = "mailto:me@tonyxu.io"
-    pre                    = '<span class="icon-paper-plane menu-icon"></span>'
+    pre                    = "<span class=\"icon-paper-plane menu-icon\"></span>"

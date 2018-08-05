@@ -1,26 +1,26 @@
 {{ define "main" -}}
 
 <div class="breadcrumbs">
-    <a href="#products"><h3 class="breadcrumb">PRODUCTS</h3></a>
+    <a href="#products"><h3 class="breadcrumb">{{i18n "products"}}</h3></a>
     
     &middot;
        
-    <a href="#open-source"><h3 class="breadcrumb">OPEN SOURCE</h3></a>
+    <a href="#open-source"><h3 class="breadcrumb">{{i18n "open-source"}}</h3></a>
     
     &middot;
        
-    <a href="#gists"><h3 class="breadcrumb">GISTS</h3></a>
+    <a href="#gists"><h3 class="breadcrumb">{{i18n "gists"}}</h3></a>
 </div>
 
 <div  id="products" class="post">
-    <h2>Products</h2>
+    <h2>{{i18n "products"}}</h2>
     {{ range .Site.Data.project }}
             <h3><a href="{{ .url }}" target="_blank">{{ .name }}</a></h3>
             <p>{{ .description}}</p>
     {{ end }}
 </div>
 <div id="open-source" class="post">
-    <h2>Open Source</h2>
+    <h2>{{i18n "open-source"}}</h2>
     {{ $urlPre := "https://api.github.com" }}
     {{ $repos := getJSON $urlPre "/users/tonyxu-io/repos?type=owner&sort=updated" }}
     {{ range $repos }}
@@ -32,7 +32,7 @@
     {{ end }}
 </div>
 <div id="gists" class="post">
-    <h2 >Gists</h2>
+    <h2 >{{i18n "gists"}}</h2>
     {{ $urlPre := "https://api.github.com" }}
     {{ $gists := getJSON $urlPre "/users/tonyxu-io/gists" }}
     {{ range $gists }}

@@ -4,6 +4,8 @@ date: 2018-07-24T22:27:21-07:00
 draft: false
 categories: [技术]
 tags: [OAuth2.0,PKCE]
+slug: "oauth2-pkce-flow"
+aliases: [/zh/posts/为客户端而生的oauth2.0协议之pkce授权码模式/]
 ---
 
 如果你正在做一款原生客户端软件，同时你又需要用到OAuth2.0登陆，那么使用OAuth2.0带PKCE支持的授权码模式是你的最佳选择。下面我就和大家分享一下带PKCE的授权码模式为什么最适合原生客户端。

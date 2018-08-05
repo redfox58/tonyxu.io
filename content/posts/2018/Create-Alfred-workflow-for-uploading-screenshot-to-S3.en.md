@@ -5,6 +5,7 @@ draft: false
 categories: [Technical]
 tags: [Alfred,S3]
 toc: true
+slug: "create-alfred-workflow-for-uploading-screenshot-to-s3"
 ---
 
 As Markdown markup language gets more and more popular, most people have a need to quickly generate a public url for screenshot/image in clipboard. Today I created an Alfred workflow that helps you upload images/screenshot in clipboard.

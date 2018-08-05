@@ -4,6 +4,8 @@ date: 2018-08-01T20:35:47-07:00
 draft: false
 categories: [技术]
 tags: [HTTP, Header]
+slug: "http-deprecate-x-prefix"
+aliases: [/posts/http头字段为何要弃用x前缀]
 ---
 
 2012年6月，互联网工程任务小组(IETF)发布了新的征求意见稿([RFC-6648](https://tools.ietf.org/html/rfc6648))，要求自定义HTTP头字段应放弃使用`X-`前缀。由于我所在的LinkedIn也在使用这类自定义头字段，因此特意阅读了这份征求意见稿，给大家解释以下为什么我们需要弃用它。

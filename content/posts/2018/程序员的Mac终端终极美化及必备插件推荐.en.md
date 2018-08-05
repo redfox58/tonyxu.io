@@ -4,6 +4,8 @@ date: 2018-07-26T15:04:14-07:00
 draft: false
 categories: [技术]
 tags: [terminal,oh-my-zsh,shell]
+slug: "ultimate-way-to-beautify-mac-terminal-and-recommendations-for-plugins"
+aliases: [/posts/程序员的mac终端oh-my-zsh终极美化及必备插件推荐/]
 ---
 
 如果你使用Mac进行开发，那么Terminal.app应该是你使用非常频繁的app了。初体验Terminal时你可能觉得单调乏味，阅读密密麻麻的内容也很费劲。但是如果你跟着我一起配置它，就会发现你平时觉得繁琐，不方便的地方其实都可以被完美解决,并且颜值也高了许多。

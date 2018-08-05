@@ -1,7 +1,15 @@
 <div class="sidebar">
+  <div class="nav-global">
+    <span class="icon-globe"></span>
+    <div class="global-options">
+        {{ range $.Site.Home.AllTranslations }}
+        <a href="{{ .URL }}">{{ .Language.LanguageName }}</a>
+        {{ end }}
+      </div>
+  </div>
   <div class="sidebar-sticky">
     <div class="sidebar-about">
-      <a href="{{ .Site.BaseURL }}"><h1>{{ .Site.Title }}</h1></a>
+      <a href={{"/" | absLangURL}}><h1>{{ .Site.Title }}</h1></a>
       <p class="lead">
       {{ with .Site.Params.description }} {{.}} {{end}}
       </p>
@@ -9,7 +17,7 @@
 
     <ul class="sidebar-nav">
       {{ range .Site.Menus.main -}}
-        <li><a href="{{.URL}}">{{ .Pre }} {{ .Name }} </a></li>
+        <li><a href="{{.URL | absLangURL}}">{{ .Pre }} {{ .Name }} </a></li>
       {{- end }}
     </ul>
 
