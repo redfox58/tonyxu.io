@@ -1,7 +1,9 @@
 {{ define "main" -}}
 <div class="post">
   <h1>{{ .Title }}</h1>
-  {{ if eq .Section "posts"}} <span class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</span> {{ end }}
+  {{ if eq .Section "posts"}}
+    {{ partial "date" . }}
+  {{ end }}
   {{ if .Params.toc }}
   <aside>
     <header>
