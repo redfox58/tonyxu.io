@@ -1,5 +1,5 @@
 ---
-title: "Create Alfred workflow for uploading screenshot to S3"
+title: "创建Alfred Workflow上传截图到S3"
 date: 2018-07-08T18:19:24-07:00
 draft: false
 categories: [Technical]
@@ -11,43 +11,45 @@ aliases: [/posts/create-alfred-workflow-for-uploading-screenshot-to-s3]
 
 As Markdown markup language gets more and more popular, most people have a need to quickly generate a public url for screenshot/image in clipboard. Today I created an Alfred workflow that helps you upload images/screenshot in clipboard.
 
+Markdown语言正在变得越来越流行，大多数人在使用Markdown语言的时候都会需要粘贴图片，然而Markdown粘贴图片必须要用链接。今天我想向大家介绍如何创建一个Alfred workflow来自动上传你剪切板里的图片到S3并获取公开链接。
+
 <!--more-->
 
-## Demo
+## 演示
 
 ![](https://s3-us-west-1.amazonaws.com/tonyxu-img/2018-07-08+21_33_30.gif)
 
-## Overview
+## 主要步骤
 
-1. Use `pngpaste` to get image data from clipboard
-2. Write to a image file in `/tmp` folder
-3. Use `boto3` to upload image file to AWS S3
+1. 使用 `pngpaste` 获取剪切板图片
+2. 把图片写到临时文件夹 `/tmp`
+3. 使用`boto3`上传图片到AWS S3
 
-## Implementation
+## 实现
 
-Now we have the idea to achieve the goal, let's do it in Alfred workflow and python script.
+现在我们知道主要步骤，接下来就是编写Alfred Workflow的Python脚本实现了。
 
-### Create Alfred workflow
+### 创建 Alfred workflow
 
-Create `Blank Workflow` and give it a name
+创建 `Blank Workflow` 并命名
 
-Right click in background and select `Inputs -> Keyword`
+右键空白区域并选择`Inputs -> Keyword`
 
 ![](https://s3-us-west-1.amazonaws.com/tonyxu-img/2018_07_08_20_56_57.png)
 
-Give it a keyword which you will be typing to trigger the workflow
+指定触发workflow的关键词
 
 ![](https://s3-us-west-1.amazonaws.com/tonyxu-img/2018_07_08_20_50_57.png)
 
-Right click in background and select `Actions -> Run Script`
+右键空白区域并选择`Actions -> Run Script`
 
-Let's make it use Python to run a script
+让我们让它执行Python脚本
 
 ![](https://s3-us-west-1.amazonaws.com/tonyxu-img/2018_07_08_20_58_41.png)
 
-Click on the icon on the left of `Cancel` button to open workflow folder
+点击`Cancel`左侧的按钮来打开workflow文件夹
 
-Create a script file (Make sure the file name is the same as the `Run Script` action uses) and edit like below
+创建脚本文件(确保文件名和你在上面步骤制定的脚本名一致, 并按照如下所述编写脚本
 
 ```python
 #!/usr/bin/python
@@ -91,30 +93,30 @@ if __name__ == '__main__':
     sys.exit(wf.run(main))
 ```
 
-This script will return the image public url and let's copy it to clipboard and push a notification.
+这个脚本会返回图片的公开链接，我们可以通过系统推送通知用户链接已经生成成功
 
-Right click on the background and select `Outputs –> Copy to Clipboard`
+右键空白区域，并选择 `Outputs –> Copy to Clipboard`
 
 ![](https://s3-us-west-1.amazonaws.com/tonyxu-img/2018_07_08_21_06_32.png)
 
-Right click on the background and select `Outputs –> Post Notification`
+右键空白区域，并选择 `Outputs –> Post Notification`
 
 ![](https://s3-us-west-1.amazonaws.com/tonyxu-img/2018_07_08_21_06_54.png)
 
-Now let's connect those boxes like below:
+接下来，像我一样连接这些盒子:
 
 ![](https://s3-us-west-1.amazonaws.com/tonyxu-img/2018_07_08_21_07_52.png)
 
-### Include libraries
+### 添加第三方库
 
-In the scripts, we used below libraries and need to be included in the workflow to make sure they can be run without issue
+在脚本中，我们用到了如下第三方库，需要确保workflow可以访问
 
 - [Workflow](http://alfredworkflow.readthedocs.io/en/latest/installation.html)
 - [awscli](https://docs.aws.amazon.com/cli/latest/userguide/installing.html)
 - [boto3](https://boto3.readthedocs.io/en/latest/guide/quickstart.html#installation)
 - [pngpaste](https://github.com/jcsalterego/pngpaste)
 
-Install above libraries like below:
+安装第三方库:
 
 ```
 pip install --target=/path/to/workflow Alfred-Workflow
@@ -123,43 +125,43 @@ pip install --target=/path/to/workflow/lib boto3
 brew install pngpaste
 ```
 
-Please note that pngpaste is a command line tool and you should copy the binary file to `/path/to/workflow`.
+请注意pngpaste命令行工具的二进制文件需要被复制到`/path/to/workflow`.
 
-### Add environment variables
+### 添加环境变量
 
-In the script, we used below variables that we want to make it configurable instead of hard coded:
+在脚本中，我们用到了这些环境变量:
 
 - access_key: S3 access key
 
 - secret_key: S3 access secret
 
-- bucket_name: S3 bucket name. e.g. `my-bucket-name`
+- bucket_name: S3 bucket 名. 例如 `my-bucket-name`
 
-- bucket_uri: S3 bucket URI without trailing slash. e.g. `https://s3-us-west-1.amazonaws.com/my-bucket-name`
+- bucket_uri: S3 bucket URI 不含结尾斜杠. 例如 `https://s3-us-west-1.amazonaws.com/my-bucket-name`
 
-Add and config above environment variables into workflow environment variables settings like below
+添加并配置到环境变量设置:
 
 ![](https://s3-us-west-1.amazonaws.com/tonyxu-img/2018_07_10_20_55_19.png)
 
-Follow instructions here to create access key and secret if you don't have it already:
+如果你还没有access key 和 secret, 跟随教程创建他们:
 
 https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey
 
-Make sure the user can read/write to S3 bucket.
+确保用户可以读写S3 bucket.
 
-## Complete
+## 完成
 
-Congratulations You made it! Give it a try!
+恭喜，你已经完成。现在可以尝试了。
 
-## Follow-up
+## 拓展
 
-Now you may think of adding support for the workflow to be able to upload any image from local. As you are getting familiar with Alfred workflow development, feel free to give it a try!
+你可能会想添加支持上传任意本地图片到S3, 推荐你自己尝试实现它。
 
-Download in Github:
+下载参考源码:
 
 [tonyxu-io/Alfred-Workflow-Upload-S3](https://github.com/tonyxu-io/Alfred-Workflow-Upload-S3)
 
-References:
+参考资料:
 
 - [使用 Alfred workflow 上传截图到七牛并自动生成外链URL](http://xfyuan.github.io/2017/03/use-alfred-to-auto-upload-screenshot-to-qiniu-and-generate-the-markdown-image-url/)
 - [Alfred Workflow —— 上传剪贴板的图片到七牛](http://labmain.com/2016/04/06/A_Alfred_Workflow_upload_clipboard%27image_to_qiniu/)

@@ -1,5 +1,5 @@
 ---
-title: "程序员的Mac终端(oh-my-zsh)终极美化及必备插件推荐"
+title: "Ultimate way to beautify Mac terminal (oh-my-zsh) and plugin recommendations"
 date: 2018-07-26T15:04:14-07:00
 draft: false
 categories: [技术]
@@ -8,67 +8,65 @@ slug: "ultimate-way-to-beautify-mac-terminal-and-recommendations-for-plugins"
 aliases: [/posts/程序员的mac终端oh-my-zsh终极美化及必备插件推荐/]
 ---
 
-如果你使用Mac进行开发，那么Terminal.app应该是你使用非常频繁的app了。初体验Terminal时你可能觉得单调乏味，阅读密密麻麻的内容也很费劲。但是如果你跟着我一起配置它，就会发现你平时觉得繁琐，不方便的地方其实都可以被完美解决,并且颜值也高了许多。
+If you are using Mac as development machine, `Terminal.app` must be one of the most used apps. Terminal might be not fancy to begin with, but you can totally make it more elegant and fancy if you follow with me.
 
 <!--more-->
 
-## 我们准备这样改造Terminal
+## We will be doing these for our Terminal
 
-1. 修改Terminal的Profile: 让Terminal配色更美观
-2. 安装oh-my-zsh: 将Terminal的shell从bash改成更强大的zsh
-3. 安装oh-my-zsh主题: 美化oh-my-zsh
-4. 安装oh-my-zsh必备插件: 让Terminal具有更高级和便利的功能
+1. Install Terminal Profile: Customize Terminal Color
+2. Install `oh-my-zsh`: Use powerful `zsh` for Terminal, instead of `shell`
+3. Install `oh-my-zsh` themes: Beautify `oh-my-zsh`
+4. Instal `oh-my-zsh` must-have plugins: Get more advanced and convenient features for Terminal
 
-## 准备工作
+## Preparation
 
-建议先安装homebrew, 方便后续工具安装:
+Recommend to install `homebrew` first:
 
 ```shell
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-## 修改Terminal Profile 主题设置
+## Install Terminal Profile
 
-1. 在GitHub的[osx-terminal-theme](https://github.com/lysyi3m/osx-terminal-themes)项目主页里寻找你喜欢的主题
-2. 在schemes目录里找到对应的主题文件并双击安装到Terminal, 设置为默认
+1. Go to [osx-terminal-theme](https://github.com/lysyi3m/osx-terminal-themes) and download your favorite theme in `scheme` folder
+2. Double click the theme file to install and set as default
 
+## Install oh-my-zsh
 
-
-## 安装oh-my-zsh
-
-先安装zsh:
+Install `zsh`:
 
 ```shell
 brew install zsh
 ```
 
-再安装oh-my-zsh:
+Then install `oh-my-zsh`:
 
 ```shell
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
-## 安装oh-my-zsh主题
+## Install oh-my-zsh theme
 
-### 内置主题列表
+### Built-in themes
 
-oh-my-zsh提供一批内置主题，可以直接设置使用
+`oh-my-zsh` provides some built-in themes which you can immediately use:
 
-1. 在内置主题列表寻找你你喜欢的主题: https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-2. 在`~/.zshrc`配置文件里设置`ZSH_THEME`为你的主题名称
-3. 激活设置`source ~/.zshrc`
+1. Find your favorite theme in built-in themes list: https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+2. Set `ZSH_THEME` to your favorite theme name in `~/.zshrc`
+3. Activate setting by `source ~/.zshrc`
 
-### 第三方主题列表
+### Third-party themes
 
-许多第三方也开发了供oh-my-zsh使用的主题，可以去第三方主题列表查看和安装:
+There are more third-party themes developped for `oh-my-zsh`, find and install them here:
 
 https://github.com/robbyrussell/oh-my-zsh/wiki/External-themes
 
-## 安装oh-my-zsh必备插件
+## Install oh-my-zsh must-have plugins
 
-oh-my-zsh有非常丰富的插件可供使用，下面列举一些必备插件，可以大幅提高生产力。
+`oh-my-zsh` has many powerful plugins, below are some must-have plugins that will boost your productivity.
 
-示例如下:
+Sample config:
 
 ```sh
 # ~/.zshrc:
@@ -80,23 +78,23 @@ plugins=(
 
 ### git
 
-自带插件，可以使用缩写命令, 比如 `gaa` -> `git add --all`, 通过`alias | grep git`查看所有支持缩写命令
+Built-in，use abbreviations for git commands, e.g. `gaa` -> `git add --all`, use `alias | grep git` to get all abbreviations commands
 
-激活: 添加到`~/.zshrc`的plugins列表
+Activate: Add to `~/.zshrc` plugins section
 
 ### extract
 
-自带插件，不用再使用复杂的`tar`来解压压缩包了
+Built-in, no need to use complicated `tar` to extract zip files
 
-激活: 添加到`~/.zshrc`的plugins列表
+Activate: Add to `~/.zshrc` plugins section
 
 ### autojump
 
-使用`j`命令直接快速进入某个目录, 比如 `j Downloads` -> `cd ~/Downloads`
+Use `j` to quickly jump to a folder, e.g. `j Downloads` -> `cd ~/Downloads`
 
-安装: `brew install autojump`
+Install: `brew install autojump`
 
-安装完按照提示在`~/.zshrc`配置文件添加:
+Follow instructions and add below line in `~/.zshrc`:
 
 ```sh
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
@@ -104,27 +102,27 @@ plugins=(
 
 ### zsh-syntax-highlighting
 
-命令高亮插件，命令不再只是同一个颜色了
+Commands syntax highlight plugin
 
-安装: `brew install zsh-syntax-highlighting`
+Install: `brew install zsh-syntax-highlighting`
 
-添加 `zsh-syntax-highlighting`到`~/.zshtc`plugins列表。
+Add `zsh-syntax-highlighting` to `~/.zshtc` plugins section
 
-其他安装方法参考: https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
+Other install guides: [https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
 
 ### zsh-autosuggestions
 
-输入时按右方向键→自动补全命令
+Auto complete commands by typing →
 
-安装: `brew install zsh-autosuggestions`
+Install: `brew install zsh-autosuggestions`
 
-安装完按照提示在`~/.zshrc`配置文件添加:
+Follow instructions and add below line in `~/.zshrc`:
 
 ```shell
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 ```
 
-## 我自己的`~/.zshrc`配置
+## My own ~/.zshrc config
 
 ```sh
 # Path to your oh-my-zsh installation.

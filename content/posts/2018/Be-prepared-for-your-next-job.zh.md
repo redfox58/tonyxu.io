@@ -1,5 +1,5 @@
 ---
-title: "Be prepared for your next job"
+title: "准备好你的下一份工作"
 date: 2018-07-21T16:13:22-07:00
 draft: false
 categories: [Career]
@@ -8,60 +8,58 @@ slug: "be-prepared-for-your-next-job"
 aliases: [/posts/be-prepared-for-your-next-job/]
 ---
 
-Thanks for reading this blog. In this blog I want to share my personal experience on changing my job and some of my thinking that might be helpful for you. I'll keep this blog in high level, and will not talk about job seeking skills, etc.
+> 这篇分享是我在DBL聚会和大家分享的内容，贴在这里以供大家阅读。
+
+我想和大家在这篇文章里分享一下我最近跳槽的经历以及我总结的为什么我选择并成功跳槽的原因。我的重点会放在比较抽象的思考，而不是具体的技巧。
 
 <!--more-->
 
-I will talk about:
+我想分享的话题:
 
-- ✅ My first time changing job
-- ✅ Have a goal in mind
-- ✅ Keep moving
-- ✅ Career evolving
+- ✅ 我第一次跳槽
+- ✅ 心中永远有一个目标
+- ✅ 不要一直留在原地
+- ✅ 职业发展
 
-I will not talk about:
+不会在文章讨论的话题:
 
-- ❌ How to write good resume
-- ❌ How to prepare technical interview
-- ❌ How to get referral
-- ❌ How to use LinkedIn efficiently
+- ❌ 如何写简历
+- ❌ 如何准备技术面试
+- ❌ 如何获取内推
+- ❌ 使用LinkedIn的技巧
 
-## Part 1: My experience changing job
+## 第一部分: 我的第一次跳槽
 
-I joined a start-up, Moxtra, as a software engineer after graduation from University of Missouri. Some of you might know I joined LinkedIn last month. When I look back and think about how I managed to do that, I summarize those into two key concepts that I had in mind:
+我在从密苏里毕业后，以软件工程师的工作加入了一家创业公司Moxtra。你们其中一部分可能知道我在几个月前跳槽去了LinkedIn。当我回想我是为何选择跳槽，又是如何成功跳槽的时候，我总结为以下两点:
 
-1. Always have a goal in mind
-2. Keep moving
+1. 心中永远有一个目标
+2. 不要一直留在原地
 
-## Part 2: Always have a goal in mind
+## 第二部分: 心中永远有一个目标
 
-It's said that when you clearly know what you want, you will be more likely to get good result. My goal is really simple, I want to build great product and work in great company. It's deep in my mind ever since my childhood. This goal drives me all the way to the United States, to the silicon valley.
+有句话说得好，当你清楚的知道你想要什么的时候，你就更可能会得到好的结果。我的目标非常简单，就是在一家伟大的公司做一款伟大的产品。这个目标从我小时候就根植在我心里。这个目标也是一直驱使我一路从中国，到美国，再到硅谷的动力。
 
-To be honest, working in companies like Facebook/Google/LinkedIn has always been my goal. With that in mind, I become more proactive toward work subjects and gradually acquired skills that later proves to be critical in helping me get a job from those companies.
+老实说，在像Facebook、Google、LinkedIn这样的公司工作就是我的目标，有了这个目标，我在工作中变得更加主动，也慢慢的主动学会了一些之后对我跳槽帮助巨大的技术能力。
 
-## Part 3: Keep moving
+## 第三部分: 不要一直留在原地
 
-Changing job every couple years used to look bad on resume, but it's not anymore, so don't worry about it. Stick to a job for a long time means that you are totally dependent on that job, and never got a chance to develop the skill of getting a better job quickly. In the tech sector, very few people last in a job more than three or five years. You have to be prepared, mentally, financially, and skill wise to keep changing jobs every couple years.
+每隔几年换一次工作曾经是在简历上不光彩的事情，但是这已经是过去式了，完全不用担心这个。保持一个工作不变意味着你会越来越依赖于这份工作，而失去了快速跳槽到更好工作的能力。要知道在科技行业，只有少数人会在一个岗位上待超过三至五年，你必须在精神上，财务上，以及技能上准备好每几年换一次工作的能力。
 
-There are also other reasons you should move forward, when you feel you are repeating yourself everyday, or the work you are doing doesn't make you feel confident in finding next job. Most important reason, you can easily get 30% to 50% salary promotion after you change job. If you want to make more money, you should think about it.
+当然，还有其他原因你必须向前看，当你觉得你每天在重复劳动，或者你做的事情对你下一份工作毫无帮助的时候，你也许应该考虑跳槽。另外，一个最重要的因素，跳槽会大概率让你的工资涨30%到50%，甚至有些人可以翻倍。如果你对赚更多钱有更高追求，你一定已经在考虑了。
 
-## Part 4: Career evolving
+## 第四部分: 职业发展
 
-There is one more topic I want to talk about, which is career evolving. People have different goal and interest in different phases of life. You might want to try different jobs in your entire life, most importantly, you simply can't do the same job in your whole life. It's been a hot topic recently among tech companies that people is worrying about their job security when we turn 40/50. I'm worrying about it as well, wondering if I'm going be a software engineer forever and how can I compete with younger people in their 20s or 30s. This is not a new topic though but people do have lots of anxiety. Personally I have no answer yet for those questions, but I do found some possible options that I might be considering for the next step:
+还有一个话题我想和大家分享，就是职业发展。一个人一生当中可能会对不同的事情感兴趣，因此你在人生不同的阶段会想从事不同职业，并且一个人基本上不可能一辈子从事一份职业从来不改。有一个话题在科技行业非常火热，就是人们非常担心在他们四五十岁的时候的职业安全问题。我也一样会对这个问题有所担心，如果打算一直从事软件工程师，当我四五十岁的时候要如何跟二三十岁的同事竞争。这虽然是老生常谈，但确实非常多人对此很忧虑。我个人暂时对这个问题没有答案，但我发现以下是几个人们可以考虑的路径:
 
-- Being a senior/staff software engineer
-  - Keep exploring new technologies
-  - Become expert in existing technologies
-- Being an engineering manager
-  - Become expert in technology
-  - Pay attention to people management skill (hiring, leading, respectful)
-  - Process, strategy, communication
-- Being a project manager
-  - Demonstrate management skill in project, business, product, users, people
-  - The more you can manage, the better chance you will land in project manager
+- 成为一个资深软件工程师
+  - 持续学习新技术
+  - 变成特定技术的专家
+- 成为技术经理
+  - 编程特定技术的专家
+  - 关注团队管理(包括招聘、领导力、团队精神)
+  - 关注流程、战略、沟通
+- 成为项目经理
+  - 展现在项目、商务、产品、用户、团队方面的管理能力
+  - 你能展现的管理才能越多，你越有可能胜任项目经理
 
-If I'm lucky enough to get over above challenges, I'll probably be looking at director positions or starting my own business. Who knows? So, think about how your career might evolve and prepare for that.
-
-
-
-▶️ [Presentation Slides](/slides/be-prepared-for-your-next-job/)
+▶️ [观看幻灯片]](/slides/be-prepared-for-your-next-job/)

@@ -1,5 +1,5 @@
 ---
-title: "用GitLab-CI免费运行定时任务"
+title: "Use GitLab-CI to run free scheduled jobs"
 date: 2018-07-23T13:30:58-07:00
 draft: false
 categories: [技术]

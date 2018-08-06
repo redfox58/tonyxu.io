@@ -8,6 +8,8 @@ slug: "be-prepared-for-your-next-job"
 aliases: [/posts/be-prepared-for-your-next-job/]
 ---
 
+> This is a presentation shared in DBL retreat. I posted content here for everyone to take a look.
+
 Thanks for reading this blog. In this blog I want to share my personal experience on changing my job and some of my thinking that might be helpful for you. I'll keep this blog in high level, and will not talk about job seeking skills, etc.
 
 <!--more-->

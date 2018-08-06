@@ -1,8 +1,8 @@
 ---
-title: "为客户端而生的OAuth2.0协议之PKCE授权码模式"
+title: "The OAuth2 flow for native apps: PKCE"
 date: 2018-07-24T22:27:21-07:00
 draft: false
-categories: [技术]
+categories: [technology]
 tags: [OAuth2.0,PKCE]
 slug: "oauth2-pkce-flow"
 aliases: [/posts/为客户端而生的oauth2.0协议之pkce授权码模式/]

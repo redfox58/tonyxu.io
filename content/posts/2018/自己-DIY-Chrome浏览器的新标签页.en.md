@@ -1,5 +1,5 @@
 ---
-title: "自己 DIY Chrome浏览器的新标签页"
+title: "DIY Chrome New Tab Page"
 date: 2018-08-03T20:26:08-07:00
 draft: false
 categories: [技术]
@@ -8,11 +8,11 @@ slug: "diy-your-chrome-new-tab-page"
 aliases: [/posts/自己-diy-chrome浏览器的新标签页/]
 ---
 
-有没有想过改造Chrome的默认新标签页? 如果有，我相信你肯定尝试过去Chrome应用商店下载一些拓展来定制新标签页。如果你觉得无论是默认，还是第三方提供的新标签页都无法满足你的需求，我建议你跟着我尝试自己制作一款Chrome拓展来定制你的新标签页。
+Have you thought about customizing Chrome new tab page? If so, you must have tried the extensions in Chrome web store to customize your new tab page. If you are not satisfied with any of them, you have the option to build your own new tab page that meets all your expectations.
 
 <!--more-->
 
-## 拓展插件目录结构
+## Chrome extension file structure
 
 ```
 └── chrome-extention //你的Chrome拓展项目目录
@@ -20,9 +20,9 @@ aliases: [/posts/自己-diy-chrome浏览器的新标签页/]
     └── newTab.html //Chrome拓展新标签页页面文件
 ```
 
-## 创建Chrome拓展描述文件
+## Create Chrome extension manifest
 
-创建一个文件夹，作为Chrome拓展的项目文件夹。在文件夹内创建`manifest.json`描述文件如下:
+Create a folder as the project folder for Chrome extension. Create `manifest.json` as below in the folder:
 
 ```json
 {
@@ -37,13 +37,13 @@ aliases: [/posts/自己-diy-chrome浏览器的新标签页/]
 }
 ```
 
-## 创建自定义新标签页面
+## Create new tab page
 
-在Chrome拓展项目文件夹内创建`newTab.html`文件，这个文件就是你即将替换为新标签页的网页文件。如果你对HTML/CSS并不熟悉，可以仿照我的写法，把新标签页制作成如下所示的网址导航。
+In the project folder, create `newTab.html` file as your new new tab page. If you are not familiar with HTML/CSS, you can follow me and build the new tab page like below:
 
 ![20180803-1](/images/20180803-1.png)
 
-`newTab.html`参考源码:
+`newTab.html` source code:
 
 ```html
 <html>
@@ -129,25 +129,25 @@ aliases: [/posts/自己-diy-chrome浏览器的新标签页/]
 </html>
 ```
 
-我的源码可以直接使用，但是记得模仿我的写法把链接的文本和网址替换成你的常用网址。
+You can just use my code, but remember to replace my links with your favorite links.
 
-## 在Chrome浏览器加载你的拓展
+## Load your extension in Chrome
 
-打开Chrome浏览器的拓展管理([chrome://extensions](chrome://extensions)), 开启开发者模式(Developer mode), 加载未打包拓展(LOAD UNPACKED)
+Open Chrome extension management([chrome://extensions](chrome://extensions)), Enable `Developer mode`, load your extension in `LOAD UNPACKED`
 
 ![load_extension](https://developer.chrome.com/static/images/get_started/load_extension.png)
 
-恭喜你，现在打开新标签页就会显示你自定义的页面了。
+Congratulations, you now have your own new tab page.
 
-## 拓展阅读
+## More
 
-如果你对HTML/CSS比较熟悉，可以探索添加更多内容，比如:
+If you are familiar with HTML/CSS and want to build more fancy stuff, such as:
 
-- 实时天气(如果你所在的城市天气多变): [https://weatherwidget.io](https://weatherwidget.io)
-- 全球时区(如果你需要和来自其他国家的人交流): [https://time.is/widgets](https://time.is/widgets)
-- Google日历(如果你希望随时查看日程): [https://support.google.com/calendar/answer/41207?hl=en](https://support.google.com/calendar/answer/41207?hl=en)
+- Read time weather (If your local weather changes often): [https://weatherwidget.io](https://weatherwidget.io)
+- World clock (If you need to have meeting with people from other timezone): [https://time.is/widgets](https://time.is/widgets)
+- Google Calendar (If you want to monitor your daily schedule): [https://support.google.com/calendar/answer/41207?hl=en](https://support.google.com/calendar/answer/41207?hl=en)
 
-## 参考资料
+## Reference
 
 - [Getting Started Tutorial](https://developer.chrome.com/extensions/getstarted)
 - [Override Pages](https://developer.chrome.com/extensions/override)

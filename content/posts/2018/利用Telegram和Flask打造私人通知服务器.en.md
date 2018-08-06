@@ -1,9 +1,9 @@
 ---
-title: "利用Telegram和Flask打造私人通知服务器"
+title: "Use Telegram and Flask to build personal notification server"
 date: 2018-07-12T20:55:38-07:00
 draft: false
-categories: [技术]
-tags: [Telegram,Flask,通知]
+categories: [technology]
+tags: [Telegram,Flask,notification]
 slug: "use-telegram-and-flask-to-build-notification-server"
 aliases: [/posts/利用telegram和flask打造私人通知服务器/]
 ---

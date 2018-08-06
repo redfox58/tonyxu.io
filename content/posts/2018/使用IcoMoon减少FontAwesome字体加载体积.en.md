@@ -1,9 +1,9 @@
 ---
-title: "使用IcoMoon减少98%的FontAwesome字体加载体积"
+title: "Use IcoMoon to reduce 98% FontAwesome load size"
 date: 2018-07-22T19:38:46-07:00
 draft: false
-categories: [技术]
-tags: [FontAwesome,优化]
+categories: [technology]
+tags: [FontAwesome,optimization]
 slug: "use-icomoon-to-reduce-fontawesome-size"
 aliases: [/posts/使用icomoon减少98的fontawesome字体加载体积/]
 ---

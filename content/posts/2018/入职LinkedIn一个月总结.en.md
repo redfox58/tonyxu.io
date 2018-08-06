@@ -1,9 +1,9 @@
 ---
-title: "入职LinkedIn一个月总结"
+title: "One month summary for joining LinkedIn"
 date: 2018-07-04T14:05:42-07:00
 draft: false
-categories: [职场]
-tags: [职场,社交]
+categories: [Career]
+tags: [Career,Social]
 slug: "join-linkedin-one-month-summary"
 aliases: [/posts/入职linkedin一个月总结/]
 ---

@@ -8,16 +8,16 @@ slug: "ultimate-way-to-beautify-mac-terminal-and-recommendations-for-plugins"
 aliases: [/posts/程序员的mac终端oh-my-zsh终极美化及必备插件推荐/]
 ---
 
-如果你使用Mac进行开发，那么Terminal.app应该是你使用非常频繁的app了。初体验Terminal时你可能觉得单调乏味，阅读密密麻麻的内容也很费劲。但是如果你跟着我一起配置它，就会发现你平时觉得繁琐，不方便的地方其实都可以被完美解决,并且颜值也高了许多。
+如果你使用Mac进行开发，那么`Terminal.app`应该是你使用非常频繁的app了。初体验Terminal时你可能觉得单调乏味，阅读密密麻麻的内容也很费劲。但是如果你跟着我一起配置它，就会发现你平时觉得繁琐，不方便的地方其实都可以被完美解决,并且颜值也高了许多。
 
 <!--more-->
 
 ## 我们准备这样改造Terminal
 
 1. 修改Terminal的Profile: 让Terminal配色更美观
-2. 安装oh-my-zsh: 将Terminal的shell从bash改成更强大的zsh
-3. 安装oh-my-zsh主题: 美化oh-my-zsh
-4. 安装oh-my-zsh必备插件: 让Terminal具有更高级和便利的功能
+2. 安装`oh-my-zsh`: 将Terminal的shell从bash改成更强大的zsh
+3. 安装`oh-my-zsh`主题: 美化`oh-my-zsh`
+4. 安装`oh-my-zsh`必备插件: 让Terminal具有更高级和便利的功能
 
 ## 准备工作
 
@@ -42,7 +42,7 @@ aliases: [/posts/程序员的mac终端oh-my-zsh终极美化及必备插件推荐
 brew install zsh
 ```
 
-再安装oh-my-zsh:
+再安装`oh-my-zsh`:
 
 ```shell
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -52,7 +52,7 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 
 ### 内置主题列表
 
-oh-my-zsh提供一批内置主题，可以直接设置使用
+`oh-my-zsh`提供一批内置主题，可以直接设置使用
 
 1. 在内置主题列表寻找你你喜欢的主题: https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 2. 在`~/.zshrc`配置文件里设置`ZSH_THEME`为你的主题名称
@@ -60,13 +60,13 @@ oh-my-zsh提供一批内置主题，可以直接设置使用
 
 ### 第三方主题列表
 
-许多第三方也开发了供oh-my-zsh使用的主题，可以去第三方主题列表查看和安装:
+许多第三方也开发了供`oh-my-zsh`使用的主题，可以去第三方主题列表查看和安装:
 
 https://github.com/robbyrussell/oh-my-zsh/wiki/External-themes
 
 ## 安装oh-my-zsh必备插件
 
-oh-my-zsh有非常丰富的插件可供使用，下面列举一些必备插件，可以大幅提高生产力。
+`oh-my-zsh`有非常丰富的插件可供使用，下面列举一些必备插件，可以大幅提高生产力。
 
 示例如下:
 
