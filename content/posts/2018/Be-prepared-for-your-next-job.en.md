@@ -5,6 +5,7 @@ draft: false
 categories: [Career]
 tags: [Career]
 slug: "be-prepared-for-your-next-job"
+aliases: [/posts/be-prepared-for-your-next-job/]
 ---
 
 Thanks for reading this blog. In this blog I want to share my personal experience on changing my job and some of my thinking that might be helpful for you. I'll keep this blog in high level, and will not talk about job seeking skills, etc.

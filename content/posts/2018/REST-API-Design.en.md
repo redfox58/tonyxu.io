@@ -4,7 +4,7 @@ date: 2018-07-03T22:00:00
 draft: false
 categories: [Career]
 tags: [interview,rest-api]
-aliases: [/posts/rest-api-设计面试/]
+aliases: [/posts/rest-api-设计面试/,/posts/rest-api-design/]
 slug: "rest-api-design-interview-preparation/"
 ---
 
