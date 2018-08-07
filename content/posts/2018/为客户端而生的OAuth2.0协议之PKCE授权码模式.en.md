@@ -8,39 +8,39 @@ slug: "oauth2-pkce-flow"
 aliases: [/posts/为客户端而生的oauth2.0协议之pkce授权码模式/]
 ---
 
-如果你正在做一款原生客户端软件，同时你又需要用到OAuth2.0登陆，那么使用OAuth2.0带PKCE支持的授权码模式是你的最佳选择。下面我就和大家分享一下带PKCE的授权码模式为什么最适合原生客户端。
+If you are building a native application, and you need OAuth 2.0, PKCE OAuth is your best choice. Here I will explain why.
 
 <!--more-->
 
-原生客户端软件一般是指没有后端服务器，所有代码都在用户本地设备上运行的软件（如Windows/Mac客户端或者iOS/Android客户端)，因此想让原生客户端软件安全存放密钥(client secret)是不现实的，很容易被破解。
+Native application is often used to refer to native application that has no back-end, and running totally in user's devices such as Windows, Mac, iOS, and Android, where securely storing secrets is impossible.
 
-那么原生客户端如果需要使用OAuth有哪些选择，这些选择又有哪些利弊呢？
+What are the OAuth 2 options for those native applications and what are the pros and cons for them?
 
-1. 简化模式(Implicit Flow): 简化模式的Access Token会直接被传递给Redirect URL。假如你的原生客户端是跳转其他浏览器进行登陆授权，那么你要么是绑定URL Scheme通过类似`app-name://?access_token=`的方法把access token传递给原生客户端，要么是在本地起个HTTP服务器通过`http://localhost:{port}/?access_token=`的方法监听Access Token。这两种方式都有被第三方恶意应用占用URL Scheme或者localhost端口截取Access Token的风险，且Access Token过期无法更新，不建议使用。
-2. 授权码模式(Authorization Code Flow): 授权码模式的Access Token不会被直接传递给Redirect URL，Redirect URL只会接收一个授权码，且授权码必须要和Client ID，Client Secret一同使用才能获取Access Token。然而原生客户端无法安全保存Client Secret，第三方恶意应用可以破解Client Secret，并按上述方法截取Authorization Code，同样不建议使用。有的认证提供商针对原生客户端允许不提供Client Secret获取Access Token，这其实并没有解决根本问题。
+1. Implicit Flow: Implicit flow will pass `Access Token` to Redirect URL。Assume your native application is redirecting to third-party browsers to perform OAuth2 authorization request, then your application either obtain the `Access Token` back by listening to `app-name://?access_token=` request or start a HTTP server to listen to `http://localhost:{port}/?access_token=` request. These two approaches both have the risk of `Access Token` being intercepted by malicious party who occupy URL Scheme or localhost port. Also access token can't be renewed after expiration. Thus implicit flow is not recommended.
+2. Authorization Code Flow: `Access Token` of this flow will not be passed to `Redirect URL` directly. `Redirect URL` will only receive an `authorization code`，which need to be used along with `Client ID`，and `Client Secret` to exchange for `Access Token`. Since native application can't securely store `Client Secret`, malicious party can decode it from native code/binary, and intercept `Authorization Code` to exchange for `Access Token`. Thus authorization code flow is not recommended either. Even some OAuth provider doesn't require `Client Secret`, `Access Token` can still be exchanged by malicious party.
 
-上面两种方法都被否决了，那么怎么才能让原生客户端安全使用OAuth2.0认证呢？答案就是使用带有PKCE支持的授权码模式。
+Now that two options are excluded, how can native application securely implement OAuth2? The answer is PKCE OAuth 2.0.
 
-PKCE, 全称Proof Key for Code Exchange, 微软翻译为保护授权代码授权。这其实是通过一种密码学手段确保恶意第三方即使截获Authorization Code或者其他密钥，也无法向认证服务器交换Access Token。
+PKCE (Proof Key for Code Exchange), is using cryptography method to prevent malicious party to be able to exchange access token with the information they can intercept.
 
-PKCE的流程大概如下:
+PKCE flow steps:
 
-1. 随机生成一串字符并作URL-Safe的Base64编码处理, 结果用作`code_verifier`
-2. 将这串字符通过SHA256哈希，并用URL-Safe的Base64编码处理，结果用作`code_challenge`
-3. 把`code_challenge`带上，跳转认证服务器，获取Authorization Code
-1. 把`code_verifier`带上，换取Access Token
+1. Generate random string and encode with URL-Safe Base64, and used as `code_verifier`
+2. Do SHA256 hash，and URL-Safe Base64，and used as `code_challenge`
+3. Redirect to OAuth provider with `code_challenge` and receive `Authorization Code`
+4. Exchange for `Access Token` with `code_verifier`
 
-由于中间人不能由`code_challenge`逆推`code_verifier`，因此即使中间人截获了`code_challenge`, Authorization Code等，也无法换取Access Token, 避免了安全问题。
+Since malicious party can't infer `code_verifier` by `code_challenge`, only the native application itself knows about the two value. In this way, even if malicious party intercepted `code_challenge`, it will not be able to exchange `Access Token`.
 
-## 在线生成 PKCE Code Verifier and Code Challenge
+## Generate PKCE Code Verifier and Code Challenge Online
 
 <iframe width="100%" height="120" src="https://cdn.rawgit.com/tonyxu-io/21eb57ab2a4aeb2a3ee10f77542abe64/raw/3ba2cb13423417b8bb2844e883d7b0ecb4358a5e/pkce-generator.html" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
-## 实现代码 (JavaScript)
+## Implementation (JavaScript)
 
 <script src="https://gist.github.com/tonyxu-io/21eb57ab2a4aeb2a3ee10f77542abe64.js"></script>
 
-## 支持PKCE的一些OAuth提供商
+## OAuth2 providers that support PKCE
 
 - [OAuth 2.0 for Mobile & Desktop Apps](https://developers.google.com/identity/protocols/OAuth2InstalledApp)
 - [Authorize access to Azure Active Directory web applications using the OAuth 2.0 code grant flow](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-protocols-oauth-code)

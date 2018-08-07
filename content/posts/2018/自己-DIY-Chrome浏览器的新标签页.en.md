@@ -15,9 +15,9 @@ Have you thought about customizing Chrome new tab page? If so, you must have tri
 ## Chrome extension file structure
 
 ```
-└── chrome-extention //你的Chrome拓展项目目录
-    ├── manifest.json //Chrome拓展描述文件
-    └── newTab.html //Chrome拓展新标签页页面文件
+└── chrome-extention //You project directory
+    ├── manifest.json //Chrome extension manifest
+    └── newTab.html //Chrome extension new tab html page
 ```
 
 ## Create Chrome extension manifest

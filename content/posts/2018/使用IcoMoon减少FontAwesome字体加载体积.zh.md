@@ -10,7 +10,7 @@ aliases: [/zh/posts/使用icomoon减少98的fontawesome字体加载体积/]
 
 [FontAwesome](https://fontawesome.com)是非常棒的图标字体库，引用了FontAwesome字体库后，仅需要通过HTML标签就可以把图标嵌入你的页面，非常之方便。然而默认使用方法虽然简单，但是会带来一个额外问题，就是加载的资源文件体积过大，如果你的页面本身就比较简单，字体库可能会让你的网页加载大小翻上好几倍。
 
-下面分享一下我通过使用[IcoMoon](https://icomoon.io)来让图标库文件瞬间减少大约98%的方法。
+下面分享一下我通过使用[IcoMoon](https://icomoon.io)来生成只含有我需要的图标的图标库文件，瞬间减少大约98%文件大小的方法。
 
 <!--more-->
 
@@ -38,7 +38,7 @@ aliases: [/zh/posts/使用icomoon减少98的fontawesome字体加载体积/]
 
 3. 把资源文件中的`style.css`文件和`fonts`文件夹复制到你的网站资源文件夹并在HTML页面的`<head></head>`区域引用`style.css`文件(之前引用的FontAwesome相关资源可以移除了)
 
-4. 鼠标移至图标上方，点击 "Get Code"
+4. 在示范页面，鼠标移至图标上方，点击 "Get Code"
    ![](https://s3-us-west-1.amazonaws.com/tonyxu-img/2018_07_22_21_11_31.png)
 
 5. 复制图标嵌入代码，粘贴到你需要展示的HTML位置

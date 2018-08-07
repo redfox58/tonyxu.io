@@ -21,8 +21,8 @@ REST API has become a very popular concept for designing back-end service interf
 ## Preparation
 
 - (**WHO**) Identify users
-    - Internal or External
-    - Roles (Developer, Admin, Customer, Support...)
+  - Internal or External
+  - Roles (Developer, Admin, Customer, Support...)
 - (**HOW**) Identify scenario, use cases
 - (**WHAT**) What functionality or resource will be exposed by API
 - **Clarify and confirm above and continue to API design**
@@ -46,56 +46,56 @@ Design how to expose the functionality and resource
 
 - End point
 
-    - https://`api_domain`/`version`/`collection`/
-    - https://`api_domain`/`version`/`collection`/`resource`/
-    - Use `Noun` rather than `Verbs`
-    - Can respond information such as API version list of top level collections, list of singleton resources
+  - https://`api_domain`/`version`/`collection`/
+  - https://`api_domain`/`version`/`collection`/`resource`/
+  - https://`api_domain`: Can respond information such as API version, list of top level collections, list of singleton resources
+  - Use `Noun` rather than `Verbs`
 
 - Method
 
-    - `GET`/`POST`/`PATCH`/`PUT`/`DELETE`
+  - `GET`/`POST`/`PATCH`/`PUT`/`DELETE`
 
 - Request Header
 
-    - `Authorization`: Bearer `access_token`
-    - `Accept`: To request for response in a specified content-type
-    - `Content-Type`: Content type for the request body
-    - ...
+  - `Authorization`: Bearer `access_token`
+  - `Accept`: To request for response in a specified content-type
+  - `Content-Type`: Content type for the request body
+  - ...
 
 - Request Parameters
 
-    - Filtering: `type`=news,photo&`days`=sunday
-    - Sorting: `sort`=create_time,-creator
-    - Paging: `offset`=100&`limit`=100
-    - Search/Query: `q`=AI
-    - Access Token: `access_token`=
+  - Filtering: `type`=news,photo&`days`=sunday
+  - Sorting: `sort`=create_time,-creator
+  - Paging: `offset`=100&`limit`=100
+  - Search/Query: `q`=AI
+  - Access Token: `access_token`=
 
 - Response Status Codes
 
-    - Standard HTTP status codes should be used
+  - Standard HTTP status codes should be used
 
 - Response Header
 
-    - `Content-Type`
-    - `ETag`
-    - ...
+  - `Content-Type`
+  - `ETag`
+  - ...
 
 - Response Body (in JSON format)
 
 - Error Handling
 
-## Examples
+## Example (Gmail)
 
 ### Resource Model Examples
 
 - API service: `gmail.googleapis.com`
 - A collection of users: `users/*`. Each user has the following resources.
-    - A collection of messages: `users/*/messages/*`.
-    - A collection of threads: `users/*/threads/*`.
-    - A collection of labels: `users/*/labels/*`.
-    - A collection of change history: `users/*/history/*`.
-    - A resource representing the user profile: `users/*/profile`.
-    - A resource representing user settings: `users/*/settings`.
+  - A collection of messages: `users/*/messages/*`.
+  - A collection of threads: `users/*/threads/*`.
+  - A collection of labels: `users/*/labels/*`.
+  - A collection of change history: `users/*/history/*`.
+  - A resource representing the user profile: `users/*/profile`.
+  - A resource representing user settings: `users/*/settings`.
 
 ### Response
 
@@ -103,23 +103,23 @@ Design how to expose the functionality and resource
 
 ```json
 {
-    "data": {
-        "id": "lwj2lk3jlk2",
-        "title": "Hello World"
-    }
+  "data": {
+    "id": "lwj2lk3jlk2",
+    "title": "Hello World"
+  }
 }
 ```
 
 ```json
 {
-    "pagination": {
-        "offset": 100,
-        "limit": 10,
-        "total": 3464
-    },
-    "data": {
-        //...
-    }
+  "pagination": {
+    "offset": 100,
+    "limit": 10,
+    "total": 3464
+  },
+  "data": {
+    //...
+  }
 }
 ```
 
@@ -127,52 +127,56 @@ Design how to expose the functionality and resource
 
 ```json
 {
-    "error": {
-         "code": "ERROR_CODE", // "INVALID-REQUEST"
-        "message": "longer error description",
-        "link": "An documentation url for error details and solutions"
-    }
+  "error": {
+    "code": "ERROR_CODE", // "INVALID-REQUEST"
+    "message": "longer error description",
+    "link": "An documentation url for error details and solutions"
+  }
 }
 ```
 
-Error Message Examples
+## Most-used HTTP Status Code
 
-| HTTP | RPC                   | Example Error Message                                        |
-| ---- | --------------------- | ------------------------------------------------------------ |
-| 400  | `INVALID_ARGUMENT`    | Request field x.y.z is xxx, expected one of [yyy, zzz].      |
-| 400  | `FAILED_PRECONDITION` | Resource xxx is a non-empty directory, so it cannot be deleted. |
-| 400  | `OUT_OF_RANGE`        | Parameter 'age' is out of range [0, 125].                    |
-| 401  | `UNAUTHENTICATED`     | Invalid authentication credentials.                          |
-| 403  | `PERMISSION_DENIED`   | Permission 'xxx' denied on file 'yyy'.                       |
-| 404  | `NOT_FOUND`           | Resource 'xxx' not found.                                    |
-| 409  | `ABORTED`             | Couldn’t acquire lock on resource ‘xxx’.                     |
-| 409  | `ALREADY_EXISTS`      | Resource 'xxx' already exists.                               |
-| 429  | `RESOURCE_EXHAUSTED`  | Quota limit 'xxx' exceeded.                                  |
-| 499  | `CANCELLED`           | Request cancelled by the client.                             |
-| 500  | `DATA_LOSS`           | See note.                                                    |
-| 500  | `UNKNOWN`             | See note.                                                    |
-| 500  | `INTERNAL`            | See note.                                                    |
-| 501  | `NOT_IMPLEMENTED`     | Method 'xxx' not implemented.                                |
-| 503  | `UNAVAILABLE`         | See note.                                                    |
-| 504  | `DEADLINE_EXCEEDED`   | See note.                                                    |
+| Code | Name                     | Description                                                           |
+| ---- | ------------------------ | --------------------------------------------------------------------- |
+| 200  | `OK`                     | The request has succeeded                                             |
+| 201  | `Created`                | The request has succeeded and a new resource has been created         |
+| 204  | `No Content`             | There is no content to send for this request                          |
+| 301  | `Moved Permanently`      | the URI of the requested resource has been changed permanently        |
+| 302  | `Found`                  | The URI of requested resource has been changed temporarily            |
+| 400  | `Bad Request`            | The server could not understand the request due to invalid syntax     |
+| 401  | `Unauthorized`           | The client must authenticate itself to get the requested response     |
+| 403  | `Forbidden`              | The client does not have access rights to the content                 |
+| 404  | `Not Found`              | The server can not find requested resource                            |
+| 405  | `Method Not Allowed`     | The request method has been disabled and cannot be used               |
+| 408  | `Request Timeout`        | The server would like to shut down this unused connection             |
+| 409  | `Conflict`               | The request conflicts with the current state of the server            |
+| 411  | `Length Required`        | Content-Length header field is not defined and the server requires it |
+| 414  | `URI Too Long`           | The URI is longer than the server is willing to interpret             |
+| 415  | `Unsupported Media Type` | The media format of the requested data is not supported               |
+| 429  | `Too Many Requests`      | The user has sent too many requests ("rate limiting")                 |
+| 500  | `Internal Server Error`  | The server has encountered a situation it doesn't know how to handle  |
+| 502  | `Bad Gateway`            | The server got an invalid response                                    |
+| 503  | `Service Unavailable`    | The server is not ready to handle the request                         |
+| 504  | `Gateway Timeout`        | The server is acting as a gateway and cannot get a response in time   |
 
 ## What else
 
 - Security
-    - HTTPS: HTTPS everywhere
-    - Access Control
-        - Authentication
-        - JWT
-        - API Key
-    - User Role
-    - Input Validation
-        - Length, Range, Format, Type
-        - Define request size limit
-    - CORS
-        - Support CORS headers for all public facing APIs and allow origin of `*`
+  - HTTPS: HTTPS everywhere
+  - Access Control
+    - Authentication
+    - JWT
+    - API Key
+  - User Role
+  - Input Validation
+    - Length, Range, Format, Type
+    - Define request size limit
+  - CORS
+    - Support CORS headers for all public facing APIs and allow origin of `*`
 - Pagination
 - Monitoring
-    - `/heath`: `200 OK` or `503 Service Unavailable`, for load balancers and service discovery solutions
-    - `/version`: Version
-    - `/status`: `200 OK` or `500 Internal Server Error`
-    - `/metrics`: Uptime in seconds, average response time, number of 500 errors
+  - `/heath`: `200 OK` or `503 Service Unavailable`, for load balancers and service discovery solutions
+  - `/version`: Version
+  - `/status`: `200 OK` or `500 Internal Server Error`
+  - `/metrics`: Uptime in seconds, average response time, number of 500 errors

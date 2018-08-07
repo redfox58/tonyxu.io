@@ -30,7 +30,7 @@ PKCE的流程大概如下:
 3. 把`code_challenge`带上，跳转认证服务器，获取Authorization Code
 1. 把`code_verifier`带上，换取Access Token
 
-由于中间人不能由`code_challenge`逆推`code_verifier`，因此即使中间人截获了`code_challenge`, Authorization Code等，也无法换取Access Token, 避免了安全问题。
+由于中间人不能由`code_challenge`逆推`code_verifier`，只有客户端自己才知道这两个值。因此即使中间人截获了`code_challenge`, Authorization Code等，也无法换取Access Token, 避免了安全问题。
 
 ## 在线生成 PKCE Code Verifier and Code Challenge
 
