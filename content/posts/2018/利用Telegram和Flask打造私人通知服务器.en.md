@@ -5,7 +5,6 @@ draft: false
 categories: [technology]
 tags: [Telegram,Flask,notification]
 slug: "use-telegram-and-flask-to-build-notification-server"
-aliases: [/posts/利用telegram和flask打造私人通知服务器/]
 ---
 
 假如有如下这么几个场景:

@@ -5,7 +5,6 @@ draft: false
 categories: [technology]
 tags: [HTTP, Header]
 slug: "http-deprecate-x-prefix"
-aliases: [/posts/http头字段为何要弃用x前缀]
 ---
 
 In June, 2012, Internet Engineering Task Force released a new RFC([RFC-6648](https://tools.ietf.org/html/rfc6648)), recommending deprecation of `X-` prefix. As LinkedIn also use this type of prefix, I was interested to read this RFC, and explain to you why we need to deprecate it.

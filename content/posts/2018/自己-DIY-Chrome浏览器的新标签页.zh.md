@@ -4,7 +4,7 @@ date: 2018-08-03T20:26:08-07:00
 draft: false
 categories: [技术]
 tags: [Chrome,定制]
-slug: "diy-your-chrome-new-tab-page"
+slug: "customize-chrome-new-tab-page"
 aliases: [/posts/自己-diy-chrome浏览器的新标签页/]
 ---
 

@@ -2,8 +2,8 @@
 title: "准备好你的下一份工作"
 date: 2018-07-21T16:13:22-07:00
 draft: false
-categories: [Career]
-tags: [Career]
+categories: [职场]
+tags: [职场,工作]
 slug: "be-prepared-for-your-next-job"
 aliases: [/posts/be-prepared-for-your-next-job/]
 ---

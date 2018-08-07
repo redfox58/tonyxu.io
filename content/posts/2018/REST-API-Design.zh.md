@@ -2,8 +2,8 @@
 title: "REST API 设计面试准备"
 date: 2018-07-03T22:00:00
 draft: false
-categories: [Career]
-tags: [interview,rest-api]
+categories: [职场]
+tags: [面试,rest-api]
 aliases: [/posts/rest-api-设计面试/]
 slug: "rest-api-design-interview-preparation"
 ---

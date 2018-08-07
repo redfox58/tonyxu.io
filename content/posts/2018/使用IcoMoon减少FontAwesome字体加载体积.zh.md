@@ -5,7 +5,7 @@ draft: false
 categories: [技术]
 tags: [FontAwesome,优化]
 slug: "use-icomoon-to-reduce-fontawesome-size"
-aliases: [/zh/posts/使用icomoon减少98的fontawesome字体加载体积/]
+aliases: [/posts/使用icomoon减少98的fontawesome字体加载体积/]
 ---
 
 [FontAwesome](https://fontawesome.com)是非常棒的图标字体库，引用了FontAwesome字体库后，仅需要通过HTML标签就可以把图标嵌入你的页面，非常之方便。然而默认使用方法虽然简单，但是会带来一个额外问题，就是加载的资源文件体积过大，如果你的页面本身就比较简单，字体库可能会让你的网页加载大小翻上好几倍。

@@ -5,7 +5,6 @@ draft: false
 categories: [technology]
 tags: [FontAwesome,optimization]
 slug: "use-icomoon-to-reduce-fontawesome-size"
-aliases: [/posts/使用icomoon减少98的fontawesome字体加载体积/]
 ---
 
 [FontAwesome](https://fontawesome.com) is an awesome font library. With fontawesome, it will be super easy to inject icon into your html page. Although the default method is very simple, it has the drawback of taking too much load by loading full set of icons.

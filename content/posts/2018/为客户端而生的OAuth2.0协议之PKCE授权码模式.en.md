@@ -5,7 +5,6 @@ draft: false
 categories: [technology]
 tags: [OAuth2.0,PKCE]
 slug: "oauth2-pkce-flow"
-aliases: [/posts/为客户端而生的oauth2.0协议之pkce授权码模式/]
 ---
 
 If you are building a native application, and you need OAuth 2.0, PKCE OAuth is your best choice. Here I will explain why.

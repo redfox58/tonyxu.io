@@ -2,10 +2,9 @@
 title: "Ultimate way to beautify Mac terminal (oh-my-zsh) and plugin recommendations"
 date: 2018-07-26T15:04:14-07:00
 draft: false
-categories: [技术]
+categories: [technology]
 tags: [terminal,oh-my-zsh,shell]
 slug: "ultimate-way-to-beautify-mac-terminal-and-recommendations-for-plugins"
-aliases: [/posts/程序员的mac终端oh-my-zsh终极美化及必备插件推荐/]
 ---
 
 If you are using Mac as development machine, `Terminal.app` must be one of the most used apps. Terminal might be not fancy to begin with, but you can totally make it more elegant and fancy if you follow with me.

@@ -2,7 +2,7 @@
 title: "创建Alfred Workflow上传截图到S3"
 date: 2018-07-08T18:19:24-07:00
 draft: false
-categories: [Technical]
+categories: [技术]
 tags: [Alfred,S3]
 toc: true
 slug: "create-alfred-workflow-for-uploading-screenshot-to-s3"

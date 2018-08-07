@@ -5,7 +5,6 @@ draft: false
 categories: [Career]
 tags: [Career,Social]
 slug: "join-linkedin-one-month-summary"
-aliases: [/posts/入职linkedin一个月总结/]
 ---
 
 今天入职LinkedIn一个月了，这一个月过的非常快，第一周培训，第二周InDay，第三周预备放假，第四周放一周假，所以事实上工作的时间远不到一个月。

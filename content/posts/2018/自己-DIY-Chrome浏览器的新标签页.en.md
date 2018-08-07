@@ -1,11 +1,10 @@
 ---
-title: "DIY Chrome New Tab Page"
+title: "Customize Chrome New Tab Page"
 date: 2018-08-03T20:26:08-07:00
 draft: false
-categories: [技术]
-tags: [Chrome,定制]
-slug: "diy-your-chrome-new-tab-page"
-aliases: [/posts/自己-diy-chrome浏览器的新标签页/]
+categories: [technology]
+tags: [Chrome,customization]
+slug: "customize-chrome-new-tab-page"
 ---
 
 Have you thought about customizing Chrome new tab page? If so, you must have tried the extensions in Chrome web store to customize your new tab page. If you are not satisfied with any of them, you have the option to build your own new tab page that meets all your expectations.
