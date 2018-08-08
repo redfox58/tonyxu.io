@@ -18,9 +18,13 @@
 
   {{ if .IsHome -}}
   <title>{{ .Site.Title }}</title>
+  <meta name="description" content="{{ .Site.Params.Description }}" />
   {{- else -}}
   <title>{{ .Title }} - {{ .Site.Title }}</title>
+  <meta name="description" content="{{ .Summary }}" />
   {{- end }}
+
+  
 
   <script async>
   fetch('//api.ipify.org?format=json')
