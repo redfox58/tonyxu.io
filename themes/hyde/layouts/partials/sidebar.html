@@ -1,10 +1,10 @@
 <div class="sidebar">
     <div class="menu-bar">
-        {{ range $.Site.Home.AllTranslations }}
-          {{ if ne $.Site.Language.Lang .Language.Lang }}
-            <a class="language-menu" href="{{ .URL }}"><span class="icon-globe"></span> <span>{{ .Language.LanguageName }}</span></a>
-          {{ end}}
-        {{ end }}
+        {{ if eq $.Site.Language.Lang "en" }}
+          <a class="language-menu" href="/zh{{ .URL }}"><span class="icon-globe"></span> <span>{{ .Language.LanguageName }}</span></a>
+        {{ else }}
+          <a class="language-menu" href="{{ strings.TrimPrefix "/zh" .URL }}"><span class="icon-globe"></span> <span>{{ .Language.LanguageName }}</span></a>
+        {{ end}}
         
         <div class="menu-toggle"><span class="icon-bars"></span></div>
       </div>
