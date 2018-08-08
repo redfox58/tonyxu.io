@@ -9,24 +9,28 @@ slug: "join-linkedin-one-month-summary"
 
 今天入职LinkedIn一个月了，这一个月过的非常快，第一周培训，第二周InDay，第三周预备放假，第四周放一周假，所以事实上工作的时间远不到一个月。
 
+Today is my so-called one month anniversary at LinkedIn. It's been a fast week, bootcamp, Inday, and a week of shutdown. So it's actually much less than a month.
+
 <!--more-->
 
 这一个月最主要的任务就是熟悉公司的技术、工具、流程和自己组的产品，中间还参加了不少内部的会。虽然第一个月不太可能有多亮眼的表现，但是还是应该总结一下。
 
-自己觉得表现好的地方：
+The main thing on my list this month is to get familiar with the technology, tool, process, and products in LinkedIn. Although there is not a lot of happening, I should still look back and think about what can be improved.
 
-- 对公司的技术和工具可以很快掌握
-- 能发现现存问题并快速作出修复
-- 对工作进度有计划
+What I'm doing great:
 
-觉得有挑战的地方：
+- I can quickly get familiar with technology and tools in the company
+- I can quickly discover issue and fix it
+- I work on tasks with a plan
 
-- 自然流畅的和美国人交谈工作和生活话题（组里没有中国人）
-- 开会的时候觉得不够自信，很难参与讨论
-- 和同事聊天的时候不够积极主动
+What I feel challenging:
 
-其实我的情况相对于中国人来说相对比较普遍，技术上没有问题积极主动，但是社交方面比较欠缺，不能很好的口头表现自己。如果想改善这个问题，我想接下来的几个月可以从这几个方面入手：
+- Communicate with English speakers about work and life topics is challenging
+- Not being very active in meeting and participate in discussions
+- Not being very active when chatting with others
 
-- 提前浏览会议议题，争取对其中一两个议题充分理解并有自己的见解（开会的时候可以参与讨论）
-- 提前思考如何回答常见的社交问题（如上周末过的怎样，这周末什么安排等）
-- 鼓励自己在回答完对方的问题后能主动提出问题，引导话题
+I believe my situation is quite common for Chinese in U.S companies, who is active toward technology, but less active in social, and talking. If I want to make a change, I think I need to be doing these:
+
+- Prepare for each meeting, and gain knowledge on one or two topics. This should make it easier to join discussions.
+- Get prepared for some common social questions (How was your weekend, and what's your plan on weekend?)
+- Encourage myself to drive discussions when a topic is completed

@@ -2,30 +2,30 @@
 title: "Use GitLab-CI to run free scheduled jobs"
 date: 2018-07-23T13:30:58-07:00
 draft: false
-categories: [技术]
-tags: [定时任务,GitLab,持续集成]
+categories: [technology]
+tags: [scheduled-job,GitLab,CI]
 slug: "use-gitlab-ci-to-run-free-scheduled-jobs"
 ---
 
-本文介绍我是如何使用GitLab-CI免费地运行一些需要定时执行的脚本，而不需要在本地/服务器上使用cron job或者一直跑一个后台程序运行中间sleep。
+In this topic, I'll introduce how to run scheduled job with GitLab-CI, without the need to have a server running cron job or other application.
+
 
 <!--more-->
 
-GitLab-CI是GitLab提供的持续集成/部署的工具。当有新代码提交或者其他条件触发时，它就会自动运行脚本执行编译、测试、部署等活动。GitLab-CI每个月提供2,000分钟的免费运行时间，平均一天可以大概跑一个小时。
+GitLab-CI is a continuous integration/deployment tool, it will trigger some scripts (such as build, test, deployment) when there is new deployment or defined interval. GitLab-CI has a free quota of 2,000 minutes running time, which is 1 hour everyday.
 
-如果你不用GitLab而是用GitHub的话，Travis CI也免费提供类似功能。
+If you prefer GitHub than GitLab, Travis CI also offers similar tool for free.
 
 GitLab-CI 和 Travis CI都支持定时执行脚本，但是GitLab-CI最多可以支持每小时运行一次，而Travis只支持最多每天运行一次。
+GitLab-CI and Travis CI both support scheduled jobs, however, GitLab-CI supports as often as every hour, while Travis supports as often as every day.
 
-那么什么情况下你会需要定试运行脚本呢？比如:
+So, why we need to run scheduled job? Here are the use cases:
 
-1. 我需要一个脚本每隔一段时间去查询当前比特币价格，当高于指定价格时卖出或者提醒我
-2. 我需要一个脚本每隔一段时间查询一个商品的价格，当低于制定价格时提醒我购买
-3. 我需要一个脚本每隔一段时间访问一次某个网址（例如为了保持Heroku应用处于激活状态)
+1. I need a job to monitor Bitcoin price, when the price is higher or lower than some price, it will notify me to make transaction
+1. I need a job to monitor price of a product, when it's lower than a certain price, it will notify me to make order
+1. I need a job to keep Heroku app up and running (Prevent it to sleep)
 
-下面为了方便起见，我就以情况3举例。
-
-首先在你的repo目录创建一个`.gitlab-ci.yml`文件:
+First, create a `.gitlab-ci.yml` file in your repo
 
 ```yml
 test:
@@ -33,24 +33,24 @@ test:
     - bash scripts/script_a.sh
 ```
 
-上述示例定义了一个`test`任务，并指定了用bash执行`scripts`目录下的`script_a.sh`脚本文件
+This file defined a task called `test`, and specified it to run `script_a.sh` file under `scripts` folder with bash
 
-接下来就在`scripts`目录下创建一个`script_a.sh`文件:
+Now, let's create the `script_a.sh` file under `scripts` folder:
 
 ```sh
 #!/bin/sh
 curl curl http://ip-api.com/json
 ```
 
-> 注: job名，脚本目录，脚本名，脚本内容都可以根据具体需要修改，这里只是举例。
+> Note: job name, script file, script file folder can all be changed with your own need.
 
-将包含`.gitlab-ci.yml`和脚本的代码上传至GitLab，即会自动触发任务，去GitLab管理界面左侧的`CI/CD - Jobs`可以查看任务状态。
+Upload the repo including `.gitlab-ci.yml` to GitLab, it will trigger the job automatically, and you can go to `CI/CD - Jobs` on the repo admin.
 
-进入`CI/CD - Schedules`可以给任务设置定时，默认提供每天/每周/每月，或者自定义。自定义的设置语法格式和cron一样，不熟悉的可以去 https://crontab.guru 调试。假如你设置`* * * * 1-5`就是每周一到周五每分钟都运行，但是GitLab貌似有限制，导致实际上只会每周一到周五每小时执行一次。
+You can set schedule in `CI/CD - Schedules` section. It provides options as every day, every week, every month, or customize like cron interval. You can go to https://crontab.guru to test out cron interval syntax. Technically you can set it to every minute, however, GitLab is only able to run it every hour.
 
-接下来你的脚本就会按照你设置的时间定时执行了。
+Now, the job will only run based on your schedule settings.
 
-如果你去`CI/CD - Jobs`查看运行日志，可以看到类似如下日志:
+If you go to `CI/CD - Jobs` to check logs, you will find something like this:
 
 ```shell
 Running with gitlab-runner 11.1.0 (081978aa)
