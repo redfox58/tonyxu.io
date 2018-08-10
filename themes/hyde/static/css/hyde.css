@@ -327,7 +327,7 @@ body {
   }
   
   .menu-bar .icon-globe {
-    font-size: 1rem;
+    font-size: 0.8rem;
     line-height: 1rem;
   }
   
@@ -339,4 +339,41 @@ body {
   .nav-global:hover .global-options {
     display: block;
   }
+}
+
+.footer {
+  margin-top: 1rem;
+  color: #8590a6;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer .item {
+  display: inline-block;
+}
+
+.tiles {
+  display: flex;
+  flex-wrap:wrap;
+}
+
+.tiles .tile {
+  display: inline-block;
+  flex-grow: 1;
+  background:white;
+  margin:1rem;
+  box-shadow: 0 1px 3px rgba(26,26,26,.1);
+  border-radius: 2px;
+  padding: 0 1rem;
+}
+
+.tiles .tile h4 {
+  line-height: 2rem;
+}
+
+.tiles .tile img {
+  width: 2rem;
+  height: 2rem;
+  float: left;
+  margin-bottom: 0;
 }
