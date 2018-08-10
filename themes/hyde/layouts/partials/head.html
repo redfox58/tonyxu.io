@@ -17,7 +17,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
   {{ if .IsHome -}}
-  <title>{{ .Site.Title }}</title>
+  {{ $url := urls.Parse .Site.BaseURL }}	
+  <title>{{ .Site.Title }} | {{ $url.Host }}</title>
   <meta name="description" content="{{ .Site.Params.Description }}" />
   {{- else -}}
   <title>{{ .Title }} - {{ .Site.Title }}</title>
