@@ -21,3 +21,9 @@ other = "标签"
 
 [Categories]
 other = "分类"
+
+[visitor]
+other = "访客"
+
+[friends]
+other = "友情链接"

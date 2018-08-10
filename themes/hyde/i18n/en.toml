@@ -21,3 +21,9 @@ other = "Tags"
 
 [Categories]
 other = "Categories"
+
+[visitor]
+other = "Visitor"
+
+[friends]
+other = "Friends"
