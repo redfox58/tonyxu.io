@@ -58,6 +58,11 @@ app.get("/viewEvent", (req, res) => {
     });
 });
 
+// https://tonyxu.io/go?url=www.example.com will redirect to www.example.com
+app.get("/go", (req,res) => {
+  res.redirect(req.query.url);
+})
+
 const main = express();
 main.use("/api", app);
 
