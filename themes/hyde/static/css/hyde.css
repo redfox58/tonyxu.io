@@ -311,7 +311,7 @@ body {
 @media (min-width: 48em){
 
   .menu-toggle {
-    display: none;
+    display: none !important;
   }
   .sidebar .language-menu {
     font-size: 0.8rem;
@@ -376,4 +376,5 @@ body {
   height: 2rem;
   float: left;
   margin-bottom: 0;
+  margin-right: 0.5rem;
 }
