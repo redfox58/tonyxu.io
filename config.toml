@@ -48,7 +48,7 @@ defaultContentLanguage = "en"
     name                   = "资料"
     weight                 = 41
     identifier             = "profile"
-    url                    = "https://linkedin.com/in/tonyxu93"
+    url                    = "https://linkedin.com/in/tonyxu93?locale=zh_CN"
     pre                    = "<span class=\"icon-linkedin-square menu-icon\"></span>"
 
     [[languages.zh.menu.main]]
