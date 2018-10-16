@@ -7,7 +7,11 @@ tags: [google-analytics]
 slug: "embed-google-analytics-dashboard-on-website"
 ---
 
-If you are using Google Analytics to analyze site traffic, you might want to embed those amazing dashboards to your website publicly. While Google doesn't provide iframe solution, it does offer a [Google Analytics Embed API](https://developers.google.com/analytics/devguides/reporting/embed/v1/) which requires a bit more technical knowledge. I'll walk you through each and every step and make sure you don't have to read all developer documentation and can easily build dashboard like what my website has in https://tonyxu.io/analytics.
+If you are using Google Analytics to analyze site traffic, you might want to embed those amazing dashboards to your website publicly. While Google doesn't provide iframe solution, it does offer a [Google Analytics Embed API](https://developers.google.com/analytics/devguides/reporting/embed/v1/) which requires a bit more technical knowledge. I'll walk you through each and every step and make sure you don't have to read all developer documentation and can easily build dashboard like what my website has in https://tonyxu.io/analytics
+
+Preview:
+
+![preview](https://s3-us-west-1.amazonaws.com/tonyxu-img/Analytics_-_Tony_Xu_2018-10-16_09-52-42.png)
 
 <!--more-->
 
@@ -74,7 +78,7 @@ app.get("/accessTokens", (req,res) => {
       console.log(err);
       return res.status(500).send('Error');
     } else {
-      return res.json({"google_access_token":token.access_token});
+      return res.send(token.access_token);
     }
   });
 })
@@ -136,13 +140,9 @@ gapi.analytics.ready(function () {
 
   fetch('/api/accessTokens')
     .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      console.log(data.google_access_token)
       gapi.analytics.auth.authorize({
         'serverAuth': {
-          'access_token': data.google_access_token
+          'access_token': response
         }
       });
       dataChart1.execute();
