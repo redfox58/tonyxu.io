@@ -27,3 +27,18 @@ other = "访客"
 
 [friends]
 other = "友情链接"
+
+[analytics]
+other = "访客统计"
+
+[hit-trend]
+other = "访客趋势"
+
+[hit-trend-sub]
+other = "用户 - 最近90天"
+
+[top-pages]
+other = "最热文章"
+
+[top-pages-sub]
+other = "标题 - 最近90天"

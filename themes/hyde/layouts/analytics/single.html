@@ -1,0 +1,81 @@
+{{ define "main" -}}
+<script>
+  (function (w, d, s, g, js, fs) {
+    g = w.gapi || (w.gapi = {}); g.analytics = { q: [], ready: function (f) { this.q.push(f); } };
+    js = d.createElement(s); fs = d.getElementsByTagName(s)[0];
+    js.src = 'https://apis.google.com/js/platform.js';
+    fs.parentNode.insertBefore(js, fs); js.onload = function () { g.load('analytics'); };
+  }(window, document, 'script'));
+</script>
+<div class="breadcrumbs">
+  <h3 class="breadcrumb">{{i18n "analytics"}}</h3>
+</div>
+<div class="post">
+  <h2>{{i18n "hit-trend"}}</h2>
+  <p>{{i18n "hit-trend-sub"}}</p>
+  <div id="hit-trend-container"></div>
+</div>
+<div class="post">
+  <h2>{{i18n "top-pages"}}</h2>
+  <p>{{i18n "top-pages-sub"}}</p>
+  <div id="top-pages-container"></div>
+</div>
+<script>
+
+  gapi.analytics.ready(function () {
+
+    fetch('/api/accessTokens')
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        console.log(data.google_access_token)
+        gapi.analytics.auth.authorize({
+          'serverAuth': {
+            'access_token': data.google_access_token
+          }
+        });
+        dataChart1.execute();
+        dataChart2.execute();
+      });
+
+    var dataChart1 = new gapi.analytics.googleCharts.DataChart({
+      query: {
+        'ids': 'ga:97501557', // <-- Replace with the ids value for your view.
+        'start-date': '90daysAgo',
+        'end-date': 'today',
+        'metrics': 'ga:sessions,ga:users',
+        'dimensions': 'ga:date'
+      },
+      chart: {
+        'container': 'hit-trend-container',
+        'type': 'LINE',
+        'options': {
+          'width': '100%'
+        }
+      }
+    });
+
+    var dataChart2 = new gapi.analytics.googleCharts.DataChart({
+      query: {
+        'ids': 'ga:97501557', // <-- Replace with the ids value for your view.
+        'start-date': '90daysAgo',
+        'end-date': 'today',
+        'metrics': 'ga:pageviews,ga:uniquePageviews,ga:timeOnPage,ga:bounces,ga:entrances,ga:exits',
+        'sort': '-ga:pageviews',
+        'dimensions': 'ga:pagePath',
+        'max-results': 10
+      },
+      chart: {
+        'container': 'top-pages-container',
+        'type': 'PIE',
+        'options': {
+          'width': '100%',
+          'pieHole': 0.4,
+        }
+      }
+    });
+
+  });
+</script>
+{{- end }}

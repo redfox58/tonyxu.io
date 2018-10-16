@@ -27,3 +27,18 @@ other = "Visitor"
 
 [friends]
 other = "Friends"
+
+[analytics]
+other = "Analytics"
+
+[hit-trend]
+other = "Hit Trend"
+
+[hit-trend-sub]
+other = "Users - Last 90 days"
+
+[top-pages]
+other = "Top Pages"
+
+[top-pages-sub]
+other = "Titles - Last 90 days"
