@@ -6,7 +6,7 @@
   {{ .Hugo.Generator }}
   {{ template "_internal/opengraph.html" . }}
   {{if .Params.image }}
-  <meta property="og:image" content="{{ .Site.BaseURL }}{{.Params.image}}"/>
+  <meta property="og:image" content="{{.Params.image}}"/>
   {{else}}
   {{if .Site.Params.cover}}
   <meta property="og:image" content="{{.Site.Params.cover | absURL}}"/>
