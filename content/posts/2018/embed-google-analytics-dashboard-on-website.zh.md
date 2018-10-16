@@ -5,6 +5,7 @@ draft: false
 categories: [技术]
 tags: [google-analytics]
 slug: "embed-google-analytics-dashboard-on-website"
+image: "https://s3-us-west-1.amazonaws.com/tonyxu-img/Analytics_-_Tony_Xu_2018-10-16_09-52-42.png"
 ---
 
 如果你正在使用Google Anlaytics工具来分析网站访问数据，你可能会想将它提供的各种酷炫图表嵌入到网站页面以供用户浏览。尽管Google Analytics并不提供简单的iframe方式来嵌入图表，它还是提供了[Google Analytics Embed API](https://developers.google.com/analytics/devguides/reporting/embed/v1/)这种需要稍微多一点技术基础的方式让你能够嵌入它们的图表。我会在这篇文章里详细地告诉你该如何一步一步实现一个和我的网站提供的一样的Google Analytics图表: https://tonyxu.io/analytics

@@ -5,6 +5,7 @@ draft: false
 categories: [Technical]
 tags: [google-analytics]
 slug: "embed-google-analytics-dashboard-on-website"
+image: "https://s3-us-west-1.amazonaws.com/tonyxu-img/Analytics_-_Tony_Xu_2018-10-16_09-52-42.png"
 ---
 
 If you are using Google Analytics to analyze site traffic, you might want to embed those amazing dashboards to your website publicly. While Google doesn't provide iframe solution, it does offer a [Google Analytics Embed API](https://developers.google.com/analytics/devguides/reporting/embed/v1/) which requires a bit more technical knowledge. I'll walk you through each and every step and make sure you don't have to read all developer documentation and can easily build dashboard like what my website has in https://tonyxu.io/analytics
