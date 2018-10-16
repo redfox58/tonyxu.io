@@ -41,4 +41,7 @@ other = "Users - Last 90 days"
 other = "Top Pages"
 
 [top-pages-sub]
-other = "Titles - Last 90 days"
+other = "Page Path - Last 90 days"
+
+[loading]
+other = "Loading..."
