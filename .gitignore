@@ -6,3 +6,4 @@ public/*
 .env
 .log
 functions/firebase-debug.log
+functions/google_key.json

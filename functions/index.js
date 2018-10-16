@@ -63,6 +63,29 @@ app.get("/go", (req,res) => {
   return res.redirect(req.query.url);
 })
 
+// https://tonyxu.io/accessTokens will return access tokens such as google access tokens
+app.get("/accessTokens", (req,res) => {
+
+  let {google} = require('googleapis');
+  let privateKey = require("./google_key.json");
+
+  // configure a JWT auth client
+  let jwtClient = new google.auth.JWT(
+    privateKey.client_email,
+    null,
+    privateKey.private_key,
+    'https://www.googleapis.com/auth/analytics.readonly');
+  
+    jwtClient.authorize(function (err, tokens) {
+    if (err) {
+      console.log(err);
+      return res.status(500).send('Error');
+    } else {
+      return res.json({"google_access_token":tokens.access_token});
+    }
+  });
+})
+
 const main = express();
 main.use("/api", app);
 
