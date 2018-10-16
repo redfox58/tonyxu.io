@@ -44,14 +44,15 @@
         'ids': 'ga:97501557', // <-- Replace with the ids value for your view.
         'start-date': '90daysAgo',
         'end-date': 'today',
-        'metrics': 'ga:sessions,ga:users',
+        'metrics': 'ga:users',
         'dimensions': 'ga:date'
       },
       chart: {
         'container': 'hit-trend-container',
         'type': 'LINE',
         'options': {
-          'width': '100%'
+          'width': '100%',
+          'legend': {'position': 'none'}
         }
       }
     });
