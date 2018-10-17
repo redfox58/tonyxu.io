@@ -41,7 +41,13 @@ other = "Users - Last 90 days"
 other = "Top Pages"
 
 [top-pages-sub]
-other = "Page Path - Last 90 days"
+other = "Paths - Last 90 days"
+
+[top-queries]
+other = "Top Queries"
+
+[top-queries-sub]
+other = "Keywords - Last 90 days"
 
 [loading]
 other = "Loading..."

@@ -11,24 +11,21 @@ var useragent = require("useragent");
 const app = express();
 
 var hitCounter = function(req, res, next) {
-  console.log("HIT COUNTER");
   const counterRef = admin.database().ref("/hit_counter");
-  counterRef
-    .transaction(current => {
-      return (current || 0) + 1;
-    })
+  counterRef.transaction(current => {
+    return (current || 0) + 1;
+  });
   next();
 };
 
 app.use(hitCounter);
 
 app.get("/viewEvent", (req, res) => {
-  console.log("VIEW EVENT");
   var ip = req.query.ip;
   if (!req.query.ip) {
     return res.send("NO IP");
   }
-  axios
+  return axios
     .get(`https://api.ipdata.co/${ip}?api-key=${config.ip_key}`)
     .then(response => {
       var agent = useragent.parse(req.headers["user-agent"]);
@@ -59,31 +56,76 @@ app.get("/viewEvent", (req, res) => {
 });
 
 // https://tonyxu.io/go?url=https://www.example.com will redirect to www.example.com
-app.get("/go", (req,res) => {
+app.get("/go", (req, res) => {
   return res.redirect(req.query.url);
+});
+
+const { google } = require("googleapis");
+const privateKey = require("./google_key.json");
+let jwtClient = new google.auth.JWT(
+  privateKey.client_email,
+  null,
+  privateKey.private_key,
+  ["https://www.googleapis.com/auth/analytics.readonly",
+    "https://www.googleapis.com/auth/webmasters.readonly"]
+);
+
+jwtClient.authorize();
+
+app.get("/analytics/hit-trend", (req, res) => {
+  const analytics = google.analytics('v3').data.ga.get({
+    'auth': jwtClient,
+    'ids': 'ga:97501557',
+    'start-date': '90daysAgo',
+    'end-date': 'today',
+    'metrics': 'ga:users',
+    'dimensions': 'ga:date'
+  })
+  .then(function(data) {
+    console.log(data.data.rows)
+    return res.send(data.data.rows)
+  });
+});
+
+app.get("/analytics/top-pages", (req,res) => {
+  const analytics = google.analytics('v3').data.ga.get({
+    'auth': jwtClient,
+    'ids': 'ga:97501557', // <-- Replace with the ids value for your view.
+    'start-date': '90daysAgo',
+    'end-date': 'today',
+    'metrics': 'ga:pageviews',
+    'sort': '-ga:pageviews',
+    'dimensions': 'ga:pagePath',
+    'max-results': 10
+  })
+  .then(function(data) {
+    console.log(data.data.rows)
+    return res.send(data.data.rows)
+  });
 })
 
-// https://tonyxu.io/accessTokens will return access tokens such as google access tokens
-app.get("/accessTokens", (req,res) => {
-
-  let {google} = require('googleapis');
-  let privateKey = require("./google_key.json");
-
-  // configure a JWT auth client
-  let jwtClient = new google.auth.JWT(
-    privateKey.client_email,
-    null,
-    privateKey.private_key,
-    'https://www.googleapis.com/auth/analytics.readonly');
-  
-    jwtClient.authorize(function (err, tokens) {
-    if (err) {
-      console.log(err);
-      return res.status(500).send('Error');
-    } else {
-      return res.json({"google_access_token":tokens.access_token});
-    }
+app.get("/analytics/top-queries", (req,res) => {
+  const webmasters = google.webmasters({
+    version: 'v3',
+    auth: jwtClient,
   });
+  var today = new Date()
+  var priorDate = new Date(new Date().setDate(today.getDate() - 90))
+  webmasters.searchanalytics.query({
+    siteUrl: 'https://tonyxu.io',
+    requestBody: {
+      'rowLimit': 15,
+      'startDate': priorDate.toISOString().split('T')[0],
+      'dimensions': ['query'],
+      'endDate': today.toISOString().split('T')[0]
+    }
+  })
+  .then(function(data) {
+    return res.send(data.data.rows)
+  })
+  .catch(error => {
+    return res.status(500)
+  })
 })
 
 const main = express();

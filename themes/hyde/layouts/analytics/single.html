@@ -1,12 +1,5 @@
 {{ define "main" -}}
-<script>
-  (function (w, d, s, g, js, fs) {
-    g = w.gapi || (w.gapi = {}); g.analytics = { q: [], ready: function (f) { this.q.push(f); } };
-    js = d.createElement(s); fs = d.getElementsByTagName(s)[0];
-    js.src = 'https://apis.google.com/js/platform.js';
-    fs.parentNode.insertBefore(js, fs); js.onload = function () { g.load('analytics'); };
-  }(window, document, 'script'));
-</script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <div class="breadcrumbs">
   <h3 class="breadcrumb">{{i18n "analytics"}}</h3>
 </div>
@@ -20,63 +13,117 @@
   <p>{{i18n "top-pages-sub"}}</p>
   <div id="top-pages-container">{{i18n "loading"}}</div>
 </div>
+<div class="post">
+  <h2>{{i18n "top-queries"}}</h2>
+  <p>{{i18n "top-queries-sub"}}</p>
+  <div id="top-queries-container">{{i18n "loading"}}</div>
+</div>
 <script>
+  // Load Charts and the corechart package.
+  google.charts.load('current', { 'packages': ['corechart'] });
 
-  gapi.analytics.ready(function () {
+  google.charts.setOnLoadCallback(drawHitTrend);
 
-    fetch('/api/accessTokens')
+  google.charts.setOnLoadCallback(drawTopPages);
+
+  google.charts.setOnLoadCallback(drawTopQueries);
+
+  // Callback that draws the pie chart for Sarah's pizza.
+  function drawHitTrend() {
+
+    fetch("/api/analytics/hit-trend")
       .then(function (response) {
         return response.json();
       })
-      .then(function (data) {
-        console.log(data.google_access_token)
-        gapi.analytics.auth.authorize({
-          'serverAuth': {
-            'access_token': data.google_access_token
-          }
-        });
-        dataChart1.execute();
-        dataChart2.execute();
-      });
+      .then(function (rows) {
+        // Create the data table for Sarah's pizza.
+        var data = new google.visualization.DataTable();
+        data.addColumn('date', 'Date');
+        data.addColumn('number', 'Hits');
+        rows.map(function (e) {
+          var year = e[0].substring(0,4);
+          var month = e[0].substring(4,6);
+          var day = e[0].substring(6,8);
+          e[0] = new Date(year,month - 1,day)
+          e[1] = parseFloat(e[1])
+          return e;
+        })
+        data.addRows(rows);
 
-    var dataChart1 = new gapi.analytics.googleCharts.DataChart({
-      query: {
-        'ids': 'ga:97501557', // <-- Replace with the ids value for your view.
-        'start-date': '90daysAgo',
-        'end-date': 'today',
-        'metrics': 'ga:users',
-        'dimensions': 'ga:date'
-      },
-      chart: {
-        'container': 'hit-trend-container',
-        'type': 'LINE',
-        'options': {
-          'width': '100%',
-          'legend': {'position': 'none'}
+        // Set options for Sarah's pie chart.
+        var options = {
+          height: '400',
+          width: '100%',
+          legend: { 'position': 'none' }
+        };
+
+        // Instantiate and draw the chart for Sarah's pizza.
+        var chart = new google.visualization.LineChart(document.getElementById('hit-trend-container'));
+        chart.draw(data, options);
+      })
+
+  }
+
+  // Callback that draws the pie chart for Anthony's pizza.
+  function drawTopPages() {
+
+    fetch("/api/analytics/top-pages")
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (rows) {
+        // Create the data table for Anthony's pizza.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Path');
+        data.addColumn('number', 'Hits');
+        rows.map(function (e) {
+          e[1] = parseFloat(e[1])
+          return e;
+        })
+        data.addRows(rows);
+
+        // Set options for Anthony's pie chart.
+        var options = {
+          height: '400',
+          width: '100%'
+        };
+
+        // Instantiate and draw the chart for Anthony's pizza.
+        var chart = new google.visualization.PieChart(document.getElementById('top-pages-container'));
+        chart.draw(data, options);
+      })
+  }
+
+  function drawTopQueries() {
+
+    fetch("/api/analytics/top-queries")
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (rows) {
+        // Create the data table for Anthony's pizza.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Query');
+        data.addColumn('number', 'Clicks');
+        rows2 = [];
+        for (var i in rows) {
+          rows2.push([rows[i].keys[0], rows[i].clicks])
         }
-      }
-    });
+        data.addRows(rows2);
 
-    var dataChart2 = new gapi.analytics.googleCharts.DataChart({
-      query: {
-        'ids': 'ga:97501557', // <-- Replace with the ids value for your view.
-        'start-date': '90daysAgo',
-        'end-date': 'today',
-        'metrics': 'ga:pageviews,ga:uniquePageviews,ga:timeOnPage,ga:bounces,ga:entrances,ga:exits',
-        'sort': '-ga:pageviews',
-        'dimensions': 'ga:pagePath',
-        'max-results': 10
-      },
-      chart: {
-        'container': 'top-pages-container',
-        'type': 'PIE',
-        'options': {
-          'width': '100%',
-          'pieHole': 0.4,
-        }
-      }
-    });
+        // Set options for Anthony's pie chart.
+        var options = {
+          height: '500',
+          width: '100%',
+          legend: { 'position': 'none' },
+          fontSize: 11
+        };
 
-  });
+        // Instantiate and draw the chart for Anthony's pizza.
+        var chart = new google.visualization.BarChart(document.getElementById('top-queries-container'));
+        chart.draw(data, options);
+      })
+
+  }
 </script>
 {{- end }}

@@ -41,7 +41,13 @@ other = "用户 - 最近90天"
 other = "最热文章"
 
 [top-pages-sub]
-other = "页面路径 - 最近90天"
+other = "路径 - 最近90天"
+
+[top-queries]
+other = "最热搜索"
+
+[top-queries-sub]
+other = "关键词 - 最近90天"
 
 [loading]
 other = "读取中..."
