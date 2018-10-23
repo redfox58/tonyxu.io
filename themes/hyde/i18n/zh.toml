@@ -35,19 +35,25 @@ other = "访客统计"
 other = "访客趋势"
 
 [hit-trend-sub]
-other = "用户 - 最近90天"
+other = "访问 / 天 - 最近90天"
 
 [top-pages]
 other = "最热文章"
 
 [top-pages-sub]
-other = "路径 - 最近90天"
+other = "访问 / 页面 - 最近90天"
 
 [top-queries]
 other = "最热搜索"
 
 [top-queries-sub]
-other = "关键词 - 最近90天"
+other = "搜索点击 / 关键词 - 最近90天"
+
+[site-speed]
+other = "加载速度"
+
+[site-speed-sub]
+other = "平均时间(秒) / 国家/地区 - 最近90天"
 
 [loading]
 other = "读取中..."

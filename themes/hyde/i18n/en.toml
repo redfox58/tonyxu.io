@@ -35,19 +35,25 @@ other = "Analytics"
 other = "Hit Trend"
 
 [hit-trend-sub]
-other = "Users - Last 90 days"
+other = "Visits / Day - Last 90 days"
 
 [top-pages]
 other = "Top Pages"
 
 [top-pages-sub]
-other = "Paths - Last 90 days"
+other = "Visits / Paths - Last 90 days"
 
 [top-queries]
 other = "Top Queries"
 
 [top-queries-sub]
-other = "Keywords - Last 90 days"
+other = "Search Clicks / Keyword - Last 90 days"
+
+[site-speed]
+other = "Site Speed"
+
+[site-speed-sub]
+other = "Average Load Time (s) / Country - Last 90 days"
 
 [loading]
 other = "Loading..."

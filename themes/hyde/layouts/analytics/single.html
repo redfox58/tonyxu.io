@@ -18,8 +18,13 @@
   <p>{{i18n "top-queries-sub"}}</p>
   <div id="top-queries-container">{{i18n "loading"}}</div>
 </div>
+<div class="post">
+  <h2>{{i18n "site-speed"}}</h2>
+  <p>{{i18n "site-speed-sub"}}</p>
+  <div id="site-speed-container">{{i18n "loading"}}</div>
+</div>
 <script>
-  // Load Charts and the corechart package.
+
   google.charts.load('current', { 'packages': ['corechart'] });
 
   google.charts.setOnLoadCallback(drawHitTrend);
@@ -28,7 +33,8 @@
 
   google.charts.setOnLoadCallback(drawTopQueries);
 
-  // Callback that draws the pie chart for Sarah's pizza.
+  google.charts.setOnLoadCallback(drawSiteSpeed);
+
   function drawHitTrend() {
 
     fetch("/api/analytics/hit-trend")
@@ -41,10 +47,10 @@
         data.addColumn('date', 'Date');
         data.addColumn('number', 'Hits');
         rows.map(function (e) {
-          var year = e[0].substring(0,4);
-          var month = e[0].substring(4,6);
-          var day = e[0].substring(6,8);
-          e[0] = new Date(year,month - 1,day)
+          var year = e[0].substring(0, 4);
+          var month = e[0].substring(4, 6);
+          var day = e[0].substring(6, 8);
+          e[0] = new Date(year, month - 1, day)
           e[1] = parseFloat(e[1])
           return e;
         })
@@ -54,7 +60,8 @@
         var options = {
           height: '400',
           width: '100%',
-          legend: { 'position': 'none' }
+          legend: { 'position': 'none' },
+          chartArea: { width: "100%", height: "80%" }
         };
 
         // Instantiate and draw the chart for Sarah's pizza.
@@ -85,7 +92,8 @@
         // Set options for Anthony's pie chart.
         var options = {
           height: '400',
-          width: '100%'
+          width: '100%',
+          chartArea: { width: "100%", height: "80%" }
         };
 
         // Instantiate and draw the chart for Anthony's pizza.
@@ -116,6 +124,7 @@
           height: '500',
           width: '100%',
           legend: { 'position': 'none' },
+          chartArea: { width: "80%", height: "80%" },
           fontSize: 11
         };
 
@@ -123,7 +132,38 @@
         var chart = new google.visualization.BarChart(document.getElementById('top-queries-container'));
         chart.draw(data, options);
       })
+  }
 
+  function drawSiteSpeed() {
+
+    fetch("/api/analytics/site-speed")
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (rows) {
+        // Create the data table for Anthony's pizza.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Country');
+        data.addColumn('number', 'Avg. Load Time');
+        rows.map(function (e) {
+          e[1] = parseFloat(e[1])
+          return e;
+        })
+        data.addRows(rows);
+
+        // Set options for Anthony's pie chart.
+        var options = {
+          height: '500',
+          width: '100%',
+          legend: { 'position': 'none' },
+          chartArea: { width: "80%", height: "80%" },
+          fontSize: 11
+        };
+
+        // Instantiate and draw the chart for Anthony's pizza.
+        var chart = new google.visualization.BarChart(document.getElementById('site-speed-container'));
+        chart.draw(data, options);
+      })
   }
 </script>
 {{- end }}

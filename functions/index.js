@@ -50,7 +50,6 @@ app.get("/viewEvent", (req, res) => {
         });
     })
     .catch(error => {
-      console.log(error);
       return res.send(error);
     });
 });
@@ -82,7 +81,6 @@ app.get("/analytics/hit-trend", (req, res) => {
     'dimensions': 'ga:date'
   })
   .then(function(data) {
-    console.log(data.data.rows)
     return res.send(data.data.rows)
   });
 });
@@ -99,7 +97,22 @@ app.get("/analytics/top-pages", (req,res) => {
     'max-results': 10
   })
   .then(function(data) {
-    console.log(data.data.rows)
+    return res.send(data.data.rows)
+  });
+})
+
+app.get("/analytics/top-cities", (req,res) => {
+  const analytics = google.analytics('v3').data.ga.get({
+    'auth': jwtClient,
+    'ids': 'ga:97501557', // <-- Replace with the ids value for your view.
+    'start-date': '90daysAgo',
+    'end-date': 'today',
+    'metrics': 'ga:pageviews',
+    'sort': '-ga:pageviews',
+    'dimensions': 'ga:pagePath',
+    'max-results': 10
+  })
+  .then(function(data) {
     return res.send(data.data.rows)
   });
 })
@@ -126,6 +139,23 @@ app.get("/analytics/top-queries", (req,res) => {
   .catch(error => {
     return res.status(500)
   })
+})
+
+app.get("/analytics/site-speed", (req,res) => {
+  const analytics = google.analytics('v3').data.ga.get({
+    'auth': jwtClient,
+    'ids': 'ga:97501557', // <-- Replace with the ids value for your view.
+    'start-date': '90daysAgo',
+    'end-date': 'today',
+    'metrics': 'ga:avgPageLoadTime',
+    'sort': 'ga:avgPageLoadTime',
+    'dimensions': 'ga:country',
+    'include-empty-rows': false,
+    'max-results': 10
+  })
+  .then(function(data) {
+    return res.send(data.data.rows)
+  });
 })
 
 const main = express();
