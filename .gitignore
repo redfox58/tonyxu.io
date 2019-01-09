@@ -5,7 +5,7 @@ public/*
 .gitmodules
 .env
 .log
-functions/firebase-debug.log
+firebase-debug.log
 functions/google_key.json
 
 ### Firebase ###
