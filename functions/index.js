@@ -101,6 +101,22 @@ app.get("/analytics/top-pages", (req,res) => {
   });
 })
 
+app.get("/analytics/page-views", (req,res) => {
+  const analytics = google.analytics('v3').data.ga.get({
+    'auth': jwtClient,
+    'ids': 'ga:97501557', // <-- Replace with the ids value for your view.
+    'start-date': '2018-01-01',
+    'end-date': 'today',
+    'metrics': 'ga:pageviews',
+    'filters': `ga:pagePath==${req.query.pagePath}`,
+    'dimensions': 'ga:pagePath',
+    'max-results': 10
+  })
+  .then(function(data) {
+    return res.send(data.data.rows)
+  });
+})
+
 app.get("/analytics/top-cities", (req,res) => {
   const analytics = google.analytics('v3').data.ga.get({
     'auth': jwtClient,
