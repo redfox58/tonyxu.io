@@ -1,0 +1,78 @@
+---
+title: "Technologies Learned as a Software Engineer"
+date: 2018-12-06T19:37:47-08:00
+draft: false
+categories: [technology]
+tags: [technology]
+slug: "technologies-learned-as-a-software-engineer"
+---
+
+作为一名软件工程师，我总是对学习各类新技术抱有极大热情。我会在这篇文章用列表来记录作为一名软件工程师的我已经开始学习的或者在余生计划要学习的技术。
+
+**注: 这篇文章会随着我学习它们一直更新**
+
+<!--more-->
+
+我是如何区分我对一项技术的掌握水平:
+
+- ⭒⭒⭒⭒⭒ (外行) - 尚无了解
+- ⭑⭒⭒⭒⭒ (新手) - 了解基本原理和概念
+- ⭑⭑⭒⭒⭒ (入门) - 通过学习课程和实验掌握了部分经验
+- ⭑⭑⭑⭒⭒ (熟悉) - 可以使用该技术进行实践并了解如何权衡利弊
+- ⭑⭑⭑⭑⭒ (精通) - 能在生产环境独立应用该技术
+- ⭑⭑⭑⭑⭑ (专家) - 被认可为专家，可以向他人提供指导
+
+## Web开发
+
+- React: ⭑⭑⭑⭒⭒
+- Angular: ⭑⭑⭒⭒⭒
+- Node.js: ⭑⭑⭑⭒⭒
+- Spring Boot: ⭑⭑⭑⭒⭒
+- HTML & CSS: ⭑⭑⭑⭑⭒
+- REST API: ⭑⭑⭑⭑⭑
+- Webpack: ⭑⭑⭑⭒⭒
+- Go: ⭒⭒⭒⭒⭒
+- Puppeteer: ⭑⭑⭑⭒⭒
+
+## 移动开发
+
+- iOS (Swift): ⭑⭑⭒⭒⭒
+- React Native: ⭑⭑⭒⭒⭒
+- Flutter: ⭒⭒⭒⭒⭒
+
+## 数据库
+
+- SQL: ⭑⭒⭒⭒⭒
+- MongoDB: ⭑⭒⭒⭒⭒
+
+## 机器学习
+
+- TensorFlow: ⭒⭒⭒⭒⭒
+- R: ⭒⭒⭒⭒⭒
+
+## 云
+
+- Firebase: ⭑⭑⭑⭒⭒
+- Azure: ⭑⭑⭒⭒⭒
+- AWS: ⭑⭑⭑⭒⭒
+
+## 编程语言
+
+- Java: ⭑⭑⭑⭒⭒
+- Javascript: ⭑⭑⭑⭒⭒
+- Typescript: ⭑⭑⭒⭒⭒
+- Python: ⭑⭑⭒⭒⭒
+- Swift: ⭑⭑⭒⭒⭒
+- PHP: ⭑⭑⭒⭒⭒
+- Shell Script: ⭑⭒⭒⭒⭒
+
+## 工具
+
+- Git: ⭑⭑⭑⭑⭒
+- Docker: ⭒⭒⭒⭒⭒
+- Jenkins: ⭒⭒⭒⭒⭒
+- Kubernetes: ⭒⭒⭒⭒⭒
+
+## 其他
+
+- Chat bot: ⭑⭑⭑⭒⭒
