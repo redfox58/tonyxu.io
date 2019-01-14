@@ -105,7 +105,7 @@ module.exports = {
     },
     '@vuepress/medium-zoom': {},
     'sitemap': {
-      hostname: 'https://pake.web.id'
+      hostname: 'https://tonyxu.io'
     }
   }
 }
