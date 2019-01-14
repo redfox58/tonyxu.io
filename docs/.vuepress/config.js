@@ -49,6 +49,7 @@ module.exports = {
   themeConfig: {
     repo: 'tonyxu-io/my-blog',
     editLinks: true,
+    docsDir: 'docs',
     sidebar: 'auto',
     locales: {
       '/': {
