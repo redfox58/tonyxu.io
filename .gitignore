@@ -1,18 +1,2 @@
-node_modules/
-public/*
 .DS_Store
-.firebaserc
-.gitmodules
-.env
-.log
-firebase-debug.log
-functions/google_key.json
-
-### Firebase ###
-.idea
-**/node_modules/*
-**/.firebaserc
-
-### Firebase Patch ###
-.runtimeconfig.json
-.firebase/
+node_modules

@@ -1,9 +1,0 @@
-{{ define "main" -}}
-    <div class="post">
-        <h1>{{ i18n .Title }}</h1>
-        {{ range .Pages }}
-        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-        {{ partial "date" .}}
-        {{ end }}
-    </div>
-{{- end }}

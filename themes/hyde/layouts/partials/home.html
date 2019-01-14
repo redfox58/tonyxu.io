@@ -1,8 +1,0 @@
-<div class="posts">
-    {{ range first 10 (where .Pages "Section" .Site.Params.postsDir) -}}
-        {{ partial "home_list_item" .}}
-    {{- end }}
-    <div class="see-all">
-        <a href={{"/posts" | absLangURL}}>{{i18n "see-all"}}</a>
-    </div>
-</div>
