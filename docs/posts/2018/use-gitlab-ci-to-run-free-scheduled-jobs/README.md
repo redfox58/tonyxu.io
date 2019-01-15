@@ -12,7 +12,6 @@ GitLab-CI is a continuous integration/deployment tool, it will trigger some scri
 
 If you prefer GitHub than GitLab, Travis CI also offers similar tool for free.
 
-GitLab-CI 和 Travis CI都支持定时执行脚本，但是GitLab-CI最多可以支持每小时运行一次，而Travis只支持最多每天运行一次。
 GitLab-CI and Travis CI both support scheduled jobs, however, GitLab-CI supports as often as every hour, while Travis supports as often as every day.
 
 So, why we need to run scheduled job? Here are the use cases:
