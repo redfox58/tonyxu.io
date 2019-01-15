@@ -70,9 +70,10 @@ module.exports = {
             link: '/friends/'
           }
         ],
-        selectText: 'Languages',
+        selectText: 'Eng/中',
         label: 'English',
         readArticleText: 'Read article',
+        lastUpdated: 'Last Updated'
       },
       '/zh/': {
         nav: [{
@@ -92,12 +93,15 @@ module.exports = {
             link: '/friends/'
           }
         ],
-        selectText: '语言',
+        selectText: 'Eng/中',
         label: '中文',
         readArticleText: '阅读全文',
+        lastUpdated: '最后更新'
       }
     }
-
+  },
+  markdown: {
+    lineNumbers: true
   },
   plugins: {
     '@vuepress/pwa': {
