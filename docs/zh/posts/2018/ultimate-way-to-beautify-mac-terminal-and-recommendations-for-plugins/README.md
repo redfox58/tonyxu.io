@@ -19,7 +19,7 @@ description: "如果你使用Mac进行开发，那么`Terminal.app`应该是你�
 
 建议先安装homebrew, 方便后续工具安装:
 
-```shell
+```sh
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
@@ -32,13 +32,13 @@ description: "如果你使用Mac进行开发，那么`Terminal.app`应该是你�
 
 先安装zsh:
 
-```shell
+```sh
 brew install zsh
 ```
 
 再安装`oh-my-zsh`:
 
-```shell
+```sh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
@@ -114,7 +114,7 @@ plugins=(
 
 安装完按照提示在`~/.zshrc`配置文件添加:
 
-```shell
+```sh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 ```
 

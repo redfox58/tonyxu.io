@@ -19,7 +19,7 @@ If you are using Mac as development machine, `Terminal.app` must be one of the m
 
 Recommend to install `homebrew` first:
 
-```shell
+```sh
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
@@ -32,13 +32,13 @@ Recommend to install `homebrew` first:
 
 Install `zsh`:
 
-```shell
+```sh
 brew install zsh
 ```
 
 Then install `oh-my-zsh`:
 
-```shell
+```sh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
@@ -114,7 +114,7 @@ Install: `brew install zsh-autosuggestions`
 
 Follow instructions and add below line in `~/.zshrc`:
 
-```shell
+```sh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 ```
 

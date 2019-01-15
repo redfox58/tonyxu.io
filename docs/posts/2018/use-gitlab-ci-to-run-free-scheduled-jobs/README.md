@@ -22,7 +22,7 @@ So, why we need to run scheduled job? Here are the use cases:
 
 First, create a `.gitlab-ci.yml` file in your repo
 
-```yml
+```yaml
 test:
   script:
     - bash scripts/script_a.sh
@@ -47,7 +47,7 @@ Now, the job will only run based on your schedule settings.
 
 If you go to `CI/CD - Jobs` to check logs, you will find something like this:
 
-```shell
+```sh
 Running with gitlab-runner 11.1.0 (081978aa)
   on docker-auto-scale 0277ea0f
 Using Docker executor with image ruby:2.5 ...

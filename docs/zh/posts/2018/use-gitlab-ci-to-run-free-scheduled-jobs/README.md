@@ -24,7 +24,7 @@ GitLab-CI 和 Travis CI都支持定时执行脚本，但是GitLab-CI最多可�
 
 首先在你的repo目录创建一个`.gitlab-ci.yml`文件:
 
-```yml
+```yaml
 test:
   script:
     - bash scripts/script_a.sh
@@ -49,7 +49,7 @@ curl curl http://ip-api.com/json
 
 如果你去`CI/CD - Jobs`查看运行日志，可以看到类似如下日志:
 
-```shell
+```sh
 Running with gitlab-runner 11.1.0 (081978aa)
   on docker-auto-scale 0277ea0f
 Using Docker executor with image ruby:2.5 ...

@@ -27,7 +27,7 @@ Refer to [Quickstart](https://firebase.google.com/docs/hosting/quickstart) from 
 Now, let's make use of Firebase Cloud Function to host some server-side logic to count website hit. In this piece of code, we will connect Cloud Function with Firebase Realtime Database so that the function can update hit counter stored in the database.
 
 1. Initialize Cloud Function
-    ```
+    ```sh
     firebase init functions
     ```
 2. Create `hit_counter` node in Firebase Realtime Database and set value to 0
@@ -37,7 +37,7 @@ Now, let's make use of Firebase Cloud Function to host some server-side logic to
     }
     ```
 3. Edit Cloud Function Code (`Index.js`)
-    ```
+    ```js
     const functions = require("firebase-functions");
     const admin = require("firebase-admin");
     admin.initializeApp();
@@ -51,7 +51,7 @@ Now, let's make use of Firebase Cloud Function to host some server-side logic to
       });
     ```
 4. Deploy Cloud Function
-    ```
+    ```sh
     firebase deploy
     ```
 

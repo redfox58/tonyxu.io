@@ -62,7 +62,7 @@ def housing():
 GitLab-CI Configuration (gitlab-ci.yml):
 
 
-```yml
+```yaml
 test:
   script:
     - bash scripts/get_quotes.sh
