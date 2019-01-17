@@ -1,10 +1,10 @@
 # My Blog
 
-Author: Tony Xu
+Author: [Tony Xu](https://tonyxu.io)
 
-URL: https://tonyxu.io
+URL: [https://tonyxu.io](https://tonyxu.io)
 
-Built with: Vuepress
+Built with: [VuePress](https://vuepress.vuejs.org)
 
 ## Development
 
