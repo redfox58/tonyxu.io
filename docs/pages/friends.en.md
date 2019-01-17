@@ -1,8 +1,9 @@
 ---
 sidebar: false
+permalink: /friends
 ---
 
-# 友情链接
+# Friends
 
 - [创造师导航](http://chuangzaoshi.com/): 为创意工作者而设计
 - [Yu Zhang](http://zy2071.com): 喜欢前端，喜欢足球 ，喜欢历史，喜欢商业。

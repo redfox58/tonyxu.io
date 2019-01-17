@@ -1,13 +1,15 @@
 <template>
 <div>
     <div v-for="post in posts">
-        <h3>
-            <router-link :to="post.path">{{ post.frontmatter.title }}</router-link>
-        </h3>
-        
-        <p>{{ post.frontmatter.description }}</p>
+        <div>
+            <router-link :to="post.path" class="title">{{ post.frontmatter.title }}</router-link>
+            <p class="date">{{ localizedDateString(post.frontmatter.date) }}</p>
+        </div>
 
-        <p><router-link :to="post.path">{{readArticleText}}</router-link></p>
+        
+        <!-- <p>{{ post.frontmatter.description }}</p> -->
+
+        <!-- <p><router-link :to="post.path">{{readArticleText}}</router-link></p> -->
     </div>
 </div>
 </template>
@@ -22,6 +24,11 @@ export default {
         },
         readArticleText() {
           return this.$themeLocaleConfig.readArticleText || 'Read article'
+        }
+    },
+    methods: {
+      localizedDateString(date) {
+          return new Date(date).toLocaleDateString()
         }
     }
 }

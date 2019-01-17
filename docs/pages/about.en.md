@@ -1,5 +1,6 @@
 ---
 sidebar: false
+permalink: /about
 ---
 
 # About
