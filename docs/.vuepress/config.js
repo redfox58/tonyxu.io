@@ -73,7 +73,8 @@ module.exports = {
         selectText: 'Eng/中',
         label: 'English',
         readArticleText: 'Read article',
-        lastUpdated: 'Last Updated'
+        lastUpdated: 'Last Updated',
+        editLinkText: 'Edit this page'
       },
       '/zh/': {
         nav: [{
@@ -96,7 +97,8 @@ module.exports = {
         selectText: 'Eng/中',
         label: '中文',
         readArticleText: '阅读全文',
-        lastUpdated: '最后更新'
+        lastUpdated: '最后更新',
+        editLinkText: '编辑该页'
       }
     }
   },
