@@ -30,7 +30,7 @@ Since malicious party can't infer `code_verifier` by `code_challenge`, only the 
 
 ## Generate PKCE Code Verifier and Code Challenge Online
 
-<iframe width="100%" height="300" src="//jsfiddle.net/tonyaiken/ey0n5bs4/4/embedded/result,html/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+<iframe width="100%" height="500" src="//tonyxu-io.github.io/pkce-generator/index.html" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0">https://tonyxu-io.github.io/pkce-generator/index.html</iframe>
 
 ## Implementation (JavaScript)
 
