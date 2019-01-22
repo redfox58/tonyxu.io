@@ -30,7 +30,9 @@ PKCE的流程大概如下:
 
 ## 在线生成 PKCE Code Verifier and Code Challenge
 
-<iframe width="100%" height="500" src="//tonyxu-io.github.io/pkce-generator/index.html" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0">https://tonyxu-io.github.io/pkce-generator/index.html</iframe>
+<iframe width="100%" height="500" src="//tonyxu-io.github.io/pkce-generator/index.html" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0">https://tonyxu-io.github.io/pkce-generator/</iframe>
+
+页面地址: [https://tonyxu-io.github.io/pkce-generator/](https://tonyxu-io.github.io/pkce-generator/)
 
 ## 实现代码 (JavaScript)
 
