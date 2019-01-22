@@ -31,7 +31,6 @@ module.exports = {
       content: '#ffffff'
     }]
   ],
-  ga: "UA-577792-7",
   locales: {
     '/': {
       lang: 'en-US',
@@ -45,7 +44,6 @@ module.exports = {
 
     }
   },
-  serviceWorker: true,
   themeConfig: {
     repo: 'tonyxu-io/my-blog',
     editLinks: true,
@@ -113,6 +111,9 @@ module.exports = {
     '@vuepress/medium-zoom': true,
     'sitemap': {
       hostname: 'https://tonyxu.io'
+    },
+    '@vuepress/google-analytics': {
+      'ga': "UA-577792-7"
     }
   }
 }
