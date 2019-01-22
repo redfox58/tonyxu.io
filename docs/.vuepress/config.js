@@ -110,7 +110,7 @@ module.exports = {
       serviceWorker: true,
       updatePopup: true
     },
-    '@vuepress/medium-zoom': {},
+    '@vuepress/medium-zoom': true,
     'sitemap': {
       hostname: 'https://tonyxu.io'
     }
