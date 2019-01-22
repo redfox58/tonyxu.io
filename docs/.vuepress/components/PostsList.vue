@@ -1,35 +1,50 @@
 <template>
-<div>
-    <div v-for="post in posts">
+  <div>
+    <div v-for="year in years">
+      <h3>{{year}}</h3>
+      <div v-for="post in postsInYear(year)">
         <div>
-            <router-link :to="post.path" class="title">{{ post.frontmatter.title }}</router-link>
-            <p class="date">{{ localizedDateString(post.frontmatter.date) }}</p>
+          <router-link :to="post.path" class="title">{{ post.frontmatter.title }}</router-link>
+          <p class="date">{{ localizedDateString(post.frontmatter.date) }}</p>
         </div>
-
-        
-        <!-- <p>{{ post.frontmatter.description }}</p> -->
-
-        <!-- <p><router-link :to="post.path">{{readArticleText}}</router-link></p> -->
+      </div>
     </div>
-</div>
+  </div>
 </template>
 
 <script>
 export default {
-    computed: {
-        posts() {
-            return this.$site.pages
-                .filter(x => x.path.startsWith(`${this.$localePath}posts/`) && !x.frontmatter.posts_list)
-                .sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
-        },
-        readArticleText() {
-          return this.$themeLocaleConfig.readArticleText || 'Read article'
-        }
+  computed: {
+    years() {
+      return this.$site.pages
+        .filter(
+          x =>
+            x.path.startsWith(`${this.$localePath}posts/`) &&
+            !x.frontmatter.posts_list
+        )
+        .map(x => new Date(x.frontmatter.date).getFullYear())
+        .reduce((x, y) => (x.includes(y) ? x : [...x, y]), [])
+        .sort((a, b) => b - a);
     },
-    methods: {
-      localizedDateString(date) {
-          return new Date(date).toLocaleDateString()
-        }
+    readArticleText() {
+      return this.$themeLocaleConfig.readArticleText || "Read article";
     }
-}
+  },
+  methods: {
+    localizedDateString(date) {
+      return new Date(date).toLocaleDateString();
+    },
+    postsInYear(year) {
+      return this.$site.pages
+        .filter(
+          x =>
+            x.path.startsWith(`${this.$localePath}posts/${year}`) &&
+            !x.frontmatter.posts_list
+        )
+        .sort(
+          (a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
+        );
+    }
+  }
+};
 </script>
