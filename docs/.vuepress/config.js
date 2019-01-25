@@ -1,11 +1,11 @@
 module.exports = {
-
   head: [
     ['link', {
       rel: 'apple-touch-icon',
       sizes: '180x180',
       href: '/apple-touch-icon.png'
     }],
+
     ['link', {
       rel: 'icon',
       type: 'image/png',
@@ -29,7 +29,13 @@ module.exports = {
     ['meta', {
       name: 'theme-color',
       content: '#ffffff'
-    }]
+    }],
+    [
+      'meta', {
+        name: 'apple-mobile-web-app-status-bar-style',
+        content: 'default'
+      }
+    ],
   ],
   locales: {
     '/': {
@@ -114,6 +120,9 @@ module.exports = {
     },
     '@vuepress/google-analytics': {
       'ga': "UA-577792-7"
+    },
+    'feed': {
+      canonical_base: 'https://tonyxu.io', // required
     }
   }
 }
