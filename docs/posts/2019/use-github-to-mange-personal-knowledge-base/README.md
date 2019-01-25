@@ -1,7 +1,9 @@
 ---
 title: Use GitHub for Knowledge Base and Projects Management
-description: "GitHub has become the one and only platform for developers. We collaborate on the platform for anything about code. Can GitHub help you anything else besides code? I have recently been frustrated choosing a tool to manage my personal knowledge base, although there are lots of choices such as note apps (Bear, Evernote), project management app (Trello), or knowledge management app (Notion.so), eventually GitHub turned out to my choice which has below pros:"
+description: GitHub has become the one and only platform for developers. We collaborate on the platform for anything about code. Can GitHub help you anything else besides code? I have recently been frustrated choosing a tool to manage my personal knowledge base, although there are lots of choices such as note apps (Bear, Evernote), project management app (Trello), or knowledge management app (Notion.so), eventually GitHub turned out to my choice which has below pros...
 date: 2019-01-21
+lang: en-US
+type: post
 ---
 
 # Use GitHub for Knowledge Base Management and Projects Management

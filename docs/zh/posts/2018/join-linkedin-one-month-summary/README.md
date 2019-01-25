@@ -1,7 +1,9 @@
 ---
-title: "入职LinkedIn一个月总结"
+title: 入职LinkedIn一个月总结
 date: 2018-07-04
-description: "今天入职LinkedIn一个月了，这一个月过的非常快，第一周培训，第二周InDay，第三周预备放假，第四周放一周假，所以事实上工作的时间远不到一个月。"
+description: 今天入职LinkedIn一个月了，这一个月过的非常快，第一周培训，第二周InDay，第三周预备放假，第四周放一周假，所以事实上工作的时间远不到一个月。
+lang: zh-CN
+type: post
 ---
 
 # 入职LinkedIn一个月总结

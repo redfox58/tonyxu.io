@@ -1,7 +1,9 @@
 ---
-title: "REST API 设计面试准备"
+title: REST API 设计面试准备
 date: 2018-07-03
-description: "现在 REST API 已经越来越流行被用作前后端的借口。大多数平台都提供 REST API 作为兼容 Web 端和移动端通用接口。如果你即将面试一个要求对 REST API 非常熟悉的岗位，我推荐你多准备 REST API 相关知识。以下是我个人对 REST API 的面试准备。"
+description: 现在 REST API 已经越来越流行被用作前后端的借口。大多数平台都提供 REST API 作为兼容 Web 端和移动端通用接口。如果你即将面试一个要求对 REST API 非常熟悉的岗位，我推荐你多准备 REST API 相关知识。以下是我个人对 REST API 的面试准备。
+lang: zh-CN
+type: post
 ---
 
 # REST API 设计面试准备

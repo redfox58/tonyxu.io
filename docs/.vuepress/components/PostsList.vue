@@ -19,8 +19,8 @@ export default {
       return this.$site.pages
         .filter(
           x =>
-            x.path.startsWith(`${this.$localePath}posts/`) &&
-            !x.frontmatter.posts_list
+            x.frontmatter.lang === this.$lang &&
+            x.frontmatter.type === "post"
         )
         .map(x => new Date(x.frontmatter.date).getFullYear())
         .reduce((x, y) => (x.includes(y) ? x : [...x, y]), [])
@@ -38,8 +38,9 @@ export default {
       return this.$site.pages
         .filter(
           x =>
-            x.path.startsWith(`${this.$localePath}posts/${year}`) &&
-            !x.frontmatter.posts_list
+            x.frontmatter.lang === this.$lang &&
+            x.frontmatter.type === "post" &&
+            new Date(x.frontmatter.date).getFullYear() === year
         )
         .sort(
           (a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)

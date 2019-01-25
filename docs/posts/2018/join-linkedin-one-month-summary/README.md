@@ -1,7 +1,9 @@
 ---
-title: "One month summary for joining LinkedIn"
+title: One month summary for joining LinkedIn
 date: 2018-07-04
-description: "Today is my so-called one month anniversary at LinkedIn. It's been a fast week, bootcamp, Inday, and a week of shutdown. So it's actually much less than a month."
+description: Today is my so-called one month anniversary at LinkedIn. It's been a fast week, bootcamp, Inday, and a week of shutdown. So it's actually much less than a month.
+lang: en-US
+type: post
 ---
 
 # One month summary for joining LinkedIn

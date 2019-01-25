@@ -1,7 +1,9 @@
 ---
 title: "The OAuth2 flow for native apps: PKCE"
 date: 2018-07-24
-description: "If you are building a native application, and you need OAuth 2.0, PKCE OAuth is your best choice. Here I will explain why."
+description: If you are building a native application, and you need OAuth 2.0, PKCE OAuth is your best choice. Here I will explain why.
+lang: en-US
+type: post
 ---
 
 # The OAuth2 flow for native apps: PKCE

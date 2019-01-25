@@ -1,7 +1,9 @@
 ---
-title: "Create Alfred workflow for uploading screenshot to S3"
+title: Create Alfred workflow for uploading screenshot to S3
 date: 2018-07-08
-description: "As Markdown markup language gets more and more popular, most people have a need to quickly generate a public url for screenshot/image in clipboard. Today I created an Alfred workflow that helps you upload images/screenshot in clipboard."
+description: As Markdown markup language gets more and more popular, most people have a need to quickly generate a public url for screenshot/image in clipboard. Today I created an Alfred workflow that helps you upload images/screenshot in clipboard.
+lang: en-US
+type: post
 ---
 
 # Create Alfred workflow for uploading screenshot to S3

@@ -1,7 +1,9 @@
 ---
-title: "Use Firebase Cloud Function to Count Website Visitors"
+title: Use Firebase Cloud Function to Count Website Visitors
 date: 2018-08-07
-description: "It's getting popular to use Firebase hosting to host static website, however, you might not know you can still have server-side code hosted in Firebase for your static website, and that is the Firebase Cloud Function. Once of the case you might want to use the Cloud Function is to write something to Firebase database, for example, a hit counter. In this topic, I'll show you how to use Firebase Cloud Function and Firebase Realtime Database to count website visitor."
+description: It's getting popular to use Firebase hosting to host static website, however, you might not know you can still have server-side code hosted in Firebase for your static website, and that is the Firebase Cloud Function. Once of the case you might want to use the Cloud Function is to write something to Firebase database, for example, a hit counter. In this topic, I'll show you how to use Firebase Cloud Function and Firebase Realtime Database to count website visitor.
+lang: en-US
+type: post
 ---
 
 # Use Firebase Cloud Function to Count Website Visitors

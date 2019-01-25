@@ -1,7 +1,9 @@
 ---
-title: "Use Telegram and Flask to build personal notification server"
+title: Use Telegram and Flask to build personal notification server
 date: 2018-07-12
-description: "Use Telegram and Flask to build personal notification server"
+description: Use Telegram and Flask to build personal notification server
+lang: en-US
+type: post
 ---
 
 # Use Telegram and Flask to build personal notification server

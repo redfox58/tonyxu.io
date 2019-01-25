@@ -1,7 +1,9 @@
 ---
-title: "Write script to scrap house rent price and send to your phone"
+title: Write script to scrap house rent price and send to your phone
 date: 2018-07-28
-description: "House rental is a critical thing if you are living in the silicon valley. I'm planning to move to a new apartment, but the price changes often. I want to monitor the price and book it when it drops. In order to do that, I wrote a script to monitor the house rental price and push the result to my phone like below."
+description: House rental is a critical thing if you are living in the silicon valley. I'm planning to move to a new apartment, but the price changes often. I want to monitor the price and book it when it drops. In order to do that, I wrote a script to monitor the house rental price and push the result to my phone like below.
+lang: en-US
+type: post
 ---
 
 # Write script to scrap house rent price and send to your phone

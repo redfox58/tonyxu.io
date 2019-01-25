@@ -1,7 +1,9 @@
 ---
-title: "Customize Chrome New Tab Page"
+title: Customize Chrome New Tab Page
 date: 2018-08-03
-description: "Have you thought about customizing Chrome new tab page? If so, you must have tried the extensions in Chrome web store to customize your new tab page. If you are not satisfied with any of them, you have the option to build your own new tab page that meets all your expectations."
+description: Have you thought about customizing Chrome new tab page? If so, you must have tried the extensions in Chrome web store to customize your new tab page. If you are not satisfied with any of them, you have the option to build your own new tab page that meets all your expectations.
+lang: en-US
+type: post
 ---
 
 # Customize Chrome New Tab Page

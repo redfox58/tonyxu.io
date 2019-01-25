@@ -1,7 +1,9 @@
 ---
-title: "Why we need to deprecate x prefix for HTTP headers?"
+title: Why we need to deprecate x prefix for HTTP headers?
 date: 2018-08-01
-description: "In June, 2012, Internet Engineering Task Force released a new RFC([RFC-6648](https://tools.ietf.org/html/rfc6648)), recommending deprecation of `X-` prefix. As LinkedIn also use this type of prefix, I was interested to read this RFC, and explain to you why we need to deprecate it."
+description: In June, 2012, Internet Engineering Task Force released a new RFC([RFC-6648](https://tools.ietf.org/html/rfc6648)), recommending deprecation of `X-` prefix. As LinkedIn also use this type of prefix, I was interested to read this RFC, and explain to you why we need to deprecate it.
+lang: en-US
+type: post
 ---
 
 # Why we need to deprecate x prefix for HTTP headers?

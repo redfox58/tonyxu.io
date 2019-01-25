@@ -1,7 +1,9 @@
 ---
-title: "Use GitLab-CI to run free scheduled jobs"
+title: Use GitLab-CI to run free scheduled jobs
 date: 2018-07-23
-description: "Use GitLab-CI to run free scheduled jobs"
+description: Use GitLab-CI to run free scheduled jobs
+lang: en-US
+type: post
 ---
 
 # Use GitLab-CI to run free scheduled jobs

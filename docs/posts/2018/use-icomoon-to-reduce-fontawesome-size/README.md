@@ -1,7 +1,9 @@
 ---
-title: "Use IcoMoon to reduce 98% FontAwesome load size"
+title: Use IcoMoon to reduce 98% FontAwesome load size
 date: 2018-07-22
-description: "FontAwesome is an awesome font library. With fontawesome, it will be super easy to inject icon into your html page. Although the default method is very simple, it has the drawback of taking too much load by loading full set of icons."
+description: FontAwesome is an awesome font library. With fontawesome, it will be super easy to inject icon into your html page. Although the default method is very simple, it has the drawback of taking too much load by loading full set of icons.
+lang: en-US
+type: post
 ---
 
 # Use IcoMoon to reduce 98% FontAwesome load size

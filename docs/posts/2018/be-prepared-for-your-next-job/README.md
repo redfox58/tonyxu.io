@@ -1,7 +1,9 @@
 ---
-title: "Be prepared for your next job"
+title: Be prepared for your next job
 date: 2018-07-21
-description: "Thanks for reading this blog. In this blog I want to share my personal experience on changing my job and some of my thinking that might be helpful for you. I'll keep this blog in high level, and will not talk about job seeking skills, etc."
+description: Thanks for reading this blog. In this blog I want to share my personal experience on changing my job and some of my thinking that might be helpful for you. I'll keep this blog in high level, and will not talk about job seeking skills, etc.
+lang: en-US
+type: post
 ---
 
 # Be prepared for your next job

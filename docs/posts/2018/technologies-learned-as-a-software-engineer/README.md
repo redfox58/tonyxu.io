@@ -1,8 +1,9 @@
 ---
-title: "Technologies Learned as a Software Engineer"
+title: Technologies Learned as a Software Engineer
 date: 2018-12-06
-description: "As a software engineer, I'm always excited in learning various new technologies. In this blog, I'll keep a list of technology subjects I have already started learning or plan to learn in my life as a software engineer."
-lang: 'en-US'
+description: As a software engineer, I'm always excited in learning various new technologies. In this blog, I'll keep a list of technology subjects I have already started learning or plan to learn in my life as a software engineer.
+lang: en-US
+type: post
 ---
 
 # Technologies Learned as a Software Engineer

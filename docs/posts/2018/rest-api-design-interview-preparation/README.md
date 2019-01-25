@@ -1,7 +1,9 @@
 ---
-title: "REST API Design Interview Preparation"
+title: REST API Design Interview Preparation
 date: 2018-07-03
-description: "REST API has become a very popular concept for designing back-end service interface. Most platforms provide REST API as unified interface for web/native applications. If you are going to interview for a job that will require REST API knowledge, you are encouraged to be well prepared for it. Below is my own summary for REST API interview. Hopefully it's helpful for you as well."
+description: REST API has become a very popular concept for designing back-end service interface. Most platforms provide REST API as unified interface for web/native applications. If you are going to interview for a job that will require REST API knowledge, you are encouraged to be well prepared for it. Below is my own summary for REST API interview. Hopefully it's helpful for you as well.
+lang: en-US
+type: post
 ---
 
 # REST API Design Interview Preparation

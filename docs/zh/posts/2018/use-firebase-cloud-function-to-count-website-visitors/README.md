@@ -1,7 +1,9 @@
 ---
-title: "使用Firebase云函数统计网站访问数"
+title: 使用Firebase云函数统计网站访问数
 date: 2018-08-07
-description: "现在越来越多人喜欢用Firebase托管静态页面，类似选择还有GitHub Pages。如果你想给Firebase托管的静态页面添加后端代码，那么恭喜你云函数就是为你准备的。其中使用云函数的场景可以是连接Firebase实时数据库并存取数据。"
+description: 现在越来越多人喜欢用Firebase托管静态页面，类似选择还有GitHub Pages。如果你想给Firebase托管的静态页面添加后端代码，那么恭喜你云函数就是为你准备的。其中使用云函数的场景可以是连接Firebase实时数据库并存取数据。
+lang: zh-CN
+type: post
 ---
 
 # 使用 Firebase 云函数统计网站访问数

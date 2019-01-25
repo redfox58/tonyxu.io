@@ -1,7 +1,9 @@
 ---
-title: "Improve problem-solving skill"
+title: Improve problem-solving skill
 date: 2018-07-03
-description: "Problem-solving** skill is the most important skill at work, you need to think about"
+description: Problem-solving** skill is the most important skill at work, you need to think about
+lang: en-US
+type: post
 ---
 
 # Improve problem-solving skill

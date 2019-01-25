@@ -1,7 +1,9 @@
 ---
-title: "用GitLab-CI免费运行定时任务"
+title: 用GitLab-CI免费运行定时任务
 date: 2018-07-23
-description: "本文介绍我是如何使用GitLab-CI免费地运行一些需要定时执行的脚本，而不需要在本地/服务器上使用cron job或者一直跑一个后台程序运行中间sleep。"
+description: 本文介绍我是如何使用GitLab-CI免费地运行一些需要定时执行的脚本，而不需要在本地/服务器上使用cron job或者一直跑一个后台程序运行中间sleep。
+lang: zh-CN
+type: post
 ---
 
 # 用GitLab-CI免费运行定时任务

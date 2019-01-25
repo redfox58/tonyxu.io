@@ -1,7 +1,9 @@
 ---
-title: "Tech stack to build your own product"
+title: Tech stack to build your own product
 date: 2018-07-17
-description: "As a software engineer or developer, you might want to build a product end-to-end. These are the frameworks and technologies you might need. All listed items are open-source or free to use."
+description: As a software engineer or developer, you might want to build a product end-to-end. These are the frameworks and technologies you might need. All listed items are open-source or free to use.
+lang: en-US
+type: post
 ---
 
 # Tech stack to build your own product

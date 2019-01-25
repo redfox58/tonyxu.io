@@ -1,7 +1,9 @@
 ---
-title: "利用Telegram和Flask打造私人通知服务器"
+title: 利用Telegram和Flask打造私人通知服务器
 date: 2018-07-12
-description: "实现一个Flask app，接收REST API的GET或者POST请求，根据不同需要拼装消息文本并发送到某个app (如Telegram, Slack等)。这个Flask app可以跑在Google App Engine (免费)， 并绑定自己的域名"
+description: 实现一个Flask app，接收REST API的GET或者POST请求，根据不同需要拼装消息文本并发送到某个app (如Telegram, Slack等)。这个Flask app可以跑在Google App Engine (免费)， 并绑定自己的域名
+lang: zh-CN
+type: post
 ---
 
 # 利用Telegram和Flask打造私人通知服务器
