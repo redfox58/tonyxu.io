@@ -10,10 +10,10 @@ type: post
 
 GitHub has become the one and only platform for developers. We collaborate on the platform for anything about code. Can GitHub help you anything else besides code? I have recently been frustrated choosing a tool to manage my personal knowledge base, although there are lots of choices such as note apps (Bear, Evernote), project management app (Trello), or knowledge management app (Notion.so), eventually GitHub turned out to my choice which has below pros:
 
-- It support Markdown
+- It supports Markdown
 - It allows you to manage small piece of notes as well as long-form articles
 - It supports kanban flow
-- It integrate with your daily work
+- It integrates with your daily work
 
 Have you ever thought about using it to manage your personal knowledge base? Let me explain how I use it to manage my personal knowledge base.
 
