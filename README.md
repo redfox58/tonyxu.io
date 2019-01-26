@@ -8,7 +8,7 @@ URL: [https://tonyxu.io](https://tonyxu.io)
 
 Built with: [VuePress](https://vuepress.vuejs.org)
 
-Deployed by: Travis CI
+Deployed by: [Travis CI](https://travis-ci.org/tonyxu-io/tonyxu.io)
 
 ## Development
 
