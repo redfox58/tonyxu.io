@@ -12,17 +12,22 @@ Deployed by: Travis CI
 
 ## Development
 
-```sh
-# Install VuePress
-npm i -g vuepress
+Make sure you have [Yarn](https://yarnpkg.com) installed.
 
-# Start Dev Server
+Start Dev Server:
+
+```sh
 yarn docs:dev
 ```
 
-## Manually Deploy to GitHub Pages
+Build:
 
 ```sh
-# Using deploy script
+yarn docs:build
+```
+
+## Deploy to GitHub Pages Manually
+
+```sh
 ./deploy.sh
 ```
