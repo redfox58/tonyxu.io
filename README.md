@@ -1,10 +1,14 @@
 # My Blog
 
+![travis-status](https://travis-ci.org/tonyxu-io/tonyxu.io.svg?branch=master)
+
 Author: [Tony Xu](https://tonyxu.io)
 
 URL: [https://tonyxu.io](https://tonyxu.io)
 
 Built with: [VuePress](https://vuepress.vuejs.org)
+
+Deployed by: Travis CI
 
 ## Development
 
@@ -16,7 +20,7 @@ npm i -g vuepress
 yarn docs:dev
 ```
 
-## Deploy to GitHub Pages
+## Manually Deploy to GitHub Pages
 
 ```sh
 # Using deploy script
