@@ -51,11 +51,11 @@ As a software engineer or developer, you might want to build a product end-to-en
 - [Hadoop](http://hadoop.apache.org/)
 - [Spark](https://spark.apache.org/)
 
-## Automation (CI/CD)
+## Continuous Integration and Delivery (CI/CD)
 
 - [Jenkins](https://jenkins.io/)
-- [Docker](https://www.docker.com/)
-- [Puppet](https://puppet.com/)
+- [Travis CI](https://travis-ci.com/)
+- [Circle CI](https://circleci.com/)
 
 ## Monitor
 

@@ -51,11 +51,11 @@ type: post
 - [Hadoop](http://hadoop.apache.org/)
 - [Spark](https://spark.apache.org/)
 
-## 自动化(CI/CD)
+## 持续集成和部署 (CI/CD)
 
 - [Jenkins](https://jenkins.io/)
-- [Docker](https://www.docker.com/)
-- [Puppet](https://puppet.com/)
+- [Travis CI](https://travis-ci.com/)
+- [Circle CI](https://circleci.com/)
 
 ## 监控
 
