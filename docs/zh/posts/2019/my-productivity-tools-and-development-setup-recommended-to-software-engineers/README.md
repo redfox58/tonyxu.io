@@ -15,7 +15,7 @@ type: post
 👉 [苹果 MacBook Pro (13-inch, 2017, Four Thunderbolt 3 Ports)](https://support.apple.com/kb/SP755?locale=en_US)
 - 13 英寸
 - 2017年
-- 3.5GHz Intel Core i7 Processor
+- 3.5 GHz Intel Core i7 Processor
 - 16 GB 内存
 - 256 GB 存储
 
