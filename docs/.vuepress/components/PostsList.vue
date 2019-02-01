@@ -14,13 +14,19 @@
 
 <script>
 export default {
+  props: ['year'],
   computed: {
     years() {
+      console.log(this.year)
+      if (this.year) {
+        return [this.year]
+      }
       return this.$site.pages
         .filter(
           x =>
             x.frontmatter.lang === this.$lang &&
-            x.frontmatter.type === "post"
+            x.frontmatter.type === "post" &&
+            x.frontmatter.draft !== true
         )
         .map(x => new Date(x.frontmatter.date).getFullYear())
         .reduce((x, y) => (x.includes(y) ? x : [...x, y]), [])
@@ -40,6 +46,7 @@ export default {
           x =>
             x.frontmatter.lang === this.$lang &&
             x.frontmatter.type === "post" &&
+            x.frontmatter.draft !== true &&
             new Date(x.frontmatter.date).getFullYear() === year
         )
         .sort(
