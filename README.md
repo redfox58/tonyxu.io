@@ -1,6 +1,6 @@
 # My Blog
 
-![travis-status](https://travis-ci.org/tonyxu-io/tonyxu.io.svg?branch=master)
+[![Build Status](https://travis-ci.org/tonyxu-io/tonyxu.io.svg?branch=master)](https://travis-ci.org/tonyxu-io/tonyxu.io)
 
 Author: [Tony Xu](https://tonyxu.io)
 
