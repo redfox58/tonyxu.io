@@ -66,7 +66,7 @@ AirPods是我最爱用的配件，使用非常方便，戴在耳朵上没什么�
 👇
 - [Chrome](https://www.google.com/chrome/): 全球最流行的浏览器。Web开发必备浏览器，非常优秀的调试工具。
 - [Slack](https://www.slack.com): 最流行的团队协作应用，非常适合开发者、软件工程师。它可以和你的很多开发平台集成，融合你的开发流程和团队协作体验。
-- [VS Code](https://code.visualstudio.com/): 我曾经很爱用Sublime Text，但是从2016年就切换到了VS Code，因为它是目前开发最活跃的编辑器。阅读[VS Code 拓展](#vs-code-extensions) 了解我爱用的VS Code拓展。
+- [VS Code](https://code.visualstudio.com/): 我曾经很爱用Sublime Text，但是从2016年就切换到了VS Code，因为它是目前开发最活跃的编辑器。阅读[VS Code 拓展](#vs-code-插件) 了解我爱用的VS Code拓展。
 - [Sketch](https://www.sketchapp.com/): 最流行的Web和App设计工具（只支持macOS）。即使没有专业的设计知识也可以很方便快捷的创建Web和App的设计搞。我使用它来做Web或者App的设计原型，以及阅读设计师提供的设计稿。
 - [GitHub Desktop](https://desktop.github.com/): GitHub官方的桌面客户端。我在需要可视化的查看代码变更的时候会作为Git命令行工具的替代品。
 - [Paw](https://paw.cloud/): macOS平台上非常高级的REST API客户端。相比于Postman我更喜欢它，Postman客户端由于是基于Web制作的，没有原生应用的流畅体验。Paw使用macOS原生的视觉组件，以及丰富的插件满足定制需求。我使用它来调试REST API请求。
