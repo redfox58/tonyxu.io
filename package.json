@@ -4,10 +4,16 @@
     "docs:build": "vuepress build docs"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.7.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.14",
+    "@fortawesome/free-brands-svg-icons": "^5.7.1",
+    "@fortawesome/free-solid-svg-icons": "^5.7.1",
+    "@fortawesome/vue-fontawesome": "^0.1.5",
     "@vuepress/plugin-blog": "^1.0.0-alpha.0",
     "@vuepress/plugin-google-analytics": "^1.0.0-alpha.0",
     "@vuepress/plugin-medium-zoom": "^1.0.0-alpha.32",
     "@vuepress/plugin-pwa": "^1.0.0-alpha.0",
+    "stylus-loader": "^3.0.2",
     "vuepress": "^1.0.0-alpha.31",
     "vuepress-plugin-feed": "^0.1.4"
   },

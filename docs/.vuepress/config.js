@@ -109,20 +109,31 @@ module.exports = {
   markdown: {
     lineNumbers: true
   },
-  plugins: {
-    '@vuepress/pwa': {
+  plugins: [
+    ['@vuepress/pwa', {
       serviceWorker: true,
       updatePopup: true
-    },
-    '@vuepress/medium-zoom': true,
-    'sitemap': {
-      hostname: 'https://tonyxu.io'
-    },
-    '@vuepress/google-analytics': {
-      'ga': "UA-577792-7"
-    },
-    'feed': {
-      canonical_base: 'https://tonyxu.io', // required
-    }
-  }
+    }],
+    [
+      '@vuepress/medium-zoom', true
+    ],
+    [
+      'sitemap', {
+        hostname: 'https://tonyxu.io'
+      }
+    ],
+    [
+      '@vuepress/google-analytics',
+      {
+        'ga': "UA-577792-7"
+      },
+    ],
+    [
+      'feed',
+      {
+        canonical_base: 'https://tonyxu.io', // required
+      }
+    ],
+    require('./plugins/tip'),
+  ]
 }

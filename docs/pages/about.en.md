@@ -12,3 +12,5 @@ In this blog, I share things on my mind, my learnings, and my interests of all k
 - Email: [me@tonyxu.io](mailto:me@tonyxu.io)
 - LinkedIn: [https://linkedin.com/in/tonyxu93](https://linkedin.com/in/tonyxu93)
 - GitHub: [https://github.com/tonyxu-io](https://github.com/tonyxu-io)
+
+[Tip me to support the blog](/tip)
