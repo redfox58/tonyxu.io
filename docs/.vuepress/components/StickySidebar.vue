@@ -44,19 +44,14 @@
 <script>
 
 export default {
-  data() {
-    return {
-      url: null,
-    }
-  },
   computed: {
     tipUrl() {
       return this.$lang === "en-US" ? "/tip/" : "/zh/tip/";
+    },
+    url() {
+      console.log(this.$page.path)
+      return `https://tonyxu.io/${this.$page.path}`
     }
-  },
-  mounted() {
-    this.url = window.location.href
   }
-
 };
 </script>
