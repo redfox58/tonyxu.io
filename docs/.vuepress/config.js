@@ -134,6 +134,6 @@ module.exports = {
         canonical_base: 'https://tonyxu.io', // required
       }
     ],
-    require('./plugins/tip'),
+    require('./plugins/sticky-sidebar'),
   ]
 }

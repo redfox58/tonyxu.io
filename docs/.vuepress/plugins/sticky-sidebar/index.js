@@ -1,6 +1,6 @@
 module.exports = (options, ctx) => ({
-  name: 'tip',
+  name: 'sticky-sidebar',
   globalUIComponents: [
-    'Tip'
+    'StickySidebar'
   ]
 })

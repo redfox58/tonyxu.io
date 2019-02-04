@@ -1,20 +1,17 @@
 <template>
-  <div class="sticky-side-bar">
-    <a v-bind:href="tipUrl">
-      <font-awesome-icon icon="dollar-sign"/>
-    </a>
-    <a
-      v-bind:href="'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url)"
-      target="_blank"
-    >
-      <font-awesome-icon :icon="['fab', 'facebook-f']"/>
-    </a>
-    <a
-      v-bind:href="'https://www.linkedin.com/shareArticle?mini=true&source=' + encodeURIComponent(url)"
-    >
-      <font-awesome-icon prefix="fab" :icon="['fab', 'linkedin-in']"/>
-    </a>
-  </div>
+    <div class="sticky-side-bar">
+      <a v-bind:href="tipUrl">
+        <font-awesome-icon icon="dollar-sign"/>
+      </a>
+      <ClientOnly>
+      <a v-bind:href="'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url)" target="_blank">
+        <font-awesome-icon :icon="['fab', 'facebook-f']"/>
+      </a>
+      <a v-bind:href="'https://www.linkedin.com/shareArticle?mini=true&source=' + encodeURIComponent(url)" target="_blank">
+        <font-awesome-icon prefix="fab" :icon="['fab', 'linkedin-in']"/>
+      </a>
+      </ClientOnly>
+    </div>
 </template>
 
 <style lang='stylus' scoped>
@@ -46,20 +43,20 @@
 
 <script>
 
-let URI = window.location.href || "";
-
 export default {
-  name: "Tip",
-  props: {
-    url: {
-      type: String,
-      default: URI
+  data() {
+    return {
+      url: null,
     }
   },
   computed: {
     tipUrl() {
       return this.$lang === "en-US" ? "/tip/" : "/zh/tip/";
     }
+  },
+  mounted() {
+    this.url = window.location.href
   }
+
 };
 </script>
