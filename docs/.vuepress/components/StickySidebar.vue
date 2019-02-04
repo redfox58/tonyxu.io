@@ -7,7 +7,7 @@
       <a v-bind:href="'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url)" target="_blank">
         <font-awesome-icon :icon="['fab', 'facebook-f']"/>
       </a>
-      <a v-bind:href="'https://www.linkedin.com/shareArticle?mini=true&source=' + encodeURIComponent(url)" target="_blank">
+      <a v-bind:href="'https://www.linkedin.com/sharing/share-offsite?url=' + encodeURIComponent(url)" target="_blank">
         <font-awesome-icon prefix="fab" :icon="['fab', 'linkedin-in']"/>
       </a>
       </ClientOnly>
