@@ -1,0 +1,154 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "",
+    "home_page_url": "https://tonyxu.io",
+    "feed_url": "https://tonyxu.io/feed.json",
+    "items": [
+        {
+            "id": "https://tonyxu.io/posts/2018/be-prepared-for-your-next-job/",
+            "url": "https://tonyxu.io/posts/2018/be-prepared-for-your-next-job/",
+            "title": "Be prepared for your next job",
+            "summary": "Thanks for reading this blog. In this blog I want to share my personal experience on changing my job and some of my thinking that might be helpful for you. I'll keep this blog in high level, and will not talk about job seeking skills, etc.",
+            "date_modified": "2018-07-21T00:00:00.000Z"
+        },
+        {
+            "id": "https://tonyxu.io/posts/2018/cloud-computing-exploration/",
+            "url": "https://tonyxu.io/posts/2018/cloud-computing-exploration/",
+            "title": "Cloud Computing Explorations",
+            "summary": "Talking about my experience with cloud computing, the first experience is when I'm in 11th grade, deploying a proxy application in Google App Engine to get over the Great Fire Wall in China. Later when I'm a freshman in college, I built a website for fun and subscribed shared hosting online. However, I found out that shared hosting has too many restrictions such as you have no control over softwares, so I switched to VPS. I also deployed some instances in AWS for the course project when I'm studying in University of Missouri for master's. After graduation, I tried Heroku as well, for running small demo apps. Although I'm not expert in cloud computing, I had some experiences and knows something about it.",
+            "date_modified": "2018-07-11T00:00:00.000Z"
+        },
+        {
+            "id": "https://tonyxu.io/posts/2018/create-alfred-workflow-for-uploading-screenshot-to-s3/",
+            "url": "https://tonyxu.io/posts/2018/create-alfred-workflow-for-uploading-screenshot-to-s3/",
+            "title": "Create Alfred workflow for uploading screenshot to S3",
+            "summary": "As Markdown markup language gets more and more popular, most people have a need to quickly generate a public url for screenshot/image in clipboard. Today I created an Alfred workflow that helps you upload images/screenshot in clipboard.",
+            "image": "https://tonyxu.io/2018-07-08+21_33_30.gif",
+            "date_modified": "2018-07-08T00:00:00.000Z"
+        },
+        {
+            "id": "https://tonyxu.io/posts/2018/customize-chrome-new-tab-page/",
+            "url": "https://tonyxu.io/posts/2018/customize-chrome-new-tab-page/",
+            "title": "Customize Chrome New Tab Page",
+            "summary": "Have you thought about customizing Chrome new tab page? If so, you must have tried the extensions in Chrome web store to customize your new tab page. If you are not satisfied with any of them, you have the option to build your own new tab page that meets all your expectations.",
+            "image": "https://tonyxu.io/20180803-1.png",
+            "date_modified": "2018-08-03T00:00:00.000Z"
+        },
+        {
+            "id": "https://tonyxu.io/posts/2018/embed-google-analytics-dashboard-on-website/",
+            "url": "https://tonyxu.io/posts/2018/embed-google-analytics-dashboard-on-website/",
+            "title": "Embed Google Analytics Dashboard on Website",
+            "summary": "If you are using Google Analytics to analyze site traffic, you might want to embed those amazing dashboards to your website publicly. While Google doesn't provide iframe solution, it does offer a Google Analytics Embed API which requires a bit more technical knowledge. I'll walk you through each and every step and make sure you don't have to read all developer documentation and can easily build dashboard.",
+            "image": "https://tonyxu.io/Analytics_-_Tony_Xu_2018-10-16_09-52-42.png",
+            "date_modified": "2018-10-15T00:00:00.000Z"
+        },
+        {
+            "id": "https://tonyxu.io/posts/2018/get-started/",
+            "url": "https://tonyxu.io/posts/2018/get-started/",
+            "title": "Preface",
+            "summary": "Today, I decided to start this blog, which I hope can encourage me to think more and summarize more for my work and life.",
+            "date_modified": "2018-07-02T00:00:00.000Z"
+        },
+        {
+            "id": "https://tonyxu.io/posts/2018/http-deprecate-x-prefix/",
+            "url": "https://tonyxu.io/posts/2018/http-deprecate-x-prefix/",
+            "title": "Why we need to deprecate x prefix for HTTP headers?",
+            "summary": "In June, 2012, Internet Engineering Task Force released a new RFC(RFC-6648), recommending deprecation of X- prefix. As LinkedIn also use this type of prefix, I was interested to read this RFC, and explain to you why we need to deprecate it.",
+            "date_modified": "2018-08-01T00:00:00.000Z"
+        },
+        {
+            "id": "https://tonyxu.io/posts/2018/improve-your-ability-to-solve-problem-at-work/",
+            "url": "https://tonyxu.io/posts/2018/improve-your-ability-to-solve-problem-at-work/",
+            "title": "Improve problem-solving skill",
+            "summary": "Problem-solving** skill is the most important skill at work, you need to think about",
+            "date_modified": "2018-07-03T00:00:00.000Z"
+        },
+        {
+            "id": "https://tonyxu.io/posts/2018/oauth2-pkce-flow/",
+            "url": "https://tonyxu.io/posts/2018/oauth2-pkce-flow/",
+            "title": "The OAuth2 flow for native apps: PKCE",
+            "summary": "If you are building a native application, and you need OAuth 2.0, PKCE OAuth is your best choice. Here I will explain why.",
+            "date_modified": "2018-07-24T00:00:00.000Z"
+        },
+        {
+            "id": "https://tonyxu.io/posts/2018/join-linkedin-one-month-summary/",
+            "url": "https://tonyxu.io/posts/2018/join-linkedin-one-month-summary/",
+            "title": "One month summary for joining LinkedIn",
+            "summary": "Today is my so-called one month anniversary at LinkedIn. It's been a fast week, bootcamp, Inday, and a week of shutdown. So it's actually much less than a month.",
+            "date_modified": "2018-07-04T00:00:00.000Z"
+        },
+        {
+            "id": "https://tonyxu.io/posts/2018/rest-api-design-interview-preparation/",
+            "url": "https://tonyxu.io/posts/2018/rest-api-design-interview-preparation/",
+            "title": "REST API Design Interview Preparation",
+            "summary": "REST API has become a very popular concept for designing back-end service interface. Most platforms provide REST API as unified interface for web/native applications. If you are going to interview for a job that will require REST API knowledge, you are encouraged to be well prepared for it. Below is my own summary for REST API interview. Hopefully it's helpful for you as well.",
+            "date_modified": "2018-07-03T00:00:00.000Z"
+        },
+        {
+            "id": "https://tonyxu.io/posts/2018/tech-stack-for-building-your-own-product/",
+            "url": "https://tonyxu.io/posts/2018/tech-stack-for-building-your-own-product/",
+            "title": "Tech stack to build your own product",
+            "summary": "As a software engineer or developer, you might want to build a product end-to-end. These are the frameworks and technologies you might need. All listed items are open-source or free to use.",
+            "date_modified": "2018-07-17T00:00:00.000Z"
+        },
+        {
+            "id": "https://tonyxu.io/posts/2018/technologies-learned-as-a-software-engineer/",
+            "url": "https://tonyxu.io/posts/2018/technologies-learned-as-a-software-engineer/",
+            "title": "Technologies Learned as a Software Engineer",
+            "summary": "As a software engineer, I'm always excited in learning various new technologies. In this blog, I'll keep a list of technology subjects I have already started learning or plan to learn in my life as a software engineer.",
+            "date_modified": "2018-12-06T00:00:00.000Z"
+        },
+        {
+            "id": "https://tonyxu.io/posts/2018/use-firebase-cloud-function-to-count-website-visitors/",
+            "url": "https://tonyxu.io/posts/2018/use-firebase-cloud-function-to-count-website-visitors/",
+            "title": "Use Firebase Cloud Function to Count Website Visitors",
+            "summary": "It's getting popular to use Firebase hosting to host static website, however, you might not know you can still have server-side code hosted in Firebase for your static website, and that is the Firebase Cloud Function. Once of the case you might want to use the Cloud Function is to write something to Firebase database, for example, a hit counter. In this topic, I'll show you how to use Firebase Cloud Function and Firebase Realtime Database to count website visitor.",
+            "date_modified": "2018-08-07T00:00:00.000Z"
+        },
+        {
+            "id": "https://tonyxu.io/posts/2018/ultimate-way-to-beautify-mac-terminal-and-recommendations-for-plugins/",
+            "url": "https://tonyxu.io/posts/2018/ultimate-way-to-beautify-mac-terminal-and-recommendations-for-plugins/",
+            "title": "Ultimate way to beautify Mac terminal (oh-my-zsh) and plugin recommendations",
+            "summary": "If you are using Mac as development machine, Terminal.app must be one of the most used apps. Terminal might be not fancy to begin with, but you can totally make it more elegant and fancy if you follow with me.",
+            "date_modified": "2018-07-26T00:00:00.000Z"
+        },
+        {
+            "id": "https://tonyxu.io/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/",
+            "url": "https://tonyxu.io/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/",
+            "title": "Use GitLab-CI to run free scheduled jobs",
+            "summary": "Use GitLab-CI to run free scheduled jobs",
+            "date_modified": "2018-07-23T00:00:00.000Z"
+        },
+        {
+            "id": "https://tonyxu.io/posts/2018/use-icomoon-to-reduce-fontawesome-size/",
+            "url": "https://tonyxu.io/posts/2018/use-icomoon-to-reduce-fontawesome-size/",
+            "title": "Use IcoMoon to reduce 98% FontAwesome load size",
+            "summary": "FontAwesome is an awesome font library. With fontawesome, it will be super easy to inject icon into your html page. Although the default method is very simple, it has the drawback of taking too much load by loading full set of icons.",
+            "image": "https://tonyxu.io/2018_07_22_20_13_05.png",
+            "date_modified": "2018-07-22T00:00:00.000Z"
+        },
+        {
+            "id": "https://tonyxu.io/posts/2018/use-telegram-and-flask-to-build-notification-server/",
+            "url": "https://tonyxu.io/posts/2018/use-telegram-and-flask-to-build-notification-server/",
+            "title": "Use Telegram and Flask to build personal notification server",
+            "summary": "Use Telegram and Flask to build personal notification server",
+            "date_modified": "2018-07-12T00:00:00.000Z"
+        },
+        {
+            "id": "https://tonyxu.io/posts/2018/write-script-to-scrap-house-rental-price/",
+            "url": "https://tonyxu.io/posts/2018/write-script-to-scrap-house-rental-price/",
+            "title": "Write script to scrap house rent price and send to your phone",
+            "summary": "House rental is a critical thing if you are living in the silicon valley. I'm planning to move to a new apartment, but the price changes often. I want to monitor the price and book it when it drops. In order to do that, I wrote a script to monitor the house rental price and push the result to my phone like below.",
+            "image": "https://tonyxu.io/2018_07_28_22_50_27.png",
+            "date_modified": "2018-07-28T00:00:00.000Z"
+        },
+        {
+            "id": "https://tonyxu.io/posts/2019/use-github-to-mange-personal-knowledge-base/",
+            "url": "https://tonyxu.io/posts/2019/use-github-to-mange-personal-knowledge-base/",
+            "title": "Use GitHub for Knowledge Base and Projects Management",
+            "summary": "GitHub has become the one and only platform for developers. We collaborate on the platform for anything about code. Can GitHub help you anything else besides code? I have recently been frustrated choosing a tool to manage my personal knowledge base, although there are lots of choices such as note apps (Bear, Evernote), project management app (Trello), or knowledge management app (Notion.so), eventually GitHub turned out to my choice which has below pros...",
+            "image": "https://tonyxu.io/github-issues.png",
+            "date_modified": "2019-01-21T00:00:00.000Z"
+        }
+    ]
+}
