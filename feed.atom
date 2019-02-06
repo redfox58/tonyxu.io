@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://tonyxu.io</id>
     <title></title>
-    <updated>2019-02-06T04:17:35.646Z</updated>
+    <updated>2019-02-06T05:05:35.495Z</updated>
     <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
     <link rel="alternate" href="https://tonyxu.io"/>
     <link rel="self" href="https://tonyxu.io/feed.atom"/>
@@ -79,6 +79,14 @@
         <summary type="html"><![CDATA[Today is my so-called one month anniversary at LinkedIn. It's been a fast week, bootcamp, Inday, and a week of shutdown. So it's actually much less than a month.]]></summary>
     </entry>
     <entry>
+        <title type="html"><![CDATA[The OAuth2 flow for native apps: PKCE]]></title>
+        <id>https://tonyxu.io/posts/2018/oauth2-pkce-flow/</id>
+        <link href="https://tonyxu.io/posts/2018/oauth2-pkce-flow/">
+        </link>
+        <updated>2018-07-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[If you are building a native application, and you need OAuth 2.0, PKCE OAuth is your best choice. Here I will explain why.]]></summary>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[REST API Design Interview Preparation]]></title>
         <id>https://tonyxu.io/posts/2018/rest-api-design-interview-preparation/</id>
         <link href="https://tonyxu.io/posts/2018/rest-api-design-interview-preparation/">
@@ -117,14 +125,6 @@
         </link>
         <updated>2018-08-07T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[It's getting popular to use Firebase hosting to host static website, however, you might not know you can still have server-side code hosted in Firebase for your static website, and that is the Firebase Cloud Function. Once of the case you might want to use the Cloud Function is to write something to Firebase database, for example, a hit counter. In this topic, I'll show you how to use Firebase Cloud Function and Firebase Realtime Database to count website visitor.]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[The OAuth2 flow for native apps: PKCE]]></title>
-        <id>https://tonyxu.io/posts/2018/oauth2-pkce-flow/</id>
-        <link href="https://tonyxu.io/posts/2018/oauth2-pkce-flow/">
-        </link>
-        <updated>2018-07-24T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[If you are building a native application, and you need OAuth 2.0, PKCE OAuth is your best choice. Here I will explain why.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Use GitLab-CI to run free scheduled jobs]]></title>
