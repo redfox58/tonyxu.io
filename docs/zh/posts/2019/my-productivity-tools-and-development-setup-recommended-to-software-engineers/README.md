@@ -29,17 +29,17 @@ type: post
 
 ### 台式机
 
-我其实并没有台式机。我的雇主Microsoft为员工提供了每个月150美元的使用额度，所以我创建了一个[Azure Windows 虚拟机](https://azure.microsoft.com/zh-cn/pricing/details/virtual-machines/windows/)作为Windows台式机的替代。 我使用这个虚拟机安装和测试只在Windows能用的软件，例如[Power BI Desktop](https://powerbi.microsoft.com/zh-cn/desktop/).
+我其实并没有台式机。公司提供了每个月在 Azure 150美元的使用额度，所以我创建了一个[Azure Windows 虚拟机](https://azure.microsoft.com/zh-cn/pricing/details/virtual-machines/windows/)作为Windows台式机的替代。 我使用这个虚拟机安装和测试只在Windows能用的软件，例如[Power BI Desktop](https://powerbi.microsoft.com/zh-cn/desktop/).
 
 ### 工作站（公司工位）
 
 👉 [联想 ThinkVision P27h](http://b2b.lenovo.com.cn/ThinkVisionP27h/) (双外接显示器)
 
-作为LinkedIn软件工程师员工的标配，我从笔记本外接到这两台显示器。我通常在主屏幕开Slack窗口，其中一个外接显示器开浏览器，另一个外接显示器开代码编辑器VS Code或者邮箱客户端Outlook。
+公司提供的标配，我从笔记本外接到这两台显示器。我通常在主屏幕开Slack窗口，其中一个外接显示器开浏览器，另一个外接显示器开代码编辑器VS Code或者邮箱客户端Outlook。
 
 👉 [Herman Miller - Renew Sit-to-Stand Desk Rectangular](http://store.hermanmiller.com/office/desks-%7C-sit-to-stand-%7C-tables/renew-sit-to-stand-desk/7090.html?lang=en_US)
 
-作为LinkedIn员工的标配。尽管这款工作台电动调节高度的功能很酷，鼓励人们少坐多站，但我还是喜欢坐着用电脑的时候更舒服。
+公司提供的标配。尽管这款工作台电动调节高度的功能很酷，鼓励人们少坐多站，但我还是喜欢坐着用电脑的时候更舒服。
 
 👉 [苹果 Magic Keyboard（带数字键盘）](https://support.apple.com/kb/SP763?viewlocale=zh_CN)
 

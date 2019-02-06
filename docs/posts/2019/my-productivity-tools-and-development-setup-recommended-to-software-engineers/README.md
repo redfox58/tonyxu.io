@@ -29,17 +29,17 @@ I'm using iPhone X as my mobile phone. I have been an iPhone person ever since 2
 
 ### Desktop
 
-I don't actually have a desktop machine. Since my employer Microsoft has $150 Azure credits for employees so I just created a [Windows VM in Azure](https://azure.microsoft.com/en-us/pricing/details/virtual-machines/windows/) to use as a Windows desktop machine. I used the VM to install/test any software that is only available for Windows, for example, [Power BI Desktop](https://powerbi.microsoft.com/en-us/desktop/).
+I don't actually have a desktop machine. Since my employer has $150 Azure credits for employees so I just created a [Windows VM in Azure](https://azure.microsoft.com/en-us/pricing/details/virtual-machines/windows/) to use as a Windows desktop machine. I used the VM to install/test any software that is only available for Windows, for example, [Power BI Desktop](https://powerbi.microsoft.com/en-us/desktop/).
 
 ### Work Station (where I work)
 
 👉 [ThinkVision P27h](https://www.lenovo.com/us/en/accessories-and-monitors/monitors/professional/P27h-10-27inch-Monitor-HDMI/p/61AFGAR1US) (Dual-monitors)
 
-They are provided to me as a LinkedIn employee. I connect my laptop to two external monitors and I usually have my laptop open slack window, one external monitor open Chrome browser, and one monitor open Outlook/VS Code. It also supports USB Type-C so you can get display output and charging with just one cable.
+Provided for me to use at work. I connect my laptop to two external monitors and I usually have my laptop open slack window, one external monitor open Chrome browser, and one monitor open Outlook/VS Code. It also supports USB Type-C so you can get display output and charging with just one cable.
 
 👉 [Herman Miller - Renew Sit-to-Stand Desk Rectangular](http://store.hermanmiller.com/office/desks-%7C-sit-to-stand-%7C-tables/renew-sit-to-stand-desk/7090.html?lang=en_US)
 
-It's provided to me as a LinkedIn employee. Although it's cool and encourages you to stand to work to keep healthy, I felt more comfortable sitting behind it.
+Provided for me to use at work. Although it's cool and encourages you to stand to work to keep healthy, I felt more comfortable sitting behind it.
 
 👉 [Apple Magic Keyboard with Numeric Keypad](https://support.apple.com/kb/SP763?locale=en_US)
 
