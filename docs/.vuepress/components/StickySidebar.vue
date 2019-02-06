@@ -49,7 +49,7 @@ export default {
       return this.$lang === "en-US" ? "/tip/" : "/zh/tip/";
     },
     url() {
-      return `https://tonyxu.io/${this.$page.path}`
+      return `https://tonyxu.io${this.$page.path}`
     }
   }
 };
