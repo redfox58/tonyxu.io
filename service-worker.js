@@ -21,11 +21,11 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "1f50bd56657ebe79b7b9dc50becfa37b"
+    "revision": "1c71c4944203a9d332f6a64623f86902"
   },
   {
     "url": "about/index.html",
-    "revision": "1d534670ede2f17cfc4dfad45ed2081e"
+    "revision": "101c99fe723d3db5dd737c9a760781fc"
   },
   {
     "url": "android-chrome-192x192.png",
@@ -180,8 +180,8 @@ self.__precacheManifest = [
     "revision": "e5f73114112554dc437b0e28fc9bf971"
   },
   {
-    "url": "assets/js/17.f9179ec4.js",
-    "revision": "887b411893b6f1f79997544a48e28e3e"
+    "url": "assets/js/17.39f4c19c.js",
+    "revision": "42c81acb3376c299d8e22fe34dec96b7"
   },
   {
     "url": "assets/js/18.8eaa90fb.js",
@@ -200,12 +200,12 @@ self.__precacheManifest = [
     "revision": "510719d535ccef46dbfdd825760eb3d0"
   },
   {
-    "url": "assets/js/21.afce8684.js",
-    "revision": "6eb63ab35c0e878b89bebf6d0709016f"
+    "url": "assets/js/21.c41a59d0.js",
+    "revision": "756c31ac6876e91fea6f62620516de20"
   },
   {
-    "url": "assets/js/22.fbf4a483.js",
-    "revision": "b7f1d55584d15931f6e7003230bf7e5d"
+    "url": "assets/js/22.88902f7d.js",
+    "revision": "a9fd6e6213ee80dacbc6f0be35fa91eb"
   },
   {
     "url": "assets/js/23.a915a731.js",
@@ -268,32 +268,32 @@ self.__precacheManifest = [
     "revision": "f4c2c237e14d45ef66ab4c38242a394e"
   },
   {
-    "url": "assets/js/37.5585ee9c.js",
-    "revision": "48839d670d21bea4d78707892dcf1194"
+    "url": "assets/js/37.138fb01d.js",
+    "revision": "5d167db429ca8dd8790b0ba89a34b0c0"
   },
   {
-    "url": "assets/js/38.1022c3b1.js",
-    "revision": "dc7936b108bfbc31823ebc650e29fdac"
+    "url": "assets/js/38.4cf83dc0.js",
+    "revision": "06c4e7a380e522e78ba5c08ac5aa1741"
   },
   {
-    "url": "assets/js/39.fb8dc8f4.js",
-    "revision": "e44afe80bf9981cc78d74f2e365b572b"
+    "url": "assets/js/39.3f0930ee.js",
+    "revision": "e9660ff19c05f119ba9f1ff91fda3e77"
   },
   {
     "url": "assets/js/4.2154a788.js",
     "revision": "d108cf23ffbcfbd509324a6c63a593ca"
   },
   {
-    "url": "assets/js/40.34e7d783.js",
-    "revision": "73827b0920736c979cee77d47a3fac94"
+    "url": "assets/js/40.836281ed.js",
+    "revision": "75a5bfac0658dda23fcee6fa4e30469e"
   },
   {
-    "url": "assets/js/41.9c7c4350.js",
-    "revision": "62987c8a844139559c2d11a08c50bdc3"
+    "url": "assets/js/41.76483b2d.js",
+    "revision": "953965fc8302de94e9a83f463a7a7f4e"
   },
   {
-    "url": "assets/js/42.f1b2d6e9.js",
-    "revision": "fc3158298691e2b452599eef0b55a50a"
+    "url": "assets/js/42.0d5e3aa7.js",
+    "revision": "2704cf097f4e7d2f1fabc50af376dbc1"
   },
   {
     "url": "assets/js/43.bc6cf937.js",
@@ -308,8 +308,8 @@ self.__precacheManifest = [
     "revision": "caae0a50972bed930763568b9811a9d8"
   },
   {
-    "url": "assets/js/46.4c529482.js",
-    "revision": "405e916e0fec67261ed63078a60b4f5b"
+    "url": "assets/js/46.8235d1f4.js",
+    "revision": "7b4dd763f4f056ee89566af83f6308a8"
   },
   {
     "url": "assets/js/47.3e5866d6.js",
@@ -396,12 +396,12 @@ self.__precacheManifest = [
     "revision": "0d6c4cb290ccfa57d99b439f6c4952b5"
   },
   {
-    "url": "assets/js/66.1cea7c50.js",
-    "revision": "3cdf7d14c20fab1de04ca326783b4518"
+    "url": "assets/js/66.ce98a788.js",
+    "revision": "7b1ab509355a3bb832e2b300f54ef532"
   },
   {
-    "url": "assets/js/67.59f4b319.js",
-    "revision": "eee538fead0b3b59c9e1fa8837d7ce9b"
+    "url": "assets/js/67.71de99a0.js",
+    "revision": "1f3cbb25d845b9469d260fcf775762d2"
   },
   {
     "url": "assets/js/68.e981cbbb.js",
@@ -420,8 +420,8 @@ self.__precacheManifest = [
     "revision": "6a280f5e8a3a29f937d39580a06be42d"
   },
   {
-    "url": "assets/js/app.1e73dc44.js",
-    "revision": "040511bb4bf32496c97c2a1cca57f236"
+    "url": "assets/js/app.e62034fa.js",
+    "revision": "7643d0fae5c8328a5969c480d5495e23"
   },
   {
     "url": "favicon-16x16.png",
@@ -433,11 +433,11 @@ self.__precacheManifest = [
   },
   {
     "url": "friends/index.html",
-    "revision": "fb96c3df783c1471b5606427e2248f89"
+    "revision": "bde272e5449709bf0821724107945d90"
   },
   {
     "url": "index.html",
-    "revision": "4fb4bc3d45b5efa58449cfe9debfff4d"
+    "revision": "333e5dd5d3c9f83e4fb2e116fc223cde"
   },
   {
     "url": "mstile-150x150.png",
@@ -445,103 +445,103 @@ self.__precacheManifest = [
   },
   {
     "url": "posts/2018/be-prepared-for-your-next-job/index.html",
-    "revision": "b1e76d144c77a83d77606c1e2b4debdb"
+    "revision": "53194eb140069eae48625aebec3a6b97"
   },
   {
     "url": "posts/2018/cloud-computing-exploration/index.html",
-    "revision": "21accf8b9bec91b692fc7f632c0b602e"
+    "revision": "4a132b287b2b9416ad535f51d5d1374b"
   },
   {
     "url": "posts/2018/create-alfred-workflow-for-uploading-screenshot-to-s3/index.html",
-    "revision": "d36eb1f3b230406d48638c2637693619"
+    "revision": "4da3a946ffdc4a80bc27370e57c79225"
   },
   {
     "url": "posts/2018/customize-chrome-new-tab-page/index.html",
-    "revision": "f000ed0d2dcae375543f05f4c53e53c9"
+    "revision": "48f66f315ffe0a5ba198ac615f13de97"
   },
   {
     "url": "posts/2018/embed-google-analytics-dashboard-on-website/index.html",
-    "revision": "710949c14f63dfacf0d49aef9fa07638"
+    "revision": "71f361c43899f031098c0e32e9ebbe1d"
   },
   {
     "url": "posts/2018/get-started/index.html",
-    "revision": "a80f646d4570238568c54f39eb94f16e"
+    "revision": "47716c79fe4cd83085bc844508e958f6"
   },
   {
     "url": "posts/2018/http-deprecate-x-prefix/index.html",
-    "revision": "499b0cde4acb1391e29aab4b553e8802"
+    "revision": "65d0291751740a0649c17f929a165c4a"
   },
   {
     "url": "posts/2018/improve-your-ability-to-solve-problem-at-work/index.html",
-    "revision": "9089ef28a7ae808f8ea14ade5d47a168"
+    "revision": "95a71cbe668763a8dd62321850a11774"
   },
   {
     "url": "posts/2018/index.html",
-    "revision": "52abcc529f096e1edc418e5291ac1e89"
+    "revision": "a1ec583fbbb4e2f7bbc61500e554aba8"
   },
   {
     "url": "posts/2018/join-linkedin-one-month-summary/index.html",
-    "revision": "39bab2e9c2b87031f7dccdb2f17c6b80"
+    "revision": "cb96c0d184a1eeb52edf6465273cfeef"
   },
   {
     "url": "posts/2018/oauth2-pkce-flow/index.html",
-    "revision": "daecac951d1fc624e3c4cbba3cf996d1"
+    "revision": "3010ee94f71750b2ed7ab2758f64adff"
   },
   {
     "url": "posts/2018/rest-api-design-interview-preparation/index.html",
-    "revision": "ac29cff7c675f68ba5d4ac0d9f913738"
+    "revision": "e2404528368e4a893493dc0162450aa4"
   },
   {
     "url": "posts/2018/tech-stack-for-building-your-own-product/index.html",
-    "revision": "7afec37ff070b0181712875054fda7ad"
+    "revision": "6811d09ff5ebb232002e31b412d97664"
   },
   {
     "url": "posts/2018/technologies-learned-as-a-software-engineer/index.html",
-    "revision": "5a18851f0f163f64f987a1599cd7389b"
+    "revision": "74a15b20e55ed09e292f756d4f3147a6"
   },
   {
     "url": "posts/2018/ultimate-way-to-beautify-mac-terminal-and-recommendations-for-plugins/index.html",
-    "revision": "ce8be7296d49c1b698aaaa738075d480"
+    "revision": "48bc3b0114c582eca951194e841d916c"
   },
   {
     "url": "posts/2018/use-firebase-cloud-function-to-count-website-visitors/index.html",
-    "revision": "a03c996b7b18b2f59b3523b038b302b5"
+    "revision": "2879329a7f33658d00c3a4e53cd465a9"
   },
   {
     "url": "posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/index.html",
-    "revision": "945df855f8c9cdf2a9f341a08c4bbbfc"
+    "revision": "ca88245875be1698a1902ca84ee36e3d"
   },
   {
     "url": "posts/2018/use-icomoon-to-reduce-fontawesome-size/index.html",
-    "revision": "be7dfbbcba638a1c2650ee9ab843c22e"
+    "revision": "3328a201230db1695ae159f416e45330"
   },
   {
     "url": "posts/2018/use-telegram-and-flask-to-build-notification-server/index.html",
-    "revision": "7b74e2efdb36931792eb238f0c00a582"
+    "revision": "5ea75e29cf3c1098d1ace7f370580cc1"
   },
   {
     "url": "posts/2018/write-script-to-scrap-house-rental-price/index.html",
-    "revision": "5fe2c00365d503e94cdd397a01efcad3"
+    "revision": "d6c6ac57486f2599d9b11066aa12a0f2"
   },
   {
     "url": "posts/2019/index.html",
-    "revision": "2143ff42ec15ad90bbc19ce0f27b94fa"
+    "revision": "a101c774699d606a5b13c238294d52e4"
   },
   {
     "url": "posts/2019/my-productivity-tools-and-development-setup-recommended-to-software-engineers/index.html",
-    "revision": "4b482913127a4c51dd2309d5a65e8d8a"
+    "revision": "89ff003ede325d6ce8aae3f7833a09c6"
   },
   {
     "url": "posts/2019/use-github-to-mange-personal-knowledge-base/index.html",
-    "revision": "63eef50645465e57c73b7a50350855f5"
+    "revision": "ef9917181dda56b95a7fce9360579876"
   },
   {
     "url": "posts/index.html",
-    "revision": "4b4d5271517b6801b7173a3f2d92a34f"
+    "revision": "b432439fb6c13440e50f6608cf509a40"
   },
   {
     "url": "projects/index.html",
-    "revision": "ca01b55850a31252d7d297065d68791e"
+    "revision": "b7af1ff00033503235e742a0ea0f8d7f"
   },
   {
     "url": "tip/alipay_barcode.jpg",
@@ -549,7 +549,7 @@ self.__precacheManifest = [
   },
   {
     "url": "tip/index.html",
-    "revision": "b4fb275931406a560bac79399008cefc"
+    "revision": "9f9539664679daf1e49dd2efd482719c"
   },
   {
     "url": "tip/paypal_barcode.jpg",
@@ -565,119 +565,119 @@ self.__precacheManifest = [
   },
   {
     "url": "zh/about/index.html",
-    "revision": "6f336e3a796b14f0e07c4d0d6b973d5b"
+    "revision": "8992920d33aa045807ec5d6ac6f60c40"
   },
   {
     "url": "zh/friends/index.html",
-    "revision": "4e42e29ba157b13b6f3785ff47f57c32"
+    "revision": "0f2579fc04705556ae9175b9e14f77d8"
   },
   {
     "url": "zh/index.html",
-    "revision": "8c64a522c6a8b437533043098865b73a"
+    "revision": "789cbf118235d3d7266e52614ecdbccd"
   },
   {
     "url": "zh/posts/2018/be-prepared-for-your-next-job/index.html",
-    "revision": "12dab3ea68b94ed68e2a1f591accdc31"
+    "revision": "bf749959cdf2eb0b1c4eebcb1e7702c5"
   },
   {
     "url": "zh/posts/2018/cloud-computing-exploration/index.html",
-    "revision": "39c440b251cbc4552ffbe9f9734cf2c7"
+    "revision": "317e4754c23471745e9827a6fddd6c34"
   },
   {
     "url": "zh/posts/2018/create-alfred-workflow-for-uploading-screenshot-to-s3/index.html",
-    "revision": "051190b84fa502a821c06cadaa0dd38c"
+    "revision": "d67872dd930e3dc7eb9dbec651db4f6b"
   },
   {
     "url": "zh/posts/2018/customize-chrome-new-tab-page/index.html",
-    "revision": "e3eae9708e8fe251ee3f83c6c883ec44"
+    "revision": "fd42d6bfa88f8ee4a48f0a706663d879"
   },
   {
     "url": "zh/posts/2018/embed-google-analytics-dashboard-on-website/index.html",
-    "revision": "3980b307fedaa7252e6a2d330d4c7599"
+    "revision": "210a5f689511de1a4612facbe7af37a6"
   },
   {
     "url": "zh/posts/2018/get-started/index.html",
-    "revision": "7d0ffa50b69bd18f18f15bdeb44465b8"
+    "revision": "5de2e542b71dad371af8d9b84593fbce"
   },
   {
     "url": "zh/posts/2018/http-deprecate-x-prefix/index.html",
-    "revision": "35a27969a44186af412b647546e4ad26"
+    "revision": "c62715dd11b0bf5aa32bd7b8930acb7f"
   },
   {
     "url": "zh/posts/2018/improve-your-ability-to-solve-problem-at-work/index.html",
-    "revision": "adf7c5da8333e88858e4b2372d53d8a8"
+    "revision": "6a9f71c3f0906eb58bad471d310bc018"
   },
   {
     "url": "zh/posts/2018/index.html",
-    "revision": "8c0ffab85f8eafdf8010516de46cc291"
+    "revision": "15a62de19f4ab66d73b5871a19d9bac4"
   },
   {
     "url": "zh/posts/2018/join-linkedin-one-month-summary/index.html",
-    "revision": "842ad80965bb8db0f0e0c0561ea72e85"
+    "revision": "eea49629defc858868dd9aac316bbc27"
   },
   {
     "url": "zh/posts/2018/oauth2-pkce-flow/index.html",
-    "revision": "5b6a917dc13e5abf9f0cd64762e3bc3d"
+    "revision": "012421416122306e4c545fe739277266"
   },
   {
     "url": "zh/posts/2018/rest-api-design-interview-preparation/index.html",
-    "revision": "7442788af12d40941458f8544f710e50"
+    "revision": "a4f0fc919289420ce8c074b1cb34ba00"
   },
   {
     "url": "zh/posts/2018/tech-stack-for-building-your-own-product/index.html",
-    "revision": "b3eedf3d71b1082d3da6a97767559109"
+    "revision": "1cd54d32bad7c40e193db1939ee5881e"
   },
   {
     "url": "zh/posts/2018/technologies-learned-as-a-software-engineer/index.html",
-    "revision": "b0a2939b93ccd983f9aa6df3f98c0f3c"
+    "revision": "83cd3ee12f497fc8ce7b981c3f476d05"
   },
   {
     "url": "zh/posts/2018/ultimate-way-to-beautify-mac-terminal-and-recommendations-for-plugins/index.html",
-    "revision": "659af90a5a5e4ebce693ae87c337dfe2"
+    "revision": "fd9d13827c21d7965e4a331da21e96eb"
   },
   {
     "url": "zh/posts/2018/use-firebase-cloud-function-to-count-website-visitors/index.html",
-    "revision": "95faa5b2affa5b3a80369a750b64c70e"
+    "revision": "8eef890a051415663120cee78aa34f0e"
   },
   {
     "url": "zh/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/index.html",
-    "revision": "99f25c3ccd88ffcb7efda2b6a86bc99f"
+    "revision": "b5fbabcdea338a3d3726c0973a15928d"
   },
   {
     "url": "zh/posts/2018/use-icomoon-to-reduce-fontawesome-size/index.html",
-    "revision": "b14ab50ca3966b2c3f9cef5cd4982b2c"
+    "revision": "c59c52ced7ce57448a746588a8f83a34"
   },
   {
     "url": "zh/posts/2018/use-telegram-and-flask-to-build-notification-server/index.html",
-    "revision": "f0e2c67dd4b21fea40b2ddf1d41ecac9"
+    "revision": "52ac90defddc24202eac0c2795c7cfa6"
   },
   {
     "url": "zh/posts/2018/write-script-to-scrap-house-rental-price/index.html",
-    "revision": "231728ae0279f67a62948f5bbcf29007"
+    "revision": "9a1c6d0756c7adeadc4e4afa1d34a1d2"
   },
   {
     "url": "zh/posts/2019/index.html",
-    "revision": "e07b4495d5092054cb3cf620d8b8233a"
+    "revision": "17ab169bd7e59875637c951d95fb562c"
   },
   {
     "url": "zh/posts/2019/my-productivity-tools-and-development-setup-recommended-to-software-engineers/index.html",
-    "revision": "1f7840187f85df7fe930c5d4508fe255"
+    "revision": "2a91e0de68072b0685cdf4381f8f7fa6"
   },
   {
     "url": "zh/posts/2019/use-github-to-mange-personal-knowledge-base/index.html",
-    "revision": "4cacc3ebcd80131b7e33e847f739dd2b"
+    "revision": "825a8beda1ad9d7f5976e82092be2798"
   },
   {
     "url": "zh/posts/index.html",
-    "revision": "3937d8f1c7409d04db524c1a54c9450f"
+    "revision": "0eecb186d49b5ca3898a796c317218b2"
   },
   {
     "url": "zh/projects/index.html",
-    "revision": "3fa595cb079d7158912f00f8083b7138"
+    "revision": "9b1f03de56057c78a82bee4f3ee4b89a"
   },
   {
     "url": "zh/tip/index.html",
-    "revision": "bfcf58d6a6d7fe926020eac4b632eded"
+    "revision": "a3f715e619bf50d6bf5ff862c9c4dc3b"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
