@@ -17,7 +17,6 @@ export default {
   props: ['year'],
   computed: {
     years() {
-      console.log(this.year)
       if (this.year) {
         return [this.year]
       }

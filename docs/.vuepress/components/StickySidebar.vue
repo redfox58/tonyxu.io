@@ -49,7 +49,6 @@ export default {
       return this.$lang === "en-US" ? "/tip/" : "/zh/tip/";
     },
     url() {
-      console.log(this.$page.path)
       return `https://tonyxu.io/${this.$page.path}`
     }
   }
