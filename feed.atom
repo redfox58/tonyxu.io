@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://tonyxu.io</id>
     <title></title>
-    <updated>2019-02-05T06:37:17.818Z</updated>
+    <updated>2019-02-06T02:55:52.437Z</updated>
     <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
     <link rel="alternate" href="https://tonyxu.io"/>
     <link rel="self" href="https://tonyxu.io/feed.atom"/>
@@ -71,20 +71,20 @@
         <summary type="html"><![CDATA[Problem-solving** skill is the most important skill at work, you need to think about]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[The OAuth2 flow for native apps: PKCE]]></title>
-        <id>https://tonyxu.io/posts/2018/oauth2-pkce-flow/</id>
-        <link href="https://tonyxu.io/posts/2018/oauth2-pkce-flow/">
-        </link>
-        <updated>2018-07-24T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[If you are building a native application, and you need OAuth 2.0, PKCE OAuth is your best choice. Here I will explain why.]]></summary>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[One month summary for joining LinkedIn]]></title>
         <id>https://tonyxu.io/posts/2018/join-linkedin-one-month-summary/</id>
         <link href="https://tonyxu.io/posts/2018/join-linkedin-one-month-summary/">
         </link>
         <updated>2018-07-04T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Today is my so-called one month anniversary at LinkedIn. It's been a fast week, bootcamp, Inday, and a week of shutdown. So it's actually much less than a month.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The OAuth2 flow for native apps: PKCE]]></title>
+        <id>https://tonyxu.io/posts/2018/oauth2-pkce-flow/</id>
+        <link href="https://tonyxu.io/posts/2018/oauth2-pkce-flow/">
+        </link>
+        <updated>2018-07-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[If you are building a native application, and you need OAuth 2.0, PKCE OAuth is your best choice. Here I will explain why.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[REST API Design Interview Preparation]]></title>
@@ -111,14 +111,6 @@
         <summary type="html"><![CDATA[As a software engineer, I'm always excited in learning various new technologies. In this blog, I'll keep a list of technology subjects I have already started learning or plan to learn in my life as a software engineer.]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Use Firebase Cloud Function to Count Website Visitors]]></title>
-        <id>https://tonyxu.io/posts/2018/use-firebase-cloud-function-to-count-website-visitors/</id>
-        <link href="https://tonyxu.io/posts/2018/use-firebase-cloud-function-to-count-website-visitors/">
-        </link>
-        <updated>2018-08-07T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[It's getting popular to use Firebase hosting to host static website, however, you might not know you can still have server-side code hosted in Firebase for your static website, and that is the Firebase Cloud Function. Once of the case you might want to use the Cloud Function is to write something to Firebase database, for example, a hit counter. In this topic, I'll show you how to use Firebase Cloud Function and Firebase Realtime Database to count website visitor.]]></summary>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[Ultimate way to beautify Mac terminal (oh-my-zsh) and plugin recommendations]]></title>
         <id>https://tonyxu.io/posts/2018/ultimate-way-to-beautify-mac-terminal-and-recommendations-for-plugins/</id>
         <link href="https://tonyxu.io/posts/2018/ultimate-way-to-beautify-mac-terminal-and-recommendations-for-plugins/">
@@ -127,12 +119,12 @@
         <summary type="html"><![CDATA[If you are using Mac as development machine, Terminal.app must be one of the most used apps. Terminal might be not fancy to begin with, but you can totally make it more elegant and fancy if you follow with me.]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Use GitLab-CI to run free scheduled jobs]]></title>
-        <id>https://tonyxu.io/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/</id>
-        <link href="https://tonyxu.io/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/">
+        <title type="html"><![CDATA[Use Firebase Cloud Function to Count Website Visitors]]></title>
+        <id>https://tonyxu.io/posts/2018/use-firebase-cloud-function-to-count-website-visitors/</id>
+        <link href="https://tonyxu.io/posts/2018/use-firebase-cloud-function-to-count-website-visitors/">
         </link>
-        <updated>2018-07-23T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Use GitLab-CI to run free scheduled jobs]]></summary>
+        <updated>2018-08-07T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[It's getting popular to use Firebase hosting to host static website, however, you might not know you can still have server-side code hosted in Firebase for your static website, and that is the Firebase Cloud Function. Once of the case you might want to use the Cloud Function is to write something to Firebase database, for example, a hit counter. In this topic, I'll show you how to use Firebase Cloud Function and Firebase Realtime Database to count website visitor.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Use IcoMoon to reduce 98% FontAwesome load size]]></title>
@@ -141,6 +133,14 @@
         </link>
         <updated>2018-07-22T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[FontAwesome is an awesome font library. With fontawesome, it will be super easy to inject icon into your html page. Although the default method is very simple, it has the drawback of taking too much load by loading full set of icons.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Use GitLab-CI to run free scheduled jobs]]></title>
+        <id>https://tonyxu.io/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/</id>
+        <link href="https://tonyxu.io/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/">
+        </link>
+        <updated>2018-07-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Use GitLab-CI to run free scheduled jobs]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Use Telegram and Flask to build personal notification server]]></title>
@@ -159,11 +159,11 @@
         <summary type="html"><![CDATA[House rental is a critical thing if you are living in the silicon valley. I'm planning to move to a new apartment, but the price changes often. I want to monitor the price and book it when it drops. In order to do that, I wrote a script to monitor the house rental price and push the result to my phone like below.]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Use GitHub for Knowledge Base and Projects Management]]></title>
-        <id>https://tonyxu.io/posts/2019/use-github-to-mange-personal-knowledge-base/</id>
-        <link href="https://tonyxu.io/posts/2019/use-github-to-mange-personal-knowledge-base/">
+        <title type="html"><![CDATA[My Productivity Tools and Development Setup Recommended to Software Engineers]]></title>
+        <id>https://tonyxu.io/posts/2019/my-productivity-tools-and-development-setup-recommended-to-software-engineers/</id>
+        <link href="https://tonyxu.io/posts/2019/my-productivity-tools-and-development-setup-recommended-to-software-engineers/">
         </link>
-        <updated>2019-01-21T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[GitHub has become the one and only platform for developers. We collaborate on the platform for anything about code. Can GitHub help you anything else besides code? I have recently been frustrated choosing a tool to manage my personal knowledge base, although there are lots of choices such as note apps (Bear, Evernote), project management app (Trello), or knowledge management app (Notion.so), eventually GitHub turned out to my choice which has below pros...]]></summary>
+        <updated>2019-02-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[My Productivity Tools and Development Setup Recommended to Software Engineers]]></summary>
     </entry>
 </feed>

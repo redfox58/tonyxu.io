@@ -64,18 +64,18 @@
             "date_modified": "2018-07-03T00:00:00.000Z"
         },
         {
-            "id": "https://tonyxu.io/posts/2018/oauth2-pkce-flow/",
-            "url": "https://tonyxu.io/posts/2018/oauth2-pkce-flow/",
-            "title": "The OAuth2 flow for native apps: PKCE",
-            "summary": "If you are building a native application, and you need OAuth 2.0, PKCE OAuth is your best choice. Here I will explain why.",
-            "date_modified": "2018-07-24T00:00:00.000Z"
-        },
-        {
             "id": "https://tonyxu.io/posts/2018/join-linkedin-one-month-summary/",
             "url": "https://tonyxu.io/posts/2018/join-linkedin-one-month-summary/",
             "title": "One month summary for joining LinkedIn",
             "summary": "Today is my so-called one month anniversary at LinkedIn. It's been a fast week, bootcamp, Inday, and a week of shutdown. So it's actually much less than a month.",
             "date_modified": "2018-07-04T00:00:00.000Z"
+        },
+        {
+            "id": "https://tonyxu.io/posts/2018/oauth2-pkce-flow/",
+            "url": "https://tonyxu.io/posts/2018/oauth2-pkce-flow/",
+            "title": "The OAuth2 flow for native apps: PKCE",
+            "summary": "If you are building a native application, and you need OAuth 2.0, PKCE OAuth is your best choice. Here I will explain why.",
+            "date_modified": "2018-07-24T00:00:00.000Z"
         },
         {
             "id": "https://tonyxu.io/posts/2018/rest-api-design-interview-preparation/",
@@ -99,13 +99,6 @@
             "date_modified": "2018-12-06T00:00:00.000Z"
         },
         {
-            "id": "https://tonyxu.io/posts/2018/use-firebase-cloud-function-to-count-website-visitors/",
-            "url": "https://tonyxu.io/posts/2018/use-firebase-cloud-function-to-count-website-visitors/",
-            "title": "Use Firebase Cloud Function to Count Website Visitors",
-            "summary": "It's getting popular to use Firebase hosting to host static website, however, you might not know you can still have server-side code hosted in Firebase for your static website, and that is the Firebase Cloud Function. Once of the case you might want to use the Cloud Function is to write something to Firebase database, for example, a hit counter. In this topic, I'll show you how to use Firebase Cloud Function and Firebase Realtime Database to count website visitor.",
-            "date_modified": "2018-08-07T00:00:00.000Z"
-        },
-        {
             "id": "https://tonyxu.io/posts/2018/ultimate-way-to-beautify-mac-terminal-and-recommendations-for-plugins/",
             "url": "https://tonyxu.io/posts/2018/ultimate-way-to-beautify-mac-terminal-and-recommendations-for-plugins/",
             "title": "Ultimate way to beautify Mac terminal (oh-my-zsh) and plugin recommendations",
@@ -113,11 +106,11 @@
             "date_modified": "2018-07-26T00:00:00.000Z"
         },
         {
-            "id": "https://tonyxu.io/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/",
-            "url": "https://tonyxu.io/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/",
-            "title": "Use GitLab-CI to run free scheduled jobs",
-            "summary": "Use GitLab-CI to run free scheduled jobs",
-            "date_modified": "2018-07-23T00:00:00.000Z"
+            "id": "https://tonyxu.io/posts/2018/use-firebase-cloud-function-to-count-website-visitors/",
+            "url": "https://tonyxu.io/posts/2018/use-firebase-cloud-function-to-count-website-visitors/",
+            "title": "Use Firebase Cloud Function to Count Website Visitors",
+            "summary": "It's getting popular to use Firebase hosting to host static website, however, you might not know you can still have server-side code hosted in Firebase for your static website, and that is the Firebase Cloud Function. Once of the case you might want to use the Cloud Function is to write something to Firebase database, for example, a hit counter. In this topic, I'll show you how to use Firebase Cloud Function and Firebase Realtime Database to count website visitor.",
+            "date_modified": "2018-08-07T00:00:00.000Z"
         },
         {
             "id": "https://tonyxu.io/posts/2018/use-icomoon-to-reduce-fontawesome-size/",
@@ -126,6 +119,13 @@
             "summary": "FontAwesome is an awesome font library. With fontawesome, it will be super easy to inject icon into your html page. Although the default method is very simple, it has the drawback of taking too much load by loading full set of icons.",
             "image": "https://tonyxu.io/2018_07_22_20_13_05.png",
             "date_modified": "2018-07-22T00:00:00.000Z"
+        },
+        {
+            "id": "https://tonyxu.io/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/",
+            "url": "https://tonyxu.io/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/",
+            "title": "Use GitLab-CI to run free scheduled jobs",
+            "summary": "Use GitLab-CI to run free scheduled jobs",
+            "date_modified": "2018-07-23T00:00:00.000Z"
         },
         {
             "id": "https://tonyxu.io/posts/2018/use-telegram-and-flask-to-build-notification-server/",
@@ -143,12 +143,11 @@
             "date_modified": "2018-07-28T00:00:00.000Z"
         },
         {
-            "id": "https://tonyxu.io/posts/2019/use-github-to-mange-personal-knowledge-base/",
-            "url": "https://tonyxu.io/posts/2019/use-github-to-mange-personal-knowledge-base/",
-            "title": "Use GitHub for Knowledge Base and Projects Management",
-            "summary": "GitHub has become the one and only platform for developers. We collaborate on the platform for anything about code. Can GitHub help you anything else besides code? I have recently been frustrated choosing a tool to manage my personal knowledge base, although there are lots of choices such as note apps (Bear, Evernote), project management app (Trello), or knowledge management app (Notion.so), eventually GitHub turned out to my choice which has below pros...",
-            "image": "https://tonyxu.io/github-issues.png",
-            "date_modified": "2019-01-21T00:00:00.000Z"
+            "id": "https://tonyxu.io/posts/2019/my-productivity-tools-and-development-setup-recommended-to-software-engineers/",
+            "url": "https://tonyxu.io/posts/2019/my-productivity-tools-and-development-setup-recommended-to-software-engineers/",
+            "title": "My Productivity Tools and Development Setup Recommended to Software Engineers",
+            "summary": "My Productivity Tools and Development Setup Recommended to Software Engineers",
+            "date_modified": "2019-02-01T00:00:00.000Z"
         }
     ]
 }

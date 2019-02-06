@@ -4,7 +4,7 @@
         <title></title>
         <link>https://tonyxu.io</link>
         <description></description>
-        <lastBuildDate>Tue, 05 Feb 2019 06:37:17 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 06 Feb 2019 02:55:52 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <atom:link href="https://tonyxu.io/feed.atom" rel="self" type="application/rss+xml"/>
@@ -71,18 +71,18 @@
             <description><![CDATA[Problem-solving** skill is the most important skill at work, you need to think about]]></description>
         </item>
         <item>
-            <title><![CDATA[The OAuth2 flow for native apps: PKCE]]></title>
-            <link>https://tonyxu.io/posts/2018/oauth2-pkce-flow/</link>
-            <guid>https://tonyxu.io/posts/2018/oauth2-pkce-flow/</guid>
-            <pubDate>Tue, 24 Jul 2018 00:00:00 GMT</pubDate>
-            <description><![CDATA[If you are building a native application, and you need OAuth 2.0, PKCE OAuth is your best choice. Here I will explain why.]]></description>
-        </item>
-        <item>
             <title><![CDATA[One month summary for joining LinkedIn]]></title>
             <link>https://tonyxu.io/posts/2018/join-linkedin-one-month-summary/</link>
             <guid>https://tonyxu.io/posts/2018/join-linkedin-one-month-summary/</guid>
             <pubDate>Wed, 04 Jul 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[Today is my so-called one month anniversary at LinkedIn. It's been a fast week, bootcamp, Inday, and a week of shutdown. So it's actually much less than a month.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[The OAuth2 flow for native apps: PKCE]]></title>
+            <link>https://tonyxu.io/posts/2018/oauth2-pkce-flow/</link>
+            <guid>https://tonyxu.io/posts/2018/oauth2-pkce-flow/</guid>
+            <pubDate>Tue, 24 Jul 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[If you are building a native application, and you need OAuth 2.0, PKCE OAuth is your best choice. Here I will explain why.]]></description>
         </item>
         <item>
             <title><![CDATA[REST API Design Interview Preparation]]></title>
@@ -106,13 +106,6 @@
             <description><![CDATA[As a software engineer, I'm always excited in learning various new technologies. In this blog, I'll keep a list of technology subjects I have already started learning or plan to learn in my life as a software engineer.]]></description>
         </item>
         <item>
-            <title><![CDATA[Use Firebase Cloud Function to Count Website Visitors]]></title>
-            <link>https://tonyxu.io/posts/2018/use-firebase-cloud-function-to-count-website-visitors/</link>
-            <guid>https://tonyxu.io/posts/2018/use-firebase-cloud-function-to-count-website-visitors/</guid>
-            <pubDate>Tue, 07 Aug 2018 00:00:00 GMT</pubDate>
-            <description><![CDATA[It's getting popular to use Firebase hosting to host static website, however, you might not know you can still have server-side code hosted in Firebase for your static website, and that is the Firebase Cloud Function. Once of the case you might want to use the Cloud Function is to write something to Firebase database, for example, a hit counter. In this topic, I'll show you how to use Firebase Cloud Function and Firebase Realtime Database to count website visitor.]]></description>
-        </item>
-        <item>
             <title><![CDATA[Ultimate way to beautify Mac terminal (oh-my-zsh) and plugin recommendations]]></title>
             <link>https://tonyxu.io/posts/2018/ultimate-way-to-beautify-mac-terminal-and-recommendations-for-plugins/</link>
             <guid>https://tonyxu.io/posts/2018/ultimate-way-to-beautify-mac-terminal-and-recommendations-for-plugins/</guid>
@@ -120,11 +113,11 @@
             <description><![CDATA[If you are using Mac as development machine, Terminal.app must be one of the most used apps. Terminal might be not fancy to begin with, but you can totally make it more elegant and fancy if you follow with me.]]></description>
         </item>
         <item>
-            <title><![CDATA[Use GitLab-CI to run free scheduled jobs]]></title>
-            <link>https://tonyxu.io/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/</link>
-            <guid>https://tonyxu.io/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/</guid>
-            <pubDate>Mon, 23 Jul 2018 00:00:00 GMT</pubDate>
-            <description><![CDATA[Use GitLab-CI to run free scheduled jobs]]></description>
+            <title><![CDATA[Use Firebase Cloud Function to Count Website Visitors]]></title>
+            <link>https://tonyxu.io/posts/2018/use-firebase-cloud-function-to-count-website-visitors/</link>
+            <guid>https://tonyxu.io/posts/2018/use-firebase-cloud-function-to-count-website-visitors/</guid>
+            <pubDate>Tue, 07 Aug 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[It's getting popular to use Firebase hosting to host static website, however, you might not know you can still have server-side code hosted in Firebase for your static website, and that is the Firebase Cloud Function. Once of the case you might want to use the Cloud Function is to write something to Firebase database, for example, a hit counter. In this topic, I'll show you how to use Firebase Cloud Function and Firebase Realtime Database to count website visitor.]]></description>
         </item>
         <item>
             <title><![CDATA[Use IcoMoon to reduce 98% FontAwesome load size]]></title>
@@ -134,6 +127,13 @@
             <description><![CDATA[FontAwesome is an awesome font library. With fontawesome, it will be super easy to inject icon into your html page. Although the default method is very simple, it has the drawback of taking too much load by loading full set of icons.]]></description>
             <enclosure url="https://tonyxu.io/2018_07_22_20_13_05.png">
             </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[Use GitLab-CI to run free scheduled jobs]]></title>
+            <link>https://tonyxu.io/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/</link>
+            <guid>https://tonyxu.io/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/</guid>
+            <pubDate>Mon, 23 Jul 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[Use GitLab-CI to run free scheduled jobs]]></description>
         </item>
         <item>
             <title><![CDATA[Use Telegram and Flask to build personal notification server]]></title>
@@ -152,13 +152,11 @@
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[Use GitHub for Knowledge Base and Projects Management]]></title>
-            <link>https://tonyxu.io/posts/2019/use-github-to-mange-personal-knowledge-base/</link>
-            <guid>https://tonyxu.io/posts/2019/use-github-to-mange-personal-knowledge-base/</guid>
-            <pubDate>Mon, 21 Jan 2019 00:00:00 GMT</pubDate>
-            <description><![CDATA[GitHub has become the one and only platform for developers. We collaborate on the platform for anything about code. Can GitHub help you anything else besides code? I have recently been frustrated choosing a tool to manage my personal knowledge base, although there are lots of choices such as note apps (Bear, Evernote), project management app (Trello), or knowledge management app (Notion.so), eventually GitHub turned out to my choice which has below pros...]]></description>
-            <enclosure url="https://tonyxu.io/github-issues.png">
-            </enclosure>
+            <title><![CDATA[My Productivity Tools and Development Setup Recommended to Software Engineers]]></title>
+            <link>https://tonyxu.io/posts/2019/my-productivity-tools-and-development-setup-recommended-to-software-engineers/</link>
+            <guid>https://tonyxu.io/posts/2019/my-productivity-tools-and-development-setup-recommended-to-software-engineers/</guid>
+            <pubDate>Fri, 01 Feb 2019 00:00:00 GMT</pubDate>
+            <description><![CDATA[My Productivity Tools and Development Setup Recommended to Software Engineers]]></description>
         </item>
     </channel>
 </rss>
