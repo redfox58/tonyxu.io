@@ -36,9 +36,6 @@ module.exports = {
         content: 'default'
       }
     ],
-    ['script', { src: "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", async: "async"}],
-    ['script', {}, 
-    '(adsbygoogle = window.adsbygoogle || []).push({  google_ad_client: "ca-pub-5582535144854626",  enable_page_level_ads: true });']
   ],
   locales: {
     '/': {
