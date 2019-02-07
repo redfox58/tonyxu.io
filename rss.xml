@@ -4,7 +4,7 @@
         <title></title>
         <link>https://tonyxu.io</link>
         <description></description>
-        <lastBuildDate>Wed, 06 Feb 2019 05:05:35 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 07 Feb 2019 06:02:32 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <atom:link href="https://tonyxu.io/feed.atom" rel="self" type="application/rss+xml"/>
