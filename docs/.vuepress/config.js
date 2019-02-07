@@ -136,6 +136,9 @@ module.exports = {
         canonical_base: 'https://tonyxu.io', // required
       }
     ],
-    require('./plugins/sticky-sidebar')
+    require('./plugins/sticky-sidebar'),
+    ['disqus',{
+      'shortname': 'tonyxu-io'
+    }]
   ]
 }
