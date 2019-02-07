@@ -37,6 +37,7 @@ module.exports = {
       }
     ],
   ],
+  theme: './theme',
   locales: {
     '/': {
       lang: 'en-US',
@@ -55,6 +56,7 @@ module.exports = {
     editLinks: true,
     docsDir: 'docs',
     sidebar: 'auto',
+    domain: 'https://tonyxu.io',
     locales: {
       '/': {
         nav: [{
