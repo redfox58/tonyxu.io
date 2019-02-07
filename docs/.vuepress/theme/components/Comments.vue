@@ -2,7 +2,7 @@
   <div class="comments" v-if="$page.frontmatter.type === 'post'">
     <div class="inner">
       <ClientOnly>
-          <Disqus shortname="tonyxu-io" :key="$route.fullPath"/>
+          <Disqus shortname="tonyxu-io" :key="$route.path"/>
       </ClientOnly>
     </div>
   </div>
