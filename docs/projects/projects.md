@@ -1,6 +1,5 @@
 ---
 sidebar: false
-permalink: /projects
 ---
 # Projects
 

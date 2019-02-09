@@ -1,6 +1,5 @@
 ---
 sidebar: false
-permalink: /zh/about
 ---
 
 # 关于

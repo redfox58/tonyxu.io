@@ -1,12 +1,11 @@
 ---
 sidebar: false
-permalink: /tip
 ---
 
-# Tip me to support the blog
+# 打赏
 
-Offer me a coffee so that I can continue the blog.
+打赏我一杯咖啡，支持我继续博客
 
-| [Paypal](https://paypal.me/tonyxu) | Venmo                   | WeChat Pay                   | Alipay                       |
+| [Paypal](https://paypal.me/tonyxu) | Venmo                       | 微信支付                     | 支付宝                       |
 | ---------------------------------- | --------------------------- | ---------------------------- | ---------------------------- |
 | ![](/tip/paypal_barcode.jpg)       | ![](/tip/venmo_barcode.jpg) | ![](/tip/wechat_barcode.jpg) | ![](/tip/alipay_barcode.jpg) |
