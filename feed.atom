@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://tonyxu.io</id>
     <title></title>
-    <updated>2019-02-09T05:35:57.044Z</updated>
+    <updated>2019-02-09T05:48:40.452Z</updated>
     <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
     <link rel="alternate" href="https://tonyxu.io"/>
     <link rel="self" href="https://tonyxu.io/feed.atom"/>
@@ -135,20 +135,20 @@
         <summary type="html"><![CDATA[Use GitLab-CI to run free scheduled jobs]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Use IcoMoon to reduce 98% FontAwesome load size]]></title>
-        <id>https://tonyxu.io/posts/2018/use-icomoon-to-reduce-fontawesome-size/</id>
-        <link href="https://tonyxu.io/posts/2018/use-icomoon-to-reduce-fontawesome-size/">
-        </link>
-        <updated>2018-07-22T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[FontAwesome is an awesome font library. With fontawesome, it will be super easy to inject icon into your html page. Although the default method is very simple, it has the drawback of taking too much load by loading full set of icons.]]></summary>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[Use Telegram and Flask to build personal notification server]]></title>
         <id>https://tonyxu.io/posts/2018/use-telegram-and-flask-to-build-notification-server/</id>
         <link href="https://tonyxu.io/posts/2018/use-telegram-and-flask-to-build-notification-server/">
         </link>
         <updated>2018-07-12T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Use Telegram and Flask to build personal notification server]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Use IcoMoon to reduce 98% FontAwesome load size]]></title>
+        <id>https://tonyxu.io/posts/2018/use-icomoon-to-reduce-fontawesome-size/</id>
+        <link href="https://tonyxu.io/posts/2018/use-icomoon-to-reduce-fontawesome-size/">
+        </link>
+        <updated>2018-07-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[FontAwesome is an awesome font library. With fontawesome, it will be super easy to inject icon into your html page. Although the default method is very simple, it has the drawback of taking too much load by loading full set of icons.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Write script to scrap house rent price and send to your phone]]></title>
