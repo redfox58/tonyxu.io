@@ -5,7 +5,6 @@ module.exports = {
       sizes: '180x180',
       href: '/apple-touch-icon.png'
     }],
-
     ['link', {
       rel: 'icon',
       type: 'image/png',
@@ -57,6 +56,7 @@ module.exports = {
     docsDir: 'docs',
     sidebar: 'auto',
     domain: 'https://tonyxu.io',
+    disableActiveHash: false,
     locales: {
       '/': {
         nav: [{
