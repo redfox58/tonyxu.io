@@ -4,7 +4,7 @@
         <title></title>
         <link>https://tonyxu.io</link>
         <description></description>
-        <lastBuildDate>Sat, 09 Feb 2019 05:50:55 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 10 Feb 2019 19:00:53 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <atom:link href="https://tonyxu.io/feed.atom" rel="self" type="application/rss+xml"/>
@@ -85,18 +85,18 @@
             <description><![CDATA[If you are building a native application, and you need OAuth 2.0, PKCE OAuth is your best choice. Here I will explain why.]]></description>
         </item>
         <item>
-            <title><![CDATA[Tech stack to build your own product]]></title>
-            <link>https://tonyxu.io/posts/2018/tech-stack-for-building-your-own-product/</link>
-            <guid>https://tonyxu.io/posts/2018/tech-stack-for-building-your-own-product/</guid>
-            <pubDate>Tue, 17 Jul 2018 00:00:00 GMT</pubDate>
-            <description><![CDATA[As a software engineer or developer, you might want to build a product end-to-end. These are the frameworks and technologies you might need. All listed items are open-source or free to use.]]></description>
-        </item>
-        <item>
             <title><![CDATA[REST API Design Interview Preparation]]></title>
             <link>https://tonyxu.io/posts/2018/rest-api-design-interview-preparation/</link>
             <guid>https://tonyxu.io/posts/2018/rest-api-design-interview-preparation/</guid>
             <pubDate>Tue, 03 Jul 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[REST API has become a very popular concept for designing back-end service interface. Most platforms provide REST API as unified interface for web/native applications. If you are going to interview for a job that will require REST API knowledge, you are encouraged to be well prepared for it. Below is my own summary for REST API interview. Hopefully it's helpful for you as well.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Tech stack to build your own product]]></title>
+            <link>https://tonyxu.io/posts/2018/tech-stack-for-building-your-own-product/</link>
+            <guid>https://tonyxu.io/posts/2018/tech-stack-for-building-your-own-product/</guid>
+            <pubDate>Tue, 17 Jul 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[As a software engineer or developer, you might want to build a product end-to-end. These are the frameworks and technologies you might need. All listed items are open-source or free to use.]]></description>
         </item>
         <item>
             <title><![CDATA[Technologies Learned as a Software Engineer]]></title>
@@ -120,13 +120,6 @@
             <description><![CDATA[It's getting popular to use Firebase hosting to host static website, however, you might not know you can still have server-side code hosted in Firebase for your static website, and that is the Firebase Cloud Function. Once of the case you might want to use the Cloud Function is to write something to Firebase database, for example, a hit counter. In this topic, I'll show you how to use Firebase Cloud Function and Firebase Realtime Database to count website visitor.]]></description>
         </item>
         <item>
-            <title><![CDATA[Use GitLab-CI to run free scheduled jobs]]></title>
-            <link>https://tonyxu.io/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/</link>
-            <guid>https://tonyxu.io/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/</guid>
-            <pubDate>Mon, 23 Jul 2018 00:00:00 GMT</pubDate>
-            <description><![CDATA[Use GitLab-CI to run free scheduled jobs]]></description>
-        </item>
-        <item>
             <title><![CDATA[Use IcoMoon to reduce 98% FontAwesome load size]]></title>
             <link>https://tonyxu.io/posts/2018/use-icomoon-to-reduce-fontawesome-size/</link>
             <guid>https://tonyxu.io/posts/2018/use-icomoon-to-reduce-fontawesome-size/</guid>
@@ -134,6 +127,13 @@
             <description><![CDATA[FontAwesome is an awesome font library. With fontawesome, it will be super easy to inject icon into your html page. Although the default method is very simple, it has the drawback of taking too much load by loading full set of icons.]]></description>
             <enclosure url="https://tonyxu.io/2018_07_22_20_13_05.png">
             </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[Use GitLab-CI to run free scheduled jobs]]></title>
+            <link>https://tonyxu.io/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/</link>
+            <guid>https://tonyxu.io/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/</guid>
+            <pubDate>Mon, 23 Jul 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[Use GitLab-CI to run free scheduled jobs]]></description>
         </item>
         <item>
             <title><![CDATA[Use Telegram and Flask to build personal notification server]]></title>
