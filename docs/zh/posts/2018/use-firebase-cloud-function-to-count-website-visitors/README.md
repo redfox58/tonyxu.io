@@ -75,7 +75,7 @@ Firebase 云托管非常适合托管静态页面，它比 GitHub Pages 搭建起
 ```html
 <html>
   <script>
-    fetch("//https://<Region>-<YOUR-APP-ID>.cloudfunctions.net/hitCounter");
+    fetch("//<Region>-<YOUR-APP-ID>.cloudfunctions.net/hitCounter");
   </script>
 </html>
 ```

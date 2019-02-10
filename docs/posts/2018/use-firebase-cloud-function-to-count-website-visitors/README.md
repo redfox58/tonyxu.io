@@ -68,7 +68,7 @@ You can do it like below:
 ```html
 <html>
     <script>
-    fetch("//https://<Region>-<YOUR-APP-ID>.cloudfunctions.net/hitCounter")
+    fetch("//<Region>-<YOUR-APP-ID>.cloudfunctions.net/hitCounter")
     </script>
 </html>
 ```
