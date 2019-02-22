@@ -12,4 +12,6 @@ In this blog, I share things on my mind, my learnings, and my interests of all k
 - LinkedIn: [https://linkedin.com/in/tonyxu93](https://linkedin.com/in/tonyxu93)
 - GitHub: [https://github.com/tonyxu-io](https://github.com/tonyxu-io)
 
+::: tip
 [Tip me to support the blog](/tip)
+:::

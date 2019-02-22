@@ -11,3 +11,7 @@ sidebar: false
 - Email: [me@tonyxu.io](mailto:me@tonyxu.io)
 - LinkedIn: [https://linkedin.com/in/tonyxu93](https://linkedin.com/in/tonyxu93)
 - GitHub: [https://github.com/tonyxu-io](https://github.com/tonyxu-io)
+
+::: tip 打赏
+[打赏我一杯咖啡，支持我继续博客](/zh/tip)
+:::

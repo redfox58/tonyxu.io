@@ -1,6 +1,6 @@
 ---
 home: true
-# heroImage: /hero.png
+heroImage: /apple-touch-icon.png
 heroText: Tony Xu Blog
 tagline: All thoughts of life and code.
 actionText: Recent Posts →
