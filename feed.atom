@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://tonyxu.io</id>
     <title></title>
-    <updated>2019-02-10T19:14:16.610Z</updated>
+    <updated>2019-02-22T04:45:12.037Z</updated>
     <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
     <link rel="alternate" href="https://tonyxu.io"/>
     <link rel="self" href="https://tonyxu.io/feed.atom"/>
@@ -127,20 +127,20 @@
         <summary type="html"><![CDATA[It's getting popular to use Firebase hosting to host static website, however, you might not know you can still have server-side code hosted in Firebase for your static website, and that is the Firebase Cloud Function. Once of the case you might want to use the Cloud Function is to write something to Firebase database, for example, a hit counter. In this topic, I'll show you how to use Firebase Cloud Function and Firebase Realtime Database to count website visitor.]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Use IcoMoon to reduce 98% FontAwesome load size]]></title>
-        <id>https://tonyxu.io/posts/2018/use-icomoon-to-reduce-fontawesome-size/</id>
-        <link href="https://tonyxu.io/posts/2018/use-icomoon-to-reduce-fontawesome-size/">
-        </link>
-        <updated>2018-07-22T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[FontAwesome is an awesome font library. With fontawesome, it will be super easy to inject icon into your html page. Although the default method is very simple, it has the drawback of taking too much load by loading full set of icons.]]></summary>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[Use GitLab-CI to run free scheduled jobs]]></title>
         <id>https://tonyxu.io/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/</id>
         <link href="https://tonyxu.io/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/">
         </link>
         <updated>2018-07-23T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Use GitLab-CI to run free scheduled jobs]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Use IcoMoon to reduce 98% FontAwesome load size]]></title>
+        <id>https://tonyxu.io/posts/2018/use-icomoon-to-reduce-fontawesome-size/</id>
+        <link href="https://tonyxu.io/posts/2018/use-icomoon-to-reduce-fontawesome-size/">
+        </link>
+        <updated>2018-07-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[FontAwesome is an awesome font library. With fontawesome, it will be super easy to inject icon into your html page. Although the default method is very simple, it has the drawback of taking too much load by loading full set of icons.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Use Telegram and Flask to build personal notification server]]></title>

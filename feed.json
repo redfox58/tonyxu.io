@@ -113,19 +113,19 @@
             "date_modified": "2018-08-07T00:00:00.000Z"
         },
         {
+            "id": "https://tonyxu.io/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/",
+            "url": "https://tonyxu.io/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/",
+            "title": "Use GitLab-CI to run free scheduled jobs",
+            "summary": "Use GitLab-CI to run free scheduled jobs",
+            "date_modified": "2018-07-23T00:00:00.000Z"
+        },
+        {
             "id": "https://tonyxu.io/posts/2018/use-icomoon-to-reduce-fontawesome-size/",
             "url": "https://tonyxu.io/posts/2018/use-icomoon-to-reduce-fontawesome-size/",
             "title": "Use IcoMoon to reduce 98% FontAwesome load size",
             "summary": "FontAwesome is an awesome font library. With fontawesome, it will be super easy to inject icon into your html page. Although the default method is very simple, it has the drawback of taking too much load by loading full set of icons.",
             "image": "https://tonyxu.io/2018_07_22_20_13_05.png",
             "date_modified": "2018-07-22T00:00:00.000Z"
-        },
-        {
-            "id": "https://tonyxu.io/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/",
-            "url": "https://tonyxu.io/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/",
-            "title": "Use GitLab-CI to run free scheduled jobs",
-            "summary": "Use GitLab-CI to run free scheduled jobs",
-            "date_modified": "2018-07-23T00:00:00.000Z"
         },
         {
             "id": "https://tonyxu.io/posts/2018/use-telegram-and-flask-to-build-notification-server/",
