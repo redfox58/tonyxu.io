@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /apple-touch-icon.png
+heroImage: /favicon-512x512.png
 heroText: Tony Xu Blog
 tagline: All thoughts of life and code.
 actionText: Recent Posts →

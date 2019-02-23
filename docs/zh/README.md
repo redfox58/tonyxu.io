@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /apple-touch-icon.png
+heroImage: /android-chrome-512x512.png
 heroText: Tony Xu 徐毅涵 博客
 tagline: 记录有关人生和代码
 actionText: 最新文章 →
