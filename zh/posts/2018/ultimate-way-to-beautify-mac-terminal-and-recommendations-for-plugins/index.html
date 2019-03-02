@@ -15,10 +15,36 @@
     
     
     
+<meta itemprop="name" content="程序员的Mac终端(oh-my-zsh)终极美化及必备插件推荐">
+<meta itemprop="description" content="如果你使用Mac进行开发，那么Terminal.app应该是你使用非常频繁的app了。初体验Terminal时你可能觉得单调乏味，阅读密密麻麻的内容也很费劲。但是如果你跟着我一起配置它，就会发现你平时觉得繁琐，不方便的地方其实都可以被完美解决,并且颜值也高了许多。
+我们准备这样改造Terminal  修改Terminal的Profile: 让Terminal配色更美观
+ 安装oh-my-zsh: 将Terminal的shell从bash改成更强大的zsh
+ 安装oh-my-zsh主题: 美化oh-my-zsh
+ 安装oh-my-zsh必备插件: 让Terminal具有更高级和便利的功能
+  准备工作 建议先安装homebrew, 方便后续工具安装:
+/usr/bin/ruby -e &#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&#34; 修改Terminal Profile 主题设置  在GitHub的osx-terminal-theme项目主页里寻找你喜欢的主题
+ 在schemes目录里找到对应的主题文件并双击安装到Terminal, 设置为默认
+  安装oh-my-zsh 先安装zsh:
+brew install zsh 再安装oh-my-zsh:
+sh -c &#34;$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&#34; 安装oh-my-zsh主题 内置主题列表 oh-my-zsh提供一批内置主题，可以直接设置使用
+ 在内置主题列表寻找你你喜欢的主题: https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ 在~/.zshrc配置文件里设置ZSH_THEME为你的主题名称
+ 激活设置source ~/.zshrc
+  第三方主题列表 许多第三方也开发了供oh-my-zsh使用的主题，可以去第三方主题列表查看和安装:
+https://github.com/robbyrussell/oh-my-zsh/wiki/External-themes
+安装oh-my-zsh必备插件 oh-my-zsh有非常丰富的插件可供使用，下面列举一些必备插件，可以大幅提高生产力。
+示例如下:
+# ~/.zshrc: plugins=( git zsh-syntax-highlighting ) git 自带插件，可以使用缩写命令, 比如 gaa -&gt; git add --all, 通过alias | grep git查看所有支持缩写命令">
 
-  <meta name="author" content="徐毅涵">
 
- 
+<meta itemprop="datePublished" content="2018-07-26T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-07-26T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="186">
+
+
+
+<meta itemprop="keywords" content="" />
+
     <meta property="og:title" content="程序员的Mac终端(oh-my-zsh)终极美化及必备插件推荐" />
 <meta property="og:description" content="如果你使用Mac进行开发，那么Terminal.app应该是你使用非常频繁的app了。初体验Terminal时你可能觉得单调乏味，阅读密密麻麻的内容也很费劲。但是如果你跟着我一起配置它，就会发现你平时觉得繁琐，不方便的地方其实都可以被完美解决,并且颜值也高了许多。
 我们准备这样改造Terminal  修改Terminal的Profile: 让Terminal配色更美观
@@ -40,15 +66,36 @@ https://github.com/robbyrussell/oh-my-zsh/wiki/External-themes
 示例如下:
 # ~/.zshrc: plugins=( git zsh-syntax-highlighting ) git 自带插件，可以使用缩写命令, 比如 gaa -&gt; git add --all, 通过alias | grep git查看所有支持缩写命令" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/zh/posts/2018/ultimate-way-to-beautify-mac-terminal-and-recommendations-for-plugins/" />
+<meta property="og:url" content="https://tonyxu.io/zh/posts/2018/ultimate-way-to-beautify-mac-terminal-and-recommendations-for-plugins/" />
+
+<meta property="og:image" content="https://tonyxu.io/profile-pic.png" />
 <meta property="article:published_time" content="2018-07-26T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2018-07-26T00:00:00&#43;00:00"/><meta property="og:site_name" content="Tony Xu 博客" />
- 
-    
 
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://tonyxu.io/profile-pic.png"/>
 
+<meta name="twitter:title" content="程序员的Mac终端(oh-my-zsh)终极美化及必备插件推荐"/>
+<meta name="twitter:description" content="如果你使用Mac进行开发，那么Terminal.app应该是你使用非常频繁的app了。初体验Terminal时你可能觉得单调乏味，阅读密密麻麻的内容也很费劲。但是如果你跟着我一起配置它，就会发现你平时觉得繁琐，不方便的地方其实都可以被完美解决,并且颜值也高了许多。
+我们准备这样改造Terminal  修改Terminal的Profile: 让Terminal配色更美观
+ 安装oh-my-zsh: 将Terminal的shell从bash改成更强大的zsh
+ 安装oh-my-zsh主题: 美化oh-my-zsh
+ 安装oh-my-zsh必备插件: 让Terminal具有更高级和便利的功能
+  准备工作 建议先安装homebrew, 方便后续工具安装:
+/usr/bin/ruby -e &#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&#34; 修改Terminal Profile 主题设置  在GitHub的osx-terminal-theme项目主页里寻找你喜欢的主题
+ 在schemes目录里找到对应的主题文件并双击安装到Terminal, 设置为默认
+  安装oh-my-zsh 先安装zsh:
+brew install zsh 再安装oh-my-zsh:
+sh -c &#34;$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&#34; 安装oh-my-zsh主题 内置主题列表 oh-my-zsh提供一批内置主题，可以直接设置使用
+ 在内置主题列表寻找你你喜欢的主题: https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ 在~/.zshrc配置文件里设置ZSH_THEME为你的主题名称
+ 激活设置source ~/.zshrc
+  第三方主题列表 许多第三方也开发了供oh-my-zsh使用的主题，可以去第三方主题列表查看和安装:
+https://github.com/robbyrussell/oh-my-zsh/wiki/External-themes
+安装oh-my-zsh必备插件 oh-my-zsh有非常丰富的插件可供使用，下面列举一些必备插件，可以大幅提高生产力。
+示例如下:
+# ~/.zshrc: plugins=( git zsh-syntax-highlighting ) git 自带插件，可以使用缩写命令, 比如 gaa -&gt; git add --all, 通过alias | grep git查看所有支持缩写命令"/>
 
- 
     
      
     
@@ -64,8 +111,10 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
  
     
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     
-    <link rel="canonical" href="/zh/posts/2018/ultimate-way-to-beautify-mac-terminal-and-recommendations-for-plugins/">   <link rel="shortcut icon" type="image/png" href="/profile-pic.png">
+    <link rel="canonical" href="https://tonyxu.io/zh/posts/2018/ultimate-way-to-beautify-mac-terminal-and-recommendations-for-plugins/">   <link rel="shortcut icon" type="image/png" href="/profile-pic.png">
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
@@ -79,7 +128,7 @@ if (!doNotTrack) {
   <div class="container">
     <div class="navbar-brand">
       <a class="navbar-item" href="/zh">
-        <img src="/profile-pic.png" alt="logo">
+        <img src="/favicon.ico" alt="logo">
       </a>
       <a class="navbar-item" href="/zh">
         Tony Xu 博客
@@ -111,19 +160,17 @@ if (!doNotTrack) {
           </span>
         </a>
         
-        <div class="navbar-item">
-          
-          
-          <a itemprop="url" class="navbar-item "
-            href="/zh/about"><span itemprop="name">关于</span></a>
-          
-          <a itemprop="url" class="navbar-item "
-            href="/zh/friends/"><span itemprop="name">友情链接</span></a>
-          
-          <a itemprop="url" class="navbar-item  is-active"
-            href="/zh/posts/"><span itemprop="name">文章</span></a>
-          
-        </div>
+        
+        
+        <a itemprop="url" class="navbar-item "
+          href="/zh/about/"><span itemprop="name">关于</span></a>
+        
+        <a itemprop="url" class="navbar-item "
+          href="/zh/friends/"><span itemprop="name">友情链接</span></a>
+        
+        <a itemprop="url" class="navbar-item  is-active"
+          href="/zh/posts/"><span itemprop="name">文章</span></a>
+        
         
         <div class="navbar-item">
           <div class="field">
@@ -132,7 +179,7 @@ if (!doNotTrack) {
                 <select size="1" name="links" onchange="window.location.href=this.value;">
                   <option selected disabled>语言</option>
                   
-                  <option value="/posts/2018/ultimate-way-to-beautify-mac-terminal-and-recommendations-for-plugins/">English</option>
+                  <option value="https://tonyxu.io/posts/2018/ultimate-way-to-beautify-mac-terminal-and-recommendations-for-plugins/">English</option>
                   
                 </select>
               </div>
@@ -193,6 +240,7 @@ https://github.com/robbyrussell/oh-my-zsh/wiki/External-themes
 </p>
         <hr />
         <div class="content">
+          
           
 
 <p>如果你使用Mac进行开发，那么<code>Terminal.app</code>应该是你使用非常频繁的app了。初体验Terminal时你可能觉得单调乏味，阅读密密麻麻的内容也很费劲。但是如果你跟着我一起配置它，就会发现你平时觉得繁琐，不方便的地方其实都可以被完美解决,并且颜值也高了许多。</p>
@@ -329,22 +377,25 @@ https://github.com/robbyrussell/oh-my-zsh/wiki/External-themes
         
         <article>
           <div id="disqus_thread"></div>
-<script type="text/javascript">
-
-(function() {
+<script type="application/javascript">
+    var disqus_config = function () {
     
     
-    if (window.location.hostname == "localhost")
-        return;
-
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'tonyxu-io';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tonyxu-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
         </article>
         
       </div>

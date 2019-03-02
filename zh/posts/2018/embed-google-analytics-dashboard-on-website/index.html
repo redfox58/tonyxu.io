@@ -15,10 +15,27 @@
     
     
     
+<meta itemprop="name" content="嵌入Google Analytics图表到你的网站">
+<meta itemprop="description" content="如果你正在使用Google Anlaytics工具来分析网站访问数据，你可能会想将它提供的各种酷炫图表嵌入到网站页面以供用户浏览。尽管Google Analytics并不提供简单的iframe方式来嵌入图表，它还是提供了Google Analytics Embed API这种需要稍微多一点技术基础的方式让你能够嵌入它们的图表。我会在这篇文章里详细地告诉你该如何一步一步实现一个Google Analytics图表
+效果预览:
+1. 在Google Developers Console创建云项目 (如果你已经有项目了请忽略这一步)
+2. 创建服务账号(service account)并下载.json密钥文件 3. 启用Google Analytics API权限 4. 允许云服务账号(service account)访问Google Analytics数据 获取云服务账号邮箱地址
+添加为Google Analytics只读用户
+5. 在服务器生成访问令牌(access token) 我们在服务器生成访问令牌并返回给前端，因此用户不需要在浏览器登录Google获取访问令牌。
+Node.js服务器部分实现 Install Google API Client Library
+npm install --save googleapis Import service account key
+let privateKey = require(&#34;./google_key.json&#34;);  Return Google access token to client
+// https://your-domain/accessTokens 将会返回Google访问令牌给前段 app.get(&#34;/accessTokens&#34;, (req,res) =&gt; { let {google} = require(&#39;googleapis&#39;); let privateKey = require(&#34;.">
 
-  <meta name="author" content="徐毅涵">
 
- 
+<meta itemprop="datePublished" content="2018-10-15T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-10-15T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="267">
+
+
+
+<meta itemprop="keywords" content="" />
+
     <meta property="og:title" content="嵌入Google Analytics图表到你的网站" />
 <meta property="og:description" content="如果你正在使用Google Anlaytics工具来分析网站访问数据，你可能会想将它提供的各种酷炫图表嵌入到网站页面以供用户浏览。尽管Google Analytics并不提供简单的iframe方式来嵌入图表，它还是提供了Google Analytics Embed API这种需要稍微多一点技术基础的方式让你能够嵌入它们的图表。我会在这篇文章里详细地告诉你该如何一步一步实现一个Google Analytics图表
 效果预览:
@@ -31,15 +48,27 @@ npm install --save googleapis Import service account key
 let privateKey = require(&#34;./google_key.json&#34;);  Return Google access token to client
 // https://your-domain/accessTokens 将会返回Google访问令牌给前段 app.get(&#34;/accessTokens&#34;, (req,res) =&gt; { let {google} = require(&#39;googleapis&#39;); let privateKey = require(&#34;." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/zh/posts/2018/embed-google-analytics-dashboard-on-website/" />
+<meta property="og:url" content="https://tonyxu.io/zh/posts/2018/embed-google-analytics-dashboard-on-website/" />
+
+<meta property="og:image" content="https://tonyxu.io/profile-pic.png" />
 <meta property="article:published_time" content="2018-10-15T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2018-10-15T00:00:00&#43;00:00"/><meta property="og:site_name" content="Tony Xu 博客" />
- 
-    
 
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://tonyxu.io/profile-pic.png"/>
 
+<meta name="twitter:title" content="嵌入Google Analytics图表到你的网站"/>
+<meta name="twitter:description" content="如果你正在使用Google Anlaytics工具来分析网站访问数据，你可能会想将它提供的各种酷炫图表嵌入到网站页面以供用户浏览。尽管Google Analytics并不提供简单的iframe方式来嵌入图表，它还是提供了Google Analytics Embed API这种需要稍微多一点技术基础的方式让你能够嵌入它们的图表。我会在这篇文章里详细地告诉你该如何一步一步实现一个Google Analytics图表
+效果预览:
+1. 在Google Developers Console创建云项目 (如果你已经有项目了请忽略这一步)
+2. 创建服务账号(service account)并下载.json密钥文件 3. 启用Google Analytics API权限 4. 允许云服务账号(service account)访问Google Analytics数据 获取云服务账号邮箱地址
+添加为Google Analytics只读用户
+5. 在服务器生成访问令牌(access token) 我们在服务器生成访问令牌并返回给前端，因此用户不需要在浏览器登录Google获取访问令牌。
+Node.js服务器部分实现 Install Google API Client Library
+npm install --save googleapis Import service account key
+let privateKey = require(&#34;./google_key.json&#34;);  Return Google access token to client
+// https://your-domain/accessTokens 将会返回Google访问令牌给前段 app.get(&#34;/accessTokens&#34;, (req,res) =&gt; { let {google} = require(&#39;googleapis&#39;); let privateKey = require(&#34;."/>
 
- 
     
      
     
@@ -55,8 +84,10 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
  
     
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     
-    <link rel="canonical" href="/zh/posts/2018/embed-google-analytics-dashboard-on-website/">   <link rel="shortcut icon" type="image/png" href="/profile-pic.png">
+    <link rel="canonical" href="https://tonyxu.io/zh/posts/2018/embed-google-analytics-dashboard-on-website/">   <link rel="shortcut icon" type="image/png" href="/profile-pic.png">
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
@@ -70,7 +101,7 @@ if (!doNotTrack) {
   <div class="container">
     <div class="navbar-brand">
       <a class="navbar-item" href="/zh">
-        <img src="/profile-pic.png" alt="logo">
+        <img src="/favicon.ico" alt="logo">
       </a>
       <a class="navbar-item" href="/zh">
         Tony Xu 博客
@@ -102,19 +133,17 @@ if (!doNotTrack) {
           </span>
         </a>
         
-        <div class="navbar-item">
-          
-          
-          <a itemprop="url" class="navbar-item "
-            href="/zh/about"><span itemprop="name">关于</span></a>
-          
-          <a itemprop="url" class="navbar-item "
-            href="/zh/friends/"><span itemprop="name">友情链接</span></a>
-          
-          <a itemprop="url" class="navbar-item  is-active"
-            href="/zh/posts/"><span itemprop="name">文章</span></a>
-          
-        </div>
+        
+        
+        <a itemprop="url" class="navbar-item "
+          href="/zh/about/"><span itemprop="name">关于</span></a>
+        
+        <a itemprop="url" class="navbar-item "
+          href="/zh/friends/"><span itemprop="name">友情链接</span></a>
+        
+        <a itemprop="url" class="navbar-item  is-active"
+          href="/zh/posts/"><span itemprop="name">文章</span></a>
+        
         
         <div class="navbar-item">
           <div class="field">
@@ -123,7 +152,7 @@ if (!doNotTrack) {
                 <select size="1" name="links" onchange="window.location.href=this.value;">
                   <option selected disabled>语言</option>
                   
-                  <option value="/posts/2018/embed-google-analytics-dashboard-on-website/">English</option>
+                  <option value="https://tonyxu.io/posts/2018/embed-google-analytics-dashboard-on-website/">English</option>
                   
                 </select>
               </div>
@@ -175,6 +204,7 @@ let privateKey = require(&#34;./google_key.json&#34;);  Return Google access tok
 </p>
         <hr />
         <div class="content">
+          
           
 
 <p>如果你正在使用Google Anlaytics工具来分析网站访问数据，你可能会想将它提供的各种酷炫图表嵌入到网站页面以供用户浏览。尽管Google Analytics并不提供简单的iframe方式来嵌入图表，它还是提供了<a href="https://developers.google.com/analytics/devguides/reporting/embed/v1/">Google Analytics Embed API</a>这种需要稍微多一点技术基础的方式让你能够嵌入它们的图表。我会在这篇文章里详细地告诉你该如何一步一步实现一个Google Analytics图表</p>
@@ -339,22 +369,25 @@ let privateKey = require(&#34;./google_key.json&#34;);  Return Google access tok
         
         <article>
           <div id="disqus_thread"></div>
-<script type="text/javascript">
-
-(function() {
+<script type="application/javascript">
+    var disqus_config = function () {
     
     
-    if (window.location.hostname == "localhost")
-        return;
-
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'tonyxu-io';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tonyxu-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
         </article>
         
       </div>

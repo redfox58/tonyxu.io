@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>文章 on Tony Xu 博客</title>
-    <link>/zh/posts/</link>
+    <link>https://tonyxu.io/zh/posts/</link>
     <description>Recent content in 文章 on Tony Xu 博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Fri, 01 Feb 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/zh/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://tonyxu.io/zh/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>我的生产效率工具和开发环境（推荐给软件工程师们）</title>
-      <link>/zh/posts/2019/my-productivity-tools-and-development-setup-recommended-to-software-engineers/</link>
+      <link>https://tonyxu.io/zh/posts/2019/my-productivity-tools-and-development-setup-recommended-to-software-engineers/</link>
       <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>/zh/posts/2019/my-productivity-tools-and-development-setup-recommended-to-software-engineers/</guid>
+      <guid>https://tonyxu.io/zh/posts/2019/my-productivity-tools-and-development-setup-recommended-to-software-engineers/</guid>
       <description>硬件 笔记本 👉 苹果 MacBook Pro (13-inch, 2017, Four Thunderbolt 3 Ports)
 - 13 英寸
 - 2017年
@@ -36,10 +36,10 @@
     
     <item>
       <title>使用GitHub做个人知识和项目管理</title>
-      <link>/zh/posts/2019/use-github-to-mange-personal-knowledge-base/</link>
+      <link>https://tonyxu.io/zh/posts/2019/use-github-to-mange-personal-knowledge-base/</link>
       <pubDate>Mon, 21 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>/zh/posts/2019/use-github-to-mange-personal-knowledge-base/</guid>
+      <guid>https://tonyxu.io/zh/posts/2019/use-github-to-mange-personal-knowledge-base/</guid>
       <description>GitHub 已经成为开发者最钟爱的平台，我们在 GitHub 上进行任何和代码相关的协作。除了代码，GitHub 还有什么可以为我们所用的呢？我最近就在选择一款个人知识管理和项目管理工具的问题上陷入了苦恼，尽管我们有非常多的选择，比如笔记应用 Bear 和 Evernote，项目管理应用 Trello，又或者知识管理应用 Notion，最后我选择的是 GitHub 这个我最爱的开发者平台，它有如下几个优点:
  支持 Markdown
  可以使用它组织短的笔记，或者长的文章
@@ -51,10 +51,10 @@
     
     <item>
       <title>作为软件工程师需要掌握的技能</title>
-      <link>/zh/posts/2018/technologies-learned-as-a-software-engineer/</link>
+      <link>https://tonyxu.io/zh/posts/2018/technologies-learned-as-a-software-engineer/</link>
       <pubDate>Thu, 06 Dec 2018 00:00:00 +0000</pubDate>
       
-      <guid>/zh/posts/2018/technologies-learned-as-a-software-engineer/</guid>
+      <guid>https://tonyxu.io/zh/posts/2018/technologies-learned-as-a-software-engineer/</guid>
       <description>作为一名软件工程师，我总是对学习各类新技术抱有极大热情。我会在这篇文章用列表来记录作为一名软件工程师的我已经开始学习的或者在余生计划要学习的技术。
 注: 这篇文章会随着我学习它们一直更新
 我是如何区分我对一项技术的掌握水平:
@@ -78,10 +78,10 @@
     
     <item>
       <title>嵌入Google Analytics图表到你的网站</title>
-      <link>/zh/posts/2018/embed-google-analytics-dashboard-on-website/</link>
+      <link>https://tonyxu.io/zh/posts/2018/embed-google-analytics-dashboard-on-website/</link>
       <pubDate>Mon, 15 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>/zh/posts/2018/embed-google-analytics-dashboard-on-website/</guid>
+      <guid>https://tonyxu.io/zh/posts/2018/embed-google-analytics-dashboard-on-website/</guid>
       <description>如果你正在使用Google Anlaytics工具来分析网站访问数据，你可能会想将它提供的各种酷炫图表嵌入到网站页面以供用户浏览。尽管Google Analytics并不提供简单的iframe方式来嵌入图表，它还是提供了Google Analytics Embed API这种需要稍微多一点技术基础的方式让你能够嵌入它们的图表。我会在这篇文章里详细地告诉你该如何一步一步实现一个Google Analytics图表
 效果预览:
 1. 在Google Developers Console创建云项目 (如果你已经有项目了请忽略这一步)
@@ -96,10 +96,10 @@ let privateKey = require(&amp;#34;./google_key.json&amp;#34;);  Return Google ac
     
     <item>
       <title>使用Firebase云函数统计网站访问数</title>
-      <link>/zh/posts/2018/use-firebase-cloud-function-to-count-website-visitors/</link>
+      <link>https://tonyxu.io/zh/posts/2018/use-firebase-cloud-function-to-count-website-visitors/</link>
       <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>/zh/posts/2018/use-firebase-cloud-function-to-count-website-visitors/</guid>
+      <guid>https://tonyxu.io/zh/posts/2018/use-firebase-cloud-function-to-count-website-visitors/</guid>
       <description>现在越来越多人喜欢用 Firebase 托管静态页面，类似选择还有 GitHub Pages。如果你想给 Firebase 托管的静态页面添加后端代码，那么恭喜你云函数就是为你准备的。其中使用云函数的场景可以是连接 Firebase 实时数据库并存取数据。
 我在这给大家分享一个最简单的例子就是借助云函数实现访问统计，每次云函数被触发，就更新实时数据库里的网站访问统计。
 计划 我们大致需要这么几步实现这个功能
@@ -117,10 +117,10 @@ const functions = require(&amp;#34;firebase-functions&amp;#34;); const admin = r
     
     <item>
       <title>自己 DIY Chrome浏览器的新标签页</title>
-      <link>/zh/posts/2018/customize-chrome-new-tab-page/</link>
+      <link>https://tonyxu.io/zh/posts/2018/customize-chrome-new-tab-page/</link>
       <pubDate>Fri, 03 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>/zh/posts/2018/customize-chrome-new-tab-page/</guid>
+      <guid>https://tonyxu.io/zh/posts/2018/customize-chrome-new-tab-page/</guid>
       <description>有没有想过改造Chrome的默认新标签页? 如果有，我相信你肯定尝试过去Chrome应用商店下载一些拓展来定制新标签页。如果你觉得无论是默认，还是第三方提供的新标签页都无法满足你的需求，我建议你跟着我尝试自己制作一款Chrome拓展来定制你的新标签页。
 拓展插件目录结构 └── chrome-extention //你的Chrome拓展项目目录 ├── manifest.json //Chrome拓展描述文件 └── newTab.html //Chrome拓展新标签页页面文件 创建Chrome拓展描述文件 创建一个文件夹，作为Chrome拓展的项目文件夹。在文件夹内创建manifest.json描述文件如下:
 { &amp;#34;name&amp;#34;: &amp;#34;Chrome extension name here.&amp;#34;, &amp;#34;version&amp;#34;: &amp;#34;1.0&amp;#34;, &amp;#34;manifest_version&amp;#34;: 2, &amp;#34;description&amp;#34;: &amp;#34;Chrome extension description written here.&amp;#34;, &amp;#34;chrome_url_overrides&amp;#34; : { &amp;#34;newtab&amp;#34;: &amp;#34;newTab.html&amp;#34; }, &amp;#34;content_security_policy&amp;#34;: &amp;#34;script-src &amp;#39;self&amp;#39;; object-src &amp;#39;self&amp;#39;&amp;#34; } 创建自定义新标签页面 在Chrome拓展项目文件夹内创建newTab.html文件，这个文件就是你即将替换为新标签页的网页文件。如果你对HTML/CSS并不熟悉，可以仿照我的写法，把新标签页制作成如下所示的网址导航。
@@ -130,10 +130,10 @@ newTab.html参考源码:
     
     <item>
       <title>HTTP头字段为何要弃用X前缀</title>
-      <link>/zh/posts/2018/http-deprecate-x-prefix/</link>
+      <link>https://tonyxu.io/zh/posts/2018/http-deprecate-x-prefix/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>/zh/posts/2018/http-deprecate-x-prefix/</guid>
+      <guid>https://tonyxu.io/zh/posts/2018/http-deprecate-x-prefix/</guid>
       <description> 2012年6月，互联网工程任务小组(IETF)发布了新的征求意见稿(RFC-6648)，要求自定义HTTP头字段应放弃使用X-前缀。由于我所在的LinkedIn也在使用这类自定义头字段，因此特意阅读了这份征求意见稿，给大家解释以下为什么我们需要弃用它。
 X前缀诞生背景 HTTP头的作用是为了让客户端和服务器传送信息时能够附加一些额外信息。
 HTTP Header（HTTP头) 有一些标准字段，如:
@@ -157,10 +157,10 @@ X前缀的使用 在众多非标准HTTP头中，有一些变得越来越普遍�
     
     <item>
       <title>自己写脚本每日爬取租房价格推送到手机</title>
-      <link>/zh/posts/2018/write-script-to-scrap-house-rental-price/</link>
+      <link>https://tonyxu.io/zh/posts/2018/write-script-to-scrap-house-rental-price/</link>
       <pubDate>Sat, 28 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/zh/posts/2018/write-script-to-scrap-house-rental-price/</guid>
+      <guid>https://tonyxu.io/zh/posts/2018/write-script-to-scrap-house-rental-price/</guid>
       <description>在硅谷生活工作，租房是一个很重要的事情。在硅谷或者美国其他地方租房，很多人像我一样选择专门的出租公寓，这种公寓只租不卖，经营也比较专业化。大部分出租公寓会有官网可以查询价格/空房，并且可以在线签约，规模小一些的出租公寓可能就没有官网，租房信息只挂在第三方租房网站上。由于我和女票一个刚换新公司，一个即将要去新公司，因此物色好了一处公寓，准备过几个月入住。由于这处公寓的在线价格每天都在变化，因此自己写了一个脚本每天查询所有可供签约的房间价格和其他信息并推送到手机，以供参考。下面记录了一些我实现的过程。
 简介 这家公寓是个专业连锁出租公寓，为了避免暴露我的住址，以下均以其旗下另一处出租公寓举例。
 这家连锁公寓的官网是:
@@ -178,10 +178,10 @@ Chrome Inspector:
     
     <item>
       <title>程序员的Mac终端(oh-my-zsh)终极美化及必备插件推荐</title>
-      <link>/zh/posts/2018/ultimate-way-to-beautify-mac-terminal-and-recommendations-for-plugins/</link>
+      <link>https://tonyxu.io/zh/posts/2018/ultimate-way-to-beautify-mac-terminal-and-recommendations-for-plugins/</link>
       <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/zh/posts/2018/ultimate-way-to-beautify-mac-terminal-and-recommendations-for-plugins/</guid>
+      <guid>https://tonyxu.io/zh/posts/2018/ultimate-way-to-beautify-mac-terminal-and-recommendations-for-plugins/</guid>
       <description>如果你使用Mac进行开发，那么Terminal.app应该是你使用非常频繁的app了。初体验Terminal时你可能觉得单调乏味，阅读密密麻麻的内容也很费劲。但是如果你跟着我一起配置它，就会发现你平时觉得繁琐，不方便的地方其实都可以被完美解决,并且颜值也高了许多。
 我们准备这样改造Terminal  修改Terminal的Profile: 让Terminal配色更美观
  安装oh-my-zsh: 将Terminal的shell从bash改成更强大的zsh
@@ -205,10 +205,10 @@ https://github.com/robbyrussell/oh-my-zsh/wiki/External-themes
     
     <item>
       <title>为客户端而生的OAuth2.0协议之PKCE授权码模式</title>
-      <link>/zh/posts/2018/oauth2-pkce-flow/</link>
+      <link>https://tonyxu.io/zh/posts/2018/oauth2-pkce-flow/</link>
       <pubDate>Tue, 24 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/zh/posts/2018/oauth2-pkce-flow/</guid>
+      <guid>https://tonyxu.io/zh/posts/2018/oauth2-pkce-flow/</guid>
       <description>如果你正在做一款原生客户端软件，同时你又需要用到OAuth2.0登陆，那么使用OAuth2.0带PKCE支持的授权码模式是你的最佳选择。下面我就和大家分享一下带PKCE的授权码模式为什么最适合原生客户端。
 原生客户端软件一般是指没有后端服务器，所有代码都在用户本地设备上运行的软件（如Windows/Mac客户端或者iOS/Android客户端)，因此想让原生客户端软件安全存放密钥(client secret)是不现实的，很容易被破解。
 那么原生客户端如果需要使用OAuth有哪些选择，这些选择又有哪些利弊呢？
@@ -227,10 +227,10 @@ PKCE的流程大概如下:
     
     <item>
       <title>用GitLab-CI免费运行定时任务</title>
-      <link>/zh/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/</link>
+      <link>https://tonyxu.io/zh/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/</link>
       <pubDate>Mon, 23 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/zh/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/</guid>
+      <guid>https://tonyxu.io/zh/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/</guid>
       <description>本文介绍我是如何使用GitLab-CI免费地运行一些需要定时执行的脚本，而不需要在本地/服务器上使用cron job或者一直跑一个后台程序运行中间sleep。
 GitLab-CI是GitLab提供的持续集成/部署的工具。当有新代码提交或者其他条件触发时，它就会自动运行脚本执行编译、测试、部署等活动。GitLab-CI每个月提供2,000分钟的免费运行时间，平均一天可以大概跑一个小时。
 如果你不用GitLab而是用GitHub的话，Travis CI也免费提供类似功能。
@@ -253,10 +253,10 @@ Running with gitlab-runner 11.1.0 (081978aa) on docker-auto-scale 0277ea0f Using
     
     <item>
       <title>使用IcoMoon减少98%的FontAwesome字体加载体积</title>
-      <link>/zh/posts/2018/use-icomoon-to-reduce-fontawesome-size/</link>
+      <link>https://tonyxu.io/zh/posts/2018/use-icomoon-to-reduce-fontawesome-size/</link>
       <pubDate>Sun, 22 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/zh/posts/2018/use-icomoon-to-reduce-fontawesome-size/</guid>
+      <guid>https://tonyxu.io/zh/posts/2018/use-icomoon-to-reduce-fontawesome-size/</guid>
       <description>FontAwesome是非常棒的图标字体库，引用了FontAwesome字体库后，仅需要通过HTML标签就可以把图标嵌入你的页面，非常之方便。然而默认使用方法虽然简单，但是会带来一个额外问题，就是加载的资源文件体积过大，如果你的页面本身就比较简单，字体库可能会让你的网页加载大小翻上好几倍。
 下面分享一下我通过使用IcoMoon来生成只含有我需要的图标的图标库文件，瞬间减少大约98%文件大小的方法。
 FontAwesome的默认使用方法  引用FontAwesome图标库:
@@ -273,10 +273,10 @@ FontAwesome的默认使用方法  引用FontAwesome图标库:
     
     <item>
       <title>准备好你的下一份工作</title>
-      <link>/zh/posts/2018/be-prepared-for-your-next-job/</link>
+      <link>https://tonyxu.io/zh/posts/2018/be-prepared-for-your-next-job/</link>
       <pubDate>Sat, 21 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/zh/posts/2018/be-prepared-for-your-next-job/</guid>
+      <guid>https://tonyxu.io/zh/posts/2018/be-prepared-for-your-next-job/</guid>
       <description>这篇分享是我在DBL聚会和大家分享的内容，贴在这里以供大家阅读。
  我想和大家在这篇文章里分享一下我最近跳槽的经历以及我总结的为什么我选择并成功跳槽的原因。我的重点会放在比较抽象的思考，而不是具体的技巧。
 我想分享的话题:
@@ -308,10 +308,10 @@ FontAwesome的默认使用方法  引用FontAwesome图标库:
     
     <item>
       <title>自己搭建互联网产品可能用到的技术栈</title>
-      <link>/zh/posts/2018/tech-stack-for-building-your-own-product/</link>
+      <link>https://tonyxu.io/zh/posts/2018/tech-stack-for-building-your-own-product/</link>
       <pubDate>Tue, 17 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/zh/posts/2018/tech-stack-for-building-your-own-product/</guid>
+      <guid>https://tonyxu.io/zh/posts/2018/tech-stack-for-building-your-own-product/</guid>
       <description>作为一名程序员/开发者，如果你也想自己尝试从头到尾搭建一款互联网产品，那么你可能会用到下面这些技术栈或者技术框架。选取的基本都是开源或者免费使用的，适合个人开发者或者创业公司参考。
 网站前端  基础语言: HTML, JavaScript, CSS
  衍生语言: ES6, TypeScript, CoffeScript
@@ -331,10 +331,10 @@ FontAwesome的默认使用方法  引用FontAwesome图标库:
     
     <item>
       <title>利用Telegram和Flask打造私人通知服务器</title>
-      <link>/zh/posts/2018/use-telegram-and-flask-to-build-notification-server/</link>
+      <link>https://tonyxu.io/zh/posts/2018/use-telegram-and-flask-to-build-notification-server/</link>
       <pubDate>Thu, 12 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/zh/posts/2018/use-telegram-and-flask-to-build-notification-server/</guid>
+      <guid>https://tonyxu.io/zh/posts/2018/use-telegram-and-flask-to-build-notification-server/</guid>
       <description>假如有如下这么几个场景:
  每天下班离开公司的时候和到家的时候都希望能自动通知到我的男朋友/女朋友
  页面有访问时立刻通知自己
@@ -356,10 +356,10 @@ FontAwesome的默认使用方法  引用FontAwesome图标库:
     
     <item>
       <title>云计算探索</title>
-      <link>/zh/posts/2018/cloud-computing-exploration/</link>
+      <link>https://tonyxu.io/zh/posts/2018/cloud-computing-exploration/</link>
       <pubDate>Wed, 11 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/zh/posts/2018/cloud-computing-exploration/</guid>
+      <guid>https://tonyxu.io/zh/posts/2018/cloud-computing-exploration/</guid>
       <description>说起和云的接触，最早可以追溯到高二的时候Google被墙，被迫学网上的教程自己用Google App Engine跑GoAgent翻墙代理。大一的时候曾经折腾过一阵自建网站(纯属娱乐)，在网上购买过共享空间(Shared Hosting)，后来觉得限制太多，无法安装软件，就又购买了独立主机(VPS)。在美国读CS期间学Cloud Computing课程又在AWS上建过一些instance放简单网页。毕业后还尝试过Heroku (和Google App Engine类似)等云平台用于跑小型demo程序。虽然没有高强度使用云计算的经历，但是或多或少用过一些，也对云计算的应用趋势略有所感。
 总体来说，对于普通的开发者，如果只是需要跑一个后端，从最早的要自己搭建物理服务器，到后来网上租虚拟服务器（Digital Ocean)以及更加专业的AWS等之后，现在更多的开始用Serverless架构的服务(AWS Lambda, Google Cloud Functions, Firebase Cloud Functions, Azure Functions)，也就是说只需要关心代码本身，而不需要关心维护环境。
 我自己有跑一个Flask程序，目前放在Google App Engine上，主要是因为Google App Engine的Standard Environment版本是有免费额度的。这个Flask程序之前是Serve https://tonyxu.io 网站前端和后端(REST API)的请求。现在https://tonyxu.io的前端migrate到Firebase Hosting了，因此我打算重构在GAE上跑的后端。我会另外单独写一篇文章来记录我是如何搭建一个自用的后端REST API。</description>
@@ -367,10 +367,10 @@ FontAwesome的默认使用方法  引用FontAwesome图标库:
     
     <item>
       <title>创建Alfred Workflow上传截图到S3</title>
-      <link>/zh/posts/2018/create-alfred-workflow-for-uploading-screenshot-to-s3/</link>
+      <link>https://tonyxu.io/zh/posts/2018/create-alfred-workflow-for-uploading-screenshot-to-s3/</link>
       <pubDate>Sun, 08 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/zh/posts/2018/create-alfred-workflow-for-uploading-screenshot-to-s3/</guid>
+      <guid>https://tonyxu.io/zh/posts/2018/create-alfred-workflow-for-uploading-screenshot-to-s3/</guid>
       <description>Markdown语言正在变得越来越流行，大多数人在使用Markdown语言的时候都会需要粘贴图片，然而Markdown粘贴图片必须要用链接。今天我想向大家介绍如何创建一个Alfred workflow来自动上传你剪切板里的图片到S3并获取公开链接。
 演示 主要步骤  使用 pngpaste 获取剪切板图片
  把图片写到临时文件夹 /tmp
@@ -388,10 +388,10 @@ FontAwesome的默认使用方法  引用FontAwesome图标库:
     
     <item>
       <title>入职LinkedIn一个月总结</title>
-      <link>/zh/posts/2018/join-linkedin-one-month-summary/</link>
+      <link>https://tonyxu.io/zh/posts/2018/join-linkedin-one-month-summary/</link>
       <pubDate>Wed, 04 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/zh/posts/2018/join-linkedin-one-month-summary/</guid>
+      <guid>https://tonyxu.io/zh/posts/2018/join-linkedin-one-month-summary/</guid>
       <description>今天入职LinkedIn一个月了，这一个月过的非常快，第一周培训，第二周InDay，第三周预备放假，第四周放一周假，所以事实上工作的时间远不到一个月。
 这一个月最主要的任务就是熟悉公司的技术、工具、流程和自己组的产品，中间还参加了不少内部的会。虽然第一个月不太可能有多亮眼的表现，但是还是应该总结一下。
 自己觉得表现好的地方：
@@ -411,10 +411,10 @@ FontAwesome的默认使用方法  引用FontAwesome图标库:
     
     <item>
       <title>REST API 设计面试准备</title>
-      <link>/zh/posts/2018/rest-api-design-interview-preparation/</link>
+      <link>https://tonyxu.io/zh/posts/2018/rest-api-design-interview-preparation/</link>
       <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/zh/posts/2018/rest-api-design-interview-preparation/</guid>
+      <guid>https://tonyxu.io/zh/posts/2018/rest-api-design-interview-preparation/</guid>
       <description>现在 REST API 已经越来越流行被用作前后端的借口。大多数平台都提供 REST API 作为兼容 Web 端和移动端通用接口。如果你即将面试一个要求对 REST API 非常熟悉的岗位，我推荐你多准备 REST API 相关知识。以下是我个人对 REST API 的面试准备。
 设计原则  自描述
  简单
@@ -437,10 +437,10 @@ FontAwesome的默认使用方法  引用FontAwesome图标库:
     
     <item>
       <title>提升工作中解决问题的能力</title>
-      <link>/zh/posts/2018/improve-your-ability-to-solve-problem-at-work/</link>
+      <link>https://tonyxu.io/zh/posts/2018/improve-your-ability-to-solve-problem-at-work/</link>
       <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/zh/posts/2018/improve-your-ability-to-solve-problem-at-work/</guid>
+      <guid>https://tonyxu.io/zh/posts/2018/improve-your-ability-to-solve-problem-at-work/</guid>
       <description>解决问题是工作中最必不可少的能力，因此需要思考:
  自己是否有在解决问题这个方面的能力有欠缺
  如何才能提升这个能力
@@ -459,10 +459,10 @@ FontAwesome的默认使用方法  引用FontAwesome图标库:
     
     <item>
       <title>写在开头</title>
-      <link>/zh/posts/2018/get-started/</link>
+      <link>https://tonyxu.io/zh/posts/2018/get-started/</link>
       <pubDate>Mon, 02 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/zh/posts/2018/get-started/</guid>
+      <guid>https://tonyxu.io/zh/posts/2018/get-started/</guid>
       <description>今天决定建立这个博客，鼓励自己在生活和工作中多思考和总结。</description>
     </item>
     

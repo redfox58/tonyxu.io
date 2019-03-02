@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Tony Xu Blog</title>
-    <link>/posts/</link>
+    <link>https://tonyxu.io/posts/</link>
     <description>Recent content in Posts on Tony Xu Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Fri, 01 Feb 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://tonyxu.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>My Productivity Tools and Development Setup Recommended to Software Engineers</title>
-      <link>/posts/2019/my-productivity-tools-and-development-setup-recommended-to-software-engineers/</link>
+      <link>https://tonyxu.io/posts/2019/my-productivity-tools-and-development-setup-recommended-to-software-engineers/</link>
       <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>/posts/2019/my-productivity-tools-and-development-setup-recommended-to-software-engineers/</guid>
+      <guid>https://tonyxu.io/posts/2019/my-productivity-tools-and-development-setup-recommended-to-software-engineers/</guid>
       <description>Hardware Laptop 👉 Apple MacBook Pro (13-inch, 2017, Four Thunderbolt 3 Ports)
 - 13-inch
 - 2017 Year
@@ -30,19 +30,19 @@ I&amp;rsquo;m using iPhone X as my mobile phone. I have been an iPhone person ev
     
     <item>
       <title>Use GitHub for Knowledge Base and Projects Management</title>
-      <link>/posts/2019/use-github-to-mange-personal-knowledge-base/</link>
+      <link>https://tonyxu.io/posts/2019/use-github-to-mange-personal-knowledge-base/</link>
       <pubDate>Mon, 21 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>/posts/2019/use-github-to-mange-personal-knowledge-base/</guid>
+      <guid>https://tonyxu.io/posts/2019/use-github-to-mange-personal-knowledge-base/</guid>
       <description>GitHub has become the one and only platform for developers. We collaborate on the platform for anything about code. Can GitHub help you anything else besides code? I have recently been frustrated choosing a tool to manage my personal knowledge base, although there are lots of choices such as note apps (Bear, Evernote), project management app (Trello), or knowledge management app (Notion.so), eventually GitHub turned out to my choice which has below pros:</description>
     </item>
     
     <item>
       <title>Technologies Learned as a Software Engineer</title>
-      <link>/posts/2018/technologies-learned-as-a-software-engineer/</link>
+      <link>https://tonyxu.io/posts/2018/technologies-learned-as-a-software-engineer/</link>
       <pubDate>Thu, 06 Dec 2018 00:00:00 +0000</pubDate>
       
-      <guid>/posts/2018/technologies-learned-as-a-software-engineer/</guid>
+      <guid>https://tonyxu.io/posts/2018/technologies-learned-as-a-software-engineer/</guid>
       <description>As a software engineer, I&amp;rsquo;m always excited in learning various new technologies. In this blog, I&amp;rsquo;ll keep a list of technology subjects I have already started learning or plan to learn in my life as a software engineer.
 Note: I will keep updating this page as I&amp;rsquo;m learning them
 How I scale level of expertise for a technology:
@@ -52,10 +52,10 @@ How I scale level of expertise for a technology:
     
     <item>
       <title>Embed Google Analytics Dashboard on Website</title>
-      <link>/posts/2018/embed-google-analytics-dashboard-on-website/</link>
+      <link>https://tonyxu.io/posts/2018/embed-google-analytics-dashboard-on-website/</link>
       <pubDate>Mon, 15 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>/posts/2018/embed-google-analytics-dashboard-on-website/</guid>
+      <guid>https://tonyxu.io/posts/2018/embed-google-analytics-dashboard-on-website/</guid>
       <description>&lt;p&gt;If you are using Google Analytics to analyze site traffic, you might want to embed those amazing dashboards to your website publicly. While Google doesn&amp;rsquo;t provide iframe solution, it does offer a &lt;a href=&#34;https://developers.google.com/analytics/devguides/reporting/embed/v1/&#34;&gt;Google Analytics Embed API&lt;/a&gt; which requires a bit more technical knowledge. I&amp;rsquo;ll walk you through each and every step and make sure you don&amp;rsquo;t have to read all developer documentation and can easily build dashboard&lt;/p&gt;
 
 &lt;p&gt;Preview:&lt;/p&gt;
@@ -65,29 +65,29 @@ How I scale level of expertise for a technology:
     
     <item>
       <title>Use Firebase Cloud Function to Count Website Visitors</title>
-      <link>/posts/2018/use-firebase-cloud-function-to-count-website-visitors/</link>
+      <link>https://tonyxu.io/posts/2018/use-firebase-cloud-function-to-count-website-visitors/</link>
       <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>/posts/2018/use-firebase-cloud-function-to-count-website-visitors/</guid>
+      <guid>https://tonyxu.io/posts/2018/use-firebase-cloud-function-to-count-website-visitors/</guid>
       <description>It&amp;rsquo;s getting popular to use Firebase hosting to host static website, however, you might not know you can still have server-side code hosted in Firebase for your static website, and that is the Firebase Cloud Function. Once of the case you might want to use the Cloud Function is to write something to Firebase database, for example, a hit counter. In this topic, I&amp;rsquo;ll show you how to use Firebase Cloud Function and Firebase Realtime Database to count website visitor.</description>
     </item>
     
     <item>
       <title>Customize Chrome New Tab Page</title>
-      <link>/posts/2018/customize-chrome-new-tab-page/</link>
+      <link>https://tonyxu.io/posts/2018/customize-chrome-new-tab-page/</link>
       <pubDate>Fri, 03 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>/posts/2018/customize-chrome-new-tab-page/</guid>
+      <guid>https://tonyxu.io/posts/2018/customize-chrome-new-tab-page/</guid>
       <description>Have you thought about customizing Chrome new tab page? If so, you must have tried the extensions in Chrome web store to customize your new tab page. If you are not satisfied with any of them, you have the option to build your own new tab page that meets all your expectations.
 Chrome extension file structure └── chrome-extention //You project directory ├── manifest.json //Chrome extension manifest └── newTab.html //Chrome extension new tab html page Create Chrome extension manifest Create a folder as the project folder for Chrome extension.</description>
     </item>
     
     <item>
       <title>Why we need to deprecate x prefix for HTTP headers?</title>
-      <link>/posts/2018/http-deprecate-x-prefix/</link>
+      <link>https://tonyxu.io/posts/2018/http-deprecate-x-prefix/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>/posts/2018/http-deprecate-x-prefix/</guid>
+      <guid>https://tonyxu.io/posts/2018/http-deprecate-x-prefix/</guid>
       <description>In June, 2012, Internet Engineering Task Force released a new RFC(RFC-6648), recommending deprecation of X- prefix. As LinkedIn also use this type of prefix, I was interested to read this RFC, and explain to you why we need to deprecate it.
 X- prefix background HTTP header is used to transmit additional information between client and server.
 Some standard HTTP header:
@@ -96,20 +96,20 @@ Some standard HTTP header:
     
     <item>
       <title>Write script to scrap house rent price and send to your phone</title>
-      <link>/posts/2018/write-script-to-scrap-house-rental-price/</link>
+      <link>https://tonyxu.io/posts/2018/write-script-to-scrap-house-rental-price/</link>
       <pubDate>Sat, 28 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/posts/2018/write-script-to-scrap-house-rental-price/</guid>
+      <guid>https://tonyxu.io/posts/2018/write-script-to-scrap-house-rental-price/</guid>
       <description>House rental is a critical thing if you are living in the silicon valley. I&amp;rsquo;m planning to move to a new apartment, but the price changes often. I want to monitor the price and book it when it drops. In order to do that, I wrote a script to monitor the house rental price and push the result to my phone like below.
 Get Started The apartment I&amp;rsquo;m looking at is a professional rental apartment, to not disclose the place I will be living in, I&amp;rsquo;m using another one for example.</description>
     </item>
     
     <item>
       <title>Ultimate way to beautify Mac terminal (oh-my-zsh) and plugin recommendations</title>
-      <link>/posts/2018/ultimate-way-to-beautify-mac-terminal-and-recommendations-for-plugins/</link>
+      <link>https://tonyxu.io/posts/2018/ultimate-way-to-beautify-mac-terminal-and-recommendations-for-plugins/</link>
       <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/posts/2018/ultimate-way-to-beautify-mac-terminal-and-recommendations-for-plugins/</guid>
+      <guid>https://tonyxu.io/posts/2018/ultimate-way-to-beautify-mac-terminal-and-recommendations-for-plugins/</guid>
       <description>If you are using Mac as development machine, Terminal.app must be one of the most used apps. Terminal might be not fancy to begin with, but you can totally make it more elegant and fancy if you follow with me.
 We will be doing these for our Terminal  Install Terminal Profile: Customize Terminal Color
  Install oh-my-zsh: Use powerful zsh for Terminal, instead of shell
@@ -118,10 +118,10 @@ We will be doing these for our Terminal  Install Terminal Profile: Customize Ter
     
     <item>
       <title>The OAuth2 flow for native apps: PKCE</title>
-      <link>/posts/2018/oauth2-pkce-flow/</link>
+      <link>https://tonyxu.io/posts/2018/oauth2-pkce-flow/</link>
       <pubDate>Tue, 24 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/posts/2018/oauth2-pkce-flow/</guid>
+      <guid>https://tonyxu.io/posts/2018/oauth2-pkce-flow/</guid>
       <description>If you are building a native application, and you need OAuth 2.0, PKCE OAuth is your best choice. Here I will explain why.
 Native application is often used to refer to native application that has no back-end, and running totally in user&amp;rsquo;s devices such as Windows, Mac, iOS, and Android, where securely storing secrets is impossible.
 What are the OAuth 2 options for those native applications and what are the pros and cons for them?</description>
@@ -129,10 +129,10 @@ What are the OAuth 2 options for those native applications and what are the pros
     
     <item>
       <title>Use GitLab-CI to run free scheduled jobs</title>
-      <link>/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/</link>
+      <link>https://tonyxu.io/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/</link>
       <pubDate>Mon, 23 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/</guid>
+      <guid>https://tonyxu.io/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/</guid>
       <description>In this topic, I&amp;rsquo;ll introduce how to run scheduled job with GitLab-CI, without the need to have a server running cron job or other application.
 GitLab-CI is a continuous integration/deployment tool, it will trigger some scripts (such as build, test, deployment) when there is new deployment or defined interval. GitLab-CI has a free quota of 2,000 minutes running time, which is 1 hour everyday.
 If you prefer GitHub than GitLab, Travis CI also offers similar tool for free.</description>
@@ -140,10 +140,10 @@ If you prefer GitHub than GitLab, Travis CI also offers similar tool for free.</
     
     <item>
       <title>Use IcoMoon to reduce 98% FontAwesome load size</title>
-      <link>/posts/2018/use-icomoon-to-reduce-fontawesome-size/</link>
+      <link>https://tonyxu.io/posts/2018/use-icomoon-to-reduce-fontawesome-size/</link>
       <pubDate>Sun, 22 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/posts/2018/use-icomoon-to-reduce-fontawesome-size/</guid>
+      <guid>https://tonyxu.io/posts/2018/use-icomoon-to-reduce-fontawesome-size/</guid>
       <description>FontAwesome is an awesome font library. With fontawesome, it will be super easy to inject icon into your html page. Although the default method is very simple, it has the drawback of taking too much load by loading full set of icons.
 In this article, I&amp;rsquo;ll share how I reduce the fontawesome library size by using IcoMoon to generate icon library that only has what I need.
 FontAwesome Default Usage  Include FontAwesome Icon Library:</description>
@@ -151,10 +151,10 @@ FontAwesome Default Usage  Include FontAwesome Icon Library:</description>
     
     <item>
       <title>Be prepared for your next job</title>
-      <link>/posts/2018/be-prepared-for-your-next-job/</link>
+      <link>https://tonyxu.io/posts/2018/be-prepared-for-your-next-job/</link>
       <pubDate>Sat, 21 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/posts/2018/be-prepared-for-your-next-job/</guid>
+      <guid>https://tonyxu.io/posts/2018/be-prepared-for-your-next-job/</guid>
       <description>This is a presentation shared in DBL retreat. I posted content here for everyone to take a look.
  Thanks for reading this blog. In this blog I want to share my personal experience on changing my job and some of my thinking that might be helpful for you. I&amp;rsquo;ll keep this blog in high level, and will not talk about job seeking skills, etc.
 I will talk about:</description>
@@ -162,10 +162,10 @@ I will talk about:</description>
     
     <item>
       <title>Tech stack to build your own product</title>
-      <link>/posts/2018/tech-stack-for-building-your-own-product/</link>
+      <link>https://tonyxu.io/posts/2018/tech-stack-for-building-your-own-product/</link>
       <pubDate>Tue, 17 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/posts/2018/tech-stack-for-building-your-own-product/</guid>
+      <guid>https://tonyxu.io/posts/2018/tech-stack-for-building-your-own-product/</guid>
       <description>As a software engineer or developer, you might want to build a product end-to-end. These are the frameworks and technologies you might need. All listed items are open-source or free to use.
 Web Front-end  Fundamental Language: HTML, JavaScript, CSS
  Advanced Language: ES6, TypeScript, CoffeScript
@@ -178,10 +178,10 @@ Web Front-end  Fundamental Language: HTML, JavaScript, CSS
     
     <item>
       <title>Use Telegram and Flask to build personal notification server</title>
-      <link>/posts/2018/use-telegram-and-flask-to-build-notification-server/</link>
+      <link>https://tonyxu.io/posts/2018/use-telegram-and-flask-to-build-notification-server/</link>
       <pubDate>Thu, 12 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/posts/2018/use-telegram-and-flask-to-build-notification-server/</guid>
+      <guid>https://tonyxu.io/posts/2018/use-telegram-and-flask-to-build-notification-server/</guid>
       <description>Imagine if you are in these situations:
  I want to notify my girl friend whenver I leave company or arrive home
  I want to get notified when there is new visit to my website
@@ -192,19 +192,19 @@ Build a Flask app to receive GET or POST request, and then compose different mes
     
     <item>
       <title>Cloud Computing Explorations</title>
-      <link>/posts/2018/cloud-computing-exploration/</link>
+      <link>https://tonyxu.io/posts/2018/cloud-computing-exploration/</link>
       <pubDate>Wed, 11 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/posts/2018/cloud-computing-exploration/</guid>
+      <guid>https://tonyxu.io/posts/2018/cloud-computing-exploration/</guid>
       <description>Talking about my experience with cloud computing, the first experience is when I&amp;rsquo;m in 11th grade, deploying a proxy application in Google App Engine to get over the Great Fire Wall in China. Later when I&amp;rsquo;m a freshman in college, I built a website for fun and subscribed shared hosting online. However, I found out that shared hosting has too many restrictions such as you have no control over softwares, so I switched to VPS.</description>
     </item>
     
     <item>
       <title>Create Alfred workflow for uploading screenshot to S3</title>
-      <link>/posts/2018/create-alfred-workflow-for-uploading-screenshot-to-s3/</link>
+      <link>https://tonyxu.io/posts/2018/create-alfred-workflow-for-uploading-screenshot-to-s3/</link>
       <pubDate>Sun, 08 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/posts/2018/create-alfred-workflow-for-uploading-screenshot-to-s3/</guid>
+      <guid>https://tonyxu.io/posts/2018/create-alfred-workflow-for-uploading-screenshot-to-s3/</guid>
       <description>As Markdown markup language gets more and more popular, most people have a need to quickly generate a public url for screenshot/image in clipboard. Today I created an Alfred workflow that helps you upload images/screenshot in clipboard.
 Demo Overview  Use pngpaste to get image data from clipboard
  Write to a image file in /tmp folder
@@ -214,20 +214,20 @@ Demo Overview  Use pngpaste to get image data from clipboard
     
     <item>
       <title>One month summary for joining LinkedIn</title>
-      <link>/posts/2018/join-linkedin-one-month-summary/</link>
+      <link>https://tonyxu.io/posts/2018/join-linkedin-one-month-summary/</link>
       <pubDate>Wed, 04 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/posts/2018/join-linkedin-one-month-summary/</guid>
+      <guid>https://tonyxu.io/posts/2018/join-linkedin-one-month-summary/</guid>
       <description>Today is my so-called one month anniversary at LinkedIn. It&amp;rsquo;s been a fast week, bootcamp, Inday, and a week of shutdown. So it&amp;rsquo;s actually much less than a month.
 The main thing on my list this month is to get familiar with the technology, tool, process, and products in LinkedIn. Although there is not a lot of happening, I should still look back and think about what can be improved.</description>
     </item>
     
     <item>
       <title>Improve problem-solving skill</title>
-      <link>/posts/2018/improve-your-ability-to-solve-problem-at-work/</link>
+      <link>https://tonyxu.io/posts/2018/improve-your-ability-to-solve-problem-at-work/</link>
       <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/posts/2018/improve-your-ability-to-solve-problem-at-work/</guid>
+      <guid>https://tonyxu.io/posts/2018/improve-your-ability-to-solve-problem-at-work/</guid>
       <description>Problem-solving skill is the most important skill at work, you need to think about:
  If you are not good at solving problem
  How to improve the problem-solving skill
@@ -237,10 +237,10 @@ The main thing on my list this month is to get familiar with the technology, too
     
     <item>
       <title>REST API Design Interview Preparation</title>
-      <link>/posts/2018/rest-api-design-interview-preparation/</link>
+      <link>https://tonyxu.io/posts/2018/rest-api-design-interview-preparation/</link>
       <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/posts/2018/rest-api-design-interview-preparation/</guid>
+      <guid>https://tonyxu.io/posts/2018/rest-api-design-interview-preparation/</guid>
       <description>REST API has become a very popular concept for designing back-end service interface. Most platforms provide REST API as unified interface for web/native applications. If you are going to interview for a job that will require REST API knowledge, you are encouraged to be well prepared for it. Below is my own summary for REST API interview. Hopefully it&amp;rsquo;s helpful for you as well.
 Principle  Self-describing
  Simple</description>
@@ -248,10 +248,10 @@ Principle  Self-describing
     
     <item>
       <title>Preface</title>
-      <link>/posts/2018/get-started/</link>
+      <link>https://tonyxu.io/posts/2018/get-started/</link>
       <pubDate>Mon, 02 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/posts/2018/get-started/</guid>
+      <guid>https://tonyxu.io/posts/2018/get-started/</guid>
       <description>Today, I decided to start this blog, which I hope can encourage me to think more and summarize more for my work and life.</description>
     </item>
     

@@ -15,10 +15,22 @@
     
     
     
+<meta itemprop="name" content="自己 DIY Chrome浏览器的新标签页">
+<meta itemprop="description" content="有没有想过改造Chrome的默认新标签页? 如果有，我相信你肯定尝试过去Chrome应用商店下载一些拓展来定制新标签页。如果你觉得无论是默认，还是第三方提供的新标签页都无法满足你的需求，我建议你跟着我尝试自己制作一款Chrome拓展来定制你的新标签页。
+拓展插件目录结构 └── chrome-extention //你的Chrome拓展项目目录 ├── manifest.json //Chrome拓展描述文件 └── newTab.html //Chrome拓展新标签页页面文件 创建Chrome拓展描述文件 创建一个文件夹，作为Chrome拓展的项目文件夹。在文件夹内创建manifest.json描述文件如下:
+{ &#34;name&#34;: &#34;Chrome extension name here.&#34;, &#34;version&#34;: &#34;1.0&#34;, &#34;manifest_version&#34;: 2, &#34;description&#34;: &#34;Chrome extension description written here.&#34;, &#34;chrome_url_overrides&#34; : { &#34;newtab&#34;: &#34;newTab.html&#34; }, &#34;content_security_policy&#34;: &#34;script-src &#39;self&#39;; object-src &#39;self&#39;&#34; } 创建自定义新标签页面 在Chrome拓展项目文件夹内创建newTab.html文件，这个文件就是你即将替换为新标签页的网页文件。如果你对HTML/CSS并不熟悉，可以仿照我的写法，把新标签页制作成如下所示的网址导航。
+newTab.html参考源码:
+&lt;html&gt; &lt;head&gt; &lt;meta charset=&#34;utf-8&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1&#34;&gt; &lt;title&gt;New Tab&lt;/title&gt; &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css&#34;&gt; &lt;/head&gt; &lt;body&gt; &lt;section class=&#34;section&#34;&gt; &lt;div class=&#34;container&#34;&gt; &lt;h1 class=&#34;title&#34;&gt; Hello Tony! &lt;/h1&gt; &lt;br&gt; &lt;p class=&#34;subtitle&#34;&gt; Resources &lt;/p&gt; &lt;div class=&#34;columns&#34;&gt; &lt;div class=&#34;column&#34;&gt; &lt;div class=&#34;menu&#34;&gt; &lt;p class=&#34;heading&#34;&gt;Company Resource&lt;/p&gt; &lt;ul class=&#34;menu-list&#34;&gt; &lt;li&gt; &lt;a href=&#34;&#34;&gt;All Hands&lt;/a&gt; &lt;/li&gt; &lt;li&gt; &lt;a href=&#34;&#34;&gt;Helpin&lt;/a&gt; &lt;/li&gt; &lt;li&gt; &lt;a href=&#34;&#34;&gt;Book Room&lt;/a&gt; &lt;/li&gt; &lt;li&gt; &lt;a href=&#34;&#34;&gt;Inlife&lt;/a&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;/div&gt; &lt;div class=&#34;column&#34;&gt; &lt;div class=&#34;menu&#34;&gt; &lt;p class=&#34;heading&#34;&gt;Tech Resource&lt;/p&gt; &lt;ul class=&#34;menu-list&#34;&gt; &lt;li&gt; &lt;a href=&#34;&#34;&gt;Fast Access&lt;/a&gt; &lt;/li&gt; &lt;li&gt; &lt;a href=&#34;&#34;&gt;Git&lt;/a&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;/div&gt; &lt;div class=&#34;column&#34;&gt; &lt;div class=&#34;menu&#34;&gt; &lt;p class=&#34;heading&#34;&gt;Team Resource&lt;/p&gt; &lt;ul class=&#34;menu-list&#34;&gt; &lt;li&gt; &lt;a href=&#34;&#34;&gt;Sprint Board&lt;/a&gt; &lt;/li&gt; &lt;li&gt; &lt;a href=&#34;&#34;&gt;Zendesk&lt;/a&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;/div&gt; &lt;div class=&#34;column&#34;&gt; &lt;div class=&#34;menu&#34;&gt; &lt;p class=&#34;heading&#34;&gt;Docs&lt;/p&gt; &lt;ul class=&#34;menu-list&#34;&gt; &lt;li&gt; &lt;a href=&#34;https://docs.">
 
-  <meta name="author" content="徐毅涵">
 
- 
+<meta itemprop="datePublished" content="2018-08-03T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-08-03T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="196">
+
+
+
+<meta itemprop="keywords" content="" />
+
     <meta property="og:title" content="自己 DIY Chrome浏览器的新标签页" />
 <meta property="og:description" content="有没有想过改造Chrome的默认新标签页? 如果有，我相信你肯定尝试过去Chrome应用商店下载一些拓展来定制新标签页。如果你觉得无论是默认，还是第三方提供的新标签页都无法满足你的需求，我建议你跟着我尝试自己制作一款Chrome拓展来定制你的新标签页。
 拓展插件目录结构 └── chrome-extention //你的Chrome拓展项目目录 ├── manifest.json //Chrome拓展描述文件 └── newTab.html //Chrome拓展新标签页页面文件 创建Chrome拓展描述文件 创建一个文件夹，作为Chrome拓展的项目文件夹。在文件夹内创建manifest.json描述文件如下:
@@ -26,15 +38,22 @@
 newTab.html参考源码:
 &lt;html&gt; &lt;head&gt; &lt;meta charset=&#34;utf-8&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1&#34;&gt; &lt;title&gt;New Tab&lt;/title&gt; &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css&#34;&gt; &lt;/head&gt; &lt;body&gt; &lt;section class=&#34;section&#34;&gt; &lt;div class=&#34;container&#34;&gt; &lt;h1 class=&#34;title&#34;&gt; Hello Tony! &lt;/h1&gt; &lt;br&gt; &lt;p class=&#34;subtitle&#34;&gt; Resources &lt;/p&gt; &lt;div class=&#34;columns&#34;&gt; &lt;div class=&#34;column&#34;&gt; &lt;div class=&#34;menu&#34;&gt; &lt;p class=&#34;heading&#34;&gt;Company Resource&lt;/p&gt; &lt;ul class=&#34;menu-list&#34;&gt; &lt;li&gt; &lt;a href=&#34;&#34;&gt;All Hands&lt;/a&gt; &lt;/li&gt; &lt;li&gt; &lt;a href=&#34;&#34;&gt;Helpin&lt;/a&gt; &lt;/li&gt; &lt;li&gt; &lt;a href=&#34;&#34;&gt;Book Room&lt;/a&gt; &lt;/li&gt; &lt;li&gt; &lt;a href=&#34;&#34;&gt;Inlife&lt;/a&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;/div&gt; &lt;div class=&#34;column&#34;&gt; &lt;div class=&#34;menu&#34;&gt; &lt;p class=&#34;heading&#34;&gt;Tech Resource&lt;/p&gt; &lt;ul class=&#34;menu-list&#34;&gt; &lt;li&gt; &lt;a href=&#34;&#34;&gt;Fast Access&lt;/a&gt; &lt;/li&gt; &lt;li&gt; &lt;a href=&#34;&#34;&gt;Git&lt;/a&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;/div&gt; &lt;div class=&#34;column&#34;&gt; &lt;div class=&#34;menu&#34;&gt; &lt;p class=&#34;heading&#34;&gt;Team Resource&lt;/p&gt; &lt;ul class=&#34;menu-list&#34;&gt; &lt;li&gt; &lt;a href=&#34;&#34;&gt;Sprint Board&lt;/a&gt; &lt;/li&gt; &lt;li&gt; &lt;a href=&#34;&#34;&gt;Zendesk&lt;/a&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;/div&gt; &lt;div class=&#34;column&#34;&gt; &lt;div class=&#34;menu&#34;&gt; &lt;p class=&#34;heading&#34;&gt;Docs&lt;/p&gt; &lt;ul class=&#34;menu-list&#34;&gt; &lt;li&gt; &lt;a href=&#34;https://docs." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/zh/posts/2018/customize-chrome-new-tab-page/" />
+<meta property="og:url" content="https://tonyxu.io/zh/posts/2018/customize-chrome-new-tab-page/" />
+
+<meta property="og:image" content="https://tonyxu.io/profile-pic.png" />
 <meta property="article:published_time" content="2018-08-03T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2018-08-03T00:00:00&#43;00:00"/><meta property="og:site_name" content="Tony Xu 博客" />
- 
-    
 
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://tonyxu.io/profile-pic.png"/>
 
+<meta name="twitter:title" content="自己 DIY Chrome浏览器的新标签页"/>
+<meta name="twitter:description" content="有没有想过改造Chrome的默认新标签页? 如果有，我相信你肯定尝试过去Chrome应用商店下载一些拓展来定制新标签页。如果你觉得无论是默认，还是第三方提供的新标签页都无法满足你的需求，我建议你跟着我尝试自己制作一款Chrome拓展来定制你的新标签页。
+拓展插件目录结构 └── chrome-extention //你的Chrome拓展项目目录 ├── manifest.json //Chrome拓展描述文件 └── newTab.html //Chrome拓展新标签页页面文件 创建Chrome拓展描述文件 创建一个文件夹，作为Chrome拓展的项目文件夹。在文件夹内创建manifest.json描述文件如下:
+{ &#34;name&#34;: &#34;Chrome extension name here.&#34;, &#34;version&#34;: &#34;1.0&#34;, &#34;manifest_version&#34;: 2, &#34;description&#34;: &#34;Chrome extension description written here.&#34;, &#34;chrome_url_overrides&#34; : { &#34;newtab&#34;: &#34;newTab.html&#34; }, &#34;content_security_policy&#34;: &#34;script-src &#39;self&#39;; object-src &#39;self&#39;&#34; } 创建自定义新标签页面 在Chrome拓展项目文件夹内创建newTab.html文件，这个文件就是你即将替换为新标签页的网页文件。如果你对HTML/CSS并不熟悉，可以仿照我的写法，把新标签页制作成如下所示的网址导航。
+newTab.html参考源码:
+&lt;html&gt; &lt;head&gt; &lt;meta charset=&#34;utf-8&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1&#34;&gt; &lt;title&gt;New Tab&lt;/title&gt; &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css&#34;&gt; &lt;/head&gt; &lt;body&gt; &lt;section class=&#34;section&#34;&gt; &lt;div class=&#34;container&#34;&gt; &lt;h1 class=&#34;title&#34;&gt; Hello Tony! &lt;/h1&gt; &lt;br&gt; &lt;p class=&#34;subtitle&#34;&gt; Resources &lt;/p&gt; &lt;div class=&#34;columns&#34;&gt; &lt;div class=&#34;column&#34;&gt; &lt;div class=&#34;menu&#34;&gt; &lt;p class=&#34;heading&#34;&gt;Company Resource&lt;/p&gt; &lt;ul class=&#34;menu-list&#34;&gt; &lt;li&gt; &lt;a href=&#34;&#34;&gt;All Hands&lt;/a&gt; &lt;/li&gt; &lt;li&gt; &lt;a href=&#34;&#34;&gt;Helpin&lt;/a&gt; &lt;/li&gt; &lt;li&gt; &lt;a href=&#34;&#34;&gt;Book Room&lt;/a&gt; &lt;/li&gt; &lt;li&gt; &lt;a href=&#34;&#34;&gt;Inlife&lt;/a&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;/div&gt; &lt;div class=&#34;column&#34;&gt; &lt;div class=&#34;menu&#34;&gt; &lt;p class=&#34;heading&#34;&gt;Tech Resource&lt;/p&gt; &lt;ul class=&#34;menu-list&#34;&gt; &lt;li&gt; &lt;a href=&#34;&#34;&gt;Fast Access&lt;/a&gt; &lt;/li&gt; &lt;li&gt; &lt;a href=&#34;&#34;&gt;Git&lt;/a&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;/div&gt; &lt;div class=&#34;column&#34;&gt; &lt;div class=&#34;menu&#34;&gt; &lt;p class=&#34;heading&#34;&gt;Team Resource&lt;/p&gt; &lt;ul class=&#34;menu-list&#34;&gt; &lt;li&gt; &lt;a href=&#34;&#34;&gt;Sprint Board&lt;/a&gt; &lt;/li&gt; &lt;li&gt; &lt;a href=&#34;&#34;&gt;Zendesk&lt;/a&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;/div&gt; &lt;div class=&#34;column&#34;&gt; &lt;div class=&#34;menu&#34;&gt; &lt;p class=&#34;heading&#34;&gt;Docs&lt;/p&gt; &lt;ul class=&#34;menu-list&#34;&gt; &lt;li&gt; &lt;a href=&#34;https://docs."/>
 
- 
     
      
     
@@ -50,8 +69,10 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
  
     
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     
-    <link rel="canonical" href="/zh/posts/2018/customize-chrome-new-tab-page/">   <link rel="shortcut icon" type="image/png" href="/profile-pic.png">
+    <link rel="canonical" href="https://tonyxu.io/zh/posts/2018/customize-chrome-new-tab-page/">   <link rel="shortcut icon" type="image/png" href="/profile-pic.png">
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
@@ -65,7 +86,7 @@ if (!doNotTrack) {
   <div class="container">
     <div class="navbar-brand">
       <a class="navbar-item" href="/zh">
-        <img src="/profile-pic.png" alt="logo">
+        <img src="/favicon.ico" alt="logo">
       </a>
       <a class="navbar-item" href="/zh">
         Tony Xu 博客
@@ -97,19 +118,17 @@ if (!doNotTrack) {
           </span>
         </a>
         
-        <div class="navbar-item">
-          
-          
-          <a itemprop="url" class="navbar-item "
-            href="/zh/about"><span itemprop="name">关于</span></a>
-          
-          <a itemprop="url" class="navbar-item "
-            href="/zh/friends/"><span itemprop="name">友情链接</span></a>
-          
-          <a itemprop="url" class="navbar-item  is-active"
-            href="/zh/posts/"><span itemprop="name">文章</span></a>
-          
-        </div>
+        
+        
+        <a itemprop="url" class="navbar-item "
+          href="/zh/about/"><span itemprop="name">关于</span></a>
+        
+        <a itemprop="url" class="navbar-item "
+          href="/zh/friends/"><span itemprop="name">友情链接</span></a>
+        
+        <a itemprop="url" class="navbar-item  is-active"
+          href="/zh/posts/"><span itemprop="name">文章</span></a>
+        
         
         <div class="navbar-item">
           <div class="field">
@@ -118,7 +137,7 @@ if (!doNotTrack) {
                 <select size="1" name="links" onchange="window.location.href=this.value;">
                   <option selected disabled>语言</option>
                   
-                  <option value="/posts/2018/customize-chrome-new-tab-page/">English</option>
+                  <option value="https://tonyxu.io/posts/2018/customize-chrome-new-tab-page/">English</option>
                   
                 </select>
               </div>
@@ -165,6 +184,7 @@ newTab.html参考源码:
 </p>
         <hr />
         <div class="content">
+          
           
 
 <p>有没有想过改造Chrome的默认新标签页? 如果有，我相信你肯定尝试过去Chrome应用商店下载一些拓展来定制新标签页。如果你觉得无论是默认，还是第三方提供的新标签页都无法满足你的需求，我建议你跟着我尝试自己制作一款Chrome拓展来定制你的新标签页。</p>
@@ -306,22 +326,25 @@ newTab.html参考源码:
         
         <article>
           <div id="disqus_thread"></div>
-<script type="text/javascript">
-
-(function() {
+<script type="application/javascript">
+    var disqus_config = function () {
     
     
-    if (window.location.hostname == "localhost")
-        return;
-
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'tonyxu-io';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tonyxu-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
         </article>
         
       </div>
