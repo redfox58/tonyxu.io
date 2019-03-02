@@ -2,7 +2,7 @@
 <html lang="en-US" class="has-navbar-fixed-top">
 
 <head>
-    <meta name="generator" content="Hugo 0.52" />
+    <meta name="generator" content="Hugo 0.55.0-DEV" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,11 +30,12 @@
 参考Quickstart学习如何在 Firebase 部署你的第一个静态网站
 创建 Firebase 云函数 现在，我们来创建 Firebase 云函数来执行后端代码处理统计数字的更新。在这段代码中，我们将云函数连接实时数据库，并让它能够更新存储在数据库里的统计数字。
  初始化云函数
-  firebase init functions  在实时数据库创建hit_counter节点并把值设为 0
-  { &#34;hit_counter&#34;: 0 }  编辑云函数代码 (Index.js)
-  const functions = require(&#34;firebase-functions&#34;); const admin = require(&#34;firebase-admin&#34;); admin." />
+firebase init functions 在实时数据库创建hit_counter节点并把值设为 0
+{ &#34;hit_counter&#34;: 0 } 编辑云函数代码 (Index.js)
+const functions = require(&#34;firebase-functions&#34;); const admin = require(&#34;firebase-admin&#34;); admin.initializeApp(); exports.hitCounter = functions." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/zh/posts/2018/use-firebase-cloud-function-to-count-website-visitors/" /><meta property="article:published_time" content="2018-08-07T00:00:00&#43;00:00"/>
+<meta property="og:url" content="/zh/posts/2018/use-firebase-cloud-function-to-count-website-visitors/" />
+<meta property="article:published_time" content="2018-08-07T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2018-08-07T00:00:00&#43;00:00"/><meta property="og:site_name" content="Tony Xu 博客" />
  
     
@@ -156,9 +157,9 @@ if (!doNotTrack) {
 参考Quickstart学习如何在 Firebase 部署你的第一个静态网站
 创建 Firebase 云函数 现在，我们来创建 Firebase 云函数来执行后端代码处理统计数字的更新。在这段代码中，我们将云函数连接实时数据库，并让它能够更新存储在数据库里的统计数字。
  初始化云函数
-  firebase init functions  在实时数据库创建hit_counter节点并把值设为 0
-  { &#34;hit_counter&#34;: 0 }  编辑云函数代码 (Index.js)
-  const functions = require(&#34;firebase-functions&#34;); const admin = require(&#34;firebase-admin&#34;); admin.">
+firebase init functions 在实时数据库创建hit_counter节点并把值设为 0
+{ &#34;hit_counter&#34;: 0 } 编辑云函数代码 (Index.js)
+const functions = require(&#34;firebase-functions&#34;); const admin = require(&#34;firebase-admin&#34;); admin.initializeApp(); exports.hitCounter = functions.">
 
 
 <meta itemprop="datePublished" content="2018-08-07T00:00:00&#43;00:00" />
@@ -207,38 +208,32 @@ if (!doNotTrack) {
 <p>现在，我们来创建 Firebase 云函数来执行后端代码处理统计数字的更新。在这段代码中，我们将云函数连接实时数据库，并让它能够更新存储在数据库里的统计数字。</p>
 
 <ol>
-<li>初始化云函数<br />
-<br /></li>
-</ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">   firebase init functions</code></pre></div>
-<ol>
-<li>在实时数据库创建<code>hit_counter</code>节点并把值设为 0<br />
-<br /></li>
-</ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">   <span style="color:#000;font-weight:bold">{</span>
-     <span style="color:#204a87;font-weight:bold">&#34;hit_counter&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span>
-   <span style="color:#000;font-weight:bold">}</span></code></pre></div>
-<ol>
-<li>编辑云函数代码 (<code>Index.js</code>)<br />
-<br /></li>
-</ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">   <span style="color:#204a87;font-weight:bold">const</span> <span style="color:#000">functions</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">require</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;firebase-functions&#34;</span><span style="color:#000;font-weight:bold">);</span>
-   <span style="color:#204a87;font-weight:bold">const</span> <span style="color:#000">admin</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">require</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;firebase-admin&#34;</span><span style="color:#000;font-weight:bold">);</span>
-   <span style="color:#000">admin</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">initializeApp</span><span style="color:#000;font-weight:bold">();</span>
+<li><p>初始化云函数</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">firebase init functions</code></pre></div></li>
 
-   <span style="color:#000">exports</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">hitCounter</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">functions</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">https</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">onRequest</span><span style="color:#000;font-weight:bold">((</span><span style="color:#000">req</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">res</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">=&gt;</span> <span style="color:#000;font-weight:bold">{</span>
-       <span style="color:#204a87;font-weight:bold">const</span> <span style="color:#000">counterRef</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">admin</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">database</span><span style="color:#000;font-weight:bold">().</span><span style="color:#000">ref</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;/hit_counter&#34;</span><span style="color:#000;font-weight:bold">);</span>
-       <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">counterRef</span>
-           <span style="color:#000;font-weight:bold">.</span><span style="color:#000">transaction</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">current</span> <span style="color:#000;font-weight:bold">=&gt;</span> <span style="color:#000;font-weight:bold">{</span>
-           <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">current</span> <span style="color:#ce5c00;font-weight:bold">||</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">;</span>
-           <span style="color:#000;font-weight:bold">})</span>
-     <span style="color:#000;font-weight:bold">});</span>
-</code></pre></div>
-<ol>
-<li>部署云函数<br />
-<br /></li>
+<li><p>在实时数据库创建<code>hit_counter</code>节点并把值设为 0</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
+ <span style="color:#204a87;font-weight:bold">&#34;hit_counter&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span>
+<span style="color:#000;font-weight:bold">}</span></code></pre></div></li>
+
+<li><p>编辑云函数代码 (<code>Index.js</code>)</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#204a87;font-weight:bold">const</span> <span style="color:#000">functions</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">require</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;firebase-functions&#34;</span><span style="color:#000;font-weight:bold">);</span>
+<span style="color:#204a87;font-weight:bold">const</span> <span style="color:#000">admin</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">require</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;firebase-admin&#34;</span><span style="color:#000;font-weight:bold">);</span>
+<span style="color:#000">admin</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">initializeApp</span><span style="color:#000;font-weight:bold">();</span>
+
+<span style="color:#000">exports</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">hitCounter</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">functions</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">https</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">onRequest</span><span style="color:#000;font-weight:bold">((</span><span style="color:#000">req</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">res</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">=&gt;</span> <span style="color:#000;font-weight:bold">{</span>
+   <span style="color:#204a87;font-weight:bold">const</span> <span style="color:#000">counterRef</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">admin</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">database</span><span style="color:#000;font-weight:bold">().</span><span style="color:#000">ref</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;/hit_counter&#34;</span><span style="color:#000;font-weight:bold">);</span>
+   <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">counterRef</span>
+       <span style="color:#000;font-weight:bold">.</span><span style="color:#000">transaction</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">current</span> <span style="color:#000;font-weight:bold">=&gt;</span> <span style="color:#000;font-weight:bold">{</span>
+       <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">current</span> <span style="color:#ce5c00;font-weight:bold">||</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">;</span>
+       <span style="color:#000;font-weight:bold">})</span>
+ <span style="color:#000;font-weight:bold">});</span>
+</code></pre></div></li>
+
+<li><p>部署云函数</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">firebase deploy</code></pre></div></li>
 </ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">   firebase deploy</code></pre></div>
+
 <p>部署完成后你会得到一个云函数网址，你可以尝试在浏览器打开它，观察实时数据库里的数据是否加了 1。</p>
 
 <h2 id="为静态页面添加访问云函数的请求">为静态页面添加访问云函数的请求</h2>

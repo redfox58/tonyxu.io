@@ -2,7 +2,7 @@
 <html lang="en-US" class="has-navbar-fixed-top">
 
 <head>
-    <meta name="generator" content="Hugo 0.52" />
+    <meta name="generator" content="Hugo 0.55.0-DEV" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,7 +34,8 @@ Chrome Inspector:
 接下来就是代码实现了，因为我已经有一个python Flask app跑在Google App Engine上，因此就基于之前的app加了一段代码，通过url(如 http://example.com/housing )访问触发脚本执行。定时发送请求触发脚本的方法请参阅用GitLab-CI免费运行定时任务
 代码 Flask脚本片段 @app.route(&#39;/housing&#39;, methods=[&#39;GET&#39;]) def housing(): houseResponse = json.loads(urlfetch.fetch(url=&#39;https://api.avalonbay.com/json/reply/ApartmentSearch?communityCode=CA049&amp;min=2000&amp;max=3000&amp;desiredMoveInDate=2018-09-01T07:00:00.000Z&#39;).content) availableFloorPlans = houseResponse[&#34;results&#34;][&#34;availableFloorPlanTypes&#34;][0][&#34;availableFloorPlans&#34;] responseText = &#34;*House Quotes:*%0A&#34; for availableFloorPlan in availableFloorPlans: for apartment in availableFloorPlan[&#34;finishPackages&#34;][0][&#34;apartments&#34;]: responseText &#43;= &#34;Size:&#34; &#43; str(apartment[&#34;apartmentSize&#34;]) &#43; &#34; Price:&#34; &#43; str(apartment[&#34;pricing&#34;][&#34;effectiveRent&#34;]) &#43; &#34; Floor:&#34; &#43; str(apartment[&#34;floor&#34;]) &#43; &#34; Date:&#34; &#43; time." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/zh/posts/2018/write-script-to-scrap-house-rental-price/" /><meta property="article:published_time" content="2018-07-28T00:00:00&#43;00:00"/>
+<meta property="og:url" content="/zh/posts/2018/write-script-to-scrap-house-rental-price/" />
+<meta property="article:published_time" content="2018-07-28T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2018-07-28T00:00:00&#43;00:00"/><meta property="og:site_name" content="Tony Xu 博客" />
  
     
