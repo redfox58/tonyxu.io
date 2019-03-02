@@ -1,0 +1,19 @@
+    <!-- <h1 class="blog-timestamp">
+        {{ if eq .Type "post" }}
+        <h1 class="">
+        {{ partial "post/meta" . }}
+        </h1>
+        {{ end }}
+    </h1> -->
+    <p class="subtitle">
+        <a href="{{ .Permalink }}" itemprop="headline">{{ .Title }}</a>
+    </p>
+    {{ partial "date" . }}
+    <br />
+    <!-- {{ if .Description }}
+    <blockquote itemprop="about">{{ .Description }}</blockquote>
+    {{ end }}
+    <h2 class="content" itemprop="description">
+        {{ .Summary }}
+    </h2> -->
+    <!-- <a href="{{ .RelPermalink }}" itemprop="url">read more →</a> -->

@@ -1,0 +1,27 @@
+{{ define "title" -}}
+{{ .Title }} | {{ .Site.Title }}
+{{- end }}
+
+{{ define "header" }} {{ partial "menu" . }} {{ end }}
+
+{{ define "main" }}
+
+<div class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <p class="title">{{.Title}}</p>
+        {{ partial "date" . }}
+        <hr />
+        <div class="content">
+          {{ .Content}}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+{{ end }}
+{{ define "footer" }}
+{{ partial "footer" . }}
+{{ end }}

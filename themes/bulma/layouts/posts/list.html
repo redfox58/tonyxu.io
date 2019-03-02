@@ -1,0 +1,28 @@
+{{ define "header" }} {{ partial "menu" . }} {{ end }} 
+
+{{ define "main" }}
+
+<div class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-8 is-offset-2">
+            <p class="title">{{.Title}}</p>
+            <p class="subtitle">{{.Content}}</p>
+            <hr />
+        </div>
+      </div>
+      <div class="columns">
+          <div class="column is-8 is-offset-2">
+              {{ range .Paginator.Pages }} {{ partial "page-summary" . }} {{ end }}
+            </div>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+        {{ partial "pagination" . }} 
+    </div>
+</div>
+{{ end }} 
+{{ define "footer" }} 
+  {{ partial "footer" . }} 
+{{ end }}

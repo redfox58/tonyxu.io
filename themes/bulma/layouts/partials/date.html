@@ -1,0 +1,7 @@
+<p class="text">
+  {{ if eq $.Site.Language.Lang "zh" }}
+  <span>{{.Date.Year}} 年 {{(printf "%d" .Date.Month)}} 月 {{.Date.Day}} 日</span>
+  {{else}}
+  <span>{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
+  {{ end }}
+</p>

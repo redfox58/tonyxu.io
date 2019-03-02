@@ -1,0 +1,69 @@
+{{ define "title" -}}
+{{ .Title }} | {{ .Site.Title }}
+{{- end }}
+
+{{ define "header" }} {{ partial "menu" . }} {{ end }}
+
+{{ define "main" }}
+
+<div class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <p class="title">{{ .Title }}</p>
+        <a class="box" href="https://tonyloveshan.com">
+          <article class="media">
+            <figure class="media-left">
+              <p class="image is-64x64">
+                <img src="./tonyloveshan.png">
+              </p>
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <p class="text has-text-weight-bold">Tony ❤️ Helen</p>
+                <p class="text">Tony and Helen's Homepage</p>
+              </div>
+            </div>
+          </article>
+        </a>
+        <a class="box" href="http://chuangzaoshi.com/">
+          <article class="media">
+            <figure class="media-left">
+              <p class="image is-64x64">
+                <img src="./chuangzaoshi.png">
+              </p>
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <p class="text has-text-weight-bold">创造狮导航</p>
+                <p class="text">为创意工作者而设计</p>
+              </div>
+            </div>
+          </article>
+        </a>
+
+        <a class="box" href="http://zy2071.com/">
+          <article class="media">
+            <figure class="media-left">
+              <p class="image is-64x64">
+                <img src="./zy2071.jpg">
+              </p>
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <p class="text has-text-weight-bold">Yu Zhang</p>
+                <p class="text">喜欢前端，喜欢足球 ，喜欢历史，喜欢商业。</p>
+              </div>
+            </div>
+          </article>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+{{ end }}
+{{ define "footer" }}
+{{ partial "footer" . }}
+{{ end }}
