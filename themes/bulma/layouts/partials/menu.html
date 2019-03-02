@@ -1,48 +1,67 @@
 <nav class="navbar is-fixed-top">
   <div class="container">
-      <div class="navbar-brand">
-          <a class="navbar-item" href={{ "/" | absLangURL }}>
-            <img src="/profile-pic.png" alt="Bulma logo">
-          </a>
-          <a class="navbar-item" href={{ "/" | absLangURL }}>
-            {{ .Site.Title }}
-          </a>
-          <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
+    <div class="navbar-brand">
+      <a class="navbar-item" href={{ "/" | absLangURL }}>
+        <img src="/profile-pic.png" alt="logo">
+      </a>
+      <a class="navbar-item" href={{ "/" | absLangURL }}>
+        {{ .Site.Title }}
+      </a>
+      <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div class="navbar-menu" id="navMenu">
+
+      <!-- This "nav-menu" is hidden on mobile -->
+      <!-- Add the modifier "is-active" to display it on mobile -->
+      <div class="navbar-end">
+        {{ if .Site.Params.github}}
+        <a class="navbar-item" target="blank" href="https://github.com/{{.Site.Params.github}}">
+          <span class="icon">
+            <i class="fa fa-github"></i>
+          </span>
+        </a>
+        {{end}}
+
+        {{ if .Site.Params.linkedin}}
+        <a class="navbar-item" target="blank" href="https://www.linkedin.com/in/{{.Site.Params.linkedin}}">
+          <span class="icon">
+            <i class="fa fa-linkedin"></i>
+          </span>
+        </a>
+        {{end}}
+        <div class="navbar-item">
+          {{ $currentPage := . }}
+          {{ range .Site.Menus.main }}
+          <a itemprop="url" class="navbar-item {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} is-active{{end}}"
+            href="{{.URL}}"><span itemprop="name">{{ .Name }}</span></a>
+          {{ end }}
         </div>
-      
-        <div class="navbar-menu" id="navMenu">
-      
-          <!-- This "nav-menu" is hidden on mobile -->
-          <!-- Add the modifier "is-active" to display it on mobile -->
-          <div class="navbar-end">
-            {{ if .Site.Params.github}}
-            <a class="navbar-item" target="blank" href="https://github.com/{{.Site.Params.github}}">
-              <span class="icon">
-                <i class="fa fa-github"></i>
-              </span>
-            </a>
-            {{end}}
-      
-            {{ if .Site.Params.linkedin}}
-            <a class="navbar-item" target="blank" href="https://www.linkedin.com/in/{{.Site.Params.linkedin}}">
-              <span class="icon">
-                <i class="fa fa-linkedin"></i>
-              </span>
-            </a>
-            {{end}}
-            <div class="navbar-item">
-              {{ $currentPage := . }}
-              {{ range .Site.Menus.main }}
-              <a itemprop="url" class="navbar-item {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} is-active{{end}}"
-                href="{{.URL}}"><span itemprop="name">{{ .Name }}</span></a>
-              {{ end }}
+        {{ if .IsTranslated }}
+        <div class="navbar-item">
+          <div class="field">
+            <div class="control has-icons-left">
+              <div class="select is-rounded  is-small">
+                <select size="1" name="links" onchange="window.location.href=this.value;">
+                  <option selected disabled>{{ i18n "language" }}</option>
+                  {{ range .Translations }}
+                  <option value="{{ .Permalink }}">{{ .Language.LanguageName }}</option>
+                  {{ end}}
+                </select>
+              </div>
+              <div class="icon is-small is-left">
+                <i class="fa fa-globe"></i>
+              </div>
             </div>
           </div>
         </div>
+        {{ end }}
+      </div>
+    </div>
   </div>
-  
+
 </nav>

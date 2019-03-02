@@ -7,7 +7,8 @@
 {{ define "main" }}
 
 <div class="section">
-  <div class="container">
+  <div class="container" itemscope itemtype="http://schema.org/BlogPosting">
+    {{ template "_internal/schema.html" . }}
     <div class="columns">
       <div class="column is-8 is-offset-2">
         <p class="title">{{.Title}}</p>
@@ -16,9 +17,13 @@
         <div class="content">
           {{ .Content}}
         </div>
+        {{ if .Site.DisqusShortname }}
+        <article>
+          {{ partial "disqus.html" . }}
+        </article>
+        {{ end }}
       </div>
     </div>
-
   </div>
 </div>
 {{ end }}

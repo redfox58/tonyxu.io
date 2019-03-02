@@ -5,8 +5,8 @@ paginate = 10 # Number of posts to show before paginating
 theme = "bulma" # to use as default theme
 
 enableRobotsTXT = true # Suggested, it generates a robots.txt
-googleAnalytics = "" # Optional, add tracking Id for analytics
-disqusShortname = "" # Optional, add Disqus shortname for comments
+googleAnalytics = "UA-577792-7" # Optional, add tracking Id for analytics
+disqusShortname = "tonyxu-io" # Optional, add Disqus shortname for comments
 SectionPagesMenu = "main" # Enable menu system for lazy bloggers
 
 defaultContentLanguage = "en"
