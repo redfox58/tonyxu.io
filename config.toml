@@ -1,0 +1,54 @@
+baseurl = "/" # Controls base URL
+languageCode = "en-US" # Controls html lang attribute
+title = "Bulma for Hugo" # Homepage title and page title suffix
+paginate = 10 # Number of posts to show before paginating
+theme = "bulma" # to use as default theme
+
+enableRobotsTXT = true # Suggested, it generates a robots.txt
+googleAnalytics = "" # Optional, add tracking Id for analytics
+disqusShortname = "" # Optional, add Disqus shortname for comments
+SectionPagesMenu = "main" # Enable menu system for lazy bloggers
+
+defaultContentLanguage = "en"
+
+pygmentsCodeFences = true
+pygmentsStyle = "tango"
+
+[params]
+  theme_variant = "" # possible value for the theme_variant `cerulean,cosmo,cyborg,darkly,flatly,journal,litera,lumen,lux,materia,minty,pulse,sandstone,simplex,slate,solar,spacelab,superhero,united,yeti`
+  hide_author = false # Optional, set true to hide author name on posts
+  images = [] # Suggested, controls default OpenGraph images controls author name display on meta tag
+  github  = "tonyxu-io" # Optional, to display link to github account in menu bar
+  linkedin = "tonyxu93" # Optional, to display link to twitter account in menu bar
+
+[blackfriday]
+  extensions = ["hardLineBreak"]
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    title = "Tony Xu Blog"
+    weight = 1
+    [languages.en.params]
+      linkedin = "tonyxu93"
+      author = "Tony Xu"
+      IamAuthor = "I am Tony Xu"
+      description = "I'm a software engineer. I love to build cool things with latest technologies and share my learnings from them."
+      copyright = "© 2019 Tony Xu"
+    [[languages.en.menu.main]]
+      url    = "/about"
+      name   = "About"
+
+  [languages.zh]
+    languageName = "中文"
+    title = "Tony Xu 博客"
+    weight = 2
+    [languages.zh.params]
+      linkedin = "tonyxu93"
+      author = "徐毅涵"
+      IamAuthor = "我是徐毅涵"
+      description = "我是一名软件工程师，热爱尝试和分享最新科技"
+      copyright = "© 2019 Tony Xu 徐毅涵"
+    [[languages.zh.menu.main]]
+      url    = "/zh/about"
+      name   = "关于"
