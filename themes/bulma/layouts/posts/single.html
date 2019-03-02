@@ -15,11 +15,12 @@
         {{ partial "date" . }}
         <hr />
         <div class="content">
+          {{ partial "toc" .}}
           {{ .Content}}
         </div>
         {{ if .Site.DisqusShortname }}
         <article>
-          {{ partial "disqus.html" . }}
+          {{ template "_internal/disqus.html" . }}
         </article>
         {{ end }}
       </div>

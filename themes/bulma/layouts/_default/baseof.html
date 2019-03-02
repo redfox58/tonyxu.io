@@ -17,14 +17,19 @@
       <meta name="robots" content="noindex">
     {{ end }}
     
-    {{ partial "meta/name-author" . }} 
-    {{ template "_internal/opengraph.html" . }} 
-    {{ partial "meta/ogimage" . }} 
+    {{ template "_internal/schema.html" . }}
+    {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/twitter_cards.html" . }}
     
     {{ if .IsHome }} {{ partial "site-verification" . }} {{ end }} 
     {{ template "_internal/google_analytics_async.html" . }} 
-    {{ if .RSSLink }}
-    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" /> {{ end }}
+    
+    {{ range .AlternativeOutputFormats -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     
     <link rel="canonical" href="{{ .Permalink }}"> {{ if (isset .Params "prev") }}
     <link rel="prev" href="{{ .Params.prev }}"> {{ end }} {{ if (isset .Params "next") }}
