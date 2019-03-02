@@ -1,60 +1,485 @@
 <!DOCTYPE html>
-<html lang="en-US">
-  <head>
+<html lang="en-US" class="has-navbar-fixed-top">
+
+<head>
+    <meta name="generator" content="Hugo 0.52" />
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>REST API Design Interview Preparation | Tony Xu Blog</title>
-    <meta name="description" content="REST API has become a very popular concept for designing back-end service interface. Most platforms provide REST API as unified interface for web/native applications. If you are going to interview for a job that will require REST API knowledge, you are encouraged to be well prepared for it. Below is my own summary for REST API interview. Hopefully it&#39;s helpful for you as well.">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <link rel="alternate" type="application/rss+xml" href="https://tonyxu.io/rss.xml" title=" RSS Feed">
-  <link rel="alternate" type="application/atom+xml" href="https://tonyxu.io/feed.atom" title=" Atom Feed">
-  <link rel="alternate" type="application/json" href="https://tonyxu.io/feed.json" title=" JSON Feed">
+
+     
+      
     
-    <link rel="preload" href="/assets/css/0.styles.3a877479.css" as="style"><link rel="preload" href="/assets/js/app.5275e46c.js" as="script"><link rel="preload" href="/assets/js/12.9b4deea3.js" as="script"><link rel="preload" href="/assets/js/2.a93cbcc6.js" as="script"><link rel="preload" href="/assets/js/33.04fbb223.js" as="script"><link rel="preload" href="/assets/js/13.0ba02817.js" as="script"><link rel="prefetch" href="/assets/js/10.5e138f1d.js"><link rel="prefetch" href="/assets/js/11.1bd07509.js"><link rel="prefetch" href="/assets/js/14.6d8de823.js"><link rel="prefetch" href="/assets/js/15.026b2087.js"><link rel="prefetch" href="/assets/js/16.b72c3b5f.js"><link rel="prefetch" href="/assets/js/17.f749772c.js"><link rel="prefetch" href="/assets/js/18.81d8d7d0.js"><link rel="prefetch" href="/assets/js/19.b6f0fa47.js"><link rel="prefetch" href="/assets/js/20.ebcdb40b.js"><link rel="prefetch" href="/assets/js/21.d5e775cd.js"><link rel="prefetch" href="/assets/js/22.73cf46cd.js"><link rel="prefetch" href="/assets/js/23.07e26d06.js"><link rel="prefetch" href="/assets/js/24.a750307a.js"><link rel="prefetch" href="/assets/js/25.eb74193f.js"><link rel="prefetch" href="/assets/js/26.9a86f3c6.js"><link rel="prefetch" href="/assets/js/27.a764b68d.js"><link rel="prefetch" href="/assets/js/28.20fee3ac.js"><link rel="prefetch" href="/assets/js/29.2144fae5.js"><link rel="prefetch" href="/assets/js/3.35f5fbcf.js"><link rel="prefetch" href="/assets/js/30.4c014072.js"><link rel="prefetch" href="/assets/js/31.73de81c3.js"><link rel="prefetch" href="/assets/js/32.266fbe5e.js"><link rel="prefetch" href="/assets/js/34.9d0e9c7e.js"><link rel="prefetch" href="/assets/js/35.b64bdca2.js"><link rel="prefetch" href="/assets/js/36.604ccee7.js"><link rel="prefetch" href="/assets/js/37.1bc1eb4e.js"><link rel="prefetch" href="/assets/js/38.8b1f9a48.js"><link rel="prefetch" href="/assets/js/39.c261a562.js"><link rel="prefetch" href="/assets/js/4.879ea0ad.js"><link rel="prefetch" href="/assets/js/40.299acc5e.js"><link rel="prefetch" href="/assets/js/41.389eca45.js"><link rel="prefetch" href="/assets/js/42.aa3d84d9.js"><link rel="prefetch" href="/assets/js/43.60928d2c.js"><link rel="prefetch" href="/assets/js/44.c4c9e92b.js"><link rel="prefetch" href="/assets/js/45.32009c54.js"><link rel="prefetch" href="/assets/js/46.f0b4bd6b.js"><link rel="prefetch" href="/assets/js/47.c1940c71.js"><link rel="prefetch" href="/assets/js/48.c7462937.js"><link rel="prefetch" href="/assets/js/49.8c17367d.js"><link rel="prefetch" href="/assets/js/5.b3a6858d.js"><link rel="prefetch" href="/assets/js/50.8dc8b4bf.js"><link rel="prefetch" href="/assets/js/51.582c29a1.js"><link rel="prefetch" href="/assets/js/52.d853c9d8.js"><link rel="prefetch" href="/assets/js/53.c01990d6.js"><link rel="prefetch" href="/assets/js/54.5aeed2fb.js"><link rel="prefetch" href="/assets/js/55.6da49897.js"><link rel="prefetch" href="/assets/js/56.c092290e.js"><link rel="prefetch" href="/assets/js/57.5f875683.js"><link rel="prefetch" href="/assets/js/58.7ceba8f7.js"><link rel="prefetch" href="/assets/js/59.5d94108d.js"><link rel="prefetch" href="/assets/js/6.8d2942ef.js"><link rel="prefetch" href="/assets/js/60.ba66a643.js"><link rel="prefetch" href="/assets/js/61.ee66529d.js"><link rel="prefetch" href="/assets/js/62.49531f04.js"><link rel="prefetch" href="/assets/js/63.aa1a3a21.js"><link rel="prefetch" href="/assets/js/64.a23f7a8b.js"><link rel="prefetch" href="/assets/js/65.35a6667a.js"><link rel="prefetch" href="/assets/js/66.e84b8f1d.js"><link rel="prefetch" href="/assets/js/67.50301669.js"><link rel="prefetch" href="/assets/js/68.44e5fdc1.js"><link rel="prefetch" href="/assets/js/69.9b7a87d7.js"><link rel="prefetch" href="/assets/js/7.1788aa15.js"><link rel="prefetch" href="/assets/js/8.a595b844.js"><link rel="prefetch" href="/assets/js/9.8aa49af0.js">
-    <link rel="stylesheet" href="/assets/css/0.styles.3a877479.css">
-  </head>
-  <body>
-    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Tony Xu Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><div class="nav-item"><a href="/posts/" class="nav-link router-link-active">Posts</a></div><div class="nav-item"><a href="/about/" class="nav-link">About</a></div><div class="nav-item"><a href="/friends/" class="nav-link">Friends</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Eng/中</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/posts/2018/rest-api-design-interview-preparation/" class="nav-link router-link-exact-active router-link-active">English</a></li><li class="dropdown-item"><!----> <a href="/zh/posts/2018/rest-api-design-interview-preparation/" class="nav-link">中文</a></li></ul></div></div> <a href="https://github.com/tonyxu-io/my-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
-    GitHub
-    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><div class="nav-item"><a href="/posts/" class="nav-link router-link-active">Posts</a></div><div class="nav-item"><a href="/about/" class="nav-link">About</a></div><div class="nav-item"><a href="/friends/" class="nav-link">Friends</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Eng/中</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/posts/2018/rest-api-design-interview-preparation/" class="nav-link router-link-exact-active router-link-active">English</a></li><li class="dropdown-item"><!----> <a href="/zh/posts/2018/rest-api-design-interview-preparation/" class="nav-link">中文</a></li></ul></div></div> <a href="https://github.com/tonyxu-io/my-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
-    GitHub
-    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group first"><p class="sidebar-heading open"><span>REST API Design Interview Preparation</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/posts/2018/rest-api-design-interview-preparation/#principle" class="sidebar-link">Principle</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/posts/2018/rest-api-design-interview-preparation/#preparation" class="sidebar-link">Preparation</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/posts/2018/rest-api-design-interview-preparation/#design-flow" class="sidebar-link">Design Flow</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/posts/2018/rest-api-design-interview-preparation/#api-design" class="sidebar-link">API Design</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/posts/2018/rest-api-design-interview-preparation/#example-gmail" class="sidebar-link">Example (Gmail)</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/posts/2018/rest-api-design-interview-preparation/#resource-model-examples" class="sidebar-link">Resource Model Examples</a></li><li class="sidebar-sub-header"><a href="/posts/2018/rest-api-design-interview-preparation/#response" class="sidebar-link">Response</a></li></ul></li><li><a href="/posts/2018/rest-api-design-interview-preparation/#most-used-http-status-code" class="sidebar-link">Most-used HTTP Status Code</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/posts/2018/rest-api-design-interview-preparation/#what-else" class="sidebar-link">What else</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="content default"><h1 id="rest-api-design-interview-preparation"><a href="#rest-api-design-interview-preparation" aria-hidden="true" class="header-anchor">#</a> REST API Design Interview Preparation</h1> <p>REST API has become a very popular concept for designing back-end service interface. Most platforms provide REST API as unified interface for web/native applications. If you are going to interview for a job that will require REST API knowledge, you are encouraged to be well prepared for it. Below is my own summary for REST API interview. Hopefully it's helpful for you as well.</p> <h2 id="principle"><a href="#principle" aria-hidden="true" class="header-anchor">#</a> Principle</h2> <ul><li>Self-describing</li> <li>Simple</li> <li>Safe</li></ul> <h2 id="preparation"><a href="#preparation" aria-hidden="true" class="header-anchor">#</a> Preparation</h2> <ul><li>(<strong>WHO</strong>) Identify users
-<ul><li>Internal or External</li> <li>Roles (Developer, Admin, Customer, Support...)</li></ul></li> <li>(<strong>HOW</strong>) Identify scenario, use cases</li> <li>(<strong>WHAT</strong>) What functionality or resource will be exposed by API</li> <li><strong>Clarify and confirm above and continue to API design</strong></li></ul> <p>Note:</p> <ul><li>Don't guess</li> <li>Don't make things up</li></ul> <h2 id="design-flow"><a href="#design-flow" aria-hidden="true" class="header-anchor">#</a> Design Flow</h2> <ul><li>Determine what types of resources an API provides</li> <li>Determine the relationships between resources</li> <li>Decide the resource name schemes based on types and relationships</li> <li>Decide the resource schemas</li> <li>Attach minimum set of methods to resources</li></ul> <h2 id="api-design"><a href="#api-design" aria-hidden="true" class="header-anchor">#</a> API Design</h2> <p>Design how to expose the functionality and resource</p> <ul><li><p>End point</p> <ul><li>https://<code>api_domain</code>/<code>version</code>/<code>collection</code>/</li> <li>https://<code>api_domain</code>/<code>version</code>/<code>collection</code>/<code>resource</code>/</li> <li>https://<code>api_domain</code>: Can respond information such as API version, list of top level collections, list of singleton resources</li> <li>Use <code>Noun</code> rather than <code>Verbs</code></li></ul></li> <li><p>Method</p> <ul><li><code>GET</code>/<code>POST</code>/<code>PATCH</code>/<code>PUT</code>/<code>DELETE</code></li></ul></li> <li><p>Request Header</p> <ul><li><code>Authorization</code>: Bearer <code>access_token</code></li> <li><code>Accept</code>: To request for response in a specified content-type</li> <li><code>Content-Type</code>: Content type for the request body</li> <li>...</li></ul></li> <li><p>Request Parameters</p> <ul><li>Filtering: <code>type</code>=news,photo&amp;<code>days</code>=sunday</li> <li>Sorting: <code>sort</code>=create_time,-creator</li> <li>Paging: <code>offset</code>=100&amp;<code>limit</code>=100</li> <li>Search/Query: <code>q</code>=AI</li> <li>Access Token: <code>access_token</code>=</li></ul></li> <li><p>Response Status Codes</p> <ul><li>Standard HTTP status codes should be used</li></ul></li> <li><p>Response Header</p> <ul><li><code>Content-Type</code></li> <li><code>ETag</code></li> <li>...</li></ul></li> <li><p>Response Body (in JSON format)</p></li> <li><p>Error Handling</p></li></ul> <h2 id="example-gmail"><a href="#example-gmail" aria-hidden="true" class="header-anchor">#</a> Example (Gmail)</h2> <h3 id="resource-model-examples"><a href="#resource-model-examples" aria-hidden="true" class="header-anchor">#</a> Resource Model Examples</h3> <ul><li>API service: <code>gmail.googleapis.com</code></li> <li>A collection of users: <code>users/*</code>. Each user has the following resources.
-<ul><li>A collection of messages: <code>users/*/messages/*</code>.</li> <li>A collection of threads: <code>users/*/threads/*</code>.</li> <li>A collection of labels: <code>users/*/labels/*</code>.</li> <li>A collection of change history: <code>users/*/history/*</code>.</li> <li>A resource representing the user profile: <code>users/*/profile</code>.</li> <li>A resource representing user settings: <code>users/*/settings</code>.</li></ul></li></ul> <h3 id="response"><a href="#response" aria-hidden="true" class="header-anchor">#</a> Response</h3> <h4 id="success-response"><a href="#success-response" aria-hidden="true" class="header-anchor">#</a> Success Response</h4> <div class="language-json line-numbers-mode"><pre class="language-json"><code><span class="token punctuation">{</span>
-  <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;lwj2lk3jlk2&quot;</span><span class="token punctuation">,</span>
-    <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Hello World&quot;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><div class="language-json line-numbers-mode"><pre class="language-json"><code><span class="token punctuation">{</span>
-  <span class="token property">&quot;pagination&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token property">&quot;offset&quot;</span><span class="token operator">:</span> <span class="token number">100</span><span class="token punctuation">,</span>
-    <span class="token property">&quot;limit&quot;</span><span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
-    <span class="token property">&quot;total&quot;</span><span class="token operator">:</span> <span class="token number">3464</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-    //...
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h4 id="error-response"><a href="#error-response" aria-hidden="true" class="header-anchor">#</a> Error Response</h4> <div class="language-json line-numbers-mode"><pre class="language-json"><code><span class="token punctuation">{</span>
-  <span class="token property">&quot;error&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ERROR_CODE&quot;</span><span class="token punctuation">,</span> // <span class="token string">&quot;INVALID-REQUEST&quot;</span>
-    <span class="token property">&quot;message&quot;</span><span class="token operator">:</span> <span class="token string">&quot;longer error description&quot;</span><span class="token punctuation">,</span>
-    <span class="token property">&quot;link&quot;</span><span class="token operator">:</span> <span class="token string">&quot;An documentation url for error details and solutions&quot;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h2 id="most-used-http-status-code"><a href="#most-used-http-status-code" aria-hidden="true" class="header-anchor">#</a> Most-used HTTP Status Code</h2> <table><thead><tr><th>Code</th> <th>Name</th> <th>Description</th></tr></thead> <tbody><tr><td>200</td> <td><code>OK</code></td> <td>The request has succeeded</td></tr> <tr><td>201</td> <td><code>Created</code></td> <td>The request has succeeded and a new resource has been created</td></tr> <tr><td>204</td> <td><code>No Content</code></td> <td>There is no content to send for this request</td></tr> <tr><td>301</td> <td><code>Moved Permanently</code></td> <td>the URI of the requested resource has been changed permanently</td></tr> <tr><td>302</td> <td><code>Found</code></td> <td>The URI of requested resource has been changed temporarily</td></tr> <tr><td>400</td> <td><code>Bad Request</code></td> <td>The server could not understand the request due to invalid syntax</td></tr> <tr><td>401</td> <td><code>Unauthorized</code></td> <td>The client must authenticate itself to get the requested response</td></tr> <tr><td>403</td> <td><code>Forbidden</code></td> <td>The client does not have access rights to the content</td></tr> <tr><td>404</td> <td><code>Not Found</code></td> <td>The server can not find requested resource</td></tr> <tr><td>405</td> <td><code>Method Not Allowed</code></td> <td>The request method has been disabled and cannot be used</td></tr> <tr><td>408</td> <td><code>Request Timeout</code></td> <td>The server would like to shut down this unused connection</td></tr> <tr><td>409</td> <td><code>Conflict</code></td> <td>The request conflicts with the current state of the server</td></tr> <tr><td>411</td> <td><code>Length Required</code></td> <td>Content-Length header field is not defined and the server requires it</td></tr> <tr><td>414</td> <td><code>URI Too Long</code></td> <td>The URI is longer than the server is willing to interpret</td></tr> <tr><td>415</td> <td><code>Unsupported Media Type</code></td> <td>The media format of the requested data is not supported</td></tr> <tr><td>429</td> <td><code>Too Many Requests</code></td> <td>The user has sent too many requests (&quot;rate limiting&quot;)</td></tr> <tr><td>500</td> <td><code>Internal Server Error</code></td> <td>The server has encountered a situation it doesn't know how to handle</td></tr> <tr><td>502</td> <td><code>Bad Gateway</code></td> <td>The server got an invalid response</td></tr> <tr><td>503</td> <td><code>Service Unavailable</code></td> <td>The server is not ready to handle the request</td></tr> <tr><td>504</td> <td><code>Gateway Timeout</code></td> <td>The server is acting as a gateway and cannot get a response in time</td></tr></tbody></table> <h2 id="what-else"><a href="#what-else" aria-hidden="true" class="header-anchor">#</a> What else</h2> <ul><li>Security
-<ul><li>HTTPS: HTTPS everywhere</li> <li>Access Control
-<ul><li>Authentication</li> <li>JWT</li> <li>API Key</li></ul></li> <li>User Role</li> <li>Input Validation
-<ul><li>Length, Range, Format, Type</li> <li>Define request size limit</li></ul></li> <li>CORS
-<ul><li>Support CORS headers for all public facing APIs and allow origin of <code>*</code></li></ul></li></ul></li> <li>Pagination</li> <li>Monitoring
-<ul><li><code>/heath</code>: <code>200 OK</code> or <code>503 Service Unavailable</code>, for load balancers and service discovery solutions</li> <li><code>/version</code>: Version</li> <li><code>/status</code>: <code>200 OK</code> or <code>500 Internal Server Error</code></li> <li><code>/metrics</code>: Uptime in seconds, average response time, number of 500 errors</li></ul></li></ul></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/tonyxu-io/my-blog/edit/master/docs/posts/2018/rest-api-design-interview-preparation/README.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">1/25/2019, 1:56:26 AM</span></div></footer> <!----> <div class="comments"><div class="inner"><!----></div></div></main></div><div class="global-ui"><!----><div class="sticky-side-bar" data-v-46d9c502><a href="/tip/" data-v-46d9c502><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="dollar-sign" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 288 512" class="svg-inline--fa fa-dollar-sign fa-w-9" data-v-46d9c502 data-v-46d9c502><path fill="currentColor" d="M209.2 233.4l-108-31.6C88.7 198.2 80 186.5 80 173.5c0-16.3 13.2-29.5 29.5-29.5h66.3c12.2 0 24.2 3.7 34.2 10.5 6.1 4.1 14.3 3.1 19.5-2l34.8-34c7.1-6.9 6.1-18.4-1.8-24.5C238 74.8 207.4 64.1 176 64V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48h-2.5C45.8 64-5.4 118.7.5 183.6c4.2 46.1 39.4 83.6 83.8 96.6l102.5 30c12.5 3.7 21.2 15.3 21.2 28.3 0 16.3-13.2 29.5-29.5 29.5h-66.3C100 368 88 364.3 78 357.5c-6.1-4.1-14.3-3.1-19.5 2l-34.8 34c-7.1 6.9-6.1 18.4 1.8 24.5 24.5 19.2 55.1 29.9 86.5 30v48c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-48.2c46.6-.9 90.3-28.6 105.7-72.7 21.5-61.6-14.6-124.8-72.5-141.7z" data-v-46d9c502 data-v-46d9c502></path></svg></a> <!----></div></div></div>
-    <script src="/assets/js/app.5275e46c.js" defer></script><script src="/assets/js/12.9b4deea3.js" defer></script><script src="/assets/js/2.a93cbcc6.js" defer></script><script src="/assets/js/33.04fbb223.js" defer></script><script src="/assets/js/13.0ba02817.js" defer></script>
-  </body>
+    
+    
+    
+    
+
+  <meta name="author" content="Tony Xu">
+
+ 
+    <meta property="og:title" content="REST API Design Interview Preparation" />
+<meta property="og:description" content="REST API has become a very popular concept for designing back-end service interface. Most platforms provide REST API as unified interface for web/native applications. If you are going to interview for a job that will require REST API knowledge, you are encouraged to be well prepared for it. Below is my own summary for REST API interview. Hopefully it&rsquo;s helpful for you as well.
+Principle  Self-describing
+ Simple" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/2018/rest-api-design-interview-preparation/" /><meta property="article:published_time" content="2018-07-03T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2018-07-03T00:00:00&#43;00:00"/><meta property="og:site_name" content="Tony Xu Blog" />
+ 
+    
+
+
+
+ 
+    
+     
+     
+    
+    
+    <link rel="canonical" href="/posts/2018/rest-api-design-interview-preparation/">   <link rel="shortcut icon" type="image/png" href="profile-pic.png">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="/css/bulma.css"> 
+</head>
+
+
+<body>
+    <header> <nav class="navbar is-fixed-top">
+  <div class="container">
+      <div class="navbar-brand">
+          <a class="navbar-item" href=/>
+            <img src="/profile-pic.png" alt="Bulma logo">
+          </a>
+          <a class="navbar-item" href=/>
+            Tony Xu Blog
+          </a>
+          <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+        <div class="navbar-menu" id="navMenu">
+      
+          
+          
+          <div class="navbar-end">
+            
+            <a class="navbar-item" target="blank" href="https://github.com/tonyxu-io">
+              <span class="icon">
+                <i class="fa fa-github"></i>
+              </span>
+            </a>
+            
+      
+            
+            <a class="navbar-item" target="blank" href="https://www.linkedin.com/in/tonyxu93">
+              <span class="icon">
+                <i class="fa fa-linkedin"></i>
+              </span>
+            </a>
+            
+            <div class="navbar-item">
+              
+              
+              <a itemprop="url" class="navbar-item "
+                href="/about"><span itemprop="name">About</span></a>
+              
+              <a itemprop="url" class="navbar-item "
+                href="/friends/"><span itemprop="name">Friends</span></a>
+              
+              <a itemprop="url" class="navbar-item  is-active"
+                href="/posts/"><span itemprop="name">Posts</span></a>
+              
+            </div>
+          </div>
+        </div>
+  </div>
+  
+</nav>
+ </header>
+    <main>
+
+<div class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <p class="title">REST API Design Interview Preparation</p>
+        <p class="text">
+  
+  <span>Tue, Jul 3, 2018</span>
+  
+</p>
+        <hr />
+        <div class="content">
+          
+
+<p>REST API has become a very popular concept for designing back-end service interface. Most platforms provide REST API as unified interface for web/native applications. If you are going to interview for a job that will require REST API knowledge, you are encouraged to be well prepared for it. Below is my own summary for REST API interview. Hopefully it&rsquo;s helpful for you as well.</p>
+
+<h2 id="principle">Principle</h2>
+
+<ul>
+<li>Self-describing<br /></li>
+<li>Simple<br /></li>
+<li>Safe<br />
+<br /></li>
+</ul>
+
+<h2 id="preparation">Preparation</h2>
+
+<ul>
+<li>(<strong>WHO</strong>) Identify users<br />
+
+<ul>
+<li>Internal or External<br /></li>
+<li>Roles (Developer, Admin, Customer, Support&hellip;)<br /></li>
+</ul></li>
+<li>(<strong>HOW</strong>) Identify scenario, use cases<br /></li>
+<li>(<strong>WHAT</strong>) What functionality or resource will be exposed by API<br /></li>
+<li><strong>Clarify and confirm above and continue to API design</strong><br />
+<br /></li>
+</ul>
+
+<p>Note:</p>
+
+<ul>
+<li>Don&rsquo;t guess<br /></li>
+<li>Don&rsquo;t make things up<br />
+<br /></li>
+</ul>
+
+<h2 id="design-flow">Design Flow</h2>
+
+<ul>
+<li>Determine what types of resources an API provides<br /></li>
+<li>Determine the relationships between resources<br /></li>
+<li>Decide the resource name schemes based on types and relationships<br /></li>
+<li>Decide the resource schemas<br /></li>
+<li>Attach minimum set of methods to resources<br />
+<br /></li>
+</ul>
+
+<h2 id="api-design">API Design</h2>
+
+<p>Design how to expose the functionality and resource</p>
+
+<ul>
+<li><p>End point</p>
+
+<ul>
+<li>https://<code>api_domain</code>/<code>version</code>/<code>collection</code>/<br /></li>
+<li>https://<code>api_domain</code>/<code>version</code>/<code>collection</code>/<code>resource</code>/<br /></li>
+<li>https://<code>api_domain</code>: Can respond information such as API version, list of top level collections, list of singleton resources<br /></li>
+<li>Use <code>Noun</code> rather than <code>Verbs</code><br />
+<br /></li>
+</ul></li>
+
+<li><p>Method</p>
+
+<ul>
+<li><code>GET</code>/<code>POST</code>/<code>PATCH</code>/<code>PUT</code>/<code>DELETE</code><br />
+<br /></li>
+</ul></li>
+
+<li><p>Request Header</p>
+
+<ul>
+<li><code>Authorization</code>: Bearer <code>access_token</code><br /></li>
+<li><code>Accept</code>: To request for response in a specified content-type<br /></li>
+<li><code>Content-Type</code>: Content type for the request body<br /></li>
+<li>&hellip;<br />
+<br /></li>
+</ul></li>
+
+<li><p>Request Parameters</p>
+
+<ul>
+<li>Filtering: <code>type</code>=news,photo&amp;<code>days</code>=sunday<br /></li>
+<li>Sorting: <code>sort</code>=create_time,-creator<br /></li>
+<li>Paging: <code>offset</code>=100&amp;<code>limit</code>=100<br /></li>
+<li>Search/Query: <code>q</code>=AI<br /></li>
+<li>Access Token: <code>access_token</code>=<br />
+<br /></li>
+</ul></li>
+
+<li><p>Response Status Codes</p>
+
+<ul>
+<li>Standard HTTP status codes should be used<br />
+<br /></li>
+</ul></li>
+
+<li><p>Response Header</p>
+
+<ul>
+<li><code>Content-Type</code><br /></li>
+<li><code>ETag</code><br /></li>
+<li>&hellip;<br />
+<br /></li>
+</ul></li>
+
+<li><p>Response Body (in JSON format)</p></li>
+
+<li><p>Error Handling</p></li>
+</ul>
+
+<h2 id="example-gmail">Example (Gmail)</h2>
+
+<h3 id="resource-model-examples">Resource Model Examples</h3>
+
+<ul>
+<li>API service: <code>gmail.googleapis.com</code><br /></li>
+<li>A collection of users: <code>users/*</code>. Each user has the following resources.<br />
+
+<ul>
+<li>A collection of messages: <code>users/*/messages/*</code>.<br /></li>
+<li>A collection of threads: <code>users/*/threads/*</code>.<br /></li>
+<li>A collection of labels: <code>users/*/labels/*</code>.<br /></li>
+<li>A collection of change history: <code>users/*/history/*</code>.<br /></li>
+<li>A resource representing the user profile: <code>users/*/profile</code>.<br /></li>
+<li>A resource representing user settings: <code>users/*/settings</code>.<br />
+<br /></li>
+</ul></li>
+</ul>
+
+<h3 id="response">Response</h3>
+
+<h4 id="success-response">Success Response</h4>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
+  <span style="color:#204a87;font-weight:bold">&#34;data&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;lwj2lk3jlk2&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;title&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Hello World&#34;</span>
+  <span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000;font-weight:bold">}</span></code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
+  <span style="color:#204a87;font-weight:bold">&#34;pagination&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">&#34;offset&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">100</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;limit&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;total&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">3464</span>
+  <span style="color:#000;font-weight:bold">},</span>
+  <span style="color:#204a87;font-weight:bold">&#34;data&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#a40000">//...</span>
+  <span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000;font-weight:bold">}</span></code></pre></div>
+<h4 id="error-response">Error Response</h4>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
+  <span style="color:#204a87;font-weight:bold">&#34;error&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">&#34;code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ERROR_CODE&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#a40000">//</span> <span style="color:#204a87;font-weight:bold">&#34;INVALID-REQUEST&#34;</span>
+    <span style="color:#4e9a06">&#34;message&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;longer error description&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;link&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;An documentation url for error details and solutions&#34;</span>
+  <span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000;font-weight:bold">}</span></code></pre></div>
+<h2 id="most-used-http-status-code">Most-used HTTP Status Code</h2>
+
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>200</td>
+<td><code>OK</code></td>
+<td>The request has succeeded</td>
+</tr>
+
+<tr>
+<td>201</td>
+<td><code>Created</code></td>
+<td>The request has succeeded and a new resource has been created</td>
+</tr>
+
+<tr>
+<td>204</td>
+<td><code>No Content</code></td>
+<td>There is no content to send for this request</td>
+</tr>
+
+<tr>
+<td>301</td>
+<td><code>Moved Permanently</code></td>
+<td>the URI of the requested resource has been changed permanently</td>
+</tr>
+
+<tr>
+<td>302</td>
+<td><code>Found</code></td>
+<td>The URI of requested resource has been changed temporarily</td>
+</tr>
+
+<tr>
+<td>400</td>
+<td><code>Bad Request</code></td>
+<td>The server could not understand the request due to invalid syntax</td>
+</tr>
+
+<tr>
+<td>401</td>
+<td><code>Unauthorized</code></td>
+<td>The client must authenticate itself to get the requested response</td>
+</tr>
+
+<tr>
+<td>403</td>
+<td><code>Forbidden</code></td>
+<td>The client does not have access rights to the content</td>
+</tr>
+
+<tr>
+<td>404</td>
+<td><code>Not Found</code></td>
+<td>The server can not find requested resource</td>
+</tr>
+
+<tr>
+<td>405</td>
+<td><code>Method Not Allowed</code></td>
+<td>The request method has been disabled and cannot be used</td>
+</tr>
+
+<tr>
+<td>408</td>
+<td><code>Request Timeout</code></td>
+<td>The server would like to shut down this unused connection</td>
+</tr>
+
+<tr>
+<td>409</td>
+<td><code>Conflict</code></td>
+<td>The request conflicts with the current state of the server</td>
+</tr>
+
+<tr>
+<td>411</td>
+<td><code>Length Required</code></td>
+<td>Content-Length header field is not defined and the server requires it</td>
+</tr>
+
+<tr>
+<td>414</td>
+<td><code>URI Too Long</code></td>
+<td>The URI is longer than the server is willing to interpret</td>
+</tr>
+
+<tr>
+<td>415</td>
+<td><code>Unsupported Media Type</code></td>
+<td>The media format of the requested data is not supported</td>
+</tr>
+
+<tr>
+<td>429</td>
+<td><code>Too Many Requests</code></td>
+<td>The user has sent too many requests (&ldquo;rate limiting&rdquo;)</td>
+</tr>
+
+<tr>
+<td>500</td>
+<td><code>Internal Server Error</code></td>
+<td>The server has encountered a situation it doesn&rsquo;t know how to handle</td>
+</tr>
+
+<tr>
+<td>502</td>
+<td><code>Bad Gateway</code></td>
+<td>The server got an invalid response</td>
+</tr>
+
+<tr>
+<td>503</td>
+<td><code>Service Unavailable</code></td>
+<td>The server is not ready to handle the request</td>
+</tr>
+
+<tr>
+<td>504</td>
+<td><code>Gateway Timeout</code></td>
+<td>The server is acting as a gateway and cannot get a response in time</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="what-else">What else</h2>
+
+<ul>
+<li>Security<br />
+
+<ul>
+<li>HTTPS: HTTPS everywhere<br /></li>
+<li>Access Control<br /></li>
+<li>Authentication<br /></li>
+<li>JWT<br /></li>
+<li>API Key<br /></li>
+<li>User Role<br /></li>
+<li>Input Validation<br /></li>
+<li>Length, Range, Format, Type<br /></li>
+<li>Define request size limit<br /></li>
+<li>CORS<br /></li>
+<li>Support CORS headers for all public facing APIs and allow origin of <code>*</code><br /></li>
+</ul></li>
+<li>Pagination<br /></li>
+<li>Monitoring<br />
+
+<ul>
+<li><code>/heath</code>: <code>200 OK</code> or <code>503 Service Unavailable</code>, for load balancers and service discovery solutions<br /></li>
+<li><code>/version</code>: Version<br /></li>
+<li><code>/status</code>: <code>200 OK</code> or <code>500 Internal Server Error</code><br /></li>
+<li><code>/metrics</code>: Uptime in seconds, average response time, number of 500 errors<br /></li>
+</ul></li>
+</ul>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</main>
+    <footer>
+<footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-one-third">
+          <div class="field">
+              <div class="control has-icons-left">
+                <div class="select is-rounded  is-small">
+                  <select size="1" name="links" onchange="window.location.href=this.value;">
+                    <option selected disabled>Language</option>
+                    
+                    <option value="/">English</option>
+                    
+                    <option value="/zh/">中文</option>
+                    
+                  </select>
+                </div>
+                <div class="icon is-small is-left">
+                  <i class="fa fa-globe"></i>
+                </div>
+              </div>
+            </div>
+      </div>
+      <div class="column is-one-third">
+        <div class="content has-text-centered">
+          <p>
+            © 2019 Tony Xu
+          </p>
+        </div>
+      </div>
+      <div class="column is-one-third has-text-right">
+        
+      </div>
+    </div>
+  </div>
+</footer>
+</footer>
+
+    <script async type="text/javascript" src="/js/bulma.js"></script>
+</body>
+
 </html>

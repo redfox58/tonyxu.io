@@ -1,133 +1,333 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
+<html lang="en-US" class="has-navbar-fixed-top">
+
+<head>
+    <meta name="generator" content="Hugo 0.52" />
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>嵌入Google Analytics图表到你的网站 | Tony Xu (徐毅涵) 博客</title>
-    <meta name="description" content="如果你正在使用Google Anlaytics工具来分析网站访问数据，你可能会想将它提供的各种酷炫图表嵌入到网站页面以供用户浏览。尽管Google Analytics并不提供简单的iframe方式来嵌入图表，它还是提供了Google Analytics Embed API这种需要稍微多一点技术基础的方式让你能够嵌入它们的图表。我会在这篇文章里详细地告诉你该如何一步一步实现一个Google Analytics图表">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <link rel="alternate" type="application/rss+xml" href="https://tonyxu.io/rss.xml" title=" RSS Feed">
-  <link rel="alternate" type="application/atom+xml" href="https://tonyxu.io/feed.atom" title=" Atom Feed">
-  <link rel="alternate" type="application/json" href="https://tonyxu.io/feed.json" title=" JSON Feed">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>嵌入Google Analytics图表到你的网站 | Tony Xu 博客</title>
+
+     
+      
     
-    <link rel="preload" href="/assets/css/0.styles.3a877479.css" as="style"><link rel="preload" href="/assets/js/app.5275e46c.js" as="script"><link rel="preload" href="/assets/js/12.9b4deea3.js" as="script"><link rel="preload" href="/assets/js/2.a93cbcc6.js" as="script"><link rel="preload" href="/assets/js/8.a595b844.js" as="script"><link rel="preload" href="/assets/js/13.0ba02817.js" as="script"><link rel="prefetch" href="/assets/js/10.5e138f1d.js"><link rel="prefetch" href="/assets/js/11.1bd07509.js"><link rel="prefetch" href="/assets/js/14.6d8de823.js"><link rel="prefetch" href="/assets/js/15.026b2087.js"><link rel="prefetch" href="/assets/js/16.b72c3b5f.js"><link rel="prefetch" href="/assets/js/17.f749772c.js"><link rel="prefetch" href="/assets/js/18.81d8d7d0.js"><link rel="prefetch" href="/assets/js/19.b6f0fa47.js"><link rel="prefetch" href="/assets/js/20.ebcdb40b.js"><link rel="prefetch" href="/assets/js/21.d5e775cd.js"><link rel="prefetch" href="/assets/js/22.73cf46cd.js"><link rel="prefetch" href="/assets/js/23.07e26d06.js"><link rel="prefetch" href="/assets/js/24.a750307a.js"><link rel="prefetch" href="/assets/js/25.eb74193f.js"><link rel="prefetch" href="/assets/js/26.9a86f3c6.js"><link rel="prefetch" href="/assets/js/27.a764b68d.js"><link rel="prefetch" href="/assets/js/28.20fee3ac.js"><link rel="prefetch" href="/assets/js/29.2144fae5.js"><link rel="prefetch" href="/assets/js/3.35f5fbcf.js"><link rel="prefetch" href="/assets/js/30.4c014072.js"><link rel="prefetch" href="/assets/js/31.73de81c3.js"><link rel="prefetch" href="/assets/js/32.266fbe5e.js"><link rel="prefetch" href="/assets/js/33.04fbb223.js"><link rel="prefetch" href="/assets/js/34.9d0e9c7e.js"><link rel="prefetch" href="/assets/js/35.b64bdca2.js"><link rel="prefetch" href="/assets/js/36.604ccee7.js"><link rel="prefetch" href="/assets/js/37.1bc1eb4e.js"><link rel="prefetch" href="/assets/js/38.8b1f9a48.js"><link rel="prefetch" href="/assets/js/39.c261a562.js"><link rel="prefetch" href="/assets/js/4.879ea0ad.js"><link rel="prefetch" href="/assets/js/40.299acc5e.js"><link rel="prefetch" href="/assets/js/41.389eca45.js"><link rel="prefetch" href="/assets/js/42.aa3d84d9.js"><link rel="prefetch" href="/assets/js/43.60928d2c.js"><link rel="prefetch" href="/assets/js/44.c4c9e92b.js"><link rel="prefetch" href="/assets/js/45.32009c54.js"><link rel="prefetch" href="/assets/js/46.f0b4bd6b.js"><link rel="prefetch" href="/assets/js/47.c1940c71.js"><link rel="prefetch" href="/assets/js/48.c7462937.js"><link rel="prefetch" href="/assets/js/49.8c17367d.js"><link rel="prefetch" href="/assets/js/5.b3a6858d.js"><link rel="prefetch" href="/assets/js/50.8dc8b4bf.js"><link rel="prefetch" href="/assets/js/51.582c29a1.js"><link rel="prefetch" href="/assets/js/52.d853c9d8.js"><link rel="prefetch" href="/assets/js/53.c01990d6.js"><link rel="prefetch" href="/assets/js/54.5aeed2fb.js"><link rel="prefetch" href="/assets/js/55.6da49897.js"><link rel="prefetch" href="/assets/js/56.c092290e.js"><link rel="prefetch" href="/assets/js/57.5f875683.js"><link rel="prefetch" href="/assets/js/58.7ceba8f7.js"><link rel="prefetch" href="/assets/js/59.5d94108d.js"><link rel="prefetch" href="/assets/js/6.8d2942ef.js"><link rel="prefetch" href="/assets/js/60.ba66a643.js"><link rel="prefetch" href="/assets/js/61.ee66529d.js"><link rel="prefetch" href="/assets/js/62.49531f04.js"><link rel="prefetch" href="/assets/js/63.aa1a3a21.js"><link rel="prefetch" href="/assets/js/64.a23f7a8b.js"><link rel="prefetch" href="/assets/js/65.35a6667a.js"><link rel="prefetch" href="/assets/js/66.e84b8f1d.js"><link rel="prefetch" href="/assets/js/67.50301669.js"><link rel="prefetch" href="/assets/js/68.44e5fdc1.js"><link rel="prefetch" href="/assets/js/69.9b7a87d7.js"><link rel="prefetch" href="/assets/js/7.1788aa15.js"><link rel="prefetch" href="/assets/js/9.8aa49af0.js">
-    <link rel="stylesheet" href="/assets/css/0.styles.3a877479.css">
-  </head>
-  <body>
-    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/zh/" class="home-link router-link-active"><!----> <span class="site-name">Tony Xu (徐毅涵) 博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/zh/" class="nav-link">主页</a></div><div class="nav-item"><a href="/zh/posts/" class="nav-link router-link-active">文章</a></div><div class="nav-item"><a href="/zh/about/" class="nav-link">关于</a></div><div class="nav-item"><a href="/friends/" class="nav-link">链接</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Eng/中</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/posts/2018/embed-google-analytics-dashboard-on-website/" class="nav-link">English</a></li><li class="dropdown-item"><!----> <a href="/zh/posts/2018/embed-google-analytics-dashboard-on-website/" class="nav-link router-link-exact-active router-link-active">中文</a></li></ul></div></div> <a href="https://github.com/tonyxu-io/my-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
-    GitHub
-    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/zh/" class="nav-link">主页</a></div><div class="nav-item"><a href="/zh/posts/" class="nav-link router-link-active">文章</a></div><div class="nav-item"><a href="/zh/about/" class="nav-link">关于</a></div><div class="nav-item"><a href="/friends/" class="nav-link">链接</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Eng/中</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/posts/2018/embed-google-analytics-dashboard-on-website/" class="nav-link">English</a></li><li class="dropdown-item"><!----> <a href="/zh/posts/2018/embed-google-analytics-dashboard-on-website/" class="nav-link router-link-exact-active router-link-active">中文</a></li></ul></div></div> <a href="https://github.com/tonyxu-io/my-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
-    GitHub
-    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group first"><p class="sidebar-heading open"><span>嵌入Google Analytics图表到你的网站</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/zh/posts/2018/embed-google-analytics-dashboard-on-website/#_1-在google-developers-console创建云项目" class="sidebar-link">1. 在Google Developers Console创建云项目</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zh/posts/2018/embed-google-analytics-dashboard-on-website/#_2-创建服务账号-service-account-并下载-json密钥文件" class="sidebar-link">2. 创建服务账号(service account)并下载.json密钥文件</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zh/posts/2018/embed-google-analytics-dashboard-on-website/#_3-启用google-analytics-api权限" class="sidebar-link">3. 启用Google Analytics API权限</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zh/posts/2018/embed-google-analytics-dashboard-on-website/#_4-允许云服务账号-service-account-访问google-analytics数据" class="sidebar-link">4. 允许云服务账号(service account)访问Google Analytics数据</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zh/posts/2018/embed-google-analytics-dashboard-on-website/#_5-在服务器生成访问令牌-access-token" class="sidebar-link">5. 在服务器生成访问令牌(access token)</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/zh/posts/2018/embed-google-analytics-dashboard-on-website/#node-js服务器部分实现" class="sidebar-link">Node.js服务器部分实现</a></li><li class="sidebar-sub-header"><a href="/zh/posts/2018/embed-google-analytics-dashboard-on-website/#python服务器部分实现" class="sidebar-link">Python服务器部分实现</a></li></ul></li><li><a href="/zh/posts/2018/embed-google-analytics-dashboard-on-website/#_6-加载google-analytics-embed-api库" class="sidebar-link">6. 加载Google Analytics Embed API库</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zh/posts/2018/embed-google-analytics-dashboard-on-website/#_7-添加html容器用来加载图表" class="sidebar-link">7. 添加HTML容器用来加载图表</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zh/posts/2018/embed-google-analytics-dashboard-on-website/#_8-获取google访问令牌并加载图表" class="sidebar-link">8. 获取Google访问令牌并加载图表</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="content default"><h1 id="嵌入google-analytics图表到你的网站"><a href="#嵌入google-analytics图表到你的网站" aria-hidden="true" class="header-anchor">#</a> 嵌入Google Analytics图表到你的网站</h1> <p>如果你正在使用Google Anlaytics工具来分析网站访问数据，你可能会想将它提供的各种酷炫图表嵌入到网站页面以供用户浏览。尽管Google Analytics并不提供简单的iframe方式来嵌入图表，它还是提供了<a href="https://developers.google.com/analytics/devguides/reporting/embed/v1/" target="_blank" rel="noopener noreferrer">Google Analytics Embed API<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>这种需要稍微多一点技术基础的方式让你能够嵌入它们的图表。我会在这篇文章里详细地告诉你该如何一步一步实现一个Google Analytics图表</p> <p>效果预览:</p> <p><img src="/assets/img/Analytics_-_Tony_Xu_2018-10-16_09-52-42.0ed9ed06.png" alt="preview"></p> <h2 id="_1-在google-developers-console创建云项目"><a href="#_1-在google-developers-console创建云项目" aria-hidden="true" class="header-anchor">#</a> 1. 在<a href="https://console.developers.google.com/" target="_blank" rel="noopener noreferrer">Google Developers Console<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>创建云项目</h2> <p>(如果你已经有项目了请忽略这一步)</p> <h2 id="_2-创建服务账号-service-account-并下载-json密钥文件"><a href="#_2-创建服务账号-service-account-并下载-json密钥文件" aria-hidden="true" class="header-anchor">#</a> 2. 创建服务账号(service account)并下载<code>.json</code>密钥文件</h2> <p><img src="/assets/img/Credentials_-_api-tonyxu-io_-_Google_Cloud_Platform_2018-10-15_22-39-04.0441e289.png" alt="create-service-account-1"></p> <p><img src="/assets/img/2018_10_15_22_43_12.483c94f5.png" alt="create-service-account-2"></p> <h2 id="_3-启用google-analytics-api权限"><a href="#_3-启用google-analytics-api权限" aria-hidden="true" class="header-anchor">#</a> 3. 启用Google Analytics API权限</h2> <p><img src="/assets/img/Overview__APIs__Services__api-tonyxu-io__Google_Cloud_Platform_2018-10-15_22-45-05.2a6251df.png" alt="enable-analytics-api"></p> <h2 id="_4-允许云服务账号-service-account-访问google-analytics数据"><a href="#_4-允许云服务账号-service-account-访问google-analytics数据" aria-hidden="true" class="header-anchor">#</a> 4. 允许云服务账号(service account)访问Google Analytics数据</h2> <p>获取云服务账号邮箱地址</p> <p><img src="/assets/img/IAM__IAM__admin__api-tonyxu-io__Google_Cloud_Platform_2018-10-15_22-48-01.dcfdce7f.png" alt="obtain-service-account-email"></p> <p>添加为Google Analytics只读用户</p> <p><img src="/assets/img/Analytics_2018-10-15_22-50-34.cf9aad9c.png" alt="add-service-account-email-to-analytics-account"></p> <h2 id="_5-在服务器生成访问令牌-access-token"><a href="#_5-在服务器生成访问令牌-access-token" aria-hidden="true" class="header-anchor">#</a> 5. 在服务器生成访问令牌(access token)</h2> <p>我们在服务器生成访问令牌并返回给前端，因此用户不需要在浏览器登录Google获取访问令牌。</p> <h3 id="node-js服务器部分实现"><a href="#node-js服务器部分实现" aria-hidden="true" class="header-anchor">#</a> Node.js服务器部分实现</h3> <p>Install Google API Client Library</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">npm</span> <span class="token function">install</span> --save googleapis
-</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>Import service account key</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">let</span> privateKey <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;./google_key.json&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>Return Google access token to client</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token comment">// https://your-domain/accessTokens 将会返回Google访问令牌给前段</span>
-app<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">&quot;/accessTokens&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>req<span class="token punctuation">,</span>res<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    
+    
+    
+    
 
-  <span class="token keyword">let</span> <span class="token punctuation">{</span>google<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'googleapis'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">let</span> privateKey <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;./google_key.json&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <meta name="author" content="徐毅涵">
 
-  <span class="token comment">// JWT认证</span>
-  <span class="token keyword">let</span> jwtClient <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">google<span class="token punctuation">.</span>auth<span class="token punctuation">.</span>JWT</span><span class="token punctuation">(</span>
-    privateKey<span class="token punctuation">.</span>client_email<span class="token punctuation">,</span>
-    <span class="token keyword">null</span><span class="token punctuation">,</span>
-    privateKey<span class="token punctuation">.</span>private_key<span class="token punctuation">,</span>
-    <span class="token string">'https://www.googleapis.com/auth/analytics.readonly'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+    <meta property="og:title" content="嵌入Google Analytics图表到你的网站" />
+<meta property="og:description" content="如果你正在使用Google Anlaytics工具来分析网站访问数据，你可能会想将它提供的各种酷炫图表嵌入到网站页面以供用户浏览。尽管Google Analytics并不提供简单的iframe方式来嵌入图表，它还是提供了Google Analytics Embed API这种需要稍微多一点技术基础的方式让你能够嵌入它们的图表。我会在这篇文章里详细地告诉你该如何一步一步实现一个Google Analytics图表
+效果预览:
+1. 在Google Developers Console创建云项目 (如果你已经有项目了请忽略这一步)
+2. 创建服务账号(service account)并下载.json密钥文件 3. 启用Google Analytics API权限 4. 允许云服务账号(service account)访问Google Analytics数据 获取云服务账号邮箱地址
+添加为Google Analytics只读用户
+5. 在服务器生成访问令牌(access token) 我们在服务器生成访问令牌并返回给前端，因此用户不需要在浏览器登录Google获取访问令牌。
+Node.js服务器部分实现 Install Google API Client Library
+npm install --save googleapis Import service account key
+let privateKey = require(&#34;./google_key.json&#34;);  Return Google access token to client
+// https://your-domain/accessTokens 将会返回Google访问令牌给前段 app.get(&#34;/accessTokens&#34;, (req,res) =&gt; { let {google} = require(&#39;googleapis&#39;); let privateKey = require(&#34;." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/zh/posts/2018/embed-google-analytics-dashboard-on-website/" /><meta property="article:published_time" content="2018-10-15T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2018-10-15T00:00:00&#43;00:00"/><meta property="og:site_name" content="Tony Xu 博客" />
+ 
+    
+
+
+
+ 
+    
+     
+     
+    
+    
+    <link rel="canonical" href="/zh/posts/2018/embed-google-analytics-dashboard-on-website/">   <link rel="shortcut icon" type="image/png" href="profile-pic.png">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="/css/bulma.css"> 
+</head>
+
+
+<body>
+    <header> <nav class="navbar is-fixed-top">
+  <div class="container">
+      <div class="navbar-brand">
+          <a class="navbar-item" href=zh/>
+            <img src="/profile-pic.png" alt="Bulma logo">
+          </a>
+          <a class="navbar-item" href=zh/>
+            Tony Xu 博客
+          </a>
+          <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+        <div class="navbar-menu" id="navMenu">
+      
+          
+          
+          <div class="navbar-end">
+            
+            <a class="navbar-item" target="blank" href="https://github.com/tonyxu-io">
+              <span class="icon">
+                <i class="fa fa-github"></i>
+              </span>
+            </a>
+            
+      
+            
+            <a class="navbar-item" target="blank" href="https://www.linkedin.com/in/tonyxu93">
+              <span class="icon">
+                <i class="fa fa-linkedin"></i>
+              </span>
+            </a>
+            
+            <div class="navbar-item">
+              
+              
+              <a itemprop="url" class="navbar-item "
+                href="/zh/about"><span itemprop="name">关于</span></a>
+              
+              <a itemprop="url" class="navbar-item "
+                href="/zh/friends/"><span itemprop="name">友情链接</span></a>
+              
+              <a itemprop="url" class="navbar-item  is-active"
+                href="/zh/posts/"><span itemprop="name">文章</span></a>
+              
+            </div>
+          </div>
+        </div>
+  </div>
   
-    jwtClient<span class="token punctuation">.</span><span class="token function">authorize</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>err<span class="token punctuation">,</span> token<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">return</span> res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">'Error'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-      <span class="token keyword">return</span> res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>token<span class="token punctuation">.</span>access_token<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><h3 id="python服务器部分实现"><a href="#python服务器部分实现" aria-hidden="true" class="header-anchor">#</a> Python服务器部分实现</h3> <p>安装Google API Client Library</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">sudo</span> pip <span class="token function">install</span> --upgrade google-api-python-client
-</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>返回Google访问令牌到前端</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># service-account.py</span>
+</nav>
+ </header>
+    <main>
 
-<span class="token keyword">from</span> oauth2client<span class="token punctuation">.</span>service_account <span class="token keyword">import</span> ServiceAccountCredentials
+<div class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <p class="title">嵌入Google Analytics图表到你的网站</p>
+        <p class="text">
+  
+  <span>2018 年 10 月 15 日</span>
+  
+</p>
+        <hr />
+        <div class="content">
+          
 
-<span class="token comment"># 获取Google Analytics数据权限</span>
-SCOPE <span class="token operator">=</span> <span class="token string">'https://www.googleapis.com/auth/analytics.readonly'</span>
+<p>如果你正在使用Google Anlaytics工具来分析网站访问数据，你可能会想将它提供的各种酷炫图表嵌入到网站页面以供用户浏览。尽管Google Analytics并不提供简单的iframe方式来嵌入图表，它还是提供了<a href="https://developers.google.com/analytics/devguides/reporting/embed/v1/">Google Analytics Embed API</a>这种需要稍微多一点技术基础的方式让你能够嵌入它们的图表。我会在这篇文章里详细地告诉你该如何一步一步实现一个Google Analytics图表</p>
 
-<span class="token comment"># json密钥文件的路径</span>
-KEY_FILEPATH <span class="token operator">=</span> <span class="token string">'path/to/json-key.json'</span>
+<p>效果预览:</p>
 
-<span class="token comment"># 定义一个方法从服务账号对象获取访问令牌(access token)</span>
-<span class="token keyword">def</span> <span class="token function">get_access_token</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-  <span class="token keyword">return</span> ServiceAccountCredentials<span class="token punctuation">.</span>from_json_keyfile_name<span class="token punctuation">(</span>
-      KEY_FILEPATH<span class="token punctuation">,</span> SCOPE<span class="token punctuation">)</span><span class="token punctuation">.</span>get_access_token<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>access_token
-</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h2 id="_6-加载google-analytics-embed-api库"><a href="#_6-加载google-analytics-embed-api库" aria-hidden="true" class="header-anchor">#</a> 6. 加载Google Analytics Embed API库</h2> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript">
-<span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>w<span class="token punctuation">,</span>d<span class="token punctuation">,</span>s<span class="token punctuation">,</span>g<span class="token punctuation">,</span>js<span class="token punctuation">,</span>fs<span class="token punctuation">)</span><span class="token punctuation">{</span>
-  g<span class="token operator">=</span>w<span class="token punctuation">.</span>gapi<span class="token operator">||</span><span class="token punctuation">(</span>w<span class="token punctuation">.</span>gapi<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>g<span class="token punctuation">.</span>analytics<span class="token operator">=</span><span class="token punctuation">{</span>q<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>ready<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span>f<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>q<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>f<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-  js<span class="token operator">=</span>d<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>fs<span class="token operator">=</span>d<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-  js<span class="token punctuation">.</span>src<span class="token operator">=</span><span class="token string">'https://apis.google.com/js/platform.js'</span><span class="token punctuation">;</span>
-  fs<span class="token punctuation">.</span>parentNode<span class="token punctuation">.</span><span class="token function">insertBefore</span><span class="token punctuation">(</span>js<span class="token punctuation">,</span>fs<span class="token punctuation">)</span><span class="token punctuation">;</span>js<span class="token punctuation">.</span><span class="token function-variable function">onload</span><span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>g<span class="token punctuation">.</span><span class="token function">load</span><span class="token punctuation">(</span><span class="token string">'analytics'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">(</span>window<span class="token punctuation">,</span>document<span class="token punctuation">,</span><span class="token string">'script'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h2 id="_7-添加html容器用来加载图表"><a href="#_7-添加html容器用来加载图表" aria-hidden="true" class="header-anchor">#</a> 7. 添加HTML容器用来加载图表</h2> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>chart-1-container<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>chart-2-container<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
-</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="_8-获取google访问令牌并加载图表"><a href="#_8-获取google访问令牌并加载图表" aria-hidden="true" class="header-anchor">#</a> 8. 获取Google访问令牌并加载图表</h2> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript">
+<p><img src="./Analytics_-_Tony_Xu_2018-10-16_09-52-42.png" alt="preview" /></p>
 
-gapi<span class="token punctuation">.</span>analytics<span class="token punctuation">.</span><span class="token function">ready</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<h2 id="1-在-google-developers-console-https-console-developers-google-com-创建云项目">1. 在<a href="https://console.developers.google.com/">Google Developers Console</a>创建云项目</h2>
 
-  <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'/api/accessTokens'</span><span class="token punctuation">)</span>
-    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>response<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      gapi<span class="token punctuation">.</span>analytics<span class="token punctuation">.</span>auth<span class="token punctuation">.</span><span class="token function">authorize</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-        <span class="token string">'serverAuth'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
-          <span class="token string">'access_token'</span><span class="token punctuation">:</span> response
-        <span class="token punctuation">}</span>
-      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      dataChart1<span class="token punctuation">.</span><span class="token function">execute</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      dataChart2<span class="token punctuation">.</span><span class="token function">execute</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<p>(如果你已经有项目了请忽略这一步)</p>
 
-  <span class="token keyword">var</span> dataChart1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">gapi<span class="token punctuation">.</span>analytics<span class="token punctuation">.</span>googleCharts<span class="token punctuation">.</span>DataChart</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-    query<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-      <span class="token string">'ids'</span><span class="token punctuation">:</span> <span class="token string">'ga:00000000'</span><span class="token punctuation">,</span> <span class="token comment">// &lt;-- 替换为你的统计报告ID</span>
-      <span class="token string">'start-date'</span><span class="token punctuation">:</span> <span class="token string">'90daysAgo'</span><span class="token punctuation">,</span>
-      <span class="token string">'end-date'</span><span class="token punctuation">:</span> <span class="token string">'today'</span><span class="token punctuation">,</span>
-      <span class="token string">'metrics'</span><span class="token punctuation">:</span> <span class="token string">'ga:sessions,ga:users'</span><span class="token punctuation">,</span>
-      <span class="token string">'dimensions'</span><span class="token punctuation">:</span> <span class="token string">'ga:date'</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    chart<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-      <span class="token string">'container'</span><span class="token punctuation">:</span> <span class="token string">'chart-1-container'</span><span class="token punctuation">,</span>
-      <span class="token string">'type'</span><span class="token punctuation">:</span> <span class="token string">'LINE'</span><span class="token punctuation">,</span>
-      <span class="token string">'options'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
-        <span class="token string">'width'</span><span class="token punctuation">:</span> <span class="token string">'100%'</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<h2 id="2-创建服务账号-service-account-并下载-json-密钥文件">2. 创建服务账号(service account)并下载<code>.json</code>密钥文件</h2>
 
-  <span class="token keyword">var</span> dataChart2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">gapi<span class="token punctuation">.</span>analytics<span class="token punctuation">.</span>googleCharts<span class="token punctuation">.</span>DataChart</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-    query<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-      <span class="token string">'ids'</span><span class="token punctuation">:</span> <span class="token string">'ga:00000000'</span><span class="token punctuation">,</span> <span class="token comment">// &lt;-- 替换为你的统计报告ID</span>
-      <span class="token string">'start-date'</span><span class="token punctuation">:</span> <span class="token string">'90daysAgo'</span><span class="token punctuation">,</span>
-      <span class="token string">'end-date'</span><span class="token punctuation">:</span> <span class="token string">'today'</span><span class="token punctuation">,</span>
-      <span class="token string">'metrics'</span><span class="token punctuation">:</span> <span class="token string">'ga:pageviews,ga:uniquePageviews,ga:timeOnPage,ga:bounces,ga:entrances,ga:exits'</span><span class="token punctuation">,</span>
-      <span class="token string">'sort'</span><span class="token punctuation">:</span> <span class="token string">'-ga:pageviews'</span><span class="token punctuation">,</span>
-      <span class="token string">'dimensions'</span><span class="token punctuation">:</span> <span class="token string">'ga:pagePath'</span><span class="token punctuation">,</span>
-      <span class="token string">'max-results'</span><span class="token punctuation">:</span> <span class="token number">10</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    chart<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-      <span class="token string">'container'</span><span class="token punctuation">:</span> <span class="token string">'chart-2-container'</span><span class="token punctuation">,</span>
-      <span class="token string">'type'</span><span class="token punctuation">:</span> <span class="token string">'PIE'</span><span class="token punctuation">,</span>
-      <span class="token string">'options'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
-        <span class="token string">'width'</span><span class="token punctuation">:</span> <span class="token string">'100%'</span><span class="token punctuation">,</span>
-        <span class="token string">'pieHole'</span><span class="token punctuation">:</span> <span class="token number">0.4</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<p><img src="./Credentials_-_api-tonyxu-io_-_Google_Cloud_Platform_2018-10-15_22-39-04.png" alt="create-service-account-1" /></p>
 
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br></div></div><p>参考资料:</p> <ul><li><a href="https://ga-dev-tools.appspot.com/embed-api/server-side-authorization/" target="_blank" rel="noopener noreferrer">Google Analytics Embed API - Server-side Authorization<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://developers.google.com/analytics/devguides/reporting/embed/v1/component-reference" target="_blank" rel="noopener noreferrer">Google Analytics Embed API - Built-in Components Reference<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/tonyxu-io/my-blog/edit/master/docs/zh/posts/2018/embed-google-analytics-dashboard-on-website/README.md" target="_blank" rel="noopener noreferrer">编辑该页</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">最后更新: </span> <span class="time">2019-1-25 01:56:26</span></div></footer> <!----> <div class="comments"><div class="inner"><!----></div></div></main></div><div class="global-ui"><!----><div class="sticky-side-bar" data-v-46d9c502><a href="/zh/tip/" data-v-46d9c502><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="dollar-sign" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 288 512" class="svg-inline--fa fa-dollar-sign fa-w-9" data-v-46d9c502 data-v-46d9c502><path fill="currentColor" d="M209.2 233.4l-108-31.6C88.7 198.2 80 186.5 80 173.5c0-16.3 13.2-29.5 29.5-29.5h66.3c12.2 0 24.2 3.7 34.2 10.5 6.1 4.1 14.3 3.1 19.5-2l34.8-34c7.1-6.9 6.1-18.4-1.8-24.5C238 74.8 207.4 64.1 176 64V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48h-2.5C45.8 64-5.4 118.7.5 183.6c4.2 46.1 39.4 83.6 83.8 96.6l102.5 30c12.5 3.7 21.2 15.3 21.2 28.3 0 16.3-13.2 29.5-29.5 29.5h-66.3C100 368 88 364.3 78 357.5c-6.1-4.1-14.3-3.1-19.5 2l-34.8 34c-7.1 6.9-6.1 18.4 1.8 24.5 24.5 19.2 55.1 29.9 86.5 30v48c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-48.2c46.6-.9 90.3-28.6 105.7-72.7 21.5-61.6-14.6-124.8-72.5-141.7z" data-v-46d9c502 data-v-46d9c502></path></svg></a> <!----></div></div></div>
-    <script src="/assets/js/app.5275e46c.js" defer></script><script src="/assets/js/12.9b4deea3.js" defer></script><script src="/assets/js/2.a93cbcc6.js" defer></script><script src="/assets/js/8.a595b844.js" defer></script><script src="/assets/js/13.0ba02817.js" defer></script>
-  </body>
+<p><img src="./2018_10_15_22_43_12.png" alt="create-service-account-2" /></p>
+
+<h2 id="3-启用google-analytics-api权限">3. 启用Google Analytics API权限</h2>
+
+<p><img src="./Overview__APIs__Services__api-tonyxu-io__Google_Cloud_Platform_2018-10-15_22-45-05.png" alt="enable-analytics-api" /></p>
+
+<h2 id="4-允许云服务账号-service-account-访问google-analytics数据">4. 允许云服务账号(service account)访问Google Analytics数据</h2>
+
+<p>获取云服务账号邮箱地址</p>
+
+<p><img src="./IAM__IAM__admin__api-tonyxu-io__Google_Cloud_Platform_2018-10-15_22-48-01.png" alt="obtain-service-account-email" /></p>
+
+<p>添加为Google Analytics只读用户</p>
+
+<p><img src="./Analytics_2018-10-15_22-50-34.png" alt="add-service-account-email-to-analytics-account" /></p>
+
+<h2 id="5-在服务器生成访问令牌-access-token">5. 在服务器生成访问令牌(access token)</h2>
+
+<p>我们在服务器生成访问令牌并返回给前端，因此用户不需要在浏览器登录Google获取访问令牌。</p>
+
+<h3 id="node-js服务器部分实现">Node.js服务器部分实现</h3>
+
+<p>Install Google API Client Library</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm install --save googleapis</code></pre></div>
+<p>Import service account key</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#204a87;font-weight:bold">let</span> <span style="color:#000">privateKey</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">require</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;./google_key.json&#34;</span><span style="color:#000;font-weight:bold">);</span>
+</code></pre></div>
+<p>Return Google access token to client</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#8f5902;font-style:italic">// https://your-domain/accessTokens 将会返回Google访问令牌给前段
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">app</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">get</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;/accessTokens&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">req</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">res</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">=&gt;</span> <span style="color:#000;font-weight:bold">{</span>
+
+  <span style="color:#204a87;font-weight:bold">let</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#000">google</span><span style="color:#000;font-weight:bold">}</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">require</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;googleapis&#39;</span><span style="color:#000;font-weight:bold">);</span>
+  <span style="color:#204a87;font-weight:bold">let</span> <span style="color:#000">privateKey</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">require</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;./google_key.json&#34;</span><span style="color:#000;font-weight:bold">);</span>
+
+  <span style="color:#8f5902;font-style:italic">// JWT认证
+</span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#204a87;font-weight:bold">let</span> <span style="color:#000">jwtClient</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">google</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">auth</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">JWT</span><span style="color:#000;font-weight:bold">(</span>
+    <span style="color:#000">privateKey</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">client_email</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000">privateKey</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">private_key</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#4e9a06">&#39;https://www.googleapis.com/auth/analytics.readonly&#39;</span><span style="color:#000;font-weight:bold">);</span>
+  
+    <span style="color:#000">jwtClient</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">authorize</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">err</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">token</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">err</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#000">console</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">log</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">err</span><span style="color:#000;font-weight:bold">);</span>
+      <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">res</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">status</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">500</span><span style="color:#000;font-weight:bold">).</span><span style="color:#000">send</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;Error&#39;</span><span style="color:#000;font-weight:bold">);</span>
+    <span style="color:#000;font-weight:bold">}</span> <span style="color:#204a87;font-weight:bold">else</span> <span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">res</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">send</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">token</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">access_token</span><span style="color:#000;font-weight:bold">);</span>
+    <span style="color:#000;font-weight:bold">}</span>
+  <span style="color:#000;font-weight:bold">});</span>
+<span style="color:#000;font-weight:bold">})</span>
+</code></pre></div>
+<h3 id="python服务器部分实现">Python服务器部分实现</h3>
+
+<p>安装Google API Client Library</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo pip install --upgrade google-api-python-client</code></pre></div>
+<p>返回Google访问令牌到前端</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#8f5902;font-style:italic"># service-account.py</span>
+
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">oauth2client.service_account</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">ServiceAccountCredentials</span>
+
+<span style="color:#8f5902;font-style:italic"># 获取Google Analytics数据权限</span>
+<span style="color:#000">SCOPE</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#39;https://www.googleapis.com/auth/analytics.readonly&#39;</span>
+
+<span style="color:#8f5902;font-style:italic"># json密钥文件的路径</span>
+<span style="color:#000">KEY_FILEPATH</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#39;path/to/json-key.json&#39;</span>
+
+<span style="color:#8f5902;font-style:italic"># 定义一个方法从服务账号对象获取访问令牌(access token)</span>
+<span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">get_access_token</span><span style="color:#000;font-weight:bold">():</span>
+  <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">ServiceAccountCredentials</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">from_json_keyfile_name</span><span style="color:#000;font-weight:bold">(</span>
+      <span style="color:#000">KEY_FILEPATH</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">SCOPE</span><span style="color:#000;font-weight:bold">)</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">get_access_token</span><span style="color:#000;font-weight:bold">()</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">access_token</span></code></pre></div>
+<h2 id="6-加载google-analytics-embed-api库">6. 加载Google Analytics Embed API库</h2>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">function</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">w</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">d</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">s</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">g</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">js</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">fs</span><span style="color:#000;font-weight:bold">){</span>
+  <span style="color:#000">g</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">w</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">gapi</span><span style="color:#ce5c00;font-weight:bold">||</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">w</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">gapi</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000;font-weight:bold">{});</span><span style="color:#000">g</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">analytics</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000;font-weight:bold">{</span><span style="color:#000">q</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#000;font-weight:bold">[],</span><span style="color:#000">ready</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">function</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">f</span><span style="color:#000;font-weight:bold">){</span><span style="color:#204a87;font-weight:bold">this</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">push</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">f</span><span style="color:#000;font-weight:bold">);}};</span>
+  <span style="color:#000">js</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">d</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">createElement</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">s</span><span style="color:#000;font-weight:bold">);</span><span style="color:#000">fs</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">d</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">getElementsByTagName</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">s</span><span style="color:#000;font-weight:bold">)[</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">];</span>
+  <span style="color:#000">js</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">src</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;https://apis.google.com/js/platform.js&#39;</span><span style="color:#000;font-weight:bold">;</span>
+  <span style="color:#000">fs</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">parentNode</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">insertBefore</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">js</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">fs</span><span style="color:#000;font-weight:bold">);</span><span style="color:#000">js</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">onload</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#204a87;font-weight:bold">function</span><span style="color:#000;font-weight:bold">(){</span><span style="color:#000">g</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">load</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;analytics&#39;</span><span style="color:#000;font-weight:bold">);};</span>
+<span style="color:#000;font-weight:bold">}(</span><span style="color:#204a87">window</span><span style="color:#000;font-weight:bold">,</span><span style="color:#204a87">document</span><span style="color:#000;font-weight:bold">,</span><span style="color:#4e9a06">&#39;script&#39;</span><span style="color:#000;font-weight:bold">));</span>
+<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span></code></pre></div>
+<h2 id="7-添加html容器用来加载图表">7. 添加HTML容器用来加载图表</h2>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">div</span> <span style="color:#c4a000">id</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;chart-1-container&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">div</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">div</span> <span style="color:#c4a000">id</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;chart-2-container&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">div</span><span style="color:#000;font-weight:bold">&gt;</span></code></pre></div>
+<h2 id="8-获取google访问令牌并加载图表">8. 获取Google访问令牌并加载图表</h2>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span>
+
+<span style="color:#000">gapi</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">analytics</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ready</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+
+  <span style="color:#000">fetch</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;/api/accessTokens&#39;</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#000;font-weight:bold">.</span><span style="color:#000">then</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">response</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#000">gapi</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">analytics</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">auth</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">authorize</span><span style="color:#000;font-weight:bold">({</span>
+        <span style="color:#4e9a06">&#39;serverAuth&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+          <span style="color:#4e9a06">&#39;access_token&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">response</span>
+        <span style="color:#000;font-weight:bold">}</span>
+      <span style="color:#000;font-weight:bold">});</span>
+      <span style="color:#000">dataChart1</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">execute</span><span style="color:#000;font-weight:bold">();</span>
+      <span style="color:#000">dataChart2</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">execute</span><span style="color:#000;font-weight:bold">();</span>
+    <span style="color:#000;font-weight:bold">});</span>
+
+  <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">dataChart1</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">gapi</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">analytics</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">googleCharts</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">DataChart</span><span style="color:#000;font-weight:bold">({</span>
+    <span style="color:#000">query</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#4e9a06">&#39;ids&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;ga:00000000&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#8f5902;font-style:italic">// &lt;-- 替换为你的统计报告ID
+</span><span style="color:#8f5902;font-style:italic"></span>      <span style="color:#4e9a06">&#39;start-date&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;90daysAgo&#39;</span><span style="color:#000;font-weight:bold">,</span>
+      <span style="color:#4e9a06">&#39;end-date&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;today&#39;</span><span style="color:#000;font-weight:bold">,</span>
+      <span style="color:#4e9a06">&#39;metrics&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;ga:sessions,ga:users&#39;</span><span style="color:#000;font-weight:bold">,</span>
+      <span style="color:#4e9a06">&#39;dimensions&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;ga:date&#39;</span>
+    <span style="color:#000;font-weight:bold">},</span>
+    <span style="color:#000">chart</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#4e9a06">&#39;container&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;chart-1-container&#39;</span><span style="color:#000;font-weight:bold">,</span>
+      <span style="color:#4e9a06">&#39;type&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;LINE&#39;</span><span style="color:#000;font-weight:bold">,</span>
+      <span style="color:#4e9a06">&#39;options&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#4e9a06">&#39;width&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;100%&#39;</span>
+      <span style="color:#000;font-weight:bold">}</span>
+    <span style="color:#000;font-weight:bold">}</span>
+  <span style="color:#000;font-weight:bold">});</span>
+
+  <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">dataChart2</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">gapi</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">analytics</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">googleCharts</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">DataChart</span><span style="color:#000;font-weight:bold">({</span>
+    <span style="color:#000">query</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#4e9a06">&#39;ids&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;ga:00000000&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#8f5902;font-style:italic">// &lt;-- 替换为你的统计报告ID
+</span><span style="color:#8f5902;font-style:italic"></span>      <span style="color:#4e9a06">&#39;start-date&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;90daysAgo&#39;</span><span style="color:#000;font-weight:bold">,</span>
+      <span style="color:#4e9a06">&#39;end-date&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;today&#39;</span><span style="color:#000;font-weight:bold">,</span>
+      <span style="color:#4e9a06">&#39;metrics&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;ga:pageviews,ga:uniquePageviews,ga:timeOnPage,ga:bounces,ga:entrances,ga:exits&#39;</span><span style="color:#000;font-weight:bold">,</span>
+      <span style="color:#4e9a06">&#39;sort&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;-ga:pageviews&#39;</span><span style="color:#000;font-weight:bold">,</span>
+      <span style="color:#4e9a06">&#39;dimensions&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;ga:pagePath&#39;</span><span style="color:#000;font-weight:bold">,</span>
+      <span style="color:#4e9a06">&#39;max-results&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">10</span>
+    <span style="color:#000;font-weight:bold">},</span>
+    <span style="color:#000">chart</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#4e9a06">&#39;container&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;chart-2-container&#39;</span><span style="color:#000;font-weight:bold">,</span>
+      <span style="color:#4e9a06">&#39;type&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;PIE&#39;</span><span style="color:#000;font-weight:bold">,</span>
+      <span style="color:#4e9a06">&#39;options&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#4e9a06">&#39;width&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;100%&#39;</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#4e9a06">&#39;pieHole&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0.4</span><span style="color:#000;font-weight:bold">,</span>
+      <span style="color:#000;font-weight:bold">}</span>
+    <span style="color:#000;font-weight:bold">}</span>
+  <span style="color:#000;font-weight:bold">});</span>
+
+<span style="color:#000;font-weight:bold">});</span>
+<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span></code></pre></div>
+<p>参考资料:</p>
+
+<ul>
+<li><a href="https://ga-dev-tools.appspot.com/embed-api/server-side-authorization/">Google Analytics Embed API - Server-side Authorization</a><br /></li>
+<li><a href="https://developers.google.com/analytics/devguides/reporting/embed/v1/component-reference">Google Analytics Embed API - Built-in Components Reference</a><br /></li>
+</ul>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</main>
+    <footer>
+<footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-one-third">
+          <div class="field">
+              <div class="control has-icons-left">
+                <div class="select is-rounded  is-small">
+                  <select size="1" name="links" onchange="window.location.href=this.value;">
+                    <option selected disabled>语言</option>
+                    
+                    <option value="/">English</option>
+                    
+                    <option value="/zh/">中文</option>
+                    
+                  </select>
+                </div>
+                <div class="icon is-small is-left">
+                  <i class="fa fa-globe"></i>
+                </div>
+              </div>
+            </div>
+      </div>
+      <div class="column is-one-third">
+        <div class="content has-text-centered">
+          <p>
+            © 2019 Tony Xu 徐毅涵
+          </p>
+        </div>
+      </div>
+      <div class="column is-one-third has-text-right">
+        
+      </div>
+    </div>
+  </div>
+</footer>
+</footer>
+
+    <script async type="text/javascript" src="/js/bulma.js"></script>
+</body>
+
 </html>

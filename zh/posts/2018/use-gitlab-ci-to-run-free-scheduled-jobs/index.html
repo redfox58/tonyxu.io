@@ -1,55 +1,240 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
+<html lang="en-US" class="has-navbar-fixed-top">
+
+<head>
+    <meta name="generator" content="Hugo 0.52" />
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>用GitLab-CI免费运行定时任务 | Tony Xu (徐毅涵) 博客</title>
-    <meta name="description" content="本文介绍我是如何使用GitLab-CI免费地运行一些需要定时执行的脚本，而不需要在本地/服务器上使用cron job或者一直跑一个后台程序运行中间sleep。">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <link rel="alternate" type="application/rss+xml" href="https://tonyxu.io/rss.xml" title=" RSS Feed">
-  <link rel="alternate" type="application/atom+xml" href="https://tonyxu.io/feed.atom" title=" Atom Feed">
-  <link rel="alternate" type="application/json" href="https://tonyxu.io/feed.json" title=" JSON Feed">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>用GitLab-CI免费运行定时任务 | Tony Xu 博客</title>
+
+     
+      
     
-    <link rel="preload" href="/assets/css/0.styles.3a877479.css" as="style"><link rel="preload" href="/assets/js/app.5275e46c.js" as="script"><link rel="preload" href="/assets/js/12.9b4deea3.js" as="script"><link rel="preload" href="/assets/js/2.a93cbcc6.js" as="script"><link rel="preload" href="/assets/js/61.ee66529d.js" as="script"><link rel="preload" href="/assets/js/13.0ba02817.js" as="script"><link rel="prefetch" href="/assets/js/10.5e138f1d.js"><link rel="prefetch" href="/assets/js/11.1bd07509.js"><link rel="prefetch" href="/assets/js/14.6d8de823.js"><link rel="prefetch" href="/assets/js/15.026b2087.js"><link rel="prefetch" href="/assets/js/16.b72c3b5f.js"><link rel="prefetch" href="/assets/js/17.f749772c.js"><link rel="prefetch" href="/assets/js/18.81d8d7d0.js"><link rel="prefetch" href="/assets/js/19.b6f0fa47.js"><link rel="prefetch" href="/assets/js/20.ebcdb40b.js"><link rel="prefetch" href="/assets/js/21.d5e775cd.js"><link rel="prefetch" href="/assets/js/22.73cf46cd.js"><link rel="prefetch" href="/assets/js/23.07e26d06.js"><link rel="prefetch" href="/assets/js/24.a750307a.js"><link rel="prefetch" href="/assets/js/25.eb74193f.js"><link rel="prefetch" href="/assets/js/26.9a86f3c6.js"><link rel="prefetch" href="/assets/js/27.a764b68d.js"><link rel="prefetch" href="/assets/js/28.20fee3ac.js"><link rel="prefetch" href="/assets/js/29.2144fae5.js"><link rel="prefetch" href="/assets/js/3.35f5fbcf.js"><link rel="prefetch" href="/assets/js/30.4c014072.js"><link rel="prefetch" href="/assets/js/31.73de81c3.js"><link rel="prefetch" href="/assets/js/32.266fbe5e.js"><link rel="prefetch" href="/assets/js/33.04fbb223.js"><link rel="prefetch" href="/assets/js/34.9d0e9c7e.js"><link rel="prefetch" href="/assets/js/35.b64bdca2.js"><link rel="prefetch" href="/assets/js/36.604ccee7.js"><link rel="prefetch" href="/assets/js/37.1bc1eb4e.js"><link rel="prefetch" href="/assets/js/38.8b1f9a48.js"><link rel="prefetch" href="/assets/js/39.c261a562.js"><link rel="prefetch" href="/assets/js/4.879ea0ad.js"><link rel="prefetch" href="/assets/js/40.299acc5e.js"><link rel="prefetch" href="/assets/js/41.389eca45.js"><link rel="prefetch" href="/assets/js/42.aa3d84d9.js"><link rel="prefetch" href="/assets/js/43.60928d2c.js"><link rel="prefetch" href="/assets/js/44.c4c9e92b.js"><link rel="prefetch" href="/assets/js/45.32009c54.js"><link rel="prefetch" href="/assets/js/46.f0b4bd6b.js"><link rel="prefetch" href="/assets/js/47.c1940c71.js"><link rel="prefetch" href="/assets/js/48.c7462937.js"><link rel="prefetch" href="/assets/js/49.8c17367d.js"><link rel="prefetch" href="/assets/js/5.b3a6858d.js"><link rel="prefetch" href="/assets/js/50.8dc8b4bf.js"><link rel="prefetch" href="/assets/js/51.582c29a1.js"><link rel="prefetch" href="/assets/js/52.d853c9d8.js"><link rel="prefetch" href="/assets/js/53.c01990d6.js"><link rel="prefetch" href="/assets/js/54.5aeed2fb.js"><link rel="prefetch" href="/assets/js/55.6da49897.js"><link rel="prefetch" href="/assets/js/56.c092290e.js"><link rel="prefetch" href="/assets/js/57.5f875683.js"><link rel="prefetch" href="/assets/js/58.7ceba8f7.js"><link rel="prefetch" href="/assets/js/59.5d94108d.js"><link rel="prefetch" href="/assets/js/6.8d2942ef.js"><link rel="prefetch" href="/assets/js/60.ba66a643.js"><link rel="prefetch" href="/assets/js/62.49531f04.js"><link rel="prefetch" href="/assets/js/63.aa1a3a21.js"><link rel="prefetch" href="/assets/js/64.a23f7a8b.js"><link rel="prefetch" href="/assets/js/65.35a6667a.js"><link rel="prefetch" href="/assets/js/66.e84b8f1d.js"><link rel="prefetch" href="/assets/js/67.50301669.js"><link rel="prefetch" href="/assets/js/68.44e5fdc1.js"><link rel="prefetch" href="/assets/js/69.9b7a87d7.js"><link rel="prefetch" href="/assets/js/7.1788aa15.js"><link rel="prefetch" href="/assets/js/8.a595b844.js"><link rel="prefetch" href="/assets/js/9.8aa49af0.js">
-    <link rel="stylesheet" href="/assets/css/0.styles.3a877479.css">
-  </head>
-  <body>
-    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/zh/" class="home-link router-link-active"><!----> <span class="site-name">Tony Xu (徐毅涵) 博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/zh/" class="nav-link">主页</a></div><div class="nav-item"><a href="/zh/posts/" class="nav-link router-link-active">文章</a></div><div class="nav-item"><a href="/zh/about/" class="nav-link">关于</a></div><div class="nav-item"><a href="/friends/" class="nav-link">链接</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Eng/中</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/" class="nav-link">English</a></li><li class="dropdown-item"><!----> <a href="/zh/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/" class="nav-link router-link-exact-active router-link-active">中文</a></li></ul></div></div> <a href="https://github.com/tonyxu-io/my-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
-    GitHub
-    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/zh/" class="nav-link">主页</a></div><div class="nav-item"><a href="/zh/posts/" class="nav-link router-link-active">文章</a></div><div class="nav-item"><a href="/zh/about/" class="nav-link">关于</a></div><div class="nav-item"><a href="/friends/" class="nav-link">链接</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Eng/中</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/" class="nav-link">English</a></li><li class="dropdown-item"><!----> <a href="/zh/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/" class="nav-link router-link-exact-active router-link-active">中文</a></li></ul></div></div> <a href="https://github.com/tonyxu-io/my-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
-    GitHub
-    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group first"><p class="sidebar-heading open"><span>用GitLab-CI免费运行定时任务</span> <!----></p> <ul class="sidebar-group-items"></ul></section></li></ul> </aside> <main class="page"> <div class="content default"><h1 id="用gitlab-ci免费运行定时任务"><a href="#用gitlab-ci免费运行定时任务" aria-hidden="true" class="header-anchor">#</a> 用GitLab-CI免费运行定时任务</h1> <p>本文介绍我是如何使用GitLab-CI免费地运行一些需要定时执行的脚本，而不需要在本地/服务器上使用cron job或者一直跑一个后台程序运行中间sleep。</p> <p>GitLab-CI是GitLab提供的持续集成/部署的工具。当有新代码提交或者其他条件触发时，它就会自动运行脚本执行编译、测试、部署等活动。GitLab-CI每个月提供2,000分钟的免费运行时间，平均一天可以大概跑一个小时。</p> <p>如果你不用GitLab而是用GitHub的话，Travis CI也免费提供类似功能。</p> <p>GitLab-CI 和 Travis CI都支持定时执行脚本，但是GitLab-CI最多可以支持每小时运行一次，而Travis只支持最多每天运行一次。</p> <p>那么什么情况下你会需要定试运行脚本呢？比如:</p> <ol><li>我需要一个脚本每隔一段时间去查询当前比特币价格，当高于指定价格时卖出或者提醒我</li> <li>我需要一个脚本每隔一段时间查询一个商品的价格，当低于制定价格时提醒我购买</li> <li>我需要一个脚本每隔一段时间访问一次某个网址（例如为了保持Heroku应用处于激活状态)</li></ol> <p>下面为了方便起见，我就以情况3举例。</p> <p>首先在你的repo目录创建一个<code>.gitlab-ci.yml</code>文件:</p> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">test</span><span class="token punctuation">:</span>
-  <span class="token key atrule">script</span><span class="token punctuation">:</span>
-    <span class="token punctuation">-</span> bash scripts/script_a.sh
-</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>上述示例定义了一个<code>test</code>任务，并指定了用bash执行<code>scripts</code>目录下的<code>script_a.sh</code>脚本文件</p> <p>接下来就在<code>scripts</code>目录下创建一个<code>script_a.sh</code>文件:</p> <div class="language-sh line-numbers-mode"><pre class="language-text"><code>#!/bin/sh
-curl curl http://ip-api.com/json
-</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><blockquote><p>注: job名，脚本目录，脚本名，脚本内容都可以根据具体需要修改，这里只是举例。</p></blockquote> <p>将包含<code>.gitlab-ci.yml</code>和脚本的代码上传至GitLab，即会自动触发任务，去GitLab管理界面左侧的<code>CI/CD - Jobs</code>可以查看任务状态。</p> <p>进入<code>CI/CD - Schedules</code>可以给任务设置定时，默认提供每天/每周/每月，或者自定义。自定义的设置语法格式和cron一样，不熟悉的可以去 <a href="https://crontab.guru" target="_blank" rel="noopener noreferrer">https://crontab.guru<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 调试。假如你设置<code>* * * * 1-5</code>就是每周一到周五每分钟都运行，但是GitLab貌似有限制，导致实际上只会每周一到周五每小时执行一次。</p> <p>接下来你的脚本就会按照你设置的时间定时执行了。</p> <p>如果你去<code>CI/CD - Jobs</code>查看运行日志，可以看到类似如下日志:</p> <div class="language-sh line-numbers-mode"><pre class="language-text"><code>Running with gitlab-runner 11.1.0 (081978aa)
+    
+    
+    
+    
+
+  <meta name="author" content="徐毅涵">
+
+ 
+    <meta property="og:title" content="用GitLab-CI免费运行定时任务" />
+<meta property="og:description" content="本文介绍我是如何使用GitLab-CI免费地运行一些需要定时执行的脚本，而不需要在本地/服务器上使用cron job或者一直跑一个后台程序运行中间sleep。
+GitLab-CI是GitLab提供的持续集成/部署的工具。当有新代码提交或者其他条件触发时，它就会自动运行脚本执行编译、测试、部署等活动。GitLab-CI每个月提供2,000分钟的免费运行时间，平均一天可以大概跑一个小时。
+如果你不用GitLab而是用GitHub的话，Travis CI也免费提供类似功能。
+GitLab-CI 和 Travis CI都支持定时执行脚本，但是GitLab-CI最多可以支持每小时运行一次，而Travis只支持最多每天运行一次。
+那么什么情况下你会需要定试运行脚本呢？比如:
+ 我需要一个脚本每隔一段时间去查询当前比特币价格，当高于指定价格时卖出或者提醒我
+ 我需要一个脚本每隔一段时间查询一个商品的价格，当低于制定价格时提醒我购买
+ 我需要一个脚本每隔一段时间访问一次某个网址（例如为了保持Heroku应用处于激活状态)
+  下面为了方便起见，我就以情况3举例。
+首先在你的repo目录创建一个.gitlab-ci.yml文件:
+test:script:-bashscripts/script_a.sh 上述示例定义了一个test任务，并指定了用bash执行scripts目录下的script_a.sh脚本文件
+接下来就在scripts目录下创建一个script_a.sh文件:
+#!/bin/sh curl curl http://ip-api.com/json  注: job名，脚本目录，脚本名，脚本内容都可以根据具体需要修改，这里只是举例。
+ 将包含.gitlab-ci.yml和脚本的代码上传至GitLab，即会自动触发任务，去GitLab管理界面左侧的CI/CD - Jobs可以查看任务状态。
+进入CI/CD - Schedules可以给任务设置定时，默认提供每天/每周/每月，或者自定义。自定义的设置语法格式和cron一样，不熟悉的可以去 https://crontab.guru 调试。假如你设置* * * * 1-5就是每周一到周五每分钟都运行，但是GitLab貌似有限制，导致实际上只会每周一到周五每小时执行一次。
+接下来你的脚本就会按照你设置的时间定时执行了。
+如果你去CI/CD - Jobs查看运行日志，可以看到类似如下日志:
+Running with gitlab-runner 11.1.0 (081978aa) on docker-auto-scale 0277ea0f Using Docker executor with image ruby:2.5 ... Pulling docker image ruby:2.5 ... Using docker image sha256:1d8640b852eb145393da754ec38a4153edcf473a249448b7a271cea5f06016fa for ruby:2." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/zh/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/" /><meta property="article:published_time" content="2018-07-23T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2018-07-23T00:00:00&#43;00:00"/><meta property="og:site_name" content="Tony Xu 博客" />
+ 
+    
+
+
+
+ 
+    
+     
+     
+    
+    
+    <link rel="canonical" href="/zh/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/">   <link rel="shortcut icon" type="image/png" href="profile-pic.png">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="/css/bulma.css"> 
+</head>
+
+
+<body>
+    <header> <nav class="navbar is-fixed-top">
+  <div class="container">
+      <div class="navbar-brand">
+          <a class="navbar-item" href=zh/>
+            <img src="/profile-pic.png" alt="Bulma logo">
+          </a>
+          <a class="navbar-item" href=zh/>
+            Tony Xu 博客
+          </a>
+          <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+        <div class="navbar-menu" id="navMenu">
+      
+          
+          
+          <div class="navbar-end">
+            
+            <a class="navbar-item" target="blank" href="https://github.com/tonyxu-io">
+              <span class="icon">
+                <i class="fa fa-github"></i>
+              </span>
+            </a>
+            
+      
+            
+            <a class="navbar-item" target="blank" href="https://www.linkedin.com/in/tonyxu93">
+              <span class="icon">
+                <i class="fa fa-linkedin"></i>
+              </span>
+            </a>
+            
+            <div class="navbar-item">
+              
+              
+              <a itemprop="url" class="navbar-item "
+                href="/zh/about"><span itemprop="name">关于</span></a>
+              
+              <a itemprop="url" class="navbar-item "
+                href="/zh/friends/"><span itemprop="name">友情链接</span></a>
+              
+              <a itemprop="url" class="navbar-item  is-active"
+                href="/zh/posts/"><span itemprop="name">文章</span></a>
+              
+            </div>
+          </div>
+        </div>
+  </div>
+  
+</nav>
+ </header>
+    <main>
+
+<div class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <p class="title">用GitLab-CI免费运行定时任务</p>
+        <p class="text">
+  
+  <span>2018 年 7 月 23 日</span>
+  
+</p>
+        <hr />
+        <div class="content">
+          <p>本文介绍我是如何使用GitLab-CI免费地运行一些需要定时执行的脚本，而不需要在本地/服务器上使用cron job或者一直跑一个后台程序运行中间sleep。</p>
+
+<p>GitLab-CI是GitLab提供的持续集成/部署的工具。当有新代码提交或者其他条件触发时，它就会自动运行脚本执行编译、测试、部署等活动。GitLab-CI每个月提供2,000分钟的免费运行时间，平均一天可以大概跑一个小时。</p>
+
+<p>如果你不用GitLab而是用GitHub的话，Travis CI也免费提供类似功能。</p>
+
+<p>GitLab-CI 和 Travis CI都支持定时执行脚本，但是GitLab-CI最多可以支持每小时运行一次，而Travis只支持最多每天运行一次。</p>
+
+<p>那么什么情况下你会需要定试运行脚本呢？比如:</p>
+
+<ol>
+<li>我需要一个脚本每隔一段时间去查询当前比特币价格，当高于指定价格时卖出或者提醒我<br /></li>
+<li>我需要一个脚本每隔一段时间查询一个商品的价格，当低于制定价格时提醒我购买<br /></li>
+<li>我需要一个脚本每隔一段时间访问一次某个网址（例如为了保持Heroku应用处于激活状态)<br />
+<br /></li>
+</ol>
+
+<p>下面为了方便起见，我就以情况3举例。</p>
+
+<p>首先在你的repo目录创建一个<code>.gitlab-ci.yml</code>文件:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">test<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span>script<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span>-<span style="color:#f8f8f8;text-decoration:underline"> </span>bash<span style="color:#f8f8f8;text-decoration:underline"> </span>scripts/script_a.sh</code></pre></div>
+<p>上述示例定义了一个<code>test</code>任务，并指定了用bash执行<code>scripts</code>目录下的<code>script_a.sh</code>脚本文件</p>
+
+<p>接下来就在<code>scripts</code>目录下创建一个<code>script_a.sh</code>文件:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#8f5902;font-style:italic">#!/bin/sh
+</span><span style="color:#8f5902;font-style:italic"></span>curl curl http://ip-api.com/json</code></pre></div>
+<blockquote>
+<p>注: job名，脚本目录，脚本名，脚本内容都可以根据具体需要修改，这里只是举例。</p>
+</blockquote>
+
+<p>将包含<code>.gitlab-ci.yml</code>和脚本的代码上传至GitLab，即会自动触发任务，去GitLab管理界面左侧的<code>CI/CD - Jobs</code>可以查看任务状态。</p>
+
+<p>进入<code>CI/CD - Schedules</code>可以给任务设置定时，默认提供每天/每周/每月，或者自定义。自定义的设置语法格式和cron一样，不熟悉的可以去 <a href="https://crontab.guru">https://crontab.guru</a> 调试。假如你设置<code>* * * * 1-5</code>就是每周一到周五每分钟都运行，但是GitLab貌似有限制，导致实际上只会每周一到周五每小时执行一次。</p>
+
+<p>接下来你的脚本就会按照你设置的时间定时执行了。</p>
+
+<p>如果你去<code>CI/CD - Jobs</code>查看运行日志，可以看到类似如下日志:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">Running with gitlab-runner <span style="color:#0000cf;font-weight:bold">11</span>.1.0 <span style="color:#ce5c00;font-weight:bold">(</span>081978aa<span style="color:#ce5c00;font-weight:bold">)</span>
   on docker-auto-scale 0277ea0f
 Using Docker executor with image ruby:2.5 ...
 Pulling docker image ruby:2.5 ...
-Using docker image sha256:1d8640b852eb145393da754ec38a4153edcf473a249448b7a271cea5f06016fa for ruby:2.5 ...
+Using docker image sha256:1d8640b852eb145393da754ec38a4153edcf473a249448b7a271cea5f06016fa <span style="color:#204a87;font-weight:bold">for</span> ruby:2.5 ...
 Running on runner-0277ea0f-project-7572283-concurrent-0 via runner-0277ea0f-srm-1532409609-e458cf74...
 Cloning repository...
-Cloning into '/builds/example/scheduled-jobs'...
+Cloning into <span style="color:#4e9a06">&#39;/builds/example/scheduled-jobs&#39;</span>...
 Checking out 67e03220 as master...
 Skipping Git submodules setup
 $ bash scripts/script_a.sh
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-100   463  100   463    0     0    717      0 --:--:--
-{&quot;as&quot;:&quot;AS15169 Google LLC&quot;,&quot;city&quot;:&quot;Mountain View&quot;,&quot;country&quot;:&quot;United States&quot;,&quot;countryCode&quot;:&quot;US&quot;,&quot;isp&quot;:&quot;Googlebot&quot;,&quot;lat&quot;:37.4192,&quot;lon&quot;:-122.0574,&quot;org&quot;:&quot;Googlebot&quot;,&quot;query&quot;:&quot;66.249.64.149&quot;,&quot;region&quot;:&quot;CA&quot;,&quot;regionName&quot;:&quot;California&quot;,&quot;status&quot;:&quot;success&quot;,&quot;timezone&quot;:&quot;America/Los_Angeles&quot;,&quot;zip&quot;:&quot;94043&quot;}
- --:--:-- --:--:--   716
-Job succeeded
-</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/tonyxu-io/my-blog/edit/master/docs/zh/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/README.md" target="_blank" rel="noopener noreferrer">编辑该页</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">最后更新: </span> <span class="time">2019-1-25 01:56:26</span></div></footer> <!----> <div class="comments"><div class="inner"><!----></div></div></main></div><div class="global-ui"><!----><div class="sticky-side-bar" data-v-46d9c502><a href="/zh/tip/" data-v-46d9c502><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="dollar-sign" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 288 512" class="svg-inline--fa fa-dollar-sign fa-w-9" data-v-46d9c502 data-v-46d9c502><path fill="currentColor" d="M209.2 233.4l-108-31.6C88.7 198.2 80 186.5 80 173.5c0-16.3 13.2-29.5 29.5-29.5h66.3c12.2 0 24.2 3.7 34.2 10.5 6.1 4.1 14.3 3.1 19.5-2l34.8-34c7.1-6.9 6.1-18.4-1.8-24.5C238 74.8 207.4 64.1 176 64V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48h-2.5C45.8 64-5.4 118.7.5 183.6c4.2 46.1 39.4 83.6 83.8 96.6l102.5 30c12.5 3.7 21.2 15.3 21.2 28.3 0 16.3-13.2 29.5-29.5 29.5h-66.3C100 368 88 364.3 78 357.5c-6.1-4.1-14.3-3.1-19.5 2l-34.8 34c-7.1 6.9-6.1 18.4 1.8 24.5 24.5 19.2 55.1 29.9 86.5 30v48c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-48.2c46.6-.9 90.3-28.6 105.7-72.7 21.5-61.6-14.6-124.8-72.5-141.7z" data-v-46d9c502 data-v-46d9c502></path></svg></a> <!----></div></div></div>
-    <script src="/assets/js/app.5275e46c.js" defer></script><script src="/assets/js/12.9b4deea3.js" defer></script><script src="/assets/js/2.a93cbcc6.js" defer></script><script src="/assets/js/61.ee66529d.js" defer></script><script src="/assets/js/13.0ba02817.js" defer></script>
-  </body>
+  <span style="color:#0000cf;font-weight:bold">0</span>     <span style="color:#0000cf;font-weight:bold">0</span>    <span style="color:#0000cf;font-weight:bold">0</span>     <span style="color:#0000cf;font-weight:bold">0</span>    <span style="color:#0000cf;font-weight:bold">0</span>     <span style="color:#0000cf;font-weight:bold">0</span>      <span style="color:#0000cf;font-weight:bold">0</span>      <span style="color:#0000cf;font-weight:bold">0</span> --:--:-- --:--:-- --:--:--     <span style="color:#0000cf;font-weight:bold">0</span>
+  <span style="color:#0000cf;font-weight:bold">0</span>     <span style="color:#0000cf;font-weight:bold">0</span>    <span style="color:#0000cf;font-weight:bold">0</span>     <span style="color:#0000cf;font-weight:bold">0</span>    <span style="color:#0000cf;font-weight:bold">0</span>     <span style="color:#0000cf;font-weight:bold">0</span>      <span style="color:#0000cf;font-weight:bold">0</span>      <span style="color:#0000cf;font-weight:bold">0</span> --:--:-- --:--:-- --:--:--     <span style="color:#0000cf;font-weight:bold">0</span>
+<span style="color:#0000cf;font-weight:bold">100</span>   <span style="color:#0000cf;font-weight:bold">463</span>  <span style="color:#0000cf;font-weight:bold">100</span>   <span style="color:#0000cf;font-weight:bold">463</span>    <span style="color:#0000cf;font-weight:bold">0</span>     <span style="color:#0000cf;font-weight:bold">0</span>    <span style="color:#0000cf;font-weight:bold">717</span>      <span style="color:#0000cf;font-weight:bold">0</span> --:--:--
+<span style="color:#ce5c00;font-weight:bold">{</span><span style="color:#4e9a06">&#34;as&#34;</span>:<span style="color:#4e9a06">&#34;AS15169 Google LLC&#34;</span>,<span style="color:#4e9a06">&#34;city&#34;</span>:<span style="color:#4e9a06">&#34;Mountain View&#34;</span>,<span style="color:#4e9a06">&#34;country&#34;</span>:<span style="color:#4e9a06">&#34;United States&#34;</span>,<span style="color:#4e9a06">&#34;countryCode&#34;</span>:<span style="color:#4e9a06">&#34;US&#34;</span>,<span style="color:#4e9a06">&#34;isp&#34;</span>:<span style="color:#4e9a06">&#34;Googlebot&#34;</span>,<span style="color:#4e9a06">&#34;lat&#34;</span>:37.4192,<span style="color:#4e9a06">&#34;lon&#34;</span>:-122.0574,<span style="color:#4e9a06">&#34;org&#34;</span>:<span style="color:#4e9a06">&#34;Googlebot&#34;</span>,<span style="color:#4e9a06">&#34;query&#34;</span>:<span style="color:#4e9a06">&#34;66.249.64.149&#34;</span>,<span style="color:#4e9a06">&#34;region&#34;</span>:<span style="color:#4e9a06">&#34;CA&#34;</span>,<span style="color:#4e9a06">&#34;regionName&#34;</span>:<span style="color:#4e9a06">&#34;California&#34;</span>,<span style="color:#4e9a06">&#34;status&#34;</span>:<span style="color:#4e9a06">&#34;success&#34;</span>,<span style="color:#4e9a06">&#34;timezone&#34;</span>:<span style="color:#4e9a06">&#34;America/Los_Angeles&#34;</span>,<span style="color:#4e9a06">&#34;zip&#34;</span>:<span style="color:#4e9a06">&#34;94043&#34;</span><span style="color:#ce5c00;font-weight:bold">}</span>
+ --:--:-- --:--:--   <span style="color:#0000cf;font-weight:bold">716</span>
+Job succeeded</code></pre></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</main>
+    <footer>
+<footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-one-third">
+          <div class="field">
+              <div class="control has-icons-left">
+                <div class="select is-rounded  is-small">
+                  <select size="1" name="links" onchange="window.location.href=this.value;">
+                    <option selected disabled>语言</option>
+                    
+                    <option value="/">English</option>
+                    
+                    <option value="/zh/">中文</option>
+                    
+                  </select>
+                </div>
+                <div class="icon is-small is-left">
+                  <i class="fa fa-globe"></i>
+                </div>
+              </div>
+            </div>
+      </div>
+      <div class="column is-one-third">
+        <div class="content has-text-centered">
+          <p>
+            © 2019 Tony Xu 徐毅涵
+          </p>
+        </div>
+      </div>
+      <div class="column is-one-third has-text-right">
+        
+      </div>
+    </div>
+  </div>
+</footer>
+</footer>
+
+    <script async type="text/javascript" src="/js/bulma.js"></script>
+</body>
+
 </html>
