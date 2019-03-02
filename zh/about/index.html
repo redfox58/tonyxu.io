@@ -36,7 +36,18 @@
  
     
      
-     
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-577792-7', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+ 
     
     
     <link rel="canonical" href="/zh/about/">   <link rel="shortcut icon" type="image/png" href="profile-pic.png">
@@ -50,59 +61,77 @@
 <body>
     <header> <nav class="navbar is-fixed-top">
   <div class="container">
-      <div class="navbar-brand">
-          <a class="navbar-item" href=zh/>
-            <img src="/profile-pic.png" alt="Bulma logo">
-          </a>
-          <a class="navbar-item" href=zh/>
-            Tony Xu 博客
-          </a>
-          <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
+    <div class="navbar-brand">
+      <a class="navbar-item" href=zh/>
+        <img src="/profile-pic.png" alt="logo">
+      </a>
+      <a class="navbar-item" href=zh/>
+        Tony Xu 博客
+      </a>
+      <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div class="navbar-menu" id="navMenu">
+
+      
+      
+      <div class="navbar-end">
+        
+        <a class="navbar-item" target="blank" href="https://github.com/tonyxu-io">
+          <span class="icon">
+            <i class="fa fa-github"></i>
+          </span>
+        </a>
+        
+
+        
+        <a class="navbar-item" target="blank" href="https://www.linkedin.com/in/tonyxu93">
+          <span class="icon">
+            <i class="fa fa-linkedin"></i>
+          </span>
+        </a>
+        
+        <div class="navbar-item">
+          
+          
+          <a itemprop="url" class="navbar-item "
+            href="/zh/about"><span itemprop="name">关于</span></a>
+          
+          <a itemprop="url" class="navbar-item "
+            href="/zh/friends/"><span itemprop="name">友情链接</span></a>
+          
+          <a itemprop="url" class="navbar-item "
+            href="/zh/posts/"><span itemprop="name">文章</span></a>
+          
         </div>
-      
-        <div class="navbar-menu" id="navMenu">
-      
-          
-          
-          <div class="navbar-end">
-            
-            <a class="navbar-item" target="blank" href="https://github.com/tonyxu-io">
-              <span class="icon">
-                <i class="fa fa-github"></i>
-              </span>
-            </a>
-            
-      
-            
-            <a class="navbar-item" target="blank" href="https://www.linkedin.com/in/tonyxu93">
-              <span class="icon">
-                <i class="fa fa-linkedin"></i>
-              </span>
-            </a>
-            
-            <div class="navbar-item">
-              
-              
-              <a itemprop="url" class="navbar-item "
-                href="/zh/about"><span itemprop="name">关于</span></a>
-              
-              <a itemprop="url" class="navbar-item "
-                href="/zh/friends/"><span itemprop="name">友情链接</span></a>
-              
-              <a itemprop="url" class="navbar-item "
-                href="/zh/posts/"><span itemprop="name">文章</span></a>
-              
+        
+        <div class="navbar-item">
+          <div class="field">
+            <div class="control has-icons-left">
+              <div class="select is-rounded  is-small">
+                <select size="1" name="links" onchange="window.location.href=this.value;">
+                  <option selected disabled>语言</option>
+                  
+                  <option value="/about/">English</option>
+                  
+                </select>
+              </div>
+              <div class="icon is-small is-left">
+                <i class="fa fa-globe"></i>
+              </div>
             </div>
           </div>
         </div>
+        
+      </div>
+    </div>
   </div>
-  
-</nav>
- </header>
+
+</nav> </header>
     <main>
 
 <div class="section">
@@ -131,36 +160,10 @@
     <footer>
 <footer class="footer">
   <div class="container">
-    <div class="columns">
-      <div class="column is-one-third">
-          <div class="field">
-              <div class="control has-icons-left">
-                <div class="select is-rounded  is-small">
-                  <select size="1" name="links" onchange="window.location.href=this.value;">
-                    <option selected disabled>语言</option>
-                    
-                    <option value="/">English</option>
-                    
-                    <option value="/zh/">中文</option>
-                    
-                  </select>
-                </div>
-                <div class="icon is-small is-left">
-                  <i class="fa fa-globe"></i>
-                </div>
-              </div>
-            </div>
-      </div>
-      <div class="column is-one-third">
-        <div class="content has-text-centered">
-          <p>
-            © 2019 Tony Xu 徐毅涵
-          </p>
-        </div>
-      </div>
-      <div class="column is-one-third has-text-right">
-        
-      </div>
+    <div class="content has-text-centered">
+      <p>
+        © 2019 Tony Xu 徐毅涵
+      </p>
     </div>
   </div>
 </footer>

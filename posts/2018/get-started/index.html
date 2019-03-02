@@ -32,7 +32,18 @@
  
     
      
-     
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-577792-7', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+ 
     
     
     <link rel="canonical" href="/posts/2018/get-started/">   <link rel="shortcut icon" type="image/png" href="profile-pic.png">
@@ -46,63 +57,94 @@
 <body>
     <header> <nav class="navbar is-fixed-top">
   <div class="container">
-      <div class="navbar-brand">
-          <a class="navbar-item" href=/>
-            <img src="/profile-pic.png" alt="Bulma logo">
-          </a>
-          <a class="navbar-item" href=/>
-            Tony Xu Blog
-          </a>
-          <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
+    <div class="navbar-brand">
+      <a class="navbar-item" href=/>
+        <img src="/profile-pic.png" alt="logo">
+      </a>
+      <a class="navbar-item" href=/>
+        Tony Xu Blog
+      </a>
+      <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div class="navbar-menu" id="navMenu">
+
+      
+      
+      <div class="navbar-end">
+        
+        <a class="navbar-item" target="blank" href="https://github.com/tonyxu-io">
+          <span class="icon">
+            <i class="fa fa-github"></i>
+          </span>
+        </a>
+        
+
+        
+        <a class="navbar-item" target="blank" href="https://www.linkedin.com/in/tonyxu93">
+          <span class="icon">
+            <i class="fa fa-linkedin"></i>
+          </span>
+        </a>
+        
+        <div class="navbar-item">
+          
+          
+          <a itemprop="url" class="navbar-item "
+            href="/about"><span itemprop="name">About</span></a>
+          
+          <a itemprop="url" class="navbar-item "
+            href="/friends/"><span itemprop="name">Friends</span></a>
+          
+          <a itemprop="url" class="navbar-item  is-active"
+            href="/posts/"><span itemprop="name">Posts</span></a>
+          
         </div>
-      
-        <div class="navbar-menu" id="navMenu">
-      
-          
-          
-          <div class="navbar-end">
-            
-            <a class="navbar-item" target="blank" href="https://github.com/tonyxu-io">
-              <span class="icon">
-                <i class="fa fa-github"></i>
-              </span>
-            </a>
-            
-      
-            
-            <a class="navbar-item" target="blank" href="https://www.linkedin.com/in/tonyxu93">
-              <span class="icon">
-                <i class="fa fa-linkedin"></i>
-              </span>
-            </a>
-            
-            <div class="navbar-item">
-              
-              
-              <a itemprop="url" class="navbar-item "
-                href="/about"><span itemprop="name">About</span></a>
-              
-              <a itemprop="url" class="navbar-item "
-                href="/friends/"><span itemprop="name">Friends</span></a>
-              
-              <a itemprop="url" class="navbar-item  is-active"
-                href="/posts/"><span itemprop="name">Posts</span></a>
-              
+        
+        <div class="navbar-item">
+          <div class="field">
+            <div class="control has-icons-left">
+              <div class="select is-rounded  is-small">
+                <select size="1" name="links" onchange="window.location.href=this.value;">
+                  <option selected disabled>Language</option>
+                  
+                  <option value="/zh/posts/2018/get-started/">中文</option>
+                  
+                </select>
+              </div>
+              <div class="icon is-small is-left">
+                <i class="fa fa-globe"></i>
+              </div>
             </div>
           </div>
         </div>
+        
+      </div>
+    </div>
   </div>
-  
-</nav>
- </header>
+
+</nav> </header>
     <main>
 
 <div class="section">
-  <div class="container">
+  <div class="container" itemscope itemtype="http://schema.org/BlogPosting">
+    
+<meta itemprop="name" content="Preface">
+<meta itemprop="description" content="Today, I decided to start this blog, which I hope can encourage me to think more and summarize more for my work and life.">
+
+
+<meta itemprop="datePublished" content="2018-07-02T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-07-02T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="24">
+
+
+
+<meta itemprop="keywords" content="" />
+
     <div class="columns">
       <div class="column is-8 is-offset-2">
         <p class="title">Preface</p>
@@ -116,45 +158,39 @@
           <p>Today, I decided to start this blog, which I hope can encourage me to think more and summarize more for my work and life.</p>
 
         </div>
+        
+        <article>
+          <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'tonyxu-io';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </article>
+        
       </div>
     </div>
-
   </div>
 </div>
 </main>
     <footer>
 <footer class="footer">
   <div class="container">
-    <div class="columns">
-      <div class="column is-one-third">
-          <div class="field">
-              <div class="control has-icons-left">
-                <div class="select is-rounded  is-small">
-                  <select size="1" name="links" onchange="window.location.href=this.value;">
-                    <option selected disabled>Language</option>
-                    
-                    <option value="/">English</option>
-                    
-                    <option value="/zh/">中文</option>
-                    
-                  </select>
-                </div>
-                <div class="icon is-small is-left">
-                  <i class="fa fa-globe"></i>
-                </div>
-              </div>
-            </div>
-      </div>
-      <div class="column is-one-third">
-        <div class="content has-text-centered">
-          <p>
-            © 2019 Tony Xu
-          </p>
-        </div>
-      </div>
-      <div class="column is-one-third has-text-right">
-        
-      </div>
+    <div class="content has-text-centered">
+      <p>
+        © 2019 Tony Xu
+      </p>
     </div>
   </div>
 </footer>

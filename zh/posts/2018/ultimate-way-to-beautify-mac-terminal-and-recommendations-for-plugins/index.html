@@ -50,7 +50,18 @@ https://github.com/robbyrussell/oh-my-zsh/wiki/External-themes
  
     
      
-     
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-577792-7', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+ 
     
     
     <link rel="canonical" href="/zh/posts/2018/ultimate-way-to-beautify-mac-terminal-and-recommendations-for-plugins/">   <link rel="shortcut icon" type="image/png" href="profile-pic.png">
@@ -64,63 +75,112 @@ https://github.com/robbyrussell/oh-my-zsh/wiki/External-themes
 <body>
     <header> <nav class="navbar is-fixed-top">
   <div class="container">
-      <div class="navbar-brand">
-          <a class="navbar-item" href=zh/>
-            <img src="/profile-pic.png" alt="Bulma logo">
-          </a>
-          <a class="navbar-item" href=zh/>
-            Tony Xu 博客
-          </a>
-          <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
+    <div class="navbar-brand">
+      <a class="navbar-item" href=zh/>
+        <img src="/profile-pic.png" alt="logo">
+      </a>
+      <a class="navbar-item" href=zh/>
+        Tony Xu 博客
+      </a>
+      <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div class="navbar-menu" id="navMenu">
+
+      
+      
+      <div class="navbar-end">
+        
+        <a class="navbar-item" target="blank" href="https://github.com/tonyxu-io">
+          <span class="icon">
+            <i class="fa fa-github"></i>
+          </span>
+        </a>
+        
+
+        
+        <a class="navbar-item" target="blank" href="https://www.linkedin.com/in/tonyxu93">
+          <span class="icon">
+            <i class="fa fa-linkedin"></i>
+          </span>
+        </a>
+        
+        <div class="navbar-item">
+          
+          
+          <a itemprop="url" class="navbar-item "
+            href="/zh/about"><span itemprop="name">关于</span></a>
+          
+          <a itemprop="url" class="navbar-item "
+            href="/zh/friends/"><span itemprop="name">友情链接</span></a>
+          
+          <a itemprop="url" class="navbar-item  is-active"
+            href="/zh/posts/"><span itemprop="name">文章</span></a>
+          
         </div>
-      
-        <div class="navbar-menu" id="navMenu">
-      
-          
-          
-          <div class="navbar-end">
-            
-            <a class="navbar-item" target="blank" href="https://github.com/tonyxu-io">
-              <span class="icon">
-                <i class="fa fa-github"></i>
-              </span>
-            </a>
-            
-      
-            
-            <a class="navbar-item" target="blank" href="https://www.linkedin.com/in/tonyxu93">
-              <span class="icon">
-                <i class="fa fa-linkedin"></i>
-              </span>
-            </a>
-            
-            <div class="navbar-item">
-              
-              
-              <a itemprop="url" class="navbar-item "
-                href="/zh/about"><span itemprop="name">关于</span></a>
-              
-              <a itemprop="url" class="navbar-item "
-                href="/zh/friends/"><span itemprop="name">友情链接</span></a>
-              
-              <a itemprop="url" class="navbar-item  is-active"
-                href="/zh/posts/"><span itemprop="name">文章</span></a>
-              
+        
+        <div class="navbar-item">
+          <div class="field">
+            <div class="control has-icons-left">
+              <div class="select is-rounded  is-small">
+                <select size="1" name="links" onchange="window.location.href=this.value;">
+                  <option selected disabled>语言</option>
+                  
+                  <option value="/posts/2018/ultimate-way-to-beautify-mac-terminal-and-recommendations-for-plugins/">English</option>
+                  
+                </select>
+              </div>
+              <div class="icon is-small is-left">
+                <i class="fa fa-globe"></i>
+              </div>
             </div>
           </div>
         </div>
+        
+      </div>
+    </div>
   </div>
-  
-</nav>
- </header>
+
+</nav> </header>
     <main>
 
 <div class="section">
-  <div class="container">
+  <div class="container" itemscope itemtype="http://schema.org/BlogPosting">
+    
+<meta itemprop="name" content="程序员的Mac终端(oh-my-zsh)终极美化及必备插件推荐">
+<meta itemprop="description" content="如果你使用Mac进行开发，那么Terminal.app应该是你使用非常频繁的app了。初体验Terminal时你可能觉得单调乏味，阅读密密麻麻的内容也很费劲。但是如果你跟着我一起配置它，就会发现你平时觉得繁琐，不方便的地方其实都可以被完美解决,并且颜值也高了许多。
+我们准备这样改造Terminal  修改Terminal的Profile: 让Terminal配色更美观
+ 安装oh-my-zsh: 将Terminal的shell从bash改成更强大的zsh
+ 安装oh-my-zsh主题: 美化oh-my-zsh
+ 安装oh-my-zsh必备插件: 让Terminal具有更高级和便利的功能
+  准备工作 建议先安装homebrew, 方便后续工具安装:
+/usr/bin/ruby -e &#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&#34; 修改Terminal Profile 主题设置  在GitHub的osx-terminal-theme项目主页里寻找你喜欢的主题
+ 在schemes目录里找到对应的主题文件并双击安装到Terminal, 设置为默认
+  安装oh-my-zsh 先安装zsh:
+brew install zsh 再安装oh-my-zsh:
+sh -c &#34;$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&#34; 安装oh-my-zsh主题 内置主题列表 oh-my-zsh提供一批内置主题，可以直接设置使用
+ 在内置主题列表寻找你你喜欢的主题: https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ 在~/.zshrc配置文件里设置ZSH_THEME为你的主题名称
+ 激活设置source ~/.zshrc
+  第三方主题列表 许多第三方也开发了供oh-my-zsh使用的主题，可以去第三方主题列表查看和安装:
+https://github.com/robbyrussell/oh-my-zsh/wiki/External-themes
+安装oh-my-zsh必备插件 oh-my-zsh有非常丰富的插件可供使用，下面列举一些必备插件，可以大幅提高生产力。
+示例如下:
+# ~/.zshrc: plugins=( git zsh-syntax-highlighting ) git 自带插件，可以使用缩写命令, 比如 gaa -&gt; git add --all, 通过alias | grep git查看所有支持缩写命令">
+
+
+<meta itemprop="datePublished" content="2018-07-26T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-07-26T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="186">
+
+
+
+<meta itemprop="keywords" content="" />
+
     <div class="columns">
       <div class="column is-8 is-offset-2">
         <p class="title">程序员的Mac终端(oh-my-zsh)终极美化及必备插件推荐</p>
@@ -264,45 +324,39 @@ https://github.com/robbyrussell/oh-my-zsh/wiki/External-themes
 <span style="color:#8f5902;font-style:italic"># load auto-suggestions plugin</span>
 <span style="color:#204a87">source</span> /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh</code></pre></div>
         </div>
+        
+        <article>
+          <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'tonyxu-io';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </article>
+        
       </div>
     </div>
-
   </div>
 </div>
 </main>
     <footer>
 <footer class="footer">
   <div class="container">
-    <div class="columns">
-      <div class="column is-one-third">
-          <div class="field">
-              <div class="control has-icons-left">
-                <div class="select is-rounded  is-small">
-                  <select size="1" name="links" onchange="window.location.href=this.value;">
-                    <option selected disabled>语言</option>
-                    
-                    <option value="/">English</option>
-                    
-                    <option value="/zh/">中文</option>
-                    
-                  </select>
-                </div>
-                <div class="icon is-small is-left">
-                  <i class="fa fa-globe"></i>
-                </div>
-              </div>
-            </div>
-      </div>
-      <div class="column is-one-third">
-        <div class="content has-text-centered">
-          <p>
-            © 2019 Tony Xu 徐毅涵
-          </p>
-        </div>
-      </div>
-      <div class="column is-one-third has-text-right">
-        
-      </div>
+    <div class="content has-text-centered">
+      <p>
+        © 2019 Tony Xu 徐毅涵
+      </p>
     </div>
   </div>
 </footer>

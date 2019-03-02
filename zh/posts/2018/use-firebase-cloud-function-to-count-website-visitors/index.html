@@ -44,7 +44,18 @@
  
     
      
-     
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-577792-7', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+ 
     
     
     <link rel="canonical" href="/zh/posts/2018/use-firebase-cloud-function-to-count-website-visitors/">   <link rel="shortcut icon" type="image/png" href="profile-pic.png">
@@ -58,63 +69,106 @@
 <body>
     <header> <nav class="navbar is-fixed-top">
   <div class="container">
-      <div class="navbar-brand">
-          <a class="navbar-item" href=zh/>
-            <img src="/profile-pic.png" alt="Bulma logo">
-          </a>
-          <a class="navbar-item" href=zh/>
-            Tony Xu 博客
-          </a>
-          <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
+    <div class="navbar-brand">
+      <a class="navbar-item" href=zh/>
+        <img src="/profile-pic.png" alt="logo">
+      </a>
+      <a class="navbar-item" href=zh/>
+        Tony Xu 博客
+      </a>
+      <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div class="navbar-menu" id="navMenu">
+
+      
+      
+      <div class="navbar-end">
+        
+        <a class="navbar-item" target="blank" href="https://github.com/tonyxu-io">
+          <span class="icon">
+            <i class="fa fa-github"></i>
+          </span>
+        </a>
+        
+
+        
+        <a class="navbar-item" target="blank" href="https://www.linkedin.com/in/tonyxu93">
+          <span class="icon">
+            <i class="fa fa-linkedin"></i>
+          </span>
+        </a>
+        
+        <div class="navbar-item">
+          
+          
+          <a itemprop="url" class="navbar-item "
+            href="/zh/about"><span itemprop="name">关于</span></a>
+          
+          <a itemprop="url" class="navbar-item "
+            href="/zh/friends/"><span itemprop="name">友情链接</span></a>
+          
+          <a itemprop="url" class="navbar-item  is-active"
+            href="/zh/posts/"><span itemprop="name">文章</span></a>
+          
         </div>
-      
-        <div class="navbar-menu" id="navMenu">
-      
-          
-          
-          <div class="navbar-end">
-            
-            <a class="navbar-item" target="blank" href="https://github.com/tonyxu-io">
-              <span class="icon">
-                <i class="fa fa-github"></i>
-              </span>
-            </a>
-            
-      
-            
-            <a class="navbar-item" target="blank" href="https://www.linkedin.com/in/tonyxu93">
-              <span class="icon">
-                <i class="fa fa-linkedin"></i>
-              </span>
-            </a>
-            
-            <div class="navbar-item">
-              
-              
-              <a itemprop="url" class="navbar-item "
-                href="/zh/about"><span itemprop="name">关于</span></a>
-              
-              <a itemprop="url" class="navbar-item "
-                href="/zh/friends/"><span itemprop="name">友情链接</span></a>
-              
-              <a itemprop="url" class="navbar-item  is-active"
-                href="/zh/posts/"><span itemprop="name">文章</span></a>
-              
+        
+        <div class="navbar-item">
+          <div class="field">
+            <div class="control has-icons-left">
+              <div class="select is-rounded  is-small">
+                <select size="1" name="links" onchange="window.location.href=this.value;">
+                  <option selected disabled>语言</option>
+                  
+                  <option value="/posts/2018/use-firebase-cloud-function-to-count-website-visitors/">English</option>
+                  
+                </select>
+              </div>
+              <div class="icon is-small is-left">
+                <i class="fa fa-globe"></i>
+              </div>
             </div>
           </div>
         </div>
+        
+      </div>
+    </div>
   </div>
-  
-</nav>
- </header>
+
+</nav> </header>
     <main>
 
 <div class="section">
-  <div class="container">
+  <div class="container" itemscope itemtype="http://schema.org/BlogPosting">
+    
+<meta itemprop="name" content="使用Firebase云函数统计网站访问数">
+<meta itemprop="description" content="现在越来越多人喜欢用 Firebase 托管静态页面，类似选择还有 GitHub Pages。如果你想给 Firebase 托管的静态页面添加后端代码，那么恭喜你云函数就是为你准备的。其中使用云函数的场景可以是连接 Firebase 实时数据库并存取数据。
+我在这给大家分享一个最简单的例子就是借助云函数实现访问统计，每次云函数被触发，就更新实时数据库里的网站访问统计。
+计划 我们大致需要这么几步实现这个功能
+ 部署静态页面至 Firebase 云托管
+ 创建 Firebase 云函数用来更新 Firebase 实时数据库的统计数字
+ 为静态页面添加访问云函数的请求
+  部署静态页面至 Firebase 云托管 Firebase 云托管非常适合托管静态页面，它比 GitHub Pages 搭建起来更简单，同时它也提供更多为网站/移动开发而设计的功能。如果你的静态网页文件已经准备好了，那么就可以直接运行firebase deploy上传至 Firebase 并可以在全球任意地方访问。
+参考Quickstart学习如何在 Firebase 部署你的第一个静态网站
+创建 Firebase 云函数 现在，我们来创建 Firebase 云函数来执行后端代码处理统计数字的更新。在这段代码中，我们将云函数连接实时数据库，并让它能够更新存储在数据库里的统计数字。
+ 初始化云函数
+  firebase init functions  在实时数据库创建hit_counter节点并把值设为 0
+  { &#34;hit_counter&#34;: 0 }  编辑云函数代码 (Index.js)
+  const functions = require(&#34;firebase-functions&#34;); const admin = require(&#34;firebase-admin&#34;); admin.">
+
+
+<meta itemprop="datePublished" content="2018-08-07T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-08-07T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="99">
+
+
+
+<meta itemprop="keywords" content="" />
+
     <div class="columns">
       <div class="column is-8 is-offset-2">
         <p class="title">使用Firebase云函数统计网站访问数</p>
@@ -200,45 +254,39 @@
 <p>恭喜你，你的静态网页现在已经有了后端代码来做访问统计的工作，下一步你还可以进一步在静态网页请求实时数据库里的统计数字并展示给访客。</p>
 
         </div>
+        
+        <article>
+          <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'tonyxu-io';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </article>
+        
       </div>
     </div>
-
   </div>
 </div>
 </main>
     <footer>
 <footer class="footer">
   <div class="container">
-    <div class="columns">
-      <div class="column is-one-third">
-          <div class="field">
-              <div class="control has-icons-left">
-                <div class="select is-rounded  is-small">
-                  <select size="1" name="links" onchange="window.location.href=this.value;">
-                    <option selected disabled>语言</option>
-                    
-                    <option value="/">English</option>
-                    
-                    <option value="/zh/">中文</option>
-                    
-                  </select>
-                </div>
-                <div class="icon is-small is-left">
-                  <i class="fa fa-globe"></i>
-                </div>
-              </div>
-            </div>
-      </div>
-      <div class="column is-one-third">
-        <div class="content has-text-centered">
-          <p>
-            © 2019 Tony Xu 徐毅涵
-          </p>
-        </div>
-      </div>
-      <div class="column is-one-third has-text-right">
-        
-      </div>
+    <div class="content has-text-centered">
+      <p>
+        © 2019 Tony Xu 徐毅涵
+      </p>
     </div>
   </div>
 </footer>

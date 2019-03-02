@@ -45,7 +45,18 @@
  
     
      
-     
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-577792-7', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+ 
     
     
     <link rel="canonical" href="/zh/posts/2018/improve-your-ability-to-solve-problem-at-work/">   <link rel="shortcut icon" type="image/png" href="profile-pic.png">
@@ -59,63 +70,107 @@
 <body>
     <header> <nav class="navbar is-fixed-top">
   <div class="container">
-      <div class="navbar-brand">
-          <a class="navbar-item" href=zh/>
-            <img src="/profile-pic.png" alt="Bulma logo">
-          </a>
-          <a class="navbar-item" href=zh/>
-            Tony Xu 博客
-          </a>
-          <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
+    <div class="navbar-brand">
+      <a class="navbar-item" href=zh/>
+        <img src="/profile-pic.png" alt="logo">
+      </a>
+      <a class="navbar-item" href=zh/>
+        Tony Xu 博客
+      </a>
+      <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div class="navbar-menu" id="navMenu">
+
+      
+      
+      <div class="navbar-end">
+        
+        <a class="navbar-item" target="blank" href="https://github.com/tonyxu-io">
+          <span class="icon">
+            <i class="fa fa-github"></i>
+          </span>
+        </a>
+        
+
+        
+        <a class="navbar-item" target="blank" href="https://www.linkedin.com/in/tonyxu93">
+          <span class="icon">
+            <i class="fa fa-linkedin"></i>
+          </span>
+        </a>
+        
+        <div class="navbar-item">
+          
+          
+          <a itemprop="url" class="navbar-item "
+            href="/zh/about"><span itemprop="name">关于</span></a>
+          
+          <a itemprop="url" class="navbar-item "
+            href="/zh/friends/"><span itemprop="name">友情链接</span></a>
+          
+          <a itemprop="url" class="navbar-item  is-active"
+            href="/zh/posts/"><span itemprop="name">文章</span></a>
+          
         </div>
-      
-        <div class="navbar-menu" id="navMenu">
-      
-          
-          
-          <div class="navbar-end">
-            
-            <a class="navbar-item" target="blank" href="https://github.com/tonyxu-io">
-              <span class="icon">
-                <i class="fa fa-github"></i>
-              </span>
-            </a>
-            
-      
-            
-            <a class="navbar-item" target="blank" href="https://www.linkedin.com/in/tonyxu93">
-              <span class="icon">
-                <i class="fa fa-linkedin"></i>
-              </span>
-            </a>
-            
-            <div class="navbar-item">
-              
-              
-              <a itemprop="url" class="navbar-item "
-                href="/zh/about"><span itemprop="name">关于</span></a>
-              
-              <a itemprop="url" class="navbar-item "
-                href="/zh/friends/"><span itemprop="name">友情链接</span></a>
-              
-              <a itemprop="url" class="navbar-item  is-active"
-                href="/zh/posts/"><span itemprop="name">文章</span></a>
-              
+        
+        <div class="navbar-item">
+          <div class="field">
+            <div class="control has-icons-left">
+              <div class="select is-rounded  is-small">
+                <select size="1" name="links" onchange="window.location.href=this.value;">
+                  <option selected disabled>语言</option>
+                  
+                  <option value="/posts/2018/improve-your-ability-to-solve-problem-at-work/">English</option>
+                  
+                </select>
+              </div>
+              <div class="icon is-small is-left">
+                <i class="fa fa-globe"></i>
+              </div>
             </div>
           </div>
         </div>
+        
+      </div>
+    </div>
   </div>
-  
-</nav>
- </header>
+
+</nav> </header>
     <main>
 
 <div class="section">
-  <div class="container">
+  <div class="container" itemscope itemtype="http://schema.org/BlogPosting">
+    
+<meta itemprop="name" content="提升工作中解决问题的能力">
+<meta itemprop="description" content="解决问题是工作中最必不可少的能力，因此需要思考:
+ 自己是否有在解决问题这个方面的能力有欠缺
+ 如何才能提升这个能力
+  回想过去两年在Moxtra的工作经历，自己作为一个Solutions Engineer, 根本职能就是为客户解决问题。问题的模式无非是:
+ 我有A需求，你们有没有B解决方案实现这个需求
+  大部分情况下我会评估如下几个方面然后回答：
+ 我们是否有现成的解决方案
+ 如果需要做支持，是否符合我们的产品定位和路线图
+ 对公司营收影响大不大
+  如果其中任何一条不满足要求，我可能会直接拒绝这个需求。这么做看起来没什么问题，避免了公司产品为了第三方做太多不必要的妥协。但是仔细想，我作为Solution Engineer，在这当中可以做更多的事情。
+比如:
+ 深入了解需求场景，确定是不是真的只有*需求A*才能解决问题
+ 探索是否有其他解决方案可以作为work around
+  一定要带着解决问题的思维模式进行思考，而不是简单的做Yes/No判断，最后把不能解决问题的责任推给其他人/事。">
+
+
+<meta itemprop="datePublished" content="2018-07-03T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-07-03T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="18">
+
+
+
+<meta itemprop="keywords" content="" />
+
     <div class="columns">
       <div class="column is-8 is-offset-2">
         <p class="title">提升工作中解决问题的能力</p>
@@ -163,45 +218,39 @@
 <p>一定要带着解决问题的思维模式进行思考，而不是简单的做Yes/No判断，最后把不能解决问题的责任推给其他人/事。</p>
 
         </div>
+        
+        <article>
+          <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'tonyxu-io';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </article>
+        
       </div>
     </div>
-
   </div>
 </div>
 </main>
     <footer>
 <footer class="footer">
   <div class="container">
-    <div class="columns">
-      <div class="column is-one-third">
-          <div class="field">
-              <div class="control has-icons-left">
-                <div class="select is-rounded  is-small">
-                  <select size="1" name="links" onchange="window.location.href=this.value;">
-                    <option selected disabled>语言</option>
-                    
-                    <option value="/">English</option>
-                    
-                    <option value="/zh/">中文</option>
-                    
-                  </select>
-                </div>
-                <div class="icon is-small is-left">
-                  <i class="fa fa-globe"></i>
-                </div>
-              </div>
-            </div>
-      </div>
-      <div class="column is-one-third">
-        <div class="content has-text-centered">
-          <p>
-            © 2019 Tony Xu 徐毅涵
-          </p>
-        </div>
-      </div>
-      <div class="column is-one-third has-text-right">
-        
-      </div>
+    <div class="content has-text-centered">
+      <p>
+        © 2019 Tony Xu 徐毅涵
+      </p>
     </div>
   </div>
 </footer>

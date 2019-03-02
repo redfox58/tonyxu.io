@@ -43,7 +43,18 @@ FontAwesome的默认使用方法  引用FontAwesome图标库:
  
     
      
-     
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-577792-7', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+ 
     
     
     <link rel="canonical" href="/zh/posts/2018/use-icomoon-to-reduce-fontawesome-size/">   <link rel="shortcut icon" type="image/png" href="profile-pic.png">
@@ -57,63 +68,105 @@ FontAwesome的默认使用方法  引用FontAwesome图标库:
 <body>
     <header> <nav class="navbar is-fixed-top">
   <div class="container">
-      <div class="navbar-brand">
-          <a class="navbar-item" href=zh/>
-            <img src="/profile-pic.png" alt="Bulma logo">
-          </a>
-          <a class="navbar-item" href=zh/>
-            Tony Xu 博客
-          </a>
-          <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
+    <div class="navbar-brand">
+      <a class="navbar-item" href=zh/>
+        <img src="/profile-pic.png" alt="logo">
+      </a>
+      <a class="navbar-item" href=zh/>
+        Tony Xu 博客
+      </a>
+      <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div class="navbar-menu" id="navMenu">
+
+      
+      
+      <div class="navbar-end">
+        
+        <a class="navbar-item" target="blank" href="https://github.com/tonyxu-io">
+          <span class="icon">
+            <i class="fa fa-github"></i>
+          </span>
+        </a>
+        
+
+        
+        <a class="navbar-item" target="blank" href="https://www.linkedin.com/in/tonyxu93">
+          <span class="icon">
+            <i class="fa fa-linkedin"></i>
+          </span>
+        </a>
+        
+        <div class="navbar-item">
+          
+          
+          <a itemprop="url" class="navbar-item "
+            href="/zh/about"><span itemprop="name">关于</span></a>
+          
+          <a itemprop="url" class="navbar-item "
+            href="/zh/friends/"><span itemprop="name">友情链接</span></a>
+          
+          <a itemprop="url" class="navbar-item  is-active"
+            href="/zh/posts/"><span itemprop="name">文章</span></a>
+          
         </div>
-      
-        <div class="navbar-menu" id="navMenu">
-      
-          
-          
-          <div class="navbar-end">
-            
-            <a class="navbar-item" target="blank" href="https://github.com/tonyxu-io">
-              <span class="icon">
-                <i class="fa fa-github"></i>
-              </span>
-            </a>
-            
-      
-            
-            <a class="navbar-item" target="blank" href="https://www.linkedin.com/in/tonyxu93">
-              <span class="icon">
-                <i class="fa fa-linkedin"></i>
-              </span>
-            </a>
-            
-            <div class="navbar-item">
-              
-              
-              <a itemprop="url" class="navbar-item "
-                href="/zh/about"><span itemprop="name">关于</span></a>
-              
-              <a itemprop="url" class="navbar-item "
-                href="/zh/friends/"><span itemprop="name">友情链接</span></a>
-              
-              <a itemprop="url" class="navbar-item  is-active"
-                href="/zh/posts/"><span itemprop="name">文章</span></a>
-              
+        
+        <div class="navbar-item">
+          <div class="field">
+            <div class="control has-icons-left">
+              <div class="select is-rounded  is-small">
+                <select size="1" name="links" onchange="window.location.href=this.value;">
+                  <option selected disabled>语言</option>
+                  
+                  <option value="/posts/2018/use-icomoon-to-reduce-fontawesome-size/">English</option>
+                  
+                </select>
+              </div>
+              <div class="icon is-small is-left">
+                <i class="fa fa-globe"></i>
+              </div>
             </div>
           </div>
         </div>
+        
+      </div>
+    </div>
   </div>
-  
-</nav>
- </header>
+
+</nav> </header>
     <main>
 
 <div class="section">
-  <div class="container">
+  <div class="container" itemscope itemtype="http://schema.org/BlogPosting">
+    
+<meta itemprop="name" content="使用IcoMoon减少98%的FontAwesome字体加载体积">
+<meta itemprop="description" content="FontAwesome是非常棒的图标字体库，引用了FontAwesome字体库后，仅需要通过HTML标签就可以把图标嵌入你的页面，非常之方便。然而默认使用方法虽然简单，但是会带来一个额外问题，就是加载的资源文件体积过大，如果你的页面本身就比较简单，字体库可能会让你的网页加载大小翻上好几倍。
+下面分享一下我通过使用IcoMoon来生成只含有我需要的图标的图标库文件，瞬间减少大约98%文件大小的方法。
+FontAwesome的默认使用方法  引用FontAwesome图标库:
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://use.fontawesome.com/releases/v5.1.1/css/all.css&#34;&gt; 使用HTML标签嵌入特定图标
+&lt;i class=&#34;fas fa-home&#34;&gt;&lt;/i&gt;  IcoMoon方法  访问IcoMoon主页选择所有你需要使用的图标并点击生成字体(Generate Font)
+ 下载资源文件
+ 把资源文件中的style.css文件和fonts文件夹复制到你的网站资源文件夹并在HTML页面的&lt;head&gt;&lt;/head&gt;区域引用style.css文件(之前引用的FontAwesome相关资源可以移除了)
+ 在示范页面，鼠标移至图标上方，点击 &ldquo;Get Code&rdquo;
+ 复制图标嵌入代码，粘贴到你需要展示的HTML位置
+  完成！现在你的网站不再需要加载完整的FontAwesome资源文件，而只是加载你使用的图标资源。
+对比 没有对比就没有伤害，下面附上我个人网站使用上述两种方法的性能对比
+使用IcoMoon 使用FontAwesome默认方法 对比总结 图标字体相关体积减少比例: (132 - 2.4) / 132 = 0.98%, 总资源也从157KB下降到了38.7KB，效果非常之明显!">
+
+
+<meta itemprop="datePublished" content="2018-07-22T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-07-22T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="35">
+
+
+
+<meta itemprop="keywords" content="" />
+
     <div class="columns">
       <div class="column is-8 is-offset-2">
         <p class="title">使用IcoMoon减少98%的FontAwesome字体加载体积</p>
@@ -177,45 +230,39 @@ FontAwesome的默认使用方法  引用FontAwesome图标库:
 <p>图标字体相关体积减少比例: <code>(132 - 2.4) / 132 = 0.98%</code>, 总资源也从157KB下降到了38.7KB，效果非常之明显!</p>
 
         </div>
+        
+        <article>
+          <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'tonyxu-io';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </article>
+        
       </div>
     </div>
-
   </div>
 </div>
 </main>
     <footer>
 <footer class="footer">
   <div class="container">
-    <div class="columns">
-      <div class="column is-one-third">
-          <div class="field">
-              <div class="control has-icons-left">
-                <div class="select is-rounded  is-small">
-                  <select size="1" name="links" onchange="window.location.href=this.value;">
-                    <option selected disabled>语言</option>
-                    
-                    <option value="/">English</option>
-                    
-                    <option value="/zh/">中文</option>
-                    
-                  </select>
-                </div>
-                <div class="icon is-small is-left">
-                  <i class="fa fa-globe"></i>
-                </div>
-              </div>
-            </div>
-      </div>
-      <div class="column is-one-third">
-        <div class="content has-text-centered">
-          <p>
-            © 2019 Tony Xu 徐毅涵
-          </p>
-        </div>
-      </div>
-      <div class="column is-one-third has-text-right">
-        
-      </div>
+    <div class="content has-text-centered">
+      <p>
+        © 2019 Tony Xu 徐毅涵
+      </p>
     </div>
   </div>
 </footer>

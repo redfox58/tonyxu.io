@@ -45,7 +45,18 @@ PKCE的流程大概如下:
  
     
      
-     
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-577792-7', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+ 
     
     
     <link rel="canonical" href="/zh/posts/2018/oauth2-pkce-flow/">   <link rel="shortcut icon" type="image/png" href="profile-pic.png">
@@ -59,63 +70,107 @@ PKCE的流程大概如下:
 <body>
     <header> <nav class="navbar is-fixed-top">
   <div class="container">
-      <div class="navbar-brand">
-          <a class="navbar-item" href=zh/>
-            <img src="/profile-pic.png" alt="Bulma logo">
-          </a>
-          <a class="navbar-item" href=zh/>
-            Tony Xu 博客
-          </a>
-          <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
+    <div class="navbar-brand">
+      <a class="navbar-item" href=zh/>
+        <img src="/profile-pic.png" alt="logo">
+      </a>
+      <a class="navbar-item" href=zh/>
+        Tony Xu 博客
+      </a>
+      <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div class="navbar-menu" id="navMenu">
+
+      
+      
+      <div class="navbar-end">
+        
+        <a class="navbar-item" target="blank" href="https://github.com/tonyxu-io">
+          <span class="icon">
+            <i class="fa fa-github"></i>
+          </span>
+        </a>
+        
+
+        
+        <a class="navbar-item" target="blank" href="https://www.linkedin.com/in/tonyxu93">
+          <span class="icon">
+            <i class="fa fa-linkedin"></i>
+          </span>
+        </a>
+        
+        <div class="navbar-item">
+          
+          
+          <a itemprop="url" class="navbar-item "
+            href="/zh/about"><span itemprop="name">关于</span></a>
+          
+          <a itemprop="url" class="navbar-item "
+            href="/zh/friends/"><span itemprop="name">友情链接</span></a>
+          
+          <a itemprop="url" class="navbar-item  is-active"
+            href="/zh/posts/"><span itemprop="name">文章</span></a>
+          
         </div>
-      
-        <div class="navbar-menu" id="navMenu">
-      
-          
-          
-          <div class="navbar-end">
-            
-            <a class="navbar-item" target="blank" href="https://github.com/tonyxu-io">
-              <span class="icon">
-                <i class="fa fa-github"></i>
-              </span>
-            </a>
-            
-      
-            
-            <a class="navbar-item" target="blank" href="https://www.linkedin.com/in/tonyxu93">
-              <span class="icon">
-                <i class="fa fa-linkedin"></i>
-              </span>
-            </a>
-            
-            <div class="navbar-item">
-              
-              
-              <a itemprop="url" class="navbar-item "
-                href="/zh/about"><span itemprop="name">关于</span></a>
-              
-              <a itemprop="url" class="navbar-item "
-                href="/zh/friends/"><span itemprop="name">友情链接</span></a>
-              
-              <a itemprop="url" class="navbar-item  is-active"
-                href="/zh/posts/"><span itemprop="name">文章</span></a>
-              
+        
+        <div class="navbar-item">
+          <div class="field">
+            <div class="control has-icons-left">
+              <div class="select is-rounded  is-small">
+                <select size="1" name="links" onchange="window.location.href=this.value;">
+                  <option selected disabled>语言</option>
+                  
+                  <option value="/posts/2018/oauth2-pkce-flow/">English</option>
+                  
+                </select>
+              </div>
+              <div class="icon is-small is-left">
+                <i class="fa fa-globe"></i>
+              </div>
             </div>
           </div>
         </div>
+        
+      </div>
+    </div>
   </div>
-  
-</nav>
- </header>
+
+</nav> </header>
     <main>
 
 <div class="section">
-  <div class="container">
+  <div class="container" itemscope itemtype="http://schema.org/BlogPosting">
+    
+<meta itemprop="name" content="为客户端而生的OAuth2.0协议之PKCE授权码模式">
+<meta itemprop="description" content="如果你正在做一款原生客户端软件，同时你又需要用到OAuth2.0登陆，那么使用OAuth2.0带PKCE支持的授权码模式是你的最佳选择。下面我就和大家分享一下带PKCE的授权码模式为什么最适合原生客户端。
+原生客户端软件一般是指没有后端服务器，所有代码都在用户本地设备上运行的软件（如Windows/Mac客户端或者iOS/Android客户端)，因此想让原生客户端软件安全存放密钥(client secret)是不现实的，很容易被破解。
+那么原生客户端如果需要使用OAuth有哪些选择，这些选择又有哪些利弊呢？
+ 简化模式(Implicit Flow): 简化模式的Access Token会直接被传递给Redirect URL。假如你的原生客户端是跳转其他浏览器进行登陆授权，那么你要么是绑定URL Scheme通过类似app-name://?access_token=的方法把access token传递给原生客户端，要么是在本地起个HTTP服务器通过http://localhost:{port}/?access_token=的方法监听Access Token。这两种方式都有被第三方恶意应用占用URL Scheme或者localhost端口截取Access Token的风险，且Access Token过期无法更新，不建议使用。
+ 授权码模式(Authorization Code Flow): 授权码模式的Access Token不会被直接传递给Redirect URL，Redirect URL只会接收一个授权码，且授权码必须要和Client ID，Client Secret一同使用才能获取Access Token。然而原生客户端无法安全保存Client Secret，第三方恶意应用可以破解Client Secret，并按上述方法截取Authorization Code，同样不建议使用。有的认证提供商针对原生客户端允许不提供Client Secret获取Access Token，这其实并没有解决根本问题。
+  上面两种方法都被否决了，那么怎么才能让原生客户端安全使用OAuth2.0认证呢？答案就是使用带有PKCE支持的授权码模式。
+PKCE, 全称Proof Key for Code Exchange, 微软翻译为保护授权代码授权。这其实是通过一种密码学手段确保恶意第三方即使截获Authorization Code或者其他密钥，也无法向认证服务器交换Access Token。
+PKCE的流程大概如下:
+ 随机生成一串字符并作URL-Safe的Base64编码处理, 结果用作code_verifier
+ 将这串字符通过SHA256哈希，并用URL-Safe的Base64编码处理，结果用作code_challenge
+ 把code_challenge带上，跳转认证服务器，获取Authorization Code
+ 把code_verifier带上，换取Access Token
+  由于中间人不能由code_challenge逆推code_verifier，只有客户端自己才知道这两个值。因此即使中间人截获了code_challenge, Authorization Code等，也无法换取Access Token, 避免了安全问题。
+在线生成 PKCE Code Verifier and Code Challenge https://tonyxu-io.">
+
+
+<meta itemprop="datePublished" content="2018-07-24T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-07-24T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="229">
+
+
+
+<meta itemprop="keywords" content="" />
+
     <div class="columns">
       <div class="column is-8 is-offset-2">
         <p class="title">为客户端而生的OAuth2.0协议之PKCE授权码模式</p>
@@ -234,45 +289,39 @@ PKCE的流程大概如下:
 </ul>
 
         </div>
+        
+        <article>
+          <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'tonyxu-io';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </article>
+        
       </div>
     </div>
-
   </div>
 </div>
 </main>
     <footer>
 <footer class="footer">
   <div class="container">
-    <div class="columns">
-      <div class="column is-one-third">
-          <div class="field">
-              <div class="control has-icons-left">
-                <div class="select is-rounded  is-small">
-                  <select size="1" name="links" onchange="window.location.href=this.value;">
-                    <option selected disabled>语言</option>
-                    
-                    <option value="/">English</option>
-                    
-                    <option value="/zh/">中文</option>
-                    
-                  </select>
-                </div>
-                <div class="icon is-small is-left">
-                  <i class="fa fa-globe"></i>
-                </div>
-              </div>
-            </div>
-      </div>
-      <div class="column is-one-third">
-        <div class="content has-text-centered">
-          <p>
-            © 2019 Tony Xu 徐毅涵
-          </p>
-        </div>
-      </div>
-      <div class="column is-one-third has-text-right">
-        
-      </div>
+    <div class="content has-text-centered">
+      <p>
+        © 2019 Tony Xu 徐毅涵
+      </p>
     </div>
   </div>
 </footer>
