@@ -3,3 +3,9 @@ other = "Latest Posts"
 
 [language]
 other="Language"
+
+[share_to_facebook]
+other="Share to Facebook"
+
+[share_to_linkedin]
+other="Share to LinkedIn"
