@@ -1,0 +1,87 @@
+{{ define "title" -}}
+{{ .Title }} | {{ .Site.Title }}
+{{- end }}
+
+{{ define "header" }} {{ partial "menu" . }} {{ end }}
+
+{{ define "main" }}
+<script src="https://cdn.jsdelivr.net/algoliasearch/3.32.0/algoliasearchLite.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@3.1.1"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.0/themes/algolia-min.css">
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    const searchClient = algoliasearch(
+  '4075BLVEAE',
+  'ad0b0155fdfad25286c777d34ebb14e0'
+);
+
+const search = instantsearch({
+  indexName: 'tonyxu.io',
+  searchClient,
+  searchParameters: {
+    filters: 'lang:{{ .Site.Language.Lang }}'
+  },
+});
+
+search.addWidget(
+  instantsearch.widgets.searchBox({
+    container: '#searchbox',
+    cssClasses: {
+      input: 'input is-medium'
+    }
+  })
+);
+
+search.addWidget(
+  instantsearch.widgets.hits({
+    container: '#hits',
+    templates: {
+      item: {{`
+          <a class="text" href="{{relpermalink}}">{{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}</a>
+      ` | safeHTML }},
+    },
+    cssClasses: {
+      item: 'box ',
+    }
+  })
+);
+
+  search.start();
+  });
+  
+</script>
+<section class="hero is-primary">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">
+        {{ .Title }}
+      </h1>
+      <div class="columns">
+        <div class="column is-half is-offset-one-quarter">
+          <!-- <form action="" method="post" class="field has-addons has-addons-centered">
+                <p class="control is-large is-expanded">
+                  <input type="text" maxlength="20" value="" placeholder="" class="input has-text-right is-large" autocomplete="off"
+                    required="required">
+                </p>
+                <p class="control">
+                  <button type="submit" name="" class="button is-primary is-large is-inverted">Search</button>
+                </p>
+              </form> -->
+          <div id="searchbox">
+            <!-- SearchBox widget will appear here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container">
+  <div id="hits" class="section">
+  </div>
+</div>
+{{ end }}
+{{ define "footer" }}
+{{ partial "footer" . }}
+{{ end }}

@@ -47,3 +47,16 @@ pygmentsStyle = "tango"
       IamAuthor = "我是徐毅涵"
       description = "我是一名软件工程师，热爱尝试和分享最新科技"
       copyright = "© 2018-2019 Tony Xu 徐毅涵"
+
+[outputs]
+home = ["HTML", "RSS", "Algolia"]
+
+[outputFormats.Algolia]
+baseName = "algolia"
+isPlainText = true
+mediaType = "application/json"
+notAlternative = true
+
+[params.algolia]
+vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink"]
+params = ["categories", "tags"]
