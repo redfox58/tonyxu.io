@@ -175,15 +175,31 @@ search.addWidget(
   })
 );
 
+
+const renderHits = (renderOptions, isFirstRender) => {
+  const { hits, widgetParams } = renderOptions;
+
+  widgetParams.container.innerHTML = `
+    <div class="columns is-multiline">
+      ${hits
+        .map(
+          item =>
+            `<div class="column is-4">
+              <a class="box" href="${item.relpermalink}"><p class="text">${instantsearch.highlight({ attribute: 'title', hit: item })}</p></a>
+            </div>`
+        )
+        .join('')}
+    </div>
+  `;
+};
+
+
+const customHits = instantsearch.connectors.connectHits(renderHits);
+
+
 search.addWidget(
-  instantsearch.widgets.hits({
-    container: '#hits',
-    templates: {
-      item: "\n          \u003ca class=\"text\" href=\"{{relpermalink}}\"\u003e{{#helpers.highlight}}{ \"attribute\": \"title\" }{{/helpers.highlight}}\u003c/a\u003e\n      ",
-    },
-    cssClasses: {
-      item: 'box ',
-    }
+  customHits({
+    container: document.querySelector('#hits'),
   })
 );
 
@@ -209,8 +225,9 @@ search.addWidget(
   </div>
 </section>
 <div class="container">
-  <div id="hits" class="section">
-  </div>
+      <div id="hits" class="section">
+        </div>
+  
 </div>
 </main>
     <footer>
