@@ -376,6 +376,20 @@
   </url>
   
   <url>
+    <loc>https://tonyxu.io/search/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://tonyxu.io/zh/search/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://tonyxu.io/search/"
+                />
+  </url>
+  
+  <url>
     <loc>https://tonyxu.io/tags/</loc>
     <priority>0</priority>
     <xhtml:link

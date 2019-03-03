@@ -392,6 +392,20 @@
   </url>
   
   <url>
+    <loc>https://tonyxu.io/zh/search/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://tonyxu.io/search/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://tonyxu.io/zh/search/"
+                />
+  </url>
+  
+  <url>
     <loc>https://tonyxu.io/zh/posts/</loc>
     <lastmod>2019-02-01T00:00:00+00:00</lastmod>
     <xhtml:link

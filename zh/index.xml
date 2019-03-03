@@ -489,5 +489,14 @@ FontAwesome的默认使用方法  引用FontAwesome图标库:
       <description></description>
     </item>
     
+    <item>
+      <title>搜索</title>
+      <link>https://tonyxu.io/zh/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tonyxu.io/zh/search/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
