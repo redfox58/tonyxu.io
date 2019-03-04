@@ -1,0 +1,7 @@
+(
+{{ if eq $.Site.Language.Lang "zh" }}
+第{{ .Params.IssueNumber}}期
+{{else}}
+Release {{ .Params.IssueNumber }}
+{{ end }}
+)

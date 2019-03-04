@@ -12,3 +12,6 @@ other="Share to LinkedIn"
 
 [friend_links]
 other="Friends"
+
+[404]
+other="We are sorry, but the page could not be found."

@@ -23,6 +23,7 @@ pygmentsStyle = "tango"
 
 [blackfriday]
   extensions = ["hardLineBreak"]
+  hrefTargetBlank = true
 
 [languages]
   [languages.en]

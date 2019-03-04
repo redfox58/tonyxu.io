@@ -1,5 +1,4 @@
 ---
 title: Posts
+description: My thoughts of life and code
 ---
-
-My thoughts of life and code.

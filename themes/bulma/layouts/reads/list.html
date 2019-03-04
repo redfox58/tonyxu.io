@@ -1,0 +1,40 @@
+{{ define "header" }} {{ partial "menu" . }} {{ end }}
+{{ define "title" -}}
+{{ .Title }} - {{ .Description }}| {{ .Site.Title }}
+{{- end }}
+
+{{ define "main" }}
+
+<div class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2 has-text-centered">
+        <p class="title">{{.Title}}</p>
+        <p class="subtitle">{{.Description}}</p>
+      </div>
+    </div>
+    <br />
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        {{ range (.Paginate (.Pages.GroupByDate "2006")).PageGroups }}
+        <p class="title is-4">{{ .Key }}</p>
+        {{ range .Pages }}
+        <div class="title is-5">
+          <a href="{{ .URL | relLangURL}}">{{ partial "date/date_value" .}} {{ partial "read/read_issue_number" .}}</a>
+        </div>
+        <div class="content">
+          {{ .Content }}
+        </div>
+        {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    {{ partial "pagination" . }}
+  </div>
+</div>
+{{ end }}
+{{ define "footer" }}
+{{ partial "footer" . }}
+{{ end }}
