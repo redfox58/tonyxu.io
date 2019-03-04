@@ -160,6 +160,9 @@ if (!doNotTrack) {
         <a itemprop="url" class="navbar-item "
           href="/zh/about/"><span itemprop="name">关于</span></a>
         
+        <a itemprop="url" class="navbar-item "
+          href="/zh/reads/"><span itemprop="name">推荐阅读</span></a>
+        
         <a itemprop="url" class="navbar-item  is-active"
           href="/zh/posts/"><span itemprop="name">文章</span></a>
         
@@ -182,7 +185,7 @@ if (!doNotTrack) {
           </div>
         </div>
         
-        <a class="navbar-item" target="blank" href="/zh/search">
+        <a class="navbar-item" href="/zh/search">
           <span class="icon">
             <i class="fa fa-search"></i>
           </span>
@@ -229,12 +232,12 @@ if (!doNotTrack) {
       <div class="column is-8 is-offset-2">
         <p class="title">利用Telegram和Flask打造私人通知服务器</p>
 
-        <div class="columns is-mobile">
-          <div class="column">
-            <p class="text date">
+        <div class="columns is-mobile is-vcentered">
+          <div class="column has-text-grey has-text-weight-semibold">
+            徐毅涵<p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
   
-  <span>2018-07-12</span>
-  
+2018-07-12
+
 </p>
           </div>
           <div class="column has-text-right">
@@ -250,7 +253,6 @@ if (!doNotTrack) {
 </a>
           </div>
         </div>
-        <hr />
         <div class="content">
           
           <p>假如有如下这么几个场景:</p>
@@ -270,7 +272,7 @@ if (!doNotTrack) {
 
 <ol>
 <li>根据 Google App Engine 创建一个基本的Flask app<br /></li>
-<li>去Telegram创建Bot: <a href="https://core.telegram.org/bots#3-how-do-i-create-a-bot">https://core.telegram.org/bots#3-how-do-i-create-a-bot</a><br /></li>
+<li>去Telegram创建Bot: <a href="https://core.telegram.org/bots#3-how-do-i-create-a-bot" target="_blank">https://core.telegram.org/bots#3-how-do-i-create-a-bot</a><br /></li>
 <li>和Telegram Bot对话，并获取chat id: <code>https://api.telegram.org/bot$TOKEN/getUpdates</code><br /></li>
 <li>为Flask创建一个route handle，让它通过如下地址向你的Telegram会话发送消息: <code>https://api.telegram.org/bot$TOKEN/sendMessage?chat_id=12345&amp;text=Hello+World</code><br /></li>
 <li>上传到Google App Engine: <code>gcloud app deploy</code><br />
@@ -292,7 +294,7 @@ if (!doNotTrack) {
 
 <p>我自己的Flask app的代码分享在GitHub，可以供大家参考：</p>
 
-<p><a href="https://github.com/tonyxu-io/my-api">https://github.com/tonyxu-io/my-api</a></p>
+<p><a href="https://github.com/tonyxu-io/my-api" target="_blank">https://github.com/tonyxu-io/my-api</a></p>
 
         </div>
         

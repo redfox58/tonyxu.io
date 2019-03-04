@@ -127,6 +127,9 @@ if (!doNotTrack) {
         <a itemprop="url" class="navbar-item "
           href="/about/"><span itemprop="name">About</span></a>
         
+        <a itemprop="url" class="navbar-item "
+          href="/reads/"><span itemprop="name">Good Reads</span></a>
+        
         <a itemprop="url" class="navbar-item  is-active"
           href="/posts/"><span itemprop="name">Posts</span></a>
         
@@ -149,7 +152,7 @@ if (!doNotTrack) {
           </div>
         </div>
         
-        <a class="navbar-item" target="blank" href="/search">
+        <a class="navbar-item" href="/search">
           <span class="icon">
             <i class="fa fa-search"></i>
           </span>
@@ -185,12 +188,12 @@ Build a Flask app to receive GET or POST request, and then compose different mes
       <div class="column is-8 is-offset-2">
         <p class="title">Use Telegram and Flask to build personal notification server</p>
 
-        <div class="columns is-mobile">
-          <div class="column">
-            <p class="text date">
+        <div class="columns is-mobile is-vcentered">
+          <div class="column has-text-grey has-text-weight-semibold">
+            Tony Xu<p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
   
-  <span>07/12/2018</span>
-  
+07/12/2018
+
 </p>
           </div>
           <div class="column has-text-right">
@@ -206,7 +209,6 @@ Build a Flask app to receive GET or POST request, and then compose different mes
 </a>
           </div>
         </div>
-        <hr />
         <div class="content">
           
           <p>Imagine if you are in these situations:</p>
@@ -226,7 +228,7 @@ Build a Flask app to receive GET or POST request, and then compose different mes
 
 <ol>
 <li>Follow Google App Engine tutorial to build a basic Flask app<br /></li>
-<li>Create a Telegram bot in: <a href="https://core.telegram.org/bots#3-how-do-i-create-a-bot">https://core.telegram.org/bots#3-how-do-i-create-a-bot</a><br /></li>
+<li>Create a Telegram bot in: <a href="https://core.telegram.org/bots#3-how-do-i-create-a-bot" target="_blank">https://core.telegram.org/bots#3-how-do-i-create-a-bot</a><br /></li>
 <li>Talk with your bot and get the chat id: <code>https://api.telegram.org/bot$TOKEN/getUpdates</code><br /></li>
 <li>Create a route handler in Flask app and make it be able to make GET request to send message like below: <code>https://api.telegram.org/bot$TOKEN/sendMessage?chat_id=12345&amp;text=Hello+World</code><br /></li>
 <li>Upload the Flask app to Google App Engine: <code>gcloud app deploy</code><br />
@@ -248,7 +250,7 @@ Build a Flask app to receive GET or POST request, and then compose different mes
 
 <p>This is my Flask app, so for your reference:</p>
 
-<p><a href="https://github.com/tonyxu-io/my-api">https://github.com/tonyxu-io/my-api</a></p>
+<p><a href="https://github.com/tonyxu-io/my-api" target="_blank">https://github.com/tonyxu-io/my-api</a></p>
 
         </div>
         

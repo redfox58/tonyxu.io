@@ -56,7 +56,7 @@ How I scale level of expertise for a technology:
       <pubDate>Mon, 15 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/posts/2018/embed-google-analytics-dashboard-on-website/</guid>
-      <description>&lt;p&gt;If you are using Google Analytics to analyze site traffic, you might want to embed those amazing dashboards to your website publicly. While Google doesn&amp;rsquo;t provide iframe solution, it does offer a &lt;a href=&#34;https://developers.google.com/analytics/devguides/reporting/embed/v1/&#34;&gt;Google Analytics Embed API&lt;/a&gt; which requires a bit more technical knowledge. I&amp;rsquo;ll walk you through each and every step and make sure you don&amp;rsquo;t have to read all developer documentation and can easily build dashboard&lt;/p&gt;
+      <description>&lt;p&gt;If you are using Google Analytics to analyze site traffic, you might want to embed those amazing dashboards to your website publicly. While Google doesn&amp;rsquo;t provide iframe solution, it does offer a &lt;a href=&#34;https://developers.google.com/analytics/devguides/reporting/embed/v1/&#34; target=&#34;_blank&#34;&gt;Google Analytics Embed API&lt;/a&gt; which requires a bit more technical knowledge. I&amp;rsquo;ll walk you through each and every step and make sure you don&amp;rsquo;t have to read all developer documentation and can easily build dashboard&lt;/p&gt;
 
 &lt;p&gt;Preview:&lt;/p&gt;
 

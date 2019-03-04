@@ -139,6 +139,9 @@ if (!doNotTrack) {
         <a itemprop="url" class="navbar-item "
           href="/zh/about/"><span itemprop="name">关于</span></a>
         
+        <a itemprop="url" class="navbar-item "
+          href="/zh/reads/"><span itemprop="name">推荐阅读</span></a>
+        
         <a itemprop="url" class="navbar-item  is-active"
           href="/zh/posts/"><span itemprop="name">文章</span></a>
         
@@ -161,7 +164,7 @@ if (!doNotTrack) {
           </div>
         </div>
         
-        <a class="navbar-item" target="blank" href="/zh/search">
+        <a class="navbar-item" href="/zh/search">
           <span class="icon">
             <i class="fa fa-search"></i>
           </span>
@@ -201,12 +204,12 @@ let privateKey = require(&#34;./google_key.json&#34;);  Return Google access tok
       <div class="column is-8 is-offset-2">
         <p class="title">嵌入Google Analytics图表到你的网站</p>
 
-        <div class="columns is-mobile">
-          <div class="column">
-            <p class="text date">
+        <div class="columns is-mobile is-vcentered">
+          <div class="column has-text-grey has-text-weight-semibold">
+            徐毅涵<p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
   
-  <span>2018-10-15</span>
-  
+2018-10-15
+
 </p>
           </div>
           <div class="column has-text-right">
@@ -222,18 +225,17 @@ let privateKey = require(&#34;./google_key.json&#34;);  Return Google access tok
 </a>
           </div>
         </div>
-        <hr />
         <div class="content">
           
           
 
-<p>如果你正在使用Google Anlaytics工具来分析网站访问数据，你可能会想将它提供的各种酷炫图表嵌入到网站页面以供用户浏览。尽管Google Analytics并不提供简单的iframe方式来嵌入图表，它还是提供了<a href="https://developers.google.com/analytics/devguides/reporting/embed/v1/">Google Analytics Embed API</a>这种需要稍微多一点技术基础的方式让你能够嵌入它们的图表。我会在这篇文章里详细地告诉你该如何一步一步实现一个Google Analytics图表</p>
+<p>如果你正在使用Google Anlaytics工具来分析网站访问数据，你可能会想将它提供的各种酷炫图表嵌入到网站页面以供用户浏览。尽管Google Analytics并不提供简单的iframe方式来嵌入图表，它还是提供了<a href="https://developers.google.com/analytics/devguides/reporting/embed/v1/" target="_blank">Google Analytics Embed API</a>这种需要稍微多一点技术基础的方式让你能够嵌入它们的图表。我会在这篇文章里详细地告诉你该如何一步一步实现一个Google Analytics图表</p>
 
 <p>效果预览:</p>
 
 <p><img src="./Analytics_-_Tony_Xu_2018-10-16_09-52-42.png" alt="preview" /></p>
 
-<h2 id="1-在-google-developers-console-https-console-developers-google-com-创建云项目">1. 在<a href="https://console.developers.google.com/">Google Developers Console</a>创建云项目</h2>
+<h2 id="1-在-google-developers-console-https-console-developers-google-com-创建云项目">1. 在<a href="https://console.developers.google.com/" target="_blank">Google Developers Console</a>创建云项目</h2>
 
 <p>(如果你已经有项目了请忽略这一步)</p>
 
@@ -381,8 +383,8 @@ let privateKey = require(&#34;./google_key.json&#34;);  Return Google access tok
 <p>参考资料:</p>
 
 <ul>
-<li><a href="https://ga-dev-tools.appspot.com/embed-api/server-side-authorization/">Google Analytics Embed API - Server-side Authorization</a><br /></li>
-<li><a href="https://developers.google.com/analytics/devguides/reporting/embed/v1/component-reference">Google Analytics Embed API - Built-in Components Reference</a><br /></li>
+<li><a href="https://ga-dev-tools.appspot.com/embed-api/server-side-authorization/" target="_blank">Google Analytics Embed API - Server-side Authorization</a><br /></li>
+<li><a href="https://developers.google.com/analytics/devguides/reporting/embed/v1/component-reference" target="_blank">Google Analytics Embed API - Built-in Components Reference</a><br /></li>
 </ul>
 
         </div>

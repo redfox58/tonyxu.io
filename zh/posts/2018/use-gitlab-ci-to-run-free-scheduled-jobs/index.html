@@ -163,6 +163,9 @@ if (!doNotTrack) {
         <a itemprop="url" class="navbar-item "
           href="/zh/about/"><span itemprop="name">关于</span></a>
         
+        <a itemprop="url" class="navbar-item "
+          href="/zh/reads/"><span itemprop="name">推荐阅读</span></a>
+        
         <a itemprop="url" class="navbar-item  is-active"
           href="/zh/posts/"><span itemprop="name">文章</span></a>
         
@@ -185,7 +188,7 @@ if (!doNotTrack) {
           </div>
         </div>
         
-        <a class="navbar-item" target="blank" href="/zh/search">
+        <a class="navbar-item" href="/zh/search">
           <span class="icon">
             <i class="fa fa-search"></i>
           </span>
@@ -233,12 +236,12 @@ Running with gitlab-runner 11.1.0 (081978aa) on docker-auto-scale 0277ea0f Using
       <div class="column is-8 is-offset-2">
         <p class="title">用GitLab-CI免费运行定时任务</p>
 
-        <div class="columns is-mobile">
-          <div class="column">
-            <p class="text date">
+        <div class="columns is-mobile is-vcentered">
+          <div class="column has-text-grey has-text-weight-semibold">
+            徐毅涵<p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
   
-  <span>2018-07-23</span>
-  
+2018-07-23
+
 </p>
           </div>
           <div class="column has-text-right">
@@ -254,7 +257,6 @@ Running with gitlab-runner 11.1.0 (081978aa) on docker-auto-scale 0277ea0f Using
 </a>
           </div>
         </div>
-        <hr />
         <div class="content">
           
           <p>本文介绍我是如何使用GitLab-CI免费地运行一些需要定时执行的脚本，而不需要在本地/服务器上使用cron job或者一直跑一个后台程序运行中间sleep。</p>
@@ -291,7 +293,7 @@ Running with gitlab-runner 11.1.0 (081978aa) on docker-auto-scale 0277ea0f Using
 
 <p>将包含<code>.gitlab-ci.yml</code>和脚本的代码上传至GitLab，即会自动触发任务，去GitLab管理界面左侧的<code>CI/CD - Jobs</code>可以查看任务状态。</p>
 
-<p>进入<code>CI/CD - Schedules</code>可以给任务设置定时，默认提供每天/每周/每月，或者自定义。自定义的设置语法格式和cron一样，不熟悉的可以去 <a href="https://crontab.guru">https://crontab.guru</a> 调试。假如你设置<code>* * * * 1-5</code>就是每周一到周五每分钟都运行，但是GitLab貌似有限制，导致实际上只会每周一到周五每小时执行一次。</p>
+<p>进入<code>CI/CD - Schedules</code>可以给任务设置定时，默认提供每天/每周/每月，或者自定义。自定义的设置语法格式和cron一样，不熟悉的可以去 <a href="https://crontab.guru" target="_blank">https://crontab.guru</a> 调试。假如你设置<code>* * * * 1-5</code>就是每周一到周五每分钟都运行，但是GitLab貌似有限制，导致实际上只会每周一到周五每小时执行一次。</p>
 
 <p>接下来你的脚本就会按照你设置的时间定时执行了。</p>
 

@@ -148,6 +148,9 @@ if (!doNotTrack) {
         <a itemprop="url" class="navbar-item "
           href="/zh/about/"><span itemprop="name">关于</span></a>
         
+        <a itemprop="url" class="navbar-item "
+          href="/zh/reads/"><span itemprop="name">推荐阅读</span></a>
+        
         <a itemprop="url" class="navbar-item  is-active"
           href="/zh/posts/"><span itemprop="name">文章</span></a>
         
@@ -170,7 +173,7 @@ if (!doNotTrack) {
           </div>
         </div>
         
-        <a class="navbar-item" target="blank" href="/zh/search">
+        <a class="navbar-item" href="/zh/search">
           <span class="icon">
             <i class="fa fa-search"></i>
           </span>
@@ -213,12 +216,12 @@ const functions = require(&#34;firebase-functions&#34;); const admin = require(&
       <div class="column is-8 is-offset-2">
         <p class="title">使用Firebase云函数统计网站访问数</p>
 
-        <div class="columns is-mobile">
-          <div class="column">
-            <p class="text date">
+        <div class="columns is-mobile is-vcentered">
+          <div class="column has-text-grey has-text-weight-semibold">
+            徐毅涵<p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
   
-  <span>2018-08-07</span>
-  
+2018-08-07
+
 </p>
           </div>
           <div class="column has-text-right">
@@ -234,7 +237,6 @@ const functions = require(&#34;firebase-functions&#34;); const admin = require(&
 </a>
           </div>
         </div>
-        <hr />
         <div class="content">
           
           
@@ -258,7 +260,7 @@ const functions = require(&#34;firebase-functions&#34;); const admin = require(&
 
 <p>Firebase 云托管非常适合托管静态页面，它比 GitHub Pages 搭建起来更简单，同时它也提供更多为网站/移动开发而设计的功能。如果你的静态网页文件已经准备好了，那么就可以直接运行<code>firebase deploy</code>上传至 Firebase 并可以在全球任意地方访问。</p>
 
-<p>参考<a href="https://firebase.google.com/docs/hosting/quickstart">Quickstart</a>学习如何在 Firebase 部署你的第一个静态网站</p>
+<p>参考<a href="https://firebase.google.com/docs/hosting/quickstart" target="_blank">Quickstart</a>学习如何在 Firebase 部署你的第一个静态网站</p>
 
 <h2 id="创建-firebase-云函数">创建 Firebase 云函数</h2>
 

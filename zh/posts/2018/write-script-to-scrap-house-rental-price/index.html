@@ -148,6 +148,9 @@ if (!doNotTrack) {
         <a itemprop="url" class="navbar-item "
           href="/zh/about/"><span itemprop="name">关于</span></a>
         
+        <a itemprop="url" class="navbar-item "
+          href="/zh/reads/"><span itemprop="name">推荐阅读</span></a>
+        
         <a itemprop="url" class="navbar-item  is-active"
           href="/zh/posts/"><span itemprop="name">文章</span></a>
         
@@ -170,7 +173,7 @@ if (!doNotTrack) {
           </div>
         </div>
         
-        <a class="navbar-item" target="blank" href="/zh/search">
+        <a class="navbar-item" href="/zh/search">
           <span class="icon">
             <i class="fa fa-search"></i>
           </span>
@@ -213,12 +216,12 @@ Chrome Inspector:
       <div class="column is-8 is-offset-2">
         <p class="title">自己写脚本每日爬取租房价格推送到手机</p>
 
-        <div class="columns is-mobile">
-          <div class="column">
-            <p class="text date">
+        <div class="columns is-mobile is-vcentered">
+          <div class="column has-text-grey has-text-weight-semibold">
+            徐毅涵<p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
   
-  <span>2018-07-28</span>
-  
+2018-07-28
+
 </p>
           </div>
           <div class="column has-text-right">
@@ -234,7 +237,6 @@ Chrome Inspector:
 </a>
           </div>
         </div>
-        <hr />
         <div class="content">
           
           
@@ -247,7 +249,7 @@ Chrome Inspector:
 
 <p>这家连锁公寓的官网是:</p>
 
-<p><a href="https://www.avaloncommunities.com/california/mountain-view-apartments/avalon-mountain-view/floor-plans">https://www.avaloncommunities.com/california/mountain-view-apartments/avalon-mountain-view/floor-plans</a></p>
+<p><a href="https://www.avaloncommunities.com/california/mountain-view-apartments/avalon-mountain-view/floor-plans" target="_blank">https://www.avaloncommunities.com/california/mountain-view-apartments/avalon-mountain-view/floor-plans</a></p>
 
 <p>官网价格区截图:</p>
 
@@ -273,7 +275,7 @@ Chrome Inspector:
 
 <p>经过仔细研究后，发现这个获取租房信息的GET请求本身还支持一些参数，如最低价格，最高价格，预期入住日期等。</p>
 
-<p>接下来就是代码实现了，因为我已经有一个python Flask app跑在Google App Engine上，因此就基于之前的app加了一段代码，通过url(如 <a href="http://example.com/housing">http://example.com/housing</a> )访问触发脚本执行。定时发送请求触发脚本的方法请参阅<a href="/zh/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/">用GitLab-CI免费运行定时任务</a></p>
+<p>接下来就是代码实现了，因为我已经有一个python Flask app跑在Google App Engine上，因此就基于之前的app加了一段代码，通过url(如 <a href="http://example.com/housing" target="_blank">http://example.com/housing</a> )访问触发脚本执行。定时发送请求触发脚本的方法请参阅<a href="/zh/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/">用GitLab-CI免费运行定时任务</a></p>
 
 <h2 id="代码">代码</h2>
 

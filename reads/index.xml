@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Good Reads on Tony Xu Blog</title>
+    <link>https://tonyxu.io/reads/</link>
+    <description>Recent content in Good Reads on Tony Xu Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 03 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://tonyxu.io/reads/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>UTC is Enough for Everyone, Right?</title>
+      <link>https://tonyxu.io/reads/2019-03-03/</link>
+      <pubDate>Sun, 03 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tonyxu.io/reads/2019-03-03/</guid>
+      <description>UTC is Enough for Everyone, Right? (zachholman.com)
+ It turns out humans have had a long, long history of poorly dealing with time, so when you hammer your head against the wall trying to deal with a timezone bug, well, you’re just the last in a long, long line of human beings that are terrible at all this! Congrats. You’re pretty unremarkable.
+ The author talks about long history of time and how horrible we have been dealing with time.</description>
+    </item>
+    
+  </channel>
+</rss>

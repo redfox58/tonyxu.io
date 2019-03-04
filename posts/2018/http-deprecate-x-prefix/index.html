@@ -121,6 +121,9 @@ if (!doNotTrack) {
         <a itemprop="url" class="navbar-item "
           href="/about/"><span itemprop="name">About</span></a>
         
+        <a itemprop="url" class="navbar-item "
+          href="/reads/"><span itemprop="name">Good Reads</span></a>
+        
         <a itemprop="url" class="navbar-item  is-active"
           href="/posts/"><span itemprop="name">Posts</span></a>
         
@@ -143,7 +146,7 @@ if (!doNotTrack) {
           </div>
         </div>
         
-        <a class="navbar-item" target="blank" href="/search">
+        <a class="navbar-item" href="/search">
           <span class="icon">
             <i class="fa fa-search"></i>
           </span>
@@ -177,12 +180,12 @@ Some standard HTTP header:
       <div class="column is-8 is-offset-2">
         <p class="title">Why we need to deprecate x prefix for HTTP headers?</p>
 
-        <div class="columns is-mobile">
-          <div class="column">
-            <p class="text date">
+        <div class="columns is-mobile is-vcentered">
+          <div class="column has-text-grey has-text-weight-semibold">
+            Tony Xu<p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
   
-  <span>08/01/2018</span>
-  
+08/01/2018
+
 </p>
           </div>
           <div class="column has-text-right">
@@ -198,12 +201,11 @@ Some standard HTTP header:
 </a>
           </div>
         </div>
-        <hr />
         <div class="content">
           
           
 
-<p>In June, 2012, Internet Engineering Task Force released a new RFC(<a href="https://tools.ietf.org/html/rfc6648">RFC-6648</a>), recommending deprecation of <code>X-</code> prefix. As LinkedIn also use this type of prefix, I was interested to read this RFC, and explain to you why we need to deprecate it.</p>
+<p>In June, 2012, Internet Engineering Task Force released a new RFC(<a href="https://tools.ietf.org/html/rfc6648" target="_blank">RFC-6648</a>), recommending deprecation of <code>X-</code> prefix. As LinkedIn also use this type of prefix, I was interested to read this RFC, and explain to you why we need to deprecate it.</p>
 
 <h2 id="x-prefix-background">X- prefix background</h2>
 
@@ -218,7 +220,7 @@ Some standard HTTP header:
 <br /></li>
 </ul>
 
-<p>If people want to have custom header, <code>X-</code> prefix is suggested to avoid conflict. This recommendation is raised in 1982 for Email standard(<a href="https://tools.ietf.org/html/rfc822">RFC-822</a>)，working fine for decades。</p>
+<p>If people want to have custom header, <code>X-</code> prefix is suggested to avoid conflict. This recommendation is raised in 1982 for Email standard(<a href="https://tools.ietf.org/html/rfc822" target="_blank">RFC-822</a>)，working fine for decades。</p>
 
 <h2 id="usage-of-x-prefix">Usage of X- prefix</h2>
 

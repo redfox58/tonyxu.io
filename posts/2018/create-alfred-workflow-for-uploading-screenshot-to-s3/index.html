@@ -124,6 +124,9 @@ if (!doNotTrack) {
         <a itemprop="url" class="navbar-item "
           href="/about/"><span itemprop="name">About</span></a>
         
+        <a itemprop="url" class="navbar-item "
+          href="/reads/"><span itemprop="name">Good Reads</span></a>
+        
         <a itemprop="url" class="navbar-item  is-active"
           href="/posts/"><span itemprop="name">Posts</span></a>
         
@@ -146,7 +149,7 @@ if (!doNotTrack) {
           </div>
         </div>
         
-        <a class="navbar-item" target="blank" href="/search">
+        <a class="navbar-item" href="/search">
           <span class="icon">
             <i class="fa fa-search"></i>
           </span>
@@ -181,12 +184,12 @@ Demo Overview  Use pngpaste to get image data from clipboard
       <div class="column is-8 is-offset-2">
         <p class="title">Create Alfred workflow for uploading screenshot to S3</p>
 
-        <div class="columns is-mobile">
-          <div class="column">
-            <p class="text date">
+        <div class="columns is-mobile is-vcentered">
+          <div class="column has-text-grey has-text-weight-semibold">
+            Tony Xu<p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
   
-  <span>07/08/2018</span>
-  
+07/08/2018
+
 </p>
           </div>
           <div class="column has-text-right">
@@ -202,7 +205,6 @@ Demo Overview  Use pngpaste to get image data from clipboard
 </a>
           </div>
         </div>
-        <hr />
         <div class="content">
           
           
@@ -305,10 +307,10 @@ Demo Overview  Use pngpaste to get image data from clipboard
 <p>In the scripts, we used below libraries and need to be included in the workflow to make sure they can be run without issue</p>
 
 <ul>
-<li><a href="http://alfredworkflow.readthedocs.io/en/latest/installation.html">Workflow</a><br /></li>
-<li><a href="https://docs.aws.amazon.com/cli/latest/userguide/installing.html">awscli</a><br /></li>
-<li><a href="https://boto3.readthedocs.io/en/latest/guide/quickstart.html#installation">boto3</a><br /></li>
-<li><a href="https://github.com/jcsalterego/pngpaste">pngpaste</a><br />
+<li><a href="http://alfredworkflow.readthedocs.io/en/latest/installation.html" target="_blank">Workflow</a><br /></li>
+<li><a href="https://docs.aws.amazon.com/cli/latest/userguide/installing.html" target="_blank">awscli</a><br /></li>
+<li><a href="https://boto3.readthedocs.io/en/latest/guide/quickstart.html#installation" target="_blank">boto3</a><br /></li>
+<li><a href="https://github.com/jcsalterego/pngpaste" target="_blank">pngpaste</a><br />
 <br /></li>
 </ul>
 
@@ -337,7 +339,7 @@ brew install pngpaste</code></pre></div>
 
 <p><img src="./2018_07_10_20_55_19.png" alt="2018_07_10_20_55_19.png" /></p>
 
-<p>Follow instructions <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey">here</a> to create access key and secret if you don&rsquo;t have it already</p>
+<p>Follow instructions <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey" target="_blank">here</a> to create access key and secret if you don&rsquo;t have it already</p>
 
 <p>Make sure the user can read/write to S3 bucket.</p>
 
@@ -351,13 +353,13 @@ brew install pngpaste</code></pre></div>
 
 <p>Download in Github:</p>
 
-<p><a href="https://github.com/tonyxu-io/Alfred-Workflow-Upload-S3">tonyxu-io/Alfred-Workflow-Upload-S3</a></p>
+<p><a href="https://github.com/tonyxu-io/Alfred-Workflow-Upload-S3" target="_blank">tonyxu-io/Alfred-Workflow-Upload-S3</a></p>
 
 <p>References:</p>
 
 <ul>
-<li><a href="http://xfyuan.github.io/2017/03/use-alfred-to-auto-upload-screenshot-to-qiniu-and-generate-the-markdown-image-url/">使用 Alfred workflow 上传截图到七牛并自动生成外链URL</a><br /></li>
-<li><a href="http://labmain.com/2016/04/06/A_Alfred_Workflow_upload_clipboard%27image_to_qiniu/">Alfred Workflow —— 上传剪贴板的图片到七牛</a><br /></li>
+<li><a href="http://xfyuan.github.io/2017/03/use-alfred-to-auto-upload-screenshot-to-qiniu-and-generate-the-markdown-image-url/" target="_blank">使用 Alfred workflow 上传截图到七牛并自动生成外链URL</a><br /></li>
+<li><a href="http://labmain.com/2016/04/06/A_Alfred_Workflow_upload_clipboard%27image_to_qiniu/" target="_blank">Alfred Workflow —— 上传剪贴板的图片到七牛</a><br /></li>
 </ul>
 
         </div>

@@ -148,6 +148,9 @@ if (!doNotTrack) {
         <a itemprop="url" class="navbar-item "
           href="/zh/about/"><span itemprop="name">关于</span></a>
         
+        <a itemprop="url" class="navbar-item "
+          href="/zh/reads/"><span itemprop="name">推荐阅读</span></a>
+        
         <a itemprop="url" class="navbar-item  is-active"
           href="/zh/posts/"><span itemprop="name">文章</span></a>
         
@@ -170,7 +173,7 @@ if (!doNotTrack) {
           </div>
         </div>
         
-        <a class="navbar-item" target="blank" href="/zh/search">
+        <a class="navbar-item" href="/zh/search">
           <span class="icon">
             <i class="fa fa-search"></i>
           </span>
@@ -213,12 +216,12 @@ if (!doNotTrack) {
       <div class="column is-8 is-offset-2">
         <p class="title">创建Alfred Workflow上传截图到S3</p>
 
-        <div class="columns is-mobile">
-          <div class="column">
-            <p class="text date">
+        <div class="columns is-mobile is-vcentered">
+          <div class="column has-text-grey has-text-weight-semibold">
+            徐毅涵<p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
   
-  <span>2018-07-08</span>
-  
+2018-07-08
+
 </p>
           </div>
           <div class="column has-text-right">
@@ -234,7 +237,6 @@ if (!doNotTrack) {
 </a>
           </div>
         </div>
-        <hr />
         <div class="content">
           
           
@@ -337,10 +339,10 @@ if (!doNotTrack) {
 <p>在脚本中，我们用到了如下第三方库，需要确保workflow可以访问</p>
 
 <ul>
-<li><a href="http://alfredworkflow.readthedocs.io/en/latest/installation.html">Workflow</a><br /></li>
-<li><a href="https://docs.aws.amazon.com/cli/latest/userguide/installing.html">awscli</a><br /></li>
-<li><a href="https://boto3.readthedocs.io/en/latest/guide/quickstart.html#installation">boto3</a><br /></li>
-<li><a href="https://github.com/jcsalterego/pngpaste">pngpaste</a><br />
+<li><a href="http://alfredworkflow.readthedocs.io/en/latest/installation.html" target="_blank">Workflow</a><br /></li>
+<li><a href="https://docs.aws.amazon.com/cli/latest/userguide/installing.html" target="_blank">awscli</a><br /></li>
+<li><a href="https://boto3.readthedocs.io/en/latest/guide/quickstart.html#installation" target="_blank">boto3</a><br /></li>
+<li><a href="https://github.com/jcsalterego/pngpaste" target="_blank">pngpaste</a><br />
 <br /></li>
 </ul>
 
@@ -370,7 +372,7 @@ brew install pngpaste</code></pre></div>
 <p><img src="./2018_07_10_20_55_19.png" alt="2018_07_10_20_55_19.png" /></p>
 
 <p>如果你还没有access key 和 secret, 跟随教程创建他们:<br />
-<a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey">https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey</a></p>
+<a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey" target="_blank">https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey</a></p>
 
 <p>确保用户可以读写S3 bucket.</p>
 
@@ -384,13 +386,13 @@ brew install pngpaste</code></pre></div>
 
 <p>下载参考源码:</p>
 
-<p><a href="https://github.com/tonyxu-io/Alfred-Workflow-Upload-S3">tonyxu-io/Alfred-Workflow-Upload-S3</a></p>
+<p><a href="https://github.com/tonyxu-io/Alfred-Workflow-Upload-S3" target="_blank">tonyxu-io/Alfred-Workflow-Upload-S3</a></p>
 
 <p>参考资料:</p>
 
 <ul>
-<li><a href="http://xfyuan.github.io/2017/03/use-alfred-to-auto-upload-screenshot-to-qiniu-and-generate-the-markdown-image-url/">使用 Alfred workflow 上传截图到七牛并自动生成外链URL</a><br /></li>
-<li><a href="http://labmain.com/2016/04/06/A_Alfred_Workflow_upload_clipboard%27image_to_qiniu/">Alfred Workflow —— 上传剪贴板的图片到七牛</a><br /></li>
+<li><a href="http://xfyuan.github.io/2017/03/use-alfred-to-auto-upload-screenshot-to-qiniu-and-generate-the-markdown-image-url/" target="_blank">使用 Alfred workflow 上传截图到七牛并自动生成外链URL</a><br /></li>
+<li><a href="http://labmain.com/2016/04/06/A_Alfred_Workflow_upload_clipboard%27image_to_qiniu/" target="_blank">Alfred Workflow —— 上传剪贴板的图片到七牛</a><br /></li>
 </ul>
 
         </div>

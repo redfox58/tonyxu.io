@@ -166,6 +166,9 @@ if (!doNotTrack) {
         <a itemprop="url" class="navbar-item "
           href="/zh/about/"><span itemprop="name">关于</span></a>
         
+        <a itemprop="url" class="navbar-item "
+          href="/zh/reads/"><span itemprop="name">推荐阅读</span></a>
+        
         <a itemprop="url" class="navbar-item  is-active"
           href="/zh/posts/"><span itemprop="name">文章</span></a>
         
@@ -188,7 +191,7 @@ if (!doNotTrack) {
           </div>
         </div>
         
-        <a class="navbar-item" target="blank" href="/zh/search">
+        <a class="navbar-item" href="/zh/search">
           <span class="icon">
             <i class="fa fa-search"></i>
           </span>
@@ -237,12 +240,12 @@ X前缀的使用 在众多非标准HTTP头中，有一些变得越来越普遍�
       <div class="column is-8 is-offset-2">
         <p class="title">HTTP头字段为何要弃用X前缀</p>
 
-        <div class="columns is-mobile">
-          <div class="column">
-            <p class="text date">
+        <div class="columns is-mobile is-vcentered">
+          <div class="column has-text-grey has-text-weight-semibold">
+            徐毅涵<p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
   
-  <span>2018-08-01</span>
-  
+2018-08-01
+
 </p>
           </div>
           <div class="column has-text-right">
@@ -258,12 +261,11 @@ X前缀的使用 在众多非标准HTTP头中，有一些变得越来越普遍�
 </a>
           </div>
         </div>
-        <hr />
         <div class="content">
           
           
 
-<p>2012年6月，互联网工程任务小组(IETF)发布了新的征求意见稿(<a href="https://tools.ietf.org/html/rfc6648">RFC-6648</a>)，要求自定义HTTP头字段应放弃使用<code>X-</code>前缀。由于我所在的LinkedIn也在使用这类自定义头字段，因此特意阅读了这份征求意见稿，给大家解释以下为什么我们需要弃用它。</p>
+<p>2012年6月，互联网工程任务小组(IETF)发布了新的征求意见稿(<a href="https://tools.ietf.org/html/rfc6648" target="_blank">RFC-6648</a>)，要求自定义HTTP头字段应放弃使用<code>X-</code>前缀。由于我所在的LinkedIn也在使用这类自定义头字段，因此特意阅读了这份征求意见稿，给大家解释以下为什么我们需要弃用它。</p>
 
 <h2 id="x前缀诞生背景">X前缀诞生背景</h2>
 
@@ -278,7 +280,7 @@ X前缀的使用 在众多非标准HTTP头中，有一些变得越来越普遍�
 <br /></li>
 </ul>
 
-<p>如果想在HTTP头里添加自定义的字段，为了和标准字段区分，之前是建议加上<code>X-</code>前缀的(<code>X</code>代表Extension)。这个建议是在1982年为Email标准提出(参考<a href="https://tools.ietf.org/html/rfc822">RFC-822</a>)，行之有效了几十年。</p>
+<p>如果想在HTTP头里添加自定义的字段，为了和标准字段区分，之前是建议加上<code>X-</code>前缀的(<code>X</code>代表Extension)。这个建议是在1982年为Email标准提出(参考<a href="https://tools.ietf.org/html/rfc822" target="_blank">RFC-822</a>)，行之有效了几十年。</p>
 
 <h2 id="x前缀的使用">X前缀的使用</h2>
 

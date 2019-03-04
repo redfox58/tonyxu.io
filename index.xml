@@ -6,10 +6,21 @@
     <description>Recent content on Tony Xu Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 01 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 03 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://tonyxu.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>UTC is Enough for Everyone, Right?</title>
+      <link>https://tonyxu.io/reads/2019-03-03/</link>
+      <pubDate>Sun, 03 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tonyxu.io/reads/2019-03-03/</guid>
+      <description>UTC is Enough for Everyone, Right? (zachholman.com)
+ It turns out humans have had a long, long history of poorly dealing with time, so when you hammer your head against the wall trying to deal with a timezone bug, well, you’re just the last in a long, long line of human beings that are terrible at all this! Congrats. You’re pretty unremarkable.
+ The author talks about long history of time and how horrible we have been dealing with time.</description>
+    </item>
     
     <item>
       <title>My Productivity Tools and Development Setup Recommended to Software Engineers</title>
@@ -56,7 +67,7 @@ How I scale level of expertise for a technology:
       <pubDate>Mon, 15 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/posts/2018/embed-google-analytics-dashboard-on-website/</guid>
-      <description>&lt;p&gt;If you are using Google Analytics to analyze site traffic, you might want to embed those amazing dashboards to your website publicly. While Google doesn&amp;rsquo;t provide iframe solution, it does offer a &lt;a href=&#34;https://developers.google.com/analytics/devguides/reporting/embed/v1/&#34;&gt;Google Analytics Embed API&lt;/a&gt; which requires a bit more technical knowledge. I&amp;rsquo;ll walk you through each and every step and make sure you don&amp;rsquo;t have to read all developer documentation and can easily build dashboard&lt;/p&gt;
+      <description>&lt;p&gt;If you are using Google Analytics to analyze site traffic, you might want to embed those amazing dashboards to your website publicly. While Google doesn&amp;rsquo;t provide iframe solution, it does offer a &lt;a href=&#34;https://developers.google.com/analytics/devguides/reporting/embed/v1/&#34; target=&#34;_blank&#34;&gt;Google Analytics Embed API&lt;/a&gt; which requires a bit more technical knowledge. I&amp;rsquo;ll walk you through each and every step and make sure you don&amp;rsquo;t have to read all developer documentation and can easily build dashboard&lt;/p&gt;
 
 &lt;p&gt;Preview:&lt;/p&gt;
 
