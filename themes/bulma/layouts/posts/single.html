@@ -31,26 +31,26 @@
 </div>
 
 <section class="has-background-light">
-    <div class="container">
-      <div class="columns">
-        <div class="column is-8 is-offset-2 has-text-centered">
-          {{ partial "newsletter_form" }}
-        </div>
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2 has-text-centered">
+        {{ partial "newsletter_form" }}
       </div>
-  </section>
-  
-  <section>
-      <div class="container">
-        <div class="columns">
-          <div class="column is-8 is-offset-2 has-text-centered">
-            {{ if .Site.DisqusShortname }}
-            <article>
-              {{ template "_internal/disqus.html" . }}
-            </article>
-            {{ end }}
-          </div>
-        </div>
-    </section>
+    </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2 has-text-centered">
+        {{ if .Site.DisqusShortname }}
+        <article>
+          {{ template "_internal/disqus.html" . }}
+        </article>
+        {{ end }}
+      </div>
+    </div>
+</section>
 
 {{ end }}
 {{ define "footer" }}
