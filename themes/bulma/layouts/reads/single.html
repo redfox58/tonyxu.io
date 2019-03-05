@@ -19,12 +19,18 @@
     <hr />
     <div class="columns">
       <div class="column is-8 is-offset-2">
-        {{ partial "read/read_issue_number" .}}
-        <p class="title is-4">{{ partial "date/date_value" .}}</p>
+        <div class="columns is-mobile is-vcentered">
+          <div class="column has-text-grey has-text-weight-semibold">
+            {{ partial "read/read_issue_number" .}}
+            <p class="title is-4">{{ partial "date/date_value" .}}</p>
+          </div>
+          <div class="column has-text-right">
+            {{ partial "share" .}}
+          </div>
+        </div>
         <div class="content">
           {{ .Content}}
         </div>
-
       </div>
     </div>
   </div>
@@ -40,17 +46,17 @@
 </section>
 
 <section class="section">
-    <div class="container">
-      <div class="columns">
-        <div class="column is-8 is-offset-2 has-text-centered">
-          {{ if .Site.DisqusShortname }}
-          <article>
-            {{ template "_internal/disqus.html" . }}
-          </article>
-          {{ end }}
-        </div>
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2 has-text-centered">
+        {{ if .Site.DisqusShortname }}
+        <article>
+          {{ template "_internal/disqus.html" . }}
+        </article>
+        {{ end }}
       </div>
-  </section>
+    </div>
+</section>
 
 {{ end }}
 {{ define "footer" }}
