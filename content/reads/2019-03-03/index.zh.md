@@ -1,7 +1,7 @@
 ---
 Date: 2019-03-03
 IssueNumber: 1
-Title: UTC is Enough for Everyone, Right?
+Title: 协调世界时已经足够了，是吗?
 ---
 
 [UTC is Enough for Everyone, Right?](https://zachholman.com/talk/utc-is-enough-for-everyone-right) (zachholman.com)
