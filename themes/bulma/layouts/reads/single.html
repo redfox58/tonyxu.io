@@ -1,5 +1,6 @@
 {{ define "title" -}}
-{{.CurrentSection.Title}} {{ partial "date/date_value" .}} {{ partial "read/read_issue_number_value" .}}: {{ .Title }} | {{ .Site.Title }}
+{{.CurrentSection.Title}} {{ partial "date/date_value" .}} {{ partial "read/read_issue_number_value" .}}: {{ .Title }}
+| {{ .Site.Title }}
 {{- end }}
 
 {{ define "header" }} {{ partial "menu" . }} {{ end }}
@@ -23,16 +24,33 @@
         <div class="content">
           {{ .Content}}
         </div>
-        {{ partial "newsletter_form" }}
-        {{ if .Site.DisqusShortname }}
-        <article>
-          {{ template "_internal/disqus.html" . }}
-        </article>
-        {{ end }}
+
       </div>
     </div>
   </div>
 </div>
+
+<section class="has-background-light">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2 has-text-centered">
+        {{ partial "newsletter_form" }}
+      </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+      <div class="columns">
+        <div class="column is-8 is-offset-2 has-text-centered">
+          {{ if .Site.DisqusShortname }}
+          <article>
+            {{ template "_internal/disqus.html" . }}
+          </article>
+          {{ end }}
+        </div>
+      </div>
+  </section>
 
 {{ end }}
 {{ define "footer" }}

@@ -21,3 +21,6 @@ other="订阅邮件获取关于编程和技术的相关文章。"
 
 [subscribe]
 other="立即订阅"
+
+[email_address]
+other="Email地址"
