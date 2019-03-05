@@ -18,7 +18,8 @@
     <hr />
     <div class="columns">
       <div class="column is-8 is-offset-2">
-        <p class="title is-4">{{ partial "date/date_value" .}} {{ partial "read/read_issue_number" .}}</p>
+        {{ partial "read/read_issue_number" .}}
+        <p class="title is-4">{{ partial "date/date_value" .}}</p>
         <div class="content">
           {{ .Content}}
         </div>

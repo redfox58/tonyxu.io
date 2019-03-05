@@ -20,7 +20,8 @@
         <p class="title is-4">{{ .Key }}</p>
         {{ range .Pages }}
         <div class="title is-5">
-          <a href="{{ .URL | relLangURL}}">{{ partial "date/date_value" .}} {{ partial "read/read_issue_number" .}}</a>
+            {{ partial "read/read_issue_number" .}}
+          <a href="{{ .URL | relLangURL}}">{{ partial "date/date_value" .}}</a>
         </div>
         <div class="content">
           {{ .Content }}
