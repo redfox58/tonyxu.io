@@ -106,19 +106,19 @@ if (!doNotTrack) {
         
         
         <a itemprop="url" class="navbar-item "
-          href="/about/"><span itemprop="name">About</span></a>
+          href="/about/"><span itemprop="name" class="is-uppercase">About</span></a>
         
         <a itemprop="url" class="navbar-item "
-          href="/reads/"><span itemprop="name">Good Reads</span></a>
+          href="/reads/"><span itemprop="name" class="is-uppercase">Good Reads</span></a>
         
         <a itemprop="url" class="navbar-item "
-          href="/posts/"><span itemprop="name">Posts</span></a>
+          href="/posts/"><span itemprop="name" class="is-uppercase">Posts</span></a>
         
         
         <div class="navbar-item">
           <div class="field">
             <div class="control has-icons-left">
-              <div class="select is-rounded  is-small">
+              <div class="select is-rounded is-small">
                 <select size="1" name="links" onchange="window.location.href=this.value;">
                   <option selected disabled>Language</option>
                   
@@ -127,7 +127,7 @@ if (!doNotTrack) {
                 </select>
               </div>
               <div class="icon is-small is-left">
-                <i class="fa fa-globe"></i>
+                <i class="fas fa-globe has-text-grey"></i>
               </div>
             </div>
           </div>
@@ -183,8 +183,8 @@ if (!doNotTrack) {
   <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
-      <p>
-        © 2018-2019 Tony Xu | <a href='/friends'><i class="fas fa-external-link-square-alt"></i> Friends</a> | <a href="/index.xml"><i class="fas fa-rss-square"></i> RSS</a>
+      <p class="text is-uppercase has-text-grey">
+        © 2018-2019 Tony Xu | <a href='/friends' class="has-text-grey"><i class="fas fa-external-link-square-alt"></i> Friends</a> | <a href="/index.xml" class="has-text-grey"><i class="fas fa-rss-square"></i> RSS</a>
       </p>
     </div>
   </div>
