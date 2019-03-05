@@ -23,6 +23,7 @@
         <div class="content">
           {{ .Content}}
         </div>
+        {{ partial "newsletter_form" }}
         {{ if .Site.DisqusShortname }}
         <article>
           {{ template "_internal/disqus.html" . }}
