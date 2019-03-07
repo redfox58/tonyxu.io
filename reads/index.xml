@@ -6,10 +6,22 @@
     <description>Recent content in Good Reads on Tony Xu Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 03 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 06 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://tonyxu.io/reads/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>This Is Silicon Valley</title>
+      <link>https://tonyxu.io/reads/2019-03-06/</link>
+      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tonyxu.io/reads/2019-03-06/</guid>
+      <description>This Is Silicon Valley (onezero.medium.com)
+ Everyone wears Patagonia and North Face, everyone has AirPods hanging from their ears, and everyone goes to Lake Tahoe on weekends. And everyone talks about the same things: startups, blockchain, machine learning, and startups with blockchain and machine learning.
+As Jeffrey Hammerbacher, a former Facebook executive, told Bloomberg, “The best minds of my generation are thinking about how to make people click ads.”
+ The Silicon Valley author described is exactly what I see in the Silivon Valley.</description>
+    </item>
     
     <item>
       <title>UTC is Enough for Everyone, Right?</title>

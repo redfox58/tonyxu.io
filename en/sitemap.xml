@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://tonyxu.io/reads/2019-03-06/</loc>
+    <lastmod>2019-03-06T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://tonyxu.io/zh/reads/2019-03-06/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://tonyxu.io/reads/2019-03-06/"
+                />
+  </url>
+  
+  <url>
     <loc>https://tonyxu.io/reads/2019-03-03/</loc>
     <lastmod>2019-03-03T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -377,7 +392,7 @@
   
   <url>
     <loc>https://tonyxu.io/reads/</loc>
-    <lastmod>2019-03-03T00:00:00+00:00</lastmod>
+    <lastmod>2019-03-06T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -436,7 +451,7 @@
   
   <url>
     <loc>https://tonyxu.io/</loc>
-    <lastmod>2019-03-03T00:00:00+00:00</lastmod>
+    <lastmod>2019-03-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
