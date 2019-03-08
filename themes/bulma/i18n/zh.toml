@@ -17,7 +17,7 @@ other="友情链接"
 other="很抱歉，暂时无法找到该页面"
 
 [subscribe-to-wechat]
-other="关注微信公众号\"TONY的BLOG\"即时获取最新动态"
+other='关注微信公众号 "<span class="text has-text-info">TONY的BLOG</span>"<br>即时获取最新动态'
 
 [subscribe]
 other="立即订阅"
