@@ -63,22 +63,87 @@ if (!doNotTrack) {
 
 
 <body>
-    <header></header>
+    <header> <nav class="navbar is-fixed-top">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img src="/favicon.ico" alt="logo">
+      </a>
+      <a class="navbar-item" href="/">
+        Tony Xu Blog
+      </a>
+      <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div class="navbar-menu" id="navMenu">
+
+      
+      
+      <div class="navbar-end">
+        
+        <a class="navbar-item" target="blank" href="https://github.com/tonyxu-io">
+          <span class="icon">
+            <span class="icon-github"></span>
+          </span>
+        </a>
+        
+
+        
+        <a class="navbar-item" target="blank" href="https://www.linkedin.com/in/tonyxu93">
+          <span class="icon">
+            <span class="icon-linkedin-square"></span>
+          </span>
+        </a>
+        
+        
+        
+        <a itemprop="url" class="navbar-item "
+          href="/about/"><span itemprop="name" class="is-uppercase">About</span></a>
+        
+        <a itemprop="url" class="navbar-item "
+          href="/reads/"><span itemprop="name" class="is-uppercase">Good Reads</span></a>
+        
+        <a itemprop="url" class="navbar-item "
+          href="/posts/"><span itemprop="name" class="is-uppercase">Posts</span></a>
+        
+        
+        <a class="navbar-item" href="/search">
+          <span class="icon">
+            <span class="icon-search"></span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</nav> </header>
     <main>
-    <div class="container">
-      <div class="box has-text-centered">
-        <p class="title xLargeText has-text-info">
+    <div class="container has-text-centered" style="padding-top: 5rem; padding-bottom: 5rem;">
+        <p class="title xLargeText has-text-grey">
           404
         </p>
-        <p class="text is-uppercase has-text-weight-bold">
+        <p class="text is-uppercase has-text-weight-bold has-text-grey-light">
           We are sorry, but the page could not be found.
         </p>
         <br>
         <a class="button is-rounded is-info" href='/'>Home</a>
-      </div>
     </div>
 </main>
-    <footer></footer>
+    <footer>
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p class="text is-uppercase has-text-grey is-size-7-mobile">
+        © 2018-2019 Tony Xu | <a href='/friends' class="has-text-grey"><span class="icon-external-link-square"></span> Friends</a> | <a href="/index.xml" class="has-text-grey"><span class="icon-rss-square"></span> RSS</a>
+      </p>
+    </div>
+  </div>
+</footer>
+</footer>
 
 </body>
 
