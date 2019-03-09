@@ -17,4 +17,4 @@ More stories about embracing **microservices**:
 - Shopify: [Deconstructing the Monolith: Designing Software that Maximizes Developer Productivity](https://engineering.shopify.com/blogs/engineering/deconstructing-monolith-designing-software-maximizes-developer-productivity)
 - Squarespace: [The Pillars of Squarespace Services](https://engineering.squarespace.com/blog/2017/the-pillars-of-squarespace-services)
 - Netflix: [Adopting Microservices at Netflix: Lessons for Architectural Design](https://www.nginx.com/blog/microservices-at-netflix-architectural-best-practices)
-- Box: [Kubernetes at Box: Microservices at Maximum Velocity](https://blog.box.com/kubernetes-box-microservices-maximum-velocity)r
+- Box: [Kubernetes at Box: Microservices at Maximum Velocity](https://blog.box.com/kubernetes-box-microservices-maximum-velocity)
