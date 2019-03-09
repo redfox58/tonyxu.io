@@ -6,10 +6,20 @@
     <description>Recent content in Good Reads on Tony Xu Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 06 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 09 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://tonyxu.io/reads/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Microservice Architecture at Medium</title>
+      <link>https://tonyxu.io/reads/2019-03-09/</link>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tonyxu.io/reads/2019-03-09/</guid>
+      <description>Microservice Architecture at Medium (medium.engineering)
+ At Medium, our technical stack started with a monolithic Node.js app back in 2012. We have built a couple of satellite services, but we haven’t created a strategy to adopt the microservice architecture systematically. As the system becomes more complex and the team grows, we moved to a microservice architecture in early 2018. In this post, we want to share our experiences of doing it effectively and avoiding microservice syndromes.</description>
+    </item>
     
     <item>
       <title>This Is Silicon Valley</title>

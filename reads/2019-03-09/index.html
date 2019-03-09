@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en-US" class="has-navbar-fixed-top">
+
+<head>
+    <meta name="generator" content="Hugo 0.55.0-DEV" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Good Reads 
+03/09/2019
+ 
+Release 3
+: Microservice Architecture at Medium
+| Tony Xu Blog</title>
+
+     
+      
+    
+    
+    
+    
+    
+<meta itemprop="name" content="Microservice Architecture at Medium">
+<meta itemprop="description" content="Microservice Architecture at Medium (medium.engineering)
+ At Medium, our technical stack started with a monolithic Node.js app back in 2012. We have built a couple of satellite services, but we haven’t created a strategy to adopt the microservice architecture systematically. As the system becomes more complex and the team grows, we moved to a microservice architecture in early 2018. In this post, we want to share our experiences of doing it effectively and avoiding microservice syndromes.">
+
+
+<meta itemprop="datePublished" content="2019-03-09T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-03-09T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="178">
+
+
+
+<meta itemprop="keywords" content="" />
+
+    <meta property="og:title" content="Microservice Architecture at Medium" />
+<meta property="og:description" content="Microservice Architecture at Medium (medium.engineering)
+ At Medium, our technical stack started with a monolithic Node.js app back in 2012. We have built a couple of satellite services, but we haven’t created a strategy to adopt the microservice architecture systematically. As the system becomes more complex and the team grows, we moved to a microservice architecture in early 2018. In this post, we want to share our experiences of doing it effectively and avoiding microservice syndromes." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tonyxu.io/reads/2019-03-09/" />
+
+<meta property="og:image" content="https://tonyxu.io/profile-pic.png" />
+<meta property="article:published_time" content="2019-03-09T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2019-03-09T00:00:00&#43;00:00"/><meta property="og:site_name" content="Tony Xu Blog" />
+
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://tonyxu.io/profile-pic.png"/>
+
+<meta name="twitter:title" content="Microservice Architecture at Medium"/>
+<meta name="twitter:description" content="Microservice Architecture at Medium (medium.engineering)
+ At Medium, our technical stack started with a monolithic Node.js app back in 2012. We have built a couple of satellite services, but we haven’t created a strategy to adopt the microservice architecture systematically. As the system becomes more complex and the team grows, we moved to a microservice architecture in early 2018. In this post, we want to share our experiences of doing it effectively and avoiding microservice syndromes."/>
+
+    
+     
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-577792-7', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+ 
+    
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    
+    <link rel="canonical" href="https://tonyxu.io/reads/2019-03-09/">   <link rel="shortcut icon" type="image/png" href="/images/profile-pic.png">
+
+
+    
+    <link rel="stylesheet" href="/css/bulma.css"> 
+    <link rel="stylesheet" href="/css/custom.css"> 
+    <link rel="stylesheet" href="/css/font.css">
+    <script type="text/javascript" src="/js/bulma.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  </head>
+
+
+<body>
+    <header> <nav class="navbar is-fixed-top">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img src="/favicon.ico" alt="logo">
+      </a>
+      <a class="navbar-item" href="/">
+        Tony Xu Blog
+      </a>
+      <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div class="navbar-menu" id="navMenu">
+
+      
+      
+      <div class="navbar-end">
+        
+        <a class="navbar-item" target="blank" href="https://github.com/tonyxu-io">
+          <span class="icon">
+            <span class="icon-github"></span>
+          </span>
+        </a>
+        
+
+        
+        <a class="navbar-item" target="blank" href="https://www.linkedin.com/in/tonyxu93">
+          <span class="icon">
+            <span class="icon-linkedin-square"></span>
+          </span>
+        </a>
+        
+        
+        
+        <a itemprop="url" class="navbar-item "
+          href="/about/"><span itemprop="name" class="is-uppercase">About</span></a>
+        
+        <a itemprop="url" class="navbar-item  is-active"
+          href="/reads/"><span itemprop="name" class="is-uppercase">Good Reads</span></a>
+        
+        <a itemprop="url" class="navbar-item "
+          href="/posts/"><span itemprop="name" class="is-uppercase">Posts</span></a>
+        
+        
+        <div class="navbar-item">
+          <div class="field">
+            <div class="control has-icons-left">
+              <div class="select is-rounded is-small">
+                <select size="1" name="links" onchange="window.location.href=this.value;">
+                  <option selected disabled>Language</option>
+                  
+                  <option value="https://tonyxu.io/zh/reads/2019-03-09/">中文</option>
+                  
+                </select>
+              </div>
+              <div class="icon is-small is-left">
+                <span class="icon-globe has-text-grey"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <a class="navbar-item" href="/search">
+          <span class="icon">
+            <span class="icon-search"></span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</nav> </header>
+    <main>
+
+<div class="section">
+  <div class="container" itemscope itemtype="http://schema.org/BlogPosting">
+    
+<meta itemprop="name" content="Microservice Architecture at Medium">
+<meta itemprop="description" content="Microservice Architecture at Medium (medium.engineering)
+ At Medium, our technical stack started with a monolithic Node.js app back in 2012. We have built a couple of satellite services, but we haven’t created a strategy to adopt the microservice architecture systematically. As the system becomes more complex and the team grows, we moved to a microservice architecture in early 2018. In this post, we want to share our experiences of doing it effectively and avoiding microservice syndromes.">
+
+
+<meta itemprop="datePublished" content="2019-03-09T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-03-09T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="178">
+
+
+
+<meta itemprop="keywords" content="" />
+
+    <div class="columns">
+      <div class="column is-8 is-offset-2 has-text-centered">
+        <div class="title"><a href="/reads/">Good Reads</a></div>
+        <p class="subtitle">News, blog, and articles I read and find interesting</p>
+      </div>
+    </div>
+    <hr />
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <div class="columns is-mobile is-vcentered">
+          <div class="column has-text-grey has-text-weight-semibold">
+            <p class="text is-family-monospace has-text-grey-light has-text-weight-semibold is-size-6 is-uppercase">
+  
+Release 3
+
+</p>
+            <p class="title is-4">
+03/09/2019
+</p>
+          </div>
+          <div class="column has-text-right">
+            <a class="button is-light" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftonyxu.io%2freads%2f2019-03-09%2f" target="_blank" title="Share to Facebook">
+  <span class="icon">
+    <span class="icon-facebook"></span>
+  </span>
+</a>
+<a class="button is-light" href="https://www.linkedin.com/sharing/share-offsite?url=https%3a%2f%2ftonyxu.io%2freads%2f2019-03-09%2f" target="_blank" title="Share to LinkedIn">
+  <span class="icon">
+    <span class="icon-linkedin"></span>
+  </span>
+</a>
+          </div>
+        </div>
+        <div class="content">
+          <p><a href="https://medium.engineering/microservice-architecture-at-medium-9c33805eb74f" target="_blank">Microservice Architecture at Medium</a> (medium.engineering)</p>
+
+<blockquote>
+<p>At Medium, our technical stack started with a monolithic Node.js app back in 2012. We have built a couple of satellite services, but we haven’t created a strategy to adopt the microservice architecture systematically. As the system becomes more complex and the team grows, we moved to a microservice architecture in early 2018. In this post, we want to share our experiences of doing it effectively and avoiding microservice syndromes.</p>
+</blockquote>
+
+<p>It&rsquo;s been years since we started talk about switching to microservices architecture from monolithic app. It&rsquo;s worth reading how large scale companies have successfully went through the switch and what are their principles and strategies to get full benefits of microservices.</p>
+
+<p>More stories about embracing <strong>microservices</strong>:</p>
+
+<ul>
+<li>LinkedIn: <a href="https://engineering.linkedin.com/blog/2016/02/q-a-with-jim-brikman--splitting-up-a-codebase-into-microservices" target="_blank">Q&amp;A with Jim Brikman: Splitting Up a Codebase into Microservices and Artifacts</a><br /></li>
+<li>Uber <a href="https://eng.uber.com/soa/" target="_blank">Service-Oriented Architecture: Scaling the Uber Engineering Codebase As We Grow</a><br /></li>
+<li>Shopify: <a href="https://engineering.shopify.com/blogs/engineering/deconstructing-monolith-designing-software-maximizes-developer-productivity" target="_blank">Deconstructing the Monolith: Designing Software that Maximizes Developer Productivity</a><br /></li>
+<li>Squarespace: <a href="https://engineering.squarespace.com/blog/2017/the-pillars-of-squarespace-services" target="_blank">The Pillars of Squarespace Services</a><br /></li>
+<li>Netflix: <a href="https://www.nginx.com/blog/microservices-at-netflix-architectural-best-practices" target="_blank">Adopting Microservices at Netflix: Lessons for Architectural Design</a><br /></li>
+<li>Box: <a href="https://blog.box.com/kubernetes-box-microservices-maximum-velocity" target="_blank">Kubernetes at Box: Microservices at Maximum Velocity</a>r<br /></li>
+</ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="section has-background-light">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2 has-text-centered">
+        
+<p class="subtitle is-size-6-mobile">
+    Subscribe to get update about programming, hacks, and other topics.
+</p>
+
+<div id="mc_embed_signup">
+  <form action="https://tonyxu.us20.list-manage.com/subscribe/post?u=69c2a5fca21efd1ab71e96df7&amp;id=c90267bbd1"
+    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+    novalidate>
+    <div id="mc_embed_signup_scroll">
+      <div class="field has-addons has-addons-centered">
+        <div class="control">
+          <input type="email" value="" name="EMAIL" class="input required email" id="mce-EMAIL" placeholder='Email Address'></input>
+        </div>
+        <div class="control">
+          <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button is-info">Subscribe</button>
+        </div>
+      </div>
+      <div id="mce-responses" class="clear">
+        <div class="response" id="mce-error-response" style="display:none"></div>
+        <div class="response" id="mce-success-response" style="display:none"></div>
+      </div>
+      
+      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input type="text" name="b_69c2a5fca21efd1ab71e96df7_c90267bbd1" tabindex="-1" value=""></input>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+      </div>
+    </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2 has-text-centered">
+        
+        <article>
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tonyxu-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </article>
+        
+      </div>
+    </div>
+</section>
+
+</main>
+    <footer>
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p class="text is-uppercase has-text-grey is-size-7-mobile">
+        © 2018-2019 Tony Xu | <a href='/friends' class="has-text-grey"><span class="icon-external-link-square"></span> Friends</a> | <a href="/index.xml" class="has-text-grey"><span class="icon-rss-square"></span> RSS</a>
+      </p>
+    </div>
+  </div>
+</footer>
+</footer>
+
+</body>
+
+</html>
