@@ -1,3 +1,7 @@
+div.content {
+  font-size:20px;
+}
+
 .navbar {
   box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 12px 0px;
 }
@@ -9,4 +13,13 @@
 .has-image-centered {
   margin-left: auto;
   margin-right: auto;
+}
+
+.footer-link {
+  text-decoration: underline;
+}
+
+.footer-link:not(:first-child)::before {
+  content: '';
+  margin: 0 5px
 }
