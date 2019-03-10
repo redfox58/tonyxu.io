@@ -1,8 +1,13 @@
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
-      <p class="text is-uppercase has-text-grey is-size-7-mobile">
-        {{ .Site.Params.copyright}} | <a href='{{ "/friends" | relLangURL }}' class="has-text-grey"><span class="icon-external-link-square"></span> {{ i18n "friend_links"}}</a> | <a href="/index.xml" class="has-text-grey"><span class="icon-rss-square"></span> RSS</a>
+      <p class="text is-uppercase has-text-grey">
+        {{ .Site.Params.copyright}}
+      </p>
+      <p class="text">
+        <a href="/index.xml" class="has-text-grey footer-link">RSS</a>
+        <a href='{{ "/about" | relLangURL }}' class="has-text-grey footer-link"> {{ i18n "about" }}</a>
+        <a href='{{ "/friends" | relLangURL }}' class="has-text-grey footer-link">{{ i18n "friend_links"}}</a>
       </p>
     </div>
   </div>
