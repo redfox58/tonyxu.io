@@ -1,6 +1,6 @@
 ---
 title: Top Engineering Blogs from Tech Companies to Follow in 2019
-date: 2019-03-10
+date: 2019-03-11
 ---
 
 Here is a list of top engineering blogs from tech companies that I follow. I learn how the tech companies build technology infrastructure with high performance, high scalability, and high availability and their best practices summarized along with building the infrastructure.
