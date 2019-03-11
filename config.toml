@@ -16,10 +16,10 @@ pygmentsStyle = "tango"
 
 [params]
   theme_variant = "" # possible value for the theme_variant `cerulean,cosmo,cyborg,darkly,flatly,journal,litera,lumen,lux,materia,minty,pulse,sandstone,simplex,slate,solar,spacelab,superhero,united,yeti`
-  images = ["/images/profile-pic.png"] # Suggested, controls default OpenGraph images controls author name display on meta tag
+  images = ["/images/og-image.png","/images/square-logo.png"] # Suggested, controls default OpenGraph images controls author name display on meta tag
   github  = "tonyxu-io" # Optional, to display link to github account in menu bar
   linkedin = "tonyxu93" # Optional, to display link to twitter account in menu bar
-  logo = "/favicon.ico"
+  logo = "/images/square-logo.png"
 
 [blackfriday]
   extensions = ["hardLineBreak"]
