@@ -45,14 +45,14 @@
             <div class="control has-icons-left">
               <div class="select is-rounded is-small">
                 <select size="1" name="links" onchange="window.location.href=this.value;">
-                  <option selected disabled>{{ i18n "language" }}</option>
+                  <option selected disabled>{{ .Language.LanguageName }}</option>
                   {{ range .Translations }}
                   <option value="{{ .Permalink }}">{{ .Language.LanguageName }}</option>
                   {{ end}}
                 </select>
               </div>
               <div class="icon is-small is-left">
-                <span class="icon-globe has-text-grey"></span>
+                  <span class="icon-language has-text-black"></span>
               </div>
             </div>
           </div>
