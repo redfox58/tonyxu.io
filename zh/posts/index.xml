@@ -6,10 +6,30 @@
     <description>Recent content in 文章 on Tony Xu 博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 01 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 10 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://tonyxu.io/zh/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>2019年最应该关注的科技公司技术博客</title>
+      <link>https://tonyxu.io/zh/posts/2019/top-engineering-blogs-from-tech-companies-to-follow-in-2019/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tonyxu.io/zh/posts/2019/top-engineering-blogs-from-tech-companies-to-follow-in-2019/</guid>
+      <description>这份列表包含了我订阅的主要科技公司技术博客。我从他们的技术博客当中学习他们是如何搭建高性能、高可扩展、高可用的技术基础设施以及他们在搭建这些基础设施的过程中总结的的最佳实践。
+我使用RSS阅读器订阅这些博客并每日阅读他们的更新。
+(按字母顺序排列)
+    Airbnb Engineering &amp;amp; Data Science
+    Bitly Engineering Blog
+    Dropbox Tech Blog
+    Etsy - Code as Craft
+    Facebook Code - Facebook Engineering Blog
+    code.flickr.com
+    GitHub Engineering
+    Google AI Blog
+    Heroku Blog - Engineering</description>
+    </item>
     
     <item>
       <title>我的生产效率工具和开发环境（推荐给软件工程师们）</title>
