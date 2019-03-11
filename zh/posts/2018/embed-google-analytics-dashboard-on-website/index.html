@@ -52,12 +52,15 @@ let privateKey = require(&#34;./google_key.json&#34;);  Return Google access tok
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tonyxu.io/zh/posts/2018/embed-google-analytics-dashboard-on-website/" />
 
-<meta property="og:image" content="https://tonyxu.io/images/profile-pic.png" />
+<meta property="og:image" content="https://tonyxu.io/images/og-image.png" />
+
+<meta property="og:image" content="https://tonyxu.io/images/square-logo.png" />
 <meta property="article:published_time" content="2018-10-15T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2018-10-15T00:00:00&#43;00:00"/><meta property="og:site_name" content="Tony Xu 博客" />
-
+<meta property="og:image" content="https://tonyxu.io/images/og-image.png"/>
+    
     <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://tonyxu.io/images/profile-pic.png"/>
+<meta name="twitter:image" content="https://tonyxu.io/images/og-image.png"/>
 
 <meta name="twitter:title" content="嵌入Google Analytics图表到你的网站"/>
 <meta name="twitter:description" content="如果你正在使用Google Anlaytics工具来分析网站访问数据，你可能会想将它提供的各种酷炫图表嵌入到网站页面以供用户浏览。尽管Google Analytics并不提供简单的iframe方式来嵌入图表，它还是提供了Google Analytics Embed API这种需要稍微多一点技术基础的方式让你能够嵌入它们的图表。我会在这篇文章里详细地告诉你该如何一步一步实现一个Google Analytics图表
@@ -86,10 +89,7 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
  
     
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    
-    <link rel="canonical" href="https://tonyxu.io/zh/posts/2018/embed-google-analytics-dashboard-on-website/">   <link rel="shortcut icon" type="image/png" href="/images/profile-pic.png">
+    <link rel="canonical" href="https://tonyxu.io/zh/posts/2018/embed-google-analytics-dashboard-on-website/">   <link rel="shortcut icon" type="image/png" href="/images/square-logo.png">
 
 
     
@@ -106,7 +106,7 @@ if (!doNotTrack) {
   <div class="container">
     <div class="navbar-brand">
       <a class="navbar-item" href="/zh">
-        <img src="/favicon.ico" alt="logo">
+        <img src="/images/square-logo.png" alt="logo">
       </a>
       <a class="navbar-item" href="/zh">
         Tony Xu 博客
