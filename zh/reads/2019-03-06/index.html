@@ -120,7 +120,11 @@ if (!doNotTrack) {
   <div class="container">
     <div class="navbar-brand">
       <a class="navbar-item" href="/zh">
-        <img src="/images/square-logo.webp" alt="logo">
+        <picture>
+          <source type="image/webp" srcset="/images/square-logo.webp">
+          <source type="image/png" srcset="/images/square-logo.png">
+          <img src="/images/square-logo.png">
+        </picture>
       </a>
       <a class="navbar-item" href="/zh">
         Tony Xu 博客
