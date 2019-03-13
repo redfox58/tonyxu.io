@@ -271,6 +271,12 @@ As Jeffrey Hammerbacher, a former Facebook executive, told Bloomberg, “The bes
       modal.classList.remove('is-active');
       html.classList.remove('is-clipped');
     });
+
+    modal.querySelector('.modal-close').addEventListener('click', function (e) {
+      e.preventDefault();
+      modal.classList.remove('is-active');
+      html.classList.remove('is-clipped');
+    });
   });
 </script>
           </div>

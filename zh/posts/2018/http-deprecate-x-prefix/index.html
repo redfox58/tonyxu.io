@@ -318,6 +318,12 @@ X前缀的使用 在众多非标准HTTP头中，有一些变得越来越普遍�
       modal.classList.remove('is-active');
       html.classList.remove('is-clipped');
     });
+
+    modal.querySelector('.modal-close').addEventListener('click', function (e) {
+      e.preventDefault();
+      modal.classList.remove('is-active');
+      html.classList.remove('is-clipped');
+    });
   });
 </script>
           </div>

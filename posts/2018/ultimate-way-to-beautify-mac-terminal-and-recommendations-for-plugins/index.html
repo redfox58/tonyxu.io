@@ -258,6 +258,12 @@ We will be doing these for our Terminal  Install Terminal Profile: Customize Ter
       modal.classList.remove('is-active');
       html.classList.remove('is-clipped');
     });
+
+    modal.querySelector('.modal-close').addEventListener('click', function (e) {
+      e.preventDefault();
+      modal.classList.remove('is-active');
+      html.classList.remove('is-clipped');
+    });
   });
 </script>
           </div>

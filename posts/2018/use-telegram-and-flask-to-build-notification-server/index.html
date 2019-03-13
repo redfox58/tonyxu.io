@@ -266,6 +266,12 @@ Build a Flask app to receive GET or POST request, and then compose different mes
       modal.classList.remove('is-active');
       html.classList.remove('is-clipped');
     });
+
+    modal.querySelector('.modal-close').addEventListener('click', function (e) {
+      e.preventDefault();
+      modal.classList.remove('is-active');
+      html.classList.remove('is-clipped');
+    });
   });
 </script>
           </div>

@@ -290,6 +290,12 @@ FontAwesome的默认使用方法  引用FontAwesome图标库:
       modal.classList.remove('is-active');
       html.classList.remove('is-clipped');
     });
+
+    modal.querySelector('.modal-close').addEventListener('click', function (e) {
+      e.preventDefault();
+      modal.classList.remove('is-active');
+      html.classList.remove('is-clipped');
+    });
   });
 </script>
           </div>
