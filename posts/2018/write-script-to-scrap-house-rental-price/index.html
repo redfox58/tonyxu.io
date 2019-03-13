@@ -217,11 +217,41 @@ Get Started The apartment I&rsquo;m looking at is a professional rental apartmen
     <span class="icon-facebook"></span>
   </span>
 </a>
-<a class="button is-light" href="https://www.linkedin.com/sharing/share-offsite?url=https%3a%2f%2ftonyxu.io%2fposts%2f2018%2fwrite-script-to-scrap-house-rental-price%2f" target="_blank" title="Share to LinkedIn">
+<a class="button is-light" href="https://www.linkedin.com/sharing/share-offsite?url=https%3a%2f%2ftonyxu.io%2fposts%2f2018%2fwrite-script-to-scrap-house-rental-price%2f" target="_blank"
+  title="Share to LinkedIn">
   <span class="icon">
     <span class="icon-linkedin"></span>
   </span>
 </a>
+<a id="open-qr-code" class="button is-light" href="" title="Share with QR Code">
+  <span class="icon">
+    <span class="icon-qrcode"></span>
+  </span>
+</a>
+<div class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <p class="image is-1by1">
+      <img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=https%3a%2f%2ftonyxu.io%2fposts%2f2018%2fwrite-script-to-scrap-house-rental-price%2f&choe=UTF-8" alt="">
+    </p>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+<script>
+  document.querySelector('a#open-qr-code').addEventListener('click', function (event) {
+    event.preventDefault();
+    var modal = document.querySelector('.modal');
+    var html = document.querySelector('html');
+    modal.classList.add('is-active');
+    html.classList.add('is-clipped');
+
+    modal.querySelector('.modal-background').addEventListener('click', function (e) {
+      e.preventDefault();
+      modal.classList.remove('is-active');
+      html.classList.remove('is-clipped');
+    });
+  });
+</script>
           </div>
         </div>
         <div class="content">
