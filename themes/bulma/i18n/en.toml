@@ -24,3 +24,6 @@ other="Email Address"
 
 [about]
 other="About"
+
+[share_with_qr_code]
+other="Share with QR Code"

@@ -24,3 +24,6 @@ other="Email地址"
 
 [about]
 other="关于"
+
+[share_with_qr_code]
+other="生成二维码分享"

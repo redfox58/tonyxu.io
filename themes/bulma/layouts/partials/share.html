@@ -3,8 +3,38 @@
     <span class="icon-facebook"></span>
   </span>
 </a>
-<a class="button is-light" href="https://www.linkedin.com/sharing/share-offsite?url={{ .Permalink }}" target="_blank" title="{{ i18n "share_to_linkedin"}}">
+<a class="button is-light" href="https://www.linkedin.com/sharing/share-offsite?url={{ .Permalink }}" target="_blank"
+  title="{{ i18n "share_to_linkedin"}}">
   <span class="icon">
     <span class="icon-linkedin"></span>
   </span>
 </a>
+<a id="open-qr-code" class="button is-light" href="" title="{{ i18n "share_with_qr_code"}}">
+  <span class="icon">
+    <span class="icon-qrcode"></span>
+  </span>
+</a>
+<div class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <p class="image is-1by1">
+      <img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl={{ .Permalink }}&choe=UTF-8" alt="">
+    </p>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+<script>
+  document.querySelector('a#open-qr-code').addEventListener('click', function (event) {
+    event.preventDefault();
+    var modal = document.querySelector('.modal');
+    var html = document.querySelector('html');
+    modal.classList.add('is-active');
+    html.classList.add('is-clipped');
+
+    modal.querySelector('.modal-background').addEventListener('click', function (e) {
+      e.preventDefault();
+      modal.classList.remove('is-active');
+      html.classList.remove('is-clipped');
+    });
+  });
+</script>
