@@ -6,10 +6,24 @@
     <description>Recent content on Tony Xu 博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 15 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://tonyxu.io/zh/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>停止学习框架</title>
+      <link>https://tonyxu.io/zh/reads/2019-03-15/</link>
+      <pubDate>Fri, 15 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tonyxu.io/zh/reads/2019-03-15/</guid>
+      <description>Stop Learning Frameworks (sizovs.net)
+ The longer a technology is on the market, the safer investment it is.
+Don’t rush to learn new technology – it has a high probability of dying.
+Time will show which technology is worth investing in. Time is your best advisor. Learn to wait.
+Remember – frameworks, libraries and tools come and go. Time is precious.
+ 我非常热爱学习新技术，但是却常常只是学习了新框架/工具而忽略了背后的技术。我学习了如何用Angular, Vue, 和React等不同框架搭建一个基本网站，却并没有因此对Web有更深了解。正如作者所说，与其花很多时间学习框架和工具，我们不如花更多心思深入学习框架和工具背后的底层知识(例如Web、HTTP、REST、JS)。</description>
+    </item>
     
     <item>
       <title>2019年最值得关注的国外科技公司技术博客</title>
