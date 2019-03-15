@@ -1,5 +1,5 @@
 {{ define "title"}} {{ .Site.Title}} - {{ .Site.Params.Description }} {{end}}
-{{ define "header"}} {{ partial "menu" .}} {{end}} 
+{{ define "header"}} {{ partial "menu" .}} {{end}}
 
 {{ define "main" }}
 
@@ -14,51 +14,52 @@
         {{ .Site.Params.description}}
       </h2>
       <br />
-      
+
     </div>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <div class="title is-4">{{ i18n "recent_posts" }}</div>
     <div class="columns">
-    {{ range first 3 (where .Pages "Section" "posts") }}
-      <div class="column">
+      <div class="column is-8 is-offset-2">
+        <div class="title is-4">{{ i18n "recent_posts" }}</div>
+        {{ range first 3 (where .Pages "Section" "posts") }}
         <a class="box" href="{{ .Permalink }}">
-            <h1>{{.Title}}</h1>
-            <p>{{ partial "date/date" . }}</p>
+          <h1>{{.Title}}</h1>
+          <p>{{ partial "date/date" . }}</p>
         </a>
+        {{ end }}
+        <a href='{{ "/posts" | relLangURL }}'>{{ i18n "read_more" }}</a>
       </div>
-    {{ end }}
     </div>
-    <a href='{{ "/posts" | relLangURL }}'>{{ i18n "read_more" }}</a>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <div class="title is-4">{{ i18n "recent_good_reads" }}</div>
     <div class="columns">
-    {{ range first 3 (where .Pages "Section" "reads") }}
-      <div class="column">
+      <div class="column is-8 is-offset-2">
+        <div class="title is-4">{{ i18n "recent_good_reads" }}</div>
+        {{ range first 3 (where .Pages "Section" "reads") }}
         <a class="box" href="{{ .Permalink }}">
-            <h1>{{.Title}}</h1>
-            <p>{{ partial "date/date" . }}</p>
+          <p>{{ partial "read/read_issue_number" . }}</p>
+          <h1>{{.Title}}</h1>
+          <p>{{ partial "date/date" . }}</p>
         </a>
+        {{ end }}
+        <a href='{{ "/posts" | relLangURL }}'>{{ i18n "read_more" }}</a>
       </div>
-    {{ end }}
     </div>
-    <a href='{{ "/posts" | relLangURL }}'>{{ i18n "read_more" }}</a>
   </div>
 </section>
 
 <section class="section">
   <div class="container has-text-centered">
-      {{ partial "promotion/promotion" .}}
+    {{ partial "promotion/promotion" .}}
   </div>
 </section>
 
-{{ end }} 
+{{ end }}
 
 {{ define "footer" }} {{ partial "footer" .}} {{ end }}
