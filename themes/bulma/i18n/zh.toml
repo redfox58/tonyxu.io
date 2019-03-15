@@ -1,5 +1,8 @@
-[latest_posts]
+[recent_posts]
 other = "最新文章"
+
+[recent_good_reads]
+other = "最新阅读推荐"
 
 [share_to_facebook]
 other="分享到Facebook"
@@ -27,3 +30,6 @@ other="关于"
 
 [share_with_qr_code]
 other="生成二维码分享"
+
+[read_more]
+other="阅读更多..."

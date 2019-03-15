@@ -1,5 +1,8 @@
-[latest_posts]
-other = "Latest Posts"
+[recent_posts]
+other = "Recent Posts"
+
+[recent_good_reads]
+other = "Recent Good Reads"
 
 [share_to_facebook]
 other="Share to Facebook"
@@ -27,3 +30,6 @@ other="About"
 
 [share_with_qr_code]
 other="Share with QR Code"
+
+[read_more]
+other="read more..."

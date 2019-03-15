@@ -3,7 +3,7 @@
 
 {{ define "main" }}
 
-<section class="hero is-link is-fullheight-with-navbar">
+<section class="hero is-link">
   <div class="hero-body">
     <div class="container has-text-centered">
       <h1 class="title is-1">
@@ -14,8 +14,48 @@
         {{ .Site.Params.description}}
       </h2>
       <br />
-      <a class="button is-link is-inverted is-outlined is-medium is-rounded" href="{{ "posts" | absLangURL }}">{{ i18n "latest_posts" }}</a>
+      
     </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="title is-4">{{ i18n "recent_posts" }}</div>
+    <div class="columns">
+    {{ range first 3 (where .Pages "Section" "posts") }}
+      <div class="column">
+        <a class="box" href="{{ .Permalink }}">
+            <h1>{{.Title}}</h1>
+            <p>{{ partial "date/date" . }}</p>
+        </a>
+      </div>
+    {{ end }}
+    </div>
+    <a href='{{ "/posts" | relLangURL }}'>{{ i18n "read_more" }}</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="title is-4">{{ i18n "recent_good_reads" }}</div>
+    <div class="columns">
+    {{ range first 3 (where .Pages "Section" "reads") }}
+      <div class="column">
+        <a class="box" href="{{ .Permalink }}">
+            <h1>{{.Title}}</h1>
+            <p>{{ partial "date/date" . }}</p>
+        </a>
+      </div>
+    {{ end }}
+    </div>
+    <a href='{{ "/posts" | relLangURL }}'>{{ i18n "read_more" }}</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container has-text-centered">
+      {{ partial "promotion/promotion" .}}
   </div>
 </section>
 
