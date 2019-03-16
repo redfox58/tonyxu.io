@@ -1,65 +1,6 @@
 {{ define "title"}} {{ .Site.Title}} - {{ .Site.Params.Description }} {{end}}
 {{ define "header"}} {{ partial "menu" .}} {{end}}
 
-{{ define "main" }}
-
-<section class="hero is-link">
-  <div class="hero-body">
-    <div class="container has-text-centered">
-      <h1 class="title is-1">
-        {{ .Site.Params.IamAuthor }}
-      </h1>
-      <br />
-      <h2 class="subtitle">
-        {{ .Site.Params.description}}
-      </h2>
-      <br />
-
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="columns">
-      <div class="column is-8 is-offset-2">
-        <div class="title is-4">{{ i18n "recent_posts" }}</div>
-        {{ range first 3 (where .Pages "Section" "posts") }}
-        <a class="box" href="{{ .Permalink }}">
-          <h1>{{.Title}}</h1>
-          <p>{{ partial "date/date" . }}</p>
-        </a>
-        {{ end }}
-        <a href='{{ "/posts" | relLangURL }}'>{{ i18n "read_more" }}</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="columns">
-      <div class="column is-8 is-offset-2">
-        <div class="title is-4">{{ i18n "recent_good_reads" }}</div>
-        {{ range first 3 (where .Pages "Section" "reads") }}
-        <a class="box" href="{{ .Permalink }}">
-          <p>{{ partial "read/read_issue_number" . }}</p>
-          <h1>{{.Title}}</h1>
-          <p>{{ partial "date/date" . }}</p>
-        </a>
-        {{ end }}
-        <a href='{{ "/posts" | relLangURL }}'>{{ i18n "read_more" }}</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container has-text-centered">
-    {{ partial "promotion/promotion" .}}
-  </div>
-</section>
-
-{{ end }}
+{{ define "main" }} {{ partial "index" . }} {{ end }}
 
 {{ define "footer" }} {{ partial "footer" .}} {{ end }}
