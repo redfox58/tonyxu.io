@@ -17,6 +17,7 @@ _(按字母顺序排列)_
 - {{< list-icon src="images/flickr.png">}} [code.flickr.com](http://code.flickr.net/)
 - {{< list-icon src="images/github.png">}} [GitHub Engineering](https://githubengineering.com/)
 - {{< list-icon src="images/google-ai.png">}} [Google AI Blog](https://ai.googleblog.com/)
+- {{< list-icon src="images/google-developers.png">}} [Google Developers](https://medium.com/google-developers)
 - {{< list-icon src="images/heroku.png">}} [Heroku Blog - Engineering](https://blog.heroku.com/engineering)
 - {{< list-icon src="images/hulu.png">}} [Hulu Tech Blog](https://medium.com/hulu-tech-blog)
 - {{< list-icon src="images/indeed.png">}} [Indeed Engineering Blog](https://engineering.indeedblog.com/blog/)
