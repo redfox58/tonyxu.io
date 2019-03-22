@@ -6,9 +6,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Search | Tony Xu Blog</title>
+    <title>Thinking In Java - The definitive introduction to object-oriented programming in the language of the world wide web | Tony Xu Blog</title>
 
-     
+    
+    <meta name="description" content="The definitive introduction to object-oriented programming in the language of the world wide web">  
 
     
     <meta name="author" content="Tony Xu"> 
@@ -18,36 +19,31 @@
     
     
     
+      <meta name="robots" content="noindex">
     
     
-<meta itemprop="name" content="Search">
-<meta itemprop="description" content="">
+    
+<meta itemprop="name" content="Thinking In Java">
+<meta itemprop="description" content="The definitive introduction to object-oriented programming in the language of the world wide web">
 
 
-
-<meta itemprop="wordCount" content="0">
-
-
-
-<meta itemprop="keywords" content="" />
-
-    <meta property="og:title" content="Search" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://tonyxu.io/search/" />
+    <meta property="og:title" content="Thinking In Java" />
+<meta property="og:description" content="The definitive introduction to object-oriented programming in the language of the world wide web" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://tonyxu.io/books/thinking-in-java/" />
 
 <meta property="og:image" content="https://tonyxu.io/images/og-image.png" />
 
 <meta property="og:image" content="https://tonyxu.io/images/square-logo.webp" />
-<meta property="og:site_name" content="Tony Xu Blog" />
+
+<meta property="og:updated_time" content="2019-03-21T00:00:00&#43;00:00"/><meta property="og:site_name" content="Tony Xu Blog" />
 <meta property="og:image" content="https://tonyxu.io/images/og-image.png"/>
     
     
     <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://tonyxu.io/images/og-image.png"/>
-
-<meta name="twitter:title" content="Search"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:image" content="https://tonyxu.io/books/thinking-in-java/cover.jpg"/>
+<meta name="twitter:title" content="Thinking In Java"/>
+<meta name="twitter:description" content="The definitive introduction to object-oriented programming in the language of the world wide web"/>
 
     
      
@@ -64,7 +60,8 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
  
     
-    <link rel="canonical" href="https://tonyxu.io/search/"> 
+    <link rel="alternate" type="application/rss+xml" href="https://tonyxu.io/books/thinking-in-java/index.xml" title="Tony Xu Blog" />
+    <link rel="canonical" href="https://tonyxu.io/books/thinking-in-java/"> 
 
      
 
@@ -141,7 +138,7 @@ if (!doNotTrack) {
         <a itemprop="url" class="navbar-item "
           href="/about/"><span itemprop="name" class="is-uppercase">About</span></a>
         
-        <a itemprop="url" class="navbar-item "
+        <a itemprop="url" class="navbar-item  is-active"
           href="/books/"><span itemprop="name" class="is-uppercase">Books</span></a>
         
         <a itemprop="url" class="navbar-item "
@@ -150,24 +147,6 @@ if (!doNotTrack) {
         <a itemprop="url" class="navbar-item "
           href="/posts/"><span itemprop="name" class="is-uppercase">Posts</span></a>
         
-        
-        <div class="navbar-item">
-          <div class="field">
-            <div class="control has-icons-left">
-              <div class="select is-rounded is-small">
-                <select size="1" name="links" onchange="window.location.href=this.value;">
-                  <option selected disabled>English</option>
-                  
-                  <option value="https://tonyxu.io/zh/search/">中文</option>
-                  
-                </select>
-              </div>
-              <div class="icon is-small is-left">
-                  <span class="icon-language has-text-black"></span>
-              </div>
-            </div>
-          </div>
-        </div>
         
         <a class="navbar-item" href="/search">
           <span class="icon">
@@ -180,88 +159,56 @@ if (!doNotTrack) {
 
 </nav> </header>
     <main>
-<script src="https://cdn.jsdelivr.net/algoliasearch/3.32.0/algoliasearchLite.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@3.1.1"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.0/themes/algolia-min.css">
 
-
-<script>
-  document.addEventListener("DOMContentLoaded", function(event) {
-    const searchClient = algoliasearch(
-  '4075BLVEAE',
-  'ad0b0155fdfad25286c777d34ebb14e0'
-);
-
-const search = instantsearch({
-  indexName: 'tonyxu.io',
-  searchClient,
-  searchParameters: {
-    filters: 'lang:en'
-  },
-});
-
-search.addWidget(
-  instantsearch.widgets.searchBox({
-    container: '#searchbox',
-    cssClasses: {
-      input: 'input is-medium'
-    }
-  })
-);
-
-
-const renderHits = (renderOptions, isFirstRender) => {
-  const { hits, widgetParams } = renderOptions;
-
-  widgetParams.container.innerHTML = `
-    <div class="columns is-multiline">
-      ${hits
-        .map(
-          item =>
-            `<div class="column is-4">
-              <a class="box" href="${item.relpermalink}"><p class="text">${instantsearch.highlight({ attribute: 'title', hit: item })}</p></a>
-            </div>`
-        )
-        .join('')}
+<div class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2 has-text-centered">
+        <p class="title">Thinking In Java</p>
+        <p class="subtitle">The definitive introduction to object-oriented programming in the language of the world wide web</p>
+      </div>
     </div>
-  `;
-};
-
-
-const customHits = instantsearch.connectors.connectHits(renderHits);
-
-
-search.addWidget(
-  customHits({
-    container: document.querySelector('#hits'),
-  })
-);
-
-  search.start();
-  });
+    <br />
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        
+        
+        <p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
   
-</script>
-<section class="hero is-light">
-  <div class="hero-body">
-    <div class="container has-text-centered">
-      <h1 class="title">
-        Search
-      </h1>
-      <div class="columns">
-        <div class="column is-half is-offset-one-quarter">
-          
-          <div id="searchbox">
-            
-          </div>
-        </div>
+03/21/2019
+
+</p>
+<p class="subtitle">
+  <a href="https://tonyxu.io/books/thinking-in-java/chapter-1/" itemprop="headline">Chapter 1 - Introduction to Objects</a>
+</p>
+
+        The progress of abstraction Five basic characteristics of object-oriented programming:
+ Everything is an object.
+ A program is a bunch of objects telling each other what to do by sending messages.
+ Each object has its own memory made up of other objects.
+ Every object has a type
+ All objects of a particular type can receive the same messages.
+  An object has an interface The interface determines what request you can make for a particular object.
+        <hr />
+        
+        
       </div>
     </div>
   </div>
-</section>
-<div class="container">
-      <div id="hits" class="section">
-        </div>
-  
+  <div class="container">
+    <nav class="level is-mobile">
+  <div class="level-left">
+    <div class="level-item">
+      
+    </div>
+  </div>
+  <div class="level-right">
+    <div class="level-item">
+      
+    </div>
+  </div>
+</nav>
+  </div>
 </div>
 </main>
     <footer>

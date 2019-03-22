@@ -6,9 +6,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Search | Tony Xu Blog</title>
+    <title>Books - Learning Notes of Books I Read | Tony Xu Blog</title>
 
-     
+    
+    <meta name="description" content="Learning Notes of Books I Read">  
 
     
     <meta name="author" content="Tony Xu"> 
@@ -18,36 +19,32 @@
     
     
     
+      <meta name="robots" content="noindex">
     
     
-<meta itemprop="name" content="Search">
-<meta itemprop="description" content="">
+    
+<meta itemprop="name" content="Books">
+<meta itemprop="description" content="Learning Notes of Books I Read">
 
 
-
-<meta itemprop="wordCount" content="0">
-
-
-
-<meta itemprop="keywords" content="" />
-
-    <meta property="og:title" content="Search" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://tonyxu.io/search/" />
+    <meta property="og:title" content="Books" />
+<meta property="og:description" content="Learning Notes of Books I Read" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://tonyxu.io/books/" />
 
 <meta property="og:image" content="https://tonyxu.io/images/og-image.png" />
 
 <meta property="og:image" content="https://tonyxu.io/images/square-logo.webp" />
-<meta property="og:site_name" content="Tony Xu Blog" />
+
+<meta property="og:updated_time" content="2019-02-22T00:00:00&#43;00:00"/><meta property="og:site_name" content="Tony Xu Blog" />
 <meta property="og:image" content="https://tonyxu.io/images/og-image.png"/>
     
     
     <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://tonyxu.io/images/og-image.png"/>
 
-<meta name="twitter:title" content="Search"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Books"/>
+<meta name="twitter:description" content="Learning Notes of Books I Read"/>
 
     
      
@@ -64,7 +61,8 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
  
     
-    <link rel="canonical" href="https://tonyxu.io/search/"> 
+    <link rel="alternate" type="application/rss+xml" href="https://tonyxu.io/books/index.xml" title="Tony Xu Blog" />
+    <link rel="canonical" href="https://tonyxu.io/books/"> 
 
      
 
@@ -141,7 +139,7 @@ if (!doNotTrack) {
         <a itemprop="url" class="navbar-item "
           href="/about/"><span itemprop="name" class="is-uppercase">About</span></a>
         
-        <a itemprop="url" class="navbar-item "
+        <a itemprop="url" class="navbar-item  is-active"
           href="/books/"><span itemprop="name" class="is-uppercase">Books</span></a>
         
         <a itemprop="url" class="navbar-item "
@@ -150,24 +148,6 @@ if (!doNotTrack) {
         <a itemprop="url" class="navbar-item "
           href="/posts/"><span itemprop="name" class="is-uppercase">Posts</span></a>
         
-        
-        <div class="navbar-item">
-          <div class="field">
-            <div class="control has-icons-left">
-              <div class="select is-rounded is-small">
-                <select size="1" name="links" onchange="window.location.href=this.value;">
-                  <option selected disabled>English</option>
-                  
-                  <option value="https://tonyxu.io/zh/search/">中文</option>
-                  
-                </select>
-              </div>
-              <div class="icon is-small is-left">
-                  <span class="icon-language has-text-black"></span>
-              </div>
-            </div>
-          </div>
-        </div>
         
         <a class="navbar-item" href="/search">
           <span class="icon">
@@ -180,88 +160,52 @@ if (!doNotTrack) {
 
 </nav> </header>
     <main>
-<script src="https://cdn.jsdelivr.net/algoliasearch/3.32.0/algoliasearchLite.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@3.1.1"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.0/themes/algolia-min.css">
 
-
-<script>
-  document.addEventListener("DOMContentLoaded", function(event) {
-    const searchClient = algoliasearch(
-  '4075BLVEAE',
-  'ad0b0155fdfad25286c777d34ebb14e0'
-);
-
-const search = instantsearch({
-  indexName: 'tonyxu.io',
-  searchClient,
-  searchParameters: {
-    filters: 'lang:en'
-  },
-});
-
-search.addWidget(
-  instantsearch.widgets.searchBox({
-    container: '#searchbox',
-    cssClasses: {
-      input: 'input is-medium'
-    }
-  })
-);
-
-
-const renderHits = (renderOptions, isFirstRender) => {
-  const { hits, widgetParams } = renderOptions;
-
-  widgetParams.container.innerHTML = `
-    <div class="columns is-multiline">
-      ${hits
-        .map(
-          item =>
-            `<div class="column is-4">
-              <a class="box" href="${item.relpermalink}"><p class="text">${instantsearch.highlight({ attribute: 'title', hit: item })}</p></a>
-            </div>`
-        )
-        .join('')}
+<div class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2 has-text-centered">
+        <p class="title">Books</p>
+        <p class="subtitle">Learning Notes of Books I Read</p>
+      </div>
     </div>
-  `;
-};
-
-
-const customHits = instantsearch.connectors.connectHits(renderHits);
-
-
-search.addWidget(
-  customHits({
-    container: document.querySelector('#hits'),
-  })
-);
-
-  search.start();
-  });
-  
-</script>
-<section class="hero is-light">
-  <div class="hero-body">
-    <div class="container has-text-centered">
-      <h1 class="title">
-        Search
-      </h1>
-      <div class="columns">
-        <div class="column is-half is-offset-one-quarter">
+    <br />
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <div class="columns">
           
-          <div id="searchbox">
-            
+          <div class="column is-5">
+            <div class="card" href="https://tonyxu.io/books/thinking-in-java/">
+              <div class="card-image">
+                <figure class="image">
+                  <img src="https://tonyxu.io/books/thinking-in-java/cover.jpg" alt="Thinking In Java">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="title is-4"><a href="https://tonyxu.io/books/thinking-in-java/">Thinking In Java</a></div>
+                <div class="text">The definitive introduction to object-oriented programming in the language of the world wide web</div>
+              </div>
+            </div>
           </div>
+          
         </div>
       </div>
     </div>
   </div>
-</section>
-<div class="container">
-      <div id="hits" class="section">
-        </div>
-  
+  <div class="container">
+    <nav class="level is-mobile">
+  <div class="level-left">
+    <div class="level-item">
+      
+    </div>
+  </div>
+  <div class="level-right">
+    <div class="level-item">
+      
+    </div>
+  </div>
+</nav>
+  </div>
 </div>
 </main>
     <footer>
