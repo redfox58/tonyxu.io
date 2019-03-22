@@ -32,6 +32,24 @@
 </section>
 
 <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-8 is-offset-2">
+          <div class="title is-4">{{ i18n "recent_books" }}</div>
+          {{ range first 3 (where .Pages "Section" "books") }}
+          <a class="box" href="{{ .Permalink }}">
+            <div class="heading">{{ with .CurrentSection }}{{ .Title }}{{ end }}</div>
+            <div class="text">{{.Title}}</div>
+            <p>{{ partial "date/date" . }}</p>
+          </a>
+          {{ end }}
+          <a href='{{ "/books" | relLangURL }}'>{{ i18n "read_more" }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="section">
   <div class="container">
     <div class="columns">
       <div class="column is-8 is-offset-2">

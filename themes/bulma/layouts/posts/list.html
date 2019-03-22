@@ -17,10 +17,11 @@
       <div class="columns">
           <div class="column is-8 is-offset-2">
               {{ range (.Paginate (.Pages.GroupByDate "2006")).PageGroups }}
-              <p class="title is-4">{{ .Key }}</h3>
+              <p class="title is-4">{{ .Key }}</p>
                   {{ range .Pages }}
                   {{ partial "page-summary" . }}
                   {{ end }}
+              <br />
               {{ end }}
             </div>
       </div>

@@ -1,0 +1,46 @@
+{{ define "header" }} {{ partial "menu" . }} {{ end }}
+{{ define "title" -}}
+{{ .Title }} - {{ .Description }} | {{ .Site.Title }}
+{{- end }}
+
+{{ define "main" }}
+
+<div class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2 has-text-centered">
+        <p class="title">{{.Title}}</p>
+        <p class="subtitle">{{.Description}}</p>
+      </div>
+    </div>
+    <br />
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <div class="columns">
+          {{ range .Sections }}
+          <div class="column is-5">
+            <div class="card" href="{{ .Permalink }}">
+              <div class="card-image">
+                <figure class="image">
+                  <img src="{{ .Permalink }}{{ .Params.cover_image }}" alt="{{ .Title }}">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="title is-4"><a href="{{.Permalink}}">{{ .Title }}</a></div>
+                <div class="text">{{ .Description }}</div>
+              </div>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    {{ partial "pagination" . }}
+  </div>
+</div>
+{{ end }}
+{{ define "footer" }}
+{{ partial "footer" . }}
+{{ end }}
