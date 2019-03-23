@@ -30,9 +30,9 @@
   An object has an interface The interface determines what request you can make for a particular object.">
 
 
-<meta itemprop="datePublished" content="2019-03-21T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-03-21T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="158">
+<meta itemprop="datePublished" content="2019-03-22T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-03-22T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="420">
 
 
 
@@ -52,8 +52,8 @@
 <meta property="og:image" content="https://tonyxu.io/images/og-image.png" />
 
 <meta property="og:image" content="https://tonyxu.io/images/square-logo.webp" />
-<meta property="article:published_time" content="2019-03-21T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2019-03-21T00:00:00&#43;00:00"/><meta property="og:site_name" content="Tony Xu Blog" />
+<meta property="article:published_time" content="2019-03-22T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2019-03-22T00:00:00&#43;00:00"/><meta property="og:site_name" content="Tony Xu Blog" />
 <meta property="og:image" content="https://tonyxu.io/images/og-image.png"/>
     
     
@@ -252,8 +252,55 @@ if (!doNotTrack) {
 <ul>
 <li><code>public</code>: The following element is available to everyone<br /></li>
 <li><code>private</code>: No one can access that element except you, the creator of the type, inside methods of that type.<br /></li>
-<li><code>protected</code>: Acts like <code>private</code>, with the exception that an inheriting class has access to <code>protected</code> members, but not <code>private</code>members.<br /></li>
+<li><code>protected</code>: Acts like <code>private</code>, with the exception that an inheriting class has access to <code>protected</code> members, but not <code>private</code>members.<br />
+<br /></li>
 </ul>
+
+<h2 id="reusing-the-implementation">Reusing the implementation</h2>
+
+<p>Code reuse is one of the greatest advantages that object-oriented programming languages provide.</p>
+
+<p>You can reuse the implementation by:</p>
+
+<ul>
+<li>Composition: Use the class inside a new class<br /></li>
+<li>Inheritance: Clone the existing class, then make additions and modifications to the clone.<br />
+<br /></li>
+</ul>
+
+<h2 id="inheritance">Inheritance</h2>
+
+<p>New type cloned from existing type, contains not only all the members of the existing type, but more importantly it duplicates the interface of the base class.</p>
+
+<p>You can make the two types different by:</p>
+
+<ul>
+<li>Add new methods to the derived class<br /></li>
+<li>Change the behavior of an existing base-class method (Overriding)<br />
+<br /></li>
+</ul>
+
+<h2 id="is-a-vs-is-like-a-relationships">Is-a vs. is-like-a relationships</h2>
+
+<p><em>Pure substitution</em>, or <em>substitution principle</em> means: derived class is exactly the same type as the base class, and you can state, for example, &ldquo;A circle is a shape.&rdquo;.</p>
+
+<h2 id="interchangeable-objects-with-polymorphism">Interchangeable objects with polymorphism</h2>
+
+<p>In compile time, you don&rsquo;t know which derived type will call the method from base type. It can only be determined when the code is being executed.</p>
+
+<h2 id="the-singly-rooted-hierarchy">The singly rooted hierarchy</h2>
+
+<p>In Java, all classes are ultimately be inherited from a single base class, <em>Object</em>.</p>
+
+<h2 id="containers">Containers</h2>
+
+<p>A new object, called a <em>container</em>, holds references to other objects, will expand itself whenever necessary to accommodate everything you place inside it.</p>
+
+<h3 id="parameterized-types-generics">Parameterized types (generics)</h3>
+
+<p>Before Java SE5, containers hold the one universal type in Java: <em>Object</em>. From Java SE5, <em>generics</em> in Java allow you to create parameterized container that could be customized so that it would accept only a particular type.</p>
+
+<p>This eliminates the cost of downcasting and runtime checks for the upcasted object when fetch it back from container at run time.</p>
 
         </div>
       </div>
