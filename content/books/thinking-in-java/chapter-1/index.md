@@ -1,6 +1,6 @@
 ---
 title: Chapter 1 - Introduction to Objects
-date: 2019-03-21
+date: 2019-03-22
 ---
 
 ## The progress of abstraction
@@ -28,3 +28,43 @@ Java uses three explicit keywords to set the boundaries in a class:
 - `public`: The following element is available to everyone
 - `private`: No one can access that element except you, the creator of the type, inside methods of that type.
 - `protected`: Acts like `private`, with the exception that an inheriting class has access to `protected` members, but not `private`members.
+
+## Reusing the implementation
+
+Code reuse is one of the greatest advantages that object-oriented programming languages provide.
+
+You can reuse the implementation by:
+
+- Composition: Use the class inside a new class
+- Inheritance: Clone the existing class, then make additions and modifications to the clone.
+
+## Inheritance
+
+New type cloned from existing type, contains not only all the members of the existing type, but more importantly it duplicates the interface of the base class.
+
+You can make the two types different by:
+
+- Add new methods to the derived class
+- Change the behavior of an existing base-class method (Overriding)
+
+## Is-a vs. is-like-a relationships
+
+_Pure substitution_, or _substitution principle_ means: derived class is exactly the same type as the base class, and you can state, for example, "A circle is a shape.".
+
+## Interchangeable objects with polymorphism
+
+In compile time, you don't know which derived type will call the method from base type. It can only be determined when the code is being executed.
+
+## The singly rooted hierarchy
+
+In Java, all classes are ultimately be inherited from a single base class, _Object_.
+
+## Containers
+
+A new object, called a _container_, holds references to other objects, will expand itself whenever necessary to accommodate everything you place inside it.
+
+### Parameterized types (generics)
+
+Before Java SE5, containers hold the one universal type in Java: _Object_. From Java SE5, _generics_ in Java allow you to create parameterized container that could be customized so that it would accept only a particular type.
+
+This eliminates the cost of downcasting and runtime checks for the upcasted object when fetch it back from container at run time.
