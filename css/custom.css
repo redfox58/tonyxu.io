@@ -19,3 +19,31 @@
   content: '';
   margin: 0 5px
 }
+
+.card.is-horizontal.is-half .card-image {
+  flex: 6;
+}
+.card.is-horizontal.is-half .card-content {
+  flex: 6;
+}
+
+.card.is-horizontal.is-quarter .card-image {
+  flex: 3;
+}
+.card.is-horizontal.is-quarter .card-content {
+  flex: 9;
+}
+
+.card.is-horizontal.is-third .card-image {
+  flex: 4;
+}
+.card.is-horizontal.is-third .card-content {
+  flex: 8;
+}
+
+.card.is-horizontal.is-twothird .card-image {
+  flex: 8;
+}
+.card.is-horizontal.is-twothird .card-content {
+  flex: 4;
+}
