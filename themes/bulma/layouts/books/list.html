@@ -16,10 +16,9 @@
     <br />
     <div class="columns">
       <div class="column is-8 is-offset-2">
-        <div class="columns">
-          {{ range .Sections }}
-          <div class="column is-5">
-            <div class="card" href="{{ .Permalink }}">
+        {{ range .Sections }}
+        <!-- <div class="column is-5">
+            <div class="card is-horizontal" href="{{ .Permalink }}">
               <div class="card-image">
                 <figure class="image">
                   <img src="{{ .Permalink }}{{ .Params.cover_image }}" alt="{{ .Title }}">
@@ -30,9 +29,24 @@
                 <div class="text">{{ .Description }}</div>
               </div>
             </div>
+          </div> -->
+          <div class="card">
+            <div class="card-content">
+              <div class="columns is-mobile">
+                <div class="column is-one-quarter-desktop is-one-quarter-tablet is-one-third-mobile">
+                    <img src="{{ .Permalink }}{{ .Params.cover_image }}" alt="{{ .Title }}">
+                </div>
+                <div class="column">
+                  <div class="title is-4">{{ .Title }}</div>
+                  <div class="text">{{ .Description }}</div>
+                  <br />
+                  <a href="{{.Permalink}}">{{ i18n "read_my_notes" }} →</a>
+                </div>
+              </div>
+            </div>
           </div>
-          {{ end }}
-        </div>
+        
+        {{ end }}
       </div>
     </div>
   </div>
