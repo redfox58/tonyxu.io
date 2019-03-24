@@ -1,5 +1,5 @@
 ---
 title: Book Notes
-description: Learning Notes of Books I Read
+description: Learning notes of books I read
 date: 2019-02-22
 ---

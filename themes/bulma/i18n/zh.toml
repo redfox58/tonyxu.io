@@ -40,8 +40,17 @@ other="阅读我的读书笔记"
 [book_notes]
 other="读书笔记"
 
+[book_notes_description]
+other="记录我阅读的书的学习笔记"
+
 [blog_posts]
 other="博客文章"
 
+[blog_posts_description]
+other="对于人生和代码的思考"
+
 [good_reads]
 other="推荐阅读"
+
+[good_reads_description]
+other="在互联网上阅读到值得推荐的新闻、博客、文章"

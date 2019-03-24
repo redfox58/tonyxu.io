@@ -31,11 +31,20 @@ other="Read my learning notes"
 [book_notes]
 other="Book Notes"
 
+[book_notes_description]
+other="Learning notes of books I read"
+
 [blog_posts]
 other="Blog Posts"
 
+[blog_posts_description]
+other="My thoughts of life and code"
+
 [good_reads]
 other="Good Reads"
+
+[good_reads_description]
+other="News, blog, and articles I read and find interesting"
 
 [see_all]
 other="See all →"

@@ -47,3 +47,7 @@
 .card.is-horizontal.is-twothird .card-content {
   flex: 4;
 }
+
+.index_section + .index_section {
+  margin-top: 3em;
+}
