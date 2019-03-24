@@ -2,7 +2,7 @@
 <html lang="en-US" class="has-navbar-fixed-top">
 
 <head>
-    <meta name="generator" content="Hugo 0.55.0-DEV" />
+    <meta name="generator" content="Hugo 0.54.0" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -140,12 +140,6 @@ if (!doNotTrack) {
         <a itemprop="url" class="navbar-item "
           href="/zh/about/"><span itemprop="name" class="is-uppercase">关于</span></a>
         
-        <a itemprop="url" class="navbar-item "
-          href="/zh/reads/"><span itemprop="name" class="is-uppercase">推荐阅读</span></a>
-        
-        <a itemprop="url" class="navbar-item "
-          href="/zh/posts/"><span itemprop="name" class="is-uppercase">文章</span></a>
-        
         
         <div class="navbar-item">
           <div class="field">
@@ -190,110 +184,149 @@ if (!doNotTrack) {
     </div>
   </div>
 </section>
-
-<section class="section">
+<section class="section" id="tabs_section">
   <div class="container">
     <div class="columns">
       <div class="column is-8 is-offset-2">
-        <div class="title is-4">最新文章</div>
-        
-        <a class="box" href="https://tonyxu.io/zh/posts/2019/top-engineering-blogs-from-tech-companies-to-follow-in-2019/">
-          <h1>2019年最值得关注的国外科技公司技术博客</h1>
-          <p><p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
+        <div class="tabs">
+          <ul>
+            <li class="tablinks is-active"><a onclick="openTab(event, 'posts')">博客文章</a></li>
+            <li class="tablinks"><a onclick="openTab(event, 'books')">读书笔记</a></li>
+            <li class="tablinks"><a onclick="openTab(event, 'reads')">推荐阅读</a></li>
+          </ul>
+        </div>
+        <div id="posts" class="tabcontent">
+          
+          <a class="box" href="https://tonyxu.io/zh/posts/2019/top-engineering-blogs-from-tech-companies-to-follow-in-2019/">
+            <h1>2019年最值得关注的国外科技公司技术博客</h1>
+            <p><p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
   
 2019-03-11
 
 </p></p>
-        </a>
-        
-        <a class="box" href="https://tonyxu.io/zh/posts/2019/my-productivity-tools-and-development-setup-recommended-to-software-engineers/">
-          <h1>我的生产效率工具和开发环境（推荐给软件工程师们）</h1>
-          <p><p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
+          </a>
+          
+          <a class="box" href="https://tonyxu.io/zh/posts/2019/my-productivity-tools-and-development-setup-recommended-to-software-engineers/">
+            <h1>我的生产效率工具和开发环境（推荐给软件工程师们）</h1>
+            <p><p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
   
 2019-02-01
 
 </p></p>
-        </a>
-        
-        <a class="box" href="https://tonyxu.io/zh/posts/2019/use-github-to-mange-personal-knowledge-base/">
-          <h1>使用GitHub做个人知识和项目管理</h1>
-          <p><p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
+          </a>
+          
+          <a class="box" href="https://tonyxu.io/zh/posts/2019/use-github-to-mange-personal-knowledge-base/">
+            <h1>使用GitHub做个人知识和项目管理</h1>
+            <p><p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
   
 2019-01-21
 
 </p></p>
-        </a>
-        
-        <a href='/zh/posts'>阅读更多...</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-    <div class="container">
-      <div class="columns">
-        <div class="column is-8 is-offset-2">
-          <div class="title is-4">最近读书笔记</div>
+          </a>
           
-          <a href='/zh/books'>阅读更多...</a>
-        </div>
-      </div>
-    </div>
-  </section>
+          <a class="box" href="https://tonyxu.io/zh/posts/2018/technologies-learned-as-a-software-engineer/">
+            <h1>作为软件工程师需要掌握的技能</h1>
+            <p><p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
+  
+2018-12-06
 
-<section class="section">
-  <div class="container">
-    <div class="columns">
-      <div class="column is-8 is-offset-2">
-        <div class="title is-4">最新阅读推荐</div>
-        
-        <a class="box" href="https://tonyxu.io/zh/reads/2019-03-15/">
-          <p><div class="heading">
+</p></p>
+          </a>
+          
+          <a class="box" href="https://tonyxu.io/zh/posts/2018/embed-google-analytics-dashboard-on-website/">
+            <h1>嵌入Google Analytics图表到你的网站</h1>
+            <p><p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
+  
+2018-10-15
+
+</p></p>
+          </a>
+          
+          <nav class="level">
+            <div class="level-left"></div>
+            <div class="level-right">
+              <a class="button is-info is-rounded" href='/zh/posts'>See all →</a>
+            </div>
+          </nav>
+        </div>
+        <div id="books" class="tabcontent" style="display:none">
+          
+          <nav class="level">
+            <div class="level-left"></div>
+            <div class="level-right">
+              <a class="button is-info is-rounded" href='/zh/books'>See all →</a>
+            </div>
+          </nav>
+        </div>
+        <div id="reads" class="tabcontent" style="display:none">
+          
+          <a class="box" href="https://tonyxu.io/zh/reads/2019-03-15/">
+            <p><div class="heading">
   
 第4期
 
 </div>
 </p>
-          <h1>停止学习框架</h1>
-          <p><p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
+            <h1>停止学习框架</h1>
+            <p><p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
   
 2019-03-15
 
 </p></p>
-        </a>
-        
-        <a class="box" href="https://tonyxu.io/zh/reads/2019-03-09/">
-          <p><div class="heading">
+          </a>
+          
+          <a class="box" href="https://tonyxu.io/zh/reads/2019-03-09/">
+            <p><div class="heading">
   
 第3期
 
 </div>
 </p>
-          <h1>Medium的微服务架构</h1>
-          <p><p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
+            <h1>Medium的微服务架构</h1>
+            <p><p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
   
 2019-03-09
 
 </p></p>
-        </a>
-        
-        <a class="box" href="https://tonyxu.io/zh/reads/2019-03-06/">
-          <p><div class="heading">
+          </a>
+          
+          <a class="box" href="https://tonyxu.io/zh/reads/2019-03-06/">
+            <p><div class="heading">
   
 第2期
 
 </div>
 </p>
-          <h1>这就是硅谷</h1>
-          <p><p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
+            <h1>这就是硅谷</h1>
+            <p><p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
   
 2019-03-06
 
 </p></p>
-        </a>
-        
-        <a href='/zh/posts'>阅读更多...</a>
+          </a>
+          
+          <a class="box" href="https://tonyxu.io/zh/reads/2019-03-03/">
+            <p><div class="heading">
+  
+第1期
+
+</div>
+</p>
+            <h1>协调世界时已经足够了，是吗?</h1>
+            <p><p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
+  
+2019-03-03
+
+</p></p>
+          </a>
+          
+          <nav class="level">
+            <div class="level-left"></div>
+            <div class="level-right">
+              <a class="button is-info is-rounded" href='/zh/reads'>See all →</a>
+            </div>
+          </nav>
+        </div>
       </div>
     </div>
   </div>
@@ -311,7 +344,23 @@ if (!doNotTrack) {
 
 
   </div>
-</section> </main>
+</section>
+
+<script>
+  function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" is-active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.parentElement.className += " is-active";
+  }
+</script> </main>
     <footer> <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">

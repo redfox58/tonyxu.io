@@ -2,7 +2,7 @@
 <html lang="en-US" class="has-navbar-fixed-top">
 
 <head>
-    <meta name="generator" content="Hugo 0.55.0-DEV" />
+    <meta name="generator" content="Hugo 0.54.0" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,7 +26,7 @@
 
 <meta itemprop="datePublished" content="2018-08-07T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-08-07T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="447">
+<meta itemprop="wordCount" content="449">
 
 
 
@@ -143,15 +143,6 @@ if (!doNotTrack) {
         <a itemprop="url" class="navbar-item "
           href="/about/"><span itemprop="name" class="is-uppercase">About</span></a>
         
-        <a itemprop="url" class="navbar-item "
-          href="/books/"><span itemprop="name" class="is-uppercase">Book Notes</span></a>
-        
-        <a itemprop="url" class="navbar-item "
-          href="/reads/"><span itemprop="name" class="is-uppercase">Good Reads</span></a>
-        
-        <a itemprop="url" class="navbar-item  is-active"
-          href="/posts/"><span itemprop="name" class="is-uppercase">Posts</span></a>
-        
         
         <div class="navbar-item">
           <div class="field">
@@ -192,7 +183,7 @@ if (!doNotTrack) {
 
 <meta itemprop="datePublished" content="2018-08-07T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-08-07T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="447">
+<meta itemprop="wordCount" content="449">
 
 
 
@@ -287,13 +278,16 @@ if (!doNotTrack) {
 <p>Now, let&rsquo;s make use of Firebase Cloud Function to host some server-side logic to count website hit. In this piece of code, we will connect Cloud Function with Firebase Realtime Database so that the function can update hit counter stored in the database.</p>
 
 <ol>
-<li><p>Initialize Cloud Function</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">firebase init functions</code></pre></div></li>
-
-<li><p>Create <code>hit_counter</code> node in Firebase Realtime Database and set value to 0</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;hit_counter&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span>
-<span style="color:#000;font-weight:bold">}</span></code></pre></div></li>
+<li>Initialize Cloud Function<br />
+<code>sh
+firebase init functions
+</code><br /></li>
+<li>Create <code>hit_counter</code> node in Firebase Realtime Database and set value to 0<br />
+<code>json
+{
+    &quot;hit_counter&quot;: 0
+}
+</code><br /></li>
 
 <li><p>Edit Cloud Function Code (<code>Index.js</code>)</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#204a87;font-weight:bold">const</span> <span style="color:#000">functions</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">require</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;firebase-functions&#34;</span><span style="color:#000;font-weight:bold">);</span>

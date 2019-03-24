@@ -178,9 +178,9 @@ let privateKey = require(&amp;#34;./google_key.json&amp;#34;);  Return Google ac
 参考Quickstart学习如何在 Firebase 部署你的第一个静态网站
 创建 Firebase 云函数 现在，我们来创建 Firebase 云函数来执行后端代码处理统计数字的更新。在这段代码中，我们将云函数连接实时数据库，并让它能够更新存储在数据库里的统计数字。
  初始化云函数
-firebase init functions 在实时数据库创建hit_counter节点并把值设为 0
-{ &amp;#34;hit_counter&amp;#34;: 0 } 编辑云函数代码 (Index.js)
-const functions = require(&amp;#34;firebase-functions&amp;#34;); const admin = require(&amp;#34;firebase-admin&amp;#34;); admin.initializeApp(); exports.hitCounter = functions.</description>
+  firebase init functions  在实时数据库创建hit_counter节点并把值设为 0
+  { &amp;#34;hit_counter&amp;#34;: 0 }  编辑云函数代码 (Index.js)
+  const functions = require(&amp;#34;firebase-functions&amp;#34;); const admin = require(&amp;#34;firebase-admin&amp;#34;); admin.</description>
     </item>
     
     <item>

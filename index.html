@@ -2,7 +2,7 @@
 <html lang="en-US" class="has-navbar-fixed-top">
 
 <head>
-    <meta name="generator" content="Hugo 0.55.0-DEV" />
+    <meta name="generator" content="Hugo 0.54.0" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -140,15 +140,6 @@ if (!doNotTrack) {
         <a itemprop="url" class="navbar-item "
           href="/about/"><span itemprop="name" class="is-uppercase">About</span></a>
         
-        <a itemprop="url" class="navbar-item "
-          href="/books/"><span itemprop="name" class="is-uppercase">Book Notes</span></a>
-        
-        <a itemprop="url" class="navbar-item "
-          href="/reads/"><span itemprop="name" class="is-uppercase">Good Reads</span></a>
-        
-        <a itemprop="url" class="navbar-item "
-          href="/posts/"><span itemprop="name" class="is-uppercase">Posts</span></a>
-        
         
         <div class="navbar-item">
           <div class="field">
@@ -193,51 +184,72 @@ if (!doNotTrack) {
     </div>
   </div>
 </section>
-
-<section class="section">
+<section class="section" id="tabs_section">
   <div class="container">
     <div class="columns">
       <div class="column is-8 is-offset-2">
-        <div class="title is-4">Recent Posts</div>
-        
-        <a class="box" href="https://tonyxu.io/posts/2019/top-engineering-blogs-from-tech-companies-to-follow-in-2019/">
-          <h1>Top Engineering Blogs from Tech Companies to Follow in 2019</h1>
-          <p><p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
+        <div class="tabs">
+          <ul>
+            <li class="tablinks is-active"><a onclick="openTab(event, 'posts')">Blog Posts</a></li>
+            <li class="tablinks"><a onclick="openTab(event, 'books')">Book Notes</a></li>
+            <li class="tablinks"><a onclick="openTab(event, 'reads')">Good Reads</a></li>
+          </ul>
+        </div>
+        <div id="posts" class="tabcontent">
+          
+          <a class="box" href="https://tonyxu.io/posts/2019/top-engineering-blogs-from-tech-companies-to-follow-in-2019/">
+            <h1>Top Engineering Blogs from Tech Companies to Follow in 2019</h1>
+            <p><p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
   
 03/11/2019
 
 </p></p>
-        </a>
-        
-        <a class="box" href="https://tonyxu.io/posts/2019/my-productivity-tools-and-development-setup-recommended-to-software-engineers/">
-          <h1>My Productivity Tools and Development Setup Recommended to Software Engineers</h1>
-          <p><p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
+          </a>
+          
+          <a class="box" href="https://tonyxu.io/posts/2019/my-productivity-tools-and-development-setup-recommended-to-software-engineers/">
+            <h1>My Productivity Tools and Development Setup Recommended to Software Engineers</h1>
+            <p><p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
   
 02/01/2019
 
 </p></p>
-        </a>
-        
-        <a class="box" href="https://tonyxu.io/posts/2019/use-github-to-mange-personal-knowledge-base/">
-          <h1>Use GitHub for Knowledge Base and Projects Management</h1>
-          <p><p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
+          </a>
+          
+          <a class="box" href="https://tonyxu.io/posts/2019/use-github-to-mange-personal-knowledge-base/">
+            <h1>Use GitHub for Knowledge Base and Projects Management</h1>
+            <p><p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
   
 01/21/2019
 
 </p></p>
-        </a>
-        
-        <a href='/posts'>read more...</a>
-      </div>
-    </div>
-  </div>
-</section>
+          </a>
+          
+          <a class="box" href="https://tonyxu.io/posts/2018/technologies-learned-as-a-software-engineer/">
+            <h1>Technologies Learned as a Software Engineer</h1>
+            <p><p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
+  
+12/06/2018
 
-<section class="section">
-    <div class="container">
-      <div class="columns">
-        <div class="column is-8 is-offset-2">
-          <div class="title is-4">Recent Book Notes</div>
+</p></p>
+          </a>
+          
+          <a class="box" href="https://tonyxu.io/posts/2018/embed-google-analytics-dashboard-on-website/">
+            <h1>Embed Google Analytics Dashboard on Website</h1>
+            <p><p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
+  
+10/15/2018
+
+</p></p>
+          </a>
+          
+          <nav class="level">
+            <div class="level-left"></div>
+            <div class="level-right">
+              <a class="button is-info is-rounded" href='/posts'>See all →</a>
+            </div>
+          </nav>
+        </div>
+        <div id="books" class="tabcontent" style="display:none">
           
           <a class="box" href="https://tonyxu.io/books/thinking-in-java/chapter-1/">
             <div class="heading">Thinking In Java</div>
@@ -249,64 +261,82 @@ if (!doNotTrack) {
 </p></p>
           </a>
           
-          <a href='/books'>read more...</a>
+          <nav class="level">
+            <div class="level-left"></div>
+            <div class="level-right">
+              <a class="button is-info is-rounded" href='/books'>See all →</a>
+            </div>
+          </nav>
         </div>
-      </div>
-    </div>
-  </section>
-
-<section class="section">
-  <div class="container">
-    <div class="columns">
-      <div class="column is-8 is-offset-2">
-        <div class="title is-4">Recent Good Reads</div>
-        
-        <a class="box" href="https://tonyxu.io/reads/2019-03-15/">
-          <p><div class="heading">
+        <div id="reads" class="tabcontent" style="display:none">
+          
+          <a class="box" href="https://tonyxu.io/reads/2019-03-15/">
+            <p><div class="heading">
   
 Release 4
 
 </div>
 </p>
-          <h1>Stop Learning Frameworks</h1>
-          <p><p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
+            <h1>Stop Learning Frameworks</h1>
+            <p><p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
   
 03/15/2019
 
 </p></p>
-        </a>
-        
-        <a class="box" href="https://tonyxu.io/reads/2019-03-09/">
-          <p><div class="heading">
+          </a>
+          
+          <a class="box" href="https://tonyxu.io/reads/2019-03-09/">
+            <p><div class="heading">
   
 Release 3
 
 </div>
 </p>
-          <h1>Microservice Architecture at Medium</h1>
-          <p><p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
+            <h1>Microservice Architecture at Medium</h1>
+            <p><p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
   
 03/09/2019
 
 </p></p>
-        </a>
-        
-        <a class="box" href="https://tonyxu.io/reads/2019-03-06/">
-          <p><div class="heading">
+          </a>
+          
+          <a class="box" href="https://tonyxu.io/reads/2019-03-06/">
+            <p><div class="heading">
   
 Release 2
 
 </div>
 </p>
-          <h1>This Is Silicon Valley</h1>
-          <p><p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
+            <h1>This Is Silicon Valley</h1>
+            <p><p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
   
 03/06/2019
 
 </p></p>
-        </a>
-        
-        <a href='/posts'>read more...</a>
+          </a>
+          
+          <a class="box" href="https://tonyxu.io/reads/2019-03-03/">
+            <p><div class="heading">
+  
+Release 1
+
+</div>
+</p>
+            <h1>UTC is Enough for Everyone, Right?</h1>
+            <p><p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
+  
+03/03/2019
+
+</p></p>
+          </a>
+          
+          <nav class="level">
+            <div class="level-left"></div>
+            <div class="level-right">
+              <a class="button is-info is-rounded" href='/reads'>See all →</a>
+            </div>
+          </nav>
+        </div>
       </div>
     </div>
   </div>
@@ -346,7 +376,23 @@ Release 2
 
 
   </div>
-</section> </main>
+</section>
+
+<script>
+  function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" is-active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.parentElement.className += " is-active";
+  }
+</script> </main>
     <footer> <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
