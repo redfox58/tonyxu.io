@@ -10,11 +10,30 @@
   <div class="container">
     <div class="columns">
       <div class="column is-8 is-offset-2">
-        {{ partial "breadcrumb" .}}
+          <div class="columns">
+              <div class="column is-8 is-offset-2 has-text-centered">
+                <div class="title"><a href="{{.Parent.Parent.URL | relLangURL}}">{{.Parent.Parent.Title}}</a></div>
+                <p class="subtitle">{{.CurrentSection.Title}}</p>
+              </div>
+            </div>
+            <hr />
         <p class="title">{{.Title}}</p>
+        <div class="columns is-mobile is-vcentered">
+            <div class="column has-text-grey has-text-weight-semibold">
+              {{ .Site.Params.author }}{{ partial "date/date" . }}
+            </div>
+            <div class="column has-text-right">
+              {{ partial "share" .}}
+            </div>
+          </div>
         <div class="content">
           {{ .Content}}
         </div>
+        <hr>
+        {{$sec := .Parent}}
+        {{with $sec}}
+        {{ partial "books/book_card" .}}
+        {{end}}
       </div>
     </div>
 

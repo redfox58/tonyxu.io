@@ -22,7 +22,7 @@
         {{ if .Site.Params.github}}
         <a class="navbar-item" target="blank" href="https://github.com/{{.Site.Params.github}}">
           <span class="icon">
-            <span class="icon-github"></span>
+              <i class="icon-github"></i>
           </span>
         </a>
         {{end}}
@@ -30,7 +30,7 @@
         {{ if .Site.Params.linkedin}}
         <a class="navbar-item" target="blank" href="https://www.linkedin.com/in/{{.Site.Params.linkedin}}">
           <span class="icon">
-            <span class="icon-linkedin-square"></span>
+              <i class="icon-linkedin-square"></i>
           </span>
         </a>
         {{end}}
@@ -47,7 +47,7 @@
                 <select size="1" name="links" onchange="window.location.href=this.value;">
                   <option selected disabled>{{ .Language.LanguageName }}</option>
                   {{ range .Translations }}
-                  <option value="{{ .Permalink }}">{{ .Language.LanguageName }}</option>
+                  <option value="{{ .RelPermalink }}">{{ .Language.LanguageName }}</option>
                   {{ end}}
                 </select>
               </div>
@@ -58,9 +58,9 @@
           </div>
         </div>
         {{ end }}
-        <a class="navbar-item" href="{{ "/search" | relLangURL}}">
+        <a class="navbar-item" href='{{ "/search" | relLangURL}}'>
           <span class="icon">
-            <span class="icon-search"></span>
+              <i class="icon-search"></i>
           </span>
         </a>
       </div>

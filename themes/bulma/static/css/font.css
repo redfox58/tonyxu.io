@@ -1,15 +1,15 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?u4ws8o');
-  src:  url('fonts/icomoon.eot?u4ws8o#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?u4ws8o') format('truetype'),
-    url('fonts/icomoon.woff?u4ws8o') format('woff'),
-    url('fonts/icomoon.svg?u4ws8o#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?9b2r75');
+  src:  url('fonts/icomoon.eot?9b2r75#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?9b2r75') format('truetype'),
+    url('fonts/icomoon.woff?9b2r75') format('woff'),
+    url('fonts/icomoon.svg?9b2r75#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+i {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: none;
@@ -27,8 +27,20 @@
 .icon-search:before {
   content: "\f002";
 }
+.icon-home:before {
+  content: "\f015";
+}
 .icon-qrcode:before {
   content: "\f029";
+}
+.icon-book:before {
+  content: "\f02d";
+}
+.icon-bookmark:before {
+  content: "\f02e";
+}
+.icon-pencil:before {
+  content: "\f040";
 }
 .icon-linkedin-square:before {
   content: "\f08c";

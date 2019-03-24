@@ -26,7 +26,7 @@
         </div>
         <div id="posts" class="tabcontent">
           {{ range first 5 (where .Pages "Section" "posts") }}
-          <a class="box" href="{{ .Permalink }}">
+          <a class="box" href="{{ .RelPermalink }}">
             <h1>{{.Title}}</h1>
             <p>{{ partial "date/date" . }}</p>
           </a>
@@ -40,7 +40,7 @@
         </div>
         <div id="books" class="tabcontent" style="display:none">
           {{ range first 5 (where .Pages "Section" "books") }}
-          <a class="box" href="{{ .Permalink }}">
+          <a class="box" href="{{ .RelPermalink }}">
             <div class="heading">{{ with .CurrentSection }}{{ .Title }}{{ end }}</div>
             <div class="text">{{.Title}}</div>
             <p>{{ partial "date/date" . }}</p>
@@ -55,7 +55,7 @@
         </div>
         <div id="reads" class="tabcontent" style="display:none">
           {{ range first 5 (where .Pages "Section" "reads") }}
-          <a class="box" href="{{ .Permalink }}">
+          <a class="box" href="{{ .RelPermalink }}">
             <p>{{ partial "read/read_issue_number" . }}</p>
             <h1>{{.Title}}</h1>
             <p>{{ partial "date/date" . }}</p>

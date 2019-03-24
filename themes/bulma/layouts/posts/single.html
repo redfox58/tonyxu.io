@@ -11,8 +11,14 @@
     {{ template "_internal/schema.html" . }}
     <div class="columns">
       <div class="column is-8 is-offset-2">
+          <div class="columns">
+              <div class="column is-8 is-offset-2 has-text-centered">
+                <div class="title"><a href="{{.CurrentSection.URL | relLangURL}}">{{.CurrentSection.Title}}</a></div>
+                <p class="subtitle">{{.CurrentSection.Description}}</p>
+              </div>
+            </div>
+            <hr />
         <p class="title">{{.Title}}</p>
-
         <div class="columns is-mobile is-vcentered">
           <div class="column has-text-grey has-text-weight-semibold">
             {{ .Site.Params.author }}{{ partial "date/date" . }}
