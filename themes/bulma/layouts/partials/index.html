@@ -13,55 +13,61 @@
     </div>
   </div>
 </section>
-
-<section class="section">
+<section class="section" id="tabs_section">
   <div class="container">
     <div class="columns">
       <div class="column is-8 is-offset-2">
-        <div class="title is-4">{{ i18n "recent_posts" }}</div>
-        {{ range first 3 (where .Pages "Section" "posts") }}
-        <a class="box" href="{{ .Permalink }}">
-          <h1>{{.Title}}</h1>
-          <p>{{ partial "date/date" . }}</p>
-        </a>
-        {{ end }}
-        <a href='{{ "/posts" | relLangURL }}'>{{ i18n "read_more" }}</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-    <div class="container">
-      <div class="columns">
-        <div class="column is-8 is-offset-2">
-          <div class="title is-4">{{ i18n "recent_books" }}</div>
-          {{ range first 3 (where .Pages "Section" "books") }}
+        <div class="tabs">
+          <ul>
+            <li class="tablinks is-active"><a onclick="openTab(event, 'posts')">{{ i18n "blog_posts" }}</a></li>
+            <li class="tablinks"><a onclick="openTab(event, 'books')">{{ i18n "book_notes" }}</a></li>
+            <li class="tablinks"><a onclick="openTab(event, 'reads')">{{ i18n "good_reads" }}</a></li>
+          </ul>
+        </div>
+        <div id="posts" class="tabcontent">
+          {{ range first 5 (where .Pages "Section" "posts") }}
+          <a class="box" href="{{ .Permalink }}">
+            <h1>{{.Title}}</h1>
+            <p>{{ partial "date/date" . }}</p>
+          </a>
+          {{ end }}
+          <nav class="level">
+            <div class="level-left"></div>
+            <div class="level-right">
+              <a class="button is-info is-rounded" href='{{ "/posts" | relLangURL }}'>{{ i18n "see_all" }}</a>
+            </div>
+          </nav>
+        </div>
+        <div id="books" class="tabcontent" style="display:none">
+          {{ range first 5 (where .Pages "Section" "books") }}
           <a class="box" href="{{ .Permalink }}">
             <div class="heading">{{ with .CurrentSection }}{{ .Title }}{{ end }}</div>
             <div class="text">{{.Title}}</div>
             <p>{{ partial "date/date" . }}</p>
           </a>
           {{ end }}
-          <a href='{{ "/books" | relLangURL }}'>{{ i18n "read_more" }}</a>
+          <nav class="level">
+            <div class="level-left"></div>
+            <div class="level-right">
+              <a class="button is-info is-rounded" href='{{ "/books" | relLangURL }}'>{{ i18n "see_all" }}</a>
+            </div>
+          </nav>
         </div>
-      </div>
-    </div>
-  </section>
-
-<section class="section">
-  <div class="container">
-    <div class="columns">
-      <div class="column is-8 is-offset-2">
-        <div class="title is-4">{{ i18n "recent_good_reads" }}</div>
-        {{ range first 3 (where .Pages "Section" "reads") }}
-        <a class="box" href="{{ .Permalink }}">
-          <p>{{ partial "read/read_issue_number" . }}</p>
-          <h1>{{.Title}}</h1>
-          <p>{{ partial "date/date" . }}</p>
-        </a>
-        {{ end }}
-        <a href='{{ "/posts" | relLangURL }}'>{{ i18n "read_more" }}</a>
+        <div id="reads" class="tabcontent" style="display:none">
+          {{ range first 5 (where .Pages "Section" "reads") }}
+          <a class="box" href="{{ .Permalink }}">
+            <p>{{ partial "read/read_issue_number" . }}</p>
+            <h1>{{.Title}}</h1>
+            <p>{{ partial "date/date" . }}</p>
+          </a>
+          {{ end }}
+          <nav class="level">
+            <div class="level-left"></div>
+            <div class="level-right">
+              <a class="button is-info is-rounded" href='{{ "/reads" | relLangURL }}'>{{ i18n "see_all" }}</a>
+            </div>
+          </nav>
+        </div>
       </div>
     </div>
   </div>
@@ -72,3 +78,19 @@
     {{ partial "promotion/promotion" .}}
   </div>
 </section>
+
+<script>
+  function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" is-active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.parentElement.className += " is-active";
+  }
+</script>

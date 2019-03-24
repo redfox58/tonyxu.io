@@ -36,3 +36,12 @@ other="最近读书笔记"
 
 [read_my_notes]
 other="阅读我的读书笔记"
+
+[book_notes]
+other="读书笔记"
+
+[blog_posts]
+other="博客文章"
+
+[good_reads]
+other="推荐阅读"

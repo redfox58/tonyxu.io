@@ -1,9 +1,3 @@
-[recent_posts]
-other = "Recent Posts"
-
-[recent_good_reads]
-other = "Recent Good Reads"
-
 [share_to_facebook]
 other="Share to Facebook"
 
@@ -31,8 +25,17 @@ other="Share with QR Code"
 [read_more]
 other="read more..."
 
-[recent_books]
-other="Recent Book Notes"
-
 [read_my_notes]
 other="Read my learning notes"
+
+[book_notes]
+other="Book Notes"
+
+[blog_posts]
+other="Blog Posts"
+
+[good_reads]
+other="Good Reads"
+
+[see_all]
+other="See all →"
