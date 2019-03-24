@@ -17,56 +17,54 @@
   <div class="container">
     <div class="columns">
       <div class="column is-8 is-offset-2">
-        <div class="tabs">
-          <ul>
-            <li class="tablinks is-active"><a onclick="openTab(event, 'posts')">{{ i18n "blog_posts" }}</a></li>
-            <li class="tablinks"><a onclick="openTab(event, 'books')">{{ i18n "book_notes" }}</a></li>
-            <li class="tablinks"><a onclick="openTab(event, 'reads')">{{ i18n "good_reads" }}</a></li>
-          </ul>
-        </div>
         <div id="posts" class="tabcontent">
-          {{ range first 5 (where .Pages "Section" "posts") }}
+          <div class="level">
+            <div class="level-left">
+              <div class="subtitle">{{i18n "blog_posts"}}</div>
+            </div>
+            <div class="level-right"> <a
+                href='{{ "/posts" | relLangURL }}'>{{ i18n "see_all" }}</a></div>
+          </div>
+          {{ range first 3 (where .Pages "Section" "posts") }}
           <a class="box" href="{{ .RelPermalink }}">
             <h1>{{.Title}}</h1>
             <p>{{ partial "date/date" . }}</p>
           </a>
           {{ end }}
-          <nav class="level">
-            <div class="level-left"></div>
-            <div class="level-right">
-              <a class="button is-info is-rounded" href='{{ "/posts" | relLangURL }}'>{{ i18n "see_all" }}</a>
-            </div>
-          </nav>
         </div>
-        <div id="books" class="tabcontent" style="display:none">
-          {{ range first 5 (where .Pages "Section" "books") }}
+        <hr>
+        <div id="books" class="tabcontent">
+          <div class="level">
+            <div class="level-left">
+              <div class="subtitle">{{i18n "book_notes"}}</div>
+            </div>
+            <div class="level-right"> <a
+                href='{{ "/books" | relLangURL }}'>{{ i18n "see_all" }}</a></div>
+          </div>
+          {{ range first 3 (where .Pages "Section" "books") }}
           <a class="box" href="{{ .RelPermalink }}">
             <div class="heading">{{ with .CurrentSection }}{{ .Title }}{{ end }}</div>
             <div class="text">{{.Title}}</div>
             <p>{{ partial "date/date" . }}</p>
           </a>
           {{ end }}
-          <nav class="level">
-            <div class="level-left"></div>
-            <div class="level-right">
-              <a class="button is-info is-rounded" href='{{ "/books" | relLangURL }}'>{{ i18n "see_all" }}</a>
-            </div>
-          </nav>
         </div>
-        <div id="reads" class="tabcontent" style="display:none">
-          {{ range first 5 (where .Pages "Section" "reads") }}
+        <hr>
+        <div id="reads" class="tabcontent">
+          <div class="level">
+            <div class="level-left">
+              <div class="subtitle">{{i18n "good_reads"}}</div>
+            </div>
+            <div class="level-right"> <a
+                href='{{ "/reads" | relLangURL }}'>{{ i18n "see_all" }}</a></div>
+          </div>
+          {{ range first 3 (where .Pages "Section" "reads") }}
           <a class="box" href="{{ .RelPermalink }}">
             <p>{{ partial "read/read_issue_number" . }}</p>
             <h1>{{.Title}}</h1>
             <p>{{ partial "date/date" . }}</p>
           </a>
           {{ end }}
-          <nav class="level">
-            <div class="level-left"></div>
-            <div class="level-right">
-              <a class="button is-info is-rounded" href='{{ "/reads" | relLangURL }}'>{{ i18n "see_all" }}</a>
-            </div>
-          </nav>
         </div>
       </div>
     </div>
