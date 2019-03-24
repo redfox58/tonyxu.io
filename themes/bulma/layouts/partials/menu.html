@@ -22,7 +22,7 @@
         {{ if .Site.Params.github}}
         <a class="navbar-item" target="blank" href="https://github.com/{{.Site.Params.github}}">
           <span class="icon">
-              <i class="icon-github"></i>
+            <i class="icon-github"></i>
           </span>
         </a>
         {{end}}
@@ -30,17 +30,23 @@
         {{ if .Site.Params.linkedin}}
         <a class="navbar-item" target="blank" href="https://www.linkedin.com/in/{{.Site.Params.linkedin}}">
           <span class="icon">
-              <i class="icon-linkedin-square"></i>
+            <i class="icon-linkedin-square"></i>
           </span>
         </a>
         {{end}}
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
-        <a itemprop="url" class="navbar-item {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} is-active{{end}}"
+        <a itemprop="url"
+          class="navbar-item {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} is-active{{end}}"
           href="{{.URL}}"><span itemprop="name" class="is-uppercase">{{ .Name }}</span></a>
         {{ end }}
-        {{ if .IsTranslated }}
+        <a class="navbar-item" href='{{ "/search" | relLangURL}}'>
+          <span class="icon">
+            <i class="icon-search"></i>
+          </span>
+        </a>
         <div class="navbar-item">
+          {{ if .IsTranslated }}
           <div class="field">
             <div class="control has-icons-left">
               <div class="select is-rounded is-small">
@@ -51,18 +57,13 @@
                   {{ end}}
                 </select>
               </div>
-              <div class="icon is-small is-left">
-                  <span class="icon-language has-text-black"></span>
+              <div class="icon is-small is-left has-text-black">
+                <i class="icon-language"></i>
               </div>
             </div>
           </div>
+          {{end}}
         </div>
-        {{ end }}
-        <a class="navbar-item" href='{{ "/search" | relLangURL}}'>
-          <span class="icon">
-              <i class="icon-search"></i>
-          </span>
-        </a>
       </div>
     </div>
   </div>
