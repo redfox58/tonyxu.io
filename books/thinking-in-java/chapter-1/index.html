@@ -144,7 +144,7 @@ if (!doNotTrack) {
         
         <a class="navbar-item" target="blank" href="https://github.com/tonyxu-io">
           <span class="icon">
-            <span class="icon-github"></span>
+              <i class="icon-github"></i>
           </span>
         </a>
         
@@ -152,7 +152,7 @@ if (!doNotTrack) {
         
         <a class="navbar-item" target="blank" href="https://www.linkedin.com/in/tonyxu93">
           <span class="icon">
-            <span class="icon-linkedin-square"></span>
+              <i class="icon-linkedin-square"></i>
           </span>
         </a>
         
@@ -162,9 +162,9 @@ if (!doNotTrack) {
           href="/about/"><span itemprop="name" class="is-uppercase">About</span></a>
         
         
-        <a class="navbar-item" href="/search">
+        <a class="navbar-item" href='/search'>
           <span class="icon">
-            <span class="icon-search"></span>
+              <i class="icon-search"></i>
           </span>
         </a>
       </div>
@@ -178,40 +178,71 @@ if (!doNotTrack) {
   <div class="container">
     <div class="columns">
       <div class="column is-8 is-offset-2">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-  <ul>
-    
-
-
-
-
-
-
-
-<li>
-  <a href="https://tonyxu.io/">Tony Xu Blog</a>
-  </li>
-  
-
-<li>
-  <a href="https://tonyxu.io/books/">Book Notes</a>
-  </li>
-  
-
-<li>
-  <a href="https://tonyxu.io/books/thinking-in-java/">Thinking In Java</a>
-  </li>
-  
-
-<li class="is-active" >
-  <a href="https://tonyxu.io/books/thinking-in-java/chapter-1/">Chapter 1 - Introduction to Objects</a>
-  </li>
-  
-  </ul>
-</nav>
-
-  
+          <div class="columns">
+              <div class="column is-8 is-offset-2 has-text-centered">
+                <div class="title"><a href="/books/">Book Notes</a></div>
+                <p class="subtitle">Thinking In Java</p>
+              </div>
+            </div>
+            <hr />
         <p class="title">Chapter 1 - Introduction to Objects</p>
+        <div class="columns is-mobile is-vcentered">
+            <div class="column has-text-grey has-text-weight-semibold">
+              Tony Xu<p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
+  
+03/22/2019
+
+</p>
+            </div>
+            <div class="column has-text-right">
+              <a class="button is-light" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftonyxu.io%2fbooks%2fthinking-in-java%2fchapter-1%2f" target="_blank" title="Share to Facebook">
+  <span class="icon">
+      <i class="icon-facebook"></i>
+  </span>
+</a>
+<a class="button is-light" href="https://www.linkedin.com/sharing/share-offsite?url=https%3a%2f%2ftonyxu.io%2fbooks%2fthinking-in-java%2fchapter-1%2f" target="_blank"
+  title="Share to LinkedIn">
+  <span class="icon">
+      <i class="icon-linkedin"></i>
+  </span>
+</a>
+<a id="open-qr-code" class="button is-light" href="" title="Share with QR Code">
+  <span class="icon">
+      <i class="icon-qrcode"></i>
+  </span>
+</a>
+<div class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <p class="image is-1by1">
+      <img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=https%3a%2f%2ftonyxu.io%2fbooks%2fthinking-in-java%2fchapter-1%2f&choe=UTF-8" alt="">
+    </p>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+<script>
+  document.querySelector('a#open-qr-code').addEventListener('click', function (event) {
+    event.preventDefault();
+    var modal = document.querySelector('.modal');
+    var html = document.querySelector('html');
+    modal.classList.add('is-active');
+    html.classList.add('is-clipped');
+
+    modal.querySelector('.modal-background').addEventListener('click', function (e) {
+      e.preventDefault();
+      modal.classList.remove('is-active');
+      html.classList.remove('is-clipped');
+    });
+
+    modal.querySelector('.modal-close').addEventListener('click', function (e) {
+      e.preventDefault();
+      modal.classList.remove('is-active');
+      html.classList.remove('is-clipped');
+    });
+  });
+</script>
+            </div>
+          </div>
         <div class="content">
           
 
@@ -294,6 +325,25 @@ if (!doNotTrack) {
 <p>This eliminates the cost of downcasting and runtime checks for the upcasted object when fetch it back from container at run time.</p>
 
         </div>
+        <hr>
+        
+        
+        <div class="card">
+  <div class="card-content">
+    <div class="columns is-mobile">
+      <div class="column is-one-quarter-desktop is-one-quarter-tablet is-one-third-mobile">
+        <img src="/books/thinking-in-java/cover.jpg" alt="Thinking In Java">
+      </div>
+      <div class="column">
+        <div class="title is-4">Thinking In Java</div>
+        <div class="text">The definitive introduction to object-oriented programming in the language of the world wide web</div>
+        <br />
+        <a href="/books/thinking-in-java/">Read my learning notes →</a>
+      </div>
+    </div>
+  </div>
+</div>
+        
       </div>
     </div>
 
