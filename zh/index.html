@@ -188,13 +188,15 @@ if (!doNotTrack) {
   <div class="container">
     <div class="columns">
       <div class="column is-8 is-offset-2">
-        <div id="posts" class="tabcontent">
-          <div class="level">
-            <div class="level-left">
-              <div class="subtitle">博客文章</div>
+        <div id="posts" class="index_section">
+          <div class="columns">
+            <div class="column">
+              <div class="title is-4">博客文章</div>
+              <div class="subtitle is-6">对于人生和代码的思考</div>
             </div>
-            <div class="level-right"> <a
-                href='/zh/posts'>See all →</a></div>
+            <div class="column has-text-right">
+              <a href='/zh/posts'>See all →</a>
+            </div>
           </div>
           
           <a class="box" href="/zh/posts/2019/top-engineering-blogs-from-tech-companies-to-follow-in-2019/">
@@ -225,26 +227,28 @@ if (!doNotTrack) {
           </a>
           
         </div>
-        <hr>
-        <div id="books" class="tabcontent">
-          <div class="level">
-            <div class="level-left">
-              <div class="subtitle">读书笔记</div>
-            </div>
-            <div class="level-right"> <a
-                href='/zh/books'>See all →</a></div>
-          </div>
+        <div id="books" class="index_section">
+            <div class="columns">
+                <div class="column">
+                  <div class="title is-4">读书笔记</div>
+                  <div class="subtitle is-6">记录我阅读的书的学习笔记</div>
+                </div>
+                <div class="column has-text-right">
+                  <a href='/zh/books'>See all →</a>
+                </div>
+              </div>
           
         </div>
-        <hr>
-        <div id="reads" class="tabcontent">
-          <div class="level">
-            <div class="level-left">
-              <div class="subtitle">推荐阅读</div>
-            </div>
-            <div class="level-right"> <a
-                href='/zh/reads'>See all →</a></div>
-          </div>
+        <div id="reads" class="index_section">
+            <div class="columns">
+                <div class="column">
+                  <div class="title is-4">推荐阅读</div>
+                  <div class="subtitle is-6">在互联网上阅读到值得推荐的新闻、博客、文章</div>
+                </div>
+                <div class="column has-text-right">
+                  <a href='/zh/reads'>See all →</a>
+                </div>
+              </div>
           
           <a class="box" href="/zh/reads/2019-03-15/">
             <p><div class="heading">
@@ -309,23 +313,7 @@ if (!doNotTrack) {
 
 
   </div>
-</section>
-
-<script>
-  function openTab(evt, tabName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" is-active", "");
-    }
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.parentElement.className += " is-active";
-  }
-</script> </main>
+</section> </main>
     <footer> <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">

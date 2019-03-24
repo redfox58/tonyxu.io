@@ -188,13 +188,15 @@ if (!doNotTrack) {
   <div class="container">
     <div class="columns">
       <div class="column is-8 is-offset-2">
-        <div id="posts" class="tabcontent">
-          <div class="level">
-            <div class="level-left">
-              <div class="subtitle">Blog Posts</div>
+        <div id="posts" class="index_section">
+          <div class="columns">
+            <div class="column">
+              <div class="title is-4">Blog Posts</div>
+              <div class="subtitle is-6">My thoughts of life and code</div>
             </div>
-            <div class="level-right"> <a
-                href='/posts'>See all →</a></div>
+            <div class="column has-text-right">
+              <a href='/posts'>See all →</a>
+            </div>
           </div>
           
           <a class="box" href="/posts/2019/top-engineering-blogs-from-tech-companies-to-follow-in-2019/">
@@ -225,15 +227,16 @@ if (!doNotTrack) {
           </a>
           
         </div>
-        <hr>
-        <div id="books" class="tabcontent">
-          <div class="level">
-            <div class="level-left">
-              <div class="subtitle">Book Notes</div>
-            </div>
-            <div class="level-right"> <a
-                href='/books'>See all →</a></div>
-          </div>
+        <div id="books" class="index_section">
+            <div class="columns">
+                <div class="column">
+                  <div class="title is-4">Book Notes</div>
+                  <div class="subtitle is-6">Learning notes of books I read</div>
+                </div>
+                <div class="column has-text-right">
+                  <a href='/books'>See all →</a>
+                </div>
+              </div>
           
           <a class="box" href="/books/thinking-in-java/chapter-1/">
             <div class="heading">Thinking In Java</div>
@@ -246,15 +249,16 @@ if (!doNotTrack) {
           </a>
           
         </div>
-        <hr>
-        <div id="reads" class="tabcontent">
-          <div class="level">
-            <div class="level-left">
-              <div class="subtitle">Good Reads</div>
-            </div>
-            <div class="level-right"> <a
-                href='/reads'>See all →</a></div>
-          </div>
+        <div id="reads" class="index_section">
+            <div class="columns">
+                <div class="column">
+                  <div class="title is-4">Good Reads</div>
+                  <div class="subtitle is-6">News, blog, and articles I read and find interesting</div>
+                </div>
+                <div class="column has-text-right">
+                  <a href='/reads'>See all →</a>
+                </div>
+              </div>
           
           <a class="box" href="/reads/2019-03-15/">
             <p><div class="heading">
@@ -341,23 +345,7 @@ Release 2
 
 
   </div>
-</section>
-
-<script>
-  function openTab(evt, tabName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" is-active", "");
-    }
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.parentElement.className += " is-active";
-  }
-</script> </main>
+</section> </main>
     <footer> <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
