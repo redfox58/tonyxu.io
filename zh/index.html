@@ -188,14 +188,14 @@ if (!doNotTrack) {
   <div class="container">
     <div class="columns">
       <div class="column is-8 is-offset-2">
-        <div class="tabs">
-          <ul>
-            <li class="tablinks is-active"><a onclick="openTab(event, 'posts')">博客文章</a></li>
-            <li class="tablinks"><a onclick="openTab(event, 'books')">读书笔记</a></li>
-            <li class="tablinks"><a onclick="openTab(event, 'reads')">推荐阅读</a></li>
-          </ul>
-        </div>
         <div id="posts" class="tabcontent">
+          <div class="level">
+            <div class="level-left">
+              <div class="subtitle">博客文章</div>
+            </div>
+            <div class="level-right"> <a
+                href='/zh/posts'>See all →</a></div>
+          </div>
           
           <a class="box" href="/zh/posts/2019/top-engineering-blogs-from-tech-companies-to-follow-in-2019/">
             <h1>2019年最值得关注的国外科技公司技术博客</h1>
@@ -224,41 +224,27 @@ if (!doNotTrack) {
 </p></p>
           </a>
           
-          <a class="box" href="/zh/posts/2018/technologies-learned-as-a-software-engineer/">
-            <h1>作为软件工程师需要掌握的技能</h1>
-            <p><p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
-  
-2018-12-06
-
-</p></p>
-          </a>
-          
-          <a class="box" href="/zh/posts/2018/embed-google-analytics-dashboard-on-website/">
-            <h1>嵌入Google Analytics图表到你的网站</h1>
-            <p><p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
-  
-2018-10-15
-
-</p></p>
-          </a>
-          
-          <nav class="level">
-            <div class="level-left"></div>
-            <div class="level-right">
-              <a class="button is-info is-rounded" href='/zh/posts'>See all →</a>
-            </div>
-          </nav>
         </div>
-        <div id="books" class="tabcontent" style="display:none">
-          
-          <nav class="level">
-            <div class="level-left"></div>
-            <div class="level-right">
-              <a class="button is-info is-rounded" href='/zh/books'>See all →</a>
+        <hr>
+        <div id="books" class="tabcontent">
+          <div class="level">
+            <div class="level-left">
+              <div class="subtitle">读书笔记</div>
             </div>
-          </nav>
+            <div class="level-right"> <a
+                href='/zh/books'>See all →</a></div>
+          </div>
+          
         </div>
-        <div id="reads" class="tabcontent" style="display:none">
+        <hr>
+        <div id="reads" class="tabcontent">
+          <div class="level">
+            <div class="level-left">
+              <div class="subtitle">推荐阅读</div>
+            </div>
+            <div class="level-right"> <a
+                href='/zh/reads'>See all →</a></div>
+          </div>
           
           <a class="box" href="/zh/reads/2019-03-15/">
             <p><div class="heading">
@@ -305,27 +291,6 @@ if (!doNotTrack) {
 </p></p>
           </a>
           
-          <a class="box" href="/zh/reads/2019-03-03/">
-            <p><div class="heading">
-  
-第1期
-
-</div>
-</p>
-            <h1>协调世界时已经足够了，是吗?</h1>
-            <p><p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
-  
-2019-03-03
-
-</p></p>
-          </a>
-          
-          <nav class="level">
-            <div class="level-left"></div>
-            <div class="level-right">
-              <a class="button is-info is-rounded" href='/zh/reads'>See all →</a>
-            </div>
-          </nav>
         </div>
       </div>
     </div>

@@ -188,14 +188,14 @@ if (!doNotTrack) {
   <div class="container">
     <div class="columns">
       <div class="column is-8 is-offset-2">
-        <div class="tabs">
-          <ul>
-            <li class="tablinks is-active"><a onclick="openTab(event, 'posts')">Blog Posts</a></li>
-            <li class="tablinks"><a onclick="openTab(event, 'books')">Book Notes</a></li>
-            <li class="tablinks"><a onclick="openTab(event, 'reads')">Good Reads</a></li>
-          </ul>
-        </div>
         <div id="posts" class="tabcontent">
+          <div class="level">
+            <div class="level-left">
+              <div class="subtitle">Blog Posts</div>
+            </div>
+            <div class="level-right"> <a
+                href='/posts'>See all →</a></div>
+          </div>
           
           <a class="box" href="/posts/2019/top-engineering-blogs-from-tech-companies-to-follow-in-2019/">
             <h1>Top Engineering Blogs from Tech Companies to Follow in 2019</h1>
@@ -224,32 +224,16 @@ if (!doNotTrack) {
 </p></p>
           </a>
           
-          <a class="box" href="/posts/2018/technologies-learned-as-a-software-engineer/">
-            <h1>Technologies Learned as a Software Engineer</h1>
-            <p><p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
-  
-12/06/2018
-
-</p></p>
-          </a>
-          
-          <a class="box" href="/posts/2018/embed-google-analytics-dashboard-on-website/">
-            <h1>Embed Google Analytics Dashboard on Website</h1>
-            <p><p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
-  
-10/15/2018
-
-</p></p>
-          </a>
-          
-          <nav class="level">
-            <div class="level-left"></div>
-            <div class="level-right">
-              <a class="button is-info is-rounded" href='/posts'>See all →</a>
-            </div>
-          </nav>
         </div>
-        <div id="books" class="tabcontent" style="display:none">
+        <hr>
+        <div id="books" class="tabcontent">
+          <div class="level">
+            <div class="level-left">
+              <div class="subtitle">Book Notes</div>
+            </div>
+            <div class="level-right"> <a
+                href='/books'>See all →</a></div>
+          </div>
           
           <a class="box" href="/books/thinking-in-java/chapter-1/">
             <div class="heading">Thinking In Java</div>
@@ -261,14 +245,16 @@ if (!doNotTrack) {
 </p></p>
           </a>
           
-          <nav class="level">
-            <div class="level-left"></div>
-            <div class="level-right">
-              <a class="button is-info is-rounded" href='/books'>See all →</a>
-            </div>
-          </nav>
         </div>
-        <div id="reads" class="tabcontent" style="display:none">
+        <hr>
+        <div id="reads" class="tabcontent">
+          <div class="level">
+            <div class="level-left">
+              <div class="subtitle">Good Reads</div>
+            </div>
+            <div class="level-right"> <a
+                href='/reads'>See all →</a></div>
+          </div>
           
           <a class="box" href="/reads/2019-03-15/">
             <p><div class="heading">
@@ -315,27 +301,6 @@ Release 2
 </p></p>
           </a>
           
-          <a class="box" href="/reads/2019-03-03/">
-            <p><div class="heading">
-  
-Release 1
-
-</div>
-</p>
-            <h1>UTC is Enough for Everyone, Right?</h1>
-            <p><p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
-  
-03/03/2019
-
-</p></p>
-          </a>
-          
-          <nav class="level">
-            <div class="level-left"></div>
-            <div class="level-right">
-              <a class="button is-info is-rounded" href='/reads'>See all →</a>
-            </div>
-          </nav>
         </div>
       </div>
     </div>
