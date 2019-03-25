@@ -17,7 +17,7 @@
   <div class="container">
     <div class="columns">
       <div class="column is-8 is-offset-2">
-        <div id="posts" class="index_section">
+        <div class="index_section">
           <div class="columns">
             <div class="column">
               <div class="title is-4">{{i18n "blog_posts"}}</div>
@@ -34,16 +34,16 @@
           </a>
           {{ end }}
         </div>
-        <div id="books" class="index_section">
-            <div class="columns">
-                <div class="column">
-                  <div class="title is-4">{{i18n "book_notes"}}</div>
-                  <div class="subtitle is-6">{{ i18n "book_notes_description"}}</div>
-                </div>
-                <div class="column has-text-right">
-                  <a href='{{ "/books" | relLangURL }}'>{{ i18n "see_all" }}</a>
-                </div>
-              </div>
+        <div class="index_section">
+          <div class="columns">
+            <div class="column">
+              <div class="title is-4">{{i18n "book_notes"}}</div>
+              <div class="subtitle is-6">{{ i18n "book_notes_description"}}</div>
+            </div>
+            <div class="column has-text-right">
+              <a href='{{ "/books" | relLangURL }}'>{{ i18n "see_all" }}</a>
+            </div>
+          </div>
           {{ range first 3 (where .Pages "Section" "books") }}
           <a class="box" href="{{ .RelPermalink }}">
             <div class="heading">{{ with .CurrentSection }}{{ .Title }}{{ end }}</div>
@@ -52,16 +52,16 @@
           </a>
           {{ end }}
         </div>
-        <div id="reads" class="index_section">
-            <div class="columns">
-                <div class="column">
-                  <div class="title is-4">{{i18n "good_reads"}}</div>
-                  <div class="subtitle is-6">{{ i18n "good_reads_description"}}</div>
-                </div>
-                <div class="column has-text-right">
-                  <a href='{{ "/reads" | relLangURL }}'>{{ i18n "see_all" }}</a>
-                </div>
-              </div>
+        <div class="index_section">
+          <div class="columns">
+            <div class="column">
+              <div class="title is-4">{{i18n "good_reads"}}</div>
+              <div class="subtitle is-6">{{ i18n "good_reads_description"}}</div>
+            </div>
+            <div class="column has-text-right">
+              <a href='{{ "/reads" | relLangURL }}'>{{ i18n "see_all" }}</a>
+            </div>
+          </div>
           {{ range first 3 (where .Pages "Section" "reads") }}
           <a class="box" href="{{ .RelPermalink }}">
             <p>{{ partial "read/read_issue_number" . }}</p>
@@ -69,6 +69,51 @@
             <p>{{ partial "date/date" . }}</p>
           </a>
           {{ end }}
+        </div>
+        <div class="index_section">
+          <div class="title is-4">{{i18n "focus_topics"}}</div>
+          <div class="columns">
+            <div class="column">
+              <div class="box">
+                <div class="subtitle">
+                  {{ i18n "api_platform"}}
+                </div>
+                <div class="text is-size-7 has-text-grey">
+                  {{ i18n "api_platform_description"}}
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="box">
+                <div class="subtitle">
+                  {{ i18n "software_engineering"}}
+                </div>
+                <div class="text is-size-7 has-text-grey">
+                  {{ i18n "software_engineering_description"}}
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="box">
+                <div class="subtitle">
+                  {{ i18n "automation"}}
+                </div>
+                <div class="text is-size-7 has-text-grey">
+                  {{ i18n "automation_description"}}
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="box">
+                <div class="subtitle">
+                  {{ i18n "ai"}}
+                </div>
+                <div class="text is-size-7 has-text-grey">
+                  {{ i18n "ai_description"}}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

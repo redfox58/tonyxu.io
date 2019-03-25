@@ -48,3 +48,30 @@ other="News, blog, and articles I read and find interesting"
 
 [see_all]
 other="See all →"
+
+[focus_topics]
+other="Focus Topics"
+
+[api_platform]
+other="API Platform"
+
+[api_platform_description]
+other="API Platform is the key to empower collaboration of all businesses"
+
+[software_engineering]
+other="Software Engineering"
+
+[software_engineering_description]
+other="Build software product with high performance, scalability, availability"
+
+[automation]
+other="Automation"
+
+[automation_description]
+other="Automation in build, deploy, test, release processes to boost developer productivity"
+
+[ai]
+other="AI"
+
+[ai_description]
+other="Make AI innovations more accessible to consumers and enterprise"
