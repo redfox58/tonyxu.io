@@ -55,8 +55,8 @@ other="推荐阅读"
 [good_reads_description]
 other="在互联网上阅读到值得推荐的新闻、博客、文章"
 
-[interested_topics]
-other="兴趣领域"
+[focus_area]
+other="专注领域"
 
 [api_platform]
 other="API开放平台"
