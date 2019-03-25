@@ -49,8 +49,8 @@ You can make the two types different by:
 
 ## Is-a vs. is-like-a relationships
 
-`Is-a`: derived class is exactly the same type as the base class, and you can state. For example, "A circle is a shape.".
-`Is-like-a`: the new type has the interface of the old type but it also contains other methods, so you can't really say it's exactly the same. For example, the heat pump is-like-an air conditioner.
+- `Is-a`: derived class is exactly the same type as the base class, and you can state. For example, "A circle is a shape.".
+- `Is-like-a`: the new type has the interface of the old type but it also contains other methods, so you can't really say it's exactly the same. For example, the heat pump is-like-an air conditioner.
 
 ## Interchangeable objects with polymorphism
 
