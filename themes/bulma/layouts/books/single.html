@@ -6,7 +6,7 @@
 
 {{ define "main" }}
 
-<div class="section">
+<section class="section">
   <div class="container">
     <div class="columns">
       <div class="column is-8 is-offset-2">
@@ -36,9 +36,16 @@
         {{end}}
       </div>
     </div>
-
   </div>
-</div>
+</section>
+<section class="section has-background-light">
+    <div class="container">
+      <div class="columns">
+        <div class="column has-text-centered">
+          {{ partial "promotion/promotion" . }}
+        </div>
+      </div>
+  </section>
 {{ end }}
 {{ define "footer" }}
 {{ partial "footer" . }}

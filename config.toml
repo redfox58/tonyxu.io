@@ -14,6 +14,8 @@ defaultContentLanguage = "en"
 pygmentsCodeFences = true
 pygmentsStyle = "tango"
 
+hasCJKLanguage = true
+
 [params]
   theme_variant = "" # possible value for the theme_variant `cerulean,cosmo,cyborg,darkly,flatly,journal,litera,lumen,lux,materia,minty,pulse,sandstone,simplex,slate,solar,spacelab,superhero,united,yeti`
   images = ["/images/og-image.png","/images/square-logo.webp"] # Suggested, controls default OpenGraph images controls author name display on meta tag

@@ -23,6 +23,12 @@
         {{ range .Pages }}
         {{ partial "page-summary" . }}
         {{ .Summary }}
+        {{ if .Truncated }}
+        <!-- This <div> includes a read more link, but only if the summary is truncated... -->
+        <div>
+          <a href="{{ .RelPermalink }}">{{ i18n "read_more" }}</a>
+        </div>
+        {{ end }}
         <hr />
         {{ end }}
         {{ end }}
