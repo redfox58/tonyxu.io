@@ -21,51 +21,19 @@
     
     
 <meta itemprop="name" content="利用Telegram和Flask打造私人通知服务器">
-<meta itemprop="description" content="假如有如下这么几个场景:
- 每天下班离开公司的时候和到家的时候都希望能自动通知到我的男朋友/女朋友
- 页面有访问时立刻通知自己
- 爬虫或其他任务执行完毕自动通知自己
-  以上场景特别需要一个能够便捷触发并把消息发送到手机上的机制。我的解决方案是：
-实现一个Flask app，接收REST API的GET或者POST请求，根据不同需要拼装消息文本并发送到某个app (如Telegram, Slack等)。这个Flask app可以跑在Google App Engine (免费)， 并绑定自己的域名。
-下面我就介绍一下大概的步骤：
- 根据 Google App Engine 创建一个基本的Flask app
- 去Telegram创建Bot: https://core.telegram.org/bots#3-how-do-i-create-a-bot
- 和Telegram Bot对话，并获取chat id: https://api.telegram.org/bot$TOKEN/getUpdates
- 为Flask创建一个route handle，让它通过如下地址向你的Telegram会话发送消息: https://api.telegram.org/bot$TOKEN/sendMessage?chat_id=12345&amp;text=Hello&#43;World
- 上传到Google App Engine: gcloud app deploy
-  这样你就有了一个Flask app可以接收HTTP Request并根据需要向你的Telegram app发送通知，消息可以是预先准备的也可以是HTTP Request传给Flask app的。
-那么回到开头的几个场景，我们要如何用Flask app解决这几个问题呢？可以针对他们分别尝试:
- 手机上装IFTTT并允许后台定位，设置进入或者离开某个地理区间就出发webhook request到你的flask endpoint (并把消息内容传给通过Request Body传给Flask app)，你的Flask app就可以向你的Telegram发送通知了。你也可以直接让IFTTT向Telegram地址发送通知。
- 在Flask app添加一个route接受页面访问触发的GET请求，并把来源IP发送给Telegram。你也可以在Flask app请求第三方IP地址库获取地理位置，一同发送给Telegram。
- 在脚本结束的时候触发GET/POST请求到你的Flask app，Flask app再向你的Telegram发送通知。你也可以直接从脚本向Telegram发送通知。">
+<meta itemprop="description" content="假如有如下这么几个场景: 每天下班离开公司的时候和到家的时候都希望能自动通知到我的男朋友/女朋友 页面有访问时立刻通知自己 爬虫或其他任务执行完毕">
 
 
 <meta itemprop="datePublished" content="2018-07-12T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-07-12T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="62">
+<meta itemprop="wordCount" content="899">
 
 
 
 <meta itemprop="keywords" content="" />
 
     <meta property="og:title" content="利用Telegram和Flask打造私人通知服务器" />
-<meta property="og:description" content="假如有如下这么几个场景:
- 每天下班离开公司的时候和到家的时候都希望能自动通知到我的男朋友/女朋友
- 页面有访问时立刻通知自己
- 爬虫或其他任务执行完毕自动通知自己
-  以上场景特别需要一个能够便捷触发并把消息发送到手机上的机制。我的解决方案是：
-实现一个Flask app，接收REST API的GET或者POST请求，根据不同需要拼装消息文本并发送到某个app (如Telegram, Slack等)。这个Flask app可以跑在Google App Engine (免费)， 并绑定自己的域名。
-下面我就介绍一下大概的步骤：
- 根据 Google App Engine 创建一个基本的Flask app
- 去Telegram创建Bot: https://core.telegram.org/bots#3-how-do-i-create-a-bot
- 和Telegram Bot对话，并获取chat id: https://api.telegram.org/bot$TOKEN/getUpdates
- 为Flask创建一个route handle，让它通过如下地址向你的Telegram会话发送消息: https://api.telegram.org/bot$TOKEN/sendMessage?chat_id=12345&amp;text=Hello&#43;World
- 上传到Google App Engine: gcloud app deploy
-  这样你就有了一个Flask app可以接收HTTP Request并根据需要向你的Telegram app发送通知，消息可以是预先准备的也可以是HTTP Request传给Flask app的。
-那么回到开头的几个场景，我们要如何用Flask app解决这几个问题呢？可以针对他们分别尝试:
- 手机上装IFTTT并允许后台定位，设置进入或者离开某个地理区间就出发webhook request到你的flask endpoint (并把消息内容传给通过Request Body传给Flask app)，你的Flask app就可以向你的Telegram发送通知了。你也可以直接让IFTTT向Telegram地址发送通知。
- 在Flask app添加一个route接受页面访问触发的GET请求，并把来源IP发送给Telegram。你也可以在Flask app请求第三方IP地址库获取地理位置，一同发送给Telegram。
- 在脚本结束的时候触发GET/POST请求到你的Flask app，Flask app再向你的Telegram发送通知。你也可以直接从脚本向Telegram发送通知。" />
+<meta property="og:description" content="假如有如下这么几个场景: 每天下班离开公司的时候和到家的时候都希望能自动通知到我的男朋友/女朋友 页面有访问时立刻通知自己 爬虫或其他任务执行完毕" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tonyxu.io/zh/posts/2018/use-telegram-and-flask-to-build-notification-server/" />
 
@@ -81,23 +49,7 @@
 <meta name="twitter:image" content="https://tonyxu.io/images/og-image.png"/>
 
 <meta name="twitter:title" content="利用Telegram和Flask打造私人通知服务器"/>
-<meta name="twitter:description" content="假如有如下这么几个场景:
- 每天下班离开公司的时候和到家的时候都希望能自动通知到我的男朋友/女朋友
- 页面有访问时立刻通知自己
- 爬虫或其他任务执行完毕自动通知自己
-  以上场景特别需要一个能够便捷触发并把消息发送到手机上的机制。我的解决方案是：
-实现一个Flask app，接收REST API的GET或者POST请求，根据不同需要拼装消息文本并发送到某个app (如Telegram, Slack等)。这个Flask app可以跑在Google App Engine (免费)， 并绑定自己的域名。
-下面我就介绍一下大概的步骤：
- 根据 Google App Engine 创建一个基本的Flask app
- 去Telegram创建Bot: https://core.telegram.org/bots#3-how-do-i-create-a-bot
- 和Telegram Bot对话，并获取chat id: https://api.telegram.org/bot$TOKEN/getUpdates
- 为Flask创建一个route handle，让它通过如下地址向你的Telegram会话发送消息: https://api.telegram.org/bot$TOKEN/sendMessage?chat_id=12345&amp;text=Hello&#43;World
- 上传到Google App Engine: gcloud app deploy
-  这样你就有了一个Flask app可以接收HTTP Request并根据需要向你的Telegram app发送通知，消息可以是预先准备的也可以是HTTP Request传给Flask app的。
-那么回到开头的几个场景，我们要如何用Flask app解决这几个问题呢？可以针对他们分别尝试:
- 手机上装IFTTT并允许后台定位，设置进入或者离开某个地理区间就出发webhook request到你的flask endpoint (并把消息内容传给通过Request Body传给Flask app)，你的Flask app就可以向你的Telegram发送通知了。你也可以直接让IFTTT向Telegram地址发送通知。
- 在Flask app添加一个route接受页面访问触发的GET请求，并把来源IP发送给Telegram。你也可以在Flask app请求第三方IP地址库获取地理位置，一同发送给Telegram。
- 在脚本结束的时候触发GET/POST请求到你的Flask app，Flask app再向你的Telegram发送通知。你也可以直接从脚本向Telegram发送通知。"/>
+<meta name="twitter:description" content="假如有如下这么几个场景: 每天下班离开公司的时候和到家的时候都希望能自动通知到我的男朋友/女朋友 页面有访问时立刻通知自己 爬虫或其他任务执行完毕"/>
 
     
      
@@ -223,28 +175,12 @@ if (!doNotTrack) {
   <div class="container" itemscope itemtype="http://schema.org/BlogPosting">
     
 <meta itemprop="name" content="利用Telegram和Flask打造私人通知服务器">
-<meta itemprop="description" content="假如有如下这么几个场景:
- 每天下班离开公司的时候和到家的时候都希望能自动通知到我的男朋友/女朋友
- 页面有访问时立刻通知自己
- 爬虫或其他任务执行完毕自动通知自己
-  以上场景特别需要一个能够便捷触发并把消息发送到手机上的机制。我的解决方案是：
-实现一个Flask app，接收REST API的GET或者POST请求，根据不同需要拼装消息文本并发送到某个app (如Telegram, Slack等)。这个Flask app可以跑在Google App Engine (免费)， 并绑定自己的域名。
-下面我就介绍一下大概的步骤：
- 根据 Google App Engine 创建一个基本的Flask app
- 去Telegram创建Bot: https://core.telegram.org/bots#3-how-do-i-create-a-bot
- 和Telegram Bot对话，并获取chat id: https://api.telegram.org/bot$TOKEN/getUpdates
- 为Flask创建一个route handle，让它通过如下地址向你的Telegram会话发送消息: https://api.telegram.org/bot$TOKEN/sendMessage?chat_id=12345&amp;text=Hello&#43;World
- 上传到Google App Engine: gcloud app deploy
-  这样你就有了一个Flask app可以接收HTTP Request并根据需要向你的Telegram app发送通知，消息可以是预先准备的也可以是HTTP Request传给Flask app的。
-那么回到开头的几个场景，我们要如何用Flask app解决这几个问题呢？可以针对他们分别尝试:
- 手机上装IFTTT并允许后台定位，设置进入或者离开某个地理区间就出发webhook request到你的flask endpoint (并把消息内容传给通过Request Body传给Flask app)，你的Flask app就可以向你的Telegram发送通知了。你也可以直接让IFTTT向Telegram地址发送通知。
- 在Flask app添加一个route接受页面访问触发的GET请求，并把来源IP发送给Telegram。你也可以在Flask app请求第三方IP地址库获取地理位置，一同发送给Telegram。
- 在脚本结束的时候触发GET/POST请求到你的Flask app，Flask app再向你的Telegram发送通知。你也可以直接从脚本向Telegram发送通知。">
+<meta itemprop="description" content="假如有如下这么几个场景: 每天下班离开公司的时候和到家的时候都希望能自动通知到我的男朋友/女朋友 页面有访问时立刻通知自己 爬虫或其他任务执行完毕">
 
 
 <meta itemprop="datePublished" content="2018-07-12T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-07-12T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="62">
+<meta itemprop="wordCount" content="899">
 
 
 

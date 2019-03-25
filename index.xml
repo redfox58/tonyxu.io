@@ -6,7 +6,7 @@
     <description>Recent content on Tony Xu Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 22 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 24 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://tonyxu.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Chapter 1 - Introduction to Objects</title>
       <link>https://tonyxu.io/books/thinking-in-java/chapter-1/</link>
-      <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 24 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/books/thinking-in-java/chapter-1/</guid>
       <description>The progress of abstraction Five basic characteristics of object-oriented programming:
@@ -92,15 +92,7 @@ As Jeffrey Hammerbacher, a former Facebook executive, told Bloomberg, “The bes
       <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/posts/2019/my-productivity-tools-and-development-setup-recommended-to-software-engineers/</guid>
-      <description>Hardware Laptop 👉 Apple MacBook Pro (13-inch, 2017, Four Thunderbolt 3 Ports)
-- 13-inch
-- 2017 Year
-- 3.5 GHz Intel Core i7 Processor
-- 16 GB Memory
-- 256 GB Storage
-My MacBook Pro (company provided) is the top 1 productivity tool for me. I use it to code, write blogs, and everything.
-Mobile Phone 👉 Apple iPhone X
-I&amp;rsquo;m using iPhone X as my mobile phone. I have been an iPhone person ever since 2013 from an iPhone 4.</description>
+      <description>Hardware Laptop 👉 Apple MacBook Pro (13-inch, 2017, Four Thunderbolt 3 Ports) - 13-inch - 2017 Year - 3.5 GHz Intel Core i7 Processor - 16 GB Memory - 256 GB Storage My MacBook Pro (company provided) is the top 1 productivity tool for me. I use it to code, write blogs, and everything. Mobile Phone 👉 Apple iPhone X I&amp;rsquo;m using iPhone X as my mobile phone. I have</description>
     </item>
     
     <item>
@@ -241,14 +233,7 @@ I will talk about:</description>
       <pubDate>Tue, 17 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/posts/2018/tech-stack-for-building-your-own-product/</guid>
-      <description>As a software engineer or developer, you might want to build a product end-to-end. These are the frameworks and technologies you might need. All listed items are open-source or free to use.
-Web Front-end  Fundamental Language: HTML, JavaScript, CSS
- Advanced Language: ES6, TypeScript, CoffeScript
- JS Library/Framework: React, Vue, Angular, jQuery
- Template Engine: Mustache, Handlebars, Jade
- CSS Library/Framework:
- Global: Bootstrap, Foundation, Semantic
- China: Element, Ant Design, Amaze UI</description>
+      <description>As a software engineer or developer, you might want to build a product end-to-end. These are the frameworks and technologies you might need. All listed items are open-source or free to use. Web Front-end Fundamental Language: HTML, JavaScript, CSS Advanced Language: ES6, TypeScript, CoffeScript JS Library/Framework: React, Vue, Angular, jQuery Template Engine: Mustache, Handlebars, Jade CSS Library/Framework: Global: Bootstrap, Foundation, Semantic China: Element, Ant Design, Amaze UI Framework-Specific: Material-UI (React),</description>
     </item>
     
     <item>
@@ -280,11 +265,7 @@ Build a Flask app to receive GET or POST request, and then compose different mes
       <pubDate>Sun, 08 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/posts/2018/create-alfred-workflow-for-uploading-screenshot-to-s3/</guid>
-      <description>As Markdown markup language gets more and more popular, most people have a need to quickly generate a public url for screenshot/image in clipboard. Today I created an Alfred workflow that helps you upload images/screenshot in clipboard.
-Demo Overview  Use pngpaste to get image data from clipboard
- Write to a image file in /tmp folder
- Use boto3 to upload image file to AWS S3
-  Implementation Now we have the idea to achieve the goal, let&amp;rsquo;s do it in Alfred workflow and python script.</description>
+      <description>As Markdown markup language gets more and more popular, most people have a need to quickly generate a public url for screenshot/image in clipboard. Today I created an Alfred workflow that helps you upload images/screenshot in clipboard. Demo Overview Use pngpaste to get image data from clipboard Write to a image file in /tmp folder Use boto3 to upload image file to AWS S3 Implementation Now we have the idea</description>
     </item>
     
     <item>

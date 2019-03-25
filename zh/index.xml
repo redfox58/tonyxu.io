@@ -6,10 +6,19 @@
     <description>Recent content on Tony Xu 博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 15 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 24 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://tonyxu.io/zh/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>第一章 - 对象概述</title>
+      <link>https://tonyxu.io/zh/books/thinking-in-java/chapter-1/</link>
+      <pubDate>Sun, 24 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tonyxu.io/zh/books/thinking-in-java/chapter-1/</guid>
+      <description>抽象过程 基于对象编程的五个基本特性: 一切都是对象 一个程序是一群对象的集合，这些对象互相发送消息告诉对方该做什么事情 每个对象都有包含其他对象的</description>
+    </item>
     
     <item>
       <title>停止学习框架</title>
@@ -17,12 +26,7 @@
       <pubDate>Fri, 15 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/zh/reads/2019-03-15/</guid>
-      <description>Stop Learning Frameworks (sizovs.net)
- The longer a technology is on the market, the safer investment it is.
-Don’t rush to learn new technology – it has a high probability of dying.
-Time will show which technology is worth investing in. Time is your best advisor. Learn to wait.
-Remember – frameworks, libraries and tools come and go. Time is precious.
- 我非常热爱学习新技术，但是却常常只是学习了新框架/工具而忽略了背后的技术。我学习了如何用Angular, Vue, 和React等不同框架搭建一个基本网站，却并没有因此对Web有更深了解。正如作者所说，与其花很多时间学习框架和工具，我们不如花更多心思深入学习框架和工具背后的底层知识(例如Web、HTTP、REST、JS)。</description>
+      <description>Stop Learning Frameworks (sizovs.net) The longer a technology is on the market, the safer investment it is. Don’t rush to learn new technology – it has a high probability of dying. Time will show which technology is worth investing in. Time is your best advisor. Learn to wait. Remember – frameworks, libraries and tools come and go. Time is precious. 我非常热爱学</description>
     </item>
     
     <item>
@@ -31,19 +35,7 @@ Remember – frameworks, libraries and tools come and go. Time is precious.
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/zh/posts/2019/top-engineering-blogs-from-tech-companies-to-follow-in-2019/</guid>
-      <description>这份列表包含了我订阅的主要科技公司技术博客。我从他们的技术博客当中学习他们是如何搭建高性能、高可扩展、高可用的技术基础设施以及他们在搭建这些基础设施的过程中总结的的最佳实践。
-我使用RSS阅读器订阅这些博客并每日阅读他们的更新。
-(按字母顺序排列)
-    Airbnb Engineering &amp;amp; Data Science
-    Bitly Engineering Blog
-    Dropbox Tech Blog
-    Etsy - Code as Craft
-    Facebook Code - Facebook Engineering Blog
-    code.flickr.com
-    GitHub Engineering
-    Google AI Blog
-    Google Developers
-    Heroku Blog - Engineering</description>
+      <description>这份列表包含了我订阅的主要科技公司技术博客。我从他们的技术博客当中学习他们是如何搭建高性能、高可扩展、高可用的技术基础设施以及他们在搭建这些</description>
     </item>
     
     <item>
@@ -52,8 +44,7 @@ Remember – frameworks, libraries and tools come and go. Time is precious.
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/zh/reads/2019-03-09/</guid>
-      <description>Microservice Architecture at Medium (medium.engineering)
- At Medium, our technical stack started with a monolithic Node.js app back in 2012. We have built a couple of satellite services, but we haven’t created a strategy to adopt the microservice architecture systematically. As the system becomes more complex and the team grows, we moved to a microservice architecture in early 2018. In this post, we want to share our experiences of doing it effectively and avoiding microservice syndromes.</description>
+      <description>Microservice Architecture at Medium (medium.engineering) At Medium, our technical stack started with a monolithic Node.js app back in 2012. We have built a couple of satellite services, but we haven’t created a strategy to adopt the microservice architecture systematically. As the system becomes more complex and the team grows, we moved to a microservice architecture in early 2018. In this post, we want to</description>
     </item>
     
     <item>
@@ -62,10 +53,7 @@ Remember – frameworks, libraries and tools come and go. Time is precious.
       <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/zh/reads/2019-03-06/</guid>
-      <description>This Is Silicon Valley (onezero.medium.com)
- Everyone wears Patagonia and North Face, everyone has AirPods hanging from their ears, and everyone goes to Lake Tahoe on weekends. And everyone talks about the same things: startups, blockchain, machine learning, and startups with blockchain and machine learning.
-As Jeffrey Hammerbacher, a former Facebook executive, told Bloomberg, “The best minds of my generation are thinking about how to make people click ads.”
- 作者描述的硅谷正是我所见到的真实硅谷。不仅如此，我见到的许多有着聪明头脑却只会谈论买房、股票、升职加薪。我所见到的人同质化严重，他们有类似的背景(计算机专业)、类似的工作(软件工程师)、类似的爱好(徒步、桌游、太浩湖滑雪)、类似的兴趣(科技、股票、房产、升职加薪)。如果你不生活在硅谷，你可以跟随作者一同了解硅谷也许你不了解的一面。</description>
+      <description>This Is Silicon Valley (onezero.medium.com) Everyone wears Patagonia and North Face, everyone has AirPods hanging from their ears, and everyone goes to Lake Tahoe on weekends. And everyone talks about the same things: startups, blockchain, machine learning, and startups with blockchain and machine learning. As Jeffrey Hammerbacher, a former Facebook executive, told Bloomberg, “The best minds of my generation are thinking about how to make people click</description>
     </item>
     
     <item>
@@ -74,9 +62,7 @@ As Jeffrey Hammerbacher, a former Facebook executive, told Bloomberg, “The bes
       <pubDate>Sun, 03 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/zh/reads/2019-03-03/</guid>
-      <description>UTC is Enough for Everyone, Right? (zachholman.com)
- It turns out humans have had a long, long history of poorly dealing with time, so when you hammer your head against the wall trying to deal with a timezone bug, well, you’re just the last in a long, long line of human beings that are terrible at all this! Congrats. You’re pretty unremarkable.
- 作者讨论了“时间”的发展历程，以及我们在这期间是如何糟糕的处理“时间”这个问题。为了解决“时间”在计算机当中可能遇到的复杂问题，我们应该尽可能简化处理并且采用通用标准 (例如协调世界时(UTC), ISO 8601).</description>
+      <description>UTC is Enough for Everyone, Right? (zachholman.com) It turns out humans have had a long, long history of poorly dealing with time, so when you hammer your head against the wall trying to deal with a timezone bug, well, you’re just the last in a long, long line of human beings that are terrible at all this! Congrats. You’re pretty</description>
     </item>
     
     <item>
@@ -85,21 +71,7 @@ As Jeffrey Hammerbacher, a former Facebook executive, told Bloomberg, “The bes
       <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/zh/posts/2019/my-productivity-tools-and-development-setup-recommended-to-software-engineers/</guid>
-      <description>硬件 笔记本 👉 苹果 MacBook Pro (13-inch, 2017, Four Thunderbolt 3 Ports)
-- 13 英寸
-- 2017年
-- 3.5 GHz Intel Core i7 Processor
-- 16 GB 内存
-- 256 GB 存储
-我的苹果笔记本是我的第一生产力工具。我用它来写代码，写博客，和很多其他事情。
-手机 👉 苹果 iPhone X
-我目前使用iPhone X作为手机。我从2013年的iPhone 4开始成为iPhone用户。在使用iPhone之前我还用过Nexus S安卓手机一段时间。iOS生态系统，更好的通知系统和应用质量是我一直追随iOS设备的主要原因。
-台式机 我其实并没有台式机。公司提供了每个月在 Azure 150美元的使用额度，所以我创建了一个Azure Windows 虚拟机作为Windows台式机的替代。 我使用这个虚拟机安装和测试只在Windows能用的软件，例如Power BI Desktop.
-工作站（公司工位） 👉 联想 ThinkVision P27h (双外接显示器)
-公司提供的标配，我从笔记本外接到这两台显示器。我通常在主屏幕开Slack窗口，其中一个外接显示器开浏览器，另一个外接显示器开代码编辑器VS Code或者邮箱客户端Outlook。
-👉 Herman Miller - Renew Sit-to-Stand Desk Rectangular
-公司提供的标配。尽管这款工作台电动调节高度的功能很酷，鼓励人们少坐多站，但我还是喜欢坐着用电脑的时候更舒服。
-👉 苹果 Magic Keyboard（带数字键盘）</description>
+      <description>硬件 笔记本 👉 苹果 MacBook Pro (13-inch, 2017, Four Thunderbolt 3 Ports) - 13 英寸 - 2017年 - 3.5 GHz Intel Core i7 Processor - 16 GB 内存 - 256 GB 存储 我的苹果笔记本是我的第一生产力工具。我用它来写代码，写</description>
     </item>
     
     <item>
@@ -108,13 +80,7 @@ As Jeffrey Hammerbacher, a former Facebook executive, told Bloomberg, “The bes
       <pubDate>Mon, 21 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/zh/posts/2019/use-github-to-mange-personal-knowledge-base/</guid>
-      <description>GitHub 已经成为开发者最钟爱的平台，我们在 GitHub 上进行任何和代码相关的协作。除了代码，GitHub 还有什么可以为我们所用的呢？我最近就在选择一款个人知识管理和项目管理工具的问题上陷入了苦恼，尽管我们有非常多的选择，比如笔记应用 Bear 和 Evernote，项目管理应用 Trello，又或者知识管理应用 Notion，最后我选择的是 GitHub 这个我最爱的开发者平台，它有如下几个优点:
- 支持 Markdown
- 可以使用它组织短的笔记，或者长的文章
- 支持看板视图
- 它和你的日常工作完美集成
-  你是不是没有想过可以用 GitHub 做笔记、知识、和项目管理？让我来介绍一下我是如何使用它达成这些目的的。
-   GitHub 功能 用途     Issues 存放零散的 markdown 文章   Projects 有组织结构的看板视图   Wiki 有组织结构的知识维基    示例 GitHub Issues GitHub Issues 可以用来创建 markdown 文章。图片可以直接粘贴并会自动以 markdown 语法插入。你也可以给 GitHub Issues 贴上标签，或者添加到 GitHub Projects 的看板来结构化管理。我个人会使用 GitHub Issues 创建长篇文章，并在 GitHub Projects 的看板卡片引用，这样可以更有组织的管理 GitHub Issues 的文章。</description>
+      <description>GitHub 已经成为开发者最钟爱的平台，我们在 GitHub 上进行任何和代码相关的协作。除了代码，GitHub 还有什么可以为我们所用的呢？我最近就在选择一款个人知</description>
     </item>
     
     <item>
@@ -123,25 +89,7 @@ As Jeffrey Hammerbacher, a former Facebook executive, told Bloomberg, “The bes
       <pubDate>Thu, 06 Dec 2018 00:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/zh/posts/2018/technologies-learned-as-a-software-engineer/</guid>
-      <description>作为一名软件工程师，我总是对学习各类新技术抱有极大热情。我会在这篇文章用列表来记录作为一名软件工程师的我已经开始学习的或者在余生计划要学习的技术。
-注: 这篇文章会随着我学习它们一直更新
-我是如何区分我对一项技术的掌握水平:
- ⭒⭒⭒⭒⭒ (外行) - 尚无了解
- ⭑⭒⭒⭒⭒ (新手) - 了解基本原理和概念
- ⭑⭑⭒⭒⭒ (入门) - 通过学习课程和实验掌握了部分经验
- ⭑⭑⭑⭒⭒ (熟悉) - 可以使用该技术进行实践并了解如何权衡利弊
- ⭑⭑⭑⭑⭒ (精通) - 能在生产环境独立应用该技术
- ⭑⭑⭑⭑⭑ (专家) - 被认可为专家，可以向他人提供指导
-  Web开发  React: ⭑⭑⭑⭒⭒
- Angular: ⭑⭑⭒⭒⭒
- Node.js: ⭑⭑⭑⭒⭒
- Spring Boot: ⭑⭑⭑⭒⭒
- HTML &amp;amp; CSS: ⭑⭑⭑⭑⭒
- REST API: ⭑⭑⭑⭑⭑
- Webpack: ⭑⭑⭑⭒⭒
- Go: ⭒⭒⭒⭒⭒
- Puppeteer: ⭑⭑⭑⭒⭒
-  移动开发  iOS (Swift): ⭑⭑⭒⭒⭒</description>
+      <description>作为一名软件工程师，我总是对学习各类新技术抱有极大热情。我会在这篇文章用列表来记录作为一名软件工程师的我已经开始学习的或者在余生计划要学习的</description>
     </item>
     
     <item>
@@ -150,16 +98,7 @@ As Jeffrey Hammerbacher, a former Facebook executive, told Bloomberg, “The bes
       <pubDate>Mon, 15 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/zh/posts/2018/embed-google-analytics-dashboard-on-website/</guid>
-      <description>如果你正在使用Google Anlaytics工具来分析网站访问数据，你可能会想将它提供的各种酷炫图表嵌入到网站页面以供用户浏览。尽管Google Analytics并不提供简单的iframe方式来嵌入图表，它还是提供了Google Analytics Embed API这种需要稍微多一点技术基础的方式让你能够嵌入它们的图表。我会在这篇文章里详细地告诉你该如何一步一步实现一个Google Analytics图表
-效果预览:
-1. 在Google Developers Console创建云项目 (如果你已经有项目了请忽略这一步)
-2. 创建服务账号(service account)并下载.json密钥文件 3. 启用Google Analytics API权限 4. 允许云服务账号(service account)访问Google Analytics数据 获取云服务账号邮箱地址
-添加为Google Analytics只读用户
-5. 在服务器生成访问令牌(access token) 我们在服务器生成访问令牌并返回给前端，因此用户不需要在浏览器登录Google获取访问令牌。
-Node.js服务器部分实现 Install Google API Client Library
-npm install --save googleapis Import service account key
-let privateKey = require(&amp;#34;./google_key.json&amp;#34;);  Return Google access token to client
-// https://your-domain/accessTokens 将会返回Google访问令牌给前段 app.get(&amp;#34;/accessTokens&amp;#34;, (req,res) =&amp;gt; { let {google} = require(&amp;#39;googleapis&amp;#39;); let privateKey = require(&amp;#34;.</description>
+      <description>如果你正在使用Google Anlaytics工具来分析网站访问数据，你可能会想将它提供的各种酷炫图表嵌入到网站页面以供用户浏览。尽管Goog</description>
     </item>
     
     <item>
@@ -168,19 +107,7 @@ let privateKey = require(&amp;#34;./google_key.json&amp;#34;);  Return Google ac
       <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/zh/posts/2018/use-firebase-cloud-function-to-count-website-visitors/</guid>
-      <description>现在越来越多人喜欢用 Firebase 托管静态页面，类似选择还有 GitHub Pages。如果你想给 Firebase 托管的静态页面添加后端代码，那么恭喜你云函数就是为你准备的。其中使用云函数的场景可以是连接 Firebase 实时数据库并存取数据。
-我在这给大家分享一个最简单的例子就是借助云函数实现访问统计，每次云函数被触发，就更新实时数据库里的网站访问统计。
-计划 我们大致需要这么几步实现这个功能
- 部署静态页面至 Firebase 云托管
- 创建 Firebase 云函数用来更新 Firebase 实时数据库的统计数字
- 为静态页面添加访问云函数的请求
-  部署静态页面至 Firebase 云托管 Firebase 云托管非常适合托管静态页面，它比 GitHub Pages 搭建起来更简单，同时它也提供更多为网站/移动开发而设计的功能。如果你的静态网页文件已经准备好了，那么就可以直接运行firebase deploy上传至 Firebase 并可以在全球任意地方访问。
-参考Quickstart学习如何在 Firebase 部署你的第一个静态网站
-创建 Firebase 云函数 现在，我们来创建 Firebase 云函数来执行后端代码处理统计数字的更新。在这段代码中，我们将云函数连接实时数据库，并让它能够更新存储在数据库里的统计数字。
- 初始化云函数
-  firebase init functions  在实时数据库创建hit_counter节点并把值设为 0
-  { &amp;#34;hit_counter&amp;#34;: 0 }  编辑云函数代码 (Index.js)
-  const functions = require(&amp;#34;firebase-functions&amp;#34;); const admin = require(&amp;#34;firebase-admin&amp;#34;); admin.</description>
+      <description>现在越来越多人喜欢用 Firebase 托管静态页面，类似选择还有 GitHub Pages。如果你想给 Firebase 托管的静态页面添加后端代码，那么恭喜你云函数就是为你准备的。其中使</description>
     </item>
     
     <item>
@@ -189,11 +116,7 @@ let privateKey = require(&amp;#34;./google_key.json&amp;#34;);  Return Google ac
       <pubDate>Fri, 03 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/zh/posts/2018/customize-chrome-new-tab-page/</guid>
-      <description>有没有想过改造Chrome的默认新标签页? 如果有，我相信你肯定尝试过去Chrome应用商店下载一些拓展来定制新标签页。如果你觉得无论是默认，还是第三方提供的新标签页都无法满足你的需求，我建议你跟着我尝试自己制作一款Chrome拓展来定制你的新标签页。
-拓展插件目录结构 └── chrome-extention //你的Chrome拓展项目目录 ├── manifest.json //Chrome拓展描述文件 └── newTab.html //Chrome拓展新标签页页面文件 创建Chrome拓展描述文件 创建一个文件夹，作为Chrome拓展的项目文件夹。在文件夹内创建manifest.json描述文件如下:
-{ &amp;#34;name&amp;#34;: &amp;#34;Chrome extension name here.&amp;#34;, &amp;#34;version&amp;#34;: &amp;#34;1.0&amp;#34;, &amp;#34;manifest_version&amp;#34;: 2, &amp;#34;description&amp;#34;: &amp;#34;Chrome extension description written here.&amp;#34;, &amp;#34;chrome_url_overrides&amp;#34; : { &amp;#34;newtab&amp;#34;: &amp;#34;newTab.html&amp;#34; }, &amp;#34;content_security_policy&amp;#34;: &amp;#34;script-src &amp;#39;self&amp;#39;; object-src &amp;#39;self&amp;#39;&amp;#34; } 创建自定义新标签页面 在Chrome拓展项目文件夹内创建newTab.html文件，这个文件就是你即将替换为新标签页的网页文件。如果你对HTML/CSS并不熟悉，可以仿照我的写法，把新标签页制作成如下所示的网址导航。
-newTab.html参考源码:
-&amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;utf-8&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1&amp;#34;&amp;gt; &amp;lt;title&amp;gt;New Tab&amp;lt;/title&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css&amp;#34;&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;section class=&amp;#34;section&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;container&amp;#34;&amp;gt; &amp;lt;h1 class=&amp;#34;title&amp;#34;&amp;gt; Hello Tony! &amp;lt;/h1&amp;gt; &amp;lt;br&amp;gt; &amp;lt;p class=&amp;#34;subtitle&amp;#34;&amp;gt; Resources &amp;lt;/p&amp;gt; &amp;lt;div class=&amp;#34;columns&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;column&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;menu&amp;#34;&amp;gt; &amp;lt;p class=&amp;#34;heading&amp;#34;&amp;gt;Company Resource&amp;lt;/p&amp;gt; &amp;lt;ul class=&amp;#34;menu-list&amp;#34;&amp;gt; &amp;lt;li&amp;gt; &amp;lt;a href=&amp;#34;&amp;#34;&amp;gt;All Hands&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li&amp;gt; &amp;lt;a href=&amp;#34;&amp;#34;&amp;gt;Helpin&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li&amp;gt; &amp;lt;a href=&amp;#34;&amp;#34;&amp;gt;Book Room&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li&amp;gt; &amp;lt;a href=&amp;#34;&amp;#34;&amp;gt;Inlife&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;#34;column&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;menu&amp;#34;&amp;gt; &amp;lt;p class=&amp;#34;heading&amp;#34;&amp;gt;Tech Resource&amp;lt;/p&amp;gt; &amp;lt;ul class=&amp;#34;menu-list&amp;#34;&amp;gt; &amp;lt;li&amp;gt; &amp;lt;a href=&amp;#34;&amp;#34;&amp;gt;Fast Access&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li&amp;gt; &amp;lt;a href=&amp;#34;&amp;#34;&amp;gt;Git&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;#34;column&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;menu&amp;#34;&amp;gt; &amp;lt;p class=&amp;#34;heading&amp;#34;&amp;gt;Team Resource&amp;lt;/p&amp;gt; &amp;lt;ul class=&amp;#34;menu-list&amp;#34;&amp;gt; &amp;lt;li&amp;gt; &amp;lt;a href=&amp;#34;&amp;#34;&amp;gt;Sprint Board&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li&amp;gt; &amp;lt;a href=&amp;#34;&amp;#34;&amp;gt;Zendesk&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;#34;column&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;menu&amp;#34;&amp;gt; &amp;lt;p class=&amp;#34;heading&amp;#34;&amp;gt;Docs&amp;lt;/p&amp;gt; &amp;lt;ul class=&amp;#34;menu-list&amp;#34;&amp;gt; &amp;lt;li&amp;gt; &amp;lt;a href=&amp;#34;https://docs.</description>
+      <description>有没有想过改造Chrome的默认新标签页? 如果有，我相信你肯定尝试过去Chrome应用商店下载一些拓展来定制新标签页。如果你觉得无论是默认，</description>
     </item>
     
     <item>
@@ -202,25 +125,7 @@ newTab.html参考源码:
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/zh/posts/2018/http-deprecate-x-prefix/</guid>
-      <description> 2012年6月，互联网工程任务小组(IETF)发布了新的征求意见稿(RFC-6648)，要求自定义HTTP头字段应放弃使用X-前缀。由于我所在的LinkedIn也在使用这类自定义头字段，因此特意阅读了这份征求意见稿，给大家解释以下为什么我们需要弃用它。
-X前缀诞生背景 HTTP头的作用是为了让客户端和服务器传送信息时能够附加一些额外信息。
-HTTP Header（HTTP头) 有一些标准字段，如:
- Authorization: 常用于传OAuth的Access Token或其他认证信息, 如Authorization: Bearer ABCDEFG
- Content-Type: 常用于表明Request Body 请求体的多媒体类型, 如application/x-www-form-urlencoded或application/json)
- User-Agent: 浏览器标识符, 如Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.84 Safari/537.36
-  如果想在HTTP头里添加自定义的字段，为了和标准字段区分，之前是建议加上X-前缀的(X代表Extension)。这个建议是在1982年为Email标准提出(参考RFC-822)，行之有效了几十年。
-X前缀的使用 在众多非标准HTTP头中，有一些变得越来越普遍，如:
- X-Forwarded-For: 标记通过代理访问服务器的原始客户端IP地址
- X-Forwarded-Host: 标记通过代理访问服务器的原始客户端Host名
- X-Forwarded-Proto: 标记原始客户端通过代理访问服务器时用的协议
- X-Powered-By: 标记框架、技术、环境等
-  X前缀的问题 这些带X-前缀的HTTP头变得越来越普遍后，当需要把他们标准化时，如何处理这个X-前缀就变得比较棘手。按理说标准化HTTP头后应该拿掉X-前缀，但是拿掉后显然会对一些依赖原来HTTP头的程序造成影响。为了保证兼容性，我们无法彻底拿掉X-前缀。总结来说，使用X-前缀本意是区分标准化和自定义HTTP头，但是却越来越无法达到这一目标。
-解决方案  不再建议新自定义HTTP头采用X-前缀，X-前缀也不再作为标准与非标准的标记
- 如果新的自定义HTTP头有可能被标准化，则选取当前未被占用的有意义的HTTP头字段名
- 如果新的自定义HTTP头不可能被标准化，完全是私有HTTP头，则建议包含组织名(如反域名com.example.foo)
- 已有的自定义HTTP头，保留使用或者放弃使用都可，不做推荐
- 是否包含X-前缀不能作为HTTP头是否安全的判断因素
-  </description>
+      <description>2012年6月，互联网工程任务小组(IETF)发布了新的征求意见稿(RFC-6648)，要求自定义HTTP头字段应放弃使用X-前缀。由于我所</description>
     </item>
     
     <item>
@@ -229,19 +134,7 @@ X前缀的使用 在众多非标准HTTP头中，有一些变得越来越普遍�
       <pubDate>Sat, 28 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/zh/posts/2018/write-script-to-scrap-house-rental-price/</guid>
-      <description>在硅谷生活工作，租房是一个很重要的事情。在硅谷或者美国其他地方租房，很多人像我一样选择专门的出租公寓，这种公寓只租不卖，经营也比较专业化。大部分出租公寓会有官网可以查询价格/空房，并且可以在线签约，规模小一些的出租公寓可能就没有官网，租房信息只挂在第三方租房网站上。由于我和女票一个刚换新公司，一个即将要去新公司，因此物色好了一处公寓，准备过几个月入住。由于这处公寓的在线价格每天都在变化，因此自己写了一个脚本每天查询所有可供签约的房间价格和其他信息并推送到手机，以供参考。下面记录了一些我实现的过程。
-简介 这家公寓是个专业连锁出租公寓，为了避免暴露我的住址，以下均以其旗下另一处出租公寓举例。
-这家连锁公寓的官网是:
-https://www.avaloncommunities.com/california/mountain-view-apartments/avalon-mountain-view/floor-plans
-官网价格区截图:
-分析 为了每天能自动接收这座公寓的价格信息，这个脚本大概需要做如下几件事:
- 脚本自动抓取所有待租公寓房间的价格、大小、入住日期、及其他重要信息
- 提取如上信息拼接消息文本，并发送给自己(我通过Telegram Bot给自己推送消息来接收通知, 参考另一篇文章:利用Telegram和Flask打造私人通知服务器)
-  实现 一开始我准备用爬虫爬网页文本，并分析文本提取价格信息。但是转念一想我应该先查看网站是不是自己有API提供这些信息给前端，打开Chrome Inspect网络，发现确实有这个API通过GET请求获取这些信息。为了确保这个API不需要鉴权一类验证，我复制API网址在隐身窗口打开，同样可以拿到数据。因此实现方法应该是让脚本发一个GET请求触发推送出租信息。
-Chrome Inspector:
-经过仔细研究后，发现这个获取租房信息的GET请求本身还支持一些参数，如最低价格，最高价格，预期入住日期等。
-接下来就是代码实现了，因为我已经有一个python Flask app跑在Google App Engine上，因此就基于之前的app加了一段代码，通过url(如 http://example.com/housing )访问触发脚本执行。定时发送请求触发脚本的方法请参阅用GitLab-CI免费运行定时任务
-代码 Flask脚本片段 @app.route(&amp;#39;/housing&amp;#39;, methods=[&amp;#39;GET&amp;#39;]) def housing(): houseResponse = json.loads(urlfetch.fetch(url=&amp;#39;https://api.avalonbay.com/json/reply/ApartmentSearch?communityCode=CA049&amp;amp;min=2000&amp;amp;max=3000&amp;amp;desiredMoveInDate=2018-09-01T07:00:00.000Z&amp;#39;).content) availableFloorPlans = houseResponse[&amp;#34;results&amp;#34;][&amp;#34;availableFloorPlanTypes&amp;#34;][0][&amp;#34;availableFloorPlans&amp;#34;] responseText = &amp;#34;*House Quotes:*%0A&amp;#34; for availableFloorPlan in availableFloorPlans: for apartment in availableFloorPlan[&amp;#34;finishPackages&amp;#34;][0][&amp;#34;apartments&amp;#34;]: responseText += &amp;#34;Size:&amp;#34; + str(apartment[&amp;#34;apartmentSize&amp;#34;]) + &amp;#34; Price:&amp;#34; + str(apartment[&amp;#34;pricing&amp;#34;][&amp;#34;effectiveRent&amp;#34;]) + &amp;#34; Floor:&amp;#34; + str(apartment[&amp;#34;floor&amp;#34;]) + &amp;#34; Date:&amp;#34; + time.</description>
+      <description>在硅谷生活工作，租房是一个很重要的事情。在硅谷或者美国其他地方租房，很多人像我一样选择专门的出租公寓，这种公寓只租不卖，经营也比较专业化。大</description>
     </item>
     
     <item>
@@ -250,25 +143,7 @@ Chrome Inspector:
       <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/zh/posts/2018/ultimate-way-to-beautify-mac-terminal-and-recommendations-for-plugins/</guid>
-      <description>如果你使用Mac进行开发，那么Terminal.app应该是你使用非常频繁的app了。初体验Terminal时你可能觉得单调乏味，阅读密密麻麻的内容也很费劲。但是如果你跟着我一起配置它，就会发现你平时觉得繁琐，不方便的地方其实都可以被完美解决,并且颜值也高了许多。
-我们准备这样改造Terminal  修改Terminal的Profile: 让Terminal配色更美观
- 安装oh-my-zsh: 将Terminal的shell从bash改成更强大的zsh
- 安装oh-my-zsh主题: 美化oh-my-zsh
- 安装oh-my-zsh必备插件: 让Terminal具有更高级和便利的功能
-  准备工作 建议先安装homebrew, 方便后续工具安装:
-/usr/bin/ruby -e &amp;#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;#34; 修改Terminal Profile 主题设置  在GitHub的osx-terminal-theme项目主页里寻找你喜欢的主题
- 在schemes目录里找到对应的主题文件并双击安装到Terminal, 设置为默认
-  安装oh-my-zsh 先安装zsh:
-brew install zsh 再安装oh-my-zsh:
-sh -c &amp;#34;$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&amp;#34; 安装oh-my-zsh主题 内置主题列表 oh-my-zsh提供一批内置主题，可以直接设置使用
- 在内置主题列表寻找你你喜欢的主题: https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
- 在~/.zshrc配置文件里设置ZSH_THEME为你的主题名称
- 激活设置source ~/.zshrc
-  第三方主题列表 许多第三方也开发了供oh-my-zsh使用的主题，可以去第三方主题列表查看和安装:
-https://github.com/robbyrussell/oh-my-zsh/wiki/External-themes
-安装oh-my-zsh必备插件 oh-my-zsh有非常丰富的插件可供使用，下面列举一些必备插件，可以大幅提高生产力。
-示例如下:
-# ~/.zshrc: plugins=( git zsh-syntax-highlighting ) git 自带插件，可以使用缩写命令, 比如 gaa -&amp;gt; git add --all, 通过alias | grep git查看所有支持缩写命令</description>
+      <description>如果你使用Mac进行开发，那么Terminal.app应该是你使用非常频繁的app了。初体验Terminal时你可能觉得单调乏味，阅读密密麻</description>
     </item>
     
     <item>
@@ -277,20 +152,7 @@ https://github.com/robbyrussell/oh-my-zsh/wiki/External-themes
       <pubDate>Tue, 24 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/zh/posts/2018/oauth2-pkce-flow/</guid>
-      <description>如果你正在做一款原生客户端软件，同时你又需要用到OAuth2.0登陆，那么使用OAuth2.0带PKCE支持的授权码模式是你的最佳选择。下面我就和大家分享一下带PKCE的授权码模式为什么最适合原生客户端。
-原生客户端软件一般是指没有后端服务器，所有代码都在用户本地设备上运行的软件（如Windows/Mac客户端或者iOS/Android客户端)，因此想让原生客户端软件安全存放密钥(client secret)是不现实的，很容易被破解。
-那么原生客户端如果需要使用OAuth有哪些选择，这些选择又有哪些利弊呢？
- 简化模式(Implicit Flow): 简化模式的Access Token会直接被传递给Redirect URL。假如你的原生客户端是跳转其他浏览器进行登陆授权，那么你要么是绑定URL Scheme通过类似app-name://?access_token=的方法把access token传递给原生客户端，要么是在本地起个HTTP服务器通过http://localhost:{port}/?access_token=的方法监听Access Token。这两种方式都有被第三方恶意应用占用URL Scheme或者localhost端口截取Access Token的风险，且Access Token过期无法更新，不建议使用。
- 授权码模式(Authorization Code Flow): 授权码模式的Access Token不会被直接传递给Redirect URL，Redirect URL只会接收一个授权码，且授权码必须要和Client ID，Client Secret一同使用才能获取Access Token。然而原生客户端无法安全保存Client Secret，第三方恶意应用可以破解Client Secret，并按上述方法截取Authorization Code，同样不建议使用。有的认证提供商针对原生客户端允许不提供Client Secret获取Access Token，这其实并没有解决根本问题。
-  上面两种方法都被否决了，那么怎么才能让原生客户端安全使用OAuth2.0认证呢？答案就是使用带有PKCE支持的授权码模式。
-PKCE, 全称Proof Key for Code Exchange, 微软翻译为保护授权代码授权。这其实是通过一种密码学手段确保恶意第三方即使截获Authorization Code或者其他密钥，也无法向认证服务器交换Access Token。
-PKCE的流程大概如下:
- 随机生成一串字符并作URL-Safe的Base64编码处理, 结果用作code_verifier
- 将这串字符通过SHA256哈希，并用URL-Safe的Base64编码处理，结果用作code_challenge
- 把code_challenge带上，跳转认证服务器，获取Authorization Code
- 把code_verifier带上，换取Access Token
-  由于中间人不能由code_challenge逆推code_verifier，只有客户端自己才知道这两个值。因此即使中间人截获了code_challenge, Authorization Code等，也无法换取Access Token, 避免了安全问题。
-在线生成 PKCE Code Verifier and Code Challenge https://tonyxu-io.</description>
+      <description>如果你正在做一款原生客户端软件，同时你又需要用到OAuth2.0登陆，那么使用OAuth2.0带PKCE支持的授权码模式是你的最佳选择。下面</description>
     </item>
     
     <item>
@@ -299,24 +161,7 @@ PKCE的流程大概如下:
       <pubDate>Mon, 23 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/zh/posts/2018/use-gitlab-ci-to-run-free-scheduled-jobs/</guid>
-      <description>本文介绍我是如何使用GitLab-CI免费地运行一些需要定时执行的脚本，而不需要在本地/服务器上使用cron job或者一直跑一个后台程序运行中间sleep。
-GitLab-CI是GitLab提供的持续集成/部署的工具。当有新代码提交或者其他条件触发时，它就会自动运行脚本执行编译、测试、部署等活动。GitLab-CI每个月提供2,000分钟的免费运行时间，平均一天可以大概跑一个小时。
-如果你不用GitLab而是用GitHub的话，Travis CI也免费提供类似功能。
-GitLab-CI 和 Travis CI都支持定时执行脚本，但是GitLab-CI最多可以支持每小时运行一次，而Travis只支持最多每天运行一次。
-那么什么情况下你会需要定试运行脚本呢？比如:
- 我需要一个脚本每隔一段时间去查询当前比特币价格，当高于指定价格时卖出或者提醒我
- 我需要一个脚本每隔一段时间查询一个商品的价格，当低于制定价格时提醒我购买
- 我需要一个脚本每隔一段时间访问一次某个网址（例如为了保持Heroku应用处于激活状态)
-  下面为了方便起见，我就以情况3举例。
-首先在你的repo目录创建一个.gitlab-ci.yml文件:
-test:script:-bashscripts/script_a.sh 上述示例定义了一个test任务，并指定了用bash执行scripts目录下的script_a.sh脚本文件
-接下来就在scripts目录下创建一个script_a.sh文件:
-#!/bin/sh curl curl http://ip-api.com/json  注: job名，脚本目录，脚本名，脚本内容都可以根据具体需要修改，这里只是举例。
- 将包含.gitlab-ci.yml和脚本的代码上传至GitLab，即会自动触发任务，去GitLab管理界面左侧的CI/CD - Jobs可以查看任务状态。
-进入CI/CD - Schedules可以给任务设置定时，默认提供每天/每周/每月，或者自定义。自定义的设置语法格式和cron一样，不熟悉的可以去 https://crontab.guru 调试。假如你设置* * * * 1-5就是每周一到周五每分钟都运行，但是GitLab貌似有限制，导致实际上只会每周一到周五每小时执行一次。
-接下来你的脚本就会按照你设置的时间定时执行了。
-如果你去CI/CD - Jobs查看运行日志，可以看到类似如下日志:
-Running with gitlab-runner 11.1.0 (081978aa) on docker-auto-scale 0277ea0f Using Docker executor with image ruby:2.5 ... Pulling docker image ruby:2.5 ... Using docker image sha256:1d8640b852eb145393da754ec38a4153edcf473a249448b7a271cea5f06016fa for ruby:2.</description>
+      <description>本文介绍我是如何使用GitLab-CI免费地运行一些需要定时执行的脚本，而不需要在本地/服务器上使用cron job或者一直跑一个后台程序运行</description>
     </item>
     
     <item>
@@ -325,18 +170,7 @@ Running with gitlab-runner 11.1.0 (081978aa) on docker-auto-scale 0277ea0f Using
       <pubDate>Sun, 22 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/zh/posts/2018/use-icomoon-to-reduce-fontawesome-size/</guid>
-      <description>FontAwesome是非常棒的图标字体库，引用了FontAwesome字体库后，仅需要通过HTML标签就可以把图标嵌入你的页面，非常之方便。然而默认使用方法虽然简单，但是会带来一个额外问题，就是加载的资源文件体积过大，如果你的页面本身就比较简单，字体库可能会让你的网页加载大小翻上好几倍。
-下面分享一下我通过使用IcoMoon来生成只含有我需要的图标的图标库文件，瞬间减少大约98%文件大小的方法。
-FontAwesome的默认使用方法  引用FontAwesome图标库:
-&amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;https://use.fontawesome.com/releases/v5.1.1/css/all.css&amp;#34;&amp;gt; 使用HTML标签嵌入特定图标
-&amp;lt;i class=&amp;#34;fas fa-home&amp;#34;&amp;gt;&amp;lt;/i&amp;gt;  IcoMoon方法  访问IcoMoon主页选择所有你需要使用的图标并点击生成字体(Generate Font)
- 下载资源文件
- 把资源文件中的style.css文件和fonts文件夹复制到你的网站资源文件夹并在HTML页面的&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;区域引用style.css文件(之前引用的FontAwesome相关资源可以移除了)
- 在示范页面，鼠标移至图标上方，点击 &amp;ldquo;Get Code&amp;rdquo;
- 复制图标嵌入代码，粘贴到你需要展示的HTML位置
-  完成！现在你的网站不再需要加载完整的FontAwesome资源文件，而只是加载你使用的图标资源。
-对比 没有对比就没有伤害，下面附上我个人网站使用上述两种方法的性能对比
-使用IcoMoon 使用FontAwesome默认方法 对比总结 图标字体相关体积减少比例: (132 - 2.4) / 132 = 0.98%, 总资源也从157KB下降到了38.7KB，效果非常之明显!</description>
+      <description>FontAwesome是非常棒的图标字体库，引用了FontAwesome字体库后，仅需要通过HTML标签就可以把图标嵌入你的页面，非常之方便</description>
     </item>
     
     <item>
@@ -345,33 +179,7 @@ FontAwesome的默认使用方法  引用FontAwesome图标库:
       <pubDate>Sat, 21 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/zh/posts/2018/be-prepared-for-your-next-job/</guid>
-      <description>这篇分享是我在DBL聚会和大家分享的内容，贴在这里以供大家阅读。
- 我想和大家在这篇文章里分享一下我最近跳槽的经历以及我总结的为什么我选择并成功跳槽的原因。我的重点会放在比较抽象的思考，而不是具体的技巧。
-我想分享的话题:
- ✅ 我第一次跳槽
- ✅ 心中永远有一个目标
- ✅ 不要一直留在原地
- ✅ 职业发展
-  不会在文章讨论的话题:
- ❌ 如何写简历
- ❌ 如何准备技术面试
- ❌ 如何获取内推
- ❌ 使用LinkedIn的技巧
-  第一部分: 我的第一次跳槽 我在从密苏里毕业后，以软件工程师的工作加入了一家创业公司Moxtra。你们其中一部分可能知道我在几个月前跳槽去了LinkedIn。当我回想我是为何选择跳槽，又是如何成功跳槽的时候，我总结为以下两点:
- 心中永远有一个目标
- 不要一直留在原地
-  第二部分: 心中永远有一个目标 有句话说得好，当你清楚的知道你想要什么的时候，你就更可能会得到好的结果。我的目标非常简单，就是在一家伟大的公司做一款伟大的产品。这个目标从我小时候就根植在我心里。这个目标也是一直驱使我一路从中国，到美国，再到硅谷的动力。
-老实说，在像Facebook、Google、LinkedIn这样的公司工作就是我的目标，有了这个目标，我在工作中变得更加主动，也慢慢的主动学会了一些之后对我跳槽帮助巨大的技术能力。
-第三部分: 不要一直留在原地 每隔几年换一次工作曾经是在简历上不光彩的事情，但是这已经是过去式了，完全不用担心这个。保持一个工作不变意味着你会越来越依赖于这份工作，而失去了快速跳槽到更好工作的能力。要知道在科技行业，只有少数人会在一个岗位上待超过三至五年，你必须在精神上，财务上，以及技能上准备好每几年换一次工作的能力。
-当然，还有其他原因你必须向前看，当你觉得你每天在重复劳动，或者你做的事情对你下一份工作毫无帮助的时候，你也许应该考虑跳槽。另外，一个最重要的因素，跳槽会大概率让你的工资涨30%到50%，甚至有些人可以翻倍。如果你对赚更多钱有更高追求，你一定已经在考虑了。
-第四部分: 职业发展 还有一个话题我想和大家分享，就是职业发展。一个人一生当中可能会对不同的事情感兴趣，因此你在人生不同的阶段会想从事不同职业，并且一个人基本上不可能一辈子从事一份职业从来不改。有一个话题在科技行业非常火热，就是人们非常担心在他们四五十岁的时候的职业安全问题。我也一样会对这个问题有所担心，如果打算一直从事软件工程师，当我四五十岁的时候要如何跟二三十岁的同事竞争。这虽然是老生常谈，但确实非常多人对此很忧虑。我个人暂时对这个问题没有答案，但我发现以下是几个人们可以考虑的路径:
- 成为一个资深软件工程师
- 持续学习新技术
- 变成特定技术的专家
-  成为技术经理
- 编程特定技术的专家
- 关注团队管理(包括招聘、领导力、团队精神)
- 关注流程、战略、沟通</description>
+      <description>这篇分享是我在DBL聚会和大家分享的内容，贴在这里以供大家阅读。 我想和大家在这篇文章里分享一下我最近跳槽的经历以及我总结的为什么我选择并成功</description>
     </item>
     
     <item>
@@ -380,21 +188,7 @@ FontAwesome的默认使用方法  引用FontAwesome图标库:
       <pubDate>Tue, 17 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/zh/posts/2018/tech-stack-for-building-your-own-product/</guid>
-      <description>作为一名程序员/开发者，如果你也想自己尝试从头到尾搭建一款互联网产品，那么你可能会用到下面这些技术栈或者技术框架。选取的基本都是开源或者免费使用的，适合个人开发者或者创业公司参考。
-网站前端  基础语言: HTML, JavaScript, CSS
- 衍生语言: ES6, TypeScript, CoffeScript
- JS库/框架: React, Vue, Angular, jQuery
- 模版引擎: Mustache, Handlebars, Jade
- CSS库/框架:
- 全球: Bootstrap, Foundation, Semantic
- 国内: Element, Ant Design, Amaze UI
- 特定框架: Material-UI (React), Angular Material (Angular), iView (Vue)
-  自动化/构建工具: Grunt, Gulp
- 模块化: Browserify, Webpack
- 包管理: npm, bower, yarn
- 代码质量: JSLint, ESLint, TSLint
- 跨平台
- 移动端: React Native, Ionic, MUI</description>
+      <description>作为一名程序员/开发者，如果你也想自己尝试从头到尾搭建一款互联网产品，那么你可能会用到下面这些技术栈或者技术框架。选取的基本都是开源或者免费</description>
     </item>
     
     <item>
@@ -403,23 +197,7 @@ FontAwesome的默认使用方法  引用FontAwesome图标库:
       <pubDate>Thu, 12 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/zh/posts/2018/use-telegram-and-flask-to-build-notification-server/</guid>
-      <description>假如有如下这么几个场景:
- 每天下班离开公司的时候和到家的时候都希望能自动通知到我的男朋友/女朋友
- 页面有访问时立刻通知自己
- 爬虫或其他任务执行完毕自动通知自己
-  以上场景特别需要一个能够便捷触发并把消息发送到手机上的机制。我的解决方案是：
-实现一个Flask app，接收REST API的GET或者POST请求，根据不同需要拼装消息文本并发送到某个app (如Telegram, Slack等)。这个Flask app可以跑在Google App Engine (免费)， 并绑定自己的域名。
-下面我就介绍一下大概的步骤：
- 根据 Google App Engine 创建一个基本的Flask app
- 去Telegram创建Bot: https://core.telegram.org/bots#3-how-do-i-create-a-bot
- 和Telegram Bot对话，并获取chat id: https://api.telegram.org/bot$TOKEN/getUpdates
- 为Flask创建一个route handle，让它通过如下地址向你的Telegram会话发送消息: https://api.telegram.org/bot$TOKEN/sendMessage?chat_id=12345&amp;amp;text=Hello+World
- 上传到Google App Engine: gcloud app deploy
-  这样你就有了一个Flask app可以接收HTTP Request并根据需要向你的Telegram app发送通知，消息可以是预先准备的也可以是HTTP Request传给Flask app的。
-那么回到开头的几个场景，我们要如何用Flask app解决这几个问题呢？可以针对他们分别尝试:
- 手机上装IFTTT并允许后台定位，设置进入或者离开某个地理区间就出发webhook request到你的flask endpoint (并把消息内容传给通过Request Body传给Flask app)，你的Flask app就可以向你的Telegram发送通知了。你也可以直接让IFTTT向Telegram地址发送通知。
- 在Flask app添加一个route接受页面访问触发的GET请求，并把来源IP发送给Telegram。你也可以在Flask app请求第三方IP地址库获取地理位置，一同发送给Telegram。
- 在脚本结束的时候触发GET/POST请求到你的Flask app，Flask app再向你的Telegram发送通知。你也可以直接从脚本向Telegram发送通知。</description>
+      <description>假如有如下这么几个场景: 每天下班离开公司的时候和到家的时候都希望能自动通知到我的男朋友/女朋友 页面有访问时立刻通知自己 爬虫或其他任务执行完毕</description>
     </item>
     
     <item>
@@ -428,9 +206,7 @@ FontAwesome的默认使用方法  引用FontAwesome图标库:
       <pubDate>Wed, 11 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/zh/posts/2018/cloud-computing-exploration/</guid>
-      <description>说起和云的接触，最早可以追溯到高二的时候Google被墙，被迫学网上的教程自己用Google App Engine跑GoAgent翻墙代理。大一的时候曾经折腾过一阵自建网站(纯属娱乐)，在网上购买过共享空间(Shared Hosting)，后来觉得限制太多，无法安装软件，就又购买了独立主机(VPS)。在美国读CS期间学Cloud Computing课程又在AWS上建过一些instance放简单网页。毕业后还尝试过Heroku (和Google App Engine类似)等云平台用于跑小型demo程序。虽然没有高强度使用云计算的经历，但是或多或少用过一些，也对云计算的应用趋势略有所感。
-总体来说，对于普通的开发者，如果只是需要跑一个后端，从最早的要自己搭建物理服务器，到后来网上租虚拟服务器（Digital Ocean)以及更加专业的AWS等之后，现在更多的开始用Serverless架构的服务(AWS Lambda, Google Cloud Functions, Firebase Cloud Functions, Azure Functions)，也就是说只需要关心代码本身，而不需要关心维护环境。
-我自己有跑一个Flask程序，目前放在Google App Engine上，主要是因为Google App Engine的Standard Environment版本是有免费额度的。这个Flask程序之前是Serve https://tonyxu.io 网站前端和后端(REST API)的请求。现在https://tonyxu.io的前端migrate到Firebase Hosting了，因此我打算重构在GAE上跑的后端。我会另外单独写一篇文章来记录我是如何搭建一个自用的后端REST API。</description>
+      <description>说起和云的接触，最早可以追溯到高二的时候Google被墙，被迫学网上的教程自己用Google App Engine跑GoAgent翻墙代理。大一的时</description>
     </item>
     
     <item>
@@ -439,19 +215,7 @@ FontAwesome的默认使用方法  引用FontAwesome图标库:
       <pubDate>Sun, 08 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/zh/posts/2018/create-alfred-workflow-for-uploading-screenshot-to-s3/</guid>
-      <description>Markdown语言正在变得越来越流行，大多数人在使用Markdown语言的时候都会需要粘贴图片，然而Markdown粘贴图片必须要用链接。今天我想向大家介绍如何创建一个Alfred workflow来自动上传你剪切板里的图片到S3并获取公开链接。
-演示 主要步骤  使用 pngpaste 获取剪切板图片
- 把图片写到临时文件夹 /tmp
- 使用boto3上传图片到AWS S3
-  实现 现在我们知道主要步骤，接下来就是编写Alfred Workflow的Python脚本实现了。
-创建 Alfred workflow 创建 Blank Workflow 并命名
-右键空白区域并选择Inputs -&amp;gt; Keyword
-指定触发workflow的关键词
-右键空白区域并选择Actions -&amp;gt; Run Script
-让我们让它执行Python脚本
-点击Cancel左侧的按钮来打开workflow文件夹
-创建脚本文件(确保文件名和你在上面步骤制定的脚本名一致, 并按照如下所述编写脚本
-#!/usr/bin/python # -*- coding: utf-8 -*- from __future__ import print_function import datetime import os import sys import atexit import imghdr from subprocess import call from os.path import expanduser, exists, basename, getsize from workflow import Workflow def capture(): file_name = datetime.</description>
+      <description>Markdown语言正在变得越来越流行，大多数人在使用Markdown语言的时候都会需要粘贴图片，然而Markdown粘贴图片必须要用链接。</description>
     </item>
     
     <item>
@@ -460,21 +224,7 @@ FontAwesome的默认使用方法  引用FontAwesome图标库:
       <pubDate>Wed, 04 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/zh/posts/2018/join-linkedin-one-month-summary/</guid>
-      <description>今天入职LinkedIn一个月了，这一个月过的非常快，第一周培训，第二周InDay，第三周预备放假，第四周放一周假，所以事实上工作的时间远不到一个月。
-这一个月最主要的任务就是熟悉公司的技术、工具、流程和自己组的产品，中间还参加了不少内部的会。虽然第一个月不太可能有多亮眼的表现，但是还是应该总结一下。
-自己觉得表现好的地方：
- 对公司的技术和工具可以很快掌握
- 能发现现存问题并快速作出修复
- 对工作进度有计划
-  觉得有挑战的地方：
- 自然流畅的和美国人交谈工作和生活话题（组里没有中国人）
- 开会的时候觉得不够自信，很难参与讨论
- 和同事聊天的时候不够积极主动
-  其实我的情况相对于中国人来说相对比较普遍，技术上没有问题积极主动，但是社交方面比较欠缺，不能很好的口头表现自己。如果想改善这个问题，我想接下来的几个月可以从这几个方面入手：
- 提前浏览会议议题，争取对其中一两个议题充分理解并有自己的见解（开会的时候可以参与讨论）
- 提前思考如何回答常见的社交问题（如上周末过的怎样，这周末什么安排等）
- 鼓励自己在回答完对方的问题后能主动提出问题，引导话题
-  </description>
+      <description>今天入职LinkedIn一个月了，这一个月过的非常快，第一周培训，第二周InDay，第三周预备放假，第四周放一周假，所以事实上工作的时间远不</description>
     </item>
     
     <item>
@@ -483,24 +233,7 @@ FontAwesome的默认使用方法  引用FontAwesome图标库:
       <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/zh/posts/2018/rest-api-design-interview-preparation/</guid>
-      <description>现在 REST API 已经越来越流行被用作前后端的借口。大多数平台都提供 REST API 作为兼容 Web 端和移动端通用接口。如果你即将面试一个要求对 REST API 非常熟悉的岗位，我推荐你多准备 REST API 相关知识。以下是我个人对 REST API 的面试准备。
-设计原则  自描述
- 简单
- 安全
-  准备  确定用户
- 来自内部或者外部
- 角色 (开发者, 管理员, 客户, 客服&amp;hellip;)
-  确定使用场景
- 确定需要提供的功能
- 分析并确定上述，再开始设计
-  注意:
- 不要猜想
- 不要杜撰
-  设计流程  确定 REST API 要提供对哪些资源的操作
- 确定不同资源的关系
- 根据资源类型和关系决定资源名的定义方法
- 为资源确定必须的操作方法
-  接口设计 设计如何提供资源的操作方法</description>
+      <description>现在 REST API 已经越来越流行被用作前后端的借口。大多数平台都提供 REST API 作为兼容 Web 端和移动端通用接口。如果你即将面试一个要求对 REST API 非常熟悉的岗位，我推</description>
     </item>
     
     <item>
@@ -509,20 +242,7 @@ FontAwesome的默认使用方法  引用FontAwesome图标库:
       <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/zh/posts/2018/improve-your-ability-to-solve-problem-at-work/</guid>
-      <description>解决问题是工作中最必不可少的能力，因此需要思考:
- 自己是否有在解决问题这个方面的能力有欠缺
- 如何才能提升这个能力
-  回想过去两年在Moxtra的工作经历，自己作为一个Solutions Engineer, 根本职能就是为客户解决问题。问题的模式无非是:
- 我有A需求，你们有没有B解决方案实现这个需求
-  大部分情况下我会评估如下几个方面然后回答：
- 我们是否有现成的解决方案
- 如果需要做支持，是否符合我们的产品定位和路线图
- 对公司营收影响大不大
-  如果其中任何一条不满足要求，我可能会直接拒绝这个需求。这么做看起来没什么问题，避免了公司产品为了第三方做太多不必要的妥协。但是仔细想，我作为Solution Engineer，在这当中可以做更多的事情。
-比如:
- 深入了解需求场景，确定是不是真的只有*需求A*才能解决问题
- 探索是否有其他解决方案可以作为work around
-  一定要带着解决问题的思维模式进行思考，而不是简单的做Yes/No判断，最后把不能解决问题的责任推给其他人/事。</description>
+      <description>解决问题是工作中最必不可少的能力，因此需要思考: 自己是否有在解决问题这个方面的能力有欠缺 如何才能提升这个能力 回想过去两年在Moxtra的工作</description>
     </item>
     
     <item>
@@ -540,12 +260,7 @@ FontAwesome的默认使用方法  引用FontAwesome图标库:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/zh/about/</guid>
-      <description>我是徐毅涵，一名在领英工作的软件工程师。我从小热爱科技，始终追随科技潮流，尤其在互联网科技、移动互联网、和人工智能领域。我喜欢自己设计并制作有趣的东西，特别是通过代码。当我不在写代码的时候，我喜欢和我的家庭一起出游，用摄像机记录旅行视频。我和我的未婚妻 Helen 居住在旧金山湾区。
-我会在这个博客分享我正在思考的事情，我的学习感悟，以及任何我感兴趣的事物。欢迎通过以下方式和我交流:
- Email: me@tonyxu.io
- LinkedIn: https://linkedin.com/in/tonyxu93
- GitHub: https://github.com/tonyxu-io
-  </description>
+      <description>我是徐毅涵，一名在领英工作的软件工程师。我从小热爱科技，始终追随科技潮流，尤其在互联网科技、移动互联网、和人工智能领域。我喜欢自己设计并制作</description>
     </item>
     
     <item>

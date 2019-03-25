@@ -21,55 +21,19 @@
     
     
 <meta itemprop="name" content="HTTP头字段为何要弃用X前缀">
-<meta itemprop="description" content=" 2012年6月，互联网工程任务小组(IETF)发布了新的征求意见稿(RFC-6648)，要求自定义HTTP头字段应放弃使用X-前缀。由于我所在的LinkedIn也在使用这类自定义头字段，因此特意阅读了这份征求意见稿，给大家解释以下为什么我们需要弃用它。
-X前缀诞生背景 HTTP头的作用是为了让客户端和服务器传送信息时能够附加一些额外信息。
-HTTP Header（HTTP头) 有一些标准字段，如:
- Authorization: 常用于传OAuth的Access Token或其他认证信息, 如Authorization: Bearer ABCDEFG
- Content-Type: 常用于表明Request Body 请求体的多媒体类型, 如application/x-www-form-urlencoded或application/json)
- User-Agent: 浏览器标识符, 如Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.84 Safari/537.36
-  如果想在HTTP头里添加自定义的字段，为了和标准字段区分，之前是建议加上X-前缀的(X代表Extension)。这个建议是在1982年为Email标准提出(参考RFC-822)，行之有效了几十年。
-X前缀的使用 在众多非标准HTTP头中，有一些变得越来越普遍，如:
- X-Forwarded-For: 标记通过代理访问服务器的原始客户端IP地址
- X-Forwarded-Host: 标记通过代理访问服务器的原始客户端Host名
- X-Forwarded-Proto: 标记原始客户端通过代理访问服务器时用的协议
- X-Powered-By: 标记框架、技术、环境等
-  X前缀的问题 这些带X-前缀的HTTP头变得越来越普遍后，当需要把他们标准化时，如何处理这个X-前缀就变得比较棘手。按理说标准化HTTP头后应该拿掉X-前缀，但是拿掉后显然会对一些依赖原来HTTP头的程序造成影响。为了保证兼容性，我们无法彻底拿掉X-前缀。总结来说，使用X-前缀本意是区分标准化和自定义HTTP头，但是却越来越无法达到这一目标。
-解决方案  不再建议新自定义HTTP头采用X-前缀，X-前缀也不再作为标准与非标准的标记
- 如果新的自定义HTTP头有可能被标准化，则选取当前未被占用的有意义的HTTP头字段名
- 如果新的自定义HTTP头不可能被标准化，完全是私有HTTP头，则建议包含组织名(如反域名com.example.foo)
- 已有的自定义HTTP头，保留使用或者放弃使用都可，不做推荐
- 是否包含X-前缀不能作为HTTP头是否安全的判断因素
-  ">
+<meta itemprop="description" content="2012年6月，互联网工程任务小组(IETF)发布了新的征求意见稿(RFC-6648)，要求自定义HTTP头字段应放弃使用X-前缀。由于我所">
 
 
 <meta itemprop="datePublished" content="2018-08-01T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-08-01T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="51">
+<meta itemprop="wordCount" content="926">
 
 
 
 <meta itemprop="keywords" content="" />
 
     <meta property="og:title" content="HTTP头字段为何要弃用X前缀" />
-<meta property="og:description" content=" 2012年6月，互联网工程任务小组(IETF)发布了新的征求意见稿(RFC-6648)，要求自定义HTTP头字段应放弃使用X-前缀。由于我所在的LinkedIn也在使用这类自定义头字段，因此特意阅读了这份征求意见稿，给大家解释以下为什么我们需要弃用它。
-X前缀诞生背景 HTTP头的作用是为了让客户端和服务器传送信息时能够附加一些额外信息。
-HTTP Header（HTTP头) 有一些标准字段，如:
- Authorization: 常用于传OAuth的Access Token或其他认证信息, 如Authorization: Bearer ABCDEFG
- Content-Type: 常用于表明Request Body 请求体的多媒体类型, 如application/x-www-form-urlencoded或application/json)
- User-Agent: 浏览器标识符, 如Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.84 Safari/537.36
-  如果想在HTTP头里添加自定义的字段，为了和标准字段区分，之前是建议加上X-前缀的(X代表Extension)。这个建议是在1982年为Email标准提出(参考RFC-822)，行之有效了几十年。
-X前缀的使用 在众多非标准HTTP头中，有一些变得越来越普遍，如:
- X-Forwarded-For: 标记通过代理访问服务器的原始客户端IP地址
- X-Forwarded-Host: 标记通过代理访问服务器的原始客户端Host名
- X-Forwarded-Proto: 标记原始客户端通过代理访问服务器时用的协议
- X-Powered-By: 标记框架、技术、环境等
-  X前缀的问题 这些带X-前缀的HTTP头变得越来越普遍后，当需要把他们标准化时，如何处理这个X-前缀就变得比较棘手。按理说标准化HTTP头后应该拿掉X-前缀，但是拿掉后显然会对一些依赖原来HTTP头的程序造成影响。为了保证兼容性，我们无法彻底拿掉X-前缀。总结来说，使用X-前缀本意是区分标准化和自定义HTTP头，但是却越来越无法达到这一目标。
-解决方案  不再建议新自定义HTTP头采用X-前缀，X-前缀也不再作为标准与非标准的标记
- 如果新的自定义HTTP头有可能被标准化，则选取当前未被占用的有意义的HTTP头字段名
- 如果新的自定义HTTP头不可能被标准化，完全是私有HTTP头，则建议包含组织名(如反域名com.example.foo)
- 已有的自定义HTTP头，保留使用或者放弃使用都可，不做推荐
- 是否包含X-前缀不能作为HTTP头是否安全的判断因素
-  " />
+<meta property="og:description" content="2012年6月，互联网工程任务小组(IETF)发布了新的征求意见稿(RFC-6648)，要求自定义HTTP头字段应放弃使用X-前缀。由于我所" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tonyxu.io/zh/posts/2018/http-deprecate-x-prefix/" />
 
@@ -85,25 +49,7 @@ X前缀的使用 在众多非标准HTTP头中，有一些变得越来越普遍�
 <meta name="twitter:image" content="https://tonyxu.io/images/og-image.png"/>
 
 <meta name="twitter:title" content="HTTP头字段为何要弃用X前缀"/>
-<meta name="twitter:description" content=" 2012年6月，互联网工程任务小组(IETF)发布了新的征求意见稿(RFC-6648)，要求自定义HTTP头字段应放弃使用X-前缀。由于我所在的LinkedIn也在使用这类自定义头字段，因此特意阅读了这份征求意见稿，给大家解释以下为什么我们需要弃用它。
-X前缀诞生背景 HTTP头的作用是为了让客户端和服务器传送信息时能够附加一些额外信息。
-HTTP Header（HTTP头) 有一些标准字段，如:
- Authorization: 常用于传OAuth的Access Token或其他认证信息, 如Authorization: Bearer ABCDEFG
- Content-Type: 常用于表明Request Body 请求体的多媒体类型, 如application/x-www-form-urlencoded或application/json)
- User-Agent: 浏览器标识符, 如Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.84 Safari/537.36
-  如果想在HTTP头里添加自定义的字段，为了和标准字段区分，之前是建议加上X-前缀的(X代表Extension)。这个建议是在1982年为Email标准提出(参考RFC-822)，行之有效了几十年。
-X前缀的使用 在众多非标准HTTP头中，有一些变得越来越普遍，如:
- X-Forwarded-For: 标记通过代理访问服务器的原始客户端IP地址
- X-Forwarded-Host: 标记通过代理访问服务器的原始客户端Host名
- X-Forwarded-Proto: 标记原始客户端通过代理访问服务器时用的协议
- X-Powered-By: 标记框架、技术、环境等
-  X前缀的问题 这些带X-前缀的HTTP头变得越来越普遍后，当需要把他们标准化时，如何处理这个X-前缀就变得比较棘手。按理说标准化HTTP头后应该拿掉X-前缀，但是拿掉后显然会对一些依赖原来HTTP头的程序造成影响。为了保证兼容性，我们无法彻底拿掉X-前缀。总结来说，使用X-前缀本意是区分标准化和自定义HTTP头，但是却越来越无法达到这一目标。
-解决方案  不再建议新自定义HTTP头采用X-前缀，X-前缀也不再作为标准与非标准的标记
- 如果新的自定义HTTP头有可能被标准化，则选取当前未被占用的有意义的HTTP头字段名
- 如果新的自定义HTTP头不可能被标准化，完全是私有HTTP头，则建议包含组织名(如反域名com.example.foo)
- 已有的自定义HTTP头，保留使用或者放弃使用都可，不做推荐
- 是否包含X-前缀不能作为HTTP头是否安全的判断因素
-  "/>
+<meta name="twitter:description" content="2012年6月，互联网工程任务小组(IETF)发布了新的征求意见稿(RFC-6648)，要求自定义HTTP头字段应放弃使用X-前缀。由于我所"/>
 
     
      
@@ -229,30 +175,12 @@ if (!doNotTrack) {
   <div class="container" itemscope itemtype="http://schema.org/BlogPosting">
     
 <meta itemprop="name" content="HTTP头字段为何要弃用X前缀">
-<meta itemprop="description" content=" 2012年6月，互联网工程任务小组(IETF)发布了新的征求意见稿(RFC-6648)，要求自定义HTTP头字段应放弃使用X-前缀。由于我所在的LinkedIn也在使用这类自定义头字段，因此特意阅读了这份征求意见稿，给大家解释以下为什么我们需要弃用它。
-X前缀诞生背景 HTTP头的作用是为了让客户端和服务器传送信息时能够附加一些额外信息。
-HTTP Header（HTTP头) 有一些标准字段，如:
- Authorization: 常用于传OAuth的Access Token或其他认证信息, 如Authorization: Bearer ABCDEFG
- Content-Type: 常用于表明Request Body 请求体的多媒体类型, 如application/x-www-form-urlencoded或application/json)
- User-Agent: 浏览器标识符, 如Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.84 Safari/537.36
-  如果想在HTTP头里添加自定义的字段，为了和标准字段区分，之前是建议加上X-前缀的(X代表Extension)。这个建议是在1982年为Email标准提出(参考RFC-822)，行之有效了几十年。
-X前缀的使用 在众多非标准HTTP头中，有一些变得越来越普遍，如:
- X-Forwarded-For: 标记通过代理访问服务器的原始客户端IP地址
- X-Forwarded-Host: 标记通过代理访问服务器的原始客户端Host名
- X-Forwarded-Proto: 标记原始客户端通过代理访问服务器时用的协议
- X-Powered-By: 标记框架、技术、环境等
-  X前缀的问题 这些带X-前缀的HTTP头变得越来越普遍后，当需要把他们标准化时，如何处理这个X-前缀就变得比较棘手。按理说标准化HTTP头后应该拿掉X-前缀，但是拿掉后显然会对一些依赖原来HTTP头的程序造成影响。为了保证兼容性，我们无法彻底拿掉X-前缀。总结来说，使用X-前缀本意是区分标准化和自定义HTTP头，但是却越来越无法达到这一目标。
-解决方案  不再建议新自定义HTTP头采用X-前缀，X-前缀也不再作为标准与非标准的标记
- 如果新的自定义HTTP头有可能被标准化，则选取当前未被占用的有意义的HTTP头字段名
- 如果新的自定义HTTP头不可能被标准化，完全是私有HTTP头，则建议包含组织名(如反域名com.example.foo)
- 已有的自定义HTTP头，保留使用或者放弃使用都可，不做推荐
- 是否包含X-前缀不能作为HTTP头是否安全的判断因素
-  ">
+<meta itemprop="description" content="2012年6月，互联网工程任务小组(IETF)发布了新的征求意见稿(RFC-6648)，要求自定义HTTP头字段应放弃使用X-前缀。由于我所">
 
 
 <meta itemprop="datePublished" content="2018-08-01T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-08-01T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="51">
+<meta itemprop="wordCount" content="926">
 
 
 

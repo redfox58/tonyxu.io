@@ -21,53 +21,19 @@
     
     
 <meta itemprop="name" content="REST API 设计面试准备">
-<meta itemprop="description" content="现在 REST API 已经越来越流行被用作前后端的借口。大多数平台都提供 REST API 作为兼容 Web 端和移动端通用接口。如果你即将面试一个要求对 REST API 非常熟悉的岗位，我推荐你多准备 REST API 相关知识。以下是我个人对 REST API 的面试准备。
-设计原则  自描述
- 简单
- 安全
-  准备  确定用户
- 来自内部或者外部
- 角色 (开发者, 管理员, 客户, 客服&hellip;)
-  确定使用场景
- 确定需要提供的功能
- 分析并确定上述，再开始设计
-  注意:
- 不要猜想
- 不要杜撰
-  设计流程  确定 REST API 要提供对哪些资源的操作
- 确定不同资源的关系
- 根据资源类型和关系决定资源名的定义方法
- 为资源确定必须的操作方法
-  接口设计 设计如何提供资源的操作方法">
+<meta itemprop="description" content="现在 REST API 已经越来越流行被用作前后端的借口。大多数平台都提供 REST API 作为兼容 Web 端和移动端通用接口。如果你即将面试一个要求对 REST API 非常熟悉的岗位，我推">
 
 
 <meta itemprop="datePublished" content="2018-07-03T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-07-03T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="303">
+<meta itemprop="wordCount" content="1110">
 
 
 
 <meta itemprop="keywords" content="" />
 
     <meta property="og:title" content="REST API 设计面试准备" />
-<meta property="og:description" content="现在 REST API 已经越来越流行被用作前后端的借口。大多数平台都提供 REST API 作为兼容 Web 端和移动端通用接口。如果你即将面试一个要求对 REST API 非常熟悉的岗位，我推荐你多准备 REST API 相关知识。以下是我个人对 REST API 的面试准备。
-设计原则  自描述
- 简单
- 安全
-  准备  确定用户
- 来自内部或者外部
- 角色 (开发者, 管理员, 客户, 客服&hellip;)
-  确定使用场景
- 确定需要提供的功能
- 分析并确定上述，再开始设计
-  注意:
- 不要猜想
- 不要杜撰
-  设计流程  确定 REST API 要提供对哪些资源的操作
- 确定不同资源的关系
- 根据资源类型和关系决定资源名的定义方法
- 为资源确定必须的操作方法
-  接口设计 设计如何提供资源的操作方法" />
+<meta property="og:description" content="现在 REST API 已经越来越流行被用作前后端的借口。大多数平台都提供 REST API 作为兼容 Web 端和移动端通用接口。如果你即将面试一个要求对 REST API 非常熟悉的岗位，我推" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tonyxu.io/zh/posts/2018/rest-api-design-interview-preparation/" />
 
@@ -83,24 +49,7 @@
 <meta name="twitter:image" content="https://tonyxu.io/images/og-image.png"/>
 
 <meta name="twitter:title" content="REST API 设计面试准备"/>
-<meta name="twitter:description" content="现在 REST API 已经越来越流行被用作前后端的借口。大多数平台都提供 REST API 作为兼容 Web 端和移动端通用接口。如果你即将面试一个要求对 REST API 非常熟悉的岗位，我推荐你多准备 REST API 相关知识。以下是我个人对 REST API 的面试准备。
-设计原则  自描述
- 简单
- 安全
-  准备  确定用户
- 来自内部或者外部
- 角色 (开发者, 管理员, 客户, 客服&hellip;)
-  确定使用场景
- 确定需要提供的功能
- 分析并确定上述，再开始设计
-  注意:
- 不要猜想
- 不要杜撰
-  设计流程  确定 REST API 要提供对哪些资源的操作
- 确定不同资源的关系
- 根据资源类型和关系决定资源名的定义方法
- 为资源确定必须的操作方法
-  接口设计 设计如何提供资源的操作方法"/>
+<meta name="twitter:description" content="现在 REST API 已经越来越流行被用作前后端的借口。大多数平台都提供 REST API 作为兼容 Web 端和移动端通用接口。如果你即将面试一个要求对 REST API 非常熟悉的岗位，我推"/>
 
     
      
@@ -226,29 +175,12 @@ if (!doNotTrack) {
   <div class="container" itemscope itemtype="http://schema.org/BlogPosting">
     
 <meta itemprop="name" content="REST API 设计面试准备">
-<meta itemprop="description" content="现在 REST API 已经越来越流行被用作前后端的借口。大多数平台都提供 REST API 作为兼容 Web 端和移动端通用接口。如果你即将面试一个要求对 REST API 非常熟悉的岗位，我推荐你多准备 REST API 相关知识。以下是我个人对 REST API 的面试准备。
-设计原则  自描述
- 简单
- 安全
-  准备  确定用户
- 来自内部或者外部
- 角色 (开发者, 管理员, 客户, 客服&hellip;)
-  确定使用场景
- 确定需要提供的功能
- 分析并确定上述，再开始设计
-  注意:
- 不要猜想
- 不要杜撰
-  设计流程  确定 REST API 要提供对哪些资源的操作
- 确定不同资源的关系
- 根据资源类型和关系决定资源名的定义方法
- 为资源确定必须的操作方法
-  接口设计 设计如何提供资源的操作方法">
+<meta itemprop="description" content="现在 REST API 已经越来越流行被用作前后端的借口。大多数平台都提供 REST API 作为兼容 Web 端和移动端通用接口。如果你即将面试一个要求对 REST API 非常熟悉的岗位，我推">
 
 
 <meta itemprop="datePublished" content="2018-07-03T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-07-03T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="303">
+<meta itemprop="wordCount" content="1110">
 
 
 

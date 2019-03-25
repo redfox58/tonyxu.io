@@ -21,37 +21,19 @@
     
     
 <meta itemprop="name" content="嵌入Google Analytics图表到你的网站">
-<meta itemprop="description" content="如果你正在使用Google Anlaytics工具来分析网站访问数据，你可能会想将它提供的各种酷炫图表嵌入到网站页面以供用户浏览。尽管Google Analytics并不提供简单的iframe方式来嵌入图表，它还是提供了Google Analytics Embed API这种需要稍微多一点技术基础的方式让你能够嵌入它们的图表。我会在这篇文章里详细地告诉你该如何一步一步实现一个Google Analytics图表
-效果预览:
-1. 在Google Developers Console创建云项目 (如果你已经有项目了请忽略这一步)
-2. 创建服务账号(service account)并下载.json密钥文件 3. 启用Google Analytics API权限 4. 允许云服务账号(service account)访问Google Analytics数据 获取云服务账号邮箱地址
-添加为Google Analytics只读用户
-5. 在服务器生成访问令牌(access token) 我们在服务器生成访问令牌并返回给前端，因此用户不需要在浏览器登录Google获取访问令牌。
-Node.js服务器部分实现 Install Google API Client Library
-npm install --save googleapis Import service account key
-let privateKey = require(&#34;./google_key.json&#34;);  Return Google access token to client
-// https://your-domain/accessTokens 将会返回Google访问令牌给前段 app.get(&#34;/accessTokens&#34;, (req,res) =&gt; { let {google} = require(&#39;googleapis&#39;); let privateKey = require(&#34;.">
+<meta itemprop="description" content="如果你正在使用Google Anlaytics工具来分析网站访问数据，你可能会想将它提供的各种酷炫图表嵌入到网站页面以供用户浏览。尽管Goog">
 
 
 <meta itemprop="datePublished" content="2018-10-15T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-10-15T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="267">
+<meta itemprop="wordCount" content="841">
 
 
 
 <meta itemprop="keywords" content="" />
 
     <meta property="og:title" content="嵌入Google Analytics图表到你的网站" />
-<meta property="og:description" content="如果你正在使用Google Anlaytics工具来分析网站访问数据，你可能会想将它提供的各种酷炫图表嵌入到网站页面以供用户浏览。尽管Google Analytics并不提供简单的iframe方式来嵌入图表，它还是提供了Google Analytics Embed API这种需要稍微多一点技术基础的方式让你能够嵌入它们的图表。我会在这篇文章里详细地告诉你该如何一步一步实现一个Google Analytics图表
-效果预览:
-1. 在Google Developers Console创建云项目 (如果你已经有项目了请忽略这一步)
-2. 创建服务账号(service account)并下载.json密钥文件 3. 启用Google Analytics API权限 4. 允许云服务账号(service account)访问Google Analytics数据 获取云服务账号邮箱地址
-添加为Google Analytics只读用户
-5. 在服务器生成访问令牌(access token) 我们在服务器生成访问令牌并返回给前端，因此用户不需要在浏览器登录Google获取访问令牌。
-Node.js服务器部分实现 Install Google API Client Library
-npm install --save googleapis Import service account key
-let privateKey = require(&#34;./google_key.json&#34;);  Return Google access token to client
-// https://your-domain/accessTokens 将会返回Google访问令牌给前段 app.get(&#34;/accessTokens&#34;, (req,res) =&gt; { let {google} = require(&#39;googleapis&#39;); let privateKey = require(&#34;." />
+<meta property="og:description" content="如果你正在使用Google Anlaytics工具来分析网站访问数据，你可能会想将它提供的各种酷炫图表嵌入到网站页面以供用户浏览。尽管Goog" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tonyxu.io/zh/posts/2018/embed-google-analytics-dashboard-on-website/" />
 
@@ -67,16 +49,7 @@ let privateKey = require(&#34;./google_key.json&#34;);  Return Google access tok
 <meta name="twitter:image" content="https://tonyxu.io/images/og-image.png"/>
 
 <meta name="twitter:title" content="嵌入Google Analytics图表到你的网站"/>
-<meta name="twitter:description" content="如果你正在使用Google Anlaytics工具来分析网站访问数据，你可能会想将它提供的各种酷炫图表嵌入到网站页面以供用户浏览。尽管Google Analytics并不提供简单的iframe方式来嵌入图表，它还是提供了Google Analytics Embed API这种需要稍微多一点技术基础的方式让你能够嵌入它们的图表。我会在这篇文章里详细地告诉你该如何一步一步实现一个Google Analytics图表
-效果预览:
-1. 在Google Developers Console创建云项目 (如果你已经有项目了请忽略这一步)
-2. 创建服务账号(service account)并下载.json密钥文件 3. 启用Google Analytics API权限 4. 允许云服务账号(service account)访问Google Analytics数据 获取云服务账号邮箱地址
-添加为Google Analytics只读用户
-5. 在服务器生成访问令牌(access token) 我们在服务器生成访问令牌并返回给前端，因此用户不需要在浏览器登录Google获取访问令牌。
-Node.js服务器部分实现 Install Google API Client Library
-npm install --save googleapis Import service account key
-let privateKey = require(&#34;./google_key.json&#34;);  Return Google access token to client
-// https://your-domain/accessTokens 将会返回Google访问令牌给前段 app.get(&#34;/accessTokens&#34;, (req,res) =&gt; { let {google} = require(&#39;googleapis&#39;); let privateKey = require(&#34;."/>
+<meta name="twitter:description" content="如果你正在使用Google Anlaytics工具来分析网站访问数据，你可能会想将它提供的各种酷炫图表嵌入到网站页面以供用户浏览。尽管Goog"/>
 
     
      
@@ -202,21 +175,12 @@ if (!doNotTrack) {
   <div class="container" itemscope itemtype="http://schema.org/BlogPosting">
     
 <meta itemprop="name" content="嵌入Google Analytics图表到你的网站">
-<meta itemprop="description" content="如果你正在使用Google Anlaytics工具来分析网站访问数据，你可能会想将它提供的各种酷炫图表嵌入到网站页面以供用户浏览。尽管Google Analytics并不提供简单的iframe方式来嵌入图表，它还是提供了Google Analytics Embed API这种需要稍微多一点技术基础的方式让你能够嵌入它们的图表。我会在这篇文章里详细地告诉你该如何一步一步实现一个Google Analytics图表
-效果预览:
-1. 在Google Developers Console创建云项目 (如果你已经有项目了请忽略这一步)
-2. 创建服务账号(service account)并下载.json密钥文件 3. 启用Google Analytics API权限 4. 允许云服务账号(service account)访问Google Analytics数据 获取云服务账号邮箱地址
-添加为Google Analytics只读用户
-5. 在服务器生成访问令牌(access token) 我们在服务器生成访问令牌并返回给前端，因此用户不需要在浏览器登录Google获取访问令牌。
-Node.js服务器部分实现 Install Google API Client Library
-npm install --save googleapis Import service account key
-let privateKey = require(&#34;./google_key.json&#34;);  Return Google access token to client
-// https://your-domain/accessTokens 将会返回Google访问令牌给前段 app.get(&#34;/accessTokens&#34;, (req,res) =&gt; { let {google} = require(&#39;googleapis&#39;); let privateKey = require(&#34;.">
+<meta itemprop="description" content="如果你正在使用Google Anlaytics工具来分析网站访问数据，你可能会想将它提供的各种酷炫图表嵌入到网站页面以供用户浏览。尽管Goog">
 
 
 <meta itemprop="datePublished" content="2018-10-15T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-10-15T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="267">
+<meta itemprop="wordCount" content="841">
 
 
 

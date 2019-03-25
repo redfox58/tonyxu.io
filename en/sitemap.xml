@@ -4,7 +4,32 @@
   
   <url>
     <loc>https://tonyxu.io/books/thinking-in-java/chapter-1/</loc>
+    <lastmod>2019-03-24T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://tonyxu.io/zh/books/thinking-in-java/chapter-1/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://tonyxu.io/books/thinking-in-java/chapter-1/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://tonyxu.io/books/</loc>
     <lastmod>2019-03-22T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://tonyxu.io/zh/books/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://tonyxu.io/books/"
+                />
   </url>
   
   <url>
@@ -80,11 +105,6 @@
                 hreflang="en"
                 href="https://tonyxu.io/reads/2019-03-03/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://tonyxu.io/books/</loc>
-    <lastmod>2019-02-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -506,12 +526,22 @@
   
   <url>
     <loc>https://tonyxu.io/books/thinking-in-java/</loc>
-    <lastmod>2019-03-22T00:00:00+00:00</lastmod>
+    <lastmod>2019-03-24T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://tonyxu.io/zh/books/thinking-in-java/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://tonyxu.io/books/thinking-in-java/"
+                />
   </url>
   
   <url>
     <loc>https://tonyxu.io/</loc>
-    <lastmod>2019-03-22T00:00:00+00:00</lastmod>
+    <lastmod>2019-03-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"

@@ -21,43 +21,19 @@
     
     
 <meta itemprop="name" content="创建Alfred Workflow上传截图到S3">
-<meta itemprop="description" content="Markdown语言正在变得越来越流行，大多数人在使用Markdown语言的时候都会需要粘贴图片，然而Markdown粘贴图片必须要用链接。今天我想向大家介绍如何创建一个Alfred workflow来自动上传你剪切板里的图片到S3并获取公开链接。
-演示 主要步骤  使用 pngpaste 获取剪切板图片
- 把图片写到临时文件夹 /tmp
- 使用boto3上传图片到AWS S3
-  实现 现在我们知道主要步骤，接下来就是编写Alfred Workflow的Python脚本实现了。
-创建 Alfred workflow 创建 Blank Workflow 并命名
-右键空白区域并选择Inputs -&gt; Keyword
-指定触发workflow的关键词
-右键空白区域并选择Actions -&gt; Run Script
-让我们让它执行Python脚本
-点击Cancel左侧的按钮来打开workflow文件夹
-创建脚本文件(确保文件名和你在上面步骤制定的脚本名一致, 并按照如下所述编写脚本
-#!/usr/bin/python # -*- coding: utf-8 -*- from __future__ import print_function import datetime import os import sys import atexit import imghdr from subprocess import call from os.path import expanduser, exists, basename, getsize from workflow import Workflow def capture(): file_name = datetime.">
+<meta itemprop="description" content="Markdown语言正在变得越来越流行，大多数人在使用Markdown语言的时候都会需要粘贴图片，然而Markdown粘贴图片必须要用链接。">
 
 
 <meta itemprop="datePublished" content="2018-07-08T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-07-08T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="234">
+<meta itemprop="wordCount" content="878">
 
 
 
 <meta itemprop="keywords" content="" />
 
     <meta property="og:title" content="创建Alfred Workflow上传截图到S3" />
-<meta property="og:description" content="Markdown语言正在变得越来越流行，大多数人在使用Markdown语言的时候都会需要粘贴图片，然而Markdown粘贴图片必须要用链接。今天我想向大家介绍如何创建一个Alfred workflow来自动上传你剪切板里的图片到S3并获取公开链接。
-演示 主要步骤  使用 pngpaste 获取剪切板图片
- 把图片写到临时文件夹 /tmp
- 使用boto3上传图片到AWS S3
-  实现 现在我们知道主要步骤，接下来就是编写Alfred Workflow的Python脚本实现了。
-创建 Alfred workflow 创建 Blank Workflow 并命名
-右键空白区域并选择Inputs -&gt; Keyword
-指定触发workflow的关键词
-右键空白区域并选择Actions -&gt; Run Script
-让我们让它执行Python脚本
-点击Cancel左侧的按钮来打开workflow文件夹
-创建脚本文件(确保文件名和你在上面步骤制定的脚本名一致, 并按照如下所述编写脚本
-#!/usr/bin/python # -*- coding: utf-8 -*- from __future__ import print_function import datetime import os import sys import atexit import imghdr from subprocess import call from os.path import expanduser, exists, basename, getsize from workflow import Workflow def capture(): file_name = datetime." />
+<meta property="og:description" content="Markdown语言正在变得越来越流行，大多数人在使用Markdown语言的时候都会需要粘贴图片，然而Markdown粘贴图片必须要用链接。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tonyxu.io/zh/posts/2018/create-alfred-workflow-for-uploading-screenshot-to-s3/" />
 
@@ -73,19 +49,7 @@
 <meta name="twitter:image" content="https://tonyxu.io/images/og-image.png"/>
 
 <meta name="twitter:title" content="创建Alfred Workflow上传截图到S3"/>
-<meta name="twitter:description" content="Markdown语言正在变得越来越流行，大多数人在使用Markdown语言的时候都会需要粘贴图片，然而Markdown粘贴图片必须要用链接。今天我想向大家介绍如何创建一个Alfred workflow来自动上传你剪切板里的图片到S3并获取公开链接。
-演示 主要步骤  使用 pngpaste 获取剪切板图片
- 把图片写到临时文件夹 /tmp
- 使用boto3上传图片到AWS S3
-  实现 现在我们知道主要步骤，接下来就是编写Alfred Workflow的Python脚本实现了。
-创建 Alfred workflow 创建 Blank Workflow 并命名
-右键空白区域并选择Inputs -&gt; Keyword
-指定触发workflow的关键词
-右键空白区域并选择Actions -&gt; Run Script
-让我们让它执行Python脚本
-点击Cancel左侧的按钮来打开workflow文件夹
-创建脚本文件(确保文件名和你在上面步骤制定的脚本名一致, 并按照如下所述编写脚本
-#!/usr/bin/python # -*- coding: utf-8 -*- from __future__ import print_function import datetime import os import sys import atexit import imghdr from subprocess import call from os.path import expanduser, exists, basename, getsize from workflow import Workflow def capture(): file_name = datetime."/>
+<meta name="twitter:description" content="Markdown语言正在变得越来越流行，大多数人在使用Markdown语言的时候都会需要粘贴图片，然而Markdown粘贴图片必须要用链接。"/>
 
     
      
@@ -211,24 +175,12 @@ if (!doNotTrack) {
   <div class="container" itemscope itemtype="http://schema.org/BlogPosting">
     
 <meta itemprop="name" content="创建Alfred Workflow上传截图到S3">
-<meta itemprop="description" content="Markdown语言正在变得越来越流行，大多数人在使用Markdown语言的时候都会需要粘贴图片，然而Markdown粘贴图片必须要用链接。今天我想向大家介绍如何创建一个Alfred workflow来自动上传你剪切板里的图片到S3并获取公开链接。
-演示 主要步骤  使用 pngpaste 获取剪切板图片
- 把图片写到临时文件夹 /tmp
- 使用boto3上传图片到AWS S3
-  实现 现在我们知道主要步骤，接下来就是编写Alfred Workflow的Python脚本实现了。
-创建 Alfred workflow 创建 Blank Workflow 并命名
-右键空白区域并选择Inputs -&gt; Keyword
-指定触发workflow的关键词
-右键空白区域并选择Actions -&gt; Run Script
-让我们让它执行Python脚本
-点击Cancel左侧的按钮来打开workflow文件夹
-创建脚本文件(确保文件名和你在上面步骤制定的脚本名一致, 并按照如下所述编写脚本
-#!/usr/bin/python # -*- coding: utf-8 -*- from __future__ import print_function import datetime import os import sys import atexit import imghdr from subprocess import call from os.path import expanduser, exists, basename, getsize from workflow import Workflow def capture(): file_name = datetime.">
+<meta itemprop="description" content="Markdown语言正在变得越来越流行，大多数人在使用Markdown语言的时候都会需要粘贴图片，然而Markdown粘贴图片必须要用链接。">
 
 
 <meta itemprop="datePublished" content="2018-07-08T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-07-08T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="234">
+<meta itemprop="wordCount" content="878">
 
 
 

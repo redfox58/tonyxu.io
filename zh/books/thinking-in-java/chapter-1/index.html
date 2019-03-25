@@ -6,12 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>推荐阅读 
-2019-03-09
- 
-第3期
-: Medium的微服务架构
-| Tony Xu 博客</title>
+    <title>第一章 - 对象概述 | Tony Xu 博客</title>
 
      
 
@@ -25,36 +20,36 @@
     
     
     
-<meta itemprop="name" content="Medium的微服务架构">
-<meta itemprop="description" content="Microservice Architecture at Medium (medium.engineering) At Medium, our technical stack started with a monolithic Node.js app back in 2012. We have built a couple of satellite services, but we haven’t created a strategy to adopt the microservice architecture systematically. As the system becomes more complex and the team grows, we moved to a microservice architecture in early 2018. In this post, we want to">
+<meta itemprop="name" content="第一章 - 对象概述">
+<meta itemprop="description" content="抽象过程 基于对象编程的五个基本特性: 一切都是对象 一个程序是一群对象的集合，这些对象互相发送消息告诉对方该做什么事情 每个对象都有包含其他对象的">
 
 
-<meta itemprop="datePublished" content="2019-03-09T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-03-09T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="238">
+<meta itemprop="datePublished" content="2019-03-24T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-03-24T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="991">
 
 
 
 <meta itemprop="keywords" content="" />
 
-    <meta property="og:title" content="Medium的微服务架构" />
-<meta property="og:description" content="Microservice Architecture at Medium (medium.engineering) At Medium, our technical stack started with a monolithic Node.js app back in 2012. We have built a couple of satellite services, but we haven’t created a strategy to adopt the microservice architecture systematically. As the system becomes more complex and the team grows, we moved to a microservice architecture in early 2018. In this post, we want to" />
+    <meta property="og:title" content="第一章 - 对象概述" />
+<meta property="og:description" content="抽象过程 基于对象编程的五个基本特性: 一切都是对象 一个程序是一群对象的集合，这些对象互相发送消息告诉对方该做什么事情 每个对象都有包含其他对象的" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://tonyxu.io/zh/reads/2019-03-09/" />
+<meta property="og:url" content="https://tonyxu.io/zh/books/thinking-in-java/chapter-1/" />
 
 <meta property="og:image" content="https://tonyxu.io/images/og-image.png" />
 
 <meta property="og:image" content="https://tonyxu.io/images/square-logo.webp" />
-<meta property="article:published_time" content="2019-03-09T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2019-03-09T00:00:00&#43;00:00"/><meta property="og:site_name" content="Tony Xu 博客" />
+<meta property="article:published_time" content="2019-03-24T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2019-03-24T00:00:00&#43;00:00"/><meta property="og:site_name" content="Tony Xu 博客" />
 <meta property="og:image" content="https://tonyxu.io/images/og-image.png"/>
     
     
     <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://tonyxu.io/images/og-image.png"/>
 
-<meta name="twitter:title" content="Medium的微服务架构"/>
-<meta name="twitter:description" content="Microservice Architecture at Medium (medium.engineering) At Medium, our technical stack started with a monolithic Node.js app back in 2012. We have built a couple of satellite services, but we haven’t created a strategy to adopt the microservice architecture systematically. As the system becomes more complex and the team grows, we moved to a microservice architecture in early 2018. In this post, we want to"/>
+<meta name="twitter:title" content="第一章 - 对象概述"/>
+<meta name="twitter:description" content="抽象过程 基于对象编程的五个基本特性: 一切都是对象 一个程序是一群对象的集合，这些对象互相发送消息告诉对方该做什么事情 每个对象都有包含其他对象的"/>
 
     
      
@@ -71,7 +66,7 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
  
     
-    <link rel="canonical" href="https://tonyxu.io/zh/reads/2019-03-09/"> 
+    <link rel="canonical" href="https://tonyxu.io/zh/books/thinking-in-java/chapter-1/"> 
 
      
 
@@ -158,7 +153,7 @@ if (!doNotTrack) {
                 <select size="1" name="links" onchange="window.location.href=this.value;">
                   <option selected disabled>中文</option>
                   
-                  <option value="/reads/2019-03-09/">English</option>
+                  <option value="/books/thinking-in-java/chapter-1/">English</option>
                   
                 </select>
               </div>
@@ -176,49 +171,33 @@ if (!doNotTrack) {
 </nav> </header>
     <main>
 
-<div class="section">
-  <div class="container" itemscope itemtype="http://schema.org/BlogPosting">
-    
-<meta itemprop="name" content="Medium的微服务架构">
-<meta itemprop="description" content="Microservice Architecture at Medium (medium.engineering) At Medium, our technical stack started with a monolithic Node.js app back in 2012. We have built a couple of satellite services, but we haven’t created a strategy to adopt the microservice architecture systematically. As the system becomes more complex and the team grows, we moved to a microservice architecture in early 2018. In this post, we want to">
-
-
-<meta itemprop="datePublished" content="2019-03-09T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-03-09T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="238">
-
-
-
-<meta itemprop="keywords" content="" />
-
-    <div class="columns">
-      <div class="column is-8 is-offset-2 has-text-centered">
-        <div class="title"><a href="/zh/reads/">推荐阅读</a></div>
-        <p class="subtitle">在互联网上阅读到值得推荐的新闻、博客、文章</p>
-      </div>
-    </div>
-    <hr />
+<section class="section">
+  <div class="container">
     <div class="columns">
       <div class="column is-8 is-offset-2">
+          <div class="columns">
+              <div class="column is-8 is-offset-2 has-text-centered">
+                <div class="title"><a href="/zh/books/">读书笔记</a></div>
+                <p class="subtitle">Thinking In Java</p>
+              </div>
+            </div>
+            <hr />
+        <p class="title">第一章 - 对象概述</p>
         <div class="columns is-mobile is-vcentered">
-          <div class="column">
-            <div class="heading">
+            <div class="column has-text-grey has-text-weight-semibold">
+              徐毅涵<p class="text is-family-monospace has-text-grey-light has-text-weight-semibold">
   
-第3期
+2019-03-24
 
-</div>
-
-            <p class="title is-4">
-2019-03-09
 </p>
-          </div>
-          <div class="column has-text-right">
-            <a class="button is-light" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftonyxu.io%2fzh%2freads%2f2019-03-09%2f" target="_blank" title="分享到Facebook">
+            </div>
+            <div class="column has-text-right">
+              <a class="button is-light" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftonyxu.io%2fzh%2fbooks%2fthinking-in-java%2fchapter-1%2f" target="_blank" title="分享到Facebook">
   <span class="icon">
       <i class="icon-facebook"></i>
   </span>
 </a>
-<a class="button is-light" href="https://www.linkedin.com/sharing/share-offsite?url=https%3a%2f%2ftonyxu.io%2fzh%2freads%2f2019-03-09%2f" target="_blank"
+<a class="button is-light" href="https://www.linkedin.com/sharing/share-offsite?url=https%3a%2f%2ftonyxu.io%2fzh%2fbooks%2fthinking-in-java%2fchapter-1%2f" target="_blank"
   title="分享到LinkedIn">
   <span class="icon">
       <i class="icon-linkedin"></i>
@@ -233,7 +212,7 @@ if (!doNotTrack) {
   <div class="modal-background"></div>
   <div class="modal-content">
     <p class="image is-1by1">
-      <img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=https%3a%2f%2ftonyxu.io%2fzh%2freads%2f2019-03-09%2f&choe=UTF-8" alt="">
+      <img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=https%3a%2f%2ftonyxu.io%2fzh%2fbooks%2fthinking-in-java%2fchapter-1%2f&choe=UTF-8" alt="">
     </p>
   </div>
   <button class="modal-close is-large" aria-label="close"></button>
@@ -259,39 +238,133 @@ if (!doNotTrack) {
     });
   });
 </script>
+            </div>
           </div>
-        </div>
         <div class="content">
-          <p><a href="https://medium.engineering/microservice-architecture-at-medium-9c33805eb74f" target="_blank">Microservice Architecture at Medium</a> (medium.engineering)</p>
+          
 
-<blockquote>
-<p>At Medium, our technical stack started with a monolithic Node.js app back in 2012. We have built a couple of satellite services, but we haven’t created a strategy to adopt the microservice architecture systematically. As the system becomes more complex and the team grows, we moved to a microservice architecture in early 2018. In this post, we want to share our experiences of doing it effectively and avoiding microservice syndromes.</p>
-</blockquote>
+<h2 id="抽象过程">抽象过程</h2>
 
-<p>我们讨论从单体式巨型应用切换至微服务架构已经有些年了。阅读大公司是如何成功经历这个转型，以及他们对于转型微服务架构的原则和策略可以帮助我们更加充分的利用微服务架构的优势。</p>
-
-<p>阅读更多转型<strong>微服务</strong>架构的故事:</p>
+<p>基于对象编程的五个基本特性:</p>
 
 <ul>
-<li>LinkedIn: <a href="https://engineering.linkedin.com/blog/2016/02/q-a-with-jim-brikman--splitting-up-a-codebase-into-microservices" target="_blank">Q&amp;A with Jim Brikman: Splitting Up a Codebase into Microservices and Artifacts</a><br /></li>
-<li>Uber <a href="https://eng.uber.com/soa/" target="_blank">Service-Oriented Architecture: Scaling the Uber Engineering Codebase As We Grow</a><br /></li>
-<li>Shopify: <a href="https://engineering.shopify.com/blogs/engineering/deconstructing-monolith-designing-software-maximizes-developer-productivity" target="_blank">Deconstructing the Monolith: Designing Software that Maximizes Developer Productivity</a><br /></li>
-<li>Squarespace: <a href="https://engineering.squarespace.com/blog/2017/the-pillars-of-squarespace-services" target="_blank">The Pillars of Squarespace Services</a><br /></li>
-<li>Netflix: <a href="https://www.nginx.com/blog/microservices-at-netflix-architectural-best-practices" target="_blank">Adopting Microservices at Netflix: Lessons for Architectural Design</a><br /></li>
-<li>Box: <a href="https://blog.box.com/kubernetes-box-microservices-maximum-velocity" target="_blank">Kubernetes at Box: Microservices at Maximum Velocity</a><br /></li>
+<li>一切都是对象<br /></li>
+<li>一个程序是一群对象的集合，这些对象互相发送消息告诉对方该做什么事情<br /></li>
+<li>每个对象都有包含其他对象的记忆<br /></li>
+<li>每个对象都有一个类型<br /></li>
+<li>所有同类型的对象都可以接收相同的消息<br />
+<br /></li>
+</ul>
+
+<h2 id="每个对象都有一个接口">每个对象都有一个接口</h2>
+
+<p>接口决定了你能为一个对象做什么事情。</p>
+
+<h2 id="每个对象都提供服务">每个对象都提供服务</h2>
+
+<p>把对象当作服务提供者是一个很棒的简化工具。它帮助提高对象的内聚性。</p>
+
+<h2 id="被隐藏的具体实现">被隐藏的具体实现</h2>
+
+<p>Java使用三个明确的关键词来确定类型的访问边界:</p>
+
+<ul>
+<li><code>public</code>: 该类成员可以被大家访问<br /></li>
+<li><code>private</code>: 仅限于类的内部访问<br /></li>
+<li><code>protected</code>: 和类似<code>private</code>，但是可以被继承的子类访问<br />
+<br /></li>
+</ul>
+
+<h2 id="复用具体实现">复用具体实现</h2>
+
+<p>代码复用是面向对象编程的语言提供的最大的优点之一。</p>
+
+<p>你可以以如下方式复用一个实现：</p>
+
+<ul>
+<li>组合: 在新类中创建现有类的对象<br /></li>
+<li>继承: 复制现有类，并添加新代码来修改被复制的类<br />
+<br /></li>
+</ul>
+
+<h2 id="继承">继承</h2>
+
+<p>继承的子类是由现有类复制而来，它不仅包含所有现有成员，更重要的是它同时复制了基类的接口。</p>
+
+<p>你可以以如下方式修改子类：</p>
+
+<ul>
+<li>在子类添加新方法<br /></li>
+<li>重写基类的方法来改变原来的行为<br />
+<br /></li>
+</ul>
+
+<h3 id="是一个-与-像是一个-的关系">“是一个”与“像是一个”的关系</h3>
+
+<p><code>是一个</code>: 派生类和基类是同一个类型，例如圆形是一个形状<br />
+<code>像是一个</code>: 新类型有基类的接口，但还包含其他方法，所以不能说她们完全相同，例如热泵像一个空调</p>
+
+<h2 id="伴随多态的可互换对象">伴随多态的可互换对象</h2>
+
+<p>在编译阶段，你无法知道哪个派生类会调用基类的方法，只有在运行阶段才能知道。</p>
+
+<h2 id="单根继承结构">单根继承结构</h2>
+
+<p>在Java，所有类最终都是由同一个基类(<em>Object</em>)继承而来。</p>
+
+<h2 id="容器">容器</h2>
+
+<p>有一个新的对象，叫容器，引用了一些其他对象，通过随时扩大自己的空间来适应你放在它里面的对象。</p>
+
+<h3 id="参数化类型">参数化类型</h3>
+
+<p>在Java SE5之前，容器只能引用一种对象(<em>Object</em>)。从Java SE5开始，Java范型允许你通过创建参数化类型来指定该容器可以存放哪一种类型。这消除了运行时从容器取回向上转换成_Object_的类再进行向下转换回原类以及运行时检查的成本。</p>
+
+<h2 id="异常处理-处理错误">异常处理：处理错误</h2>
+
+<p>当发生错误时，一个异常（也是一个对象）就会被抛出，并被专门处理这个异常的方法捕获。异常提供一个可靠的方法来从错误场景中恢复。</p>
+
+<h2 id="并发编程">并发编程</h2>
+
+<p>Java的并发特性是内嵌于语言当中的，Java SE5也添加了显著的库来支持这个特性。</p>
+
+<h2 id="java-与-internet">Java 与 Internet</h2>
+
+<ul>
+<li>Web是什么?: Web是一个巨大的客户端/服务器系统<br /></li>
+<li>客户端编程: Web浏览器被驯化成可以做任何它能做的事情，为Web用户提供更敏捷和互动化的体验<br /></li>
+<li>服务器端编程: 你的服务器需要运行一段程序来处理请求，这就是所谓的服务端编程<br /></li>
 </ul>
 
         </div>
+        <hr>
+        
+        
+        <div class="card">
+  <div class="card-content">
+    <div class="columns is-mobile">
+      <div class="column is-one-quarter-desktop is-one-quarter-tablet is-one-third-mobile">
+        <img src="/zh/books/thinking-in-java/cover.jpg" alt="Thinking In Java">
+      </div>
+      <div class="column">
+        <div class="title is-4">Thinking In Java</div>
+        <div class="text">通过Web学习面向对象编程的宝典级教科书</div>
+        <br />
+        <a href="/zh/books/thinking-in-java/">阅读我的读书笔记 →</a>
       </div>
     </div>
   </div>
 </div>
-
-<section class="section has-background-light">
-  <div class="container">
-    <div class="columns">
-      <div class="column is-8 is-offset-2 has-text-centered">
         
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section has-background-light">
+    <div class="container">
+      <div class="columns">
+        <div class="column has-text-centered">
+          
 <p class="subtitle is-size-6-mobile">
   关注微信公众号「 <span class="text has-text-info">TONY的BLOG</span> 」<br>即时获取最新动态
 </p>
@@ -300,42 +373,9 @@ if (!doNotTrack) {
 </p>
 
 
+        </div>
       </div>
-    </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="columns">
-      <div class="column is-8 is-offset-2 has-text-centered">
-        
-        <article>
-          <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "tonyxu-io" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-        </article>
-        
-      </div>
-    </div>
-</section>
-
+  </section>
 </main>
     <footer>
 <footer class="footer">
