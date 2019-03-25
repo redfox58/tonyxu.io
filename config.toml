@@ -46,8 +46,8 @@ hasCJKLanguage = true
     weight = 2
     [languages.zh.params]
       linkedin = "tonyxu93"
-      author = "徐毅涵"
-      IamAuthor = "我是徐毅涵"
+      author = "Tony Xu"
+      IamAuthor = "我是 Tony Xu"
       description = "我是一名软件工程师，热爱尝试和分享最新科技"
       copyright = "© 2018-2019 Tony Xu 徐毅涵"
 
