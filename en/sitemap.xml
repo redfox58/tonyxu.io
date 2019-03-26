@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://tonyxu.io/books/thinking-in-java/chapter-2/</loc>
+    <lastmod>2019-03-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://tonyxu.io/books/thinking-in-java/chapter-1/</loc>
     <lastmod>2019-03-24T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -526,7 +531,7 @@
   
   <url>
     <loc>https://tonyxu.io/books/thinking-in-java/</loc>
-    <lastmod>2019-03-24T00:00:00+00:00</lastmod>
+    <lastmod>2019-03-25T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -541,7 +546,7 @@
   
   <url>
     <loc>https://tonyxu.io/</loc>
-    <lastmod>2019-03-24T00:00:00+00:00</lastmod>
+    <lastmod>2019-03-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
