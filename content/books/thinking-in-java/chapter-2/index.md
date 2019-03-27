@@ -74,4 +74,153 @@ A Java array is guaranteed to be initialized and cannot be accessed outside of i
 
 You must assign an object to each reference before you use it, and if you try to use a reference that's not assigned with an object, the problem will be reported at run time.
 
+## You never need to destroy an object
+
+### Scoping
+
+Scope is determined by the placement of curly braces **{}**. A variable defined within a scope is available only to the end of that scope. For example:
+
+```java
+{
+    int x = 12;
+    // Only x available
+    {
+        int q = 96;
+        // Both x & q available
+    }
+    // Only x available
+    // q is "out of scope"
+}
+```
+
+### Scope of objects
+
+Java objects created using **new** hangs around past the end of the scope. Java has a _garbage collector_, which looks at all the objects that were created with **new** and figures out which ones are not being referenced anymore, and then it releases the memory for those objects. You simply create objects, and when you no longer need them, they will go away by themselves.
+
+## Creating new data types: **class**
+
+The \*_class_ keyword is followed by the name of the new type. Introduce a new type like below:
+
+```java
+class ATypeName { /* Class body goes here */ }
+```
+
+You can then create an object of this type using **new**:
+
+```java
+ATypeName a = ATypeName();
+```
+
+### Fields and methods
+
+You can put two types of elements in your class: _fields_, and _methods_.
+
+A field is an object of any type that you can talk to via its reference, or a primitive type. If it is a reference to an object, you must initialize that reference to connect it to an actual object (using **new**, as seen earlier) like below:
+
+```java
+class DataOnly {
+    int i;
+    double d;
+    boolean b;
+}
+```
+
+You can then create an object of this type and assign values to the fields:
+
+```java
+DataOnly data = new DataOnly();
+
+data.i = 47;
+```
+
+#### Default values for primitive members
+
+When a primitive data type is a member of a class, it is guaranteed to get a default value if you do not initialize it:
+
+| Primitive type | Default         |
+| -------------- | --------------- |
+| boolean        | false           |
+| char           | '\u0000' (null) |
+| byte           | (byte)0         |
+| short          | (short)0        |
+| int            | 0               |
+| long           | 0L              |
+| float          | 0.0f            |
+| double         | 0.0d            |
+
+## Methods, arguments, and return values
+
+Methods in Java determine the messages an object can receive. The fundamental parts of a methods are:
+
+- name
+- arguments
+- return type
+- body
+
+Here is the basic form:
+
+```java
+ReturnType methodName( /* Argument list */ ) {
+    /* Method body */
+}
+```
+
+### The argument list
+
+The method argument list specifies what information (objects) you pass into the methods. You also need to specify the type of the object. For example:
+
+```java
+int storage(String s) {
+    return s.length() * 2
+}
+```
+
+If you don't want to return anything, you can do so by indicating that the method returns **void**.
+
+## Building a Java program
+
+### Name visibility
+
+Use your domain name in reverse as your library name. For example: **net.mindview.utility.foibles**. The dots are intended to represent subdirectories.
+
+### Using other components
+
+- Use a class exists in the same source code file: simply use the class name
+- Use a class exists in some other file: use **import** to bring in the package, which is a library of classes
+
+For example:
+
+```java
+import java.util.ArrayList;
+```
+
+or import a collection of classes:
+
+```java
+import java.util.*
+```
+
+### The **static** keyword
+
+When you specify something as **static**, it means that particular field or method is not tied to any particular object instance of that class. You can access the fields and methods without first create an object.
+
+For example:
+
+```java
+class StaticTest {
+    static int i = 47;
+}
+
+StaticTest st1 = new StaticTest();
+StaticTest st2 = new StaticTest();
+```
+
+Now both **st1.i** and **st2.i** have the same value of 47. It can also be accessed by class name:
+
+```java
+StaticTest.i++;
+```
+
+Same thing for method.
+
 **...TO BE CONTINUED**
