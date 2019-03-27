@@ -29,7 +29,7 @@ String s; You must create all the objects When you create a reference, you want 
 
 <meta itemprop="datePublished" content="2019-03-25T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-03-25T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="389">
+<meta itemprop="wordCount" content="979">
 
 
 
@@ -354,6 +354,157 @@ if (!doNotTrack) {
 <p>A Java array is guaranteed to be initialized and cannot be accessed outside of its range. The index will be verified in the range at run time.</p>
 
 <p>You must assign an object to each reference before you use it, and if you try to use a reference that&rsquo;s not assigned with an object, the problem will be reported at run time.</p>
+
+<h2 id="you-never-need-to-destroy-an-object">You never need to destroy an object</h2>
+
+<h3 id="scoping">Scoping</h3>
+
+<p>Scope is determined by the placement of curly braces <strong>{}</strong>. A variable defined within a scope is available only to the end of that scope. For example:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#ce5c00;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">x</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">12</span><span style="color:#ce5c00;font-weight:bold">;</span>
+    <span style="color:#8f5902;font-style:italic">// Only x available
+</span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#ce5c00;font-weight:bold">{</span>
+        <span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">q</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">96</span><span style="color:#ce5c00;font-weight:bold">;</span>
+        <span style="color:#8f5902;font-style:italic">// Both x &amp; q available
+</span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#ce5c00;font-weight:bold">}</span>
+    <span style="color:#8f5902;font-style:italic">// Only x available
+</span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#8f5902;font-style:italic">// q is &#34;out of scope&#34;
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#ce5c00;font-weight:bold">}</span></code></pre></div>
+<h3 id="scope-of-objects">Scope of objects</h3>
+
+<p>Java objects created using <strong>new</strong> hangs around past the end of the scope. Java has a <em>garbage collector</em>, which looks at all the objects that were created with <strong>new</strong> and figures out which ones are not being referenced anymore, and then it releases the memory for those objects. You simply create objects, and when you no longer need them, they will go away by themselves.</p>
+
+<h2 id="creating-new-data-types-class">Creating new data types: <strong>class</strong></h2>
+
+<p>The *<em>class</em> keyword is followed by the name of the new type. Introduce a new type like below:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">ATypeName</span> <span style="color:#ce5c00;font-weight:bold">{</span> <span style="color:#8f5902;font-style:italic">/* Class body goes here */</span> <span style="color:#ce5c00;font-weight:bold">}</span></code></pre></div>
+<p>You can then create an object of this type using <strong>new</strong>:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">ATypeName</span> <span style="color:#000">a</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">ATypeName</span><span style="color:#ce5c00;font-weight:bold">();</span></code></pre></div>
+<h3 id="fields-and-methods">Fields and methods</h3>
+
+<p>You can put two types of elements in your class: <em>fields</em>, and <em>methods</em>.</p>
+
+<p>A field is an object of any type that you can talk to via its reference, or a primitive type. If it is a reference to an object, you must initialize that reference to connect it to an actual object (using <strong>new</strong>, as seen earlier) like below:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">DataOnly</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">i</span><span style="color:#ce5c00;font-weight:bold">;</span>
+    <span style="color:#204a87;font-weight:bold">double</span> <span style="color:#000">d</span><span style="color:#ce5c00;font-weight:bold">;</span>
+    <span style="color:#204a87;font-weight:bold">boolean</span> <span style="color:#000">b</span><span style="color:#ce5c00;font-weight:bold">;</span>
+<span style="color:#ce5c00;font-weight:bold">}</span></code></pre></div>
+<p>You can then create an object of this type and assign values to the fields:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">DataOnly</span> <span style="color:#000">data</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DataOnly</span><span style="color:#ce5c00;font-weight:bold">();</span>
+
+<span style="color:#000">data</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">i</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">47</span><span style="color:#ce5c00;font-weight:bold">;</span></code></pre></div>
+<h4 id="default-values-for-primitive-members">Default values for primitive members</h4>
+
+<p>When a primitive data type is a member of a class, it is guaranteed to get a default value if you do not initialize it:</p>
+
+<table>
+<thead>
+<tr>
+<th>Primitive type</th>
+<th>Default</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>boolean</td>
+<td>false</td>
+</tr>
+
+<tr>
+<td>char</td>
+<td>&lsquo;\u0000&rsquo; (null)</td>
+</tr>
+
+<tr>
+<td>byte</td>
+<td>(byte)0</td>
+</tr>
+
+<tr>
+<td>short</td>
+<td>(short)0</td>
+</tr>
+
+<tr>
+<td>int</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>long</td>
+<td>0L</td>
+</tr>
+
+<tr>
+<td>float</td>
+<td>0.0f</td>
+</tr>
+
+<tr>
+<td>double</td>
+<td>0.0d</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="methods-arguments-and-return-values">Methods, arguments, and return values</h2>
+
+<p>Methods in Java determine the messages an object can receive. The fundamental parts of a methods are:</p>
+
+<ul>
+<li>name<br /></li>
+<li>arguments<br /></li>
+<li>return type<br /></li>
+<li>body<br />
+<br /></li>
+</ul>
+
+<p>Here is the basic form:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">ReturnType</span> <span style="color:#000">methodName</span><span style="color:#ce5c00;font-weight:bold">(</span> <span style="color:#8f5902;font-style:italic">/* Argument list */</span> <span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+    <span style="color:#8f5902;font-style:italic">/* Method body */</span>
+<span style="color:#ce5c00;font-weight:bold">}</span></code></pre></div>
+<h3 id="the-argument-list">The argument list</h3>
+
+<p>The method argument list specifies what information (objects) you pass into the methods. You also need to specify the type of the object. For example:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">storage</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">String</span> <span style="color:#000">s</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">s</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">length</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">2</span>
+<span style="color:#ce5c00;font-weight:bold">}</span></code></pre></div>
+<p>If you don&rsquo;t want to return anything, you can do so by indicating that the method returns <strong>void</strong>.</p>
+
+<h2 id="building-a-java-program">Building a Java program</h2>
+
+<h3 id="name-visibility">Name visibility</h3>
+
+<p>Use your domain name in reverse as your library name. For example: <strong>net.mindview.utility.foibles</strong>. The dots are intended to represent subdirectories.</p>
+
+<h3 id="using-other-components">Using other components</h3>
+
+<ul>
+<li>Use a class exists in the same source code file: simply use the class name<br /></li>
+<li>Use a class exists in some other file: use <strong>import</strong> to bring in the package, which is a library of classes<br />
+<br /></li>
+</ul>
+
+<p>For example:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">java.util.ArrayList</span><span style="color:#ce5c00;font-weight:bold">;</span></code></pre></div>
+<p>or import a collection of classes:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">java.util.*</span></code></pre></div>
+<h3 id="the-static-keyword">The <strong>static</strong> keyword</h3>
+
+<p>When you specify something as <strong>static</strong>, it means that particular field or method is not tied to any particular object instance of that class. You can access the fields and methods without first create an object.</p>
+
+<p>For example:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">StaticTest</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">static</span> <span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">i</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">47</span><span style="color:#ce5c00;font-weight:bold">;</span>
+<span style="color:#ce5c00;font-weight:bold">}</span>
+
+<span style="color:#000">StaticTest</span> <span style="color:#000">st1</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">StaticTest</span><span style="color:#ce5c00;font-weight:bold">();</span>
+<span style="color:#000">StaticTest</span> <span style="color:#000">st2</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">StaticTest</span><span style="color:#ce5c00;font-weight:bold">();</span></code></pre></div>
+<p>Now both <strong>st1.i</strong> and <strong>st2.i</strong> have the same value of 47. It can also be accessed by class name:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">StaticTest</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">i</span><span style="color:#ce5c00;font-weight:bold">++;</span></code></pre></div>
+<p>Same thing for method.</p>
 
 <p><strong>&hellip;TO BE CONTINUED</strong></p>
 
