@@ -1,6 +1,7 @@
 ---
 title: Chapter 1 - Introduction to Objects
 date: 2019-03-24
+toc: true
 ---
 
 ## The progress of abstraction
