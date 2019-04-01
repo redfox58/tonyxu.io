@@ -292,7 +292,7 @@ public class Documentation1 {
     public int i;
     /** 方法注释 */
     public void f() {}
-} ///:~
+}
 ```
 
 ### 嵌入 HTML
@@ -307,7 +307,6 @@ public class Documentation1 {
 * </pre>
 */
 public class Documentation2 {}
-///:~
 ```
 
 ### 一些标签示例
@@ -348,7 +347,7 @@ public class HelloDate {
 } /* 输出: (55% 匹配)
 Hello. it's:
 Wed Oct 05 14:39:36 MDT 2005
-*///:~
+*/
 ```
 
 ## 编码风格

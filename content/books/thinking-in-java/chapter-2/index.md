@@ -292,7 +292,7 @@ public class Documentation1 {
     public int i;
     /** A method comment */
     public void f() {}
-} ///:~
+}
 ```
 
 ### Embedded HTML
@@ -307,7 +307,6 @@ You can embed HTML in Javadoc comment:
 * </pre>
 */
 public class Documentation2 {}
-///:~
 ```
 
 ### Some example tags
@@ -348,7 +347,7 @@ public class HelloDate {
 } /* Output: (55% match)
 Hello. it's:
 Wed Oct 05 14:39:36 MDT 2005
-*///:~
+*/
 ```
 
 ## Coding style
