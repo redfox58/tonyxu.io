@@ -1,6 +1,7 @@
 ---
 title: Chapter 2 - Everything Is an Object
-date: 2019-03-25
+date: 2019-03-31
+toc: true
 ---
 
 The Java language assumes that you want to do only object-oriented programming, so (almost) everything in Java is an object.
@@ -72,8 +73,6 @@ Character ch = new Character('x');
 
 A Java array is guaranteed to be initialized and cannot be accessed outside of its range. The index will be verified in the range at run time.
 
-You must assign an object to each reference before you use it, and if you try to use a reference that's not assigned with an object, the problem will be reported at run time.
-
 ## You never need to destroy an object
 
 ### Scoping
@@ -99,7 +98,7 @@ Java objects created using **new** hangs around past the end of the scope. Java 
 
 ## Creating new data types: **class**
 
-The \*_class_ keyword is followed by the name of the new type. Introduce a new type like below:
+The _class_ keyword is followed by the name of the new type. Introduce a new type like below:
 
 ```java
 class ATypeName { /* Class body goes here */ }
@@ -108,7 +107,7 @@ class ATypeName { /* Class body goes here */ }
 You can then create an object of this type using **new**:
 
 ```java
-ATypeName a = ATypeName();
+ATypeName a = new ATypeName();
 ```
 
 ### Fields and methods
@@ -223,4 +222,135 @@ StaticTest.i++;
 
 Same thing for method.
 
-**...TO BE CONTINUED**
+## Your first Java program
+
+An example complete program:
+
+```java
+// HelloDate.java
+import java.util.*;
+
+public class HelloDate {
+    public static void main(Stringp[] args) {
+        System.out.println("Hello, it's: ");
+        System.outprintln(new Date());
+    }
+}
+```
+
+### Compiling and running
+
+To compile and run this program, you must first have a Java programming environment. The Java Developer's Kit (JDK) from Sun is free.
+
+Once the JDK is installed, move to the file directory and type:
+
+```shell
+javac HelloDate.java
+```
+
+## Comments and embedded documentation
+
+The first form:
+
+Put comment inside the `/*` and `*/`.
+
+```java
+/* This is a comment
+ * that continues
+ * across lines
+ */
+```
+
+or
+
+```java
+/* This is a comment that
+continues across lines */
+```
+
+The second form:
+
+Starts with a `//` and continues until the end of the line.
+
+```java
+// This is a one-line comment
+```
+
+### Comment documentation
+
+The tool to extract the comments is called _Javadoc_, and it is part of the JDK installation. It uses some of the technology from the Java compiler to look for special comment tags that you put in your programs for generating documentation. This way you can get away with the minimal amount of work to generate decent program documentation.
+
+### Syntax
+
+All of the Javadoc commands occur only within `/**` comments. One simple example for Javadoc comments:
+
+```java
+//: object.Documentation1.java
+/** A class comment */
+public class Documentation1 {
+    /** A field comment */
+    public int i;
+    /** A method comment */
+    public void f() {}
+} ///:~
+```
+
+### Embedded HTML
+
+You can embed HTML in Javadoc comment:
+
+```java
+//: object/Documentation2.java
+/**
+* <pre>
+* System.out.println(new Date());
+* </pre>
+*/
+public class Documentation2 {}
+///:~
+```
+
+### Some example tags
+
+- `@see`
+- `{@link package.class#member label}`
+- `{@docRoot}`
+- `{@inheritDoc}`
+- `{@version}`
+- `{@author}`
+- `@since`
+- `@param`
+- `@return`
+- `@throws`
+- `deprecated`
+
+### Documentation example
+
+```java
+//: object/HeloDate.java
+import java.util.*;
+
+/** The first Thinking in Java example program.
+ * Displays a string and today's date.
+ * @author Bruce Eckel
+ * @author www.MindView.net
+ * @version 4.0
+*/
+public class HelloDate {
+    /** Entry point to class & application.
+     * @param args array of string arguments
+     * @throws exceptions No exceptions thrown
+    */
+    public static void main(String[] args) {
+        System.out.println("Hello, it's: ");
+        System.out.println(new Date());
+    }
+} /* Output: (55% match)
+Hello. it's:
+Wed Oct 05 14:39:36 MDT 2005
+*///:~
+```
+
+## Coding style
+
+Refer to style described in the _Code Conventions for the Java Programming Languages_.
