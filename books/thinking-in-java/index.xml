@@ -6,7 +6,7 @@
     <description>Recent content in Thinking In Java on Tony Xu Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 25 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 31 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://tonyxu.io/books/thinking-in-java/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Chapter 2 - Everything Is an Object</title>
       <link>https://tonyxu.io/books/thinking-in-java/chapter-2/</link>
-      <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 31 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/books/thinking-in-java/chapter-2/</guid>
       <description>The Java language assumes that you want to do only object-oriented programming, so (almost) everything in Java is an object.

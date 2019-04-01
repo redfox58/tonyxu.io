@@ -6,10 +6,19 @@
     <description>Recent content on Tony Xu 博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 24 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 31 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://tonyxu.io/zh/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>第二章 - 一切都是对象</title>
+      <link>https://tonyxu.io/zh/books/thinking-in-java/chapter-2/</link>
+      <pubDate>Sun, 31 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tonyxu.io/zh/books/thinking-in-java/chapter-2/</guid>
+      <description>Java 语言假定你只想使用面向对象编程，所以基本上 Java 的一切都是对象。 用引用操作对象 你把一切都当作对象来看待，使用一种统一的语法。尽管一切都是对象，</description>
+    </item>
     
     <item>
       <title>第一章 - 对象概述</title>
@@ -252,6 +261,15 @@
       
       <guid>https://tonyxu.io/zh/posts/2018/get-started/</guid>
       <description>今天决定建立这个博客，鼓励自己在生活和工作中多思考和总结。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tonyxu.io/zh/posts/2019/best-coding-style-guides-in-2019/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tonyxu.io/zh/posts/2019/best-coding-style-guides-in-2019/</guid>
+      <description></description>
     </item>
     
     <item>

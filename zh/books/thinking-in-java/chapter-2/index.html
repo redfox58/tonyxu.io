@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Chapter 2 - Everything Is an Object | Tony Xu Blog</title>
+    <title>第二章 - 一切都是对象 | Tony Xu 博客</title>
 
      
 
@@ -20,45 +20,36 @@
     
     
     
-<meta itemprop="name" content="Chapter 2 - Everything Is an Object">
-<meta itemprop="description" content="The Java language assumes that you want to do only object-oriented programming, so (almost) everything in Java is an object.
-You manipulate objects with references You treat everything as an object, using a single consistent syntax. Although you treat everything as an object, the identifier you manipulate is actually a &ldquo;reference&rdquo; to an object.
-For example:
-String s; You must create all the objects When you create a reference, you want to connect it with a new object.">
+<meta itemprop="name" content="第二章 - 一切都是对象">
+<meta itemprop="description" content="Java 语言假定你只想使用面向对象编程，所以基本上 Java 的一切都是对象。 用引用操作对象 你把一切都当作对象来看待，使用一种统一的语法。尽管一切都是对象，">
 
 
 <meta itemprop="datePublished" content="2019-03-31T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-03-31T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="1317">
+<meta itemprop="wordCount" content="2123">
 
 
 
 <meta itemprop="keywords" content="" />
 
-    <meta property="og:title" content="Chapter 2 - Everything Is an Object" />
-<meta property="og:description" content="The Java language assumes that you want to do only object-oriented programming, so (almost) everything in Java is an object.
-You manipulate objects with references You treat everything as an object, using a single consistent syntax. Although you treat everything as an object, the identifier you manipulate is actually a &ldquo;reference&rdquo; to an object.
-For example:
-String s; You must create all the objects When you create a reference, you want to connect it with a new object." />
+    <meta property="og:title" content="第二章 - 一切都是对象" />
+<meta property="og:description" content="Java 语言假定你只想使用面向对象编程，所以基本上 Java 的一切都是对象。 用引用操作对象 你把一切都当作对象来看待，使用一种统一的语法。尽管一切都是对象，" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://tonyxu.io/books/thinking-in-java/chapter-2/" />
+<meta property="og:url" content="https://tonyxu.io/zh/books/thinking-in-java/chapter-2/" />
 
 <meta property="og:image" content="https://tonyxu.io/images/og-image.png" />
 
 <meta property="og:image" content="https://tonyxu.io/images/square-logo.webp" />
 <meta property="article:published_time" content="2019-03-31T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2019-03-31T00:00:00&#43;00:00"/><meta property="og:site_name" content="Tony Xu Blog" />
+<meta property="article:modified_time" content="2019-03-31T00:00:00&#43;00:00"/><meta property="og:site_name" content="Tony Xu 博客" />
 <meta property="og:image" content="https://tonyxu.io/images/og-image.png"/>
     
     
     <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://tonyxu.io/images/og-image.png"/>
 
-<meta name="twitter:title" content="Chapter 2 - Everything Is an Object"/>
-<meta name="twitter:description" content="The Java language assumes that you want to do only object-oriented programming, so (almost) everything in Java is an object.
-You manipulate objects with references You treat everything as an object, using a single consistent syntax. Although you treat everything as an object, the identifier you manipulate is actually a &ldquo;reference&rdquo; to an object.
-For example:
-String s; You must create all the objects When you create a reference, you want to connect it with a new object."/>
+<meta name="twitter:title" content="第二章 - 一切都是对象"/>
+<meta name="twitter:description" content="Java 语言假定你只想使用面向对象编程，所以基本上 Java 的一切都是对象。 用引用操作对象 你把一切都当作对象来看待，使用一种统一的语法。尽管一切都是对象，"/>
 
     
      
@@ -75,7 +66,7 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
  
     
-    <link rel="canonical" href="https://tonyxu.io/books/thinking-in-java/chapter-2/"> 
+    <link rel="canonical" href="https://tonyxu.io/zh/books/thinking-in-java/chapter-2/"> 
 
      
 
@@ -114,15 +105,15 @@ if (!doNotTrack) {
     <header> <nav class="navbar is-fixed-top is-link">
   <div class="container">
     <div class="navbar-brand">
-      <a class="navbar-item" href="/">
+      <a class="navbar-item" href="/zh">
         <picture style="height:28px;">
           <source srcset="/images/square-logo.webp" type="image/webp">
           <source srcset="/images/square-logo.png" type="image/jpeg">
           <img src="/images/square-logo.png">
       </picture>
       </a>
-      <a class="navbar-item" href="/">
-        Tony Xu Blog
+      <a class="navbar-item" href="/zh">
+        Tony Xu 博客
       </a>
       <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
         <span aria-hidden="true"></span>
@@ -153,7 +144,7 @@ if (!doNotTrack) {
         
         
         
-        <a class="navbar-item" href='/search'>
+        <a class="navbar-item" href='/zh/search'>
           <span class="icon">
             <i class="icon-search"></i>
           </span>
@@ -164,9 +155,9 @@ if (!doNotTrack) {
             <div class="control has-icons-left">
               <div class="select is-rounded is-small">
                 <select size="1" name="links" onchange="window.location.href=this.value;">
-                  <option selected disabled>English</option>
+                  <option selected disabled>中文</option>
                   
-                  <option value="/zh/books/thinking-in-java/chapter-2/">中文</option>
+                  <option value="/books/thinking-in-java/chapter-2/">English</option>
                   
                 </select>
               </div>
@@ -190,33 +181,33 @@ if (!doNotTrack) {
       <div class="column is-8 is-offset-2">
           <div class="columns">
               <div class="column is-8 is-offset-2 has-text-centered">
-                <div class="title"><a href="/books/">Book Notes</a></div>
+                <div class="title"><a href="/zh/books/">读书笔记</a></div>
                 <p class="subtitle">Thinking In Java</p>
               </div>
             </div>
             <hr />
-        <p class="title">Chapter 2 - Everything Is an Object</p>
+        <p class="title">第二章 - 一切都是对象</p>
         <div class="columns is-mobile is-vcentered">
             <div class="column has-text-grey has-text-weight-semibold">
               Tony Xu<p class="text is-family-monospace has-text-grey-light">
   
-03/31/2019
+2019-03-31
 
 </p>
             </div>
             <div class="column has-text-right">
-              <a class="button is-light" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftonyxu.io%2fbooks%2fthinking-in-java%2fchapter-2%2f" target="_blank" title="Share to Facebook">
+              <a class="button is-light" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftonyxu.io%2fzh%2fbooks%2fthinking-in-java%2fchapter-2%2f" target="_blank" title="分享到Facebook">
   <span class="icon">
       <i class="icon-facebook"></i>
   </span>
 </a>
-<a class="button is-light" href="https://www.linkedin.com/sharing/share-offsite?url=https%3a%2f%2ftonyxu.io%2fbooks%2fthinking-in-java%2fchapter-2%2f" target="_blank"
-  title="Share to LinkedIn">
+<a class="button is-light" href="https://www.linkedin.com/sharing/share-offsite?url=https%3a%2f%2ftonyxu.io%2fzh%2fbooks%2fthinking-in-java%2fchapter-2%2f" target="_blank"
+  title="分享到LinkedIn">
   <span class="icon">
       <i class="icon-linkedin"></i>
   </span>
 </a>
-<a id="open-qr-code" class="button is-light" href="" title="Share with QR Code">
+<a id="open-qr-code" class="button is-light" href="" title="生成二维码分享">
   <span class="icon">
       <i class="icon-qrcode"></i>
   </span>
@@ -225,7 +216,7 @@ if (!doNotTrack) {
   <div class="modal-background"></div>
   <div class="modal-content">
     <p class="image is-1by1">
-      <img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=https%3a%2f%2ftonyxu.io%2fbooks%2fthinking-in-java%2fchapter-2%2f&choe=UTF-8" alt="">
+      <img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=https%3a%2f%2ftonyxu.io%2fzh%2fbooks%2fthinking-in-java%2fchapter-2%2f&choe=UTF-8" alt="">
     </p>
   </div>
   <button class="modal-close is-large" aria-label="close"></button>
@@ -256,54 +247,54 @@ if (!doNotTrack) {
         <div class="content">
           
 <details>
-  <summary>Table of Contents</summary>
+  <summary>目录</summary>
   <nav id="TableOfContents">
 <ul>
 <li>
 <ul>
-<li><a href="#you-manipulate-objects-with-references">You manipulate objects with references</a></li>
-<li><a href="#you-must-create-all-the-objects">You must create all the objects</a>
+<li><a href="#用引用操作对象">用引用操作对象</a></li>
+<li><a href="#必须由你创建所有对象">必须由你创建所有对象</a>
 <ul>
-<li><a href="#where-storage-lives">Where storage lives</a></li>
-<li><a href="#special-case-primitive-types">Special case: primitive types</a></li>
-<li><a href="#high-precision-numbers">High-precision numbers</a></li>
-<li><a href="#arrays-in-java">Arrays in Java</a></li>
+<li><a href="#存储到什么地方">存储到什么地方</a></li>
+<li><a href="#特例-基本数据类型">特例：基本数据类型</a></li>
+<li><a href="#高精度数字类型">高精度数字类型</a></li>
+<li><a href="#java-中的数组">Java 中的数组</a></li>
 </ul></li>
-<li><a href="#you-never-need-to-destroy-an-object">You never need to destroy an object</a>
+<li><a href="#永远不需要销毁对象">永远不需要销毁对象</a>
 <ul>
-<li><a href="#scoping">Scoping</a></li>
-<li><a href="#scope-of-objects">Scope of objects</a></li>
+<li><a href="#作用域">作用域</a></li>
+<li><a href="#对象的作用域">对象的作用域</a></li>
 </ul></li>
-<li><a href="#creating-new-data-types-class">Creating new data types: <strong>class</strong></a>
+<li><a href="#创建新的数据类型-类">创建新的数据类型: <strong>类</strong></a>
 <ul>
-<li><a href="#fields-and-methods">Fields and methods</a>
+<li><a href="#字段和方法">字段和方法</a>
 <ul>
-<li><a href="#default-values-for-primitive-members">Default values for primitive members</a></li>
+<li><a href="#基本数据类型的默认值">基本数据类型的默认值</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#methods-arguments-and-return-values">Methods, arguments, and return values</a>
+<li><a href="#方法-参数和返回值">方法、参数和返回值</a>
 <ul>
-<li><a href="#the-argument-list">The argument list</a></li>
+<li><a href="#参数列表">参数列表</a></li>
 </ul></li>
-<li><a href="#building-a-java-program">Building a Java program</a>
+<li><a href="#构建一个-java-程序">构建一个 Java 程序</a>
 <ul>
-<li><a href="#name-visibility">Name visibility</a></li>
-<li><a href="#using-other-components">Using other components</a></li>
-<li><a href="#the-static-keyword">The <strong>static</strong> keyword</a></li>
+<li><a href="#名称可见性">名称可见性</a></li>
+<li><a href="#使用其他构建">使用其他构建</a></li>
+<li><a href="#static-关键字"><strong>static</strong> 关键字</a></li>
 </ul></li>
-<li><a href="#your-first-java-program">Your first Java program</a>
+<li><a href="#你的第一个-java-程序">你的第一个 Java 程序</a>
 <ul>
-<li><a href="#compiling-and-running">Compiling and running</a></li>
+<li><a href="#编译和运行">编译和运行</a></li>
 </ul></li>
-<li><a href="#comments-and-embedded-documentation">Comments and embedded documentation</a>
+<li><a href="#注释和嵌入式文档">注释和嵌入式文档</a>
 <ul>
-<li><a href="#comment-documentation">Comment documentation</a></li>
-<li><a href="#syntax">Syntax</a></li>
-<li><a href="#embedded-html">Embedded HTML</a></li>
-<li><a href="#some-example-tags">Some example tags</a></li>
-<li><a href="#documentation-example">Documentation example</a></li>
+<li><a href="#注释文档">注释文档</a></li>
+<li><a href="#语法">语法</a></li>
+<li><a href="#嵌入-html">嵌入 HTML</a></li>
+<li><a href="#一些标签示例">一些标签示例</a></li>
+<li><a href="#文档示例">文档示例</a></li>
 </ul></li>
-<li><a href="#coding-style">Coding style</a></li>
+<li><a href="#编码风格">编码风格</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -313,167 +304,167 @@ if (!doNotTrack) {
 
           
 
-<p>The Java language assumes that you want to do only object-oriented programming, so (almost) everything in Java is an object.</p>
+<p>Java 语言假定你只想使用面向对象编程，所以基本上 Java 的一切都是对象。</p>
 
-<h2 id="you-manipulate-objects-with-references">You manipulate objects with references</h2>
+<h2 id="用引用操作对象">用引用操作对象</h2>
 
-<p>You treat everything as an object, using a single consistent syntax. Although you treat everything as an object, the identifier you manipulate is actually a &ldquo;reference&rdquo; to an object.</p>
+<p>你把一切都当作对象来看待，使用一种统一的语法。尽管一切都是对象，你操作对象的标识符实际上是引用了一个对象。</p>
 
-<p>For example:</p>
+<p>例如:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">String</span> <span style="color:#000">s</span><span style="color:#ce5c00;font-weight:bold">;</span></code></pre></div>
-<h2 id="you-must-create-all-the-objects">You must create all the objects</h2>
+<h2 id="必须由你创建所有对象">必须由你创建所有对象</h2>
 
-<p>When you create a reference, you want to connect it with a new object. You do so, in general, with the <strong>new</strong> operator. The keyword <strong>new</strong> says, &ldquo;Make me a new one of these objects.&rdquo;.</p>
+<p>当你创建一个引用时，你希望把它和一个对象关联起来。你（大部分情况）可以通过<strong>new</strong>操作符。<strong>new</strong>关键字的意思是，创建一个新的这个类型的对象。</p>
 
-<p>For example:</p>
+<p>例如:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">String</span> <span style="color:#000">s</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">String</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;asdf&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span></code></pre></div>
-<h3 id="where-storage-lives">Where storage lives</h3>
+<h3 id="存储到什么地方">存储到什么地方</h3>
 
-<p>There are five different places to store data:</p>
+<p>有五种不同的地方可以存储数据：</p>
 
 <ol>
-<li><strong>Registers</strong>. This is the fastest storage, it&rsquo;s inside the processor.<br /></li>
-<li><strong>The stack</strong>. This lives in the general random-access memory (RAM) area, but has direct support from the processor via its <em>stack pointer</em>.<br /></li>
-<li><strong>The heap</strong>. This is a general-purpose pool of memory (also in the RAM area) where all Java objects live.<br /></li>
-<li><strong>Constant storage</strong>. Constant values are often places directly in the program code.<br /></li>
-<li><strong>Non-RAM storage</strong>. Data that lives completely outside a program, no matter the program is running or not-, and outside the control of the program.<br />
+<li><strong>寄存器</strong>，这是最快的存储，在处理器内部<br /></li>
+<li><strong>栈</strong>，这是存在随机访问内存，但是有处理器通过 <em>栈指针</em> 的直接支持<br /></li>
+<li><strong>堆</strong>，这是通用的存储区域，所有 Java 对象都存储在这<br /></li>
+<li><strong>常量存储</strong>，常量值一般都直接放置于程序代码内<br /></li>
+<li><strong>非随机访问内存存储</strong>，完全存储在程序外的数据，和该程序是否在运行无关，且不受该程序控制<br />
 <br /></li>
 </ol>
 
-<h3 id="special-case-primitive-types">Special case: primitive types</h3>
+<h3 id="特例-基本数据类型">特例：基本数据类型</h3>
 
-<p>Below are list of primitive types, which is a group of special types that were simplified from a group of frequently used types.</p>
+<p>下列是基本数据类型的列表，它们是一组由常用的数据类型简化而来的特殊数据类型。</p>
 
 <table>
 <thead>
 <tr>
-<th>Primitive type</th>
-<th>Size</th>
-<th>Wrapper type</th>
+<th>基本数据类型</th>
+<th>位长</th>
+<th>封装类</th>
 </tr>
 </thead>
 
 <tbody>
 <tr>
-<td>boolean</td>
+<td>boolean (布尔型)</td>
 <td>-</td>
 <td>Boolean</td>
 </tr>
 
 <tr>
-<td>char</td>
+<td>char (字符型)</td>
 <td>16 bits</td>
 <td>Character</td>
 </tr>
 
 <tr>
-<td>byte</td>
+<td>byte (字节型)</td>
 <td>8 bits</td>
 <td>Byte</td>
 </tr>
 
 <tr>
-<td>short</td>
+<td>short (短整型)</td>
 <td>16 bits</td>
 <td>Short</td>
 </tr>
 
 <tr>
-<td>int</td>
+<td>int (整型)</td>
 <td>32 bits</td>
 <td>Integer</td>
 </tr>
 
 <tr>
-<td>long</td>
+<td>long (长整型)</td>
 <td>64 bits</td>
 <td>Long</td>
 </tr>
 
 <tr>
-<td>float</td>
+<td>float (浮点型)</td>
 <td>32 bits</td>
 <td>Float</td>
 </tr>
 
 <tr>
-<td>double</td>
+<td>double (双精度型)</td>
 <td>64 bits</td>
 <td>Double</td>
 </tr>
 
 <tr>
-<td>void</td>
+<td>void ()</td>
 <td>-</td>
 <td>Void</td>
 </tr>
 </tbody>
 </table>
 
-<p>For example:</p>
+<p>例如:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">char</span> <span style="color:#000">c</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#39;x&#39;</span><span style="color:#ce5c00;font-weight:bold">;</span></code></pre></div>
-<p>Or with wrapper primitives:</p>
+<p>或者通过封装类：</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">Character</span> <span style="color:#000">ch</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Character</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#39;x&#39;</span><span style="color:#ce5c00;font-weight:bold">);</span></code></pre></div>
-<h3 id="high-precision-numbers">High-precision numbers</h3>
+<h3 id="高精度数字类型">高精度数字类型</h3>
 
 <ul>
-<li><strong>BigInteger</strong> supports arbitrary-precision integers; you can accurately represent integral values of any size without losing any information during operations.<br /></li>
-<li><strong>BigDecimal</strong> is for arbitrary-precision fixed-point numbers; you can use these for accurate monetary calculations, for example.<br />
+<li><strong>BigInteger</strong> 支持任意精度的整数，可以精确表示任何大小的整数值，而不会丢失任何信息<br /></li>
+<li><strong>BigDecimal</strong> 支持任意精度的定点数，例如，你可以使用它进行高精度货币计算<br />
 <br /></li>
 </ul>
 
-<h3 id="arrays-in-java">Arrays in Java</h3>
+<h3 id="java-中的数组">Java 中的数组</h3>
 
-<p>A Java array is guaranteed to be initialized and cannot be accessed outside of its range. The index will be verified in the range at run time.</p>
+<p>Java 数组一定会被初始化并且无法访问其区间之外的部分，位置索引在运行时会被确认是否有效。</p>
 
-<h2 id="you-never-need-to-destroy-an-object">You never need to destroy an object</h2>
+<h2 id="永远不需要销毁对象">永远不需要销毁对象</h2>
 
-<h3 id="scoping">Scoping</h3>
+<h3 id="作用域">作用域</h3>
 
-<p>Scope is determined by the placement of curly braces <strong>{}</strong>. A variable defined within a scope is available only to the end of that scope. For example:</p>
+<p>作用域是由花括号 <strong>{}</strong> 的位置决定。作用域之内定义的变量在花括号结束前都可以被访问。例如：</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#ce5c00;font-weight:bold">{</span>
     <span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">x</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">12</span><span style="color:#ce5c00;font-weight:bold">;</span>
-    <span style="color:#8f5902;font-style:italic">// Only x available
+    <span style="color:#8f5902;font-style:italic">// 只有 x 可被访问
 </span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#ce5c00;font-weight:bold">{</span>
         <span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">q</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">96</span><span style="color:#ce5c00;font-weight:bold">;</span>
-        <span style="color:#8f5902;font-style:italic">// Both x &amp; q available
+        <span style="color:#8f5902;font-style:italic">// x 和 q 都可被访问
 </span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#ce5c00;font-weight:bold">}</span>
-    <span style="color:#8f5902;font-style:italic">// Only x available
-</span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#8f5902;font-style:italic">// q is &#34;out of scope&#34;
+    <span style="color:#8f5902;font-style:italic">// 只有 x 可被访问
+</span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#8f5902;font-style:italic">// q 在 ”作用域之外“
 </span><span style="color:#8f5902;font-style:italic"></span><span style="color:#ce5c00;font-weight:bold">}</span></code></pre></div>
-<h3 id="scope-of-objects">Scope of objects</h3>
+<h3 id="对象的作用域">对象的作用域</h3>
 
-<p>Java objects created using <strong>new</strong> hangs around past the end of the scope. Java has a <em>garbage collector</em>, which looks at all the objects that were created with <strong>new</strong> and figures out which ones are not being referenced anymore, and then it releases the memory for those objects. You simply create objects, and when you no longer need them, they will go away by themselves.</p>
+<p>使用 <strong>new</strong> 创建的 Java 对象在作用域结束后都还存在。Java 有 <em>垃圾回收</em> 机制，它观察所有使用 <strong>new</strong> 创建的对象，判断哪些对象不再被引用，并释放那些不再被引用的对象。你可以只管创建对象，当你不使用他们时，他们会自行被释放。</p>
 
-<h2 id="creating-new-data-types-class">Creating new data types: <strong>class</strong></h2>
+<h2 id="创建新的数据类型-类">创建新的数据类型: <strong>类</strong></h2>
 
-<p>The <em>class</em> keyword is followed by the name of the new type. Introduce a new type like below:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">ATypeName</span> <span style="color:#ce5c00;font-weight:bold">{</span> <span style="color:#8f5902;font-style:italic">/* Class body goes here */</span> <span style="color:#ce5c00;font-weight:bold">}</span></code></pre></div>
-<p>You can then create an object of this type using <strong>new</strong>:</p>
+<p><em>class</em> 关键字后面接着的是新类的名称。通过如下方式创建一个新类：</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">ATypeName</span> <span style="color:#ce5c00;font-weight:bold">{</span> <span style="color:#8f5902;font-style:italic">/* 这里包含类的成员和方法 */</span> <span style="color:#ce5c00;font-weight:bold">}</span></code></pre></div>
+<p>然后你就可以使用 <strong>new</strong> 创建一个这个类的对象:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">ATypeName</span> <span style="color:#000">a</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">ATypeName</span><span style="color:#ce5c00;font-weight:bold">();</span></code></pre></div>
-<h3 id="fields-and-methods">Fields and methods</h3>
+<h3 id="字段和方法">字段和方法</h3>
 
-<p>You can put two types of elements in your class: <em>fields</em>, and <em>methods</em>.</p>
+<p>你可以在类当中定义两种元素：<em>字段</em>, 和 <em>方法</em>.</p>
 
-<p>A field is an object of any type that you can talk to via its reference, or a primitive type. If it is a reference to an object, you must initialize that reference to connect it to an actual object (using <strong>new</strong>, as seen earlier) like below:</p>
+<p>字段是一个任何类型的对象，你可以通过它的引用或者基本类型来和它交互。如果这个字段引用的是一个对象，你必须先初始化(如前文所说的使用 <strong>new</strong>)这个引用来使它指向一个具体的对象。 例如：</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">DataOnly</span> <span style="color:#ce5c00;font-weight:bold">{</span>
     <span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">i</span><span style="color:#ce5c00;font-weight:bold">;</span>
     <span style="color:#204a87;font-weight:bold">double</span> <span style="color:#000">d</span><span style="color:#ce5c00;font-weight:bold">;</span>
     <span style="color:#204a87;font-weight:bold">boolean</span> <span style="color:#000">b</span><span style="color:#ce5c00;font-weight:bold">;</span>
 <span style="color:#ce5c00;font-weight:bold">}</span></code></pre></div>
-<p>You can then create an object of this type and assign values to the fields:</p>
+<p>然后你就可以创建一个这个类型的对象，并给这些字段赋值：</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">DataOnly</span> <span style="color:#000">data</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">DataOnly</span><span style="color:#ce5c00;font-weight:bold">();</span>
 
 <span style="color:#000">data</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">i</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">47</span><span style="color:#ce5c00;font-weight:bold">;</span></code></pre></div>
-<h4 id="default-values-for-primitive-members">Default values for primitive members</h4>
+<h4 id="基本数据类型的默认值">基本数据类型的默认值</h4>
 
-<p>When a primitive data type is a member of a class, it is guaranteed to get a default value if you do not initialize it:</p>
+<p>当一个基本数据类型作为类的字段时，即使你不初始化，它也会有一个初值值：</p>
 
 <table>
 <thead>
 <tr>
-<th>Primitive type</th>
-<th>Default</th>
+<th>基本数据类型</th>
+<th>默认值</th>
 </tr>
 </thead>
 
@@ -520,66 +511,66 @@ if (!doNotTrack) {
 </tbody>
 </table>
 
-<h2 id="methods-arguments-and-return-values">Methods, arguments, and return values</h2>
+<h2 id="方法-参数和返回值">方法、参数和返回值</h2>
 
-<p>Methods in Java determine the messages an object can receive. The fundamental parts of a methods are:</p>
+<p>Java中的方法确定了一个对象可以接收哪些消息。它的基本组成部分是：</p>
 
 <ul>
-<li>name<br /></li>
-<li>arguments<br /></li>
-<li>return type<br /></li>
-<li>body<br />
+<li>方法名<br /></li>
+<li>参数类型<br /></li>
+<li>返回值类型<br /></li>
+<li>方法体<br />
 <br /></li>
 </ul>
 
-<p>Here is the basic form:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">ReturnType</span> <span style="color:#000">methodName</span><span style="color:#ce5c00;font-weight:bold">(</span> <span style="color:#8f5902;font-style:italic">/* Argument list */</span> <span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
-    <span style="color:#8f5902;font-style:italic">/* Method body */</span>
+<p>这是一个方法的基本的形式：</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">返回值类型</span> <span style="color:#000">方法名</span><span style="color:#ce5c00;font-weight:bold">(</span> <span style="color:#8f5902;font-style:italic">/* 参数列表 */</span> <span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+    <span style="color:#8f5902;font-style:italic">/* 方法体 */</span>
 <span style="color:#ce5c00;font-weight:bold">}</span></code></pre></div>
-<h3 id="the-argument-list">The argument list</h3>
+<h3 id="参数列表">参数列表</h3>
 
-<p>The method argument list specifies what information (objects) you pass into the methods. You also need to specify the type of the object. For example:</p>
+<p>方法参数列表指定了你可以传递哪些信息（对象）给这个方法。你同时还需要指定这个对象的类型。例如：</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">storage</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">String</span> <span style="color:#000">s</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
     <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">s</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">length</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">2</span>
 <span style="color:#ce5c00;font-weight:bold">}</span></code></pre></div>
-<p>If you don&rsquo;t want to return anything, you can do so by indicating that the method returns <strong>void</strong>.</p>
+<p>如果你不需要返回任何信息，你可以把返回值类型指定为 <strong>void</strong>。</p>
 
-<h2 id="building-a-java-program">Building a Java program</h2>
+<h2 id="构建一个-java-程序">构建一个 Java 程序</h2>
 
-<h3 id="name-visibility">Name visibility</h3>
+<h3 id="名称可见性">名称可见性</h3>
 
-<p>Use your domain name in reverse as your library name. For example: <strong>net.mindview.utility.foibles</strong>. The dots are intended to represent subdirectories.</p>
+<p>使用互联网域名的颠倒形式作为你的包名。例如：<strong>net.mindview.utility.foibles</strong>。 句点可以被理解为子目录。</p>
 
-<h3 id="using-other-components">Using other components</h3>
+<h3 id="使用其他构建">使用其他构建</h3>
 
 <ul>
-<li>Use a class exists in the same source code file: simply use the class name<br /></li>
-<li>Use a class exists in some other file: use <strong>import</strong> to bring in the package, which is a library of classes<br />
+<li>使用同源文件当中定义的其他类：直接使用类名<br /></li>
+<li>使用其他源文件当中定义的类：使用 <strong>import</strong> 导入其他包，也就是一组类<br />
 <br /></li>
 </ul>
 
-<p>For example:</p>
+<p>例如：</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">java.util.ArrayList</span><span style="color:#ce5c00;font-weight:bold">;</span></code></pre></div>
-<p>or import a collection of classes:</p>
+<p>或者导入一组类：</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">java.util.*</span></code></pre></div>
-<h3 id="the-static-keyword">The <strong>static</strong> keyword</h3>
+<h3 id="static-关键字"><strong>static</strong> 关键字</h3>
 
-<p>When you specify something as <strong>static</strong>, it means that particular field or method is not tied to any particular object instance of that class. You can access the fields and methods without first create an object.</p>
+<p>当你使用 <strong>static</strong> 关键字，它意味着这个字段或者方法不指向某个具体的对象实例。你不需要先创建一个对象才能访问它的字段和方法。</p>
 
-<p>For example:</p>
+<p>例如：</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">StaticTest</span> <span style="color:#ce5c00;font-weight:bold">{</span>
     <span style="color:#204a87;font-weight:bold">static</span> <span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">i</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">47</span><span style="color:#ce5c00;font-weight:bold">;</span>
 <span style="color:#ce5c00;font-weight:bold">}</span>
 
 <span style="color:#000">StaticTest</span> <span style="color:#000">st1</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">StaticTest</span><span style="color:#ce5c00;font-weight:bold">();</span>
 <span style="color:#000">StaticTest</span> <span style="color:#000">st2</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">StaticTest</span><span style="color:#ce5c00;font-weight:bold">();</span></code></pre></div>
-<p>Now both <strong>st1.i</strong> and <strong>st2.i</strong> have the same value of 47. It can also be accessed by class name:</p>
+<p>现在 <strong>st1.i</strong> 和 <strong>st2.i</strong> 的值都是47.你也可以通过类名访问：</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">StaticTest</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">i</span><span style="color:#ce5c00;font-weight:bold">++;</span></code></pre></div>
-<p>Same thing for method.</p>
+<p>对于方法也是同样道理。</p>
 
-<h2 id="your-first-java-program">Your first Java program</h2>
+<h2 id="你的第一个-java-程序">你的第一个 Java 程序</h2>
 
-<p>An example complete program:</p>
+<p>一个完整的示例程序：</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8f5902;font-style:italic">// HelloDate.java
 </span><span style="color:#8f5902;font-style:italic"></span><span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">java.util.*</span><span style="color:#ce5c00;font-weight:bold">;</span>
 
@@ -589,46 +580,46 @@ if (!doNotTrack) {
         <span style="color:#000">System</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">outprintln</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Date</span><span style="color:#ce5c00;font-weight:bold">());</span>
     <span style="color:#ce5c00;font-weight:bold">}</span>
 <span style="color:#ce5c00;font-weight:bold">}</span></code></pre></div>
-<h3 id="compiling-and-running">Compiling and running</h3>
+<h3 id="编译和运行">编译和运行</h3>
 
-<p>To compile and run this program, you must first have a Java programming environment. The Java Developer&rsquo;s Kit (JDK) from Sun is free.</p>
+<p>为了编译和运行这段程序，你必须先有Java编程环境。Sun公司提供的Java开发者套件可以免费使用。</p>
 
-<p>Once the JDK is installed, move to the file directory and type:</p>
+<p>SDK安装配置好之后，在程序目录运行命令：</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">javac HelloDate.java</code></pre></div>
-<h2 id="comments-and-embedded-documentation">Comments and embedded documentation</h2>
+<h2 id="注释和嵌入式文档">注释和嵌入式文档</h2>
 
-<p>The first form:</p>
+<p>第一种形式：</p>
 
-<p>Put comment inside the <code>/*</code> and <code>*/</code>.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8f5902;font-style:italic">/* This is a comment
-</span><span style="color:#8f5902;font-style:italic"> * that continues
-</span><span style="color:#8f5902;font-style:italic"> * across lines
+<p>在<code>/*</code>和<code>*/</code>中间写注释。</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8f5902;font-style:italic">/* 这是一条
+</span><span style="color:#8f5902;font-style:italic"> * 跨越多行的
+</span><span style="color:#8f5902;font-style:italic"> * 注释
 </span><span style="color:#8f5902;font-style:italic"> */</span></code></pre></div>
-<p>or</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8f5902;font-style:italic">/* This is a comment that
-</span><span style="color:#8f5902;font-style:italic">continues across lines */</span></code></pre></div>
-<p>The second form:</p>
+<p>或者</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8f5902;font-style:italic">/* 这是一条
+</span><span style="color:#8f5902;font-style:italic">跨越多行的注释*/</span></code></pre></div>
+<p>第二种形式：</p>
 
-<p>Starts with a <code>//</code> and continues until the end of the line.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#ce5c00;font-weight:bold">//</span> <span style="color:#000">This</span> <span style="color:#000">is</span> <span style="color:#000">a</span> <span style="color:#000">one</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">line</span> <span style="color:#000">comment</span></code></pre></div>
-<h3 id="comment-documentation">Comment documentation</h3>
+<p>使用<code>//</code>开头，注释在行末结束。</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#ce5c00;font-weight:bold">//</span> <span style="color:#000">这是一条单行注释</span></code></pre></div>
+<h3 id="注释文档">注释文档</h3>
 
-<p>The tool to extract the comments is called <em>Javadoc</em>, and it is part of the JDK installation. It uses some of the technology from the Java compiler to look for special comment tags that you put in your programs for generating documentation. This way you can get away with the minimal amount of work to generate decent program documentation.</p>
+<p>一个自动提取注释的工具叫 _Javadoc_，它是安装JDK附带的。它使用Java编译器当中的一些技术，并查找程序中特殊的注释标签来生成文档。这样你就可以以最少的工作量来获得非常好的程序文档。</p>
 
-<h3 id="syntax">Syntax</h3>
+<h3 id="语法">语法</h3>
 
-<p>All of the Javadoc commands occur only within <code>/**</code> comments. One simple example for Javadoc comments:</p>
+<p>所有 Javadoc 命令都只在<code>/**</code>注释内触发。一个简单的 Javadoc 注视：</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8f5902;font-style:italic">//: object.Documentation1.java
-</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#8f5902;font-style:italic">/** A class comment */</span>
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#8f5902;font-style:italic">/** 类注视 */</span>
 <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">Documentation1</span> <span style="color:#ce5c00;font-weight:bold">{</span>
-    <span style="color:#8f5902;font-style:italic">/** A field comment */</span>
+    <span style="color:#8f5902;font-style:italic">/** 字段注释 */</span>
     <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">i</span><span style="color:#ce5c00;font-weight:bold">;</span>
-    <span style="color:#8f5902;font-style:italic">/** A method comment */</span>
+    <span style="color:#8f5902;font-style:italic">/** 方法注释 */</span>
     <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">void</span> <span style="color:#000">f</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{}</span>
 <span style="color:#ce5c00;font-weight:bold">}</span> <span style="color:#ce5c00;font-weight:bold">///:~</span></code></pre></div>
-<h3 id="embedded-html">Embedded HTML</h3>
+<h3 id="嵌入-html">嵌入 HTML</h3>
 
-<p>You can embed HTML in Javadoc comment:</p>
+<p>你可以在 Javadoc 注释内潜入 HTML 代码：</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8f5902;font-style:italic">//: object/Documentation2.java
 </span><span style="color:#8f5902;font-style:italic"></span><span style="color:#8f5902;font-style:italic">/**
 </span><span style="color:#8f5902;font-style:italic">* &lt;pre&gt;
@@ -637,7 +628,7 @@ if (!doNotTrack) {
 </span><span style="color:#8f5902;font-style:italic">*/</span>
 <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">Documentation2</span> <span style="color:#ce5c00;font-weight:bold">{}</span>
 <span style="color:#ce5c00;font-weight:bold">///:~</span></code></pre></div>
-<h3 id="some-example-tags">Some example tags</h3>
+<h3 id="一些标签示例">一些标签示例</h3>
 
 <ul>
 <li><code>@see</code><br /></li>
@@ -654,32 +645,32 @@ if (!doNotTrack) {
 <br /></li>
 </ul>
 
-<h3 id="documentation-example">Documentation example</h3>
+<h3 id="文档示例">文档示例</h3>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8f5902;font-style:italic">//: object/HeloDate.java
 </span><span style="color:#8f5902;font-style:italic"></span><span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">java.util.*</span><span style="color:#ce5c00;font-weight:bold">;</span>
 
-<span style="color:#8f5902;font-style:italic">/** The first Thinking in Java example program.
-</span><span style="color:#8f5902;font-style:italic"> * Displays a string and today&#39;s date.
+<span style="color:#8f5902;font-style:italic">/** 这是第一个 Thinking in Java 的示例程序
+</span><span style="color:#8f5902;font-style:italic"> * 它输出一段字符串和当前日期时间。
 </span><span style="color:#8f5902;font-style:italic"> * @author Bruce Eckel
 </span><span style="color:#8f5902;font-style:italic"> * @author www.MindView.net
 </span><span style="color:#8f5902;font-style:italic"> * @version 4.0
 </span><span style="color:#8f5902;font-style:italic">*/</span>
 <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">HelloDate</span> <span style="color:#ce5c00;font-weight:bold">{</span>
-    <span style="color:#8f5902;font-style:italic">/** Entry point to class &amp; application.
-</span><span style="color:#8f5902;font-style:italic">     * @param args array of string arguments
-</span><span style="color:#8f5902;font-style:italic">     * @throws exceptions No exceptions thrown
+    <span style="color:#8f5902;font-style:italic">/** 类和程序的入口
+</span><span style="color:#8f5902;font-style:italic">     * @param args 字符参数数组
+</span><span style="color:#8f5902;font-style:italic">     * @throws exceptions 无异常抛出
 </span><span style="color:#8f5902;font-style:italic">    */</span>
     <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">static</span> <span style="color:#204a87;font-weight:bold">void</span> <span style="color:#000">main</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">String</span><span style="color:#ce5c00;font-weight:bold">[]</span> <span style="color:#000">args</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
         <span style="color:#000">System</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">out</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">println</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Hello, it&#39;s: &#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
         <span style="color:#000">System</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">out</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">println</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Date</span><span style="color:#ce5c00;font-weight:bold">());</span>
     <span style="color:#ce5c00;font-weight:bold">}</span>
-<span style="color:#ce5c00;font-weight:bold">}</span> <span style="color:#8f5902;font-style:italic">/* Output: (55% match)
+<span style="color:#ce5c00;font-weight:bold">}</span> <span style="color:#8f5902;font-style:italic">/* 输出: (55% 匹配)
 </span><span style="color:#8f5902;font-style:italic">Hello. it&#39;s:
 </span><span style="color:#8f5902;font-style:italic">Wed Oct 05 14:39:36 MDT 2005
 </span><span style="color:#8f5902;font-style:italic">*/</span><span style="color:#ce5c00;font-weight:bold">//:~</span></code></pre></div>
-<h2 id="coding-style">Coding style</h2>
+<h2 id="编码风格">编码风格</h2>
 
-<p>Refer to style described in the <em>Code Conventions for the Java Programming Languages</em>.</p>
+<p>参考 <em>Code Conventions for the Java Programming Languages</em> 介绍的代码风格。</p>
 
         </div>
         <hr>
@@ -689,13 +680,13 @@ if (!doNotTrack) {
   <div class="card-content">
     <div class="columns is-mobile">
       <div class="column is-one-quarter-desktop is-one-quarter-tablet is-one-third-mobile">
-        <img src="/books/thinking-in-java/cover.jpg" alt="Thinking In Java">
+        <img src="/zh/books/thinking-in-java/cover.jpg" alt="Thinking In Java">
       </div>
       <div class="column">
         <div class="title is-4">Thinking In Java</div>
-        <div class="text">The definitive introduction to object-oriented programming in the language of the world wide web</div>
+        <div class="text">通过Web学习面向对象编程的宝典级教科书</div>
         <br />
-        <a href="/books/thinking-in-java/">Read my learning notes →</a>
+        <a href="/zh/books/thinking-in-java/">阅读我的读书笔记 →</a>
       </div>
     </div>
   </div>
@@ -711,33 +702,11 @@ if (!doNotTrack) {
         <div class="column has-text-centered">
           
 <p class="subtitle is-size-6-mobile">
-    Subscribe to get update about programming, hacks, and other topics.
+  关注微信公众号「 <span class="text has-text-info">TONY的BLOG</span> 」<br>即时获取最新动态
 </p>
-
-<div id="mc_embed_signup">
-  <form action="https://tonyxu.us20.list-manage.com/subscribe/post?u=69c2a5fca21efd1ab71e96df7&amp;id=c90267bbd1"
-    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
-    novalidate>
-    <div id="mc_embed_signup_scroll">
-      <div class="field has-addons has-addons-centered">
-        <div class="control">
-          <input type="email" value="" name="EMAIL" class="input required email" id="mce-EMAIL" placeholder='Email Address'></input>
-        </div>
-        <div class="control">
-          <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button is-info">Subscribe</button>
-        </div>
-      </div>
-      <div id="mce-responses" class="clear">
-        <div class="response" id="mce-error-response" style="display:none"></div>
-        <div class="response" id="mce-success-response" style="display:none"></div>
-      </div>
-      
-      <div style="position: absolute; left: -5000px;" aria-hidden="true">
-        <input type="text" name="b_69c2a5fca21efd1ab71e96df7_c90267bbd1" tabindex="-1" value=""></input>
-      </div>
-    </div>
-  </form>
-</div>
+<p class="image is-96x96 has-image-centered">
+  <img src="/images/wechat-qr-code.jpg">
+</p>
 
 
         </div>
@@ -749,11 +718,11 @@ if (!doNotTrack) {
   <div class="container">
     <div class="content has-text-centered">
       <p class="text is-uppercase has-text-grey">
-        © 2018-2019 Tony Xu
+        © 2018-2019 Tony Xu 徐毅涵
       </p>
       <p class="text">
-        <a href='/about' class="has-text-grey footer-link"> About</a>
-        <a href='/friends' class="has-text-grey footer-link">Friends</a>
+        <a href='/zh/about' class="has-text-grey footer-link"> 关于</a>
+        <a href='/zh/friends' class="has-text-grey footer-link">友情链接</a>
         <a href="/index.xml" class="has-text-grey footer-link">RSS</a>
       </p>
     </div>
