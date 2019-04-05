@@ -4,9 +4,9 @@ IssueNumber: 3
 Title: Medium的微服务架构
 ---
 
-[Microservice Architecture at Medium](https://medium.engineering/microservice-architecture-at-medium-9c33805eb74f) (medium.engineering)
+[Medium的微服务架构](https://medium.engineering/microservice-architecture-at-medium-9c33805eb74f) (medium.engineering)
 
-> At Medium, our technical stack started with a monolithic Node.js app back in 2012. We have built a couple of satellite services, but we haven’t created a strategy to adopt the microservice architecture systematically. As the system becomes more complex and the team grows, we moved to a microservice architecture in early 2018. In this post, we want to share our experiences of doing it effectively and avoiding microservice syndromes.
+> 在Medium，我们的技术栈从2012年的单体Node.js应用开始。我们搭建了一系列的周边服务，但是我们都没有提出一个采用微服务架构的系统性战略。随着系统变得越来越复杂，团队规模的扩大，我们在2018年初期搬迁到了微服务架构。这篇文章，我们希望分享我们是如何有效的避免了微服务缺陷。
 
 我们讨论从单体式巨型应用切换至微服务架构已经有些年了。阅读大公司是如何成功经历这个转型，以及他们对于转型微服务架构的原则和策略可以帮助我们更加充分的利用微服务架构的优势。
 
