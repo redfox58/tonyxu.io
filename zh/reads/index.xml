@@ -6,10 +6,19 @@
     <description>Recent content in 推荐阅读 on Tony Xu 博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 15 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 05 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://tonyxu.io/zh/reads/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>为什么Google&#43;失败了</title>
+      <link>https://tonyxu.io/zh/reads/2019-04-05/</link>
+      <pubDate>Fri, 05 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tonyxu.io/zh/reads/2019-04-05/</guid>
+      <description>为什么Google+失败了 (onezero.medium.com) Google+ 不是因为Facebook无懈可击 它失败是因为从一开始就根植其中的致命设计缺陷 Google关停产品或者服务并不是</description>
+    </item>
     
     <item>
       <title>停止学习框架</title>
@@ -17,7 +26,7 @@
       <pubDate>Fri, 15 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/zh/reads/2019-03-15/</guid>
-      <description>Stop Learning Frameworks (sizovs.net) The longer a technology is on the market, the safer investment it is. Don’t rush to learn new technology – it has a high probability of dying. Time will show which technology is worth investing in. Time is your best advisor. Learn to wait. Remember – frameworks, libraries and tools come and go. Time is precious. 我非常热爱学</description>
+      <description>停止学习框架 (sizovs.net) 技术在市场上存活得越久，投资它就更安全 不要匆忙学习新技术 - 有很大的几率它会死掉 时间会证明什么技术值得投资，时间是最好的导师，学</description>
     </item>
     
     <item>
@@ -26,7 +35,7 @@
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/zh/reads/2019-03-09/</guid>
-      <description>Microservice Architecture at Medium (medium.engineering) At Medium, our technical stack started with a monolithic Node.js app back in 2012. We have built a couple of satellite services, but we haven’t created a strategy to adopt the microservice architecture systematically. As the system becomes more complex and the team grows, we moved to a microservice architecture in early 2018. In this post, we want to</description>
+      <description>Medium的微服务架构 (medium.engineering) 在Medium，我们的技术栈从2012年的单体Node.js应用开始。我们搭建了一系列的周边服务，但是我们都没有提</description>
     </item>
     
     <item>
@@ -35,7 +44,7 @@
       <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/zh/reads/2019-03-06/</guid>
-      <description>This Is Silicon Valley (onezero.medium.com) Everyone wears Patagonia and North Face, everyone has AirPods hanging from their ears, and everyone goes to Lake Tahoe on weekends. And everyone talks about the same things: startups, blockchain, machine learning, and startups with blockchain and machine learning. As Jeffrey Hammerbacher, a former Facebook executive, told Bloomberg, “The best minds of my generation are thinking about how to make people click</description>
+      <description>这就是硅谷 (onezero.medium.com) 每个人都穿着Patagonia和North Face, 每个人耳朵上都戴着AirPods, 每个人周末都去太浩湖。每个人都在讨论同样的事情：创</description>
     </item>
     
     <item>
@@ -44,7 +53,7 @@
       <pubDate>Sun, 03 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://tonyxu.io/zh/reads/2019-03-03/</guid>
-      <description>UTC is Enough for Everyone, Right? (zachholman.com) It turns out humans have had a long, long history of poorly dealing with time, so when you hammer your head against the wall trying to deal with a timezone bug, well, you’re just the last in a long, long line of human beings that are terrible at all this! Congrats. You’re pretty</description>
+      <description>协调世界时已经足够了，是吗? (zachholman.com) 人类在糟糕的处理时间问题上似乎拥有一个很长很长的历史，所以当你思考如何解决一个时区导致的问题到想撞墙时，你只是</description>
     </item>
     
   </channel>
