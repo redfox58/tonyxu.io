@@ -25,17 +25,17 @@ Number can't be used as boolean, alternative way: `if (a!=0)`
 `if`语句的两种形式:
 
 ```java
-if(Boolean-expression)
-  statement
+if(布尔表达式)
+  语句
 ```
 
 或者
 
 ```java
-if(Boolean-express)
-  statement
+if(布尔表达式)
+  语句
 else
-  statement
+  语句
 ```
 
 ## 反复
@@ -49,23 +49,23 @@ else
 ### `while`
 
 ```java
-while(Boolean-expression)
-  statement
+while(布尔表达式)
+  语句
 ```
 
 ### `do-while`
 
 ```java
 do
-  statement
-while(Boolean-expression)
+  语句
+while(布尔表达式)
 ```
 
 ### `for`循环
 
 ```java
-for(initialization; Boolean-expression; step)
-  statement
+for(初始化; 布尔表达式; 步进)
+  语句
 ```
 
 ### 逗号运算符
