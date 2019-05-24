@@ -17,7 +17,6 @@ toc: true
 
 所有的条件语句都使用条件表达式的真或假来决定执行路径
 
-Number can't be used as boolean, alternative way: `if (a!=0)`
 数字不可以被作为布尔值使用，替代方式：`if(a!=0)`
 
 ## `if`-`else`
