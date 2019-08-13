@@ -2,7 +2,7 @@
 <html lang="en-US" class="has-navbar-fixed-top">
 
 <head>
-    <meta name="generator" content="Hugo 0.54.0" />
+    <meta name="generator" content="Hugo 0.56.3" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,8 +19,7 @@
     
     
     
-    
-<meta itemprop="name" content="Chapter 3 - Controlling Execution">
+    <meta itemprop="name" content="Chapter 3 - Controlling Execution">
 <meta itemprop="description" content="Control statements:
  if-else
  while
@@ -70,8 +69,8 @@ if(Boolean-express) statement else statement Iteration Iteration statements (loo
 <meta property="og:image" content="https://tonyxu.io/images/og-image.png" />
 
 <meta property="og:image" content="https://tonyxu.io/images/square-logo.webp" />
-<meta property="article:published_time" content="2019-05-24T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2019-05-24T00:00:00&#43;00:00"/><meta property="og:site_name" content="Tony Xu Blog" />
+<meta property="article:published_time" content="2019-05-24T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-05-24T00:00:00+00:00" /><meta property="og:site_name" content="Tony Xu Blog" />
 <meta property="og:image" content="https://tonyxu.io/images/og-image.png"/>
     
     
@@ -341,12 +340,12 @@ if (!doNotTrack) {
 <h2 id="if-else"><code>if</code>-<code>else</code></h2>
 
 <p>Two forms of using <code>if</code>:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">if</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">Boolean</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">expression</span><span style="color:#ce5c00;font-weight:bold">)</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">if</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">Boolean</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">expression</span><span style="color:#000;font-weight:bold">)</span>
   <span style="color:#000">statement</span></code></pre></div>
 <p>or</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">if</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">Boolean</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">express</span><span style="color:#ce5c00;font-weight:bold">)</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">if</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">Boolean</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">express</span><span style="color:#000;font-weight:bold">)</span>
   <span style="color:#000">statement</span>
-<span style="color:#204a87;font-weight:bold">else</span>
+<span style="color:#000">else</span>
   <span style="color:#000">statement</span></code></pre></div>
 <h2 id="iteration">Iteration</h2>
 
@@ -360,22 +359,22 @@ if (!doNotTrack) {
 </ul>
 
 <h3 id="while"><code>while</code></h3>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">while</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">Boolean</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">expression</span><span style="color:#ce5c00;font-weight:bold">)</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">while</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">Boolean</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">expression</span><span style="color:#000;font-weight:bold">)</span>
   <span style="color:#000">statement</span></code></pre></div>
 <h3 id="do-while"><code>do-while</code></h3>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">do</span>
   <span style="color:#000">statement</span>
-<span style="color:#000">while</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">Boolean</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">expression</span><span style="color:#ce5c00;font-weight:bold">)</span></code></pre></div>
+<span style="color:#000">while</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">Boolean</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">expression</span><span style="color:#000;font-weight:bold">)</span></code></pre></div>
 <h3 id="for"><code>for</code></h3>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">for</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">initialization</span><span style="color:#ce5c00;font-weight:bold">;</span> <span style="color:#000">Boolean</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">expression</span><span style="color:#ce5c00;font-weight:bold">;</span> <span style="color:#000">step</span><span style="color:#ce5c00;font-weight:bold">)</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">for</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">initialization</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">Boolean</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">expression</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">step</span><span style="color:#000;font-weight:bold">)</span>
   <span style="color:#000">statement</span></code></pre></div>
 <h3 id="the-comma-operator">The comma operator</h3>
 
 <p>Using the comma operator, you can define multiple variables within a <code>for</code> statement, but they must be of the same type.</p>
 
 <h2 id="foreach-syntax">Foreach syntax</h2>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">for</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">float</span> <span style="color:#000">x</span> <span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">f</span><span style="color:#ce5c00;font-weight:bold">){</span>
-<span style="color:#ce5c00;font-weight:bold">}</span></code></pre></div>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">for</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">float</span> <span style="color:#000">x</span> <span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">f</span><span style="color:#000;font-weight:bold">){</span>
+<span style="color:#000;font-weight:bold">}</span></code></pre></div>
 <p>This defines a variable <code>x</code> of type <code>float</code> and sequentially assigns each element of <code>f</code> to <code>x</code>.</p>
 
 <p>Foreach will work with any object that is <strong>Iterable</strong>.</p>
@@ -407,30 +406,30 @@ if (!doNotTrack) {
 
 <p>The <em>only</em> reason to use labels in Java is when you have nested loops and you want to <code>break</code> or <code>continue</code> through more than one nested level:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f57900">label1:</span>
-<span style="color:#000">outer</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">iteration</span> <span style="color:#ce5c00;font-weight:bold">{</span>
-    <span style="color:#000">inner</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">iteration</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+<span style="color:#000">outer</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">iteration</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">inner</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">iteration</span> <span style="color:#000;font-weight:bold">{</span>
         <span style="color:#8f5902;font-style:italic">// ...
-</span><span style="color:#8f5902;font-style:italic"></span>        <span style="color:#204a87;font-weight:bold">break</span><span style="color:#ce5c00;font-weight:bold">;</span>
+</span><span style="color:#8f5902;font-style:italic"></span>        <span style="color:#204a87;font-weight:bold">break</span><span style="color:#000;font-weight:bold">;</span>
         <span style="color:#8f5902;font-style:italic">//...
-</span><span style="color:#8f5902;font-style:italic"></span>        <span style="color:#204a87;font-weight:bold">continue</span><span style="color:#ce5c00;font-weight:bold">;</span>
+</span><span style="color:#8f5902;font-style:italic"></span>        <span style="color:#204a87;font-weight:bold">continue</span><span style="color:#000;font-weight:bold">;</span>
         <span style="color:#8f5902;font-style:italic">//...
-</span><span style="color:#8f5902;font-style:italic"></span>        <span style="color:#204a87;font-weight:bold">continue</span> <span style="color:#000">label1</span><span style="color:#ce5c00;font-weight:bold">;</span>
+</span><span style="color:#8f5902;font-style:italic"></span>        <span style="color:#204a87;font-weight:bold">continue</span> <span style="color:#000">label1</span><span style="color:#000;font-weight:bold">;</span>
         <span style="color:#8f5902;font-style:italic">//...
-</span><span style="color:#8f5902;font-style:italic"></span>        <span style="color:#204a87;font-weight:bold">break</span> <span style="color:#000">label1</span><span style="color:#ce5c00;font-weight:bold">;</span>
-    <span style="color:#ce5c00;font-weight:bold">}</span>
-<span style="color:#ce5c00;font-weight:bold">}</span></code></pre></div>
+</span><span style="color:#8f5902;font-style:italic"></span>        <span style="color:#204a87;font-weight:bold">break</span> <span style="color:#000">label1</span><span style="color:#000;font-weight:bold">;</span>
+    <span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000;font-weight:bold">}</span></code></pre></div>
 <h2 id="switch"><code>switch</code></h2>
 
 <p>The general form of <code>switch</code> is:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">switch</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">integral</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">selector</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">case</span> <span style="color:#000">integral</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">value1</span> <span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">statement</span><span style="color:#ce5c00;font-weight:bold">;</span> <span style="color:#204a87;font-weight:bold">break</span><span style="color:#ce5c00;font-weight:bold">;</span>
-    <span style="color:#204a87;font-weight:bold">case</span> <span style="color:#000">integral</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">value2</span> <span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">statement</span><span style="color:#ce5c00;font-weight:bold">;</span> <span style="color:#204a87;font-weight:bold">break</span><span style="color:#ce5c00;font-weight:bold">;</span>
-    <span style="color:#204a87;font-weight:bold">case</span> <span style="color:#000">integral</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">value3</span> <span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">statement</span><span style="color:#ce5c00;font-weight:bold">;</span> <span style="color:#204a87;font-weight:bold">break</span><span style="color:#ce5c00;font-weight:bold">;</span>
-    <span style="color:#204a87;font-weight:bold">case</span> <span style="color:#000">integral</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">value4</span> <span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">statement</span><span style="color:#ce5c00;font-weight:bold">;</span> <span style="color:#204a87;font-weight:bold">break</span><span style="color:#ce5c00;font-weight:bold">;</span>
-    <span style="color:#204a87;font-weight:bold">case</span> <span style="color:#000">integral</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">value5</span> <span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">statement</span><span style="color:#ce5c00;font-weight:bold">;</span> <span style="color:#204a87;font-weight:bold">break</span><span style="color:#ce5c00;font-weight:bold">;</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">switch</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">integral</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">selector</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">case</span> <span style="color:#000">integral</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">value1</span> <span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">statement</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#204a87;font-weight:bold">break</span><span style="color:#000;font-weight:bold">;</span>
+    <span style="color:#204a87;font-weight:bold">case</span> <span style="color:#000">integral</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">value2</span> <span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">statement</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#204a87;font-weight:bold">break</span><span style="color:#000;font-weight:bold">;</span>
+    <span style="color:#204a87;font-weight:bold">case</span> <span style="color:#000">integral</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">value3</span> <span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">statement</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#204a87;font-weight:bold">break</span><span style="color:#000;font-weight:bold">;</span>
+    <span style="color:#204a87;font-weight:bold">case</span> <span style="color:#000">integral</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">value4</span> <span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">statement</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#204a87;font-weight:bold">break</span><span style="color:#000;font-weight:bold">;</span>
+    <span style="color:#204a87;font-weight:bold">case</span> <span style="color:#000">integral</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">value5</span> <span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">statement</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#204a87;font-weight:bold">break</span><span style="color:#000;font-weight:bold">;</span>
     <span style="color:#8f5902;font-style:italic">// ...
-</span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#204a87;font-weight:bold">default</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">statement</span><span style="color:#ce5c00;font-weight:bold">;</span>
-<span style="color:#ce5c00;font-weight:bold">}</span></code></pre></div>
+</span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#204a87;font-weight:bold">default</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">statement</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000;font-weight:bold">}</span></code></pre></div>
 <ul>
 <li><code>break</code> causes execution to jump to the end of the <code>switch</code> body<br /></li>
 <li><code>break</code> is optional, if it is missing, the code for the following <code>case</code> statements executes until a <code>break</code> is encountered<br /></li>
@@ -440,18 +439,16 @@ if (!doNotTrack) {
         <hr>
         
         
-        <div class="card">
-  <div class="card-content">
-    <div class="columns is-mobile">
-      <div class="column is-one-quarter-desktop is-one-quarter-tablet is-one-third-mobile">
-        <img src="/books/thinking-in-java/cover.jpg" alt="Thinking In Java">
-      </div>
-      <div class="column">
-        <div class="title is-4">Thinking In Java</div>
-        <div class="text">The definitive introduction to object-oriented programming in the language of the world wide web</div>
-        <br />
-        <a href="/books/thinking-in-java/">Read my learning notes →</a>
-      </div>
+        <div class="box">
+  <div class="columns is-mobile">
+    <div class="column is-one-quarter-desktop is-one-quarter-tablet is-one-third-mobile">
+      <img src="/books/thinking-in-java/cover.jpg" alt="Thinking In Java">
+    </div>
+    <div class="column">
+      <div class="title is-4">Thinking In Java</div>
+      <div class="text">The definitive introduction to object-oriented programming in the language of the world wide web</div>
+      <br />
+      <a href="/books/thinking-in-java/">Read my learning notes →</a>
     </div>
   </div>
 </div>

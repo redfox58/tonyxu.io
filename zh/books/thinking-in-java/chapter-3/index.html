@@ -2,7 +2,7 @@
 <html lang="en-US" class="has-navbar-fixed-top">
 
 <head>
-    <meta name="generator" content="Hugo 0.54.0" />
+    <meta name="generator" content="Hugo 0.56.3" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,8 +19,7 @@
     
     
     
-    
-<meta itemprop="name" content="第四章 - 执行控制">
+    <meta itemprop="name" content="第四章 - 执行控制">
 <meta itemprop="description" content="控制语句: if-else while do-while for return break 真(true)和假(false) 所有的条件语句都使用条件表达式的真或假来决定执行路径 数字不可以被作为布尔值使用，替代方">
 
 
@@ -40,8 +39,8 @@
 <meta property="og:image" content="https://tonyxu.io/images/og-image.png" />
 
 <meta property="og:image" content="https://tonyxu.io/images/square-logo.webp" />
-<meta property="article:published_time" content="2019-05-24T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2019-05-24T00:00:00&#43;00:00"/><meta property="og:site_name" content="Tony Xu 博客" />
+<meta property="article:published_time" content="2019-05-24T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-05-24T00:00:00+00:00" /><meta property="og:site_name" content="Tony Xu 博客" />
 <meta property="og:image" content="https://tonyxu.io/images/og-image.png"/>
     
     
@@ -296,12 +295,12 @@ if (!doNotTrack) {
 <h2 id="if-else"><code>if</code>-<code>else</code></h2>
 
 <p><code>if</code>语句的两种形式:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">if</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">布尔表达式</span><span style="color:#ce5c00;font-weight:bold">)</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">if</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">布尔表达式</span><span style="color:#000;font-weight:bold">)</span>
   <span style="color:#000">语句</span></code></pre></div>
 <p>或者</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">if</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">布尔表达式</span><span style="color:#ce5c00;font-weight:bold">)</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">if</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">布尔表达式</span><span style="color:#000;font-weight:bold">)</span>
   <span style="color:#000">语句</span>
-<span style="color:#204a87;font-weight:bold">else</span>
+<span style="color:#000">else</span>
   <span style="color:#000">语句</span></code></pre></div>
 <h2 id="反复">反复</h2>
 
@@ -315,22 +314,22 @@ if (!doNotTrack) {
 </ul>
 
 <h3 id="while"><code>while</code></h3>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">while</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">布尔表达式</span><span style="color:#ce5c00;font-weight:bold">)</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">while</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">布尔表达式</span><span style="color:#000;font-weight:bold">)</span>
   <span style="color:#000">语句</span></code></pre></div>
 <h3 id="do-while"><code>do-while</code></h3>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">do</span>
   <span style="color:#000">语句</span>
-<span style="color:#000">while</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">布尔表达式</span><span style="color:#ce5c00;font-weight:bold">)</span></code></pre></div>
+<span style="color:#000">while</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">布尔表达式</span><span style="color:#000;font-weight:bold">)</span></code></pre></div>
 <h3 id="for-循环"><code>for</code>循环</h3>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">for</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">初始化</span><span style="color:#ce5c00;font-weight:bold">;</span> <span style="color:#000">布尔表达式</span><span style="color:#ce5c00;font-weight:bold">;</span> <span style="color:#000">步进</span><span style="color:#ce5c00;font-weight:bold">)</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">for</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">初始化</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">布尔表达式</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">步进</span><span style="color:#000;font-weight:bold">)</span>
   <span style="color:#000">语句</span></code></pre></div>
 <h3 id="逗号运算符">逗号运算符</h3>
 
 <p>使用逗号运算符，你可以定义在<code>for</code>循环内定义多个变量，但是他们必须是同一个类型。</p>
 
 <h2 id="foreach-语法"><code>foreach</code> 语法</h2>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">for</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">float</span> <span style="color:#000">x</span> <span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">f</span><span style="color:#ce5c00;font-weight:bold">){</span>
-<span style="color:#ce5c00;font-weight:bold">}</span></code></pre></div>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">for</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">float</span> <span style="color:#000">x</span> <span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">f</span><span style="color:#000;font-weight:bold">){</span>
+<span style="color:#000;font-weight:bold">}</span></code></pre></div>
 <p>这个定义了变量一个类型为<code>float</code>的变量<code>x</code>，并逐个把<code>f</code>的每个元素赋值给<code>x</code>。</p>
 
 <p><code>foreach</code> 适用与任何可以循环的对象</p>
@@ -362,30 +361,30 @@ if (!doNotTrack) {
 
 <p>使用标签 <em>唯一</em> 的理由是当你需要在不止一层的嵌套循环里使用停止(<code>break</code>)或继续(<code>continue</code>):</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f57900">标签1:</span>
-<span style="color:#000">外循环</span> <span style="color:#ce5c00;font-weight:bold">{</span>
-    <span style="color:#000">内循环</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+<span style="color:#000">外循环</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">内循环</span> <span style="color:#000;font-weight:bold">{</span>
         <span style="color:#8f5902;font-style:italic">// ...
-</span><span style="color:#8f5902;font-style:italic"></span>        <span style="color:#204a87;font-weight:bold">break</span><span style="color:#ce5c00;font-weight:bold">;</span>
+</span><span style="color:#8f5902;font-style:italic"></span>        <span style="color:#204a87;font-weight:bold">break</span><span style="color:#000;font-weight:bold">;</span>
         <span style="color:#8f5902;font-style:italic">//...
-</span><span style="color:#8f5902;font-style:italic"></span>        <span style="color:#204a87;font-weight:bold">continue</span><span style="color:#ce5c00;font-weight:bold">;</span>
+</span><span style="color:#8f5902;font-style:italic"></span>        <span style="color:#204a87;font-weight:bold">continue</span><span style="color:#000;font-weight:bold">;</span>
         <span style="color:#8f5902;font-style:italic">//...
-</span><span style="color:#8f5902;font-style:italic"></span>        <span style="color:#204a87;font-weight:bold">continue</span> <span style="color:#000">标签1</span><span style="color:#ce5c00;font-weight:bold">;</span>
+</span><span style="color:#8f5902;font-style:italic"></span>        <span style="color:#204a87;font-weight:bold">continue</span> <span style="color:#000">标签1</span><span style="color:#000;font-weight:bold">;</span>
         <span style="color:#8f5902;font-style:italic">//...
-</span><span style="color:#8f5902;font-style:italic"></span>        <span style="color:#204a87;font-weight:bold">break</span> <span style="color:#000">标签2</span><span style="color:#ce5c00;font-weight:bold">;</span>
-    <span style="color:#ce5c00;font-weight:bold">}</span>
-<span style="color:#ce5c00;font-weight:bold">}</span></code></pre></div>
+</span><span style="color:#8f5902;font-style:italic"></span>        <span style="color:#204a87;font-weight:bold">break</span> <span style="color:#000">标签2</span><span style="color:#000;font-weight:bold">;</span>
+    <span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000;font-weight:bold">}</span></code></pre></div>
 <h2 id="开关-switch">开关(<code>switch</code>)</h2>
 
 <p>开关(<code>switch</code>)的通用形式是:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">switch</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">整数选择因子</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">case</span> <span style="color:#000">整数值1</span> <span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">语句</span><span style="color:#ce5c00;font-weight:bold">;</span> <span style="color:#204a87;font-weight:bold">break</span><span style="color:#ce5c00;font-weight:bold">;</span>
-    <span style="color:#204a87;font-weight:bold">case</span> <span style="color:#000">整数值2</span> <span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">语句</span><span style="color:#ce5c00;font-weight:bold">;</span> <span style="color:#204a87;font-weight:bold">break</span><span style="color:#ce5c00;font-weight:bold">;</span>
-    <span style="color:#204a87;font-weight:bold">case</span> <span style="color:#000">整数值3</span> <span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">语句</span><span style="color:#ce5c00;font-weight:bold">;</span> <span style="color:#204a87;font-weight:bold">break</span><span style="color:#ce5c00;font-weight:bold">;</span>
-    <span style="color:#204a87;font-weight:bold">case</span> <span style="color:#000">整数值4</span> <span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">语句</span><span style="color:#ce5c00;font-weight:bold">;</span> <span style="color:#204a87;font-weight:bold">break</span><span style="color:#ce5c00;font-weight:bold">;</span>
-    <span style="color:#204a87;font-weight:bold">case</span> <span style="color:#000">整数值5</span> <span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">语句</span><span style="color:#ce5c00;font-weight:bold">;</span> <span style="color:#204a87;font-weight:bold">break</span><span style="color:#ce5c00;font-weight:bold">;</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#204a87;font-weight:bold">switch</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">整数选择因子</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">case</span> <span style="color:#000">整数值1</span> <span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">语句</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#204a87;font-weight:bold">break</span><span style="color:#000;font-weight:bold">;</span>
+    <span style="color:#204a87;font-weight:bold">case</span> <span style="color:#000">整数值2</span> <span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">语句</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#204a87;font-weight:bold">break</span><span style="color:#000;font-weight:bold">;</span>
+    <span style="color:#204a87;font-weight:bold">case</span> <span style="color:#000">整数值3</span> <span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">语句</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#204a87;font-weight:bold">break</span><span style="color:#000;font-weight:bold">;</span>
+    <span style="color:#204a87;font-weight:bold">case</span> <span style="color:#000">整数值4</span> <span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">语句</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#204a87;font-weight:bold">break</span><span style="color:#000;font-weight:bold">;</span>
+    <span style="color:#204a87;font-weight:bold">case</span> <span style="color:#000">整数值5</span> <span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">语句</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#204a87;font-weight:bold">break</span><span style="color:#000;font-weight:bold">;</span>
     <span style="color:#8f5902;font-style:italic">// ...
-</span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#204a87;font-weight:bold">default</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">语句</span><span style="color:#ce5c00;font-weight:bold">;</span>
-<span style="color:#ce5c00;font-weight:bold">}</span></code></pre></div>
+</span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#204a87;font-weight:bold">default</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">语句</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000;font-weight:bold">}</span></code></pre></div>
 <ul>
 <li><code>break</code>导致执行跳到开关的结束位置<br /></li>
 <li><code>break</code>是可选的，如果它不存在，代码会继续往下一个<code>case</code>的语句执行直到遇到<code>break</code><br /></li>
@@ -395,18 +394,16 @@ if (!doNotTrack) {
         <hr>
         
         
-        <div class="card">
-  <div class="card-content">
-    <div class="columns is-mobile">
-      <div class="column is-one-quarter-desktop is-one-quarter-tablet is-one-third-mobile">
-        <img src="/zh/books/thinking-in-java/cover.jpg" alt="Thinking In Java">
-      </div>
-      <div class="column">
-        <div class="title is-4">Thinking In Java</div>
-        <div class="text">通过Web学习面向对象编程的宝典级教科书</div>
-        <br />
-        <a href="/zh/books/thinking-in-java/">阅读我的读书笔记 →</a>
-      </div>
+        <div class="box">
+  <div class="columns is-mobile">
+    <div class="column is-one-quarter-desktop is-one-quarter-tablet is-one-third-mobile">
+      <img src="/zh/books/thinking-in-java/cover.jpg" alt="Thinking In Java">
+    </div>
+    <div class="column">
+      <div class="title is-4">Thinking In Java</div>
+      <div class="text">通过Web学习面向对象编程的宝典级教科书</div>
+      <br />
+      <a href="/zh/books/thinking-in-java/">阅读我的读书笔记 →</a>
     </div>
   </div>
 </div>

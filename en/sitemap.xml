@@ -18,6 +18,52 @@
   </url>
   
   <url>
+    <loc>https://tonyxu.io/books/thinking-in-java/</loc>
+    <lastmod>2019-05-24T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://tonyxu.io/zh/books/thinking-in-java/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://tonyxu.io/books/thinking-in-java/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://tonyxu.io/</loc>
+    <lastmod>2019-05-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://tonyxu.io/zh/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://tonyxu.io/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://tonyxu.io/reads/</loc>
+    <lastmod>2019-05-13T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://tonyxu.io/zh/reads/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://tonyxu.io/reads/"
+                />
+  </url>
+  
+  <url>
     <loc>https://tonyxu.io/reads/2019-05-13/</loc>
     <lastmod>2019-05-13T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -104,6 +150,21 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://tonyxu.io/reads/2019-03-15/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://tonyxu.io/posts/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://tonyxu.io/zh/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://tonyxu.io/posts/"
                 />
   </url>
   
@@ -512,6 +573,34 @@
   </url>
   
   <url>
+    <loc>https://tonyxu.io/books/clean-architecture/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://tonyxu.io/zh/books/clean-architecture/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://tonyxu.io/books/clean-architecture/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://tonyxu.io/books/designing-data-intensive-applications/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://tonyxu.io/zh/books/designing-data-intensive-applications/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://tonyxu.io/books/designing-data-intensive-applications/"
+                />
+  </url>
+  
+  <url>
     <loc>https://tonyxu.io/friends/</loc>
     <xhtml:link
                 rel="alternate"
@@ -522,36 +611,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://tonyxu.io/friends/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://tonyxu.io/reads/</loc>
-    <lastmod>2019-05-13T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://tonyxu.io/zh/reads/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://tonyxu.io/reads/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://tonyxu.io/posts/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://tonyxu.io/zh/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://tonyxu.io/posts/"
                 />
   </url>
   
@@ -581,37 +640,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://tonyxu.io/tags/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://tonyxu.io/books/thinking-in-java/</loc>
-    <lastmod>2019-05-24T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://tonyxu.io/zh/books/thinking-in-java/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://tonyxu.io/books/thinking-in-java/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://tonyxu.io/</loc>
-    <lastmod>2019-05-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://tonyxu.io/zh/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://tonyxu.io/"
                 />
   </url>
   
