@@ -7,7 +7,7 @@ go:
 
 env:
   global:
-  - HUGO_VERSION=0.54.0  # set in the environment to make it easy
+  - HUGO_VERSION=0.56.3  # set in the environment to make it easy
 
 before_install:
 - mkdir -p bin
