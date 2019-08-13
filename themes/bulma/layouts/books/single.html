@@ -1,5 +1,5 @@
 {{ define "title" -}}
-{{ .Title }} | {{ .Site.Title }}
+{{.Parent.Parent.Title}}: {{.CurrentSection.Title}} - {{ .Title }} | {{ .Site.Title }}
 {{- end }}
 
 {{ define "header" }} {{ partial "menu" . }} {{ end }}

@@ -1,6 +1,6 @@
 {{ define "header" }} {{ partial "menu" . }} {{ end }}
 {{ define "title" -}}
-{{ .Title }} - {{ .Description }} | {{ .Site.Title }}
+{{.Parent.Title}}: {{ .Title }} - {{ .Description }} | {{ .Site.Title }}
 {{- end }}
 
 {{ define "main" }}
