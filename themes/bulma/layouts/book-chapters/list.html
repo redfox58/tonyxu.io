@@ -19,19 +19,21 @@
       </div>
     <div class="columns">
       <div class="column is-8 is-offset-2">
-        {{ range (.Paginate (.Pages.GroupByDate "2006")).PageGroups }}
-        {{ range .Pages }}
-        {{ partial "page-summary" . }}
-        {{ .Summary }}
-        {{ if .Truncated }}
-        <!-- This <div> includes a read more link, but only if the summary is truncated... -->
-        <div>
-          <a href="{{ .RelPermalink }}">{{ i18n "read_more" }}</a>
-        </div>
-        {{ end }}
-        <hr />
-        {{ end }}
-        {{ end }}
+        {{ if .Pages }}
+          {{ range (.Paginate (.Pages.GroupByDate "2006")).PageGroups }}
+            {{ range .Pages }}
+              {{ partial "page-summary" . }}
+              {{ .Summary }}
+              {{ if .Truncated }}
+              <!-- This <div> includes a read more link, but only if the summary is truncated... -->
+              <div>
+                <a href="{{ .RelPermalink }}">{{ i18n "read_more" }}</a>
+              </div>
+              {{ end }}
+            <hr />
+            {{ end }}
+          {{ end }}
+        {{end}}
       </div>
     </div>
   </div>
