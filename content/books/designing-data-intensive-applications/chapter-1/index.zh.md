@@ -1,7 +1,7 @@
 ---
 title: Chapter 1 - 可靠性、可拓展性、可维护性
 date: 2019-08-19
-toc: true
+toc: false
 ---
 
 软件系统的三个重要考虑因素：
