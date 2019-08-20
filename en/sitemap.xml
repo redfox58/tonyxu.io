@@ -3,6 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://tonyxu.io/books/designing-data-intensive-applications/chapter-1/</loc>
+    <lastmod>2019-08-19T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://tonyxu.io/zh/books/designing-data-intensive-applications/chapter-1/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://tonyxu.io/books/designing-data-intensive-applications/chapter-1/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://tonyxu.io/books/designing-data-intensive-applications/</loc>
+    <lastmod>2019-08-19T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://tonyxu.io/zh/books/designing-data-intensive-applications/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://tonyxu.io/books/designing-data-intensive-applications/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://tonyxu.io/</loc>
+    <lastmod>2019-08-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://tonyxu.io/zh/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://tonyxu.io/"
+                />
+  </url>
+  
+  <url>
     <loc>https://tonyxu.io/books/thinking-in-java/chapter-3/</loc>
     <lastmod>2019-05-24T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -29,22 +75,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://tonyxu.io/books/thinking-in-java/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://tonyxu.io/</loc>
-    <lastmod>2019-05-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://tonyxu.io/zh/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://tonyxu.io/"
                 />
   </url>
   
@@ -583,20 +613,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://tonyxu.io/books/clean-architecture/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://tonyxu.io/books/designing-data-intensive-applications/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://tonyxu.io/zh/books/designing-data-intensive-applications/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://tonyxu.io/books/designing-data-intensive-applications/"
                 />
   </url>
   

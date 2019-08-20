@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Tony Xu Blog - I&#39;m a software engineer. I love to build cool things with latest technologies and share my learnings from them. </title>
+    <title>Book Notes: Designing Data-Intensive Applications - Chapter 1 - Reliable, Scalable, and Maintainable Applications | Tony Xu Blog</title>
 
      
 
@@ -19,35 +19,48 @@
     
     
     
-    <meta itemprop="name" content="Tony Xu Blog">
-<meta itemprop="description" content="I&#39;m a software engineer. I love to build cool things with latest technologies and share my learnings from them.">
+    <meta itemprop="name" content="Chapter 1 - Reliable, Scalable, and Maintainable Applications">
+<meta itemprop="description" content="Three concerns that are important in most software systems:
+Reliability The system should continue to work correctly even when things go wrong.
+Scalability As the system grows, there should be reasonalbe ways of dealing with that growth.
+Maintainability Over time, many different people will work on the system, and they should all be able to work on it productively.">
 
 
-    <meta property="og:title" content="Tony Xu Blog" />
-<meta property="og:description" content="I&#39;m a software engineer. I love to build cool things with latest technologies and share my learnings from them." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://tonyxu.io/" />
+<meta itemprop="datePublished" content="2019-08-19T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-08-19T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="59">
+
+
+
+<meta itemprop="keywords" content="" />
+
+    <meta property="og:title" content="Chapter 1 - Reliable, Scalable, and Maintainable Applications" />
+<meta property="og:description" content="Three concerns that are important in most software systems:
+Reliability The system should continue to work correctly even when things go wrong.
+Scalability As the system grows, there should be reasonalbe ways of dealing with that growth.
+Maintainability Over time, many different people will work on the system, and they should all be able to work on it productively." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tonyxu.io/books/designing-data-intensive-applications/chapter-1/" />
 
 <meta property="og:image" content="https://tonyxu.io/images/og-image.png" />
 
 <meta property="og:image" content="https://tonyxu.io/images/square-logo.webp" />
-
-<meta property="og:updated_time" content="2019-08-19T00:00:00+00:00" /><meta property="og:site_name" content="Tony Xu Blog" />
+<meta property="article:published_time" content="2019-08-19T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-08-19T00:00:00+00:00" /><meta property="og:site_name" content="Tony Xu Blog" />
 <meta property="og:image" content="https://tonyxu.io/images/og-image.png"/>
     
     
     <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://tonyxu.io/images/og-image.png"/>
 
-<meta name="twitter:title" content="Tony Xu Blog"/>
-<meta name="twitter:description" content="I&#39;m a software engineer. I love to build cool things with latest technologies and share my learnings from them."/>
+<meta name="twitter:title" content="Chapter 1 - Reliable, Scalable, and Maintainable Applications"/>
+<meta name="twitter:description" content="Three concerns that are important in most software systems:
+Reliability The system should continue to work correctly even when things go wrong.
+Scalability As the system grows, there should be reasonalbe ways of dealing with that growth.
+Maintainability Over time, many different people will work on the system, and they should all be able to work on it productively."/>
 
     
      
-
-
-
-  
     
 <script type="application/javascript">
 var doNotTrack = false;
@@ -61,8 +74,7 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
  
     
-    <link rel="alternate" type="application/rss+xml" href="https://tonyxu.io/index.xml" title="Tony Xu Blog" />
-    <link rel="canonical" href="https://tonyxu.io/"> 
+    <link rel="canonical" href="https://tonyxu.io/books/designing-data-intensive-applications/chapter-1/"> 
 
      
 
@@ -98,7 +110,7 @@ if (!doNotTrack) {
 
 
 <body>
-    <header> <nav class="navbar is-fixed-top ">
+    <header> <nav class="navbar is-fixed-top is-link">
   <div class="container">
     <div class="navbar-brand">
       <a class="navbar-item" href="/">
@@ -153,7 +165,7 @@ if (!doNotTrack) {
                 <select size="1" name="links" onchange="window.location.href=this.value;">
                   <option selected disabled>English</option>
                   
-                  <option value="/zh/">中文</option>
+                  <option value="/zh/books/designing-data-intensive-applications/chapter-1/">中文</option>
                   
                 </select>
               </div>
@@ -169,216 +181,138 @@ if (!doNotTrack) {
   </div>
 
 </nav> </header>
-    <main> <section class="hero is-link">
-  <div class="hero-body">
-    <div class="container has-text-centered">
-      <h1 class="title is-1">
-        I am Tony Xu
-      </h1>
-      <br />
-      <h2 class="subtitle">
-        I&#39;m a software engineer. I love to build cool things with latest technologies and share my learnings from them.
-      </h2>
-      <br />
-      <div class="text"><a href='/about'>Learn more about me →</a></div>
-    </div>
-  </div>
-</section>
-<section class="section" id="tabs_section">
+    <main>
+
+<section class="section">
   <div class="container">
     <div class="columns">
       <div class="column is-8 is-offset-2">
-        <div class="index_section">
           <div class="columns">
-            <div class="column">
-              <div class="title is-4">Blog Posts</div>
-              <div class="subtitle is-6">My thoughts of life and code</div>
+              <div class="column is-8 is-offset-2 has-text-centered">
+                <div class="title"><a href="/books/">Book Notes</a></div>
+                <p class="subtitle">Designing Data-Intensive Applications</p>
+              </div>
             </div>
-            <div class="column has-text-right">
-              <a href='/posts'>See all →</a>
-            </div>
-          </div>
-          
-          <a class="box" href="/posts/2019/top-engineering-blogs-from-tech-companies-to-follow-in-2019/">
-            <h1>Top Engineering Blogs from Tech Companies to Follow in 2019</h1>
-            <p><p class="text is-family-monospace has-text-grey-light">
-  
-03/11/2019
-
-</p></p>
-          </a>
-          
-          <a class="box" href="/posts/2019/my-productivity-tools-and-development-setup-recommended-to-software-engineers/">
-            <h1>My Productivity Tools and Development Setup Recommended to Software Engineers</h1>
-            <p><p class="text is-family-monospace has-text-grey-light">
-  
-02/01/2019
-
-</p></p>
-          </a>
-          
-          <a class="box" href="/posts/2019/use-github-to-mange-personal-knowledge-base/">
-            <h1>Use GitHub for Knowledge Base and Projects Management</h1>
-            <p><p class="text is-family-monospace has-text-grey-light">
-  
-01/21/2019
-
-</p></p>
-          </a>
-          
-        </div>
-        <div class="index_section">
-          <div class="columns">
-            <div class="column">
-              <div class="title is-4">Book Notes</div>
-              <div class="subtitle is-6">Learning notes of books I read</div>
-            </div>
-            <div class="column has-text-right">
-              <a href='/books'>See all →</a>
-            </div>
-          </div>
-          
-          <a class="box" href="/books/designing-data-intensive-applications/chapter-1/">
-            <div class="heading">Designing Data-Intensive Applications</div>
-            <div class="text">Chapter 1 - Reliable, Scalable, and Maintainable Applications</div>
-            <p><p class="text is-family-monospace has-text-grey-light">
+            <hr />
+        <p class="title">Chapter 1 - Reliable, Scalable, and Maintainable Applications</p>
+        <div class="columns is-mobile is-vcentered">
+            <div class="column has-text-grey has-text-weight-semibold">
+              Tony Xu<p class="text is-family-monospace has-text-grey-light">
   
 08/19/2019
 
-</p></p>
-          </a>
-          
-          <a class="box" href="/books/thinking-in-java/chapter-3/">
-            <div class="heading">Thinking In Java</div>
-            <div class="text">Chapter 3 - Controlling Execution</div>
-            <p><p class="text is-family-monospace has-text-grey-light">
-  
-05/24/2019
-
-</p></p>
-          </a>
-          
-          <a class="box" href="/books/thinking-in-java/chapter-2/">
-            <div class="heading">Thinking In Java</div>
-            <div class="text">Chapter 2 - Everything Is an Object</div>
-            <p><p class="text is-family-monospace has-text-grey-light">
-  
-03/31/2019
-
-</p></p>
-          </a>
-          
-        </div>
-        <div class="index_section">
-          <div class="columns">
-            <div class="column">
-              <div class="title is-4">Good Reads</div>
-              <div class="subtitle is-6">News, blog, and articles I read and find interesting</div>
+</p>
             </div>
             <div class="column has-text-right">
-              <a href='/reads'>See all →</a>
+              <a class="button is-light" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftonyxu.io%2fbooks%2fdesigning-data-intensive-applications%2fchapter-1%2f" target="_blank" title="Share to Facebook">
+  <span class="icon">
+      <i class="icon-facebook"></i>
+  </span>
+</a>
+<a class="button is-light" href="https://www.linkedin.com/sharing/share-offsite?url=https%3a%2f%2ftonyxu.io%2fbooks%2fdesigning-data-intensive-applications%2fchapter-1%2f" target="_blank"
+  title="Share to LinkedIn">
+  <span class="icon">
+      <i class="icon-linkedin"></i>
+  </span>
+</a>
+<a id="open-qr-code" class="button is-light" href="" title="Share with QR Code">
+  <span class="icon">
+      <i class="icon-qrcode"></i>
+  </span>
+</a>
+<div class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <p class="image is-1by1">
+      <img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=https%3a%2f%2ftonyxu.io%2fbooks%2fdesigning-data-intensive-applications%2fchapter-1%2f&choe=UTF-8" alt="">
+    </p>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+<script>
+  document.querySelector('a#open-qr-code').addEventListener('click', function (event) {
+    event.preventDefault();
+    var modal = document.querySelector('.modal');
+    var html = document.querySelector('html');
+    modal.classList.add('is-active');
+    html.classList.add('is-clipped');
+
+    modal.querySelector('.modal-background').addEventListener('click', function (e) {
+      e.preventDefault();
+      modal.classList.remove('is-active');
+      html.classList.remove('is-clipped');
+    });
+
+    modal.querySelector('.modal-close').addEventListener('click', function (e) {
+      e.preventDefault();
+      modal.classList.remove('is-active');
+      html.classList.remove('is-clipped');
+    });
+  });
+</script>
             </div>
           </div>
+        <div class="content">
           
-          <a class="box" href="/reads/2019-05-13/">
-            <p><div class="heading">
-  
-Release 6
+<details>
+  <summary>Table of Contents</summary>
+  <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#reliability">Reliability</a></li>
+<li><a href="#scalability">Scalability</a></li>
+<li><a href="#maintainability">Maintainability</a></li>
+</ul></li>
+</ul>
+</nav>
+</details>
+<br>
 
-</div>
-</p>
-            <h1>Saying goodbye to Microsoft</h1>
-            <p><p class="text is-family-monospace has-text-grey-light">
-  
-05/13/2019
 
-</p></p>
-          </a>
           
-          <a class="box" href="/reads/2019-04-05/">
-            <p><div class="heading">
-  
-Release 5
 
-</div>
-</p>
-            <h1>Why Google&#43; Failed</h1>
-            <p><p class="text is-family-monospace has-text-grey-light">
-  
-04/05/2019
+<p>Three concerns that are important in most software systems:</p>
 
-</p></p>
-          </a>
-          
-          <a class="box" href="/reads/2019-03-15/">
-            <p><div class="heading">
-  
-Release 4
+<h2 id="reliability">Reliability</h2>
 
-</div>
-</p>
-            <h1>Stop Learning Frameworks</h1>
-            <p><p class="text is-family-monospace has-text-grey-light">
-  
-03/15/2019
+<p>The system should continue to work correctly even when things go wrong.</p>
 
-</p></p>
-          </a>
-          
+<h2 id="scalability">Scalability</h2>
+
+<p>As the system grows, there should be reasonalbe ways of dealing with that growth.</p>
+
+<h2 id="maintainability">Maintainability</h2>
+
+<p>Over time, many different people will work on the system, and they should all be able to work on it productively.</p>
+
         </div>
-        <div class="index_section">
-          <div class="title is-4">Focus Area</div>
-          <div class="columns">
-            <div class="column">
-              <div class="box">
-                <div class="subtitle">
-                  API Platform
-                </div>
-                <div class="text is-size-7 has-text-grey">
-                  API Platform is the key to empower collaboration of all businesses
-                </div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="box">
-                <div class="subtitle">
-                  Software Engineering
-                </div>
-                <div class="text is-size-7 has-text-grey">
-                  Build software product with high performance, scalability, availability
-                </div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="box">
-                <div class="subtitle">
-                  Automation
-                </div>
-                <div class="text is-size-7 has-text-grey">
-                  Automation in build, deploy, test, release processes to boost developer productivity
-                </div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="box">
-                <div class="subtitle">
-                  AI
-                </div>
-                <div class="text is-size-7 has-text-grey">
-                  Make AI innovations more accessible to consumers and enterprise
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <hr>
+        
+        
+        <div class="box">
+  <div class="columns is-mobile">
+    <div class="column is-one-quarter-desktop is-one-quarter-tablet is-one-third-mobile">
+      <img src="/books/designing-data-intensive-applications/cover.jpg" alt="Designing Data-Intensive Applications">
+    </div>
+    <div class="column">
+      <div class="title is-4">Designing Data-Intensive Applications</div>
+      <div class="text">The Big Ideas Behind Reliable, Scalable, and Maintainable Systems</div>
+      <br />
+      <a href="/books/designing-data-intensive-applications/">Read my learning notes →</a>
+    </div>
+  </div>
+</div>
+        
       </div>
     </div>
   </div>
 </section>
-
-<section class="section">
-  <div class="container has-text-centered">
-    
+<section class="section has-background-light">
+    <div class="container">
+      <div class="columns">
+        <div class="column has-text-centered">
+          
 <p class="subtitle is-size-6-mobile">
     Subscribe to get update about programming, hacks, and other topics.
 </p>
@@ -409,9 +343,12 @@ Release 4
 </div>
 
 
-  </div>
-</section> </main>
-    <footer> <footer class="footer">
+        </div>
+      </div>
+  </section>
+</main>
+    <footer>
+<footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
       <p class="text is-uppercase has-text-grey">
@@ -424,7 +361,8 @@ Release 4
       </p>
     </div>
   </div>
-</footer> </footer>
+</footer>
+</footer>
 
 </body>
 

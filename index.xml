@@ -6,10 +6,22 @@
     <description>Recent content on Tony Xu Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 24 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 19 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://tonyxu.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Chapter 1 - Reliable, Scalable, and Maintainable Applications</title>
+      <link>https://tonyxu.io/books/designing-data-intensive-applications/chapter-1/</link>
+      <pubDate>Mon, 19 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tonyxu.io/books/designing-data-intensive-applications/chapter-1/</guid>
+      <description>Three concerns that are important in most software systems:
+Reliability The system should continue to work correctly even when things go wrong.
+Scalability As the system grows, there should be reasonalbe ways of dealing with that growth.
+Maintainability Over time, many different people will work on the system, and they should all be able to work on it productively.</description>
+    </item>
     
     <item>
       <title>Chapter 3 - Controlling Execution</title>
