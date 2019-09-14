@@ -631,6 +631,20 @@
   </url>
   
   <url>
+    <loc>https://tonyxu.io/refer/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://tonyxu.io/zh/refer/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://tonyxu.io/refer/"
+                />
+  </url>
+  
+  <url>
     <loc>https://tonyxu.io/search/</loc>
     <xhtml:link
                 rel="alternate"
