@@ -2,4 +2,4 @@
 title: Referral
 ---
 
-If you are looking to get referral for LinkedIn, fill out this form: [https://forms.gle/Giib5vSJWrxm6CAm7](https://forms.gle/Giib5vSJWrxm6CAm7). I'll review and submit the referral if you qualifies.
+<embed src="https://docs.google.com/forms/d/e/1FAIpQLSfke6mPjo_V1xk6AoqH35KhPtiqx5wk-hd1iWoDm-J4ITKUag/viewform?embedded=true" style="width:100%;height:1611px">

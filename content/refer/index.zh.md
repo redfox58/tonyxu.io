@@ -2,4 +2,4 @@
 title: 内推
 ---
 
-如果你希望被内推到LinkedIn，请在此填写表格: [https://forms.gle/Giib5vSJWrxm6CAm7](https://forms.gle/Giib5vSJWrxm6CAm7)。如果你符合要求我会为你提交。
+<embed src="https://docs.google.com/forms/d/e/1FAIpQLSfke6mPjo_V1xk6AoqH35KhPtiqx5wk-hd1iWoDm-J4ITKUag/viewform?embedded=true" style="width:100%;height:1611px">
