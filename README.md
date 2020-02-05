@@ -1,14 +1,12 @@
 # My Blog
 
-[![Build Status](https://travis-ci.org/tonyxu-io/tonyxu.io.svg?branch=master)](https://travis-ci.org/tonyxu-io/tonyxu.io)
+![Build and deploy to GitHub Pages](https://github.com/tonyxu-io/tonyxu.io/workflows/Build%20and%20deploy%20to%20GitHub%20Pages/badge.svg)
 
 Author: [Tony Xu](https://tonyxu.io)
 
 URL: [https://tonyxu.io](https://tonyxu.io)
 
 Built with: [Hugo](https://gohugo.io)
-
-Deployed by: [Travis CI](https://travis-ci.org/tonyxu-io/tonyxu.io)
 
 ## Development
 
