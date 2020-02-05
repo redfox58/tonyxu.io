@@ -1,531 +1,114 @@
-<!DOCTYPE html>
-<html lang="en-US" class="has-navbar-fixed-top">
+<!doctype html><html lang=en-us class=has-navbar-fixed-top><head><meta name=generator content="Hugo 0.56.3"><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><title>Embed Google Analytics Dashboard on Website | Tony Xu Blog</title><meta name=author content="Tony Xu"><meta itemprop=name content="Embed Google Analytics Dashboard on Website"><meta itemprop=description content="If you are using Google Analytics to analyze site traffic, you might want to embed those amazing dashboards to your website publicly. While Google doesn&rsquo;t provide iframe solution, it does offer a Google Analytics Embed API which requires a bit more technical knowledge. I&rsquo;ll walk you through each and every step and make sure you don&rsquo;t have to read all developer documentation and can easily build dashboard
 
-<head>
-    <meta name="generator" content="Hugo 0.56.3" />
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Embed Google Analytics Dashboard on Website | Tony Xu Blog</title>
+Preview:"><meta itemprop=datePublished content=2018-10-15T00:00:00&#43;00:00><meta itemprop=dateModified content=2018-10-15T00:00:00&#43;00:00><meta itemprop=wordCount content=451><meta itemprop=keywords content><meta property=og:title content="Embed Google Analytics Dashboard on Website"><meta property=og:description content="If you are using Google Analytics to analyze site traffic, you might want to embed those amazing dashboards to your website publicly. While Google doesn&rsquo;t provide iframe solution, it does offer a Google Analytics Embed API which requires a bit more technical knowledge. I&rsquo;ll walk you through each and every step and make sure you don&rsquo;t have to read all developer documentation and can easily build dashboard
 
-     
+Preview:"><meta property=og:type content=article><meta property=og:url content=https://tonyxu.io/posts/2018/embed-google-analytics-dashboard-on-website/><meta property=og:image content=https://tonyxu.io/images/og-image.png><meta property=og:image content=https://tonyxu.io/images/square-logo.webp><meta property=article:published_time content=2018-10-15T00:00:00+00:00><meta property=article:modified_time content=2018-10-15T00:00:00+00:00><meta property=og:site_name content="Tony Xu Blog"><meta property=og:image content=https://tonyxu.io/images/og-image.png><meta name=twitter:card content=summary_large_image><meta name=twitter:image content=https://tonyxu.io/images/og-image.png><meta name=twitter:title content="Embed Google Analytics Dashboard on Website"><meta name=twitter:description content="If you are using Google Analytics to analyze site traffic, you might want to embed those amazing dashboards to your website publicly. While Google doesn&rsquo;t provide iframe solution, it does offer a Google Analytics Embed API which requires a bit more technical knowledge. I&rsquo;ll walk you through each and every step and make sure you don&rsquo;t have to read all developer documentation and can easily build dashboard
 
-    
-    <meta name="author" content="Tony Xu"> 
+Preview:"><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-577792-7','auto');ga('send','pageview');}</script><script async src=https://www.google-analytics.com/analytics.js></script><link rel=canonical href=https://tonyxu.io/posts/2018/embed-google-analytics-dashboard-on-website/><link rel=apple-touch-icon-precomposed sizes=57x57 href=https://tonyxu.io/images/favicons/apple-touch-icon-57x57.png><link rel=apple-touch-icon-precomposed sizes=114x114 href=https://tonyxu.io/images/favicons/apple-touch-icon-114x114.png><link rel=apple-touch-icon-precomposed sizes=72x72 href=https://tonyxu.io/images/favicons/apple-touch-icon-72x72.png><link rel=apple-touch-icon-precomposed sizes=144x144 href=https://tonyxu.io/images/favicons/apple-touch-icon-144x144.png><link rel=apple-touch-icon-precomposed sizes=60x60 href=https://tonyxu.io/images/favicons/apple-touch-icon-60x60.png><link rel=apple-touch-icon-precomposed sizes=120x120 href=https://tonyxu.io/images/favicons/apple-touch-icon-120x120.png><link rel=apple-touch-icon-precomposed sizes=76x76 href=https://tonyxu.io/images/favicons/apple-touch-icon-76x76.png><link rel=apple-touch-icon-precomposed sizes=152x152 href=https://tonyxu.io/images/favicons/apple-touch-icon-152x152.png><link rel=icon type=image/png href=https://tonyxu.io/images/favicons/favicon-196x196.png sizes=196x196><link rel=icon type=image/png href=https://tonyxu.io/images/favicons/favicon-96x96.png sizes=96x96><link rel=icon type=image/png href=https://tonyxu.io/images/favicons/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=https://tonyxu.io/images/favicons/favicon-16x16.png sizes=16x16><link rel=icon type=image/png href=https://tonyxu.io/images/favicons/favicon-128.png sizes=128x128><meta name=msapplication-TileColor content=#3273dc><meta name=msapplication-TileImage content=https://tonyxu.io/images/favicons/mstile-144x144.png><meta name=msapplication-square70x70logo content=https://tonyxu.io/images/favicons/mstile-70x70.png><meta name=msapplication-square150x150logo content=https://tonyxu.io/images/favicons/mstile-150x150.png><meta name=msapplication-wide310x150logo content=https://tonyxu.io/images/favicons/mstile-310x150.png><meta name=msapplication-square310x310logo content=https://tonyxu.io/images/favicons/mstile-310x310.png><link rel=stylesheet href=/css/bulma.css><link rel=stylesheet href=/css/custom.css><link rel=stylesheet href=/css/font.css><script type=text/javascript src=/js/bulma.js></script><link href="https://fonts.googleapis.com/css?family=Ubuntu" rel=stylesheet></head><body><header><nav class="navbar is-fixed-top is-link"><div class=container><div class=navbar-brand><a class=navbar-item href=/><picture style=height:28px>
+<source srcset=/images/square-logo.webp type=image/webp><source srcset=/images/square-logo.png type=image/jpeg><img src=/images/square-logo.png></picture></a>
+<a class=navbar-item href=/>Tony Xu Blog</a>
+<a role=button class=navbar-burger data-target=navMenu aria-label=menu aria-expanded=false><span aria-hidden=true></span><span aria-hidden=true></span><span aria-hidden=true></span></a></div><div class=navbar-menu id=navMenu><div class=navbar-end><a class=navbar-item target=blank href=https://github.com/tonyxu-io><span class=icon><i class=icon-github></i></span></a><a class=navbar-item target=blank href=https://www.linkedin.com/in/tonyxu93><span class=icon><i class=icon-linkedin-square></i></span></a><a class=navbar-item href=/search><span class=icon><i class=icon-search></i></span></a><div class=navbar-item><div class=field><div class="control has-icons-left"><div class="select is-rounded is-small"><select size=1 name=links onchange="window.location.href=this.value;">
+<option selected disabled>English</option>
+<option value=/zh/posts/2018/embed-google-analytics-dashboard-on-website/>中文</option></select></div><div class="icon is-small is-left has-text-black"><i class=icon-language></i></div></div></div></div></div></div></div></nav></header><main><div class=section><div class=container itemscope itemtype=http://schema.org/BlogPosting><meta itemprop=name content="Embed Google Analytics Dashboard on Website"><meta itemprop=description content="If you are using Google Analytics to analyze site traffic, you might want to embed those amazing dashboards to your website publicly. While Google doesn&rsquo;t provide iframe solution, it does offer a Google Analytics Embed API which requires a bit more technical knowledge. I&rsquo;ll walk you through each and every step and make sure you don&rsquo;t have to read all developer documentation and can easily build dashboard
 
-    
-    
-    
-    
-    
-    
-    <meta itemprop="name" content="Embed Google Analytics Dashboard on Website">
-<meta itemprop="description" content="If you are using Google Analytics to analyze site traffic, you might want to embed those amazing dashboards to your website publicly. While Google doesn&rsquo;t provide iframe solution, it does offer a Google Analytics Embed API which requires a bit more technical knowledge. I&rsquo;ll walk you through each and every step and make sure you don&rsquo;t have to read all developer documentation and can easily build dashboard
+Preview:"><meta itemprop=datePublished content=2018-10-15T00:00:00&#43;00:00><meta itemprop=dateModified content=2018-10-15T00:00:00&#43;00:00><meta itemprop=wordCount content=451><meta itemprop=keywords content><div class=columns><div class="column is-8 is-offset-2"><div class=columns><div class="column is-8 is-offset-2 has-text-centered"><div class=title><a href=/posts/>Posts</a></div><p class=subtitle>My thoughts of life and code</p></div></div><hr><p class=title>Embed Google Analytics Dashboard on Website</p><div class="columns is-mobile is-vcentered"><div class="column has-text-grey has-text-weight-semibold">Tony Xu<p class="text is-family-monospace has-text-grey-light">10/15/2018</p></div><div class="column has-text-right"><a class="button is-light" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftonyxu.io%2fposts%2f2018%2fembed-google-analytics-dashboard-on-website%2f" target=_blank title="Share to Facebook"><span class=icon><i class=icon-facebook></i></span></a><a class="button is-light" href="https://www.linkedin.com/sharing/share-offsite?url=https%3a%2f%2ftonyxu.io%2fposts%2f2018%2fembed-google-analytics-dashboard-on-website%2f" target=_blank title="Share to LinkedIn"><span class=icon><i class=icon-linkedin></i></span></a><a id=open-qr-code class="button is-light" href title="Share with QR Code"><span class=icon><i class=icon-qrcode></i></span></a><div class=modal><div class=modal-background></div><div class=modal-content><p class="image is-1by1"><img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=https%3a%2f%2ftonyxu.io%2fposts%2f2018%2fembed-google-analytics-dashboard-on-website%2f&choe=UTF-8" alt></p></div><button class="modal-close is-large" aria-label=close></button></div><script>document.querySelector('a#open-qr-code').addEventListener('click',function(event){event.preventDefault();var modal=document.querySelector('.modal');var html=document.querySelector('html');modal.classList.add('is-active');html.classList.add('is-clipped');modal.querySelector('.modal-background').addEventListener('click',function(e){e.preventDefault();modal.classList.remove('is-active');html.classList.remove('is-clipped');});modal.querySelector('.modal-close').addEventListener('click',function(e){e.preventDefault();modal.classList.remove('is-active');html.classList.remove('is-clipped');});});</script></div></div><div class=content><p>If you are using Google Analytics to analyze site traffic, you might want to embed those amazing dashboards to your website publicly. While Google doesn&rsquo;t provide iframe solution, it does offer a <a href=https://developers.google.com/analytics/devguides/reporting/embed/v1/ target=_blank>Google Analytics Embed API</a> which requires a bit more technical knowledge. I&rsquo;ll walk you through each and every step and make sure you don&rsquo;t have to read all developer documentation and can easily build dashboard</p><p>Preview:</p><p><img src=./Analytics_-_Tony_Xu_2018-10-16_09-52-42.png alt=preview></p><h3 id=1-create-project-in-google-developers-console-https-console-developers-google-com>1. Create project in <a href=https://console.developers.google.com/ target=_blank>Google Developers Console</a></h3><p><em>(Ignore this step if you already have Google Developers Project)</em></p><h3 id=2-create-service-account-and-download-json-key-file>2. Create service account and download <code>.json</code> key file</h3><p><img src=./Credentials_-_api-tonyxu-io_-_Google_Cloud_Platform_2018-10-15_22-39-04.png alt=create-service-account-1></p><p><img src=./2018_10_15_22_43_12.png alt=create-service-account-2></p><h3 id=3-enable-google-analytics-api>3. Enable Google Analytics API</h3><p><img src=./Overview__APIs__Services__api-tonyxu-io__Google_Cloud_Platform_2018-10-15_22-45-05.png alt=enable-analytics-api></p><h3 id=4-grant-service-account-to-access-analytics-account>4. Grant service account to access Analytics account</h3><p>Obtain service account email address</p><p><img src=./IAM__IAM__admin__api-tonyxu-io__Google_Cloud_Platform_2018-10-15_22-48-01.png alt=obtain-service-account-email></p><p>Add as read only user in Analytics account user management</p><p><img src=./Analytics_2018-10-15_22-50-34.png alt=add-service-account-email-to-analytics-account></p><h3 id=5-generate-access-token-in-server>5. Generate access token in server</h3><p>We are using service account to generate access token in server to avoid user login process.</p><h4 id=node-js-server-implementation-part>Node.js Server Implementation (Part)</h4><p>Install Google API Client Library</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>npm install --save googleapis</code></pre></div><p>Import service account key</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#204a87;font-weight:700>let</span> <span style=color:#000>privateKey</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>require</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#34;./google_key.json&#34;</span><span style=color:#000;font-weight:700>);</span>
+</code></pre></div><p>Return Google access token to client</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#8f5902;font-style:italic>// https://your-domain/accessTokens will return access tokens such as google access tokens
+</span><span style=color:#8f5902;font-style:italic></span><span style=color:#000>app</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>get</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#34;/accessTokens&#34;</span><span style=color:#000;font-weight:700>,</span> <span style=color:#000;font-weight:700>(</span><span style=color:#000>req</span><span style=color:#000;font-weight:700>,</span><span style=color:#000>res</span><span style=color:#000;font-weight:700>)</span> <span style=color:#000;font-weight:700>=&gt;</span> <span style=color:#000;font-weight:700>{</span>
 
-Preview:
+  <span style=color:#204a87;font-weight:700>let</span> <span style=color:#000;font-weight:700>{</span><span style=color:#000>google</span><span style=color:#000;font-weight:700>}</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>require</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#39;googleapis&#39;</span><span style=color:#000;font-weight:700>);</span>
+  <span style=color:#204a87;font-weight:700>let</span> <span style=color:#000>privateKey</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>require</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#34;./google_key.json&#34;</span><span style=color:#000;font-weight:700>);</span>
 
-">
-
-
-<meta itemprop="datePublished" content="2018-10-15T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2018-10-15T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="451">
-
-
-
-<meta itemprop="keywords" content="" />
-
-    <meta property="og:title" content="Embed Google Analytics Dashboard on Website" />
-<meta property="og:description" content="If you are using Google Analytics to analyze site traffic, you might want to embed those amazing dashboards to your website publicly. While Google doesn&rsquo;t provide iframe solution, it does offer a Google Analytics Embed API which requires a bit more technical knowledge. I&rsquo;ll walk you through each and every step and make sure you don&rsquo;t have to read all developer documentation and can easily build dashboard
-
-Preview:
-
-" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://tonyxu.io/posts/2018/embed-google-analytics-dashboard-on-website/" />
-
-<meta property="og:image" content="https://tonyxu.io/images/og-image.png" />
-
-<meta property="og:image" content="https://tonyxu.io/images/square-logo.webp" />
-<meta property="article:published_time" content="2018-10-15T00:00:00+00:00" />
-<meta property="article:modified_time" content="2018-10-15T00:00:00+00:00" /><meta property="og:site_name" content="Tony Xu Blog" />
-<meta property="og:image" content="https://tonyxu.io/images/og-image.png"/>
-    
-    
-    <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://tonyxu.io/images/og-image.png"/>
-
-<meta name="twitter:title" content="Embed Google Analytics Dashboard on Website"/>
-<meta name="twitter:description" content="If you are using Google Analytics to analyze site traffic, you might want to embed those amazing dashboards to your website publicly. While Google doesn&rsquo;t provide iframe solution, it does offer a Google Analytics Embed API which requires a bit more technical knowledge. I&rsquo;ll walk you through each and every step and make sure you don&rsquo;t have to read all developer documentation and can easily build dashboard
-
-Preview:
-
-"/>
-
-    
-     
-    
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-577792-7', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
- 
-    
-    <link rel="canonical" href="https://tonyxu.io/posts/2018/embed-google-analytics-dashboard-on-website/"> 
-
-     
-
-     
-    
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://tonyxu.io/images/favicons/apple-touch-icon-57x57.png" />
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://tonyxu.io/images/favicons/apple-touch-icon-114x114.png" />
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://tonyxu.io/images/favicons/apple-touch-icon-72x72.png" />
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://tonyxu.io/images/favicons/apple-touch-icon-144x144.png" />
-<link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://tonyxu.io/images/favicons/apple-touch-icon-60x60.png" />
-<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://tonyxu.io/images/favicons/apple-touch-icon-120x120.png" />
-<link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://tonyxu.io/images/favicons/apple-touch-icon-76x76.png" />
-<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://tonyxu.io/images/favicons/apple-touch-icon-152x152.png" />
-<link rel="icon" type="image/png" href="https://tonyxu.io/images/favicons/favicon-196x196.png" sizes="196x196" />
-<link rel="icon" type="image/png" href="https://tonyxu.io/images/favicons/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/png" href="https://tonyxu.io/images/favicons/favicon-32x32.png" sizes="32x32" />
-<link rel="icon" type="image/png" href="https://tonyxu.io/images/favicons/favicon-16x16.png" sizes="16x16" />
-<link rel="icon" type="image/png" href="https://tonyxu.io/images/favicons/favicon-128.png" sizes="128x128" />
-<meta name="msapplication-TileColor" content="#3273dc" />
-<meta name="msapplication-TileImage" content="https://tonyxu.io/images/favicons/mstile-144x144.png" />
-<meta name="msapplication-square70x70logo" content="https://tonyxu.io/images/favicons/mstile-70x70.png" />
-<meta name="msapplication-square150x150logo" content="https://tonyxu.io/images/favicons/mstile-150x150.png" />
-<meta name="msapplication-wide310x150logo" content="https://tonyxu.io/images/favicons/mstile-310x150.png" />
-<meta name="msapplication-square310x310logo" content="https://tonyxu.io/images/favicons/mstile-310x310.png" />
-
-    
-    <link rel="stylesheet" href="/css/bulma.css"> 
-    <link rel="stylesheet" href="/css/custom.css"> 
-    <link rel="stylesheet" href="/css/font.css">
-    <script type="text/javascript" src="/js/bulma.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-  </head>
-
-
-<body>
-    <header> <nav class="navbar is-fixed-top is-link">
-  <div class="container">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="/">
-        <picture style="height:28px;">
-          <source srcset="/images/square-logo.webp" type="image/webp">
-          <source srcset="/images/square-logo.png" type="image/jpeg">
-          <img src="/images/square-logo.png">
-      </picture>
-      </a>
-      <a class="navbar-item" href="/">
-        Tony Xu Blog
-      </a>
-      <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-
-    <div class="navbar-menu" id="navMenu">
-
-      
-      
-      <div class="navbar-end">
-        
-        <a class="navbar-item" target="blank" href="https://github.com/tonyxu-io">
-          <span class="icon">
-            <i class="icon-github"></i>
-          </span>
-        </a>
-        
-
-        
-        <a class="navbar-item" target="blank" href="https://www.linkedin.com/in/tonyxu93">
-          <span class="icon">
-            <i class="icon-linkedin-square"></i>
-          </span>
-        </a>
-        
-        
-        
-        <a class="navbar-item" href='/search'>
-          <span class="icon">
-            <i class="icon-search"></i>
-          </span>
-        </a>
-        <div class="navbar-item">
-          
-          <div class="field">
-            <div class="control has-icons-left">
-              <div class="select is-rounded is-small">
-                <select size="1" name="links" onchange="window.location.href=this.value;">
-                  <option selected disabled>English</option>
-                  
-                  <option value="/zh/posts/2018/embed-google-analytics-dashboard-on-website/">中文</option>
-                  
-                </select>
-              </div>
-              <div class="icon is-small is-left has-text-black">
-                <i class="icon-language"></i>
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-    </div>
-  </div>
-
-</nav> </header>
-    <main>
-
-<div class="section">
-  <div class="container" itemscope itemtype="http://schema.org/BlogPosting">
-    <meta itemprop="name" content="Embed Google Analytics Dashboard on Website">
-<meta itemprop="description" content="If you are using Google Analytics to analyze site traffic, you might want to embed those amazing dashboards to your website publicly. While Google doesn&rsquo;t provide iframe solution, it does offer a Google Analytics Embed API which requires a bit more technical knowledge. I&rsquo;ll walk you through each and every step and make sure you don&rsquo;t have to read all developer documentation and can easily build dashboard
-
-Preview:
-
-">
-
-
-<meta itemprop="datePublished" content="2018-10-15T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2018-10-15T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="451">
-
-
-
-<meta itemprop="keywords" content="" />
-
-    <div class="columns">
-      <div class="column is-8 is-offset-2">
-          <div class="columns">
-              <div class="column is-8 is-offset-2 has-text-centered">
-                <div class="title"><a href="/posts/">Posts</a></div>
-                <p class="subtitle">My thoughts of life and code</p>
-              </div>
-            </div>
-            <hr />
-        <p class="title">Embed Google Analytics Dashboard on Website</p>
-        <div class="columns is-mobile is-vcentered">
-          <div class="column has-text-grey has-text-weight-semibold">
-            Tony Xu<p class="text is-family-monospace has-text-grey-light">
+  <span style=color:#8f5902;font-style:italic>// configure a JWT auth client
+</span><span style=color:#8f5902;font-style:italic></span>  <span style=color:#204a87;font-weight:700>let</span> <span style=color:#000>jwtClient</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>google</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>auth</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>JWT</span><span style=color:#000;font-weight:700>(</span>
+    <span style=color:#000>privateKey</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>client_email</span><span style=color:#000;font-weight:700>,</span>
+    <span style=color:#204a87;font-weight:700>null</span><span style=color:#000;font-weight:700>,</span>
+    <span style=color:#000>privateKey</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>private_key</span><span style=color:#000;font-weight:700>,</span>
+    <span style=color:#4e9a06>&#39;https://www.googleapis.com/auth/analytics.readonly&#39;</span><span style=color:#000;font-weight:700>);</span>
   
-10/15/2018
+    <span style=color:#000>jwtClient</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>authorize</span><span style=color:#000;font-weight:700>(</span><span style=color:#204a87;font-weight:700>function</span> <span style=color:#000;font-weight:700>(</span><span style=color:#000>err</span><span style=color:#000;font-weight:700>,</span> <span style=color:#000>token</span><span style=color:#000;font-weight:700>)</span> <span style=color:#000;font-weight:700>{</span>
+    <span style=color:#204a87;font-weight:700>if</span> <span style=color:#000;font-weight:700>(</span><span style=color:#000>err</span><span style=color:#000;font-weight:700>)</span> <span style=color:#000;font-weight:700>{</span>
+      <span style=color:#000>console</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>log</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>err</span><span style=color:#000;font-weight:700>);</span>
+      <span style=color:#204a87;font-weight:700>return</span> <span style=color:#000>res</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>status</span><span style=color:#000;font-weight:700>(</span><span style=color:#0000cf;font-weight:700>500</span><span style=color:#000;font-weight:700>).</span><span style=color:#000>send</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#39;Error&#39;</span><span style=color:#000;font-weight:700>);</span>
+    <span style=color:#000;font-weight:700>}</span> <span style=color:#204a87;font-weight:700>else</span> <span style=color:#000;font-weight:700>{</span>
+      <span style=color:#204a87;font-weight:700>return</span> <span style=color:#000>res</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>send</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>token</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>access_token</span><span style=color:#000;font-weight:700>);</span>
+    <span style=color:#000;font-weight:700>}</span>
+  <span style=color:#000;font-weight:700>});</span>
+<span style=color:#000;font-weight:700>})</span>
+</code></pre></div><h4 id=python-server-implementation-part>Python Server Implementation (Part)</h4><p>Install Google API Client Library</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>sudo pip install --upgrade google-api-python-client</code></pre></div><p>Return Google access token to client</p><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#8f5902;font-style:italic># service-account.py</span>
 
-</p>
-          </div>
-          <div class="column has-text-right">
-            <a class="button is-light" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftonyxu.io%2fposts%2f2018%2fembed-google-analytics-dashboard-on-website%2f" target="_blank" title="Share to Facebook">
-  <span class="icon">
-      <i class="icon-facebook"></i>
-  </span>
-</a>
-<a class="button is-light" href="https://www.linkedin.com/sharing/share-offsite?url=https%3a%2f%2ftonyxu.io%2fposts%2f2018%2fembed-google-analytics-dashboard-on-website%2f" target="_blank"
-  title="Share to LinkedIn">
-  <span class="icon">
-      <i class="icon-linkedin"></i>
-  </span>
-</a>
-<a id="open-qr-code" class="button is-light" href="" title="Share with QR Code">
-  <span class="icon">
-      <i class="icon-qrcode"></i>
-  </span>
-</a>
-<div class="modal">
-  <div class="modal-background"></div>
-  <div class="modal-content">
-    <p class="image is-1by1">
-      <img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=https%3a%2f%2ftonyxu.io%2fposts%2f2018%2fembed-google-analytics-dashboard-on-website%2f&choe=UTF-8" alt="">
-    </p>
-  </div>
-  <button class="modal-close is-large" aria-label="close"></button>
-</div>
-<script>
-  document.querySelector('a#open-qr-code').addEventListener('click', function (event) {
-    event.preventDefault();
-    var modal = document.querySelector('.modal');
-    var html = document.querySelector('html');
-    modal.classList.add('is-active');
-    html.classList.add('is-clipped');
+<span style=color:#204a87;font-weight:700>from</span> <span style=color:#000>oauth2client.service_account</span> <span style=color:#204a87;font-weight:700>import</span> <span style=color:#000>ServiceAccountCredentials</span>
 
-    modal.querySelector('.modal-background').addEventListener('click', function (e) {
-      e.preventDefault();
-      modal.classList.remove('is-active');
-      html.classList.remove('is-clipped');
-    });
+<span style=color:#8f5902;font-style:italic># The scope for the OAuth2 request.</span>
+<span style=color:#000>SCOPE</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#4e9a06>&#39;https://www.googleapis.com/auth/analytics.readonly&#39;</span>
 
-    modal.querySelector('.modal-close').addEventListener('click', function (e) {
-      e.preventDefault();
-      modal.classList.remove('is-active');
-      html.classList.remove('is-clipped');
-    });
-  });
-</script>
-          </div>
-        </div>
-        <div class="content">
-          
+<span style=color:#8f5902;font-style:italic># The location of the key file with the key data.</span>
+<span style=color:#000>KEY_FILEPATH</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#4e9a06>&#39;path/to/json-key.json&#39;</span>
 
-          <p>If you are using Google Analytics to analyze site traffic, you might want to embed those amazing dashboards to your website publicly. While Google doesn&rsquo;t provide iframe solution, it does offer a <a href="https://developers.google.com/analytics/devguides/reporting/embed/v1/" target="_blank">Google Analytics Embed API</a> which requires a bit more technical knowledge. I&rsquo;ll walk you through each and every step and make sure you don&rsquo;t have to read all developer documentation and can easily build dashboard</p>
+<span style=color:#8f5902;font-style:italic># Defines a method to get an access token from the ServiceAccount object.</span>
+<span style=color:#204a87;font-weight:700>def</span> <span style=color:#000>get_access_token</span><span style=color:#000;font-weight:700>():</span>
+  <span style=color:#204a87;font-weight:700>return</span> <span style=color:#000>ServiceAccountCredentials</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>from_json_keyfile_name</span><span style=color:#000;font-weight:700>(</span>
+      <span style=color:#000>KEY_FILEPATH</span><span style=color:#000;font-weight:700>,</span> <span style=color:#000>SCOPE</span><span style=color:#000;font-weight:700>)</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>get_access_token</span><span style=color:#000;font-weight:700>()</span><span style=color:#ce5c00;font-weight:700>.</span><span style=color:#000>access_token</span></code></pre></div><h3 id=6-load-google-analytics-embed-api-library>6. Load Google Analytics Embed API library</h3><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=color:#000;font-weight:700>&lt;</span><span style=color:#204a87;font-weight:700>script</span><span style=color:#000;font-weight:700>&gt;</span>
+<span style=color:#000;font-weight:700>(</span><span style=color:#204a87;font-weight:700>function</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>w</span><span style=color:#000;font-weight:700>,</span><span style=color:#000>d</span><span style=color:#000;font-weight:700>,</span><span style=color:#000>s</span><span style=color:#000;font-weight:700>,</span><span style=color:#000>g</span><span style=color:#000;font-weight:700>,</span><span style=color:#000>js</span><span style=color:#000;font-weight:700>,</span><span style=color:#000>fs</span><span style=color:#000;font-weight:700>){</span>
+  <span style=color:#000>g</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#000>w</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>gapi</span><span style=color:#ce5c00;font-weight:700>||</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>w</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>gapi</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#000;font-weight:700>{});</span><span style=color:#000>g</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>analytics</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#000;font-weight:700>{</span><span style=color:#000>q</span><span style=color:#ce5c00;font-weight:700>:</span><span style=color:#000;font-weight:700>[],</span><span style=color:#000>ready</span><span style=color:#ce5c00;font-weight:700>:</span><span style=color:#204a87;font-weight:700>function</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>f</span><span style=color:#000;font-weight:700>){</span><span style=color:#204a87;font-weight:700>this</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>q</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>push</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>f</span><span style=color:#000;font-weight:700>);}};</span>
+  <span style=color:#000>js</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#000>d</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>createElement</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>s</span><span style=color:#000;font-weight:700>);</span><span style=color:#000>fs</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#000>d</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>getElementsByTagName</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>s</span><span style=color:#000;font-weight:700>)[</span><span style=color:#0000cf;font-weight:700>0</span><span style=color:#000;font-weight:700>];</span>
+  <span style=color:#000>js</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>src</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>&#39;https://apis.google.com/js/platform.js&#39;</span><span style=color:#000;font-weight:700>;</span>
+  <span style=color:#000>fs</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>parentNode</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>insertBefore</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>js</span><span style=color:#000;font-weight:700>,</span><span style=color:#000>fs</span><span style=color:#000;font-weight:700>);</span><span style=color:#000>js</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>onload</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#204a87;font-weight:700>function</span><span style=color:#000;font-weight:700>(){</span><span style=color:#000>g</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>load</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#39;analytics&#39;</span><span style=color:#000;font-weight:700>);};</span>
+<span style=color:#000;font-weight:700>}(</span><span style=color:#204a87>window</span><span style=color:#000;font-weight:700>,</span><span style=color:#204a87>document</span><span style=color:#000;font-weight:700>,</span><span style=color:#4e9a06>&#39;script&#39;</span><span style=color:#000;font-weight:700>));</span>
+<span style=color:#000;font-weight:700>&lt;/</span><span style=color:#204a87;font-weight:700>script</span><span style=color:#000;font-weight:700>&gt;</span></code></pre></div><h3 id=7-add-dashboard-containers>7. Add dashboard containers</h3><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=color:#000;font-weight:700>&lt;</span><span style=color:#204a87;font-weight:700>div</span> <span style=color:#c4a000>id</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>&#34;chart-1-container&#34;</span><span style=color:#000;font-weight:700>&gt;&lt;/</span><span style=color:#204a87;font-weight:700>div</span><span style=color:#000;font-weight:700>&gt;</span>
+<span style=color:#000;font-weight:700>&lt;</span><span style=color:#204a87;font-weight:700>div</span> <span style=color:#c4a000>id</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>&#34;chart-2-container&#34;</span><span style=color:#000;font-weight:700>&gt;&lt;/</span><span style=color:#204a87;font-weight:700>div</span><span style=color:#000;font-weight:700>&gt;</span></code></pre></div><h3 id=8-fetch-google-access-token-and-load-dashboards>8. Fetch Google access token and load dashboards</h3><div class=highlight><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=color:#000;font-weight:700>&lt;</span><span style=color:#204a87;font-weight:700>script</span><span style=color:#000;font-weight:700>&gt;</span>
 
-<p>Preview:</p>
+<span style=color:#000>gapi</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>analytics</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>ready</span><span style=color:#000;font-weight:700>(</span><span style=color:#204a87;font-weight:700>function</span> <span style=color:#000;font-weight:700>()</span> <span style=color:#000;font-weight:700>{</span>
 
-<p><img src="./Analytics_-_Tony_Xu_2018-10-16_09-52-42.png" alt="preview" /></p>
+  <span style=color:#000>fetch</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#39;/api/accessTokens&#39;</span><span style=color:#000;font-weight:700>)</span>
+    <span style=color:#000;font-weight:700>.</span><span style=color:#000>then</span><span style=color:#000;font-weight:700>(</span><span style=color:#204a87;font-weight:700>function</span> <span style=color:#000;font-weight:700>(</span><span style=color:#000>response</span><span style=color:#000;font-weight:700>)</span> <span style=color:#000;font-weight:700>{</span>
+      <span style=color:#000>gapi</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>analytics</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>auth</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>authorize</span><span style=color:#000;font-weight:700>({</span>
+        <span style=color:#4e9a06>&#39;serverAuth&#39;</span><span style=color:#ce5c00;font-weight:700>:</span> <span style=color:#000;font-weight:700>{</span>
+          <span style=color:#4e9a06>&#39;access_token&#39;</span><span style=color:#ce5c00;font-weight:700>:</span> <span style=color:#000>response</span>
+        <span style=color:#000;font-weight:700>}</span>
+      <span style=color:#000;font-weight:700>});</span>
+      <span style=color:#000>dataChart1</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>execute</span><span style=color:#000;font-weight:700>();</span>
+      <span style=color:#000>dataChart2</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>execute</span><span style=color:#000;font-weight:700>();</span>
+    <span style=color:#000;font-weight:700>});</span>
 
-<h3 id="1-create-project-in-google-developers-console-https-console-developers-google-com">1. Create project in <a href="https://console.developers.google.com/" target="_blank">Google Developers Console</a></h3>
+  <span style=color:#204a87;font-weight:700>var</span> <span style=color:#000>dataChart1</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>gapi</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>analytics</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>googleCharts</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>DataChart</span><span style=color:#000;font-weight:700>({</span>
+    <span style=color:#000>query</span><span style=color:#ce5c00;font-weight:700>:</span> <span style=color:#000;font-weight:700>{</span>
+      <span style=color:#4e9a06>&#39;ids&#39;</span><span style=color:#ce5c00;font-weight:700>:</span> <span style=color:#4e9a06>&#39;ga:00000000&#39;</span><span style=color:#000;font-weight:700>,</span> <span style=color:#8f5902;font-style:italic>// &lt;-- Replace with the ids value for your view.
+</span><span style=color:#8f5902;font-style:italic></span>      <span style=color:#4e9a06>&#39;start-date&#39;</span><span style=color:#ce5c00;font-weight:700>:</span> <span style=color:#4e9a06>&#39;90daysAgo&#39;</span><span style=color:#000;font-weight:700>,</span>
+      <span style=color:#4e9a06>&#39;end-date&#39;</span><span style=color:#ce5c00;font-weight:700>:</span> <span style=color:#4e9a06>&#39;today&#39;</span><span style=color:#000;font-weight:700>,</span>
+      <span style=color:#4e9a06>&#39;metrics&#39;</span><span style=color:#ce5c00;font-weight:700>:</span> <span style=color:#4e9a06>&#39;ga:sessions,ga:users&#39;</span><span style=color:#000;font-weight:700>,</span>
+      <span style=color:#4e9a06>&#39;dimensions&#39;</span><span style=color:#ce5c00;font-weight:700>:</span> <span style=color:#4e9a06>&#39;ga:date&#39;</span>
+    <span style=color:#000;font-weight:700>},</span>
+    <span style=color:#000>chart</span><span style=color:#ce5c00;font-weight:700>:</span> <span style=color:#000;font-weight:700>{</span>
+      <span style=color:#4e9a06>&#39;container&#39;</span><span style=color:#ce5c00;font-weight:700>:</span> <span style=color:#4e9a06>&#39;chart-1-container&#39;</span><span style=color:#000;font-weight:700>,</span>
+      <span style=color:#4e9a06>&#39;type&#39;</span><span style=color:#ce5c00;font-weight:700>:</span> <span style=color:#4e9a06>&#39;LINE&#39;</span><span style=color:#000;font-weight:700>,</span>
+      <span style=color:#4e9a06>&#39;options&#39;</span><span style=color:#ce5c00;font-weight:700>:</span> <span style=color:#000;font-weight:700>{</span>
+        <span style=color:#4e9a06>&#39;width&#39;</span><span style=color:#ce5c00;font-weight:700>:</span> <span style=color:#4e9a06>&#39;100%&#39;</span>
+      <span style=color:#000;font-weight:700>}</span>
+    <span style=color:#000;font-weight:700>}</span>
+  <span style=color:#000;font-weight:700>});</span>
 
-<p><em>(Ignore this step if you already have Google Developers Project)</em></p>
+  <span style=color:#204a87;font-weight:700>var</span> <span style=color:#000>dataChart2</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>gapi</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>analytics</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>googleCharts</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>DataChart</span><span style=color:#000;font-weight:700>({</span>
+    <span style=color:#000>query</span><span style=color:#ce5c00;font-weight:700>:</span> <span style=color:#000;font-weight:700>{</span>
+      <span style=color:#4e9a06>&#39;ids&#39;</span><span style=color:#ce5c00;font-weight:700>:</span> <span style=color:#4e9a06>&#39;ga:00000000&#39;</span><span style=color:#000;font-weight:700>,</span> <span style=color:#8f5902;font-style:italic>// &lt;-- Replace with the ids value for your view.
+</span><span style=color:#8f5902;font-style:italic></span>      <span style=color:#4e9a06>&#39;start-date&#39;</span><span style=color:#ce5c00;font-weight:700>:</span> <span style=color:#4e9a06>&#39;90daysAgo&#39;</span><span style=color:#000;font-weight:700>,</span>
+      <span style=color:#4e9a06>&#39;end-date&#39;</span><span style=color:#ce5c00;font-weight:700>:</span> <span style=color:#4e9a06>&#39;today&#39;</span><span style=color:#000;font-weight:700>,</span>
+      <span style=color:#4e9a06>&#39;metrics&#39;</span><span style=color:#ce5c00;font-weight:700>:</span> <span style=color:#4e9a06>&#39;ga:pageviews,ga:uniquePageviews,ga:timeOnPage,ga:bounces,ga:entrances,ga:exits&#39;</span><span style=color:#000;font-weight:700>,</span>
+      <span style=color:#4e9a06>&#39;sort&#39;</span><span style=color:#ce5c00;font-weight:700>:</span> <span style=color:#4e9a06>&#39;-ga:pageviews&#39;</span><span style=color:#000;font-weight:700>,</span>
+      <span style=color:#4e9a06>&#39;dimensions&#39;</span><span style=color:#ce5c00;font-weight:700>:</span> <span style=color:#4e9a06>&#39;ga:pagePath&#39;</span><span style=color:#000;font-weight:700>,</span>
+      <span style=color:#4e9a06>&#39;max-results&#39;</span><span style=color:#ce5c00;font-weight:700>:</span> <span style=color:#0000cf;font-weight:700>10</span>
+    <span style=color:#000;font-weight:700>},</span>
+    <span style=color:#000>chart</span><span style=color:#ce5c00;font-weight:700>:</span> <span style=color:#000;font-weight:700>{</span>
+      <span style=color:#4e9a06>&#39;container&#39;</span><span style=color:#ce5c00;font-weight:700>:</span> <span style=color:#4e9a06>&#39;chart-2-container&#39;</span><span style=color:#000;font-weight:700>,</span>
+      <span style=color:#4e9a06>&#39;type&#39;</span><span style=color:#ce5c00;font-weight:700>:</span> <span style=color:#4e9a06>&#39;PIE&#39;</span><span style=color:#000;font-weight:700>,</span>
+      <span style=color:#4e9a06>&#39;options&#39;</span><span style=color:#ce5c00;font-weight:700>:</span> <span style=color:#000;font-weight:700>{</span>
+        <span style=color:#4e9a06>&#39;width&#39;</span><span style=color:#ce5c00;font-weight:700>:</span> <span style=color:#4e9a06>&#39;100%&#39;</span><span style=color:#000;font-weight:700>,</span>
+        <span style=color:#4e9a06>&#39;pieHole&#39;</span><span style=color:#ce5c00;font-weight:700>:</span> <span style=color:#0000cf;font-weight:700>0.4</span><span style=color:#000;font-weight:700>,</span>
+      <span style=color:#000;font-weight:700>}</span>
+    <span style=color:#000;font-weight:700>}</span>
+  <span style=color:#000;font-weight:700>});</span>
 
-<h3 id="2-create-service-account-and-download-json-key-file">2. Create service account and download <code>.json</code> key file</h3>
-
-<p><img src="./Credentials_-_api-tonyxu-io_-_Google_Cloud_Platform_2018-10-15_22-39-04.png" alt="create-service-account-1" /></p>
-
-<p><img src="./2018_10_15_22_43_12.png" alt="create-service-account-2" /></p>
-
-<h3 id="3-enable-google-analytics-api">3. Enable Google Analytics API</h3>
-
-<p><img src="./Overview__APIs__Services__api-tonyxu-io__Google_Cloud_Platform_2018-10-15_22-45-05.png" alt="enable-analytics-api" /></p>
-
-<h3 id="4-grant-service-account-to-access-analytics-account">4. Grant service account to access Analytics account</h3>
-
-<p>Obtain service account email address</p>
-
-<p><img src="./IAM__IAM__admin__api-tonyxu-io__Google_Cloud_Platform_2018-10-15_22-48-01.png" alt="obtain-service-account-email" /></p>
-
-<p>Add as read only user in Analytics account user management</p>
-
-<p><img src="./Analytics_2018-10-15_22-50-34.png" alt="add-service-account-email-to-analytics-account" /></p>
-
-<h3 id="5-generate-access-token-in-server">5. Generate access token in server</h3>
-
-<p>We are using service account to generate access token in server to avoid user login process.</p>
-
-<h4 id="node-js-server-implementation-part">Node.js Server Implementation (Part)</h4>
-
-<p>Install Google API Client Library</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm install --save googleapis</code></pre></div>
-<p>Import service account key</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#204a87;font-weight:bold">let</span> <span style="color:#000">privateKey</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">require</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;./google_key.json&#34;</span><span style="color:#000;font-weight:bold">);</span>
-</code></pre></div>
-<p>Return Google access token to client</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#8f5902;font-style:italic">// https://your-domain/accessTokens will return access tokens such as google access tokens
-</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">app</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">get</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;/accessTokens&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">req</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">res</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">=&gt;</span> <span style="color:#000;font-weight:bold">{</span>
-
-  <span style="color:#204a87;font-weight:bold">let</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#000">google</span><span style="color:#000;font-weight:bold">}</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">require</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;googleapis&#39;</span><span style="color:#000;font-weight:bold">);</span>
-  <span style="color:#204a87;font-weight:bold">let</span> <span style="color:#000">privateKey</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">require</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;./google_key.json&#34;</span><span style="color:#000;font-weight:bold">);</span>
-
-  <span style="color:#8f5902;font-style:italic">// configure a JWT auth client
-</span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#204a87;font-weight:bold">let</span> <span style="color:#000">jwtClient</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">google</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">auth</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">JWT</span><span style="color:#000;font-weight:bold">(</span>
-    <span style="color:#000">privateKey</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">client_email</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#000">privateKey</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">private_key</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#4e9a06">&#39;https://www.googleapis.com/auth/analytics.readonly&#39;</span><span style="color:#000;font-weight:bold">);</span>
-  
-    <span style="color:#000">jwtClient</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">authorize</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">err</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">token</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">err</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
-      <span style="color:#000">console</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">log</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">err</span><span style="color:#000;font-weight:bold">);</span>
-      <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">res</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">status</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">500</span><span style="color:#000;font-weight:bold">).</span><span style="color:#000">send</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;Error&#39;</span><span style="color:#000;font-weight:bold">);</span>
-    <span style="color:#000;font-weight:bold">}</span> <span style="color:#204a87;font-weight:bold">else</span> <span style="color:#000;font-weight:bold">{</span>
-      <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">res</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">send</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">token</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">access_token</span><span style="color:#000;font-weight:bold">);</span>
-    <span style="color:#000;font-weight:bold">}</span>
-  <span style="color:#000;font-weight:bold">});</span>
-<span style="color:#000;font-weight:bold">})</span>
-</code></pre></div>
-<h4 id="python-server-implementation-part">Python Server Implementation (Part)</h4>
-
-<p>Install Google API Client Library</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo pip install --upgrade google-api-python-client</code></pre></div>
-<p>Return Google access token to client</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#8f5902;font-style:italic"># service-account.py</span>
-
-<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">oauth2client.service_account</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">ServiceAccountCredentials</span>
-
-<span style="color:#8f5902;font-style:italic"># The scope for the OAuth2 request.</span>
-<span style="color:#000">SCOPE</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#39;https://www.googleapis.com/auth/analytics.readonly&#39;</span>
-
-<span style="color:#8f5902;font-style:italic"># The location of the key file with the key data.</span>
-<span style="color:#000">KEY_FILEPATH</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#39;path/to/json-key.json&#39;</span>
-
-<span style="color:#8f5902;font-style:italic"># Defines a method to get an access token from the ServiceAccount object.</span>
-<span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">get_access_token</span><span style="color:#000;font-weight:bold">():</span>
-  <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">ServiceAccountCredentials</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">from_json_keyfile_name</span><span style="color:#000;font-weight:bold">(</span>
-      <span style="color:#000">KEY_FILEPATH</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">SCOPE</span><span style="color:#000;font-weight:bold">)</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">get_access_token</span><span style="color:#000;font-weight:bold">()</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">access_token</span></code></pre></div>
-<h3 id="6-load-google-analytics-embed-api-library">6. Load Google Analytics Embed API library</h3>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span>
-<span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">function</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">w</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">d</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">s</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">g</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">js</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">fs</span><span style="color:#000;font-weight:bold">){</span>
-  <span style="color:#000">g</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">w</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">gapi</span><span style="color:#ce5c00;font-weight:bold">||</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">w</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">gapi</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000;font-weight:bold">{});</span><span style="color:#000">g</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">analytics</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000;font-weight:bold">{</span><span style="color:#000">q</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#000;font-weight:bold">[],</span><span style="color:#000">ready</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">function</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">f</span><span style="color:#000;font-weight:bold">){</span><span style="color:#204a87;font-weight:bold">this</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">q</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">push</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">f</span><span style="color:#000;font-weight:bold">);}};</span>
-  <span style="color:#000">js</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">d</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">createElement</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">s</span><span style="color:#000;font-weight:bold">);</span><span style="color:#000">fs</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">d</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">getElementsByTagName</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">s</span><span style="color:#000;font-weight:bold">)[</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">];</span>
-  <span style="color:#000">js</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">src</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;https://apis.google.com/js/platform.js&#39;</span><span style="color:#000;font-weight:bold">;</span>
-  <span style="color:#000">fs</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">parentNode</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">insertBefore</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">js</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">fs</span><span style="color:#000;font-weight:bold">);</span><span style="color:#000">js</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">onload</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#204a87;font-weight:bold">function</span><span style="color:#000;font-weight:bold">(){</span><span style="color:#000">g</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">load</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;analytics&#39;</span><span style="color:#000;font-weight:bold">);};</span>
-<span style="color:#000;font-weight:bold">}(</span><span style="color:#204a87">window</span><span style="color:#000;font-weight:bold">,</span><span style="color:#204a87">document</span><span style="color:#000;font-weight:bold">,</span><span style="color:#4e9a06">&#39;script&#39;</span><span style="color:#000;font-weight:bold">));</span>
-<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span></code></pre></div>
-<h3 id="7-add-dashboard-containers">7. Add dashboard containers</h3>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">div</span> <span style="color:#c4a000">id</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;chart-1-container&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">div</span><span style="color:#000;font-weight:bold">&gt;</span>
-<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">div</span> <span style="color:#c4a000">id</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;chart-2-container&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">div</span><span style="color:#000;font-weight:bold">&gt;</span></code></pre></div>
-<h3 id="8-fetch-google-access-token-and-load-dashboards">8. Fetch Google access token and load dashboards</h3>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span>
-
-<span style="color:#000">gapi</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">analytics</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ready</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
-
-  <span style="color:#000">fetch</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;/api/accessTokens&#39;</span><span style="color:#000;font-weight:bold">)</span>
-    <span style="color:#000;font-weight:bold">.</span><span style="color:#000">then</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">response</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
-      <span style="color:#000">gapi</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">analytics</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">auth</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">authorize</span><span style="color:#000;font-weight:bold">({</span>
-        <span style="color:#4e9a06">&#39;serverAuth&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-          <span style="color:#4e9a06">&#39;access_token&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">response</span>
-        <span style="color:#000;font-weight:bold">}</span>
-      <span style="color:#000;font-weight:bold">});</span>
-      <span style="color:#000">dataChart1</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">execute</span><span style="color:#000;font-weight:bold">();</span>
-      <span style="color:#000">dataChart2</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">execute</span><span style="color:#000;font-weight:bold">();</span>
-    <span style="color:#000;font-weight:bold">});</span>
-
-  <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">dataChart1</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">gapi</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">analytics</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">googleCharts</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">DataChart</span><span style="color:#000;font-weight:bold">({</span>
-    <span style="color:#000">query</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-      <span style="color:#4e9a06">&#39;ids&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;ga:00000000&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#8f5902;font-style:italic">// &lt;-- Replace with the ids value for your view.
-</span><span style="color:#8f5902;font-style:italic"></span>      <span style="color:#4e9a06">&#39;start-date&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;90daysAgo&#39;</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#4e9a06">&#39;end-date&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;today&#39;</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#4e9a06">&#39;metrics&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;ga:sessions,ga:users&#39;</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#4e9a06">&#39;dimensions&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;ga:date&#39;</span>
-    <span style="color:#000;font-weight:bold">},</span>
-    <span style="color:#000">chart</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-      <span style="color:#4e9a06">&#39;container&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;chart-1-container&#39;</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#4e9a06">&#39;type&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;LINE&#39;</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#4e9a06">&#39;options&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#4e9a06">&#39;width&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;100%&#39;</span>
-      <span style="color:#000;font-weight:bold">}</span>
-    <span style="color:#000;font-weight:bold">}</span>
-  <span style="color:#000;font-weight:bold">});</span>
-
-  <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">dataChart2</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">gapi</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">analytics</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">googleCharts</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">DataChart</span><span style="color:#000;font-weight:bold">({</span>
-    <span style="color:#000">query</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-      <span style="color:#4e9a06">&#39;ids&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;ga:00000000&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#8f5902;font-style:italic">// &lt;-- Replace with the ids value for your view.
-</span><span style="color:#8f5902;font-style:italic"></span>      <span style="color:#4e9a06">&#39;start-date&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;90daysAgo&#39;</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#4e9a06">&#39;end-date&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;today&#39;</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#4e9a06">&#39;metrics&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;ga:pageviews,ga:uniquePageviews,ga:timeOnPage,ga:bounces,ga:entrances,ga:exits&#39;</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#4e9a06">&#39;sort&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;-ga:pageviews&#39;</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#4e9a06">&#39;dimensions&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;ga:pagePath&#39;</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#4e9a06">&#39;max-results&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">10</span>
-    <span style="color:#000;font-weight:bold">},</span>
-    <span style="color:#000">chart</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-      <span style="color:#4e9a06">&#39;container&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;chart-2-container&#39;</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#4e9a06">&#39;type&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;PIE&#39;</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#4e9a06">&#39;options&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#4e9a06">&#39;width&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;100%&#39;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#4e9a06">&#39;pieHole&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0.4</span><span style="color:#000;font-weight:bold">,</span>
-      <span style="color:#000;font-weight:bold">}</span>
-    <span style="color:#000;font-weight:bold">}</span>
-  <span style="color:#000;font-weight:bold">});</span>
-
-<span style="color:#000;font-weight:bold">});</span>
-<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span></code></pre></div>
-<p>References:</p>
-
-<ul>
-<li><a href="https://ga-dev-tools.appspot.com/embed-api/server-side-authorization/" target="_blank">Google Analytics Embed API - Server-side Authorization</a><br /></li>
-<li><a href="https://developers.google.com/analytics/devguides/reporting/embed/v1/component-reference" target="_blank">Google Analytics Embed API - Built-in Components Reference</a><br /></li>
-</ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<section class="section has-background-light">
-  <div class="container">
-    <div class="columns">
-      <div class="column has-text-centered">
-        
-<p class="subtitle is-size-6-mobile">
-    Subscribe to get update about programming, hacks, and other topics.
-</p>
-
-<div id="mc_embed_signup">
-  <form action="https://tonyxu.us20.list-manage.com/subscribe/post?u=69c2a5fca21efd1ab71e96df7&amp;id=c90267bbd1"
-    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
-    novalidate>
-    <div id="mc_embed_signup_scroll">
-      <div class="field has-addons has-addons-centered">
-        <div class="control">
-          <input type="email" value="" name="EMAIL" class="input required email" id="mce-EMAIL" placeholder='Email Address'></input>
-        </div>
-        <div class="control">
-          <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button is-info">Subscribe</button>
-        </div>
-      </div>
-      <div id="mce-responses" class="clear">
-        <div class="response" id="mce-error-response" style="display:none"></div>
-        <div class="response" id="mce-success-response" style="display:none"></div>
-      </div>
-      
-      <div style="position: absolute; left: -5000px;" aria-hidden="true">
-        <input type="text" name="b_69c2a5fca21efd1ab71e96df7_c90267bbd1" tabindex="-1" value=""></input>
-      </div>
-    </div>
-  </form>
-</div>
-
-
-      </div>
-    </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="columns">
-      <div class="column is-8 is-offset-2 has-text-centered">
-        
-        <article>
-          <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "tonyxu-io" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-        </article>
-        
-      </div>
-    </div>
-</section>
-
-</main>
-    <footer>
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <p class="text is-uppercase has-text-grey">
-        © 2018-2019 Tony Xu
-      </p>
-      <p class="text">
-        <a href='/about' class="has-text-grey footer-link"> About</a>
-        <a href='/friends' class="has-text-grey footer-link">Friends</a>
-        <a href="/index.xml" class="has-text-grey footer-link">RSS</a>
-      </p>
-    </div>
-  </div>
-</footer>
-</footer>
-
-</body>
-
-</html>
+<span style=color:#000;font-weight:700>});</span>
+<span style=color:#000;font-weight:700>&lt;/</span><span style=color:#204a87;font-weight:700>script</span><span style=color:#000;font-weight:700>&gt;</span></code></pre></div><p>References:</p><ul><li><a href=https://ga-dev-tools.appspot.com/embed-api/server-side-authorization/ target=_blank>Google Analytics Embed API - Server-side Authorization</a><br></li><li><a href=https://developers.google.com/analytics/devguides/reporting/embed/v1/component-reference target=_blank>Google Analytics Embed API - Built-in Components Reference</a><br></li></ul></div></div></div></div></div><section class="section has-background-light"><div class=container><div class=columns><div class="column has-text-centered"><p class="subtitle is-size-6-mobile">Subscribe to get update about programming, hacks, and other topics.</p><div id=mc_embed_signup><form action="https://tonyxu.us20.list-manage.com/subscribe/post?u=69c2a5fca21efd1ab71e96df7&amp;id=c90267bbd1" method=post id=mc-embedded-subscribe-form name=mc-embedded-subscribe-form class=validate target=_blank novalidate><div id=mc_embed_signup_scroll><div class="field has-addons has-addons-centered"><div class=control><input type=email name=EMAIL class="input required email" id=mce-EMAIL placeholder="Email Address"></input></div><div class=control><button type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe class="button is-info">Subscribe</button></div></div><div id=mce-responses class=clear><div class=response id=mce-error-response style=display:none></div><div class=response id=mce-success-response style=display:none></div></div><div style=position:absolute;left:-5000px aria-hidden=true><input type=text name=b_69c2a5fca21efd1ab71e96df7_c90267bbd1 tabindex=-1></input></div></div></form></div></div></div></section><section class=section><div class=container><div class=columns><div class="column is-8 is-offset-2 has-text-centered"><article><div id=disqus_thread></div><script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return;}
+var d=document,s=d.createElement('script');s.async=true;s.src='//'+"tonyxu-io"+'.disqus.com/embed.js';s.setAttribute('data-timestamp',+new Date());(d.head||d.body).appendChild(s);})();</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></article></div></div></section></main><footer><footer class=footer><div class=container><div class="content has-text-centered"><p class="text is-uppercase has-text-grey">© 2018-2019 Tony Xu</p><p class=text><a href=/about class="has-text-grey footer-link">About</a>
+<a href=/friends class="has-text-grey footer-link">Friends</a>
+<a href=/index.xml class="has-text-grey footer-link">RSS</a></p></div></div></footer></footer></body></html>
