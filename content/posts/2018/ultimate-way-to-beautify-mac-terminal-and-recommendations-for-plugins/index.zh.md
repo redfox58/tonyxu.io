@@ -5,6 +5,8 @@ date: 2018-07-26
 
 如果你使用Mac进行开发，那么`Terminal.app`应该是你使用非常频繁的app了。初体验Terminal时你可能觉得单调乏味，阅读密密麻麻的内容也很费劲。但是如果你跟着我一起配置它，就会发现你平时觉得繁琐，不方便的地方其实都可以被完美解决,并且颜值也高了许多。
 
+![screenshot](images/screenshot.png)
+
 ## 我们准备这样改造Terminal
 
 1. 修改Terminal的Profile: 让Terminal配色更美观
@@ -20,20 +22,27 @@ date: 2018-07-26
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
+如果你的macOS版本早于Catalina，你需要手动安装zsh:
+
+```sh
+# 安装 zsh
+brew install zsh
+# 设置zsh为你的默认shell
+chsh -s /usr/local/bin/zsh
+```
+
 ## 修改Terminal Profile 主题设置
 
 1. 在GitHub的[osx-terminal-theme](https://github.com/lysyi3m/osx-terminal-themes)项目主页里寻找你喜欢的主题
 2. 在schemes目录里找到对应的主题文件并双击安装到Terminal, 设置为默认
 
+如果您觉得我的主题颜色不错，可以试试我的主题配置: https://gist.github.com/tonyxu-io/6b845cb1a53622eb4f1ce4063365e427
+
 ## 安装oh-my-zsh
 
-先安装zsh:
+Oh My Zsh 是一个令人愉快的、开源的、社区驱动的管理zsh配置的框架。它为我们带来了数千个有用的功能、助手、插件、主题，和其他一些令你惊叹的功能...
 
-```sh
-brew install zsh
-```
-
-再安装`oh-my-zsh`:
+安装`oh-my-zsh`:
 
 ```sh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

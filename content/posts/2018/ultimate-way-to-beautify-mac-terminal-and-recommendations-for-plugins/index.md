@@ -5,6 +5,8 @@ date: 2018-07-26
 
 If you are using Mac as development machine, `Terminal.app` must be one of the most used apps. Terminal might be not fancy to begin with, but you can totally make it more elegant and fancy if you follow with me.
 
+![screenshot](images/screenshot.png)
+
 ## We will be doing these for our Terminal
 
 1. Install Terminal Profile: Customize Terminal Color
@@ -20,20 +22,27 @@ Recommend to install `homebrew` first:
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
+Install zsh if you are on macOS version prior to Catalina:
+
+```sh
+# Install zsh
+brew install zsh
+# Set zsh as your default shell
+chsh -s /usr/local/bin/zsh
+```
+
 ## Install Terminal Profile
 
 1. Go to [osx-terminal-theme](https://github.com/lysyi3m/osx-terminal-themes) and download your favorite theme in `scheme` folder
 2. Double click the theme file to install and set as default
 
+Feel free to use my Terminal Profile if you would like to try: https://gist.github.com/tonyxu-io/6b845cb1a53622eb4f1ce4063365e427
+
 ## Install oh-my-zsh
 
-Install `zsh`:
+> Oh My Zsh is a delightful, open source, community-driven framework for managing your Zsh configuration. It comes bundled with thousands of helpful functions, helpers, plugins, themes, and a few things that make you shout...
 
-```sh
-brew install zsh
-```
-
-Then install `oh-my-zsh`:
+Install `oh-my-zsh`:
 
 ```sh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
