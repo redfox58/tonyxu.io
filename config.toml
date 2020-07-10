@@ -1,6 +1,6 @@
 baseURL = "https://tonyxu.io/" # Controls base URL
 languageCode = "en-US" # Controls html lang attribute
-title = "Bulma for Hugo" # Homepage title and page title suffix
+title = "Tony Xu Blog" # Homepage title and page title suffix
 paginate = 20 # Number of posts to show before paginating
 theme = "bulma" # to use as default theme
 
@@ -37,19 +37,19 @@ hasCJKLanguage = true
       author = "Tony Xu"
       IamAuthor = "I am Tony Xu"
       description = "I'm a software engineer. I love to build cool things with latest technologies and share my learnings from them."
-      copyright = "© 2018-2019 Tony Xu"
+      copyright = "© 2018-2020 Tony Xu"
 
 
   [languages.zh]
     languageName = "中文"
-    title = "Tony Xu 博客"
+    title = "Tony Xu (徐毅涵) 博客"
     weight = 2
     [languages.zh.params]
       linkedin = "tonyxu93"
       author = "Tony Xu"
       IamAuthor = "我是 Tony Xu"
       description = "我是一名软件工程师，热爱尝试和分享最新科技"
-      copyright = "© 2018-2019 Tony Xu 徐毅涵"
+      copyright = "© 2018-2020 Tony Xu 徐毅涵"
 
 [outputs]
 home = ["HTML", "RSS", "Algolia"]

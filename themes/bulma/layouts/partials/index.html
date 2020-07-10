@@ -27,9 +27,10 @@
               <a href='{{ "/posts" | relLangURL }}'>{{ i18n "see_all" }}</a>
             </div>
           </div>
-          {{ range first 3 (where .Pages "Section" "posts") }}
+          {{ range first 3 (where .Site.RegularPages "Section" "posts") }}
           <a class="box" href="{{ .RelPermalink }}">
             <h1>{{.Title}}</h1>
+            <p>{{.Kind}}</p>
             <p>{{ partial "date/date" . }}</p>
           </a>
           {{ end }}
@@ -44,7 +45,7 @@
               <a href='{{ "/books" | relLangURL }}'>{{ i18n "see_all" }}</a>
             </div>
           </div>
-          {{ range first 3 (where .Pages "Section" "books") }}
+          {{ range first 3 (where .Site.RegularPages "Section" "books") }}
           <a class="box" href="{{ .RelPermalink }}">
             <div class="heading">{{ with .CurrentSection }}{{ .Title }}{{ end }}</div>
             <div class="text">{{.Title}}</div>
@@ -62,7 +63,7 @@
               <a href='{{ "/reads" | relLangURL }}'>{{ i18n "see_all" }}</a>
             </div>
           </div>
-          {{ range first 3 (where .Pages "Section" "reads") }}
+          {{ range first 3 (where .Site.RegularPages "Section" "reads") }}
           <a class="box" href="{{ .RelPermalink }}">
             <p>{{ partial "read/read_issue_number" . }}</p>
             <h1>{{.Title}}</h1>

@@ -1,19 +1,22 @@
-<a class="button is-light" href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" title="{{ i18n "share_to_facebook"}}">
-  <span class="icon">
-      <i class="icon-facebook"></i>
-  </span>
-</a>
-<a class="button is-light" href="https://www.linkedin.com/sharing/share-offsite?url={{ .Permalink }}" target="_blank"
-  title="{{ i18n "share_to_linkedin"}}">
-  <span class="icon">
-      <i class="icon-linkedin"></i>
-  </span>
-</a>
-<a id="open-qr-code" class="button is-light" href="" title="{{ i18n "share_with_qr_code"}}">
-  <span class="icon">
-      <i class="icon-qrcode"></i>
-  </span>
-</a>
+<div class="buttons is-right">
+  <a class="button is-light" href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" title="{{ i18n "share_to_facebook"}}">
+    <span class="icon">
+        <i class="icon-facebook"></i>
+    </span>
+  </a>
+  <a class="button is-light" href="https://www.linkedin.com/sharing/share-offsite?url={{ .Permalink }}" target="_blank"
+    title="{{ i18n "share_to_linkedin"}}">
+    <span class="icon">
+        <i class="icon-linkedin"></i>
+    </span>
+  </a>
+  <a id="open-qr-code" class="button is-light" href="" title="{{ i18n "share_with_qr_code"}}">
+    <span class="icon">
+        <i class="icon-qrcode"></i>
+    </span>
+  </a>
+</div>
+
 <div class="modal">
   <div class="modal-background"></div>
   <div class="modal-content">

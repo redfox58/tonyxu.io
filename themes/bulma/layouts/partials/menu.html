@@ -42,7 +42,7 @@
         {{ range .Site.Menus.main }}
         <a itemprop="url"
           class="navbar-item {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} is-active{{end}}"
-          href="{{.URL}}"><span itemprop="name" class="is-uppercase">{{ .Name }}</span></a>
+          href="{{.Permalink}}"><span itemprop="name" class="is-uppercase">{{ .Name }}</span></a>
         {{ end }}
         <a class="navbar-item" href='{{ "/search" | relLangURL}}'>
           <span class="icon">

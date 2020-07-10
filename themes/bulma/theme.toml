@@ -26,11 +26,11 @@ features = ["landing","Mobile-first Design",
 min_version = 0.19
 
 [author]
-  name = "jeblister"
-  homepage = "http://findme.surge.sh/"
+  name = "Tony Xu"
+  homepage = "https://tonyxu.io"
 
 # If porting an existing theme
 [original]
-  name = "After Dark"
-  homepage = "https://comfusion.github.io/after-dark/"
-  repo = "http://themes.gohugo.io/after-dark/"
+  name = "jeblister"
+  homepage = "http://findme.surge.sh/"
+  repo = "https://github.com/jeblister/bulma"
