@@ -20,7 +20,7 @@
     </div>
   </div>
 </div>
-<div id="charts" class="section">
+<div id="charts" class="section" style="display:none">
   <div class="container index_section">
     <div class="title is-4">{{ i18n "visitors" }}</div>
     <div class="box">
@@ -143,6 +143,7 @@
     });
 
     gapi.analytics.auth.on('success', function (response) {
+      document.getElementById("charts").style.display = "block";
       visitors_chart.execute();
       pages_chart.execute();
       search_chart.execute();
