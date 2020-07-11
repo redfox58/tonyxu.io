@@ -1,0 +1,134 @@
+{{ define "title" -}}
+{{ .Title }} | {{ .Site.Title }}
+{{- end }}
+
+{{ define "header" }} {{ partial "menu" . }} {{ end }}
+
+{{ define "main" }}
+
+<div class="container">
+  <div id="auth-button" class="section"></div>
+  <div class="section">
+    <div class="title is-4">{{ i18n "visitors" }}</div>
+    <div class="box">
+      <div id="visitors"></div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="title is-4">{{ i18n "pages" }}</div>
+    <div class="box">
+      <div id="pages"></div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="title is-4">{{ i18n "search" }}</div>
+    <div class="box">
+      <div id="search"></div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .gapi-analytics-data-chart .gapi-analytics-data-chart-styles-table-td {
+    max-width: 100px;
+  }
+  .gapi-analytics-data-chart .gapi-analytics-data-chart-styles-table-th {
+    max-width: 100px;
+    word-break: break-all;
+  }
+</style>
+
+<script>
+  (function (w, d, s, g, js, fjs) {
+    g = w.gapi || (w.gapi = {}); g.analytics = { q: [], ready: function (cb) { this.q.push(cb) } };
+    js = d.createElement(s); fjs = d.getElementsByTagName(s)[0];
+    js.src = 'https://apis.google.com/js/platform.js';
+    fjs.parentNode.insertBefore(js, fjs); js.onload = function () { g.load('analytics') };
+  }(window, document, 'script'));
+</script>
+<script>
+  gapi.analytics.ready(function () {
+
+    // Step 3: Authorize the user.
+
+    var CLIENT_ID = '591740264460-9n36mit0rm7hh3nkh9v151m8pitredkj.apps.googleusercontent.com';
+
+    gapi.analytics.auth.authorize({
+      container: 'auth-button',
+      clientid: CLIENT_ID,
+    });
+
+    // Step 5: Create the timeline chart.
+
+    var visitors_chart = new gapi.analytics.googleCharts.DataChart({
+      reportType: 'ga',
+      query: {
+        'ids': 'ga:97501557',
+        'dimensions': 'ga:date',
+        'metrics': 'ga:sessions,ga:users',
+        'start-date': '365daysAgo',
+        'end-date': 'today',
+      },
+      chart: {
+        type: 'LINE',
+        container: 'visitors',
+        options: {
+          'width': '100%'
+        }
+      }
+    });
+
+    var pages_chart = new gapi.analytics.googleCharts.DataChart({
+      reportType: 'ga',
+      query: {
+        'ids': 'ga:97501557',
+        'dimensions': 'ga:pageTitle',
+        'metrics': 'ga:pageviews',
+        'sort': '-ga:pageviews',
+        'start-date': '365daysAgo',
+        'end-date': 'today',
+        'max-results': 20
+      },
+      chart: {
+        type: 'TABLE',
+        container: 'pages',
+        options: {
+          'width': '100%',
+        }
+      }
+    });
+
+    var search_chart = new gapi.analytics.googleCharts.DataChart({
+      reportType: 'ga',
+      query: {
+        'ids': 'ga:97501557',
+        'dimensions': 'ga:source,ga:keyword',
+        'metrics': 'ga:organicSearches',
+        'sort': '-ga:organicSearches',
+        'start-date': '365daysAgo',
+        'end-date': 'today',
+        'filters': 'ga:organicSearches!=0',
+        'max-results': 20
+      },
+      chart: {
+        type: 'TABLE',
+        container: 'search',
+        options: {
+          'width': '100%',
+        }
+      }
+    });
+
+    // Step 6: Hook up the components to work together.
+
+    gapi.analytics.auth.on('success', function (response) {
+      visitors_chart.execute();
+      pages_chart.execute();
+      search_chart.execute();
+    });
+  });
+</script>
+{{ end }}
+{{ define "footer" }}
+{{ partial "footer" . }}
+{{ end }}
