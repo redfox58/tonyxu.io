@@ -1,6 +1,7 @@
 ---
-title: Embed Google Analytics Dashboard on Website
+title: Embed Google Analytics Dashboard on Website with Server Side Authorization
 date: 2018-10-15
+notice: "Google Analytics Embed API also supports **browser side authorization**. Please checkout [official guide](https://ga-dev-tools.appspot.com/embed-api/basic-dashboard/) for implementation."
 ---
 
 If you are using Google Analytics to analyze site traffic, you might want to embed those amazing dashboards to your website publicly. While Google doesn't provide iframe solution, it does offer a [Google Analytics Embed API](https://developers.google.com/analytics/devguides/reporting/embed/v1/) which requires a bit more technical knowledge. I'll walk you through each and every step and make sure you don't have to read all developer documentation and can easily build dashboard
@@ -68,7 +69,7 @@ app.get("/accessTokens", (req,res) => {
     null,
     privateKey.private_key,
     'https://www.googleapis.com/auth/analytics.readonly');
-  
+
     jwtClient.authorize(function (err, token) {
     if (err) {
       console.log(err);

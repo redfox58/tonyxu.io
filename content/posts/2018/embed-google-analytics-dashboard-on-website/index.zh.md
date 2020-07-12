@@ -1,6 +1,7 @@
 ---
-title: 嵌入Google Analytics图表到你的网站
+title: 如何嵌入Google Analytics图表到你的网站并使用服务端授权
 date: 2018-10-15
+notice: "Google Analytics Embed API也支持**浏览器端授权**，实现参考[官方文档](https://ga-dev-tools.appspot.com/embed-api/basic-dashboard/)。"
 ---
 
 如果你正在使用Google Anlaytics工具来分析网站访问数据，你可能会想将它提供的各种酷炫图表嵌入到网站页面以供用户浏览。尽管Google Analytics并不提供简单的iframe方式来嵌入图表，它还是提供了[Google Analytics Embed API](https://developers.google.com/analytics/devguides/reporting/embed/v1/)这种需要稍微多一点技术基础的方式让你能够嵌入它们的图表。我会在这篇文章里详细地告诉你该如何一步一步实现一个Google Analytics图表
@@ -66,7 +67,7 @@ app.get("/accessTokens", (req,res) => {
     null,
     privateKey.private_key,
     'https://www.googleapis.com/auth/analytics.readonly');
-  
+
     jwtClient.authorize(function (err, token) {
     if (err) {
       console.log(err);

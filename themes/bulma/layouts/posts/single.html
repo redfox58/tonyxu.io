@@ -30,6 +30,11 @@
         </div>
         <div class="content">
           {{ partial "toc" .}}
+          {{ if .Params.notice }}
+            <div class="notification is-info is-light">
+              {{ .Params.notice | markdownify}}
+            </div>
+          {{ end }}
           {{ .Content}}
         </div>
       </div>

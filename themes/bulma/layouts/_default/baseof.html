@@ -9,7 +9,7 @@
     <title>{{ block "title" . }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
 
     {{ with .Description }}
-    <meta name="description" content="{{ . }}"> {{ end }} 
+    <meta name="description" content="{{ . }}"> {{ end }}
 
     {{ with .Site.Params.Author}}
     <meta name="author" content="{{.}}"> {{end}}
@@ -17,43 +17,43 @@
     {{ $default_noindex_kinds := slice "section" "taxonomy" "taxonomyTerm" }}
     {{ $noindex_kinds := .Site.Params.noindex_kinds | default $default_noindex_kinds }}
     {{ $is_noindex_true := and (isset .Params "noindex") .Params.noindex }}
-    
+
     {{ if or (in $noindex_kinds .Kind) ($is_noindex_true) }}
       <meta name="robots" content="noindex">
     {{ end }}
-    
+
     {{ template "_internal/schema.html" . }}
     {{ template "_internal/opengraph.html" . }}
-    
+
     {{- with $.Site.Params.images -}}
     <meta property="og:image" content="{{ index . 0 | absURL }}"/>
     {{ end }}
-    
+
     {{ template "_internal/twitter_cards.html" . }}
-    
-    {{ if .IsHome }} {{ partial "site-verification" . }} {{ end }} 
-    {{ template "_internal/google_analytics_async.html" . }} 
-    
+
+    {{ if .IsHome }} {{ partial "site-verification" . }} {{ end }}
+    {{ template "_internal/google_analytics_async.html" . }}
+
     {{ range .AlternativeOutputFormats -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
-    
-    <link rel="canonical" href="{{ .Permalink }}"> 
+
+    <link rel="canonical" href="{{ .Permalink }}">
 
     {{ if (isset .Params "prev") }}
-    <link rel="prev" href="{{ .Params.prev }}"> 
-    {{ end }} 
+    <link rel="prev" href="{{ .Params.prev }}">
+    {{ end }}
 
     {{ if (isset .Params "next") }}
-    <link rel="next" href="{{ .Params.next }}"> 
-    {{ end }} 
-    
+    <link rel="next" href="{{ .Params.next }}">
+    {{ end }}
+
     {{ partial "site-icons" . }}
 
     {{ if .Site.Params.theme_variant }}
     <link rel="stylesheet" href="https://jenil.github.io/bulmaswatch/{{.Site.Params.theme_variant}}/bulmaswatch.min.css"> {{else}}
-    <link rel="stylesheet" href="/css/bulma.css"> {{end}}
-    <link rel="stylesheet" href="/css/custom.css"> 
+    <link rel="stylesheet" href="/css/bulma.min.css"> {{end}}
+    <link rel="stylesheet" href="/css/custom.css">
     <link rel="stylesheet" href="/css/font.css">
     <script type="text/javascript" src="/js/bulma.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
