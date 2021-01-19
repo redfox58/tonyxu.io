@@ -74,6 +74,9 @@ Sample config:
 # ~/.zshrc:
 plugins=(
   git
+  extract
+  autojump
+  zsh-autosuggestions
   zsh-syntax-highlighting
 )
 ```
@@ -82,13 +85,15 @@ plugins=(
 
 Built-in，use abbreviations for git commands, e.g. `gaa` -> `git add --all`, use `alias | grep git` to get all abbreviations commands
 
-Activate: Add to `~/.zshrc` plugins section
+Activate: Add `git` to `~/.zshrc` plugins list.
 
 ### extract
 
 Built-in, no need to use complicated `tar` to extract zip files
 
-Activate: Add to `~/.zshrc` plugins section
+Activate: Add to `extract` to `~/.zshrc` plugins list.
+
+Usage: `extract file_name`
 
 ### autojump
 
@@ -96,11 +101,7 @@ Use `j` to quickly jump to a folder, e.g. `j Downloads` -> `cd ~/Downloads`
 
 Install: `brew install autojump`
 
-Follow instructions and add below line in `~/.zshrc`:
-
-```sh
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-```
+Activate: Add `autojump` to `~/.zshtc` plugins list.
 
 ### zsh-syntax-highlighting
 
@@ -108,21 +109,15 @@ Commands syntax highlight plugin
 
 Install: `brew install zsh-syntax-highlighting`
 
-Add `zsh-syntax-highlighting` to `~/.zshtc` plugins section
-
-Other install guides: [https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
+Activate: Add `zsh-syntax-highlighting` to `~/.zshtc` plugins list.
 
 ### zsh-autosuggestions
 
 Auto complete commands by typing →
 
-Install: `brew install zsh-autosuggestions`
+Install: `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
 
-Follow instructions and add below line in `~/.zshrc`:
-
-```sh
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-```
+Activate: Add `zsh-autosuggestions` to `~.zshrc` plugins list.
 
 ## My own ~/.zshrc config
 
@@ -137,6 +132,8 @@ ZSH_THEME="robbyrussell"
 plugins=(
   git
   extract
+  autojump
+  zsh-autosuggestions
   zsh-syntax-highlighting
 )
 
@@ -150,13 +147,4 @@ export EDITOR='vi'
 
 # ssh key path
 export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# load autojump plugin
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/tonxu/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/tonxu/google-cloud-sdk/path.zsh.inc'; fi
-
-# load auto-suggestions plugin
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 ```

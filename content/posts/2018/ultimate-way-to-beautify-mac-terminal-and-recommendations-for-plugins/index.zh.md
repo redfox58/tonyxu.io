@@ -74,6 +74,9 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 # ~/.zshrc:
 plugins=(
   git
+  extract
+  autojump
+  zsh-autosuggestions
   zsh-syntax-highlighting
 )
 ```
@@ -88,7 +91,7 @@ plugins=(
 
 自带插件，不用再使用复杂的`tar`来解压压缩包了
 
-激活: 添加到`~/.zshrc`的plugins列表
+激活: 添加 `extract` 到 `~/.zshrc` 的plugins列表
 
 ### autojump
 
@@ -96,11 +99,7 @@ plugins=(
 
 安装: `brew install autojump`
 
-安装完按照提示在`~/.zshrc`配置文件添加:
-
-```sh
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-```
+激活: 添加 `autojump` 至 `~/.zshrc` 配置文件的插件列表。
 
 ### zsh-syntax-highlighting
 
@@ -108,9 +107,7 @@ plugins=(
 
 安装: `brew install zsh-syntax-highlighting`
 
-添加 `zsh-syntax-highlighting`到`~/.zshtc`plugins列表。
-
-其他安装方法参考: [https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
+激活: 添加 `zsh-syntax-highlighting` 至 `~/.zshrc` 配置文件的插件列表。
 
 ### zsh-autosuggestions
 
@@ -118,11 +115,7 @@ plugins=(
 
 安装: `brew install zsh-autosuggestions`
 
-安装完按照提示在`~/.zshrc`配置文件添加:
-
-```sh
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-```
+激活: 添加 `zsh-autosuggestions` 至 `~/.zshrc` 配置文件的插件列表。
 
 ## 我自己的`~/.zshrc`配置
 
@@ -137,6 +130,8 @@ ZSH_THEME="robbyrussell"
 plugins=(
   git
   extract
+  autojump
+  zsh-autosuggestions
   zsh-syntax-highlighting
 )
 
@@ -150,13 +145,4 @@ export EDITOR='vi'
 
 # ssh key path
 export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# load autojump plugin
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/tonxu/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/tonxu/google-cloud-sdk/path.zsh.inc'; fi
-
-# load auto-suggestions plugin
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 ```
