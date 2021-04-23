@@ -2,6 +2,7 @@
 Date: 2019-03-03
 IssueNumber: 1
 Title: 协调世界时已经足够了，是吗?
+Source: https://zachholman.com/talk/utc-is-enough-for-everyone-right
 ---
 
 [协调世界时已经足够了，是吗?](https://zachholman.com/talk/utc-is-enough-for-everyone-right) (zachholman.com)

@@ -2,9 +2,8 @@
 Date: 2019-04-05
 IssueNumber: 5
 Title: Why Google+ Failed
+Source: https://onezero.medium.com/why-google-failed-4b9db05b973b
 ---
-
-[Why Google+ Failed](https://onezero.medium.com/why-google-failed-4b9db05b973b) (onezero.medium.com)
 
 > Google Plus didn’t fail because Facebook is invulnerable.
 > It failed because of deep flaws embedded in it from the very start.

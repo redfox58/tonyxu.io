@@ -23,14 +23,13 @@
               <div class="title is-4">{{i18n "blog_posts"}}</div>
               <div class="subtitle is-6">{{ i18n "blog_posts_description"}}</div>
             </div>
-            <div class="column has-text-right">
+            <div class="column has-text-right is-narrow">
               <a href='{{ "/posts" | relLangURL }}'>{{ i18n "see_all" }}</a>
             </div>
           </div>
           {{ range first 3 (where .Site.RegularPages "Section" "posts") }}
           <a class="box" href="{{ .RelPermalink }}">
             <h1>{{.Title}}</h1>
-            <p>{{.Kind}}</p>
             <p>{{ partial "date/date" . }}</p>
           </a>
           {{ end }}
@@ -41,7 +40,7 @@
               <div class="title is-4">{{i18n "book_notes"}}</div>
               <div class="subtitle is-6">{{ i18n "book_notes_description"}}</div>
             </div>
-            <div class="column has-text-right">
+            <div class="column has-text-right is-narrow">
               <a href='{{ "/books" | relLangURL }}'>{{ i18n "see_all" }}</a>
             </div>
           </div>
@@ -59,7 +58,7 @@
               <div class="title is-4">{{i18n "good_reads"}}</div>
               <div class="subtitle is-6">{{ i18n "good_reads_description"}}</div>
             </div>
-            <div class="column has-text-right">
+            <div class="column has-text-right is-narrow">
               <a href='{{ "/reads" | relLangURL }}'>{{ i18n "see_all" }}</a>
             </div>
           </div>

@@ -2,6 +2,7 @@
 Date: 2019-05-13
 IssueNumber: 6
 Title: 再见微软
+Source: https://medium.com/@alicjaes/saying-goodbye-to-microsoft-bb5db8662656
 ---
 
 [再见微软 - 我在为微软工作时收获的、失去的、学到的。](https://medium.com/@alicjaes/saying-goodbye-to-microsoft-bb5db8662656) (medium.com)

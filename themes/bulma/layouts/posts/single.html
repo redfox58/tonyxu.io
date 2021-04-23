@@ -21,8 +21,8 @@
         <p class="title">{{.Title}}</p>
         <div class="columns is-mobile is-vcentered">
           <div class="column">
-            <p class="text has-text-grey">{{ .Site.Params.author }}</p>
-            <p class="text is-family-monospace has-text-grey-light">{{ partial "date/date" . }}</p>
+            <p class="text">{{ .Site.Params.author }}</p>
+            <p class="text">{{ partial "date/date" . }}</p>
           </div>
           <div class="column has-text-right">
             {{ partial "share" .}}

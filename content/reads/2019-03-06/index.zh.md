@@ -2,9 +2,8 @@
 Date: 2019-03-06
 IssueNumber: 2
 Title: 这就是硅谷
+Source: https://onezero.medium.com/this-is-silicon-valley-3c4583d6e7c2
 ---
-
-[这就是硅谷](https://onezero.medium.com/this-is-silicon-valley-3c4583d6e7c2) (onezero.medium.com)
 
 > 每个人都穿着Patagonia和North Face, 每个人耳朵上都戴着AirPods, 每个人周末都去太浩湖。每个人都在讨论同样的事情：创业、区块链、机器学习或者做区块链和机器学习的创业公司。
 >

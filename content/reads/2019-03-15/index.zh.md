@@ -2,6 +2,7 @@
 Date: 2019-03-15
 IssueNumber: 4
 Title: 停止学习框架
+Source: https://sizovs.net/2018/12/17/stop-learning-frameworks/
 ---
 
 [停止学习框架](https://sizovs.net/2018/12/17/stop-learning-frameworks/) (sizovs.net)

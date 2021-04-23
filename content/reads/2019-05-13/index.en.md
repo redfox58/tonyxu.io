@@ -2,9 +2,8 @@
 Date: 2019-05-13
 IssueNumber: 6
 Title: Saying goodbye to Microsoft
+Source: https://medium.com/@alicjaes/saying-goodbye-to-microsoft-bb5db8662656
 ---
-
-[Saying goodbye to Microsoft - What I gained, lost & learned while working for Microsoft.](https://medium.com/@alicjaes/saying-goodbye-to-microsoft-bb5db8662656) (medium.com)
 
 > It wasn’t a ‘golden cage’ I was in, it was a bubble of illusions that popped once I signed my dismissal papers. Illusions of importance, mission, friendships and luxury.
 

@@ -2,9 +2,8 @@
 Date: 2019-03-03
 IssueNumber: 1
 Title: UTC is Enough for Everyone, Right?
+Source: https://zachholman.com/talk/utc-is-enough-for-everyone-right
 ---
-
-[UTC is Enough for Everyone, Right?](https://zachholman.com/talk/utc-is-enough-for-everyone-right) (zachholman.com)
 
 > It turns out humans have had a long, long history of poorly dealing with time, so when you hammer your head against the wall trying to deal with a timezone bug, well, you’re just the last in a long, long line of human beings that are terrible at all this! Congrats. You’re pretty unremarkable.
 

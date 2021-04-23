@@ -2,9 +2,8 @@
 Date: 2019-04-05
 IssueNumber: 5
 Title: 为什么Google+失败了
+Source: https://onezero.medium.com/why-google-failed-4b9db05b973b
 ---
-
-[为什么Google+失败了](https://onezero.medium.com/why-google-failed-4b9db05b973b) (onezero.medium.com)
 
 > Google+ 不是因为Facebook无懈可击
 > 它失败是因为从一开始就根植其中的致命设计缺陷

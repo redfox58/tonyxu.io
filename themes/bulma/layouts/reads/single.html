@@ -19,12 +19,18 @@
     <hr />
     <div class="columns">
       <div class="column is-8 is-offset-2">
-        <div class="columns is-mobile is-vcentered">
+        <div class="columns mb-0">
           <div class="column">
             {{ partial "read/read_issue_number" .}}
-            <p class="title is-4">{{ partial "date/date_value" .}}</p>
+            <div class="title is-4">{{.Title}}</div>
+            <div class="subtitle has-text-grey is-6">{{.Params.Source}}</div>
           </div>
-          <div class="column has-text-right">
+        </div>
+        <div class="columns is-mobile is-vcentered">
+          <div class="column">
+            <p class="subtitle is-6">{{ partial "date/date_value" .}}</p>
+          </div>
+          <div class="column has-text-right is-narrow">
             {{ partial "share" .}}
           </div>
         </div>

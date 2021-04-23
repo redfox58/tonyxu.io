@@ -2,9 +2,8 @@
 Date: 2019-03-06
 IssueNumber: 2
 Title: This Is Silicon Valley
+Source: https://onezero.medium.com/this-is-silicon-valley-3c4583d6e7c2
 ---
-
-[This Is Silicon Valley](https://onezero.medium.com/this-is-silicon-valley-3c4583d6e7c2) (onezero.medium.com)
 
 > Everyone wears Patagonia and North Face, everyone has AirPods hanging from their ears, and everyone goes to Lake Tahoe on weekends. And everyone talks about the same things: startups, blockchain, machine learning, and startups with blockchain and machine learning.
 >

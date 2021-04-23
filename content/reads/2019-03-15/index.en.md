@@ -2,9 +2,8 @@
 Date: 2019-03-15
 IssueNumber: 4
 Title: Stop Learning Frameworks
+Source: https://sizovs.net/2018/12/17/stop-learning-frameworks/
 ---
-
-[Stop Learning Frameworks](https://sizovs.net/2018/12/17/stop-learning-frameworks/) (sizovs.net)
 
 > The longer a technology is on the market, the safer investment it is.
 >

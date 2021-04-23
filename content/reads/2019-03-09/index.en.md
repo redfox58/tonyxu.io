@@ -2,9 +2,8 @@
 Date: 2019-03-09
 IssueNumber: 3
 Title: Microservice Architecture at Medium
+Source: https://medium.engineering/microservice-architecture-at-medium-9c33805eb74f
 ---
-
-[Microservice Architecture at Medium](https://medium.engineering/microservice-architecture-at-medium-9c33805eb74f) (medium.engineering)
 
 > At Medium, our technical stack started with a monolithic Node.js app back in 2012. We have built a couple of satellite services, but we haven’t created a strategy to adopt the microservice architecture systematically. As the system becomes more complex and the team grows, we moved to a microservice architecture in early 2018. In this post, we want to share our experiences of doing it effectively and avoiding microservice syndromes.
 
