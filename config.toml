@@ -37,7 +37,7 @@ hasCJKLanguage = true
       author = "Tony Xu"
       IamAuthor = "I am Tony Xu"
       description = "I'm a software engineer. I love to build cool things with latest technologies and share my learnings from them."
-      copyright = "© 2018-2020 Tony Xu"
+      copyright = "© 2018-2021 Tony Xu"
 
 
   [languages.zh]
@@ -49,7 +49,7 @@ hasCJKLanguage = true
       author = "Tony Xu"
       IamAuthor = "我是 Tony Xu"
       description = "我是一名软件工程师，热爱尝试和分享最新科技"
-      copyright = "© 2018-2020 Tony Xu 徐毅涵"
+      copyright = "© 2018-2021 Tony Xu 徐毅涵"
 
 [outputs]
 home = ["HTML", "RSS", "Algolia"]
