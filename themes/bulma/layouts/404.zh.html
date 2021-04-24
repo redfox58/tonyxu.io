@@ -1,0 +1,16 @@
+{{ define "header" }} {{ partial "menu" . }} {{ end }}
+{{ define "main"}}
+    <div class="container has-text-centered" style="padding-top: 5rem; padding-bottom: 5rem;">
+        <p class="title xLargeText has-text-grey">
+          404
+        </p>
+        <p class="text is-uppercase has-text-weight-bold has-text-grey-light">
+          {{ i18n "404"}}
+        </p>
+        <br>
+        <a class="button is-rounded is-info" href='{{ .Site.BaseURL | relLangURL}}'>首页</a>
+    </div>
+{{ end }}
+{{ define "footer" }}
+{{ partial "footer" . }}
+{{ end }}
