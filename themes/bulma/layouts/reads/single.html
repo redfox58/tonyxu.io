@@ -12,7 +12,7 @@
     {{ template "_internal/schema.html" . }}
     <div class="columns">
       <div class="column is-8 is-offset-2 has-text-centered">
-        <div class="title"><a href="{{.CurrentSection.Permalink | relLangURL}}">{{.CurrentSection.Title}}</a></div>
+        <div class="title"><a href="{{.CurrentSection.Permalink}}">{{.CurrentSection.Title}}</a></div>
         <p class="subtitle">{{.CurrentSection.Description}}</p>
       </div>
     </div>
