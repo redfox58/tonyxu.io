@@ -22,5 +22,6 @@ jobs:
         FTP_SERVER: ftp.gapura.my.id
         FTP_USERNAME: ngadimin@gapura.my.id
         FTP_PASSWORD: 1ikhlash1@#..
+        REMOTE_DIR: /home/oiuiprtj/gapura.my.id/ngadimin
         LOCAL_DIR: ./public
       if: success()
