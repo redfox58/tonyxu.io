@@ -1,27 +1,25 @@
-name: build and deploy
-
-on:
-  push:
-    branches:
-    - master
-
+name: Build and deploy Hugo site
+on: [push]
 jobs:
-  build_deploy:
-    name: build and deploy
-    runs-on: ubuntu-latest
-    
+  deploy:
+    runs-on: ubuntu-18.04
     steps:
-    - uses: actions/checkout@master
-      with:
-        submodules: true
-    - name: build
-      uses: peaceiris/actions-hugo@v0.57.2
-    - name: deploy
-      uses: SamKirkland/FTP-Deploy-Action@1.0.0
-      env:
-        FTP_SERVER: ftp.gapura.my.id
-        FTP_USERNAME: ngadimin@gapura.my.id
-        FTP_PASSWORD: 1ikhlash1@#..
-        REMOTE_DIR: /home/oiuiprtj/gapura.my.id/ngadimin
-        LOCAL_DIR: ./public
-      if: success()
+      - uses: actions/checkout@v2.1.0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.74.3'
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Deploy
+        uses: kevinpainchaud/simple-ftp-deploy-action@v1.1.0
+        with:
+          ftp_host: ftp.gapura.my.id
+          ftp_username: ngadimin@gapura.my.id
+          ftp_password: 1ikhlash1@#..
+          local_source_dir: "public"
+          dist_target_dir: "/"
+          delete: "false"
