@@ -1,4 +1,4 @@
-baseURL = "https://redfox58.github.io/tonyxu.io/" # Controls base URL
+baseURL = "https://tonyxu-io.pages.dev/" # Controls base URL
 languageCode = "en-US" # Controls html lang attribute
 title = "Tony Xu Blog" # Homepage title and page title suffix
 paginate = 20 # Number of posts to show before paginating
@@ -12,7 +12,7 @@ disqusShortname = "tonyxu-io" # Optional, add Disqus shortname for comments
 defaultContentLanguage = "en"
 
 pygmentsCodeFences = true
-pygmentsStyle = "tango"
+pygmentsStyle = "red"
 
 hasCJKLanguage = true
 
