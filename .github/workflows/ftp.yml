@@ -13,13 +13,3 @@ jobs:
 
       - name: Build
         run: hugo --minify
-
-      - name: Deploy
-        uses: kevinpainchaud/simple-ftp-deploy-action@v1.1.0
-        with:
-          ftp_host: ftp.gapura.my.id
-          ftp_username: ngadimin@gapura.my.id
-          ftp_password: 1ikhlash1@#..
-          local_source_dir: "public"
-          dist_target_dir: "/"
-          delete: "false"
