@@ -1,4 +1,4 @@
-
+---
 deployment:
       tasks:
         - export DEPLOYPATH=/home/oiuiprtj/blog.my-google.eu.org  
