@@ -1,0 +1,6 @@
+---
+deployment:
+      tasks:
+        - export DEPLOYPATH=/home/oiuiprtj/blog.my-google.eu.org  
+        - /bin cp * $DEPLOYPATH
+        - /bin/cp -r * $DEPLOYPATH
