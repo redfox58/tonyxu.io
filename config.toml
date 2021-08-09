@@ -1,6 +1,6 @@
 baseURL = "https://blog.my-google.eu.org" # Controls base URL
 languageCode = "en-US" # Controls html lang attribute
-title = "teating brow" # Homepage title and page title suffix
+title = "teatingggggg" # Homepage title and page title suffix
 paginate = 20 # Number of posts to show before paginating
 theme = "bulma" # to use as default theme
 
@@ -30,7 +30,7 @@ hasCJKLanguage = true
 [languages]
   [languages.en]
     languageName = "English"
-    title = "testing browwwwwww"
+    title = "testinggggg"
     weight = 1
     [languages.en.params]
       linkedin = "tonyxu93"
